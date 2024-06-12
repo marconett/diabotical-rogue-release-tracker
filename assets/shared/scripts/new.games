@@ -4,6 +4,7 @@ game rogue_wipeout
 	map furnace
 	map toya
 	map titan
+	map wellspring
 
 	setting game_wipeout 1
 	setting game_truce_time 7
