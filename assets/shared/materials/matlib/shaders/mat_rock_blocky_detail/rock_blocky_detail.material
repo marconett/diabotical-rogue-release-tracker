@@ -1,0 +1,15 @@
+mat_rock_blocky_detail
+{
+  {
+    map materials/matlib/shaders/mat_rock_blocky_detail/rock_blocky_detail_d.png
+    map materials/matlib/shaders/mat_rock_blocky_detail/rock_blocky_detail_n.png
+    map swatches/black.png
+    map swatches/black.png
+    map swatches/black.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+  }
+}

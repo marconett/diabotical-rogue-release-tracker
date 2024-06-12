@@ -1,0 +1,8 @@
+asset glass_jumpad
+{
+    type material
+    listed true
+    tags NONE
+    material override_glass_jumpad
+	mat_override true
+}

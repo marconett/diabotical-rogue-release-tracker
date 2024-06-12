@@ -1,0 +1,214 @@
+rogue_rocketlauncher
+{
+	name_translation_key weapon_rocketlauncher
+	desc_translation_key weapon_rocketlauncher_desc
+	
+	selectable true
+	rarity legendary
+	required_class rogue_chunk
+
+	
+	respawn_time 9
+	weapon_tag rl
+ 	//group 3
+	speed 1100
+ 	rate 800
+  	damage 80
+	min_splash_damage 5
+	splash_damage 80
+	self_damage 30
+	//self_damage has been half of splash damage
+	splash_hemisphere_offset 20
+    splash_hemisphere_offset_damage_multiplier 0.30
+	
+	default_ammo_pickup_ammo 6
+	default_weapon_pickup_ammo 6
+	default_ammo 6
+	max_ammo 6
+	unlimited_ammo false
+	ammo_per_reload 1
+	reload 1000
+	
+	//target_indicator true
+	category 3
+	bind_group 3
+	
+	hit_radius 1 1
+    
+	color EBBA45
+	icon_path images/weapon_icons/wp_hud_rocketlauncher_02.png
+	icon_path2 images/weapon_icons/wp_card_rocketlauncher.png
+	weapon_icon_path images/weapon_icons/wp_card_rocketlauncher_nobg.png
+	
+    friendly_name Rocket Launcher
+    description A rocket launcher.
+	
+	charge_animation 6
+	
+  	splash_radius 150
+	knockback 100
+	knockback_self 113
+	ground_knockback 80
+	ground_knockback_self 113
+	center_of_mass_offset 0
+	center_of_mass_offset_self 0
+		
+	recoil_delay_recovery 0.09
+	recoil_up 2
+	recoil_side 0.15
+	recoil_recovery_time 0.4
+	recoil_time 0.06
+	
+	zoomed_recoil_up 1.25
+	zoomed_recoil_side 0.075
+	zoomed_recoil_recovery_time 0.3
+	zoomed_recoil_time 0.06
+	
+	recoil_back_delay_recovery 0.13
+	recoil_back_recovery_time 0.2
+	recoil_back_time 0.06
+	recoil_back 5
+	
+	//recoil_shake_delay_recovery 0.13
+	//recoil_shake_recovery_time 0.2
+	//recoil_shake_time 0.06
+	//recoil_shake 0.2
+	
+	zoomed_scope 1
+	zoomed_walk_speed 200
+		
+	equip_time 500
+	base_combo_rate 300
+	
+	shot_particles empty_system
+   	shot_particles_attached weapon_rocket_muzzle_1p
+	shot_particles_attached_3p weapon_rocket_muzzle_3p 
+  	missile_particles weapon_rocket_projectile
+  	impact_particles weapon_rocket_impact
+  	shot_particles_attached weapon_rocket_muzzle_flash socket_muzzle 1
+	//IMPACT DECALS
+
+	//decal decal_explosion 340 3 3.561 false false alpha 5
+	//decal decal_plasma 100 3 3.561 false false alpha 3
+	//decal decal_plasma 320 4 3.561 false false alpha 3
+	//decal decal_glow_explosion 140 2 3.561 false false alpha 25
+	//decal decal_glow 35 3 3.561 false false alpha 20
+
+	//model assets/shared/weapons/rocketlauncher/rocketlauncher //Old model
+	model assets/shared/models/animations/wp_rocket_launcher/skm_rocket_launcher
+	model_scale 0.07
+	model_scale_centered 0.063
+	model_position 2.5 -3 3.28
+	model_position_centered 0 -4.1 5
+	model_camera_scale 0.5
+	muzzle 0 0 0
+	muzzle_offset 0 0 0
+	fov 40
+	model_scale_third_person 1
+	model_position_third_person 0 4.5 4
+	
+	shot_sound w_rl_fire
+	shot_sound2 w_rl_fire_distant
+	// shot_sound_low_ammo rl_fire_low1 rl_fire_low2 rl_fire_low3 rl_fire_low4 rl_fire_low5
+	// low_ammo_threshold 4
+	missile_loop_sound w_rl_airbound
+	impact_sound w_rl_impact
+	impact_sound2 w_rl_impact_distant
+	equip_sound w_rl_equip
+	hit_sound fb_enemy_hit
+	critical_hit_sound fb_enemy_hit_crit
+	out_of_ammo_sound w_rl_ooa
+	
+	detached_shot_particles false
+}
+
+rogue_rocketlauncher augment 1
+{
+	name rocketlauncher_ammo
+	name_translation_key rocketlauncher_increase_ammo
+	desc_translation_key rocketlauncher_increase_ammo_desc
+	rarity common
+	preadd default_ammo 2
+	preadd max_ammo 2
+	max_stacks 2
+	locked_in_battlepass true
+}
+
+// rogue_rocketlauncher augment 2
+// {
+// 	name rocketlauncher_equip_speed
+// 	name_translation_key rocketlauncher_equip_speed
+// 	desc_translation_key rocketlauncher_equip_speed_desc
+// 	rarity common
+// 	preadd equip_time -75
+// 	max_stacks 2
+// }
+
+rogue_rocketlauncher augment 3
+{
+	name rocketlauncher_reload_ammo
+	name_translation_key rocketlauncher_increase_reload_ammo
+	desc_translation_key rocketlauncher_increase_reload_ammo_desc
+	rarity rare
+	preadd ammo_per_reload 1
+	max_stacks 1
+}
+
+rogue_rocketlauncher augment 4
+{
+	name rocketlauncher_splash_radius
+	name_translation_key rocketlauncher_splash_radius
+	desc_translation_key rocketlauncher_splash_radius_desc
+	rarity rare
+	preadd splash_radius 20
+	max_stacks 1
+	locked_in_battlepass true
+}
+
+rogue_rocketlauncher augment 5
+{
+	name rocketlauncher_overshield_on_direct_hit
+	name_translation_key rocketlauncher_overshield_on_direct_hit
+	desc_translation_key rocketlauncher_overshield_on_direct_hit_desc
+	rarity epic
+	direct_hit_upgrade 1
+	overshield_on_direct_hit 20
+}
+
+rogue_rocketlauncher augment 6
+{
+	name rocketlauncher_no_self_dmg
+	name_translation_key rocketlauncher_no_self_dmg
+	desc_translation_key rocketlauncher_no_self_dmg_desc
+	rarity epic
+	overwrite self_damage 0
+}
+
+rogue_rocketlauncher augment 7
+{
+	name rocketlauncher_set_fire_on_direct_hit
+	name_translation_key rocketlauncher_set_fire_on_direct_hit
+	desc_translation_key rocketlauncher_set_fire_on_direct_hit_desc
+	rarity legendary
+	overwrite set_opponent_on_fire_on_direct_hit true
+	overwrite effect_damage 2
+	overwrite effect_number_of_ticks 5
+	overwrite impact_effect arena_fire
+	locked_in_battlepass true
+}
+
+rogue_rocketlauncher augment 8
+{
+	name rocketlauncher_direct_hit_double_dmg
+	name_translation_key rocketlauncher_direct_hit_double_dmg
+	desc_translation_key rocketlauncher_direct_hit_double_dmg_desc
+	rarity artifact
+	overwrite direct_hit_damage_multiplier 1.5
+	overwrite shot_particles_attached weapon_rocket_muzzle_1p_artifact
+	overwrite shot_particles_attached_3p weapon_rocket_muzzle_3p_artifact 
+	overwrite missile_particles weapon_rocket_projectile_artifact
+	overwrite impact_particles weapon_rocket_impact_artifact
+	overwrite pfx rocket_test_v2 socket_muzzle 1
+	overwrite shot_particles_attached weapon_rocket_muzzle_flash_artifact socket_muzzle 1
+	locked_in_battlepass true
+}

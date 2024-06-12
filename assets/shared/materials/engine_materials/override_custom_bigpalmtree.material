@@ -1,0 +1,19 @@
+override_custom_bigpalmtree
+{
+  {
+    map models/environment/nature/trees/bigpalmtree/shaders/bigpalmtree_bigpalmleaf_d //models/environment/nature/trees/bigpalmtree/shaders/bigpalmleaf_tint_d.png
+    map models/environment/nature/trees/bigpalmtree/shaders/bigpalmleaf_tint_n.png
+    map models/environment/nature/trees/bigpalmtree/shaders/bigpalmleaf_tint_s.png
+    map swatches/black.png
+    map models/environment/nature/trees/bigpalmtree/shaders/bigpalmleaf_tint_c.png
+    material_id 62
+    vertex_shader tilestatic_veg.vs.cso 111 NGCT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    vertex_shader_param look_and_time
+    shadow_pixel_shader shadow_tile.ps.cso
+    pixel_shader mask_hsl_shift.ps.cso
+	pixel_shader_param float_params 0.438 0.36 0.5 //[HUE] | [SATURATION] | [LIGHTNESS]
+    culling off
+  }
+}

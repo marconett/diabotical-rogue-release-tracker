@@ -1,0 +1,299 @@
+
+// skill 10000
+// {
+// 	name fire_ring_dice	
+//     name_translation_key skill_fire_ring
+//     desc_translation_key skill_fire_ring_desc
+    
+// 	passive true
+// 	selectable false
+// }
+
+
+// skill 10001
+// {
+// 	//This will be implemented as a normal skill instead, but leaving for now.
+//     name chain_lightning_dice	
+// 	name_translation_key skill_chain_lightning
+//     desc_translation_key skill_chain_lightning_desc
+	
+// 	passive true
+// 	selectable false
+// }
+
+
+// skill 10002
+// {
+//     name frost_aura_winz
+// 	name_translation_key skill_frost_aura
+//     desc_translation_key skill_frost_aura_desc
+	
+// 	passive true
+// 	selectable false
+// }
+
+
+// skill 10003
+// {
+//     name speed_buff_passive_dice	
+// 	name_translation_key skill_speed_buff
+//     desc_translation_key skill_speed_buff_desc 10
+	
+// 	passive true
+// 	selectable false
+	
+// 	speed_buff_multi 1.1
+// }
+
+// skill 10003 mod 0 tier 1
+// {
+// 	name_translation_key skill_speed_buff
+//     desc_translation_key skill_speed_buff_desc 25
+	
+// 	selectable false
+	
+// 	speed_buff_multi 1.25
+// }
+
+
+// skill 10004
+// {
+//     name multi_jump_dice
+// 	name_translation_key skill_multi_jump
+//     desc_translation_key skill_multi_jump_desc
+	
+// 	passive true
+// 	selectable false
+	
+// 	multi_jump_extra_jumps 1
+// }
+
+
+// skill 10005
+// {
+//     name fire_trail_dice	
+// 	name_translation_key skill_fire_trail
+//     desc_translation_key skill_fire_trail_desc
+	
+// 	passive true
+// 	selectable false
+// }
+
+
+// skill 10006
+// {
+//     name damage_buff_passive_dice
+// 	name_translation_key skill_damage_buff
+//     desc_translation_key skill_damage_buff_desc 5
+	
+// 	passive true
+// 	selectable false
+	
+// 	damage_buff_multi 1.05
+// }
+
+// skill 10006 mod 0 tier 1
+// {  
+// 	name_translation_key skill_damage_buff
+//     desc_translation_key skill_damage_buff_desc 10
+	
+// 	selectable false
+	
+// 	damage_buff_multi 1.1
+// }
+
+// skill 10006 mod 0 tier 2
+// { 
+// 	name_translation_key skill_damage_buff
+//     desc_translation_key skill_damage_buff_desc 15
+	
+// 	selectable false
+	
+// 	damage_buff_multi 1.15
+// }
+
+// skill 10006 mod 0 tier 3
+// {  
+// 	name_translation_key skill_damage_buff
+//     desc_translation_key skill_damage_buff_desc 25
+	
+// 	selectable false
+	
+// 	damage_buff_multi 1.25
+// }
+
+
+// skill 10007
+// {
+//     name spinning_anvil_winz
+// 	name_translation_key skill_spinning_anvil
+//     desc_translation_key skill_spinning_anvil_desc
+	
+// 	passive true
+// 	selectable false
+// }
+
+
+// skill 10008
+// {
+//     name jump_forward_boost_dice
+// 	name_translation_key skill_forward_boost
+//     desc_translation_key skill_forward_boost_desc
+	
+// 	passive true
+// 	selectable false
+	
+// 	jump_speedup 100
+// }
+
+// skill 10008 mod 0 tier 1
+// {  
+// 	name_translation_key skill_forward_boost
+//     desc_translation_key skill_forward_boost_m1_desc
+	
+// 	selectable false
+	
+// 	jump_speedup 200
+// }
+
+// skill 10009
+// {
+//     name shot_pushback_dice
+// 	name_translation_key skill_shot_pushback
+//     desc_translation_key skill_shot_pushback_desc
+	
+// 	rarity 4
+	
+// 	passive true
+// 	selectable false
+// }
+
+// skill 10010
+// {
+//     name give_ammo_on_skill_use_dice
+// 	name_translation_key skill_give_ammo_on_skill_use
+//     desc_translation_key skill_give_ammo_on_skill_use_desc
+	
+// 	passive true
+// 	selectable false
+// }
+
+// skill 10011
+// {
+//     name reflect_damage_dice
+// 	name_translation_key skill_reflect_damage
+//     desc_translation_key skill_reflect_damage_desc 25
+	
+// 	passive true
+// 	selectable false
+	
+// 	reflect_damage_procent 0.25
+// }
+
+// skill 10011 mod 0 tier 1
+// {
+// 	name_translation_key skill_reflect_damage
+//     desc_translation_key skill_reflect_damage_desc 40
+	
+// 	passive true
+// 	selectable false
+	
+// 	reflect_damage_procent 0.4
+// }
+
+// skill 10011 mod 0 tier 2
+// {
+// 	name_translation_key skill_reflect_damage
+//     desc_translation_key skill_reflect_damage_desc 65
+	
+// 	passive true
+// 	selectable false
+	
+// 	reflect_damage_procent 0.65
+// }
+
+// skill 10011 mod 0 tier 3
+// {
+// 	name_translation_key skill_reflect_damage
+//     desc_translation_key skill_reflect_damage_desc 100
+	
+// 	passive true
+// 	selectable false
+	
+// 	reflect_damage_procent 1
+// }
+
+
+// skill 10012
+// {
+//     name random_critical_chance_dice
+// 	name_translation_key skill_random_critical_chance
+//     desc_translation_key skill_random_critical_chance_desc 5 4
+	
+// 	rarity 2
+// 	passive true
+// 	selectable false
+	
+	
+// 	critical_chance_chance 0.05
+// 	critical_chance_multiplier 4
+// }
+
+
+// skill 10012 mod 0 tier 1
+// {
+// 	name_translation_key skill_random_critical_chance
+//     desc_translation_key skill_random_critical_chance_desc 2 20
+	
+// 	rarity 4
+	
+// 	critical_chance_chance 0.02
+// 	critical_chance_multiplier 20
+// }
+
+// skill 10013
+// {
+//     name sticky_bombs_qutok
+// 	name_translation_key skill_sticky_bombs
+	
+// 	passive true
+// 	selectable false
+	
+// 	sticky_bombs_explosion_time 1.0
+// 	sticky_bombs_triggers_per_second 1
+// 	sticky_bombs_damage_multiplier 0.2
+// }
+
+// skill 10014
+// {
+// 	name damage_buff_on_full_hp_qutok
+// 	name_translation_key skill_damage_buff_on_full_hp
+
+// 	passive true
+// 	selectable false
+
+// 	damage_buff_on_full_hp_multiplier 1.2
+// }
+
+// skill 10015
+// {
+// 	name damage_buff_on_low_hp_qutok
+// 	name_translation_key skill_damage_buff_on_low_hp
+
+// 	passive true
+// 	selectable false
+
+// 	damage_buff_on_low_hp_multiplier 10
+// 	damage_buff_on_low_hp_max_hp_percentage 0.5
+// }
+
+// skill 10016
+// {
+// 	name ramping_attack_speed_qutok
+// 	name_translation_key skill_ramping_attack_speed
+	
+// 	selectable false
+	
+// 	ramping_attack_speed_stack_multiplier
+// }
+

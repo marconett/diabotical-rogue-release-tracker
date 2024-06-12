@@ -1,0 +1,193 @@
+rogue_egun
+{
+	name_translation_key weapon_egun
+	desc_translation_key weapon_egun_desc
+	
+	selectable true
+	rarity epic
+	can_drop true
+	required_class rogue_eggbot
+
+	respawn_time 9
+    //unique true
+	weapon_tag egun
+
+	maximum_energy 130	
+	energy_per_shot 5
+	energy_recharge_per_sec 65
+	delay_energy_regen 0.1
+	
+	unlimited_ammo true
+	
+	color A35EBA
+
+	mouse_take_over_recoil true
+	recoil_delay_recovery 0.09
+	recoil_up 0.2
+	//recoil_side 0.15
+	recoil_recovery_time 0.3
+	recoil_time 0.05
+	
+	zoomed_recoil_up 0.15
+	//zoomed_recoil_side 0.1
+	zoomed_recoil_recovery_time 0.3
+	zoomed_recoil_time 0.05
+	
+	recoil_back 1
+	recoil_back_recovery_time 0.08
+	recoil_back_time 0.04
+	
+	zoomed_scope 1
+
+	icon_path images/weapon_icons/wp_hud_egun_02.png
+	icon_path2 images/weapon_icons/wp_card_egun.png
+	weapon_icon_path images/weapon_icons/wp_card_egun_nobg.png
+	
+    spread 0.5
+    zoomed_spread 0.2
+
+	rate 100	
+	damage 6 11
+	critical_damage 11 18
+	knockback 2
+	ground_knockback 2
+    charge_animation 1
+    speed 12000
+	
+	max_damage_distance 250
+    min_damage_distance 3500
+		
+	equip_time 300
+	base_combo_rate 200
+	
+	gravity_delay_by_distance 1000
+	gravity 500
+	
+	hit_radius 1 1
+	zoomed_walk_speed 200
+	
+	detached_shot_particles false
+    shot_particles weapon_egun_muzzle_flash
+	shot_particles_attached weapon_egun_muzzle
+   	shot_particles_attached_3p weapon_egun_muzzle_3p
+	missile_particles weapon_egun_projectile
+	missile_particles_1p weapon_egun_projectile
+	shot_particles_attached weapon_egun_muzzle_flash socket_muzzle 1
+	impact_particles weapon_egun_impact
+    player_impact_particles weapon_egun_impact
+	
+// IMPACT DECALS
+	decal decal 8
+	//decal decal_glow_red 16 3 3.561 false false alpha 2.5
+	//decal decal_glow_blue 24 3 3.561 false false alpha 5
+	
+	loop_animation true
+
+	/////	fps model position - fps_egun /////////////////////////////////////
+	
+	//model assets/shared/weapons/egun/egun
+	model assets/shared/models/animations/wp_egun/skm_egun
+	model_position 0.379076 -0.4 0.9
+	model_scale 0.02
+    model_post_rotation -2 -1.4 0
+	fov 47
+	model_pivot 0 0 0
+
+	/////	ADS model position - egun /////////////////////////////////////
+
+	model_position_centered 0.379076 -0.208433 1.48947
+	model_scale_centered 0.0136441
+	model_camera_scale 2.8				//for clipping
+	muzzle 2.7 -2.8 14
+
+
+/////	Third person model position - egun /////////////////////////////////////
+	//MOVED TO .ani FILE
+    
+	
+	//close
+	shot_sound w_ep_fire 
+	end_sound w_ep_fire_release 
+	// shot_sound_low_ammo weapon_energy_pistol_fire_low1 weapon_energy_pistol_fire_low2 weapon_energy_pistol_fire_low3 weapon_energy_pistol_fire_low4 weapon_energy_pistol_fire_low5
+	//distant
+	shot_sound2 w_ep_fire_distant 
+	end_sound2 w_ep_fire_distant_release 
+	// shot_sound_low_ammo2 weapon_pistol_fire_distant1 weapon_pistol_fire_distant2 weapon_pistol_fire_distant3 weapon_pistol_fire_distant4 weapon_pistol_fire_distant5
+    equip_sound w_ep_equip
+	hit_sound fb_enemy_hit
+	critical_hit_sound	fb_enemy_hit_crit
+	impact_sound w_ep_impact
+
+	detached_shot_particles false
+	multi_round_particles false
+
+    can_upgrade_ammo true
+	can_upgrade_stock false
+	can_upgrade_tactical_reload true
+}
+
+rogue_egun augment 1
+{
+	name egun_max_energy
+	name_translation_key egun_increase_max_energy
+	desc_translation_key egun_increase_max_energy_desc
+	rarity common
+	preadd maximum_energy 40
+	max_stacks 2
+	locked_in_battlepass true
+}
+
+rogue_egun augment 2
+{
+	name egun_recharge_energy
+	name_translation_key egun_increase_energy_recharge
+	desc_translation_key egun_increase_energy_recharge_desc
+	rarity common
+	preadd energy_recharge_per_sec 40
+	max_stacks 2
+}
+
+rogue_egun augment 3
+{
+	name egun_projectile_speed
+	name_translation_key egun_increase_projectile_speed
+	desc_translation_key egun_increase_projectile_speed_desc
+	rarity rare
+	preadd speed 2000
+	max_stacks 1
+	locked_in_battlepass true
+}
+
+// rogue_egun augment 4
+// {
+// 	name egun_equip_speed
+// 	name_translation_key egun_equip_speed
+// 	desc_translation_key egun_equip_speed_desc
+// 	rarity rare
+// 	preadd equip_time -50
+// 	max_stacks 2
+// }
+
+rogue_egun augment 5
+{
+	name egun_heal_suppression
+	name_translation_key egun_heal_suppression
+	desc_translation_key egun_heal_suppression_desc
+	rarity epic
+	overwrite heal_suppression_percentage 100
+	overwrite reapply_cooldown 10000
+	overwrite duration 4000
+}
+
+rogue_egun augment 6
+{
+	name egun_energy_blast
+	name_translation_key egun_energy_blast
+	desc_translation_key egun_energy_blast_desc
+	rarity legendary
+	overwrite applied_stack_event 1
+	overwrite required_applied_stacks 10
+	overwrite duration 2000
+	overwrite effect_damage 50
+	locked_in_battlepass true
+}

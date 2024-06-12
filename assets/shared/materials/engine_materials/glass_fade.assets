@@ -1,0 +1,8 @@
+asset glass_fade
+{
+  type material
+  listed true
+  tags NONE
+  material override_glass_fade
+  mat_override true
+}

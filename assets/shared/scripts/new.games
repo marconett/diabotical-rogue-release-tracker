@@ -1,0 +1,672 @@
+
+game rogue_wipeout
+{
+	map furnace
+	map toya
+	map titan
+
+	setting game_wipeout 1
+	setting game_truce_time 7
+	setting game_enable_items 0
+	setting game_team_mode 1
+   	setting game_rounds 11
+	setting game_score_limit 5
+	setting game_enable_reload 1
+	setting game_reload_fire_cancel_delay_ms 250
+	setting game_additional_currency_per_round 200
+	setting game_initial_currency 400
+	setting game_currency_per_kill 60
+	setting game_currency_per_assist 20
+	
+	setting game_spawn_protection_s 1
+	setting game_respawn_time_increment_per_death_ms 6000
+	setting game_minimum_respawn_time_ms 6000
+	setting game_maximum_respawn_time_ms 45000
+	setting game_incremental_team_respawn_time_ms 45000
+	
+	setting game_hp 100
+	setting game_stable_hp 100
+    setting game_ghost_limit_hp 100
+	setting game_max_hp 100
+
+	setting game_armor 50
+	setting game_stable_armor 50
+	setting game_max_armor 50
+	setting game_armor_ratio 1
+
+	setting game_ooc_regen_start_s 3
+	setting game_ooc_hp_regen_per_s 0	
+	setting game_ooc_armor_regen_per_s 10
+	
+	setting game_lifesteal_amount_when_last_alive 0
+	setting game_wipe_out_mode 2
+	
+	setting game_self_damage 1	
+	setting game_friendly_fire 0
+	setting game_friendly_knockback 0
+	
+	//PITFALL: Note "" is a special token that turns into empty string
+    //double quotes are not properly supported.
+    setting game_weapon_mode ""
+	//PITFALL: Note we must not use quotes here setting game_weapon_mode heyhey
+
+	setting game_pod 0
+
+    // lock out misc vestigial mechanics so it's not user cheatable, some of these should be removed from engine
+    setting phy_kinetic_accel 0
+    setting phy_wall_jumping 0
+    setting phy_jump_speedup 0
+    setting phy_sprint_max 100
+    setting phy_sprint_rate 0
+
+    // stuff that shouldn't be touched
+    setting phy_vertical_smoothing_factor 0.965
+    setting phy_strafe_cycles 1
+    setting phy_scale 1
+    setting phy_ramp_impulse_up 150
+
+    // physics cvars actually tweaked in presets
+    setting phy_target_tickrate 125
+    setting phy_gravity 800
+    setting phy_jump_impulse 275
+    setting phy_lateral_speed_multiplier 1.0
+    setting phy_back_speed_multiplier 1.0
+    setting phy_max_ground_speed 640
+    setting phy_max_hor_speed 0
+
+    setting phy_crouch_speed 210
+    setting phy_speed 300
+    setting phy_accel_ground 12
+    setting phy_deceleration_ground 100
+    setting phy_surface_friction 6
+	setting phy_ground_speed_loss 150
+
+    setting phy_air_speed 300
+    setting phy_accel_air 1.15
+    setting phy_air_speed_anisotropy 1
+    setting phy_accel_air_anisotropy 1
+
+    setting phy_auto_jump 1
+    setting phy_strafe_jumping 0
+    setting phy_air_strafe_jumping 0
+    setting phy_double_jump 0
+    setting phy_double_jump_impulse 400
+    setting phy_decel 0.3
+    setting phy_air_steering_torque 0
+    setting phy_air_steering_torque_anisotropy 0
+    setting phy_air_steering_dottenuation 1
+    setting phy_air_steering_bonus 0
+    setting phy_bolt_type 1
+    setting phy_bolt_cooldown 3
+    setting phy_bolt_cooldown_recovery 0
+    setting phy_bolt_minimum_ground_time 0.0697941
+    setting phy_bolt_base_speed 482
+    setting phy_bolt_extra_speed 0.1
+    setting phy_bolt_extra_accel 0
+    setting phy_bolt_extra_accel_time 0
+    setting phy_bolt_pitch 22.5
+    setting phy_bolt_kinetic_energy 51200
+    setting phy_bolt_ascent_impulse 200
+	setting phy_bolt_activation_time 0
+    setting phy_slide 0
+    setting phy_slide_accel 10
+    setting phy_slide_friction 0.5
+    setting phy_slide_duration_eigenvalue 2
+    setting phy_slide_duration_max 2
+    setting phy_slide_duration_gamma 1
+	setting phy_multi_jump 0
+	setting phy_multi_jump_time 0.4
+	setting phy_step_up 0
+	setting phy_ramp_rel_impulse_up 0
+	setting phy_ramp_up_speed 0
+	setting phy_ramp_down_speed 0
+	setting phy_strafe_mode 1
+	setting phy_triple_jump 0
+	setting net_server_hitscan 1
+	setting net_max_backwards_reconciliation_ping 0.12
+	
+	setting game_ring_enabled 0
+	setting game_dome_enabled 0
+	setting game_windsurf_enabled 0
+	setting game_allow_player_downed 0
+
+	setting game_player_starting_rerolls 0
+
+	setting game_weapon_inventory_type 1
+	setting game_weapon_inventory_size 2
+
+	setting game_auto_switch_ooa 0
+	setting game_equip_empty_weapons 1
+	setting game_player_ring_mode 4
+	setting game_ads 1
+	
+	setting phy_roll_type 0
+	setting phy_roll_activation_speed 299
+	setting phy_roll_control 10
+	setting phy_roll_speed 100
+    setting phy_roll_minimum_speed 250
+	setting phy_roll_slowdown 0.999
+	setting phy_roll_slide_combo_impulse 0
+	setting phy_roll_duration 0.35
+	setting phy_roll_cooldown 2
+	
+	setting game_warmup_time -1
+	setting game_camera_offset 0
+	setting game_camera_hor_offset 0
+	setting game_player_model_scale 0.5
+	setting game_player_col_radius_hor 15
+	setting game_player_col_radius_ver_bottom 24
+	setting game_player_col_radius_ver_top 60
+	
+	setting game_model 0
+	setting game_player_hitbox_height 105
+	setting game_player_hitbox_width 50
+	
+	setting game_unlimited_ammo	0
+	setting game_enable_roguelike 1
+
+	setting game_auto_weapon_reload 1
+	
+	//true indicates which weapon(s) you start with
+	//the weapons in this list are the ones that will exist in the roguelike pool.
+	//ammo (1) has to be defined for this to be parsed
+	weapon rogue_rocketlauncher 1
+	weapon rogue_shaft 1
+	weapon rogue_machinegun 1
+	weapon rogue_blaster 1
+	weapon rogue_supershotgun 1
+	weapon rogue_submachinegun 1
+	weapon rogue_heavysniper 1
+	weapon rogue_egun 1
+	weapon rogue_heavymachinegun 1
+	weapon rogue_revolver 1
+	weapon rogue_crossbow 1
+}
+
+game rogue_teamdeathmatch
+{
+	map sentinel
+
+	setting game_teamdeathmatch 1
+	setting game_truce_time 5
+	setting game_enable_items 0
+	setting game_team_mode 1
+	setting game_score_limit 100
+	setting game_enable_reload 1
+	setting game_reload_fire_cancel_delay_ms 250
+	setting game_gain_score_on_kill 1
+	setting game_currency_per_round 1000
+	
+	setting game_spawn_protection_s 2
+	setting game_minimum_respawn_time_ms 30000
+	setting game_maximum_respawn_time_ms 30000
+	
+	setting game_hp 100
+	setting game_stable_hp 100
+    setting game_ghost_limit_hp 100
+	setting game_max_hp 100
+
+	setting game_armor 50
+	setting game_stable_armor 50
+	setting game_max_armor 50
+	setting game_armor_ratio 1
+
+	setting game_ooc_regen_start_s 4
+	setting game_ooc_hp_regen_per_s 10	
+	setting game_ooc_armor_regen_per_s 10
+	
+	setting game_self_damage 1	
+	setting game_friendly_fire 0
+	setting game_friendly_knockback 0
+	
+	//PITFALL: Note "" is a special token that turns into empty string
+    //double quotes are not properly supported.
+    setting game_weapon_mode ""
+	//PITFALL: Note we must not use quotes here setting game_weapon_mode heyhey
+
+	setting game_pod 0
+
+    // lock out misc vestigial mechanics so it's not user cheatable, some of these should be removed from engine
+    setting phy_kinetic_accel 0
+    setting phy_wall_jumping 0
+    setting phy_jump_speedup 0
+    setting phy_sprint_max 100
+    setting phy_sprint_rate 0
+
+    // stuff that shouldn't be touched
+    setting phy_vertical_smoothing_factor 0.965
+    setting phy_strafe_cycles 1
+    setting phy_scale 1
+    setting phy_ramp_impulse_up 150
+
+    // physics cvars actually tweaked in presets
+    setting phy_target_tickrate 125
+    setting phy_gravity 800
+    setting phy_jump_impulse 275
+    setting phy_lateral_speed_multiplier 1.0
+    setting phy_back_speed_multiplier 1.0
+    setting phy_max_ground_speed 640
+    setting phy_max_hor_speed 0
+
+    setting phy_crouch_speed 210
+    setting phy_speed 300
+    setting phy_accel_ground 12
+    setting phy_deceleration_ground 100
+    setting phy_surface_friction 6
+	setting phy_ground_speed_loss 150
+
+    setting phy_air_speed 300
+    setting phy_accel_air 1.15
+    setting phy_air_speed_anisotropy 1
+    setting phy_accel_air_anisotropy 1
+
+    setting phy_auto_jump 1
+    setting phy_strafe_jumping 0
+    setting phy_air_strafe_jumping 0
+    setting phy_double_jump 0
+    setting phy_double_jump_impulse 400
+    setting phy_decel 0.3
+    setting phy_air_steering_torque 0
+    setting phy_air_steering_torque_anisotropy 0
+    setting phy_air_steering_dottenuation 1
+    setting phy_air_steering_bonus 0
+    setting phy_bolt_type 1
+    setting phy_bolt_cooldown 3
+    setting phy_bolt_cooldown_recovery 0
+    setting phy_bolt_minimum_ground_time 0.0697941
+    setting phy_bolt_base_speed 482
+    setting phy_bolt_extra_speed 0.1
+    setting phy_bolt_extra_accel 0
+    setting phy_bolt_extra_accel_time 0
+    setting phy_bolt_pitch 22.5
+    setting phy_bolt_kinetic_energy 51200
+    setting phy_bolt_ascent_impulse 200
+	setting phy_bolt_activation_time 0
+    setting phy_slide 0
+    setting phy_slide_accel 10
+    setting phy_slide_friction 0.5
+    setting phy_slide_duration_eigenvalue 2
+    setting phy_slide_duration_max 2
+    setting phy_slide_duration_gamma 1
+	setting phy_multi_jump 0
+	setting phy_multi_jump_time 0.4
+	setting phy_step_up 0
+	setting phy_ramp_rel_impulse_up 0
+	setting phy_ramp_up_speed 0
+	setting phy_ramp_down_speed 0
+	setting phy_strafe_mode 1
+	setting phy_triple_jump 0
+	setting net_server_hitscan 1
+	setting net_max_backwards_reconciliation_ping 0.12
+	
+	setting game_ring_enabled 0
+	setting game_dome_enabled 0
+	setting game_windsurf_enabled 0
+	setting game_allow_player_downed 0
+
+	setting game_player_starting_rerolls 0
+
+	setting game_weapon_inventory_type 1
+	setting game_weapon_inventory_size 2
+
+	setting game_auto_switch_ooa 0
+	setting game_equip_empty_weapons 1
+	setting game_player_ring_mode 4
+	setting game_ads 1
+	
+	setting phy_roll_type 0
+	setting phy_roll_activation_speed 299
+	setting phy_roll_control 10
+	setting phy_roll_speed 100
+    setting phy_roll_minimum_speed 250
+	setting phy_roll_slowdown 0.999
+	setting phy_roll_slide_combo_impulse 0
+	setting phy_roll_duration 0.35
+	setting phy_roll_cooldown 2
+	
+	setting game_warmup_time -1
+	setting game_camera_offset 0
+	setting game_camera_hor_offset 0
+	setting game_player_model_scale 0.5
+	setting game_player_col_radius_hor 15
+	setting game_player_col_radius_ver_bottom 24
+	setting game_player_col_radius_ver_top 60
+	
+	setting game_model 0
+	setting game_player_hitbox_height 105
+	setting game_player_hitbox_width 50
+	
+	setting game_unlimited_ammo	0
+	setting game_enable_roguelike 1
+
+	setting game_auto_weapon_reload 1
+	
+	//true indicates which weapon(s) you start with
+	//the weapons in this list are the ones that will exist in the roguelike pool.
+	//ammo (1) has to be defined for this to be parsed
+	weapon rogue_rocketlauncher 1
+	weapon rogue_shaft 1
+	weapon rogue_machinegun 1
+	weapon rogue_blaster 1
+	weapon rogue_supershotgun 1
+	weapon rogue_submachinegun 1
+	weapon rogue_heavysniper 1
+	weapon rogue_egun 1
+	weapon rogue_heavymachinegun 1
+	weapon rogue_revolver 1
+	weapon rogue_crossbow 1
+}
+
+
+game rogue_edit
+{
+	setting game_edit 1
+	setting game_enable_items 1
+	setting game_self_damage 0
+	setting game_draft_time 0
+	setting game_time_limit 0
+	setting game_score_limit 0
+
+	setting game_warmup_time 0
+	setting game_countdown 0
+	setting game_waiting_for_players_time 0
+	
+	setting game_hp 100
+	setting game_stable_hp 200
+    setting game_ghost_limit_hp 200
+	setting game_max_hp 200
+
+	setting game_armor 50
+	setting game_stable_armor 100
+	setting game_max_armor 100
+	
+    // lock out misc vestigial mechanics so it's not user cheatable, some of these should be removed from engine
+    setting phy_kinetic_accel 0
+    setting phy_wall_jumping 0
+    setting phy_jump_speedup 0
+    setting phy_sprint_max 100
+    setting phy_sprint_rate 0
+
+    // stuff that shouldn't be touched
+    setting phy_vertical_smoothing_factor 0.965
+    setting phy_strafe_cycles 1
+    setting phy_scale 1
+    setting phy_ramp_impulse_up 150
+
+    // physics cvars actually tweaked in presets
+    setting phy_target_tickrate 125
+    setting phy_gravity 800
+    setting phy_jump_impulse 275
+    setting phy_lateral_speed_multiplier 1.0
+    setting phy_back_speed_multiplier 1.0
+    setting phy_max_ground_speed 0
+    setting phy_max_hor_speed 0
+
+    setting phy_crouch_speed 210
+    setting phy_speed 300
+    setting phy_accel_ground 12
+    setting phy_deceleration_ground 100
+    setting phy_surface_friction 6
+	setting phy_ground_speed_loss 150
+
+    setting phy_air_speed 300
+    setting phy_accel_air 1.15
+    setting phy_air_speed_anisotropy 1
+    setting phy_accel_air_anisotropy 1
+
+    setting phy_auto_jump 1
+    setting phy_strafe_jumping 0
+    setting phy_air_strafe_jumping 0
+    setting phy_double_jump 0
+    setting phy_double_jump_impulse 400
+    setting phy_decel 0.3
+    setting phy_air_steering_torque 0
+    setting phy_air_steering_torque_anisotropy 0
+    setting phy_air_steering_dottenuation 1
+    setting phy_air_steering_bonus 0
+    setting phy_bolt_type 1
+    setting phy_bolt_cooldown 3
+    setting phy_bolt_cooldown_recovery 0
+    setting phy_bolt_minimum_ground_time 0.0697941
+    setting phy_bolt_base_speed 482
+    setting phy_bolt_extra_speed 0.1
+    setting phy_bolt_extra_accel 0
+    setting phy_bolt_extra_accel_time 0
+    setting phy_bolt_pitch 22.5
+    setting phy_bolt_kinetic_energy 51200
+    setting phy_bolt_ascent_impulse 200
+	setting phy_bolt_activation_time 0
+    setting phy_slide 0
+    setting phy_slide_accel 10
+    setting phy_slide_friction 0.5
+    setting phy_slide_duration_eigenvalue 2
+    setting phy_slide_duration_max 2
+    setting phy_slide_duration_gamma 1
+	setting phy_multi_jump 0
+	setting phy_multi_jump_time 0.4
+	setting phy_step_up 0
+	setting phy_ramp_rel_impulse_up 0
+	setting phy_ramp_up_speed 0
+	setting phy_ramp_down_speed 0
+	setting phy_strafe_mode 1
+	setting phy_triple_jump 0
+	setting net_server_hitscan 1
+	setting net_max_backwards_reconciliation_ping 0.12
+	
+	setting game_ring_enabled 0
+	setting game_dome_enabled 0
+	setting game_windsurf_enabled 0
+	setting game_allow_player_downed 0
+
+	setting game_player_starting_rerolls 0
+
+	setting game_weapon_inventory_type 1
+	setting game_weapon_inventory_size 3
+
+	setting game_auto_switch_ooa 0
+	setting game_equip_empty_weapons 1
+	setting game_player_ring_mode 4
+	setting game_ads 1
+	
+	setting phy_roll_type 0
+	setting phy_roll_activation_speed 299
+	setting phy_roll_control 10
+	setting phy_roll_speed 100
+    setting phy_roll_minimum_speed 250
+	setting phy_roll_slowdown 0.999
+	setting phy_roll_slide_combo_impulse 0
+	setting phy_roll_duration 0.35
+	setting phy_roll_cooldown 2
+	
+	setting game_warmup_time -1
+	setting game_camera_offset 0
+	setting game_camera_hor_offset 0
+	setting game_player_model_scale 0.5
+	setting game_player_col_radius_hor 15
+	setting game_player_col_radius_ver_bottom 24
+	setting game_player_col_radius_ver_top 60
+	
+	setting game_model 0
+	setting game_player_hitbox_height 105
+	setting game_player_hitbox_width 50
+	
+	setting game_unlimited_ammo	1
+	setting game_enable_roguelike 0
+	
+	weapon rogue_rocketlauncher 1
+	weapon rogue_shaft 1
+	weapon rogue_machinegun 1
+	weapon rogue_blaster 1
+	weapon rogue_supershotgun 1
+	weapon rogue_submachinegun 1
+	weapon rogue_heavysniper 1
+	weapon rogue_egun 1
+	weapon rogue_heavymachinegun 1
+	weapon rogue_revolver 1
+	weapon rogue_crossbow 1
+}
+
+game rogue_hub
+{
+	setting game_hub 1
+	setting game_countdown 0	
+	setting game_warmup_time 0	
+	setting game_waiting_for_players_time 0
+
+	setting game_wipeout 0	
+	setting game_wipe_out_mode 0
+	setting game_truce_time 0
+	setting game_enable_items 0
+	setting game_team_mode 1
+	setting game_enable_reload 1
+	setting game_reload_fire_cancel_delay_ms 250
+		
+	setting game_hp 100
+	setting game_stable_hp 100
+    setting game_ghost_limit_hp 100
+	setting game_max_hp 100
+
+	setting game_armor 50
+	setting game_stable_armor 50
+	setting game_max_armor 50
+	setting game_armor_ratio 1
+
+	setting game_ooc_regen_start_s 3
+	setting game_ooc_hp_regen_per_s 0	
+	setting game_ooc_armor_regen_per_s 10
+	
+	setting game_lifesteal_amount_when_last_alive 0
+	
+	setting game_self_damage 0	
+	setting game_friendly_fire 0
+	setting game_friendly_knockback 0
+
+	setting game_pod 0
+
+    // lock out misc vestigial mechanics so it's not user cheatable, some of these should be removed from engine
+    setting phy_kinetic_accel 0
+    setting phy_wall_jumping 0
+    setting phy_jump_speedup 0
+    setting phy_sprint_max 100
+    setting phy_sprint_rate 0
+
+    // stuff that shouldn't be touched
+    setting phy_vertical_smoothing_factor 0.965
+    setting phy_strafe_cycles 1
+    setting phy_scale 1
+    setting phy_ramp_impulse_up 150
+
+    // physics cvars actually tweaked in presets
+    setting phy_target_tickrate 125
+    setting phy_gravity 800
+    setting phy_jump_impulse 275
+    setting phy_lateral_speed_multiplier 1.0
+    setting phy_back_speed_multiplier 1.0
+    setting phy_max_ground_speed 0
+    setting phy_max_hor_speed 0
+
+    setting phy_crouch_speed 210
+    setting phy_speed 300
+    setting phy_accel_ground 12
+    setting phy_deceleration_ground 100
+    setting phy_surface_friction 6
+	setting phy_ground_speed_loss 150
+
+    setting phy_air_speed 300
+    setting phy_accel_air 1.15
+    setting phy_air_speed_anisotropy 1
+    setting phy_accel_air_anisotropy 1
+
+    setting phy_auto_jump 1
+    setting phy_strafe_jumping 0
+    setting phy_air_strafe_jumping 0
+    setting phy_double_jump 0
+    setting phy_double_jump_impulse 400
+    setting phy_decel 0.3
+    setting phy_air_steering_torque 0
+    setting phy_air_steering_torque_anisotropy 0
+    setting phy_air_steering_dottenuation 1
+    setting phy_air_steering_bonus 0
+    setting phy_bolt_type 1
+    setting phy_bolt_cooldown 3
+    setting phy_bolt_cooldown_recovery 0
+    setting phy_bolt_minimum_ground_time 0.0697941
+    setting phy_bolt_base_speed 482
+    setting phy_bolt_extra_speed 0.1
+    setting phy_bolt_extra_accel 0
+    setting phy_bolt_extra_accel_time 0
+    setting phy_bolt_pitch 22.5
+    setting phy_bolt_kinetic_energy 51200
+    setting phy_bolt_ascent_impulse 200
+	setting phy_bolt_activation_time 0
+    setting phy_slide 0
+    setting phy_slide_accel 10
+    setting phy_slide_friction 0.5
+    setting phy_slide_duration_eigenvalue 2
+    setting phy_slide_duration_max 2
+    setting phy_slide_duration_gamma 1
+	setting phy_multi_jump 0
+	setting phy_multi_jump_time 0.4
+	setting phy_step_up 0
+	setting phy_ramp_rel_impulse_up 0
+	setting phy_ramp_up_speed 0
+	setting phy_ramp_down_speed 0
+	setting phy_strafe_mode 1
+	setting phy_triple_jump 0
+	setting net_server_hitscan 1
+	setting net_max_backwards_reconciliation_ping 0.12
+	
+	setting game_ring_enabled 0
+	setting game_dome_enabled 0
+	setting game_windsurf_enabled 0
+	setting game_allow_player_downed 0
+
+	setting game_player_starting_rerolls 0
+
+	setting game_weapon_inventory_type 1
+	setting game_weapon_inventory_size 2
+
+	setting game_auto_switch_ooa 0
+	setting game_equip_empty_weapons 1
+	setting game_player_ring_mode 4
+	setting game_ads 1
+	
+	setting phy_roll_type 0
+	setting phy_roll_activation_speed 299
+	setting phy_roll_control 10
+	setting phy_roll_speed 100
+    setting phy_roll_minimum_speed 250
+	setting phy_roll_slowdown 0.999
+	setting phy_roll_slide_combo_impulse 0
+	setting phy_roll_duration 0.35
+	setting phy_roll_cooldown 2
+	
+	setting game_camera_offset 0
+	setting game_camera_hor_offset 0
+	setting game_player_model_scale 0.5
+	setting game_player_col_radius_hor 15
+	setting game_player_col_radius_ver_bottom 24
+	setting game_player_col_radius_ver_top 60
+	
+	setting game_model 0
+	setting game_player_hitbox_height 105
+	setting game_player_hitbox_width 50
+	
+	setting game_unlimited_ammo	0
+	setting game_enable_roguelike 1
+	
+	//true indicates which weapon(s) you start with
+	//the weapons in this list are the ones that will exist in the roguelike pool.
+	weapon rogue_rocketlauncher 1
+	weapon rogue_shaft 1
+	weapon rogue_machinegun 1
+	weapon rogue_blaster 1
+	weapon rogue_supershotgun 1
+	weapon rogue_submachinegun 1
+	weapon rogue_heavysniper 1
+	weapon rogue_egun 1
+	weapon rogue_heavymachinegun 1
+	weapon rogue_revolver 1
+	weapon rogue_crossbow 1
+}
+

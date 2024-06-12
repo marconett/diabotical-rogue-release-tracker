@@ -1,0 +1,17 @@
+override_metal_painted_light_gray
+{
+  {
+    map materials/matlib/shaders/mat_metal_painted/mat_metal_painted_d.png
+    map materials/matlib/shaders/mat_metal_painted/mat_metal_painted_n.png
+    map materials/matlib/shaders/mat_metal_painted/mat_metal_painted_s.png
+    map swatches/black.png
+    map swatches/red.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+    pixel_shader_param accent1 cfdbe7ff
+  }
+}
+

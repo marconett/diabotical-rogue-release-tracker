@@ -1,0 +1,8 @@
+asset metal_painted_light_gray
+{
+	type material
+	listed true
+	tags NONE
+	material override_metal_painted_light_gray
+	mat_override true
+}

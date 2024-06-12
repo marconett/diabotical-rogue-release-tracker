@@ -1,0 +1,21 @@
+fresnel_holo_mat_bigbot_body
+{
+  {
+    map models/rogue/playable_characters/bigbot/bigbot_material/base/bigbot_base_d.png
+    map models/rogue/playable_characters/bigbot/bigbot_material/base/bigbot_base_n.png
+    map models/rogue/playable_characters/bigbot/bigbot_material/base/bigbot_base_s.png
+    map models/rogue/playable_characters/bigbot/bigbot_material/base/bigbot_base_i.png
+    map models/rogue/playable_characters/bigbot/bigbot_material/base/bigbot_base_c.png
+    material_id 61
+    vertex_shader tileanim.vs.cso 111 NGTA
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    vertex_shader_param bones
+    pixel_shader trans_fresnel.ps.cso
+    pixel_shader_param accent1 bcbcbc
+    pixel_shader_param float_params4 0.0 0.0 0.0 0.0
+    blendfunc blend
+    depth read_only
+  }
+}
+

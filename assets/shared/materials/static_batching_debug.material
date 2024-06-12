@@ -1,0 +1,14 @@
+static_batching_debug
+{
+  {
+    map swatches/black.png
+    map swatches/black.png
+    map swatches/black.png
+    material_id 250
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader static_batching_debug.ps.cso
+  }
+}
+

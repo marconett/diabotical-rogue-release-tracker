@@ -1,0 +1,8 @@
+asset monitor_screen5
+{
+  type material
+  listed true
+  tags NONE
+  material override_monitor_screen5
+  mat_override true
+}

@@ -1,0 +1,8 @@
+asset core_glow 
+{
+    type material
+    listed true
+    tags NONE
+    material override_core_glow
+	mat_override true
+}

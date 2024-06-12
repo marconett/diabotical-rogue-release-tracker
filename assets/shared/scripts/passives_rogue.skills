@@ -1,0 +1,349 @@
+skill 30001
+{
+	name double_jump
+	name_translation_key passive_double_jump
+	desc_translation_key passive_double_jump_desc
+
+	
+	selectable false
+	category passive
+
+	multi_jump_extra_jumps 1
+	multi_jump_impulse_multiplier 1.3 //multiplies the deafult impulse by this value, makes the double jump seem more impactful
+	
+}
+
+skill 30002
+{
+	name cooldown_reduction_on_kill
+
+	name_translation_key passive_cooldown_reduction_on_kill
+	desc_translation_key passive_cooldown_reduction_on_kill_desc
+
+	selectable true
+	show_in_dev_console true
+	category passive
+
+	cooldown_reduction_per_kill 2
+}
+
+skill 30003
+{
+	name armor_regen_on_kill
+	name_translation_key passive_armor_regen_on_kill
+	desc_translation_key passive_armor_regen_on_kill_desc
+
+	selectable true
+	show_in_dev_console true
+	category passive
+
+
+	armor_regen_per_kill 30
+}
+
+skill 30004
+{
+	name first_shot_damage_buff
+	name_translation_key passive_first_shot_damage_buff
+	desc_translation_key passive_first_shot_damage_buff_desc
+	
+	selectable false
+	show_in_dev_console true
+	category passive
+	
+	first_shot_damage_multiplicator 1.25
+}
+
+skill 30005
+{
+	name overshield_on_kill
+	name_translation_key passive_overshield_on_kill
+	desc_translation_key passive_overshield_on_kill_desc
+	
+	selectable false
+	show_in_dev_console true
+	category passive
+	
+	overshield_on_kill_amount_per_enemy 20
+}
+
+skill 30006
+{
+	name forward_acceleration
+	name_translation_key passive_forward_acceleration
+	desc_translation_key passive_forward_acceleration_desc
+	
+	selectable false
+	show_in_dev_console true
+	category passive
+	
+}
+
+skill 30007
+{
+	name speed_on_kill 
+	name_translation_key passive_speed_on_kill
+	desc_translation_key passive_speed_on_kill_desc
+	selectable false
+	show_in_dev_console true
+	category passive
+	power 100 //how much extra speed
+	duration 2
+}
+
+skill 30008
+{
+	name Heal_o_Meter 
+	name_translation_key passive_healometer
+	desc_translation_key passive_healometer_desc
+	selectable false
+	show_in_dev_console true
+	category passive
+
+	required_class rogue_eggbot
+
+	//healometer_default_points 100
+	//healometer_max_damage_points 150
+	//healometer_max_healing_points 100
+	//healometer_min_damage_multiplier 0.8
+	//healometer_max_damage_multiplier 1.2
+//
+	//healometer_decay_with_damage false // if false it decays over time
+	//healometer_yin_and_yang true
+//
+
+	duration 10 //yin and yang power state duration
+	healing_boost 0
+	damage_boost 1.2
+	healometer_max_healing_points 200
+	healometer_yin_and_yang false
+
+	////Decay over time vars
+	healometer_decay_delay 5
+	healometer_decay_rate 4
+}
+
+
+
+skill 30009
+{
+	name currency_earn_rate_increase
+	name_translation_key currency_earn_rate_increase
+	desc_translation_key currency_earn_rate_increase_desc
+	selectable false
+	show_in_dev_console true
+	category passive
+	rarity epic
+	power 5
+}
+
+skill 30009 augment 1
+{
+	name_translation_key currency_earn_rate_increase_a1
+	desc_translation_key currency_earn_rate_increase_a1_desc
+	preadd power 5
+	max_stacks 4
+	rarity epic
+}
+
+skill 30010
+{
+	name passive_passive_income
+	name_translation_key passive_passive_income
+	desc_translation_key passive_passive_income_desc
+	category passive
+	selectable true
+	rarity epic
+	show_in_dev_console true
+	power 5 //currency
+	duration 2 //time between currency
+	locked_in_battlepass true
+}
+
+skill 30011 
+{
+	name passive_ammo_on_kill
+	name_translation_key passive_ammo_on_kill
+	desc_translation_key passive_ammo_on_kill_desc
+	category passive
+	selectable true
+	show_in_dev_console true
+	rarity epic
+	power 0.25 //percentage of max ammo restored on kill
+	locked_in_battlepass true
+}
+
+skill 30012
+{
+	name passive_interest_per_round
+	name_translation_key passive_interest_per_round
+	desc_translation_key passive_interest_per_round_desc
+	category passive
+	selectable true
+	rarity epic
+	show_in_dev_console true
+	power 1.1 //multiplier
+}
+
+skill 30013
+{
+	name passive_blood_pact
+	name_translation_key passive_blood_pact
+	desc_translation_key passive_blood_pact_desc
+	category passive
+	selectable true
+	show_in_dev_console true
+	rarity legendary
+	power 0.5
+	locked_in_battlepass true
+}
+
+
+skill 30014
+{
+	name passive_immovable_object
+	name_translation_key passive_immovable_object
+	desc_translation_key passive_immovable_object_desc
+	category passive
+	selectable true
+	show_in_dev_console true
+	rarity rare
+	power 5 //amount of health lost for every shot once mag is empty
+	locked_in_battlepass true
+}
+
+
+skill 30015
+{
+	name passive_mark_for_deletion
+	name_translation_key passive_mark_for_deletion
+	desc_translation_key passive_mark_for_deletion_desc
+	locked_in_battlepass true
+	category passive
+	selectable true
+	show_in_dev_console true
+	rarity legendary
+	locked_in_battlepass true
+}
+
+skill 30016
+{
+	name passive_cleansing_jump
+	name_translation_key passive_cleansing_jump
+	desc_translation_key passive_cleansing_jump_desc
+	category passive
+	selectable true
+	show_in_dev_console true
+	rarity rare
+}
+
+
+skill 30017
+{
+	name passive_slide_dmg_boost
+	name_translation_key passive_slide_dmg_boost
+	desc_translation_key passive_slide_dmg_boost_desc
+	category passive
+	selectable true
+	show_in_dev_console true
+	power 1.2
+	rarity epic
+}
+
+
+skill 30018
+{
+	name passive_movement_speed_when_not_hit
+	name_translation_key passive_movement_speed_when_not_hit
+	desc_translation_key passive_movement_speed_when_not_hit_desc
+	category passive
+	selectable true
+	show_in_dev_console true
+	delay 3 //time before boost is applied
+	movement_speed_boost 100 
+	power 50 // decrease speed amount when not boosted
+	rarity epic
+	locked_in_battlepass true
+}
+
+skill 30019
+{
+	name passive_health_regen 
+	name_translation_key passive_health_regen
+	desc_translation_key passive_health_regen_desc
+	category passive
+	selectable true
+	show_in_dev_console true
+	rarity rare
+	duration 10 //time between ticks
+	power 5 //heal amount 
+	locked_in_battlepass true
+}
+
+
+skill 30020
+{
+	name passive_all_shield_no_hp 
+	name_translation_key passive_all_shield_no_hp
+	desc_translation_key passive_all_shield_no_hp_desc
+	category passive
+	selectable true
+	show_in_dev_console true
+	rarity legendary
+	locked_in_battlepass true
+}
+
+skill 30021 
+{
+	name passive_speed_boost_on_reload
+	name_translation_key passive_speed_boost_on_reload
+	desc_translation_key passive_speed_boost_on_reload_desc
+	category passive
+	selectable true
+	show_in_dev_console true
+	rarity epic
+
+	movement_speed_boost 100
+	duration 1.5
+}
+
+skill 30022 
+{
+	name passive_poison_chance_on_shot
+	name_translation_key passive_poison_chance_on_shot
+	desc_translation_key passive_poison_chance_on_shot_desc
+	category passive
+	selectable true
+	show_in_dev_console true
+	rarity common
+
+	damage_over_time 2
+}
+
+skill 30023
+{
+	name passive_ignite_chance_on_shot
+	name_translation_key passive_ignite_chance_on_shot
+	desc_translation_key passive_ignite_chance_on_shot_desc
+	category passive
+	selectable true
+	show_in_dev_console true
+	rarity common
+
+	damage_over_time 2
+}
+
+skill 30024
+{
+	name passive_make_it_count
+	name_translation_key passive_make_it_count
+	desc_translation_key passive_make_it_count_desc
+	category passive
+	selectable true
+	show_in_dev_console true
+	rarity common
+	locked_in_battlepass true
+}
+
+//PASSIVES END
+

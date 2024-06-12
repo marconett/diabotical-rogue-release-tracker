@@ -1,0 +1,832 @@
+asset armor/5
+{
+  listed true
+  type entity
+  command multi /add armort1
+}
+
+asset armor/50
+{
+  listed true
+  type entity
+  command multi /add armort2
+}
+
+asset armor/75
+{
+  listed true
+  type entity
+  command multi /add armort3
+}
+
+asset armor/100
+{
+  listed true
+  type entity
+  command multi /add armort4
+}
+
+asset macguffin_pickup
+{
+  listed true
+  type entity
+  command /add macguffin
+}
+
+asset flag/1
+{
+  listed true
+  type entity
+  command multi /add flag; /set !last team 0
+}
+asset flag/2
+{
+  listed true
+  type entity
+  command multi /add flag; /set !last team 1
+}
+asset flag
+{
+  listed true
+  pickup_size large
+}
+
+asset liquid
+{
+  listed true
+  type entity
+  command multi /add liquid; /resize !last 160 40 160; /forsel move %1 +0 +10 +0
+}
+
+asset terrain_grass
+{
+  listed true
+  type entity
+  command multi /add prop_terrain_grass; /set !last model experiments/grass11
+}
+
+asset hp/5
+{
+  listed true
+  type entity
+  command /add hpt0
+}
+
+asset hp/25
+{
+  listed true
+  type entity
+  command /add hpt1
+}
+
+asset hp/50
+{
+  listed true
+  type entity
+  command /add hpt2
+}
+
+asset hp/100
+{
+  listed true
+  type entity
+  command /add hpt3
+}
+
+asset powerup/doubledamage
+{
+  listed true
+  type entity
+  command multi /add doubledamage
+}
+
+asset powerup/diabotical
+{
+  listed true
+  type entity
+  command multi /add doubledamage
+}
+asset doubledamage
+{
+  listed true
+  pickup_size large
+}
+
+asset powerup/tripledamage
+{
+  listed true
+  type entity
+  command multi /add tripledamage
+}
+asset tripledamage
+{
+  listed true
+  pickup_size large
+}
+
+asset powerup/vanguard
+{
+  listed true
+  type entity
+  command multi /add vanguard
+}
+asset vanguard
+{
+  listed true
+  pickup_size large
+}
+
+asset powerup/siphonator
+{
+  listed true
+  type entity
+  command multi /add survival
+}
+asset survival
+{
+  listed true
+  pickup_size large
+}
+
+asset powerup/haste
+{
+  listed true
+  type entity
+  command multi /add haste
+}
+asset haste
+{
+  listed true
+  pickup_size large
+}
+
+//asset energy/5
+{
+  listed true
+  type entity
+  command add energyt1
+}
+
+//asset energy/10
+{
+  listed true
+  type entity
+  command add energyt2
+}
+
+//asset energy/25
+{
+  listed true
+  type entity
+  command add energyt3
+}
+
+
+//AMMO
+
+asset ammo/machinegun
+{
+  listed true
+  type entity
+  command add ammomac
+}
+
+asset ammo/super_shotgun
+{
+  listed true
+  type entity
+  command add ammoss
+}
+
+asset ammo/shaft
+{
+  listed true
+  type entity
+  command add ammoshaft
+}
+
+asset ammo/rocket_launcher
+{
+  listed true
+  type entity
+  command add ammorl
+}
+
+asset ammo/pncr
+{
+  listed true
+  type entity
+  command add ammopncr
+}
+
+asset ammo/blaster
+{
+  listed true
+  type entity
+  command add ammobl
+}
+
+asset ammo/grenade_launcher
+{
+  listed true
+  type entity
+  command add ammogl
+}
+
+asset ammo/void_cannon
+{
+  listed true
+  type entity
+  command add ammovc
+}
+
+//WEAPONS
+
+asset weapon/super_shotgun
+{
+  listed true
+  type entity
+  command add weaponss
+}
+
+asset weapon/shaft
+{
+  listed true
+  type entity
+  command add weaponshaft 
+}
+
+asset weapon/rocket_launcher
+{
+  listed true
+  type entity
+  command add weaponrl
+}
+
+//asset weapon/hyper_launcher
+//{
+//  listed true
+//  type entity
+//  command add weaponhl
+//}
+
+asset weapon/pncr
+{
+  listed true
+  type entity
+  command add weaponpncr
+}
+
+asset weapon/crossbow
+{
+  listed true
+  type entity
+  command add weaponcb
+}
+
+//asset weapon/ion_rifle
+//{
+//  listed true
+//  type entity
+//  command add weaponir
+//}
+
+asset weapon/blaster
+{
+  listed true
+  type entity
+  command add weaponbl
+}
+
+asset weapon/machinegun
+{
+  listed true
+  type entity
+  command add weaponmac
+}
+
+asset weapon/void_cannon
+{
+  listed true
+  type entity
+  command add weaponvc
+}
+
+asset weapon/healing_weeball
+{
+  listed true
+  type entity
+  command add weaponhw
+}
+
+asset weapon/implosion_weeball
+{
+  listed true
+  type entity
+  command add weaponiw
+}
+
+asset weapon/slow_field_weeball
+{
+  listed true
+  type entity
+  command add weaponsw
+}
+
+asset weapon/explosive_weeball
+{
+  listed true
+  type entity
+  command add weaponbw
+}
+
+asset weapon/smoke_weeball
+{
+  listed true
+  type entity
+  command add weaponsmw
+}
+
+asset weapon/survival_amplifier_weeball
+{
+  listed true
+  type entity
+  command add weaponsaw
+}
+
+asset weapon/survival_vulnerability_weeball
+{
+  listed true
+  type entity
+  command add weaponsvw
+}
+
+asset weapon/survival_heal_weeball
+{
+  listed true
+  type entity
+  command add weaponshw
+}
+
+//MISC
+asset trigger
+{
+  listed true
+  type entity
+  command multi /add trigger; /resize !last 40 40 40; /forsel move %1 +0 +10 +0
+}
+
+asset trigger_start
+{
+  listed true
+  type entity
+  command multi /add trigger_start; /resize !last 40 40 40; /set !last action start_timer; /forsel move %1 +0 +10 +0
+}
+
+asset trigger_end
+{
+  listed true
+  type entity
+  command multi /add trigger_end; /resize !last 40 40 40; /set !last action end_timer; /forsel move %1 +0 +10 +0
+}
+
+asset light
+{
+  listed true
+  type entity
+  command /add light cursor
+}
+
+asset reflection_probe
+{
+  listed true
+  type entity
+  command multi /add probe cursor; /forsel set %1 type reflection
+}
+
+asset skylight
+{
+  listed true
+  type entity
+  command multi /add skylight cursor
+}
+
+asset givolume
+{
+  listed true
+  type entity
+  tags gientity
+  command multi /add givolume cursor
+}
+
+asset giblocker
+{
+  listed true
+  type entity
+  tags gientity
+  command multi /add giblocker cursor
+}
+
+asset sound
+{
+  listed true
+  type entity
+  command /add sound cursor
+}
+
+asset SoundVolume
+{
+  listed true
+  type entity
+  command multi /add SoundVolume cursor
+}
+
+asset logic
+{
+  listed true
+  type entity
+  command multi /add logic; /forsel move %1 +0 +-10 +0;
+}
+
+asset bot/behavior_melee
+{
+  listed true
+  type entity
+  command multi /add bot; /forsel move %1 +0 +25 +0; /forsel set %1 behavior melee
+}
+
+asset bot/behavior_stationary_target
+{
+  listed true
+  type entity
+  command multi /add bot; /forsel move %1 +0 +25 +0; /forsel set %1 behavior stationary_target
+}
+
+asset bot/behavior_moving_target
+{
+  listed true
+  type entity
+  command multi /add bot; /forsel move %1 +0 +25 +0; /forsel set %1 behavior moving_target
+}
+
+asset volumetric
+{
+  listed true
+  type entity
+  command multi /add volumetric; /resize !last 40 40 40
+}
+
+asset billboard
+{
+  listed true
+  type entity
+  command multi /add billboard; /resize !last 40 40 1
+}
+
+asset jumppad
+{
+  listed true
+  type entity
+  command multi /add jumppad; /resize !last 80 10 80; /forsel move %1 +0 +-5 +0
+}
+
+asset teleport
+{
+  listed true
+  type entity
+  command multi /add teleport; /resize !last 40 80 40; /forsel move %1 +0 +30 +0
+}
+
+asset jpdir
+{
+  listed true
+  type entity
+  command /add jpdir
+}
+
+asset tpexit
+{
+  listed true
+  type entity
+  command /add tpexit
+}
+
+asset spawn
+{
+  listed true
+  type entity
+  command multi /add spawn; /forsel move %1 +0 +-10 +0
+}
+
+asset spawn_template
+{
+  listed true
+  type entity
+  command multi /add prop_spawn; /forsel set %1 model props/production/spawnpoint/spawnpoint_vercol; /forsel move %1 +0 +-9 +0; /forsel rotate %1 0 180 0; /forsel set %1 newspawn 1; /add spawn; /forsel move %1 +0 +-10 +0; /find * newspawn 1; /forsel set %1 newspawn
+}
+
+asset base_team_0
+{
+  listed true
+  type entity
+  command multi /add base_team_0; /resize !last 400 180 400; /set !last team 0; /forsel move %1 +0 +80 +0; /add prop_theme_macguffin_props; /set !last model theme/macguffin/props/dropzones/mcg_prop_dropzone_well_closed; /resize !last 1.1 0.5 1.1; /forsel move %1 +0 +-20.8 +0; /set !last clip noclip; /set !last color 88d3ff
+}
+
+asset base_team_1
+{
+  listed true
+  type entity
+  command multi /add base_team_1; /resize !last 400 180 400; /set !last team 1; /forsel move %1 +0 +80 +0; /add prop_theme_macguffin_props; /set !last model theme/macguffin/props/dropzones/mcg_prop_dropzone_smelting_closed; /resize !last 1.1 0.5 1.1; /forsel move %1 +0 +-20.8 +0; /set !last clip noclip; /set !last color ff9671
+}
+
+asset thumbnail
+{
+  listed true
+  type entity
+  command multi /del thumbnail; /add thumbnail eye
+}
+
+///////////////////////////////////////WEAPON_PICKUP_LIGHTS///////////////////////////////////////////////////
+
+asset weaponshaft
+{
+	listed true
+	pfx weapon_pickup_pfx_shaft
+	pickup_size large
+}
+asset weaponpncr
+{
+	listed true
+	pfx weapon_pickup_pfx_pncr
+	pickup_size large
+}
+asset weaponcb
+{
+	listed true
+	pfx weapon_pickup_pfx_cb
+	pickup_size large
+}
+asset weaponss
+{
+	listed true
+	pfx weapon_pickup_pfx_ss
+	pickup_size large
+}
+asset weaponrl
+{
+	listed true
+	pfx weapon_pickup_pfx_rl
+	pickup_size large
+}
+asset weapongl
+{
+	listed true
+	pfx weapon_pickup_pfx_gl
+	pickup_size large
+}
+asset weaponvc
+{
+	listed true
+	pfx weapon_pickup_pfx_w9
+	pickup_size large
+}
+asset weaponmg
+{
+	listed true
+	pfx weapon_pickup_pfx_mg
+	pickup_size large
+}
+asset weaponbl
+{
+	listed true
+	pfx weapon_pickup_pfx_vc
+	pickup_size large
+}
+asset weaponmac
+{
+	listed true
+	pfx weapon_pickup_pfx_mac
+	pickup_size large
+}
+asset weaponfg
+{
+	listed true
+	pfx weapon_pickup_pfx_fg
+	pickup_size large
+}
+asset weaponiw
+{
+    listed true
+    pivot 0 0 0
+	scale 1.4
+	pfx weapon_pickup_pfx_iw
+	pickup_size large
+	selection_size_override 18
+    selection_vertical_offset 18
+}
+asset weaponsw
+{
+    listed true
+    pivot 0 0 0
+	scale 1.4
+	pfx weapon_pickup_pfx_sw
+	pickup_size large
+	selection_size_override 18
+    selection_vertical_offset 18
+}
+asset weaponbw
+{
+    listed true
+    pivot 0 0 0
+	scale 1.4
+	pfx weapon_pickup_pfx_bw
+	pickup_size large
+	selection_size_override 18
+    selection_vertical_offset 18
+}
+asset weaponhw
+{
+    listed true
+    pivot 0 0 0
+	scale 1.4
+	pfx weapon_pickup_pfx_hw
+	pickup_size large
+	selection_size_override 18
+    selection_vertical_offset 18
+}
+asset weaponsmw
+{
+    listed true
+    pivot 0 0 0
+	scale 1.4
+	pfx weapon_pickup_pfx_smw
+	pickup_size large
+	selection_size_override 18
+    selection_vertical_offset 18
+}
+asset weaponkw
+{
+    listed true
+    pivot 0 0 0
+	scale 1.4
+	pfx weapon_pickup_pfx_kw
+	pickup_size large
+	selection_size_override 18
+    selection_vertical_offset 18
+}
+asset macguffin
+{
+  listed true
+  pivot 0 0 0
+  scale 1.4
+  pickup_size large
+  pfx macguffin_pfx 0 10 0
+  selection_size_override 22
+  selection_vertical_offset 20
+}
+
+asset orbred
+{
+  listed true
+  type entity
+  command add orbred
+}
+
+asset orbgreen
+{
+  listed true
+  type entity
+  command add orbgreen
+}
+
+asset orbblue
+{
+  listed true
+  type entity
+  command add orbblue
+}
+
+asset orbhealth
+{
+  listed true
+  type entity
+  command add orbhealth
+}
+
+asset itemchest
+{
+  listed true
+  type entity 
+  entity_property clip player
+  command multi /add prop_itemchest; /forsel set %1 model placeholder/itemchest; /forsel set %1 itemchest true;/forsel set %1 interactive true;
+}
+
+asset ammoupgrade
+{
+  listed true
+  type entity
+  commmand add ammoupgrade
+}
+
+asset lootspawner
+{
+  listed true
+  type entity
+  command add lootspawner
+}
+
+asset zipline_pair
+{
+  listed true
+  type entity
+  command gameop create_zipline
+}
+
+asset zipline_node
+{
+  listed true
+  type entity
+  command add zipline
+}
+
+asset teleport_pair
+{
+  listed true
+  type entity
+  command gameop create_teleport_pair
+}
+
+asset jumppad_pair
+{
+  listed true
+  type entity
+  command gameop create_jumppad_pair
+}
+
+asset objective/spawnvolume
+{
+   listed true
+   type entity
+   command /add spawnvolume
+}
+
+asset nav_volume
+{
+  listed true
+  type entity
+  command multi /add nav_volume cursor; /forsel set %1 type nav_volume; /forsel set %1 cell_size 5; /forsel set %1 cell_height 5; /forsel set %1 agent_height 50; /forsel set %1 agent_max_climb 30; /forsel set %1 agent_radius 25; /forsel set %1 region_min_size 8
+}
+
+asset nav_modifier
+{
+  listed true
+  type entity
+  command multi /add navmodifier cursor; /forsel set %1 type navmodifier
+}
+
+asset nav_seed
+{
+  listed true
+  type entity
+  command multi /add navseed cursor; /forsel set %1 type navseed
+}
+
+asset objective/quest
+{
+  type entity
+  listed true
+  
+  command /add quest cursor
+}
+
+asset objective/subobjective
+{
+  type entity
+  listed true
+  
+  command multi /add subobjective cursor; /resize !last 100 100 100;
+}
+
+asset objective/wavetrigger
+{
+  type entity
+  listed true
+  
+  command /add wavetrigger cursor
+}
+
+asset objective/wavedata
+{
+  type entity
+  listed true
+  
+  command /add wavedata cursor;
+}
+
+asset objective/domninationcontrolpoint
+{
+  type entity
+  listed true
+  
+  command multi /add domninationcontrolpoint cursor; /resize !last 300 300 300;
+}

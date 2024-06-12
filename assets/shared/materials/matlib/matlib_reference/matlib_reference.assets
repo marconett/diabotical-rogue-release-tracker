@@ -1,0 +1,11 @@
+asset matlib_reference
+{
+    type prop
+    listed true
+    tags 
+    model matlib_reference
+    material matlib
+    default_lod 0  
+    entity_property force_shadows true
+    entity_property clip
+}

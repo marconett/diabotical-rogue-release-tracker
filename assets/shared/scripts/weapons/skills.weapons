@@ -1,0 +1,2835 @@
+hook
+{
+	show_in_dev_console false 
+ 	//group 7
+	speed 2200
+ 	rate 850
+  	damage 0
+  	knockback 0
+	ground_knockback 0
+  	splash_radius 325
+	deploy true
+	hook true
+	deploy_duration 9999999
+	//shot_particles empty_system
+	//shot_particles_attached hook_pfx
+  	missile_particles hook_bullet
+    //missile_trail_particles hook_bullet_trail
+    
+    //missile_trail_particles gl_bullet_dynamic_trail
+	//missile_model ability_hook_static_mesh
+	//missile_trail_particles hook_pfx
+  	//impact_particles explode
+	//shot_particles_attached_follows_projectile true
+  	
+	model weaponrl_bobblehead
+	model_scale 0.081
+	model_position 2.5 -3.3 7.2
+	model_rotation 171 -7.7  -8
+	muzzle -4.0 -2 10
+    muzzle_offset 0 -20 0
+	fov 45
+	
+	
+	//shot_sound hook_shot
+	
+	//kill this on reconnection:
+	missile_loop_sound ability_hook_projectile_loop
+	
+	detached_shot_particles false
+	force_load true
+}
+
+slash
+{
+	show_in_dev_console false 
+	color 2047bc
+	//group 5
+	damage 40
+	knockback 250
+	ground_knockback 250
+	rate 1000
+	speed 0
+	unlimited_ammo true
+	distance 125	
+	
+	hit_radius 100
+	
+	shot_particles railtest
+	shot_particles_attached rail_attached
+	impact_particles rail_impact
+	equip_particles_attached sword_equip
+	
+	model weapon_sword
+	model_position 3.2 -4.7 7.8
+	model_scale 0.14 0.14 0.14
+	model_rotation 175 -4 0
+	muzzle 4.5 -6 20
+
+	fov 59
+	
+	shot_sound railgun
+	hit_sound testhit1
+}
+
+hammer_time
+{
+	show_in_dev_console false 
+    weapon_tag hmt
+	
+    //bind_group 8
+    color 5a811e
+ 	//group 3
+	unlimited_ammo false
+	speed 2200
+ 	rate 1000
+  	damage 5
+	no_self_damage 1
+	min_splash_damage 5
+    team_damage 0
+    splash_team_damage 0
+  	splash_radius 260
+	splash_distance 10
+	
+	default_ammo_pickup_ammo 1
+	default_weapon_pickup_ammo 1
+	
+	knockback 250
+	ground_knockback 250
+	parallel_knockback true
+	trampoline_knockback true
+  	impact_particles hammer_time
+	
+	shot_sound hammer_time_fire1 hammer_time_fire2 hammer_time_fire3 hammer_time_fire4
+	impact_sound hammer_time_impact1 hammer_time_impact2 hammer_time_impact3 hammer_time_impact4
+	
+	model weaponsmw
+	model_position 1.93727 -5.30881 3.85738
+    model_position_third_person 10 -60 -35
+	model_scale 0.1
+	model_rotation 186 10 -4
+	model_camera_scale 0.5
+	muzzle 0 0 0
+	fov 55
+	muzzle_offset 0 0 0
+	
+	detached_shot_particles false
+	
+	decal decal_glow_blue 1000 1.75 3.561 false false alpha 40
+	
+	gravity 50000
+}
+
+translocator
+{
+	show_in_dev_console false 
+	pfx implode_weeble_filament slot_pfx_eye
+
+    color 67da80
+    sort 100
+ 	//group 3
+	unlimited_ammo false
+	speed 1200
+ 	rate 1000
+  	damage 20
+  	splash_radius 260
+	default_ammo_pickup_ammo 1
+	default_weapon_pickup_ammo 1
+	throwable true
+	throw_animation true
+	knockback 300
+	
+	explode_delay_after_last_impact 2
+
+	center_of_mass_offset 20
+    gravity_pitch_offset 0.05
+	
+	gravity 0
+
+	// Have in mind the skill cooldown before modifying the duration
+	duration 400
+	
+  	missile_particles translocator_projectile
+	
+	equip_sound hw_equip
+	out_of_ammo_sound gl_ooa
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	single_missile_sound weeble_airbound_short1 weeble_airbound_short2 weeble_airbound_short3 weeble_airbound_short4 weeble_airbound_short5 weeble_airbound_short6 weeble_airbound_short7
+	missile_loop_sound translocator_projectile_loop
+	bounce_sound translocator_bounce1 translocator_bounce2 translocator_bounce3 translocator_bounce4
+	
+	detached_shot_particles false
+	
+	teleport true
+
+	respect_player_collision true
+}
+
+landmine_nade
+{
+	show_in_dev_console false 
+    color 67da80
+    weapon_tag landmine
+    sort 100
+ 	//group 3
+	unlimited_ammo false
+	speed 500
+ 	rate 1000
+  	damage 0
+  	splash_radius 260
+	default_ammo_pickup_ammo 1
+	default_weapon_pickup_ammo 1
+	throwable true
+	throw_animation true
+	
+	ignore_players true
+	
+	trigger_skill_id 5
+	    
+	center_of_mass_offset 20
+    gravity_pitch_offset 0.10
+	
+	gravity 350
+	
+	bounce 0
+	// Have in mind the skill cooldown before modifying the duration
+	duration 10000
+	bounce_friction 1.0
+	
+	trigger_ability_id 18
+	
+  	missile_particles landmine_projectile
+	
+	equip_sound hw_equip
+	out_of_ammo_sound gl_ooa
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	single_missile_sound weeble_airbound_short1 weeble_airbound_short2 weeble_airbound_short3 weeble_airbound_short4 weeble_airbound_short5 weeble_airbound_short6 weeble_airbound_short7
+	missile_loop_sound translocator_projectile_loop
+	bounce_sound translocator_bounce1 translocator_bounce2 translocator_bounce3 translocator_bounce4
+	
+	detached_shot_particles false
+}
+
+tether_beacon_nade
+{
+	show_in_dev_console false 
+	pfx implode_weeble_filament slot_pfx_eye
+
+    color 67da80
+    weapon_tag tether_beacon
+    sort 100
+ 	//group 3
+	unlimited_ammo false
+	speed 900
+ 	rate 1000
+  	damage 0
+  	splash_radius 260
+	default_ammo_pickup_ammo 1
+	default_weapon_pickup_ammo 1
+	throwable true
+	throw_animation true
+	
+	trigger_skill_id 3
+	    
+	center_of_mass_offset 20
+    gravity_pitch_offset 0.05
+	
+	gravity 200
+	
+	bounce 0
+	// Have in mind the skill cooldown before modifying the duration
+	duration 10000
+	bounce_friction 1.0
+	
+	
+  	missile_particles landmine_projectile
+
+	
+	equip_sound hw_equip
+	out_of_ammo_sound gl_ooa
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	single_missile_sound weeble_airbound_short1 weeble_airbound_short2 weeble_airbound_short3 weeble_airbound_short4 weeble_airbound_short5 weeble_airbound_short6 weeble_airbound_short7
+	missile_loop_sound translocator_projectile_loop
+	bounce_sound translocator_bounce1 translocator_bounce2 translocator_bounce3 translocator_bounce4
+	
+	detached_shot_particles false
+}
+
+egggods_bolt
+{
+	show_in_dev_console false 
+    weapon_tag egb
+	bolt true
+	damage 0
+}
+
+inflation
+{
+	show_in_dev_console false 
+    damage 0
+    knockback 90
+    ground_knockback 90
+}
+
+egggods_dash
+{
+	show_in_dev_console false 
+	weapon_tag egd
+	color 9bc44d
+	
+    rate 1000
+	splash_damage 0
+	min_hits 0
+	knockback 6.1
+	ground_knockback 7.1
+	parallel_knockback true
+	impact_particles_distance_delay 0.12
+	independent_upgrade_model true
+	gravity -100000
+	gravity_pitch_offset 0
+	hit_radius 1.7 3
+	shot_sound dash_use1 dash_use2 dash_use3 dash_use4 dash_use5
+	hit_sound hit_sound_hit1
+	detached_shot_particles false
+	multi_round_particles false
+	unlimited_ammo true
+	penetrating true
+
+	// Use same values as dash_duration,
+    // dash_damage and dash_speed
+	duration 150
+	damage 15
+	speed 3000
+}
+
+freeze
+{
+	show_in_dev_console false 
+    splash_effect freeze
+	weapon_tag fre
+	color 7c62d1
+	speed 1100
+ 	rate 1000
+  	damage 0
+	default_ammo_pickup_ammo 1
+	default_weapon_pickup_ammo 1
+	throwable true
+	throw_animation true
+	self_damage 0
+	category 1
+	bind_group 1
+	
+	center_of_mass_offset 20
+    gravity_pitch_offset 0.05
+	gravity 200
+	
+	splash_radius 100
+	center_of_mass_offset_self 0
+  	knockback 0
+	knockback_self 0
+  	ground_knockback 0
+	ground_knockback_self 0
+
+	hit_radius 2.2 1
+	
+	shot_particles empty_system
+   	shot_particles_attached empty
+  	missile_particles gl_bullet_v2_blue
+  	impact_particles freeze_impact
+	missile_trail_particles weeb_dynamic_trail_blue
+	
+	shot_sound weeble_sw_fire1 weeble_sw_fire2 weeble_sw_fire3 weeble_sw_fire4 weeble_sw_fire5
+	impact_sound freeze_weball_impact1 freeze_weball_impact2 freeze_weball_impact3 freeze_weball_impact4
+	equip_sound sw_equip
+	out_of_ammo_sound gl_ooa
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	single_missile_sound weeble_airbound1 weeble_airbound2 weeble_airbound3 weeble_airbound4 weeble_airbound5 weeble_airbound6 weeble_airbound7
+	
+	detached_shot_particles false
+	
+	
+	//DECALS
+	//decal decal_explosion 90 
+	decal decal_plasma 40 3 3.561 false 3
+	decal decal_plasma 80 3 3.561 false 3
+	decal decal_plasma 135 3 3.561 false 3
+	decal decal_glow_red 27 3 3.561 false 25
+	decal decal_glow 20 3 3.561 false 20
+}
+
+wall_slide
+{
+	show_in_dev_console false 
+  	damage 0
+}
+
+swap
+{
+	show_in_dev_console false 
+    swap true
+	respawn_time 9
+	weapon_tag swap
+	shots_per_round 20
+	spread 4.4 4.4
+    spread_radius 1
+    rate 1000
+    gravity -100000
+	speed 5000
+	damage 0
+	min_hits 2
+	bounce 0
+	spread_ring 0 6 6
+	knockback 0
+	ground_knockback 0
+	parallel_knockback true
+	impact_particles_distance_delay 0.12
+	independent_upgrade_model true
+	
+	hit_radius 1.7 3
+	
+	
+	shot_particles empty_system
+  	shot_particles_attached sg_tier_2_muzzle
+	missile_particles sg_projectile
+	impact_particles sg_impact_v2
+	
+	shot_sound swap_activation
+	hit_sound hit_sound_hit1
+}
+
+jumppad
+{
+	show_in_dev_console false 
+  	damage 0
+}
+
+force_grip
+{
+	show_in_dev_console false 
+damage 0
+}
+
+sprint
+{
+	show_in_dev_console false 
+  	damage 0
+}
+
+slide
+{
+	show_in_dev_console false 
+  	damage 0
+}
+
+bounce
+{
+	show_in_dev_console false 
+  	damage 0
+}
+
+reverse
+{
+	show_in_dev_console false 
+  	damage 0
+}
+
+boost
+{
+	show_in_dev_console false 
+  	damage 0
+}
+
+hugme_bot
+{
+	show_in_dev_console false 
+  	damage 0
+}
+
+leap_slam
+{	
+	show_in_dev_console false 
+	// pfx bomb_weeble_fuse_filament slot_particle_fuse
+    color b4513b
+ 	unlimited_ammo false
+	speed 1100
+ 	rate 800
+  	damage 10
+  	knockback 175
+	knockback_self 0
+  	ground_knockback 175
+	ground_knockback_self 0
+  	splash_radius 350
+	default_ammo_pickup_ammo 1
+	default_weapon_pickup_ammo 1
+	throw_animation true
+	center_of_mass_offset 20
+	center_of_mass_offset_self 0
+    
+    throwable true
+
+    gravity_pitch_offset 0.05
+	
+	gravity 200
+		
+	// decal decal_explosion 90 
+	// decal decal_plasma 100 3 3.561 false 3
+	// decal decal_plasma 175 3 3.561 false 3
+	// decal decal_plasma 300 3 3.561 false 3
+	// decal decal_glow_red 60 3 3.561 false 25
+	// decal decal_glow 35 3 3.561 false 20
+		
+	impact_sound leap_land1 leap_land2 leap_land3 leap_land4
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	
+	detached_shot_particles false
+}
+
+projected_shield
+{
+	show_in_dev_console false 
+    splash_effect projected_shield
+	pfx implode_weeble_filament slot_pfx_eye
+
+    color 67da80
+    weapon_tag prs
+    sort 100
+ 	//group 3
+	unlimited_ammo false
+
+  	damage 0
+  	splash_radius 30
+	throwable true
+	throw_animation true
+	    	
+	missile_particles gl_bullet_v2_green_heal
+	missile_trail_particles weeb_dynamic_trail_green_heal
+  
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	shot_sound w9_fire1 w9_fire2 w9_fire3 w9_fire4
+    
+	detached_shot_particles false
+    
+    shot_particles vc_projectile_particles
+}
+
+big_rocket
+{
+	show_in_dev_console false 
+    color ff0000
+    weapon_tag big_rocket
+    sort 100
+ 	//group 3
+	unlimited_ammo false
+	respawn_time 9
+	weapon_tag brl
+	color df1f2d
+	speed 550
+  	damage 45
+	min_splash_damage 5
+	splash_damage 25
+	self_damage 20
+	//self_damage has been half of splash damage
+	splash_hemisphere_offset 20
+    splash_hemisphere_offset_damage_multiplier 0.30
+	default_ammo_pickup_ammo 5
+	default_weapon_pickup_ammo 10
+	max_ammo 25
+	//target_indicator true
+	gravity -999999
+	node_particles_follow_velocity true
+	
+	hit_radius 10 10
+    
+    friendly_name Big Rocket
+    description A big rocket.
+	
+	charge_animation 6
+	
+  	splash_radius 150
+	knockback 150
+	knockback_self 136
+	ground_knockback 120
+	ground_knockback_self 136
+	center_of_mass_offset 0
+	center_of_mass_offset_self 0
+
+	shot_particles empty_system
+   	shot_particles_attached rl_muzzle_v2
+  	missile_particles brl_bullet
+  	impact_particles rl_impact_v2
+  	
+	//IMPACT DECALS
+
+	decal decal_explosion 340 3 3.561 false false alpha 5
+	//decal decal_plasma 100 3 3.561 false false alpha 3
+	decal decal_plasma 320 4 3.561 false false alpha 3
+	decal decal_glow_explosion 140 2 3.561 false false alpha 25
+	//decal decal_glow 35 3 3.561 false false alpha 20
+
+	
+	shot_sound rl_fire1 rl_fire2 rl_fire3 rl_fire4 rl_fire5
+	// shot_sound_low_ammo rl_fire_low1 rl_fire_low2 rl_fire_low3 rl_fire_low4 rl_fire_low5
+	// low_ammo_threshold 4
+	missile_loop_sound rl_airbound
+	impact_sound rl_impact1 rl_impact2 rl_impact3 rl_impact4
+	equip_sound rl_equip
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	out_of_ammo_sound rl_ooa
+	
+	detached_shot_particles false
+
+	big_rocket true
+}
+
+big_rocket mod 1 
+{
+      speed 770
+}
+big_rocket mod 1 tier 1
+{
+      speed 990
+}
+big_rocket mod 1 tier 2
+{
+      speed 1210
+}
+
+big_rocket mod 2 
+{
+      gravity 200
+      gravity_pitch_offset 0.1
+}
+
+big_rocket mod 3
+{
+	homing true
+}
+
+charges_rocket
+{
+	show_in_dev_console false 
+    color ff0000
+    weapon_tag charges_rocket
+    sort 100
+ 	//group 3
+	unlimited_ammo false
+	respawn_time 9
+	weapon_tag crl
+	color df1f2d
+	speed 1500
+  	damage 25
+	min_splash_damage 8
+	splash_damage 20
+	self_damage 0
+	//self_damage has been half of splash damage
+	splash_hemisphere_offset 20
+    splash_hemisphere_offset_damage_multiplier 0.30
+	default_ammo_pickup_ammo 5
+	default_weapon_pickup_ammo 10
+	max_ammo 25
+	//target_indicator true
+	
+	hit_radius 4 4
+    
+    friendly_name Big Rocket
+    description A big rocket.
+	
+	charge_animation 6
+	
+  	splash_radius 60
+	knockback 60
+	knockback_self 60
+	ground_knockback 40
+	ground_knockback_self 40
+	center_of_mass_offset 0
+	center_of_mass_offset_self 0
+
+	shot_particles empty_system
+   	shot_particles_attached rl_muzzle_v2
+  	missile_particles brl_bullet
+  	impact_particles rl_impact_v2
+  	
+	//IMPACT DECALS
+
+	decal decal_explosion 340 3 3.561 false false alpha 5
+	//decal decal_plasma 100 3 3.561 false false alpha 3
+	decal decal_plasma 320 4 3.561 false false alpha 3
+	decal decal_glow_explosion 140 2 3.561 false false alpha 25
+	//decal decal_glow 35 3 3.561 false false alpha 20
+
+	
+	shot_sound rl_fire1 rl_fire2 rl_fire3 rl_fire4 rl_fire5
+	// shot_sound_low_ammo rl_fire_low1 rl_fire_low2 rl_fire_low3 rl_fire_low4 rl_fire_low5
+	// low_ammo_threshold 4
+	missile_loop_sound rl_airbound
+	impact_sound rl_impact1 rl_impact2 rl_impact3 rl_impact4
+	equip_sound rl_equip
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	out_of_ammo_sound rl_ooa
+	
+	detached_shot_particles false
+}
+
+anvil
+{
+	show_in_dev_console false 
+	splash_effect anvil
+	weapon_tag anv
+	rate 500
+			
+	color 7c62d1
+ 	
+	speed 50000
+	default_ammo_pickup_ammo 10
+	default_weapon_pickup_ammo 10
+	
+	self_damage 0
+	category 1
+	bind_group 1
+	
+	knockback 0
+	ground_knockback 0
+	knockback_self 0
+	ground_knockback_self 0
+  	splash_radius 1	
+	
+  	damage 0
+	min_splash_damage 0
+	splash_damage 0		
+
+	hit_radius 2 2
+	ignore_players true
+	
+	//shot_sound rl_fire1 rl_fire2 rl_fire3 rl_fire4 rl_fire5
+	//impact_sound gl_impact1 gl_impact2 gl_impact3 gl_impact4
+	equip_sound sw_equip
+	//out_of_ammo_sound gl_ooa
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	
+	
+	//DECALS
+	//decal decal_explosion 90 
+	decal decal_plasma 40 3 3.561 false 3
+	decal decal_plasma 80 3 3.561 false 3
+	decal decal_plasma 135 3 3.561 false 3
+	decal decal_glow_red 27 3 3.561 false 25
+	decal decal_glow 20 3 3.561 false 20
+
+	weapon_type equippable_skill
+	
+}
+
+anvil_impact_weapon
+{	
+	show_in_dev_console false 
+	pfx bomb_weeble_fuse_filament slot_particle_fuse
+    color b4513b
+ 	unlimited_ammo false
+	speed 1100
+ 	rate 800
+  	damage 40
+  	knockback 100
+	knockback_self 100
+  	ground_knockback 100
+	ground_knockback_self 100
+	
+  	
+	default_ammo_pickup_ammo 1
+	default_weapon_pickup_ammo 1
+	throw_animation true
+	center_of_mass_offset 0
+	center_of_mass_offset_self 0
+	
+	splash_radius 240
+	min_splash_damage 15
+	splash_damage 40
+	self_damage 0
+    
+    throwable true
+
+    gravity_pitch_offset 0.05
+	
+	gravity 200
+	
+  	impact_particles bomb_weeble_explosion
+		
+	decal decal_explosion 90 
+	decal decal_plasma 100 3 3.561 false 3
+	decal decal_plasma 175 3 3.561 false 3
+	decal decal_plasma 300 3 3.561 false 3
+	decal decal_glow_red 60 3 3.561 false 25
+	decal decal_glow 35 3 3.561 false 20
+		
+	impact_sound leap_land1 leap_land2 leap_land3 leap_land4
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	
+	detached_shot_particles false
+}
+
+anvil_projectile
+{
+	show_in_dev_console false 
+	//splash_effect anvil
+	weapon_tag anvil_projectile
+	color 7c62d1
+	speed 1700
+ 	rate 1000
+  	damage 0
+	default_ammo_pickup_ammo 1
+	default_weapon_pickup_ammo 1
+	throwable true
+	throw_animation true
+	self_damage 0
+	category 1
+	bind_group 1
+	
+	shots_per_round 10
+	spread 14 4
+	
+	center_of_mass_offset 20
+    gravity_pitch_offset 0.05
+	gravity 250
+	
+	splash_radius 100
+	center_of_mass_offset_self 0
+  	knockback 0
+	knockback_self 0
+  	ground_knockback 0
+	ground_knockback_self 0
+
+	hit_radius 1 1
+	ignore_players true
+	
+	
+	shot_particles empty_system
+   	shot_particles_attached empty
+  	missile_particles gl_bullet_v2_blue
+  	impact_particles plasma_impact_tier_1
+	missile_trail_particles weeb_dynamic_trail_blue
+	
+	shot_sound weeble_sw_fire1 weeble_sw_fire2 weeble_sw_fire3 weeble_sw_fire4 weeble_sw_fire5
+	impact_sound bl_impact1
+	equip_sound sw_equip
+	out_of_ammo_sound gl_ooa
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	single_missile_sound weeble_airbound1 weeble_airbound2 weeble_airbound3 weeble_airbound4 weeble_airbound5 weeble_airbound6 weeble_airbound7
+	
+	detached_shot_particles false
+	
+	
+	//DECALS
+	//decal decal_explosion 90 
+	decal decal_plasma 40 3 3.561 false 3
+	decal decal_plasma 80 3 3.561 false 3
+	decal decal_plasma 135 3 3.561 false 3
+	decal decal_glow_red 27 3 3.561 false 25
+	decal decal_glow 20 3 3.561 false 20
+
+	weapon_type equippable_skill
+}
+
+
+delayed_bomb
+{
+	show_in_dev_console false 
+    color ff0000
+    weapon_tag delayed_bomb
+    sort 100
+ 	//group 3
+	unlimited_ammo false
+	respawn_time 9
+	weapon_tag crl
+	color df1f2d
+	speed 500
+
+	default_ammo_pickup_ammo 5
+	default_weapon_pickup_ammo 10
+	max_ammo 25
+	//target_indicator true
+	
+	hit_radius 20 20
+    
+    friendly_name Big Rocket
+    description A big rocket.
+	
+	charge_animation 6
+	
+	damage 75
+	min_splash_damage 25
+	splash_damage 75
+	self_damage 0
+	
+  	splash_radius 80
+	knockback 100
+	knockback_self 100
+	ground_knockback 100
+	ground_knockback_self 100
+	center_of_mass_offset 0
+	center_of_mass_offset_self 0
+	
+	bounce 0
+	duration 40000
+	
+    gravity 800
+	bounce_friction 0.5
+	
+	deploy true
+	deploy_duration 3000
+	deploy_min_y_normal 0.1
+	
+	
+	shot_particles empty_system
+   	shot_particles_attached rl_muzzle_v2
+  	missile_particles plasma_bullet_tier_3
+  	impact_particles rl_impact_v2
+	deploy_particles delayed_bomb_deploy
+  	
+	//IMPACT DECALS
+
+	decal decal_explosion 340 3 3.561 false false alpha 5
+	//decal decal_plasma 100 3 3.561 false false alpha 3
+	decal decal_plasma 320 4 3.561 false false alpha 3
+	decal decal_glow_explosion 140 2 3.561 false false alpha 25
+	//decal decal_glow 35 3 3.561 false false alpha 20
+
+	
+	shot_sound rl_fire1 rl_fire2 rl_fire3 rl_fire4 rl_fire5
+	// shot_sound_low_ammo rl_fire_low1 rl_fire_low2 rl_fire_low3 rl_fire_low4 rl_fire_low5
+	// low_ammo_threshold 4
+	missile_loop_sound rl_airbound
+	impact_sound rl_impact1 rl_impact2 rl_impact3 rl_impact4
+	equip_sound rl_equip
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	out_of_ammo_sound rl_ooa
+	
+	detached_shot_particles false
+}
+
+stream_of_pain
+{
+	show_in_dev_console false 
+    color ff0000
+    weapon_tag stream_of_pain
+    sort 100
+ 	//group 3
+	unlimited_ammo false
+	respawn_time 9
+	weapon_tag crl
+	color df1f2d
+	speed 700
+  	damage 7
+	min_splash_damage 5
+	splash_damage 7
+	self_damage 10
+	//self_damage has been half of splash damage
+	splash_hemisphere_offset 20
+    splash_hemisphere_offset_damage_multiplier 0.30
+	default_ammo_pickup_ammo 5
+	default_weapon_pickup_ammo 10
+	max_ammo 25
+	//target_indicator true
+	
+	hit_radius 2 2
+    
+    friendly_name Big Rocket
+    description A big rocket.
+	
+	charge_animation 6
+	
+  	splash_radius 60
+	knockback 60
+	knockback_self 60
+	ground_knockback 40
+	ground_knockback_self 40
+	center_of_mass_offset 0
+	center_of_mass_offset_self 0
+	
+	bounce 99
+	duration 4000
+	
+    gravity 0
+	bounce_friction 1
+
+	shot_particles empty_system
+   	shot_particles_attached rl_muzzle_v2
+  	missile_particles plasma_bullet_tier_3
+  	impact_particles rl_impact_v2
+  	
+	//IMPACT DECALS
+
+	decal decal_explosion 340 3 3.561 false false alpha 5
+	//decal decal_plasma 100 3 3.561 false false alpha 3
+	decal decal_plasma 320 4 3.561 false false alpha 3
+	decal decal_glow_explosion 140 2 3.561 false false alpha 25
+	//decal decal_glow 35 3 3.561 false false alpha 20
+
+	
+	shot_sound rl_fire1 rl_fire2 rl_fire3 rl_fire4 rl_fire5
+	// shot_sound_low_ammo rl_fire_low1 rl_fire_low2 rl_fire_low3 rl_fire_low4 rl_fire_low5
+	// low_ammo_threshold 4
+	missile_loop_sound rl_airbound
+	impact_sound rl_impact1 rl_impact2 rl_impact3 rl_impact4
+	equip_sound rl_equip
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	out_of_ammo_sound rl_ooa
+	
+	detached_shot_particles false
+}
+
+bouncy_bomb
+{
+	show_in_dev_console false 
+    color ff0000
+    weapon_tag bouncy_bomb
+    sort 100
+ 	//group 3
+	unlimited_ammo false
+	respawn_time 9
+	weapon_tag crl
+	color df1f2d
+	speed 200
+  	damage 15
+	min_splash_damage 5
+	splash_damage 10
+	self_damage 10
+	//self_damage has been half of splash damage
+	splash_hemisphere_offset 20
+    splash_hemisphere_offset_damage_multiplier 0.30
+	default_ammo_pickup_ammo 5
+	default_weapon_pickup_ammo 10
+	max_ammo 25
+	//target_indicator true
+	
+	hit_radius 10 10
+    
+    friendly_name Big Rocket
+    description A big rocket.
+	
+	charge_animation 6
+	
+  	splash_radius 60
+	knockback 60
+	knockback_self 60
+	ground_knockback 40
+	ground_knockback_self 40
+	center_of_mass_offset 0
+	center_of_mass_offset_self 0
+	
+	bounce 99
+	duration 4000
+
+	
+    gravity 500
+	bounce_friction 1.05
+	gravity_pitch_offset 0.05
+	
+	shot_particles empty_system
+   	shot_particles_attached rl_muzzle_v2
+  	missile_particles plasma_bullet_tier_3
+  	impact_particles rl_impact_v2
+  	
+	//IMPACT DECALS
+
+	decal decal_explosion 340 3 3.561 false false alpha 5
+	//decal decal_plasma 100 3 3.561 false false alpha 3
+	decal decal_plasma 320 4 3.561 false false alpha 3
+	decal decal_glow_explosion 140 2 3.561 false false alpha 25
+	//decal decal_glow 35 3 3.561 false false alpha 20
+
+	
+	shot_sound rl_fire1 rl_fire2 rl_fire3 rl_fire4 rl_fire5
+	// shot_sound_low_ammo rl_fire_low1 rl_fire_low2 rl_fire_low3 rl_fire_low4 rl_fire_low5
+	// low_ammo_threshold 4
+	missile_loop_sound rl_airbound
+	impact_sound rl_impact1 rl_impact2 rl_impact3 rl_impact4
+	equip_sound rl_equip
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	out_of_ammo_sound rl_ooa
+	
+	detached_shot_particles false
+}
+
+damage_mine
+{
+	show_in_dev_console false 
+    color ff0000
+    weapon_tag damage_mine
+    sort 100
+ 	//group 3
+	unlimited_ammo false
+	respawn_time 9
+	weapon_tag crl
+	color df1f2d
+	speed 200
+  	damage 15
+	min_splash_damage 5
+	splash_damage 10
+	self_damage 10
+	//self_damage has been half of splash damage
+	splash_hemisphere_offset 20
+    splash_hemisphere_offset_damage_multiplier 0.30
+	default_ammo_pickup_ammo 5
+	default_weapon_pickup_ammo 10
+	max_ammo 25
+	//target_indicator true
+	
+	hit_radius 10 10
+    
+    friendly_name Big Rocket
+    description A big rocket.
+	
+	charge_animation 6
+	
+  	splash_radius 60
+	knockback 60
+	knockback_self 60
+	ground_knockback 40
+	ground_knockback_self 40
+	center_of_mass_offset 0
+	center_of_mass_offset_self 0
+	
+
+	
+	deploy true
+	deploy_duration 30000
+
+
+	
+    gravity 1000
+
+	gravity_pitch_offset 0.05
+	
+	shot_particles empty_system
+   	shot_particles_attached rl_muzzle_v2
+  	missile_particles plasma_bullet_tier_3
+  	impact_particles rl_impact_v2
+  	
+	//IMPACT DECALS
+
+	decal decal_explosion 340 3 3.561 false false alpha 5
+	//decal decal_plasma 100 3 3.561 false false alpha 3
+	decal decal_plasma 320 4 3.561 false false alpha 3
+	decal decal_glow_explosion 140 2 3.561 false false alpha 25
+	//decal decal_glow 35 3 3.561 false false alpha 20
+
+	
+	shot_sound rl_fire1 rl_fire2 rl_fire3 rl_fire4 rl_fire5
+	// shot_sound_low_ammo rl_fire_low1 rl_fire_low2 rl_fire_low3 rl_fire_low4 rl_fire_low5
+	// low_ammo_threshold 4
+
+	impact_sound rl_impact1 rl_impact2 rl_impact3 rl_impact4
+	equip_sound rl_equip
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	out_of_ammo_sound rl_ooa
+	
+	detached_shot_particles false
+}
+
+deployable_cover_projectile
+{
+	show_in_dev_console false 
+	weapon_tag deployable_cover_projectile
+	color 7c62d1
+	speed 1700
+ 	rate 1000
+  	damage 0
+	default_ammo_pickup_ammo 1
+	default_weapon_pickup_ammo 1
+	throwable true
+	throw_animation true
+	self_damage 0
+	category 1
+	bind_group 1
+	
+	center_of_mass_offset 20
+    gravity_pitch_offset 0.05
+	gravity 250
+	
+	splash_radius 0
+	center_of_mass_offset_self 0
+  	knockback 0
+	knockback_self 0
+  	ground_knockback 0
+	ground_knockback_self 0
+
+	hit_radius 1 1
+	
+	
+	shot_particles empty_system
+   	shot_particles_attached empty
+  	missile_particles gl_bullet_v2_blue
+  	impact_particles plasma_impact_tier_1
+	missile_trail_particles weeb_dynamic_trail_blue
+	
+	shot_sound weeble_sw_fire1 weeble_sw_fire2 weeble_sw_fire3 weeble_sw_fire4 weeble_sw_fire5
+	impact_sound bl_impact1
+	equip_sound sw_equip
+	out_of_ammo_sound gl_ooa
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	single_missile_sound weeble_airbound1 weeble_airbound2 weeble_airbound3 weeble_airbound4 weeble_airbound5 weeble_airbound6 weeble_airbound7
+	
+	detached_shot_particles false
+	
+	
+	//DECALS
+	//decal decal_explosion 90 
+	decal decal_plasma 40 3 3.561 false 3
+	decal decal_plasma 80 3 3.561 false 3
+	decal decal_plasma 135 3 3.561 false 3
+	decal decal_glow_red 27 3 3.561 false 25
+	decal decal_glow 20 3 3.561 false 20
+}
+
+
+throwing_knife
+{
+	show_in_dev_console false 
+	weapon_tag throwing_knife
+	color 7c62d1	
+ 	rate 1600
+	default_ammo_pickup_ammo 1
+	default_weapon_pickup_ammo 1
+	throwable true
+	throw_animation true
+	self_damage 0
+	category 1
+	bind_group 1
+	
+	speed 1500
+  	damage 45
+	
+	bounce 1
+	duration 10000
+	explode_after_last_bounce_delay 1
+	
+	center_of_mass_offset 0
+    gravity_pitch_offset 0.05
+	gravity 450
+	
+	splash_radius 0
+	center_of_mass_offset_self 0
+  	knockback 0
+	knockback_self 0
+  	ground_knockback 0
+	ground_knockback_self 0
+
+	hit_radius 8 8
+	
+	
+	shot_particles empty_system
+   	shot_particles_attached empty
+  	missile_particles gl_bullet_v2_blue
+  	impact_particles sg_impact_v2
+	missile_trail_particles weeb_dynamic_trail_green_heal
+	
+	shot_sound bl_fire1 bl_fire2 bl_fire3 bl_fire4 bl_fire5
+	impact_sound bl_impact1
+	equip_sound sw_equip
+	out_of_ammo_sound gl_ooa
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	
+	missile_loop_sound bl_airbound
+	detached_shot_particles false
+	
+	
+	//DECALS
+	//decal decal_explosion 90 
+	decal decal_plasma 40 3 3.561 false 3
+	decal decal_plasma 80 3 3.561 false 3
+	decal decal_plasma 135 3 3.561 false 3
+	decal decal_glow_red 27 3 3.561 false 25
+	decal decal_glow 20 3 3.561 false 20
+}
+
+
+fire_gauntlet
+{
+	show_in_dev_console false 
+	weapon_tag fire_gauntlet
+	color 7c62d1	
+ 	rate 500
+	default_ammo_pickup_ammo 10
+	default_weapon_pickup_ammo 10
+	throwable true
+	throw_animation true
+	self_damage 0
+	category 1
+	bind_group 1
+	
+	knockback 50
+	ground_knockback 50
+	knockback_self 50
+	ground_knockback_self 50
+  	splash_radius 110
+	
+	speed 1500
+  	damage 35
+	min_splash_damage 5
+	splash_damage 25
+	equip_time 1000	
+
+	equip_duration 8000
+	
+	center_of_mass_offset 0
+    gravity_pitch_offset 0.01
+	gravity 100	
+
+	hit_radius 8 8
+
+	shooting_override fire_gauntlet
+	
+	shot_particles empty_system
+   	shot_particles_attached empty
+  	missile_particles firegauntlet_projectile
+  	impact_particles firegauntlet_impact
+	missile_trail_particles fb_dyn_trail
+	
+	shot_sound weeble_sw_fire1 weeble_sw_fire2 weeble_sw_fire3 weeble_sw_fire4 weeble_sw_fire5
+	impact_sound gl_impact1 gl_impact2 gl_impact3 gl_impact4
+	equip_sound sw_equip
+	out_of_ammo_sound gl_ooa
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	
+	missile_loop_sound rl_airbound
+	detached_shot_particles false
+	
+	
+	//DECALS
+	//decal decal_explosion 90 
+	decal decal_plasma 40 3 3.561 false 3
+	decal decal_plasma 80 3 3.561 false 3
+	decal decal_plasma 135 3 3.561 false 3
+	decal decal_glow_red 27 3 3.561 false 25
+	decal decal_glow 20 3 3.561 false 20
+
+	weapon_type equippable_skill
+}
+
+
+
+
+knockback_roar
+{	
+	show_in_dev_console false 
+	pfx bomb_weeble_fuse_filament slot_particle_fuse
+    color b4513b
+ 	unlimited_ammo false
+	speed 1
+ 	rate 800
+  	damage 10
+  	knockback 175
+	knockback_self 0
+  	ground_knockback 175
+	ground_knockback_self 0
+	
+	splash_hemisphere_offset 0
+	player_hit_only true
+	center_of_mass_offset 10
+	
+	min_ground_knockback 75
+	min_knockback 75
+	
+	splash_effect knockback_roar	
+
+	prevent_automatic_skill_activate true
+	
+	insta_explode true
+	
+	splash_radius 200
+	min_splash_damage 5
+	splash_damage 10
+	self_damage 0
+	
+	duration 15000
+    
+	weapon_fire_delay 1000
+	skill_delay 1000
+	
+	gravity 0
+	
+  	impact_particles knockback_roar_impact
+
+		
+	impact_sound leap_land1 leap_land2 leap_land3 leap_land4
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+}
+
+rage_protocol
+{	
+	show_in_dev_console false 
+ 	unlimited_ammo false
+	speed 1
+ 	rate 800
+  	damage 1337
+	
+	player_hit_only false
+	
+	prevent_automatic_skill_activate true
+	
+	insta_explode true
+	
+	splash_radius 200
+	splash_damage 20 20
+	self_damage 0
+	
+	gravity 0
+		
+	impact_sound leap_land1 leap_land2 leap_land3 leap_land4
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+}
+
+airstrike
+{
+	show_in_dev_console false 
+	weapon_tag airstrike
+	color 7c62d1	
+ 	rate 1
+
+	self_damage 0
+	category 1
+	bind_group 1
+	
+	knockback 50
+	ground_knockback 50
+	knockback_self 50
+	ground_knockback_self 50
+  	splash_radius 110
+	
+	speed 1250
+  	damage 5
+	min_splash_damage 2
+	splash_damage 5
+	equip_time 100	
+
+	equip_duration 100000000
+	
+	center_of_mass_offset 0
+    gravity_pitch_offset 0.01
+	gravity 100	
+
+	hit_radius 8 8
+
+	shooting_override airstrike
+	
+  	missile_particles airstrike_bomb
+  	impact_particles airstrike_explosion
+	missile_trail_particles fb_dyn_trail
+	splash_effect airstrike_effect
+	
+	shot_sound weeble_sw_fire1 weeble_sw_fire2 weeble_sw_fire3 weeble_sw_fire4 weeble_sw_fire5
+	impact_sound gl_impact1 gl_impact2 gl_impact3 gl_impact4
+	equip_sound sw_equip
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	
+	missile_loop_sound rl_airbound
+	detached_shot_particles false
+
+	weapon_type equippable_skill
+}
+
+airstrike_megabomb
+{
+	show_in_dev_console false 
+	weapon_tag airstrike_megabomb
+	color 7c62d1	
+ 	rate 1
+	default_ammo_pickup_ammo 10
+	default_weapon_pickup_ammo 10
+
+	self_damage 0
+	category 1
+	bind_group 1
+	
+	knockback 50
+	ground_knockback 50
+	knockback_self 50
+	ground_knockback_self 50
+  	splash_radius 110
+	
+	speed 300
+  	damage 5
+	min_splash_damage 2
+	splash_damage 5
+	equip_time 100	
+
+	equip_duration 100000000
+	
+	center_of_mass_offset 0
+    gravity_pitch_offset 0.01
+	gravity 100	
+
+	hit_radius 8 8
+
+	shooting_override airstrike
+	
+  	missile_particles airstrike_megabomb_bomb
+  	impact_particles airstrike_megabomb_explosion
+	splash_effect airstrike_effect
+	
+	shot_sound weeble_sw_fire1 weeble_sw_fire2 weeble_sw_fire3 weeble_sw_fire4 weeble_sw_fire5
+	impact_sound gl_impact1 gl_impact2 gl_impact3 gl_impact4
+	equip_sound sw_equip
+	out_of_ammo_sound gl_ooa
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	
+	missile_loop_sound rl_airbound
+	detached_shot_particles false
+
+	weapon_type equippable_skill
+}
+
+airstrike_cluster_deploy
+{
+	show_in_dev_console false 
+	weapon_tag airstrike_cluster_deploy
+	color 7c62d1	
+ 	rate 1
+
+	self_damage 0
+	category 1
+	bind_group 1
+	
+	knockback 50
+	ground_knockback 50
+	knockback_self 50
+	ground_knockback_self 50
+  	splash_radius 110
+	
+	speed 400
+  	damage 5
+	min_splash_damage 2
+	splash_damage 5
+	equip_time 100	
+
+	equip_duration 100000000
+	
+	center_of_mass_offset 0
+    gravity_pitch_offset 0.01
+	gravity 100	
+
+	hit_radius 8 8
+
+	shooting_override airstrike
+	
+  	missile_particles airstrike_cluster_bomb_big
+  	impact_particles airstrike_cluster_deploy
+	splash_effect airstrike_effect
+	
+	shot_sound weeble_sw_fire1 weeble_sw_fire2 weeble_sw_fire3 weeble_sw_fire4 weeble_sw_fire5
+	impact_sound gl_impact1 gl_impact2 gl_impact3 gl_impact4
+	equip_sound sw_equip
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	
+	missile_loop_sound rl_airbound
+	detached_shot_particles false
+
+	weapon_type equippable_skill
+}
+
+airstrike_cluster
+{
+	show_in_dev_console false 
+
+	weapon_tag airstrike_cluster
+	color 7c62d1	
+ 	rate 1
+	default_ammo_pickup_ammo 10
+	default_weapon_pickup_ammo 10
+
+	self_damage 0
+	knockback 50
+	ground_knockback 50
+	knockback_self 50
+	ground_knockback_self 50
+  	splash_radius 110
+	
+	speed 300
+  	damage 5
+	min_splash_damage 2
+	splash_damage 5
+	
+	duration 500
+	center_of_mass_offset 0
+    gravity_pitch_offset 0.01
+	gravity 400	
+
+	hit_radius 8 8
+	
+	shot_particles empty_system
+   	shot_particles_attached empty
+  	missile_particles airstrike_cluster_bomb_small
+  	impact_particles airstrike_cluster_explosion
+	
+	shot_sound weeble_sw_fire1 weeble_sw_fire2 weeble_sw_fire3 weeble_sw_fire4 weeble_sw_fire5
+	equip_sound sw_equip
+	out_of_ammo_sound gl_ooa
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	
+	missile_loop_sound rl_airbound
+	detached_shot_particles false
+}
+
+airstrike_napalm
+{
+	show_in_dev_console false 
+	
+	weapon_tag airstrike_napalm
+	color 7c62d1	
+ 	rate 1
+
+	self_damage 0
+	category 1
+	bind_group 1
+	
+	knockback 50
+	ground_knockback 50
+	knockback_self 50
+	ground_knockback_self 50
+  	splash_radius 110
+	
+	speed 400
+  	damage 5
+	min_splash_damage 2
+	splash_damage 5
+	equip_time 100	
+
+	equip_duration 100000000
+	
+	center_of_mass_offset 0
+    gravity_pitch_offset 0.01
+	gravity 100	
+
+	hit_radius 8 8
+
+	shooting_override airstrike
+	
+  	missile_particles airstrike_napalm_bomb
+	splash_effect airstrike_effect
+	
+	shot_sound weeble_sw_fire1 weeble_sw_fire2 weeble_sw_fire3 weeble_sw_fire4 weeble_sw_fire5
+	impact_sound gl_impact1 gl_impact2 gl_impact3 gl_impact4
+	equip_sound sw_equip
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	
+	missile_loop_sound rl_airbound
+	detached_shot_particles false
+
+	weapon_type equippable_skill
+}
+
+airstrike_shockwave
+{
+	show_in_dev_console false 
+	
+	weapon_tag airstrike_shockwave
+	color 7c62d1	
+ 	rate 1
+
+	self_damage 0
+	category 1
+	bind_group 1
+	
+	knockback 50
+	ground_knockback 50
+	knockback_self 50
+	ground_knockback_self 50
+  	splash_radius 110
+	
+	speed 400
+  	damage 5
+	min_splash_damage 2
+	splash_damage 5
+	equip_time 100	
+
+	equip_duration 100000000
+	
+	center_of_mass_offset 0
+    gravity_pitch_offset 0.01
+	gravity 100	
+
+	hit_radius 8 8
+
+	shooting_override airstrike
+	
+  	missile_particles airstrike_shockwave_bomb
+	splash_effect airstrike_effect
+	
+	shot_sound weeble_sw_fire1 weeble_sw_fire2 weeble_sw_fire3 weeble_sw_fire4 weeble_sw_fire5
+	impact_sound gl_impact1 gl_impact2 gl_impact3 gl_impact4
+	equip_sound sw_equip
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	
+	missile_loop_sound rl_airbound
+	detached_shot_particles false
+
+	weapon_type equippable_skill
+}
+
+throwing_spear
+{
+	show_in_dev_console false 
+	
+	weapon_tag ths
+	color 7c62d1	
+ 	rate 1
+	default_ammo_pickup_ammo 10
+	default_weapon_pickup_ammo 10
+	throwable true
+	throw_animation true
+	self_damage 0
+	category 1
+	bind_group 1
+	
+	knockback 150
+	ground_knockback 150
+	knockback_self 150
+	ground_knockback_self 150
+  	splash_radius 20
+	
+	speed 2500
+  	damage 80
+	min_splash_damage 5
+	splash_damage 25
+	
+	equip_duration 8000	
+	equip_time 1700
+	
+	center_of_mass_offset 0
+    gravity_pitch_offset 0
+	gravity 100
+	
+
+	hit_radius 16 16
+	
+	
+	shot_particles empty_system
+   	shot_particles_attached empty
+  	missile_particles skill_spear_projectile
+  	impact_particles skill_spear_impact
+	missile_trail_particles skill_spear_trail
+
+	right_hand_held_particles skill_spear_held_loop
+	right_hand_held_particles_rotation 90 0 0
+
+	right_hand_launch_particles_attached skill_spear_launch
+	
+	shot_sound rl_fire1 rl_fire2 rl_fire3 rl_fire4 rl_fire5
+	impact_sound gl_impact1 gl_impact2 gl_impact3 gl_impact4
+	equip_sound sw_equip
+	out_of_ammo_sound gl_ooa
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	
+	missile_loop_sound rl_airbound
+	detached_shot_particles false
+	
+	
+	//DECALS
+	//decal decal_explosion 90 
+	decal decal_plasma 40 3 3.561 false 3
+	decal decal_plasma 80 3 3.561 false 3
+	decal decal_plasma 135 3 3.561 false 3
+	decal decal_glow_red 27 3 3.561 false 25
+	decal decal_glow 20 3 3.561 false 20
+
+	weapon_type equippable_skill
+}
+
+hookshot
+{
+	show_in_dev_console false 
+	speed 5250
+ 	rate 850
+	damage 0
+	
+	attach true
+	explode_delay_after_last_impact 4
+	force_load true
+	ignore_players true
+}
+
+hookshot augment 1
+{
+	overwrite ignore_players false
+}
+
+orbiting_saw
+{
+	show_in_dev_console false 
+	
+	
+	weapon_tag orb_saw
+	orbit_player true
+	speed 300
+	orbiting_speed 1.2 // RADIANS
+	orbiting_distance 150
+	hit_cooldown 0.2 // Second
+  	damage 1
+	self_damage 0
+	penetrating true
+	
+	hit_radius 30 30
+    
+	missile_particles skill_sawblade
+	
+	//shot_particles empty_system
+   	//shot_particles_attached rl_muzzle_v2
+  	//impact_particles rl_impact_v2
+  	
+	//IMPACT DECALS
+	//decal decal_explosion 340 3 3.561 false false alpha 5
+	//decal decal_plasma 320 4 3.561 false false alpha 3
+	//decal decal_glow_explosion 140 2 3.561 false false alpha 25
+	
+	
+	shot_sound rl_fire1 rl_fire2 rl_fire3 rl_fire4 rl_fire5
+	
+	missile_loop_sound rl_airbound
+	impact_sound rl_impact1 rl_impact2 rl_impact3 rl_impact4
+	equip_sound rl_equip
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	out_of_ammo_sound rl_ooa
+	
+	detached_shot_particles false
+}
+
+dash_explosion
+{	
+	show_in_dev_console false 
+	
+	pfx bomb_weeble_fuse_filament slot_particle_fuse
+    color b4513b
+ 	unlimited_ammo false
+	speed 1
+ 	rate 800
+  	damage 10
+  	knockback 175
+	knockback_self 0
+  	ground_knockback 175
+	ground_knockback_self 0
+	
+	splash_hemisphere_offset 0
+	player_hit_only true
+	center_of_mass_offset 10
+	
+	min_ground_knockback 75
+	min_knockback 75
+	
+	prevent_automatic_skill_activate true
+	
+	insta_explode true
+	
+	splash_radius 200
+	min_splash_damage 5
+	splash_damage 10
+	self_damage 0
+	
+	duration 15000
+    
+	weapon_fire_delay 1000
+	skill_delay 1000
+	
+	gravity 0
+	
+  	impact_particles skill_dash_explode
+
+		
+	impact_sound skill_dash_explode
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	
+	
+}
+
+
+jetpack_drop_bomb
+{
+	show_in_dev_console false 
+	
+	respawn_time 9
+	weapon_tag rogue_rl
+	color df1f2d
+	speed 1000
+ 	rate 800
+  	damage 100
+	min_splash_damage 5
+	splash_damage 94
+
+	splash_hemisphere_offset 20
+    splash_hemisphere_offset_damage_multiplier 0.30
+	reload 2000
+
+	hit_radius 1 1
+    
+    friendly_name Drop Bomb
+    description A jetpack drop bomb.
+	
+	charge_animation 6
+	
+  	splash_radius 122
+	knockback 100
+	knockback_self 113
+	ground_knockback 80
+	ground_knockback_self 113
+	center_of_mass_offset 0
+	center_of_mass_offset_self 0
+	
+
+  	missile_particles jetpack_bomb
+  	impact_particles jetpack_explosion
+  	
+	//IMPACT DECALS
+
+	decal decal_explosion 340 3 3.561 false false alpha 5
+	//decal decal_plasma 100 3 3.561 false false alpha 3
+	decal decal_plasma 320 4 3.561 false false alpha 3
+	decal decal_glow_explosion 140 2 3.561 false false alpha 25
+	//decal decal_glow 35 3 3.561 false false alpha 20
+
+
+	muzzle 0 0 0
+	muzzle_offset 0 0 0
+	fov 40
+
+	
+	shot_sound weapon_rocket_launcher_fire1 weapon_rocket_launcher_fire2 weapon_rocket_launcher_fire3 weapon_rocket_launcher_fire4 weapon_rocket_launcher_fire5
+	// shot_sound_low_ammo rl_fire_low1 rl_fire_low2 rl_fire_low3 rl_fire_low4 rl_fire_low5
+	// low_ammo_threshold 4
+	missile_loop_sound weapon_rocket_launcher_airbound
+	impact_sound weapon_rocket_launcher_impact1 weapon_rocket_launcher_impact2 weapon_rocket_launcher_impact3 weapon_rocket_launcher_impact4
+	equip_sound rl_equip
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	out_of_ammo_sound rl_ooa
+	
+	detached_shot_particles false
+}
+
+turret_nade
+{
+	show_in_dev_console false 
+	
+	pfx implode_weeble_filament slot_pfx_eye
+
+    color 67da80
+    weapon_tag turret
+    sort 100
+ 	//group 3
+	unlimited_ammo true
+	speed 400
+ 	rate 1000
+  	damage 0
+  	splash_radius 260
+	default_ammo_pickup_ammo 1
+	default_weapon_pickup_ammo 1
+	throwable true
+	throw_animation true
+	
+	trigger_skill_id 6
+	    
+	center_of_mass_offset 20
+    gravity_pitch_offset 0.10
+	
+	gravity 200
+	
+	bounce 1
+	// Have in mind the skill cooldown before modifying the duration
+	duration 10000
+	explode_after_last_bounce_delay 1000
+	only_count_ground_bounce true
+	bounce_friction 0.5
+	bounce_off_players true
+	trigger_ability_id 18
+	
+  	missile_particles landmine_projectile
+
+	
+	equip_sound hw_equip
+	out_of_ammo_sound gl_ooa
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75 
+	single_missile_sound weeble_airbound_short1 weeble_airbound_short2 weeble_airbound_short3 weeble_airbound_short4 weeble_airbound_short5 weeble_airbound_short6 weeble_airbound_short7
+	missile_loop_sound translocator_projectile_loop
+	bounce_sound translocator_bounce1 translocator_bounce2 translocator_bounce3 translocator_bounce4
+	
+	detached_shot_particles false
+}
+
+jetpack_explosion
+{	
+	show_in_dev_console false 
+	
+	pfx bomb_weeble_fuse_filament slot_particle_fuse
+    color b4513b
+ 	unlimited_ammo false
+	speed 1
+ 	rate 800
+  	damage 10
+  	knockback 175
+	knockback_self 0
+  	ground_knockback 175
+	ground_knockback_self 0
+	
+	splash_hemisphere_offset 0
+	player_hit_only true
+	center_of_mass_offset 10
+	
+	min_ground_knockback 75
+	min_knockback 75
+	
+	prevent_automatic_skill_activate true
+	
+	insta_explode true
+	
+	splash_radius 200
+	min_splash_damage 5
+	splash_damage 10
+	self_damage 0
+	
+	duration 15000
+    
+	weapon_fire_delay 1000
+	skill_delay 1000
+	
+	gravity 0
+	
+
+	impact_sound leap_land1 leap_land2 leap_land3 leap_land4
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	
+	
+}
+
+
+healing_orb
+{
+	speed 3000
+	duration 300
+	damage 0
+	gravity 0
+	show_in_dev_console false 
+	
+	model assets/shared/weapons/weebles/explosive_weeble/explosiveweeble
+  	missile_particles heal_orb_projectile
+}
+
+deployable_medpack
+{
+	show_in_dev_console false 
+	
+    color 67da80
+    weapon_tag deployable_medpack
+    sort 100
+	speed 400
+ 	rate 1000
+  	damage 0
+  	splash_radius 260
+	default_ammo_pickup_ammo 1
+	default_weapon_pickup_ammo 1
+	throwable true
+	throw_animation true
+		    
+	center_of_mass_offset 20
+    gravity_pitch_offset 0.10
+	
+	gravity 200
+	
+	bounce 0
+	// Have in mind the skill cooldown before modifying the duration
+	duration 10000
+	explode_after_last_bounce_delay 1000
+	only_count_ground_bounce true
+	bounce_friction 0.5
+	bounce_off_players true
+	
+  	missile_particles heal_pickup_projectile
+	
+	model assets/shared/weapons/weebles/explosive_weeble/explosiveweeble
+	model_position_third_person 10 -60 -35
+	model_position 1.93727 -5.30881 3.85738
+	model_scale 0.1
+	model_rotation 186 10 -4
+	model_camera_scale 0.5
+	muzzle 0 0 0
+	fov 55
+	
+	equip_sound hw_equip
+	out_of_ammo_sound gl_ooa
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75 
+	single_missile_sound weeble_airbound_short1 weeble_airbound_short2 weeble_airbound_short3 weeble_airbound_short4 weeble_airbound_short5 weeble_airbound_short6 weeble_airbound_short7
+	missile_loop_sound translocator_projectile_loop
+	bounce_sound translocator_bounce1 translocator_bounce2 translocator_bounce3 translocator_bounce4
+	
+	detached_shot_particles false
+}
+
+overload_orb
+{
+	show_in_dev_console false 
+	
+    weapon_tag overload_orb
+    sort 100
+	speed 1000
+	respect_player_collision true
+ 	// rate 750
+	splash_radius 300 //this needs to match the abilities base radius, same for the upgrades
+	damage 80
+  	splash_damage 80
+	min_splash_damage 40
+	self_damage 30
+	splash_hemisphere_offset 20
+    splash_hemisphere_offset_damage_multiplier 0.30
+	ground_knockback 80
+	ground_knockback_self 113
+	knockback 100
+	knockback_self 113
+	// throwable true
+	// throw_animation true
+	duration 4000
+	// center_of_mass_offset 20
+    gravity_pitch_offset 0.20
+	
+	gravity 250
+	
+	// Have in mind the skill cooldown before modifying the duration
+	
+  	missile_particles overload_chest_orb_loop
+	
+	model assets/shared/weapons/weebles/explosive_weeble/explosiveweeble
+	fov 55
+	
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75 
+	impact_particles overload_player_3p
+
+	missile_loop_sound ab_overload_airbound
+
+	decal decal_plasma 100 3 3.561 false 3
+	decal decal_plasma 175 3 3.561 false 3
+	decal decal_plasma 300 3 3.561 false 3
+	decal decal_glow_red 60 3 3.561 false 25
+	decal decal_glow 35 3 3.561 false 20
+
+	bounce 0
+	bounce_friction 1
+}
+
+overload_orb augment 1 
+{
+	overwrite self_damage 0
+}
+
+overload_orb augment 2
+{
+	overwrite damage 0
+	overwrite self_damage 0
+	overwrite splash_damage 0 
+	overwrite impact_particles empty_system
+	overwrite impact_sound empty_system
+	overwrite knockback 0
+	overwrite ground_knockback 0 
+	overwrite knockback_self 0
+	overwrite ground_knockback_self 0
+}	
+
+overload_orb augment 3
+{
+	preadd damage 10
+  	preadd splash_damage 10
+	preadd min_splash_damage 10
+	max_stacks 2
+}
+
+overload_orb augment 4
+{
+	overwrite gravity 1
+}
+
+overload_orb_mini
+{
+	show_in_dev_console false 
+	
+    sort 100
+	speed 1000
+ 	rate 750
+  	splash_radius 200
+	min_splash_damage 10
+  	splash_damage 20
+	damage 20
+	duration 10000
+	gravity 200
+	
+  	missile_particles overload_chest_orb_loop
+	impact_particles ability_overload_impact_small
+
+	model assets/shared/weapons/weebles/explosive_weeble/explosiveweeble
+	fov 55
+	
+
+	// hit_sound hit_sound_hit1
+	// hit_sound_min_pitch 0.75 
+	// single_missile_sound weeble_airbound_short1 weeble_airbound_short2 weeble_airbound_short3 weeble_airbound_short4 weeble_airbound_short5 weeble_airbound_short6 weeble_airbound_short7
+	// missile_loop_sound translocator_projectile_loop
+	// bounce_sound translocator_bounce1 translocator_bounce2 translocator_bounce3 translocator_bounce4
+	// impact_sound rl_impact1 rl_impact2 rl_impact3 rl_impact4
+
+	decal decal_plasma 100 3 3.561 false 3
+	decal decal_plasma 175 3 3.561 false 3
+	decal decal_plasma 300 3 3.561 false 3
+	decal decal_glow_red 60 3 3.561 false 25
+	decal decal_glow 35 3 3.561 false 20
+
+	bounce 0
+	bounce_friction 1
+}
+
+implosion_orb
+{
+	show_in_dev_console false 
+	
+    weapon_tag nexus_bomb
+    sort 100
+	speed 1000
+ 	rate 1000
+  	damage 0
+	// throwable true
+	// throw_animation true
+	duration 4000
+	gravity 250
+    gravity_pitch_offset 0.20
+	// center_of_mass_offset 20
+    // gravity_pitch_offset 0.10
+	
+	//implosive values
+	//knockback -250
+	//ground_knockback -300
+	//knockback_self -200
+	//ground_knockback_self -200
+	//splash_radius 280
+
+	ignore_players true
+	// Have in mind the skill cooldown before modifying the duration
+	duration 1500
+	
+  	missile_particles implosion_orb_loop
+	
+	model assets/shared/weapons/weebles/explosive_weeble/explosiveweeble
+	fov 55
+	
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75 
+	// single_missile_sound weeble_airbound_short1 weeble_airbound_short2 weeble_airbound_short3 weeble_airbound_short4 weeble_airbound_short5 weeble_airbound_short6 weeble_airbound_short7
+	// missile_loop_sound translocator_projectile_loop
+	// bounce_sound translocator_bounce1 translocator_bounce2 translocator_bounce3 translocator_bounce4
+	impact_sound rl_impact1 rl_impact2 rl_impact3 rl_impact4
+
+
+	decal decal_plasma 100 3 3.561 false 3
+	decal decal_plasma 175 3 3.561 false 3
+	decal decal_plasma 300 3 3.561 false 3
+	decal decal_glow_red 60 3 3.561 false 25
+	decal decal_glow 35 3 3.561 false 20
+
+	bounce 0
+	bounce_friction 1
+}
+
+nexus_bomb
+{
+	show_in_dev_console false 
+	
+    weapon_tag nexus_bomb
+    sort 100
+	speed 2000
+ 	rate 1000
+  	self_damage 0
+	damage 40 //IMPORTANT, change this weapons augment 10 damage to be this damage value * direct_hit_multiplier from skill 20015 augment 8 :)
+	splash_damage 40
+	min_splash_damage 10
+	throwable true
+	throw_animation true
+
+	duration 1000
+	// center_of_mass_offset 20
+    // gravity_pitch_offset 0.10
+	
+	gravity 1
+
+	ground_knockback 0
+	knockback 0
+ 	knockback_self 0
+ 	ground_knockback_self 0
+	splash_radius 200
+
+	// Have in mind the skill cooldown before modifying the duration
+	duration 10000
+	
+  	missile_particles heal_bomb_projectile
+	
+	model assets/shared/weapons/weebles/explosive_weeble/explosiveweeble
+	fov 55
+	
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75 
+	
+	missile_loop_sound ab_holy_sphere_airbound_loop
+	shot_sound ab_holy_sphere_throw
+	impact_sound ab_holy_sphere_impact
+
+
+	bounce 0
+	bounce_friction 1
+	ignore_players false
+	//explode_delay_after_last_impact 2
+
+}
+
+nexus_bomb augment 1
+{
+	preadd ground_knockback 100
+	preadd knockback 120
+	preadd ground_knockback_self 113
+	preadd knockback_self 113
+}
+
+nexus_bomb augment 2
+{
+	preadd damage 40
+	preadd splash_damage 40
+	preadd min_splash_damage 10
+	max_stacks 1
+}
+
+nexus_bomb augment 7
+{
+	overwrite missile_particles heal_bomb_projectile_both
+	max_stacks 1
+}
+
+nexus_bomb augment 8
+{
+	preadd bounce 1
+	max_stacks 2
+}
+
+nexus_bomb augment 9
+{
+	preadd splash_radius 100
+}
+
+nexus_bomb augment 10
+{
+	overwrite damage 52
+}
+
+nexus_bomb_mini
+{
+	show_in_dev_console false 
+	
+    weapon_tag nexus_bomb
+    sort 100
+	speed 1000 //debug value 
+ 	rate 1000
+  	damage 10
+	throwable true
+	throw_animation true
+
+	// center_of_mass_offset 20
+    // gravity_pitch_offset 0.10
+	
+	gravity 1
+
+	ground_knockback 0
+	knockback 0
+ 	knockback_self 0
+ 	ground_knockback_self 0
+	splash_radius 200
+
+	// Have in mind the skill cooldown before modifying the duration
+	duration 10000
+	
+  	missile_particles heal_bomb_projectile
+	
+	model assets/shared/weapons/weebles/explosive_weeble/explosiveweeble
+	fov 55
+	
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75 
+	single_missile_sound weeble_airbound_short1 weeble_airbound_short2 weeble_airbound_short3 weeble_airbound_short4 weeble_airbound_short5 weeble_airbound_short6 weeble_airbound_short7
+	missile_loop_sound translocator_projectile_loop
+	bounce_sound translocator_bounce1 translocator_bounce2 translocator_bounce3 translocator_bounce4
+
+	ignore_players false
+}
+
+scanner_grenade
+{
+    color 67da80
+    weapon_tag hw
+    sort 100
+	unlimited_ammo false
+	speed 1100
+ 	rate 1000
+  	damage 0
+  	splash_radius 260
+	default_ammo_pickup_ammo 1
+	default_weapon_pickup_ammo 1
+	throwable true
+	throw_animation true
+	healing true
+    
+	icon_path images/skill_icons/weapon_hw.svg
+	
+	center_of_mass_offset 20
+	
+    gravity_pitch_offset 0.05
+
+	explode_delay_after_last_impact 5.0
+
+	
+//	bounce 10000
+//	bounce_friction 0.5
+//	duration 2500
+	gravity 200
+
+	shot_particles empty_system
+   	shot_particles_attached empty
+  	missile_particles scanner_weeble_projectile
+	missile_trail_particles weeb_dynamic_trail_green_heal
+  	
+	model assets/shared/weapons//weebles/healing_weeble/healingweeble
+	model_position 0.93727 -5.30881 3.85738
+	model_position_third_person 10 -60 -35
+	model_scale 0.1
+	model_rotation 186 10 -4
+	model_camera_scale 0.8
+	muzzle 0 0 0
+	fov 55
+	muzzle_offset 0 0 0
+	
+	
+	//shot_sound weeble_hw_fire1 weeble_hw_fire2 weeble_hw_fire3 weeble_hw_fire4 weeble_hw_fire5
+	equip_sound hw_equip
+	out_of_ammo_sound gl_ooa
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	//single_missile_sound weeble_airbound_short1 weeble_airbound_short2 weeble_airbound_short3 weeble_airbound_short4 weeble_airbound_short5 weeble_airbound_short6 weeble_airbound_short7
+
+	detached_shot_particles false
+}
+
+mini_rocket 
+{
+	show_in_dev_console false 
+	
+    weapon_tag mini_rocket
+    sort 100
+	speed 500
+ 	rate 750
+  	damage 35
+	duration 150000
+	
+  	missile_particles weapon_rocket_projectile
+  	// impact_particles beam_impact_1
+	// impact_particles rocket_impact_diabotical
+	impact_particles weapon_rocket_impact
+	
+	// model assets/shared/weapons/weebles/explosive_weeble/explosiveweeble
+	fov 55
+	
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75 
+	missile_loop_sound ab_mini_rockets_airbound
+	// single_missile_sound weeble_airbound_short1 weeble_airbound_short2 weeble_airbound_short3 weeble_airbound_short4 weeble_airbound_short5 weeble_airbound_short6 weeble_airbound_short7
+	// missile_loop_sound translocator_projectile_loop
+	// bounce_sound translocator_bounce1 translocator_bounce2 translocator_bounce3 translocator_bounce4
+	// impact_sound rl_impact1 rl_impact2 rl_impact3 rl_impact4
+	impact_sound ab_mini_rockets_impact
+
+	hit_sound fb_enemy_hit
+
+
+	// decal decal_plasma 100 3 3.561 false 3
+	// decal decal_plasma 175 3 3.561 false 3
+	// decal decal_plasma 300 3 3.561 false 3
+	// decal decal_glow_red 60 3 3.561 false 25
+	// decal decal_glow 35 3 3.561 false 20
+
+	custom_trajectory true
+	custom_trajectory_type bezier_curve
+
+	// min_splash_damage 5
+    // team_damage 0
+    // splash_team_damage 0
+
+	self_damage 50
+  	splash_radius 150
+	splash_damage 35
+	min_splash_damage 10
+
+	bounce 0
+	bounce_friction 1
+}
+
+mini_rocket_homing
+{
+	show_in_dev_console false 
+	
+    weapon_tag mini_rocket_homing
+    sort 100
+	speed 500
+ 	rate 750
+  	damage 25
+	duration 150000
+	
+  	missile_particles weapon_rocket_projectile_artifact
+  	// impact_particles beam_impact_1
+	// impact_particles rocket_impact_diabotical
+	impact_particles weapon_rocket_impact_artifact
+	
+	// model assets/shared/weapons/weebles/explosive_weeble/explosiveweeble
+	fov 55
+	
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75 
+	// single_missile_sound weeble_airbound_short1 weeble_airbound_short2 weeble_airbound_short3 weeble_airbound_short4 weeble_airbound_short5 weeble_airbound_short6 weeble_airbound_short7
+	// missile_loop_sound translocator_projectile_loop
+	// bounce_sound translocator_bounce1 translocator_bounce2 translocator_bounce3 translocator_bounce4
+	impact_sound rl_impact1 rl_impact2 rl_impact3 rl_impact4
+
+
+	// decal decal_plasma 100 3 3.561 false 3
+	// decal decal_plasma 175 3 3.561 false 3
+	// decal decal_plasma 300 3 3.561 false 3
+	// decal decal_glow_red 60 3 3.561 false 25
+	// decal decal_glow 35 3 3.561 false 20
+
+	custom_trajectory true
+	custom_trajectory_type homing_projectile
+
+	// min_splash_damage 5
+    // team_damage 0
+    // splash_team_damage 0
+
+	self_damage 50
+  	splash_radius 150
+	splash_damage 25
+	min_splash_damage 5
+
+	bounce 0
+	bounce_friction 1
+}
+
+instigator_missile 
+{
+	show_in_dev_console false 
+	
+    weapon_tag instigator_missile
+    sort 100
+	speed 500
+ 	rate 750
+  	damage 175
+	duration 150000
+	
+	gravity 0.1
+	
+	// Have in mind the skill cooldown before modifying the duration
+	duration 150000
+
+	trigger_skill_id 20024
+	
+  	// shot_particles empty_system
+   	// shot_particles_attached rocket_muzzle_flash_diabotical
+	// shot_particles_attached_3p rocket_muzzle_flash_diabotical_3p 
+  	// missile_particles rl_projectile_7
+  	// missile_particles rl_projectile_6
+  	missile_particles weapon_rocket_projectile
+  	impact_particles arcane_explode_v4
+	
+	// model assets/shared/weapons/weebles/explosive_weeble/explosiveweeble
+	fov 55
+	
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75 
+	// single_missile_sound weeble_airbound_short1 weeble_airbound_short2 weeble_airbound_short3 weeble_airbound_short4 weeble_airbound_short5 weeble_airbound_short6 weeble_airbound_short7
+	// missile_loop_sound translocator_projectile_loop
+	// bounce_sound translocator_bounce1 translocator_bounce2 translocator_bounce3 translocator_bounce4
+	impact_sound rl_impact1 rl_impact2 rl_impact3 rl_impact4
+
+	self_damage 50
+  	splash_radius 200
+
+	bounce 0
+	bounce_friction 1
+}
+
+explosiveweeble
+{
+    weapon_tag bw
+ 	//group 3
+	unlimited_ammo false
+	speed 1100
+ 	rate 1000
+  	damage 50
+	no_self_damage 0
+	min_splash_damage 10
+	splash_damage 50
+    team_damage 0
+    splash_team_damage 0
+  	knockback 80
+	ground_knockback 80
+	knockback_self 0
+	ground_knockback_self 0
+  	splash_radius 200
+	default_ammo_pickup_ammo 1
+	default_weapon_pickup_ammo 1
+	center_of_mass_offset 20
+	center_of_mass_offset_self 0
+	explode_delay_after_last_impact 1
+	attach true
+	
+	icon_path images/skill_icons/weapon_st.svg
+    
+    gravity_pitch_offset 0.05
+	
+	gravity 400
+
+  	missile_particles explode_weeble_projectile
+	impact_particles explode_weeble
+	missile_trail_particles gl_bullet_dynamic_trail
+	impact_sound rl_impact1 rl_impact2 rl_impact3 rl_impact4
+
+	
+	detached_shot_particles false
+}
+
+explosiveweeble augment 2
+{
+  	preadd damage 20
+	preadd min_splash_damage 10
+	preadd splash_damage 20
+	max_stacks 2
+}
+
+explosiveweeble augment 3
+{
+	overwrite bounce 2
+	overwrite bounce_off_players true
+	overwrite bounce_friction 0.99
+	overwrite trigger_explosion_on_bounce true 
+	overwrite explode_delay_after_last_impact 0
+	overwrite attach false
+}
+
+explosiveweeble augment 4
+{
+  	preadd splash_radius 100
+	overwrite impact_particles explode_weeble_scale_2 
+	max_stacks 1
+}
+
+explosiveweeble_cluster
+{
+	pfx bomb_weeble_fuse_filament slot_particle_fuse
+	unlimited_ammo false
+	speed 500
+ 	rate 1000
+  	damage 20
+	duration 1000
+	bounce 2
+	ignore_players true
+	explode_delay_after_last_impact 0.1
+	bounce_friction 0.4
+
+	no_self_damage 0
+
+	min_splash_damage 5
+	splash_damage 20
+  	splash_radius 250
+
+    team_damage 0
+    splash_team_damage 0
+  	knockback 50
+	ground_knockback 50
+	knockback_self 0
+	ground_knockback_self 0
+	default_ammo_pickup_ammo 1
+	default_weapon_pickup_ammo 1
+	center_of_mass_offset 20
+	center_of_mass_offset_self 0
+        
+    gravity_pitch_offset 0.05
+	
+	gravity 450
+	
+	shot_particles empty_system
+   	shot_particles_attached empty
+  	missile_particles explode_weeble_projectile
+  	impact_particles explode_weeble
+		
+	impact_sound rl_impact1 rl_impact2 rl_impact3 rl_impact4
+
+	equip_sound bw_equip
+	out_of_ammo_sound gl_ooa
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75	
+	detached_shot_particles false
+}
+
+healingweeble
+{
+    weapon_tag hw
+	unlimited_ammo false
+	speed 1100
+	rate 1000
+  	damage 0
+  	splash_radius 260
+	default_ammo_pickup_ammo 1
+	default_weapon_pickup_ammo 1
+    
+	icon_path images/skill_icons/weapon_hw.svg
+	
+	center_of_mass_offset 20
+	
+    gravity_pitch_offset 0.05
+
+	gravity 200
+
+  	missile_particles heal_weeble_projectile
+	missile_trail_particles weeb_dynamic_trail_green_heal
+
+	
+	impact_sound grenade_healing_impact
+	detached_shot_particles false
+}
+
+implosiveweeble
+{
+    weapon_tag iw
+	unlimited_ammo false
+	speed 1100
+ 	rate 1000
+  	damage 5
+	no_self_damage 1
+	min_splash_damage 5
+    team_damage 0
+    splash_team_damage 0
+
+  	knockback -250
+	ground_knockback -300
+	knockback_self -200
+	ground_knockback_self -200
+
+  	splash_radius 280
+	default_ammo_pickup_ammo 1
+	default_weapon_pickup_ammo 1
+	
+	center_of_mass_offset 20
+
+	icon_path images/skill_icons/weapon_iw.svg
+    
+    gravity_pitch_offset 0.05
+	
+	gravity 200
+	
+  	missile_particles implode_weeble_projectile
+  	impact_particles implode_impact
+	missile_trail_particles weeb_dynamic_trail_purple
+
+	impact_sound iw_impact1
+	detached_shot_particles false
+}
+
+slowfieldweeble
+{
+    weapon_tag sw
+	unlimited_ammo false
+	speed 1100
+ 	rate 1000
+  	damage 5
+	no_self_damage 1
+	min_splash_damage 5
+    team_damage 0
+    splash_team_damage 0
+  	splash_radius 260
+	default_ammo_pickup_ammo 1
+	default_weapon_pickup_ammo 1
+    
+	center_of_mass_offset 20
+	
+    gravity_pitch_offset 0.05
+
+	gravity 200
+
+  	missile_particles slow_weeble_projectile
+	missile_trail_particles weeb_dynamic_trail_blue
+	
+	impact_sound sw_impact1
+	detached_shot_particles false
+}
+
+smokeweeble
+{
+    weapon_tag smw
+	unlimited_ammo false
+	speed 1100
+ 	rate 1000
+  	damage 5
+	no_self_damage 1
+	min_splash_damage 5
+    team_damage 0
+    splash_team_damage 0
+  	splash_radius 260
+	default_ammo_pickup_ammo 1
+	default_weapon_pickup_ammo 1
+    
+	icon_path images/skill_icons/weapon_smw.svg
+	
+	center_of_mass_offset 20
+	
+    gravity_pitch_offset 0.05
+
+	gravity 200
+
+  	missile_particles smoke_weeble_projectile
+	missile_trail_particles weeb_dynamic_trail_green
+
+	hit_sound_min_pitch 0.75
+	detached_shot_particles false
+}
+
+beam 
+{
+	weapon_tag beam
+  	damage 85
+	critical_damage 100
+}

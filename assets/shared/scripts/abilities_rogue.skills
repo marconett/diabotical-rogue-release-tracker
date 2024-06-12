@@ -1,0 +1,1830 @@
+skill 20000
+{
+	name Melee
+	show_in_dev_console true
+	
+	name_translation_key skill_melee
+    desc_translation_key skill_melee_desc
+	
+	weapon arena_sword
+	
+	use_anim_duration 0.4
+	cooldown 0.5
+}
+
+skill 20001
+{
+	name Healing_Weeble
+	selectable false
+	rarity common
+	
+	hud_icon images/skill_icons/gadget_hud_heal.png
+	name_translation_key skill_healing_weeble
+    desc_translation_key skill_healing_weeble_desc
+	
+	color FFA126
+	
+	weapon healingweeble
+	required_class rogue_scout
+	category ultimate
+
+	max_charges 1
+	grant_charges_on_death true
+	use_anim_duration 0.4
+	radius 200
+	duration 6
+	cooldown 10
+	heal_per_second 15
+}
+
+skill 20001 augment 1
+{
+	name_translation_key skill_increase_max_charges
+	desc_translation_key skill_increase_max_charges_desc
+	preadd max_charges 1
+	max_stacks 1
+}
+
+//skill 20001 augment 2
+//{
+//	name_translation_key skill_increase_radius
+//    desc_translation_key skill_increase_radius_desc
+//	max_stacks 2
+//	preadd radius 50
+//}
+//
+//
+//skill 20001 augment 3
+//{
+//	name_translation_key skill_increase_duration
+//    desc_translation_key skill_increase_duration_desc
+//	preadd duration 2
+//}
+
+//skill 20001 augment 4
+//{
+//	name_translation_key skill_healing_weeble_a4
+//	desc_translation_key skill_healing_weeble_a4_desc
+//	rarity rare
+//	preadd healing_weeble_heal_per_second 2
+//	max_stacks 2
+//}
+
+skill 20002
+{
+	name Smoke_Weeble
+	rarity common
+	selectable true
+	required_class rogue_scout
+	
+	hud_icon images/skill_icons/Arena_Ability_Icon_Smoke_Grenade.png
+
+	name_translation_key skill_smoke_weeble
+    desc_translation_key skill_smoke_weeble_desc
+	
+	weapon smokeweeble
+
+	damage 10 //damage per tick for upgrade
+	radius 200
+	duration 5
+	cooldown 10
+	use_anim_duration 0.4
+}
+
+skill 20002 augment 1
+{
+	name_translation_key skill_lowers_cooldown
+    desc_translation_key skill_lowers_cooldown_desc
+	preadd cooldown -2
+	max_stacks 2
+}
+
+skill 20002 augment 2
+{
+	name_translation_key skill_increase_radius
+    desc_translation_key skill_increase_radius_desc
+	preadd radius 100
+	rarity rare
+	max_stacks 1
+}
+
+skill 20002 augment 3
+{
+	locked_in_battlepass true
+	name_translation_key skill_smoke_weeble_a3
+	desc_translation_key skill_smoke_weeble_a3_desc
+	rarity legendary
+	overwrite grenade_enable_periodic_damage true
+}
+
+
+skill 20002 augment 4
+{
+	name_translation_key skill_smoke_weeble_a4
+	desc_translation_key skill_smoke_weeble_a4desc
+	rarity legendary
+	overwrite damage_boost 1.2
+	skill_prereq augment 5
+	locked_in_battlepass true
+}
+
+
+skill 20002 augment 5
+{
+	name_translation_key skill_smoke_weeble_a5
+	desc_translation_key skill_smoke_weeble_a5_desc
+	rarity legendary
+	preadd cloak_duration 5
+}
+
+
+skill 20002 augment 6
+{
+	name_translation_key skill_increase_duration
+	desc_translation_key skill_increase_duration_desc
+	locked_in_battlepass true
+	rarity rare
+	preadd duration 5
+}
+
+
+skill 20002 augment 7
+{
+	Name Blinding_Smoke
+	name_translation_key skill_smoke_weeble_a7
+	desc_translation_key skill_smoke_weeble_a7_desc
+	rarity epic
+	preadd stun_duration 5
+}
+
+//skill 20002 augment 4
+//{
+//	name_translation_key skill_smoke_weeble_a4
+//	desc_translation_key skill_smoke_weeble_a4_desc
+//	rarity legendary
+//	overwrite healing_weeble_heal_per_second 10
+//	overwrite grenade_enable_heal true
+//}
+
+skill 20003
+{
+	name Implosive_Weeble
+	selectable false
+	show_in_dev_console false
+	rarity common
+	
+	hud_icon images/skill_icons/Rogue_Ability_Icon_Translocator.png
+	
+	name_translation_key skill_implosive_weeble
+    desc_translation_key skill_implosive_weeble_desc
+	
+	required_class rogue_chunk
+	weapon implosiveweeble
+	pfx1 implode_weeble_impact
+
+	radius 100
+	duration 5
+	cooldown 30
+	use_anim_duration 0.4
+}
+
+skill 20003 augment 1
+{
+	name_translation_key skill_lowers_cooldown
+    desc_translation_key skill_lowers_cooldown_desc
+	preadd cooldown -5
+	max_stacks 3
+}
+
+skill 20003 augment 2
+{
+	weapon_augment 2
+	name_translation_key skill_implosive_weeble_a2
+    desc_translation_key skill_implosive_weeble_a2_desc
+}
+
+skill 20003 augment 3
+{
+	weapon_augment 3
+	name_translation_key skill_increase_radius
+	desc_translation_key skill_increase_radius_desc
+}
+
+skill 20003 augment 4
+{
+	weapon_augment 4
+	name_translation_key skill_pull_effect
+	desc_translation_key skill_pull_effect_desc
+}
+
+skill 20004
+{
+
+	name Slowfield_Weeble
+	selectable false
+	show_in_dev_console false
+	rarity common
+	
+	hud_icon images/skill_icons/Rogue_Ability_Icon_Translocator.png
+	
+	name_translation_key skill_slowfield_weeble
+    desc_translation_key skill_slowfield_weeble_desc
+	
+	required_class rogue_chunk
+
+	weapon slowfieldweeble
+
+	slowdown_value 0.75
+
+	use_anim_duration 0.4
+	
+	radius 150
+	duration 8
+	cooldown 30
+	use_anim_duration 0.4
+}
+
+skill 20004 augment 1
+{
+	name_translation_key skill_lowers_cooldown
+    desc_translation_key skill_lowers_cooldown_desc
+	preadd cooldown -5
+	max_stacks 3
+}
+
+skill 20004 augment 2
+{
+	name_translation_key skill_increase_radius
+    desc_translation_key skill_increase_radius_desc
+	preadd radius 50
+	max_stacks 2
+}
+
+skill 20004 augment 3
+{
+    name_translation_key skill_increase_slowdown_effect
+    desc_translation_key skill_increase_slowdown_effect_desc
+	preadd slowdown_value -0.15	
+}
+
+skill 20004 augment 4
+{
+	preadd teammate_slowdown_reduction_multiplier 0.5
+    name_translation_key skill_reduced_slowdown_effect_on_allies
+    desc_translation_key skill_reduced_slowdown_effect_on_allies_desc
+}
+
+skill 20005
+{
+	name Explosive_Weeble
+	selectable true
+	rarity common
+	
+	required_class rogue_scout
+
+	hud_icon images/skill_icons/Arena_Ability_Icon_Explosion_Grenade.png
+	
+	name_translation_key skill_explosive_weeble
+    desc_translation_key skill_explosive_weeble_desc
+	
+	weapon explosiveweeble
+	pfx1 explode_weeble_impact
+	attach true
+
+	use_anim_duration 0.4
+	
+	cooldown 12
+
+	//damage 50
+	//radius 200
+	//knockback 200
+	//self_knockback 100 //currently  not used
+}
+
+skill 20005 augment 1
+{
+	locked_in_battlepass true
+	name_translation_key skill_lowers_cooldown
+    desc_translation_key skill_lowers_cooldown_desc
+	preadd cooldown -2
+	max_stacks 2
+}
+
+skill 20005 augment 2
+{
+	locked_in_battlepass true
+	weapon_augment 3 //Bounce
+	name_translation_key skill_explosive_weeble_a2
+    desc_translation_key skill_explosive_weeble_a2_desc
+	rarity legendary
+	postadd cooldown 5 
+	multiply damage 0.5
+}
+
+
+skill 20005 augment 3
+{
+	// weapon_augment 1 //Knockback + 50
+	name_translation_key skill_increase_knockback
+    desc_translation_key skill_increase_knockback_desc
+	preadd knockback 50
+}
+
+
+skill 20005 augment 4
+{
+	locked_in_battlepass true
+	name_translation_key skill_explosive_weeble_a4
+    desc_translation_key skill_explosive_weeble_a4_desc
+	preadd cluster_count 3
+}
+
+
+skill 20005 augment 5
+{
+	name_translation_key skill_increase_damage
+   	desc_translation_key skill_increase_damage_desc
+	weapon_augment 2
+	max_stacks 2
+}
+
+
+skill 20005 augment 6
+{
+	name_translation_key skill_increase_radius
+   	desc_translation_key skill_increase_radius_desc
+	weapon_augment 4
+	rarity rare
+	max_stacks 1
+}
+
+
+skill 20005 augment 7
+{
+	name_translation_key skill_explosive_weeble_a7
+   	desc_translation_key skill_explosive_weeble_a7_desc
+	rarity rare
+	overwrite damage_over_time 3
+	max_stacks 1
+}
+
+skill 20006
+{
+    name Hookshot
+    description Rog Hookshot
+    name_translation_key skill_hookshot
+    desc_translation_key skill_hookshot_desc
+    hud_icon images/skill_icons/Arena_Ability_Icon_Hookshot.png
+    hud_icon2 images/skill_icons/Rogue_Ability_Icon_Hook_Disconnect.png
+	
+	selectable false
+	rarity epic
+	required_class rogue_scout
+	category movement
+		
+    radius 1400
+    cooldown 0.0
+	charge_grant_time 8
+	max_charges 1
+    cost 50
+
+	weapon hookshot
+	auto_fire_weapon_on_activation false
+    prevent_cooldown_on_initial_fire true
+
+    power 5
+    hookshot_max_target_speed 900
+    hookshot_min_target_speed 600
+	hookshot_swing_steering_acceleration 1.5
+	hookshot_swing_enabled false
+}
+
+skill 20006 augment 1
+{
+	rarity common
+	preadd charge_grant_time -1
+	max_stacks 2
+	name_translation_key skill_lowers_cooldown
+    desc_translation_key skill_lowers_cooldown_desc
+}
+
+
+skill 20006 augment 2
+{
+	rarity epic
+	overwrite hookshot_swing_enabled true
+	max_stacks 1
+	name_translation_key skill_hookshot_a2
+    desc_translation_key skill_hookshot_a2_desc
+}
+
+skill 20006 augment 3
+{
+	rarity rare
+	preadd max_charges 1
+	max_stacks 2
+	name_translation_key skill_increase_max_charges
+    desc_translation_key skill_increase_max_charges_desc
+}
+
+skill 20006 augment 5
+{
+	weapon_augment 1
+	preadd damage_boost 60 //percent
+	rarity legendary
+	max_stacks 1
+	name_translation_key skill_hookshot_a5
+   	desc_translation_key skill_hookshot_a5_desc
+}
+
+skill 20006 augment 7
+{
+	name_translation_key skill_hookshot_a7
+   	desc_translation_key skill_hookshot_a7_desc
+	rarity artifact
+	overwrite max_charges 6
+	overwrite charge_grant_time 4
+	locked_in_battlepass true
+}
+
+skill 20007
+{
+    name Translocator
+    name_translation_key skill_translocator
+    desc_translation_key skill_translocator_desc
+    hud_icon images/skill_icons/Rogue_Ability_Icon_Translocator.png
+    hud_icon2 images/skill_icons/Rogue_Ability_Icon_Translocator_Activate.png
+		
+	selectable false
+	required_class rogue_chunk
+	rarity rare
+	
+    duration 1.5
+    cooldown 10
+    small_cooldown 0
+    cost 0
+
+    prevent_cooldown_on_initial_fire true
+
+	weapon translocator
+	
+	use teleport
+	skill_sound teleport cast weeble_hw_fire1
+	skill_sound teleport finish translocator_teleport1
+}
+
+skill 20007 augment 1
+{
+	preadd cooldown -3
+	name_translation_key skill_lowers_cooldown
+    desc_translation_key skill_lowers_cooldown_desc
+}
+
+
+skill 20008
+{
+    name Dash
+    name_translation_key skill_dash
+    desc_translation_key skill_dash_desc
+	
+    hud_icon images/skill_icons/Rogue_Ability_Icon_Dash.png  	
+
+	selectable false
+	show_in_dev_console false
+	rarity rare
+ 	required_class rogue_scout
+	
+    cooldown 4
+	
+	duration 0.09
+	dash_damage 0
+	dash_speed 2750
+	dash_multi_directional true
+}
+
+
+
+skill 20008 augment 1
+{
+	name_translation_key skill_dash_a1
+	desc_translation_key skill_dash_a1_desc
+
+	dash_healing_dash true
+}
+
+skill 20008 augment 2
+{
+	name_translation_key skill_dash_a2
+	desc_translation_key skill_dash_a2_desc
+	
+	overwrite dash_explode true
+}
+
+skill 20008 augment 3
+{
+	name_translation_key skill_dash_a3
+	desc_translation_key skill_dash_a3_desc
+	
+    overwrite dash_spawn_fire_trail true
+	overwrite dash_fire_trail_damage 10
+}
+
+skill 20008 augment 4
+{
+	preadd cooldown -1
+	name_translation_key skill_lowers_cooldown
+    desc_translation_key skill_lowers_cooldown_desc
+}
+
+
+skill 20009
+{
+    name Healing Orb
+    name_translation_key skill_healing_orb
+    desc_translation_key skill_healing_orb_desc
+	
+    hud_icon images/skill_icons/Arena_Ability_Icon_Healing_Orb_01.png  	
+    hud_icon2 images/skill_icons/Arena_Ability_Icon_Healing_Orb_Unavailable.png  	
+	
+	selectable true
+	rarity rare
+	required_class rogue_eggbot
+
+	
+	pfx1 heal_hand_start 	//START
+	pfx2 heal_hand_loop 	//LOOP ORB
+	pfx3 heal_hand_beam_loop	//LOOP BEAM
+	pfx4 heal_hand_impact_loop	//ACTIVATE -> attached to healed player
+
+	weapon healing_orb
+	
+    cooldown 0
+	duration 10 //Duration for deplying on teammate
+	radius 600 //Range
+	detach_range 850
+
+	max_energy 300
+	energy_consumption_rate 100 // per second
+	energy_regen_delay 2
+	energy_regen_rate 120
+
+	start_cooldown_on_full_heat false
+	prevent_cooldown_on_initial_fire true
+	
+	tick_rate 0.25
+	heal_amount 10
+
+	healing_orb_heal_per_tick_self_inactive 0	//While having no target	
+	healing_orb_aim_dependant true
+	healing_orb_max_aim_angle 30
+
+	healing_orb_deploy_projectile_speed 1000
+	healing_orb_deployable false
+	chain_max_targets 1
+}
+
+skill 20009 augment 1
+{
+	locked_in_battlepass true
+	name_translation_key skill_increase_range
+   	desc_translation_key skill_increase_range_desc
+	max_stacks 1
+	preadd radius 200
+	preadd detach_range 250
+	rarity rare
+}
+
+skill 20009 augment 2
+{
+	preadd max_energy 50
+	name_translation_key skill_increase_max_energy
+    desc_translation_key skill_increase_max_energy_desc
+	max_stacks 2
+}
+
+skill 20009 augment 3
+{
+	preadd healing_orb_heal_per_tick_self_active 2
+	name_translation_key skill_healing_orb_a3
+    desc_translation_key skill_healing_orb_a3_desc
+	max stacks 1
+	rarity epic
+}
+
+skill 20009 augment 4
+{
+	locked_in_battlepass true
+	preadd healing_orb_heal_per_tick_teammate 1
+	name_translation_key skill_healing_orb_a4
+    desc_translation_key skill_healing_orb_a4_desc
+	max_stacks 2
+	rarity common
+}
+
+
+skill 20009 augment 5
+{
+	name_translation_key skill_healing_orb_a5
+    desc_translation_key skill_healing_orb_a5_desc
+	max_stacks 1
+	rarity epic
+	overshield_amount 1
+}
+
+//skill 20009 augment 5
+//{
+//	overwrite healing_orb_deployable true
+//	name_translation_key skill_healing_orb_a5
+//    desc_translation_key skill_healing_orb_a5_desc
+//	max_stacks 1
+//	rarity legendary
+//}
+
+//skill 20009 augment 6
+//{
+//	name_translation_key skill_healing_orb_a6
+//  desc_translation_key skill_healing_orb_a6_desc
+//	rarity artifact
+//	preadd heal_amount 3
+//	preadd max_energy 400
+//	preadd energy_regen_rate 120
+//}
+
+
+skill 20009 augment 7
+{
+	locked_in_battlepass true
+	name_translation_key skill_healing_orb_a7
+    desc_translation_key skill_healing_orb_a7_desc
+	rarity legendary
+	preadd chain_max_targets 5
+}
+
+skill 20010
+{
+    name Deployable Medpack
+    name_translation_key skill_deployable_medpack
+    desc_translation_key skill_deployable_medpack_desc
+	
+    hud_icon images/skill_icons/Arena_Ability_Icon_Deployable_Medpack.png  	
+	
+	selectable false
+	show_in_dev_console false
+	rarity rare
+	required_class rogue_eggbot
+	
+	weapon deployable_medpack
+	
+	pfx1 heal_pickup_start 	//START
+	pfx2 heal_pickup_loop 	//LOOP
+	pfx3 heal_pickup_activate		//ACTIVATE -> static on medpack
+	pfx4 heal_pickup_activate_player	//ACTIVATE -> attached to healed player
+	
+    cooldown 15
+	radius 50
+	duration 15 //Max lifetime
+	
+	heal_amount 60
+	delay 4
+}
+
+skill 20010 augment 1
+{
+	preadd cooldown -5
+	name_translation_key skill_lowers_cooldown
+    desc_translation_key skill_lowers_cooldown_desc
+}
+
+skill 20011
+{
+    name Leap_Slam
+
+    name_translation_key skill_leap_slam
+    desc_translation_key skill_leap_slam_desc
+	
+    hud_icon images/skill_icons/Arena_Ability_Icon_Leap.png
+	
+	prevent_cooldown_on_initial_fire true
+    duration 0
+    cooldown 6
+	charge_grant_time 6
+    small_cooldown 0
+    cost 30
+	selectable false
+	rarity epic
+	required_class rogue_chunk
+	category movement
+
+	leap_slam_forward_force 600 //force multiplied by the forward vector
+	leap_slam_up_force 300 //force added up vector 
+	leap_slam_minimum_angle 0.2 //normalized value of the y-axis in the forward vector, 0 = straight forward, 1 = straight up
+}
+
+skill 20011 augment 1
+{
+	preadd leap_slam_forward_force 100
+	rarity rare
+	name_translation_key skill_leap_slam_a1
+    desc_translation_key skill_leap_slam_a1_desc	
+}
+
+skill 20011 augment 2
+{
+	preadd cooldown -1
+	preadd charge_grant_time -1
+	name_translation_key skill_lowers_cooldown
+    desc_translation_key skill_lowers_cooldown_desc
+	max_stacks 2
+}
+
+skill 20011 augment 3
+{
+	name_translation_key skill_leap_slam_a3
+    desc_translation_key skill_leap_slam_a3_desc
+	overwrite leap_slam_mid_air true
+	rarity epic
+}
+
+skill 20011 augment 4
+{
+	name Frontal_shield
+	name_translation_key skill_leap_slam_a4
+   	desc_translation_key skill_leap_slam_a4_desc
+	overwrite shield_enabled true
+	preadd shootable_hp 50
+	rarity legendary
+}
+
+skill 20011 augment 5
+{	
+	name Tri-Leap Tremor
+	name_translation_key skill_leap_slam_a5
+    desc_translation_key skill_leap_slam_a5_desc
+	rarity artifact
+	overwrite cooldown 0.5
+	overwrite max_charges 3	
+	preadd leap_slam_damage 30
+ 	preadd leap_slam_radius 400	
+}
+
+skill 20012
+{
+    name Charge
+	selectable false
+	show_in_dev_console false
+	
+    name_translation_key skill_charge
+    desc_translation_key skill_charge_desc
+	
+	hud_icon images/skill_icons/Rogue_Ability_Icon_Charge.png
+	
+	prevent_cooldown_on_initial_fire true
+
+	cooldown 12
+	duration 2
+	
+	charge_max_speed 800
+	charge_acceleration 700
+	charge_steering_speed 0.5
+	charge_steering_acceleration 2
+	charge_knockback_power 1000
+	charge_press_to_cancel true
+	charge_has_shield true
+}
+
+skill 20012 augment 1
+{
+	preadd cooldown -2
+	name_translation_key skill_lowers_cooldown
+    desc_translation_key skill_lowers_cooldown_desc
+}
+
+skill 20012 augment 2
+{	
+	name_translation_key skill_charge_a2
+	desc_translation_key skill_charge_a2_desc
+	overwrite charge_has_damage_trail true
+}
+
+
+skill 20012 augment 3
+{	
+	name_translation_key skill_charge_u1
+	desc_translation_key skill_charge_u1_desc 
+
+	preadd charge_steering_speed 0.5
+	preadd charge_steering_acceleration 1
+}
+
+
+skill 20013
+{
+	name Powerjump 
+	selectable false
+	show_in_dev_console false
+	hud_icon images/skill_icons/Arena_Ability_Icon_Power_Jump.png
+
+	name_translation_key skill_powerjump
+	desc_translation_key skill_powerjump_desc
+	selectable false
+    // max_charges 2
+	// charge_grant_time 4
+	cooldown 0.5
+	required_class rogue_eggbot
+	powerjump_max_charge_time 2
+	powerjump_max_force 800
+	powerjump_up_angle 0.95
+	prevent_cooldown_on_initial_fire true
+}
+
+skill 20013 augment 1
+{
+	preadd cooldown -1
+	name_translation_key skill_lowers_cooldown
+    desc_translation_key skill_lowers_cooldown_desc
+}
+
+
+skill 20014
+{
+
+    name Heal_Aura
+	selectable true
+	
+    name_translation_key skill_heal_aura
+    desc_translation_key skill_heal_aura_desc
+	
+	hud_icon images/skill_icons/Arena_Ability_Icon_Heal_Aura.png
+
+	required_class rogue_eggbot
+
+	cooldown 25
+	duration 8 //bost mode duration
+	radius 300
+	heal_amount 6
+	healing_boost 1.5 // boost mode multiplier
+	radius_boost 1.4 // boost mode multiplier
+	self_heal 3 //Self heal when boosted
+	tick_rate 0.8 // tick/second
+}
+
+skill 20014 augment 1
+{
+	preadd cooldown -3
+	name_translation_key skill_lowers_cooldown
+    desc_translation_key skill_lowers_cooldown_desc
+	max_stacks 2
+}
+
+skill 20014 augment 2
+{
+	locked_in_battlepass true
+	preadd radius 200
+	name_translation_key skill_increase_radius
+    desc_translation_key skill_increase_radius_desc
+	rarity rare	
+	max_stacks 1
+}
+
+skill 20014 augment 3
+{
+	preadd duration 4
+	name_translation_key skill_increase_duration
+    desc_translation_key skill_increase_duration_desc
+	rarity rare
+	max_stacks 1
+}
+
+skill 20014 augment 4
+{
+	locked_in_battlepass true
+	//MOVEMENT SPEED BUFF
+	name_translation_key skill_heal_aura_a4
+    desc_translation_key skill_heal_aura_a4_desc
+	preadd movement_speed_boost 60
+	rarity legendary
+	max_stacks 1
+}
+
+skill 20014 augment 5
+{
+	locked_in_battlepass true
+	name_translation_key skill_heal_aura_a5
+    desc_translation_key skill_heal_aura_a5_desc
+	preadd knockback 500
+	rarity epic
+	max_stacks 1
+}
+
+//skill 20014 augment 6
+//{
+//	name_translation_key skill_heal_aura_a6
+//    desc_translation_key skill_heal_aura_a6_desc
+//	rarity artifact
+//	overwrite cooldown 10
+//	overwrite duration 10
+//	preadd self_heal 3
+//	preadd heal_amount 3
+//}
+
+
+skill 20014 augment 7
+{
+	name_translation_key skill_increase_healing
+    desc_translation_key skill_increase_healing_desc
+	rarity common
+	max_stacks 2
+	preadd heal_amount 2
+}
+
+
+skill 20014 augment 8
+{
+	name_translation_key skill_heal_aura_a8
+    desc_translation_key skill_heal_aura_a8_desc
+	rarity rare
+	max_stacks 1
+	overwrite reset true //Reset armor regen
+}
+
+skill 20015
+{
+    name Nexus Bomb
+    selectable true
+
+    name_translation_key skill_nexus_bomb
+    desc_translation_key skill_nexus_bomb_desc
+
+    hud_icon images/skill_icons/Arena_Ability_Icon_Nexus_Bomb.png
+    hud_icon2 images/skill_icons/Rogue_Ability_Icon_Orbs_2_PLACEHOLDER.png
+
+    weapon nexus_bomb
+
+    required_class rogue_eggbot
+
+    pfx1 heal_bomb_impact
+
+    cooldown 10
+    prevent_cooldown_on_initial_fire false
+	power 1
+    heal_amount 50
+}	
+
+skill 20015 augment 1
+{
+	locked_in_battlepass true
+    name CDR
+    name_translation_key skill_lowers_cooldown
+    desc_translation_key skill_lowers_cooldown_desc
+    preadd cooldown -2
+    max_stacks 2
+    rarity common
+}
+
+skill 20015 augment 3
+{
+    name Knockback
+    name_translation_key skill_increase_knockback
+	desc_translation_key skill_increase_knockback_desc
+    weapon_augment 1
+    max_stacks 1
+    rarity rare
+}
+
+skill 20015 augment 4
+{
+	locked_in_battlepass true
+    name Cluster Bombs
+    name_translation_key skill_nexus_bomb_a4
+    desc_translation_key skill_nexus_bomb_a4_desc
+    overwrite cluster_bombs true
+    overwrite radius 300 //the search radius for the projectile
+    rarity legendary
+}
+
+
+skill 20015 augment 5
+{
+    name Power Increase
+    name_translation_key skill_increase_power
+    desc_translation_key skill_increase_power_desc
+    preadd power 0.2
+	max_stacks 2
+    rarity common
+}
+
+skill 20015 augment 6
+ {
+	locked_in_battlepass true
+    name Effect_Over_Time
+    name_translation_key skill_nexus_bomb_a6
+    desc_translation_key skill_nexus_bomb_a6_desc
+	rarity epic
+	preadd damage_over_time 5
+ }
+
+skill 20015 augment 7
+ {
+    name Increase_Radius
+    name_translation_key skill_increase_radius
+    desc_translation_key skill_increase_radius_desc
+	rarity rare
+	weapon_augment 9
+ }
+
+ skill 20015 augment 8
+ {
+	Name Increased_Power_On_Direct_Hit
+    name_translation_key skill_direct_hit_bonus
+    desc_translation_key skill_direct_hit_bonus_desc
+	overwrite direct_hit_multiplier 1.3 //Important: If you change this value, you need to manually change the weapons augment 10 damage to match the new value.
+	weapon_augment 10
+ }
+
+skill 20016
+{
+    name Overload
+	selectable true
+	
+    name_translation_key skill_overload
+    desc_translation_key skill_overload_desc
+	
+	hud_icon images/skill_icons/Arena_Ability_Icon_Overload_Orb.png
+	hud_icon2 images/skill_icons/Arena_Ability_Icon_Overload_Orb_02.png
+	hud_icon3 images/skill_icons/Arena_Ability_Icon_Overload_Orb_03.png
+	weapon overload_orb
+
+	prevent_cooldown_on_initial_fire true
+
+	cooldown 12
+	damage 80
+	radius 300
+	knockback 700
+	delay 0.25
+
+	required_class rogue_chunk
+}
+
+
+skill 20016 augment 1
+{
+	locked_in_battlepass true
+	name CDR 
+	name_translation_key skill_lowers_cooldown
+    desc_translation_key skill_lowers_cooldown_desc
+	rarity common
+	max_stacks 2
+	preadd cooldown -2
+}
+
+skill 20016 augment 2
+{
+	locked_in_battlepass true
+	name no_self_damage
+	name_translation_key skill_overload_a2
+    desc_translation_key skill_overload_a2_desc
+	rarity rare
+	weapon_augment 1
+}
+
+skill 20016 augment 3
+{
+	name Damage
+	name_translation_key skill_increase_damage
+    desc_translation_key skill_increase_damage_desc
+	rarity common
+	weapon_augment 3
+	max_stacks 2
+}
+
+skill 20016 augment 4
+{
+	name Overshield_Drain
+	name_translation_key skill_overload_a4
+    desc_translation_key skill_overload_a4_desc
+	preadd overshield_amount 10 //per hit agent
+	rarity epic
+	max_stacks 1
+}
+
+skill 20016 augment 5
+{
+	name Ignite_on_Hit
+	name_translation_key skill_overload_a5
+    desc_translation_key skill_overload_a5_desc
+	overwrite damage_over_time 1
+	overwrite power 0.05 //how much of the base damage is applied per tick
+	rarity epic
+}
+
+skill 20016 augment 6
+{
+	locked_in_battlepass true
+	name Teleport_on_Explosion
+	name_translation_key skill_overload_a6
+    desc_translation_key skill_overload_a6_desc
+	rarity legendary
+	overwrite teleport true
+}
+
+skill 20016 augment 7
+{
+	name No_Gravity
+	name_translation_key skill_overload_a7
+    desc_translation_key skill_overload_a7_desc
+	weapon_augment 4
+}
+
+
+skill 20017
+{
+	name AOE_Wallhack
+	selectable false
+	show_in_dev_console false
+
+	name_translation_key skill_aoe_wallhack
+    desc_translation_key skill_aoe_wallhack_desc
+
+	required_class rogue_scout
+
+	cooldown 25
+	radius 700
+	duration 5
+}
+
+skill 20017 augment 1
+{
+	name_translation_key skill_increase_radius
+    desc_translation_key skill_increase_radius_desc
+
+	preadd radius 200
+}
+
+skill 20017 augment 2
+{
+	name_translation_key skill_lowers_cooldown
+    desc_translation_key skill_lowers_cooldown_desc
+	preadd cooldown -2
+
+}
+
+
+skill 20017 augment 3
+{
+	name_translation_key skill_increase_duration
+    desc_translation_key skill_increase_duration_desc
+	preadd duration 2
+}
+
+
+skill 20017 augment 4
+{
+	name_translation_key aoe_wallhack_a4
+    desc_translation_key aoe_wallhack_a4_desc
+	ovewrite broadcast_wallhack true
+}
+
+skill 20018 
+{
+	name Scanner_Grenade
+	name_translation_key skill_scanner_grenade
+	desc_translation_key skill_scanner_grenade_desc
+	hud_icon images/skill_icons/Arena_Ability_Icon_Scanner.png
+
+	selectable true
+	required_class rogue_scout
+
+	weapon scanner_grenade
+
+	use_anim_duration 0.4
+
+	cooldown 20
+
+	broadcast_wallhack false
+	count 3 //how many scans are sent out
+	radius 500
+	max_duration 1 //time for the pulse to reach max radius
+	duration 1 //duration of each snapshot
+}
+
+skill 20018 augment 1
+{
+	locked_in_battlepass true
+	name_translation_key skill_increase_radius
+	desc_translation_key skill_increase_radius_desc
+	rarity rare
+	preadd radius 200
+}
+
+skill 20018 augment 2
+{
+	name_translation_key skill_lowers_cooldown
+	desc_translation_key skill_lowers_cooldown_desc
+	preadd cooldown -5
+	max_stacks 2
+}
+
+skill 20018 augment 3
+{
+	locked_in_battlepass true
+	name_translation_key skill_scanner_grenade_a3
+	desc_translation_key skill_scanner_grenade_a3_desc
+	rarity legendary
+	
+	preadd stun_duration 3
+	preadd emp_duration 3
+	overwrite count 1 //how many scans are sent out
+	overwrite max_duration 0.5
+}
+
+skill 20018 augment 4
+{
+	name_translation_key skill_scanner_grenade_a4
+	desc_translation_key skill_scanner_grenade_a4_desc
+	rarity epic
+	overwrite give_overshield true
+	power 15
+}
+
+skill 20018 augment 5
+{
+	locked_in_battlepass true
+	name_translation_key skill_scanner_grenade_a5
+	desc_translation_key skill_scanner_grenade_a5_desc
+	preadd count 1
+	max_stacks 2
+	rarity common
+	skill_disqreq 3
+}
+
+skill 20018 augment 6
+{
+	name_translation_key skill_scanner_grenade_a6
+	desc_translation_key skill_scanner_grenade_a6_desc
+	overwrite broadcast_wallhack true 
+	rarity legendary
+}
+
+skill 20019 
+{
+	name Slowfield_Aura
+	name_translation_key skill_slowfield_aura
+	desc_translation_key skill_slowfield_aura_desc
+	hud_icon images/skill_icons/Arena_Ability_Icon_Slowfield.png
+
+	selectable false
+	show_in_dev_console false
+	required_class rogue_chunk
+
+	cooldown 30
+
+	radius 200
+	duration 6 //how long the slowfield is active
+	enemy_slowdown_value 0.8
+	teammate_slowdown_value 1
+	self_slowdown_value 1
+}
+
+skill 20019 augment 1
+{
+	name Cooldown Reduction
+	name_translation_key skill_lowers_cooldown
+	desc_translation_key skill_lowers_cooldown_desc
+	rarity common
+	preadd cooldown -1
+	max_stacks 2
+}
+
+skill 20019 augment 2
+{
+	name Radius_Increase
+	name_translation_key skill_increase_radius
+	desc_translation_key skill_increase_radius_desc
+	rarity common
+	preadd radius 50
+	max_stacks 2
+}
+
+skill 20019 augment 3
+{
+	name Increase_Slow_effect
+	name_translation_key skill_slowfield_aura_a3
+	desc_translation_key skill_slowfield_aura_a3_desc
+	rarity common
+	preadd enemy_slowdown_value -0.05
+	max_stacks 2
+}
+
+skill 20019 augment 4
+{
+	name Increase_Teammate_Speed
+	name_translation_key skill_slowfield_aura_a4
+	desc_translation_key skill_slowfield_aura_a4_desc
+	rarity rare
+	preadd teammate_slowdown_value 0.2
+	max_stacks 2
+}
+
+skill 20019 augment 5
+{
+	name Increase_Duration
+	name_translation_key skill_increase_duration
+	desc_translation_key skill_increase_duration_desc
+	rarity rare
+	preadd duration 1
+	max_stacks 2
+}
+
+skill 20020
+{
+	name Implosive_Pull
+	name_translation_key skill_implosive_pull
+	desc_translation_key skill_implosive_pull_desc
+	hud_icon images/skill_icons/Arena_Ability_Icon_Implosion_Orb.png
+
+	weapon implosion_orb
+	selectable false 
+	show_in_dev_console false
+	required_class rogue_chunk
+
+	cooldown 20
+	power 2500 //how much force is applied (i.e how fast the character is pulled)
+	radius 300
+	duration 2 //how long the implosion is active once deployed
+	delay 0.75 //cast time
+}
+
+skill 20020 augment 1
+{
+	name_translation_key skill_lowers_cooldown
+	desc_translation_key skill_lowers_cooldown_desc
+	rarity common
+	preadd cooldown -4
+	max_stacks 2
+}
+
+skill 20020 augment 2
+{
+	name_translation_key skill_increase_radius
+	desc_translation_key skill_increase_radius_desc
+	rarity common
+	preadd radius 50
+	max_stacks 2
+}
+
+// skill 20020 augment 3
+// {
+// 	name_translation_key skill_increase_radius
+// 	desc_translation_key skill_increase_radius
+// 	rarity common
+// 	preadd delay -0.25
+// 	max_stacks 2
+// }
+
+// skill 20020 augment 4
+// {
+// 	name_translation_key skill_implosive_pull_a4
+// 	desc_translation_key skill_implosive_pull_a4_desc
+// 	rarity legendary
+// 	overwrite pull_during_flight true
+// }
+
+
+// skill 20020 augment 3
+// {
+// 	name_translation_key skill_implosive_pull_a3
+// 	desc_translation_key skill_implosive_pull_a3_desc
+// 	rarity legendary
+// 	preadd overshield_amount 10 //test
+// }
+
+skill 20021
+{
+	name Temporary_Shield
+	name_translation_key skill_temporary_shield
+	desc_translation_key skill_temporary_shield_desc
+	hud_icon images/skill_icons/gadget_hud_shield.png
+	selectable false
+
+	category ultimate
+
+	color 73D3FF
+
+	max_charges 1
+	grant_charges_on_death true
+
+	shootable_hp 200
+	radius 120
+}
+
+skill 20021 augment 1
+{
+	name Temporary_Shield
+	name_translation_key skill_increase_max_charges
+	desc_translation_key skill_increase_max_charges_desc
+	preadd max_charges 1
+	max_stacks 1
+}
+
+skill 20022
+{
+	name Teleport_to_friend
+	name_translation_key skill_teleport_to_friend
+	desc_translation_key skill_teleport_to_friend_desc
+	hud_icon images/skill_icons/gadget_hud_teleport.png
+	color 46C9A6
+	selectable false
+
+	category ultimate
+	prevent_cooldown_on_initial_fire true
+	max_charges 1
+	// lock_on_use true
+	grant_charges_on_death true
+	delay 1
+	cooldown 10
+}
+skill 20022 augment 1
+{
+	name_translation_key skill_increase_max_charges
+	desc_translation_key skill_increase_max_charges_desc
+	preadd max_charges 1
+	max_stacks 1
+}
+
+skill 20023
+{
+	name Beam
+	name_translation_key skill_beam
+	desc_translation_key skill_beam_desc
+
+	required_class rogue_chunk
+
+	selectable true
+
+	hud_icon images/skill_icons/Arena_Ability_Icon_Beam.png
+
+	// weapon mini_rocket
+
+	prevent_cooldown_on_initial_fire false
+
+	cooldown 25
+	duration 0.7
+	radius 20
+	power 9999999
+	damage 85
+	orb_damage 50
+}
+
+skill 20023 augment 1
+{
+	locked_in_battlepass true
+	name_translation_key skill_lowers_cooldown
+	desc_translation_key skill_lowers_cooldown_desc
+	rarity epic
+
+	cooldown -5
+
+	max_stacks 2
+}
+
+skill 20023 augment 2
+{
+	name_translation_key skill_increase_radius
+	desc_translation_key skill_increase_radius_desc
+	rarity rare
+
+	radius 15
+
+	max_stacks 1
+}
+
+skill 20023 augment 3
+{
+	name_translation_key skill_increase_damage
+	desc_translation_key skill_increase_damage_desc
+	rarity epic
+
+	damage 10
+
+	max_stacks 2
+}
+
+skill 20023 augment 4
+{
+	locked_in_battlepass true
+	name_translation_key skill_beam_a4
+	desc_translation_key skill_beam_a4_desc
+	rarity legendary
+	overwrite dash_explode true
+
+	skill_disqreq augment 5
+
+	max_stacks 1
+}
+
+skill 20023 augment 5 
+{
+	locked_in_battlepass true
+	name_translation_key skill_beam_a5
+	desc_translation_key skill_beam_a5_desc
+	rarity legendary
+
+	skill_disqreq augment 4
+
+	overwrite shadow_piercer_enabled true
+
+	max_stacks 1
+}
+
+// skill 20023 augment 6 
+// {
+// 	name_translation_key skill_increase_orb_damage
+// 	desc_translation_key skill_increase_orb_damage_desc
+// 	rarity epic
+
+// 	skill_prereq augment 4
+
+// 	orb_damage 20
+
+// 	max_stacks 2
+// }
+
+skill 20023 augment 7 
+{
+	name_translation_key skill_beam_a7
+	desc_translation_key skill_beam_a7_desc
+	rarity epic
+
+	overwrite piercing_damage_increase true
+
+	max_stacks 1
+}
+
+skill 20023 augment 8 
+{
+	name_translation_key skill_beam_a8
+	desc_translation_key skill_beam_a8_desc
+	rarity epic
+
+	overwrite damage_over_time 1
+}
+
+skill 20024 
+{
+	name Mini_rocket
+	name_translation_key skill_mini_rocket
+	desc_translation_key skill_mini_rocket_desc
+	rarity epic
+
+	required_class rogue_chunk
+
+	hud_icon images/skill_icons/Arena_Ability_Icon_Mini_Rockets.png
+	weapon mini_rocket
+
+	prevent_cooldown_on_initial_fire false
+
+	cooldown 25
+
+	selectable true
+
+	rocket_count 6
+	rocket_range 1000
+	rocket_speed 1000
+
+	power 1 // amount of barrages
+	radius 100 // spread
+	delay 0.25 // time between barrages
+
+	// damage 20 // damage per rocket
+}
+
+// skill 20024 augment 1
+// {
+// 	name_translation_key skill_mini_rocket_a4
+// 	desc_translation_key skill_mini_rocket_a4_desc
+// 	rarity legendary
+
+// 	overwrite instigator_missile true
+// 	overwrite cooldown 90
+
+// 	max_stacks 1
+
+// 	required_game_mode arena_siege
+// }
+
+// skill 20024 augment 2 
+// {
+// 	name_translation_key skill_mini_rocket_a5
+// 	desc_translation_key skill_mini_rocket_a5_desc
+// 	rarity legendary
+// 	skill_prereq augment 1
+
+// 	overwrite instigator_missile_cluster true
+
+// 	max_stacks 1
+// }
+
+skill 20024 augment 3
+{
+	locked_in_battlepass true
+	name_translation_key skill_mini_rocket_a3
+	desc_translation_key skill_mini_rocket_a3_desc
+	rarity rare
+
+	skill_disqreq augment 1
+
+	preadd rocket_count 2
+
+	max_stacks 1
+}
+
+skill 20024 augment 4 
+{
+	locked_in_battlepass true
+	name_translation_key skill_mini_rocket_a4
+	desc_translation_key skill_mini_rocket_a4_desc
+	rarity common
+
+	skill_disqreq augment 1
+
+	preadd rocket_range 1000
+
+	max_stacks 1
+}
+
+skill 20024 augment 5 
+{
+	name_translation_key skill_mini_rocket_a5
+	desc_translation_key skill_mini_rocket_a5_desc
+	rarity epic
+
+	skill_disqreq augment 1
+
+	preadd rocket_speed 500
+
+	max_stacks 1
+}
+
+skill 20024 augment 6 
+{
+	name_translation_key skill_lowers_cooldown
+	desc_translation_key skill_lowers_cooldown_desc
+	rarity common
+
+	skill_disqreq augment 1
+
+	preadd cooldown -5
+
+	max_stacks 2
+}
+
+// skill 20024 augment 7
+// {
+// 	name_translation_key skill_lowers_bfr_cooldown
+// 	desc_translation_key skill_lowers_bfr_cooldown_desc
+// 	rarity legendary
+
+// 	skill_prereq augment 1
+
+// 	overwrite cooldown 60
+
+// 	max_stacks 1
+// }
+
+// skill 20024 augment 8
+// {
+// 	name_translation_key skill_bfr_boost
+// 	desc_translation_key skill_bfr_boost_desc
+// 	rarity epic
+
+// 	skill_prereq augment 1
+
+// 	overwrite rocket_boost_enabled true
+
+// 	max_stacks 1
+// }
+
+skill 20024 augment 9
+{
+	locked_in_battlepass true
+	name_translation_key skill_mini_rocket_a9
+	desc_translation_key skill_mini_rocket_a9_desc
+
+	rarity legendary
+
+	overwrite homing_module_enabled true
+}
+
+skill 20025
+{
+	name_translation_key skill_surge_reset
+	desc_translation_key skill_surge_reset_desc
+	required_class chunk
+	selectable false
+	cooldown 10
+	cost 300
+}
+
+skill 20026
+{
+	name_translation_key skill_surge_defensive_mode
+	desc_translation_key skill_surge_defensive_mode_des
+	required_class eggbot
+	selectable false
+	cooldown 10
+	duration 5
+	cost 300
+}
+
+skill 40000
+{	
+	name movement_sprint 
+	name_translation_key skill_movement_sprint
+    desc_translation_key skill_movement_sprint_desc
+
+	selectable false
+	show_in_dev_console false
+	cooldown 0.1
+
+	sprint_multiplier 1.3
+	sprint_rate 1000
+}
+
+skill 40001
+{	
+	name movement_bolt  
+	name_translation_key skill_movement_bolt
+    desc_translation_key skill_movement_bolt_desc
+
+	hud_icon images/skill_icons/Arena_Ability_Icon_Bolt.png
+
+	prevent_cooldown_on_initial_fire true
+	show_in_dev_console false
+	selectable false
+	category movement
+
+	cooldown 0.5
+	charge_grant_time 3.0
+	max_charges 1
+
+	bolt_force 550
+	bolt_upwards_angle 22.5
+}
+
+skill 40001 augment 1
+{
+	name_translation_key skill_increase_max_charges
+    desc_translation_key skill_increase_max_charges_desc
+	rarity rare
+
+	preadd max_charges 1
+
+	max_stacks 2
+}
+
+skill 40001 augment 2
+{
+	name_translation_key skill_movement_bolt_a2
+    desc_translation_key skill_movement_bolt_a2_desc
+	rarity legendary
+	overwrite reset true //reset multi_jump
+}
+
+skill 40001 augment 3
+{
+	name_translation_key skill_movement_bolt_a3
+    desc_translation_key skill_movement_bolt_a3_desc
+	preadd movement_speed_boost 100 
+	preadd duration 2
+	rarity epic
+}
+
+skill 40001 augment 4
+{
+	name_translation_key skill_movement_bolt_a4
+    desc_translation_key skill_movement_bolt_a4_desc
+	rarity artifact
+
+	overwrite bolt_artifact_enabled true
+
+	overwrite knockback 1000 //knockback force
+	overwrite damage 30
+	overwrite radius 200
+}
+
+skill 40002
+{
+	name movement_charged_jump 
+	name_translation_key skill_movement_charged_jump
+    desc_translation_key skill_movement_charged_jump_desc
+
+	hud_icon images/skill_icons/Arena_Ability_Icon_Double_Jump.png
+	
+	selectable false
+	show_in_dev_console false
+	cooldown 0.1
+	
+	charged_jump_max_force 920 
+	charged_jump_min_force 500
+	charged_jump_forward_force 150
+}

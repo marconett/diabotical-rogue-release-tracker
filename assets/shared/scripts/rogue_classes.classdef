@@ -1,0 +1,20 @@
+rogue_chunk
+{
+	view_height 53.0
+	crouch_view_height 35.0
+	model animations/chunkbot/skm_chunkbot
+}
+
+rogue_eggbot
+{
+	view_height 42.0
+	crouch_view_height 26.0
+	model animations/eggbot/skm_eggbot
+}
+
+rogue_scout 
+{
+	view_height 46.0
+	crouch_view_height 28.0
+	model animations/weesuit/skm_weesuit	
+}

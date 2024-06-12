@@ -1,0 +1,28 @@
+override_glass_fade
+{
+  {
+    map materials/matlib/shaders/mat_glass/mat_glass_d_transparent.png
+    map materials/matlib/shaders/mat_glass/mat_glass_n.png
+    map materials/matlib/shaders/mat_glass/mat_glass_s.png
+    map textures/terrain/concreteslab/concreteslab_s.png
+    map !depth
+
+    vertex_shader water.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    vertex_shader_param look_and_time
+    pixel_shader glass.ps.cso
+    pixel_shader_param accent1 0.13 0.2 0.26 0.1			//[Glass color] 	| [Glass alpha]
+    pixel_shader_param accent2 0.0 0.0 0.0 0.9	 			//[Edge Color]  	| [Edge alpha]
+    pixel_shader_param float_params3 1.0 1.0 0.25 0.8
+	pixel_shader_param float_params_hints3 "uv x" "uv y" "edge width" "vertical fade"
+	pixel_shader_param float_params4 0.0 1.0
+	pixel_shader_param float_params_hints4 "ssr power" "reflection power"
+    pixel_shader_behaviour gi_specular
+    pixel_shader_behaviour receive_light_dir
+    pixel_shader_behaviour receive_light_point
+    pixel_shader_behaviour receive_light_spot
+    blendfunc blend
+    depth transparent
+  }
+}

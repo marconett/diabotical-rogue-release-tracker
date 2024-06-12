@@ -1,0 +1,2375 @@
+[
+    {
+        "id": "rogue_revolver_secondary",
+        "parent_id": "",
+        "weapon_type": "base",
+        "show_in_dev_console": "false",
+        "respawn_time": "9",
+        "weapon_tag": "rev",
+        "default_ammo": "8",
+        "default_ammo_pickup_ammo": "8",
+        "default_weapon_pickup_ammo": "8",
+        "max_ammo": "8",
+        "unlimited_ammo": "false",
+        "reload": "1400",
+        "color": "fcaf3d",
+        "icon_path": "images/weapon_icons/wp_hud_revolver_02.png",
+        "icon_path2": "images/weapon_icons/wp_card_revolver.png",
+        "spread": "0.3",
+        "bursts": [
+            "4",
+            "0.09"
+        ],
+        "damage": [
+            "12",
+            "18"
+        ],
+        "critical_damage": [
+            "15",
+            "20"
+        ],
+        "knockback": "3",
+        "ground_knockback": "3",
+        "charge_animation": "1",
+        "speed": "26000",
+        "recoil_delay_recovery": "0.09",
+        "recoil_up": "2.75",
+        "recoil_side": "2.25",
+        "recoil_recovery_time": "0.5",
+        "recoil_time": "0.1",
+        "max_damage_distance": "400",
+        "min_damage_distance": "4000",
+        "equip_time": "400",
+        "base_combo_rate": "250",
+        "gravity_delay_by_distance": "1000",
+        "gravity": "0",
+        "hit_radius": [
+            "1",
+            "1"
+        ],
+        "zoomed_walk_speed": "200",
+        "detached_shot_particles": "false",
+        "shot_particles": "weapon_revolver_muzzle_flash",
+        "shot_particles_attached": "weapon_revolver_muzzle",
+        "shot_particles_attached_3p": "weapon_revolver_muzzle_3p",
+        "missile_particles": "weapon_revolver_projectile",
+        "missile_particles_1p": "weapon_revolver_projectile",
+        "impact_particles": "weapon_revolver_impact",
+        "player_impact_particles": "weapon_revolver_player_impact",
+        "decal": [
+            "decal_glow",
+            "10",
+            "3",
+            "3.561",
+            "false",
+            "false",
+            "alpha",
+            "20"
+        ],
+        "model": "assets/shared/models/animations/wp_revolver/skm_revolver",
+        "muzzle": [
+            "2.7",
+            "-2.8",
+            "14"
+        ],
+        "shot_sound": "w_rev_fire",
+        "shot_sound2": "w_rev_fire_distant",
+        "equip_sound": "w_rev_equip",
+        "hit_sound": "fb_enemy_hit",
+        "critical_hit_sound": "fb_enemy_hit_crit",
+        "out_of_ammo_sound": "w_rev_ooa",
+        "impact_sound": "w_mac_impact",
+        "multi_round_particles": "false",
+        "can_upgrade_ammo": "true",
+        "can_upgrade_tactical_reload": "true"
+    },
+    {
+        "id": "rogue_revolver",
+        "parent_id": "",
+        "weapon_type": "base",
+        "name_translation_key": "weapon_revolver",
+        "desc_translation_key": "weapon_revolver_desc",
+        "required_class": "rogue_scout",
+        "selectable": "true",
+        "rarity": "epic",
+        "can_drop": "true",
+        "respawn_time": "9",
+        "weapon_tag": "rev",
+        "default_ammo": "8",
+        "default_ammo_pickup_ammo": "8",
+        "default_weapon_pickup_ammo": "8",
+        "max_ammo": "8",
+        "unlimited_ammo": "false",
+        "reload": "1400",
+        "color": "A35EBA",
+        "icon_path": "images/weapon_icons/wp_hud_revolver_02.png",
+        "icon_path2": "images/weapon_icons/wp_card_revolver.png",
+        "weapon_icon_path": "images/weapon_icons/wp_card_revolver_nobg.png",
+        "spread": "0.2",
+        "zoomed_spread": "0.1",
+        "damage": [
+            "20",
+            "30"
+        ],
+        "critical_damage": [
+            "30",
+            "40"
+        ],
+        "knockback": "3",
+        "ground_knockback": "3",
+        "charge_animation": "1",
+        "speed": "26000",
+        "rate": "400",
+        "recoil_delay_recovery": "0.09",
+        "recoil_up": "2.75",
+        "recoil_recovery_time": "0.33",
+        "recoil_time": "0.06",
+        "zoomed_recoil_up": "1.5",
+        "zoomed_recoil_recovery_time": "0.30",
+        "zoomed_recoil_time": "0.05",
+        "recoil_back": "1.25",
+        "recoil_back_recovery_time": "0.07",
+        "recoil_back_time": "0.05",
+        "zoomed_scope": "1",
+        "max_damage_distance": "400",
+        "min_damage_distance": "4000",
+        "equip_time": "400",
+        "base_combo_rate": "250",
+        "gravity_delay_by_distance": "1000",
+        "gravity": "0",
+        "hit_radius": [
+            "1",
+            "1"
+        ],
+        "zoomed_walk_speed": "200",
+        "detached_shot_particles": "false",
+        "shot_particles_attached": [
+            "weapon_revolver_muzzle_flash",
+            "socket_muzzle",
+            "1"
+        ],
+        "shot_particles_attached_3p": "weapon_revolver_muzzle_3p",
+        "missile_particles": "weapon_revolver_projectile",
+        "missile_particles_1p": "weapon_revolver_projectile",
+        "impact_particles": "weapon_revolver_impact",
+        "player_impact_particles": "weapon_revolver_player_impact",
+        "decal": [
+            "decal_glow",
+            "10",
+            "3",
+            "3.561",
+            "false",
+            "false",
+            "alpha",
+            "20"
+        ],
+        "model": "assets/shared/models/animations/wp_revolver/skm_revolver",
+        "model_position": [
+            "2",
+            "-1.7",
+            "4.2"
+        ],
+        "model_scale": "0.12",
+        "model_post_rotation": [
+            "-2.5",
+            "1",
+            "0.07"
+        ],
+        "model_pivot": [
+            "0",
+            "0",
+            "0"
+        ],
+        "fov": "48",
+        "muzzle": [
+            "2.7",
+            "-2.8",
+            "14"
+        ],
+        "model_position_centered": [
+            "1.37144",
+            "-1.36169",
+            "4.74551"
+        ],
+        "model_scale_centered": "0.1",
+        "model_post_rotation_centered": [
+            "-2.5",
+            "1",
+            "0.07"
+        ],
+        "shot_sound": "w_rev_fire",
+        "shot_sound2": "w_rev_fire_distant",
+        "equip_sound": "w_rev_equip",
+        "hit_sound": "fb_enemy_hit",
+        "critical_hit_sound": "fb_enemy_hit_crit",
+        "out_of_ammo_sound": "w_rev_ooa",
+        "impact_sound": "w_mac_impact",
+        "multi_round_particles": "false",
+        "can_upgrade_ammo": "true",
+        "can_upgrade_tactical_reload": "true"
+    },
+    {
+        "id": "1",
+        "parent_id": "rogue_revolver",
+        "weapon_type": "augment",
+        "name": "revolver_ammo",
+        "name_translation_key": "revolver_increase_ammo",
+        "desc_translation_key": "revolver_increase_ammo_desc",
+        "rarity": "common",
+        "preadd": [
+            "max_ammo",
+            "2"
+        ],
+        "max_stacks": "2",
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "3",
+        "parent_id": "rogue_revolver",
+        "weapon_type": "augment",
+        "name": "revolver_kill_faster_reload",
+        "name_translation_key": "revolver_kill_faster_reload",
+        "desc_translation_key": "revolver_kill_faster_reload_desc",
+        "rarity": "rare",
+        "reload_time_reduction_on_kill_ms": "500",
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "5",
+        "parent_id": "rogue_revolver",
+        "weapon_type": "augment",
+        "name": "revolver_penetration",
+        "name_translation_key": "revolver_penetration",
+        "desc_translation_key": "revolver_penetration_desc",
+        "rarity": "epic",
+        "overwrite": [
+            "penetrating",
+            "true"
+        ]
+    },
+    {
+        "id": "6",
+        "parent_id": "rogue_revolver",
+        "weapon_type": "augment",
+        "name": "revolver_last_chance",
+        "name_translation_key": "revolver_last_bullet_extra_dmg",
+        "desc_translation_key": "revolver_last_bullet_extra_dmg_desc",
+        "rarity": "epic",
+        "last_bullet_hit_upgrade": "1",
+        "last_bullet_hit_damage_multiplier": "1.5"
+    },
+    {
+        "id": "7",
+        "parent_id": "rogue_revolver",
+        "weapon_type": "augment",
+        "name": "revolver_secondary_rapid_fire",
+        "name_translation_key": "revolver_secondary_rapid_fire",
+        "desc_translation_key": "revolver_secondary_rapid_fire_desc",
+        "rarity": "legendary",
+        "overwrite": [
+            "alternate_fire_enabled",
+            "true"
+        ],
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "8",
+        "parent_id": "rogue_revolver",
+        "weapon_type": "augment",
+        "name": "revolver_increased_headshot_damage",
+        "name_translation_key": "revolver_increased_headshot_damage",
+        "desc_translation_key": "revolver_increased_headshot_damage_desc",
+        "rarity": "common",
+        "overwrite": [
+            "critical_damage",
+            "35",
+            "45"
+        ]
+    },
+    {
+        "id": "rogue_machinegun",
+        "parent_id": "",
+        "weapon_type": "base",
+        "name_translation_key": "weapon_machinegun",
+        "desc_translation_key": "weapon_machinegun_desc",
+        "required_class": [
+            "rogue_scout",
+            "rogue_eggbot"
+        ],
+        "selectable": "true",
+        "rarity": "rare",
+        "respawn_time": "9",
+        "weapon_tag": "mac",
+        "color": "1996D9",
+        "bind_group": "6",
+        "default_ammo": "30",
+        "default_ammo_pickup_ammo": "30",
+        "default_weapon_pickup_ammo": "30",
+        "max_ammo": "30",
+        "unlimited_ammo": "false",
+        "reload": "1500",
+        "rate": "100",
+        "damage": [
+            "5",
+            "10"
+        ],
+        "critical_damage": [
+            "10",
+            "15"
+        ],
+        "knockback": "2",
+        "ground_knockback": "2",
+        "charge_animation": "1",
+        "speed": "30000",
+        "max_damage_distance": "400",
+        "min_damage_distance": "3500",
+        "spread_recovery_time": "0.2",
+        "spread": [
+            "0.15",
+            "0.15"
+        ],
+        "max_spread": [
+            "1.75",
+            "1.75"
+        ],
+        "zoomed_spread": [
+            "0.125",
+            "0.125"
+        ],
+        "max_zoomed_spread": [
+            "1.5",
+            "1.5"
+        ],
+        "mouse_take_over_recoil": "true",
+        "recoil_delay_recovery": "0.1",
+        "recoil_up": "0.5",
+        "recoil_side": "0.15",
+        "recoil_recovery_time": "0.3",
+        "recoil_time": "0.05",
+        "zoomed_recoil_up": "0.4",
+        "zoomed_recoil_side": "0.1",
+        "zoomed_recoil_recovery_time": "0.3",
+        "zoomed_recoil_time": "0.05",
+        "recoil_back": "0.5",
+        "recoil_back_recovery_time": "0.06",
+        "recoil_back_time": "0.04",
+        "zoomed_scope": "1",
+        "zoomed_walk_speed": "175",
+        "hit_radius": [
+            "2",
+            "1"
+        ],
+        "icon_path": "images/weapon_icons/wp_hud_machinegun_02.png",
+        "icon_path2": "images/weapon_icons/wp_card_machinegun.png",
+        "weapon_icon_path": "images/weapon_icons/wp_card_machinegun_nobg.png",
+        "equip_time": "300",
+        "base_combo_rate": "200",
+        "loop_animation": "true",
+        "shot_particles": "weapon_machinegun_muzzle_flash",
+        "shot_particles_attached": [
+            "weapon_machinegun_muzzle",
+            "socket_muzzle",
+            "0.15"
+        ],
+        "shot_particles_attached_3p": "weapon_machinegun_muzzle_3p",
+        "impact_particles": "weapon_machinegun_impact",
+        "player_impact_particles": "weapon_machinegun_player_impact",
+        "missile_particles": "weapon_machinegun_projectile",
+        "model": "assets/shared/models/animations/wp_machinegun/skm_machinegun",
+        "model_position": [
+            "2.25",
+            "-3",
+            "0.01"
+        ],
+        "model_scale": "0.11",
+        "model_scale_centered": "0.099",
+        "model_position_centered": [
+            "0",
+            "-2.68",
+            "0.02"
+        ],
+        "model_pivot": [
+            "0",
+            "-0.22",
+            "0"
+        ],
+        "model_camera_scale": "0.5",
+        "fov": "40",
+        "muzzle": [
+            "2.7",
+            "-2.8",
+            "14"
+        ],
+        "model_scale_third_person": "1.1",
+        "model_position_third_person": [
+            "6.5",
+            "2",
+            "2"
+        ],
+        "particles_clipping_plane": "true",
+        "shot_sound": "w_mac_fire",
+        "shot_sound2": "w_mac_fire_distant",
+        "end_sound": "w_mac_fire_release",
+        "end_sound2": "w_mac_fire_distant_release",
+        "equip_sound": "w_mac_equip",
+        "hit_sound": "fb_enemy_hit",
+        "critical_hit_sound": "fb_enemy_hit_crit",
+        "out_of_ammo_sound": "w_mac_ooa",
+        "impact_sound": "w_mac_impact",
+        "detached_shot_particles": "false",
+        "multi_round_particles": "false"
+    },
+    {
+        "id": "1",
+        "parent_id": "rogue_machinegun",
+        "weapon_type": "augment",
+        "name": "machinegun_ammo",
+        "name_translation_key": "machinegun_increase_ammo",
+        "desc_translation_key": "machinegun_increase_ammo_desc",
+        "rarity": "common",
+        "preadd": [
+            "max_ammo",
+            "5"
+        ],
+        "max_stacks": "2"
+    },
+    {
+        "id": "2",
+        "parent_id": "rogue_machinegun",
+        "weapon_type": "augment",
+        "name": "machinegun_decrease_recoil",
+        "name_translation_key": "machinegun_decrease_recoil",
+        "desc_translation_key": "machinegun_decrease_recoil_desc",
+        "rarity": "common",
+        "preadd": [
+            "zoomed_recoil_side",
+            "-0.08"
+        ],
+        "max_stacks": "1"
+    },
+    {
+        "id": "3",
+        "parent_id": "rogue_machinegun",
+        "weapon_type": "augment",
+        "name": "machinegun_reload_speed",
+        "name_translation_key": "machinegun_increase_reload_speed",
+        "desc_translation_key": "machinegun_increase_reload_speed_desc",
+        "rarity": "rare",
+        "preadd": [
+            "reload",
+            "-500"
+        ],
+        "max_stacks": "1"
+    },
+    {
+        "id": "4",
+        "parent_id": "rogue_machinegun",
+        "weapon_type": "augment",
+        "name": "machinegun_fire_rate",
+        "name_translation_key": "machinegun_fire_rate",
+        "desc_translation_key": "machinegun_fire_rate_desc",
+        "rarity": "rare",
+        "preadd": [
+            "rate",
+            "-5"
+        ],
+        "max_stacks": "2"
+    },
+    {
+        "id": "5",
+        "parent_id": "rogue_machinegun",
+        "weapon_type": "augment",
+        "name": "machinegun_overclocking_fire_rate",
+        "name_translation_key": "machinegun_increase_fire_rate_after_reload",
+        "desc_translation_key": "machinegun_increase_fire_rate_after_reload_desc",
+        "rarity": "epic",
+        "after_reload_upgrade": "1",
+        "overwrite": [
+            "after_reload_fire_rate_increase_duration",
+            "1"
+        ]
+    },
+    {
+        "id": "6",
+        "parent_id": "rogue_machinegun",
+        "weapon_type": "augment",
+        "name": "machinegun_speed_boost_consecutive_hits",
+        "name_translation_key": "machinegun_speed_boost_consecutive_hits",
+        "desc_translation_key": "machinegun_speed_boost_consecutive_hits_desc",
+        "rarity": "epic",
+        "overwrite": [
+            "consecutive_hits_required",
+            "8"
+        ]
+    },
+    {
+        "id": "7",
+        "parent_id": "rogue_machinegun",
+        "weapon_type": "augment",
+        "name": "machinegun_last_bullet_poisonous",
+        "name_translation_key": "machinegun_last_bullet_poisonous",
+        "desc_translation_key": "machinegun_last_bullet_poisonous_desc",
+        "rarity": "legendary",
+        "overwrite": [
+            "impact_effect",
+            "poison"
+        ]
+    },
+    {
+        "id": "rogue_blaster",
+        "parent_id": "",
+        "weapon_type": "base",
+        "name_translation_key": "weapon_blaster",
+        "desc_translation_key": "weapon_blaster_desc",
+        "required_class": "rogue_chunk",
+        "selectable": "true",
+        "rarity": "rare",
+        "respawn_time": "9",
+        "weapon_tag": "bl",
+        "speed": "3000",
+        "damage": "15",
+        "self_damage": "0",
+        "category": "1",
+        "bind_group": "1",
+        "rate": "100",
+        "unlimited_ammo": "true",
+        "overheat_limit": "140",
+        "heat_per_shot": "5",
+        "heat_cool_per_sec": "50",
+        "delay_heat_regen": "0.1",
+        "splash_radius": "20",
+        "center_of_mass_offset": "0",
+        "center_of_mass_offset_self": "0",
+        "knockback": "4",
+        "knockback_self": "5",
+        "ground_knockback": "4",
+        "ground_knockback_self": "5",
+        "color": "1996D9",
+        "icon_path": "images/weapon_icons/wp_hud_blaster_02.png",
+        "icon_path2": "images/weapon_icons/wp_card_blaster.png",
+        "weapon_icon_path": "images/weapon_icons/wp_card_blaster_nobg.png",
+        "hit_radius": [
+            "2.2",
+            "1"
+        ],
+        "mouse_take_over_recoil": "true",
+        "recoil_delay_recovery": "0.09",
+        "recoil_up": "0.2",
+        "recoil_recovery_time": "0.3",
+        "recoil_time": "0.05",
+        "zoomed_recoil_up": "0.1",
+        "zoomed_recoil_recovery_time": "0.3",
+        "zoomed_recoil_time": "0.05",
+        "recoil_back": "1.5",
+        "recoil_back_recovery_time": "0.1",
+        "recoil_back_time": "0.05",
+        "zoomed_scope": "1",
+        "zoomed_walk_speed": "200",
+        "equip_time": "300",
+        "base_combo_rate": "200",
+        "loop_animation": "true",
+        "upgrade_animation": "true",
+        "model": "assets/shared/models/animations/wp_blaster/skm_blaster",
+        "model_scale": "0.06",
+        "model_scale_centered": "0.054",
+        "model_position": [
+            "2.5",
+            "-3.35",
+            "3.55"
+        ],
+        "model_position_centered": [
+            "0",
+            "-3.15",
+            "3.7"
+        ],
+        "model_camera_scale": "0.6",
+        "muzzle": [
+            "0",
+            "0",
+            "0"
+        ],
+        "muzzle_offset": [
+            "0",
+            "0",
+            "0"
+        ],
+        "fov": "30",
+        "model_scale_third_person": "1.1",
+        "model_position_third_person": [
+            "5",
+            "-11",
+            "12"
+        ],
+        "detached_shot_particles": "false",
+        "shot_particles": "weapon_blaster_muzzle_flash",
+        "shot_particles_attached": [
+            "weapon_blaster_muzzle_flash",
+            "socket_muzzle",
+            "1"
+        ],
+        "shot_particles_attached_3p": "weapon_blaster_muzzle_3p",
+        "missile_particles": "weapon_blaster_projectile_1p",
+        "impact_particles": "weapon_blaster_impact",
+        "player_impact_particles": "weapon_blaster_player_impact",
+        "shot_sound": "w_bl_fire",
+        "shot_sound2": "w_bl_fire_distant",
+        "end_sound": "w_bl_fire_release",
+        "missile_loop_sound": "w_bl_airbound",
+        "impact_sound": "w_bl_impact",
+        "equip_sound": "w_bl_equip",
+        "overheat_sound": "w_bl_fire_overheat",
+        "hit_sound": "fb_enemy_hit",
+        "critical_hit_sound": "fb_enemy_hit_crit",
+        "out_of_ammo_sound": "w_bl_ooa",
+        "animation_suffix": "_stage2"
+    },
+    {
+        "id": "1",
+        "parent_id": "rogue_blaster",
+        "weapon_type": "augment",
+        "name": "blaster_heat",
+        "name_translation_key": "blaster_increase_heat_limit",
+        "desc_translation_key": "blaster_increase_heat_limit_desc",
+        "rarity": "common",
+        "preadd": [
+            "overheat_limit",
+            "40"
+        ],
+        "max_stacks": "2"
+    },
+    {
+        "id": "2",
+        "parent_id": "rogue_blaster",
+        "weapon_type": "augment",
+        "name": "blaster_heat_cooling",
+        "name_translation_key": "blaster_reduce_heat_cooldown",
+        "desc_translation_key": "blaster_reduce_heat_cooldown_desc",
+        "rarity": "common",
+        "preadd": [
+            "heat_cool_per_sec",
+            "20"
+        ],
+        "max_stacks": "2"
+    },
+    {
+        "id": "3",
+        "parent_id": "rogue_blaster",
+        "weapon_type": "augment",
+        "name": "blaster_projectile_speed",
+        "name_translation_key": "blaster_increase_projectile_speed",
+        "desc_translation_key": "blaster_increase_projectile_speed_desc",
+        "rarity": "rare",
+        "preadd": [
+            "speed",
+            "250"
+        ],
+        "max_stacks": "1",
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "4",
+        "parent_id": "rogue_blaster",
+        "weapon_type": "augment",
+        "name": "blaster_splash_damage",
+        "name_translation_key": "blaster_splash_damage",
+        "desc_translation_key": "blaster_splash_damage_desc",
+        "rarity": "epic",
+        "overwrite": [
+            "splash_damage",
+            "8"
+        ],
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "5",
+        "parent_id": "rogue_blaster",
+        "weapon_type": "augment",
+        "name": "blaster_self_knockback_on_fire",
+        "name_translation_key": "blaster_self_knockback_on_fire",
+        "desc_translation_key": "blaster_self_knockback_on_fire_desc",
+        "rarity": "legendary",
+        "preadd": [
+            "self_knockback_on_fire",
+            "150"
+        ],
+        "max_stacks": "1"
+    },
+    {
+        "id": "rogue_submachinegun",
+        "parent_id": "",
+        "weapon_type": "base",
+        "name_translation_key": "weapon_submachinegun",
+        "desc_translation_key": "weapon_submachinegun_desc",
+        "selectable": "true",
+        "rarity": "rare",
+        "can_drop": "true",
+        "required_class": "rogue_eggbot",
+        "respawn_time": "9",
+        "weapon_tag": "smg",
+        "bind_group": "6",
+        "default_ammo": "30",
+        "default_ammo_pickup_ammo": "30",
+        "default_weapon_pickup_ammo": "30",
+        "max_ammo": "30",
+        "unlimited_ammo": "false",
+        "reload": "1000",
+        "rate": "65",
+        "damage": [
+            "3",
+            "7"
+        ],
+        "critical_damage": [
+            "6",
+            "12"
+        ],
+        "knockback": "2",
+        "ground_knockback": "2",
+        "charge_animation": "1",
+        "speed": "26000",
+        "max_damage_distance": "300",
+        "min_damage_distance": "1500",
+        "color": "1996D9",
+        "icon_path": "images/weapon_icons/wp_hud_submachinegun_02.png",
+        "icon_path2": "images/weapon_icons/wp_card_submachinegun.png",
+        "weapon_icon_path": "images/weapon_icons/wp_card_submachinegun_nobg.png",
+        "mouse_take_over_recoil": "true",
+        "recoil_delay_recovery": "0.0675",
+        "recoil_up": "0.4",
+        "recoil_side": "0.15",
+        "recoil_recovery_time": "0.3",
+        "recoil_time": "0.05",
+        "zoomed_recoil_up": "0.3",
+        "zoomed_recoil_side": "0.075",
+        "zoomed_recoil_recovery_time": "0.3",
+        "zoomed_recoil_time": "0.05",
+        "recoil_back": "0.4",
+        "recoil_back_recovery_time": "0.04",
+        "recoil_back_time": "0.03",
+        "equip_time": "250",
+        "base_combo_rate": "150",
+        "spread_recovery_time": "0.2",
+        "spread": [
+            "0.15",
+            "0.15"
+        ],
+        "max_spread": [
+            "2.75",
+            "2.75"
+        ],
+        "zoomed_spread": [
+            "0.125",
+            "0.125"
+        ],
+        "max_zoomed_spread": [
+            "2.5",
+            "2.5"
+        ],
+        "zoomed_scope": "1",
+        "zoomed_walk_speed": "200",
+        "hit_radius": [
+            "1",
+            "1"
+        ],
+        "loop_animation": "true",
+        "detached_shot_particles": "false",
+        "shot_particles_attached": "weapon_submachinegun_muzzle",
+        "pfx": [
+            "weapon_submachinegun_laser",
+            "socket_laser",
+            "1"
+        ],
+        "shot_particles_attached_3p": "weapon_submachinegun_muzzle_3p",
+        "missile_particles": "weapon_submachinegun_projectile",
+        "missile_particles_1p": "weapon_submachinegun_projectile",
+        "impact_particles": "weapon_submachinegun_impact",
+        "player_impact_particles": "weapon_submachinegun_player_impact",
+        "model": "assets/shared/models/animations/wp_submachinegun/skm_submachinegun",
+        "model_scale": "0.2",
+        "model_scale_centered": "0.0331852",
+        "model_position": [
+            "1.2",
+            "-3",
+            "2.2"
+        ],
+        "model_position_centered": [
+            "1.33286",
+            "-0.920046",
+            "5.13452"
+        ],
+        "model_scale_third_person": "0.9",
+        "model_pivot": [
+            "0",
+            "0.24",
+            "0"
+        ],
+        "model_position_third_person": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_camera_scale": "3",
+        "muzzle": [
+            "2.5",
+            "-1.5",
+            "8"
+        ],
+        "fov": "50",
+        "shot_sound": "w_smg_fire",
+        "end_sound": "w_smg_fire_release",
+        "shot_sound2": "w_smg_fire_distant",
+        "end_sound2": "w_smg_fire_distant_release",
+        "equip_sound": "w_smg_equip",
+        "hit_sound": "fb_enemy_hit",
+        "critical_hit_sound": "fb_enemy_hit_crit",
+        "impact_sound": "w_mac_impact",
+        "multi_round_particles": "false",
+        "can_upgrade_ammo": "true",
+        "can_upgrade_stock": "true"
+    },
+    {
+        "id": "1",
+        "parent_id": "rogue_submachinegun",
+        "weapon_type": "augment",
+        "name": "submachinegun_ammo",
+        "name_translation_key": "submachinegun_increase_ammo",
+        "desc_translation_key": "submachinegun_increase_ammo_desc",
+        "rarity": "common",
+        "preadd": [
+            "max_ammo",
+            "5"
+        ],
+        "max_stacks": "2",
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "2",
+        "parent_id": "rogue_submachinegun",
+        "weapon_type": "augment",
+        "name": "submachinegun_ammo",
+        "name_translation_key": "submachinegun_reduced_spread",
+        "desc_translation_key": "submachinegun_reduced_spread_desc",
+        "rarity": "common",
+        "preadd": [
+            "max_zoomed_spread",
+            "-0.7",
+            "-0.7"
+        ],
+        "max_stacks": "1"
+    },
+    {
+        "id": "3",
+        "parent_id": "rogue_submachinegun",
+        "weapon_type": "augment",
+        "name": "submachinegun_decrease_recoil",
+        "name_translation_key": "submachinegun_decrease_recoil",
+        "desc_translation_key": "submachinegun_decrease_recoil_desc",
+        "rarity": "rare",
+        "overwrite": [
+            "zoomed_recoil_side",
+            "0.025"
+        ],
+        "max_stacks": "1",
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "4",
+        "parent_id": "rogue_submachinegun",
+        "weapon_type": "augment",
+        "name": "submachinegun_reload_speed",
+        "name_translation_key": "submachinegun_increase_reload_speed",
+        "desc_translation_key": "submachinegun_increase_reload_speed_desc",
+        "rarity": "rare",
+        "preadd": [
+            "reload",
+            "-250"
+        ],
+        "max_stacks": "1"
+    },
+    {
+        "id": "5",
+        "parent_id": "rogue_submachinegun",
+        "weapon_type": "augment",
+        "name": "submachinegun_overclocking_fire_rate",
+        "name_translation_key": "submachinegun_increase_fire_rate_after_reload",
+        "desc_translation_key": "submachinegun_increase_fire_rate_after_reload_desc",
+        "rarity": "epic",
+        "overwrite": [
+            "after_reload_fire_rate_increase_duration",
+            "1"
+        ],
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "6",
+        "parent_id": "rogue_submachinegun",
+        "weapon_type": "augment",
+        "name": "submachinegun_chance_to_regain_ammo",
+        "name_translation_key": "submachinegun_chance_to_regain_ammo",
+        "desc_translation_key": "submachinegun_chance_to_regain_ammo_desc",
+        "rarity": "legendary",
+        "overwrite": [
+            "self_on_shoot_ammo_regain",
+            "50"
+        ]
+    },
+    {
+        "id": "rogue_heavymachinegun",
+        "parent_id": "",
+        "weapon_type": "base",
+        "name_translation_key": "weapon_heavymachinegun",
+        "desc_translation_key": "weapon_heavymachinegun_desc",
+        "selectable": "true",
+        "rarity": "rare",
+        "can_drop": "true",
+        "required_class": "rogue_chunk",
+        "respawn_time": "9",
+        "weapon_tag": "hmg",
+        "default_ammo": "30",
+        "default_ammo_pickup_ammo": "30",
+        "default_weapon_pickup_ammo": "30",
+        "max_ammo": "30",
+        "unlimited_ammo": "false",
+        "reload": "2000",
+        "color": "1996D9",
+        "icon_path": "images/weapon_icons/wp_hud_heavymachinegun_02.png",
+        "icon_path2": "images/weapon_icons/wp_card_heavymachinegun.png",
+        "weapon_icon_path": "images/weapon_icons/wp_card_heavymachinegun_nobg.png",
+        "bursts": [
+            "3",
+            "0.06"
+        ],
+        "rate": "380",
+        "damage": [
+            "7",
+            "12"
+        ],
+        "critical_damage": [
+            "11",
+            "19"
+        ],
+        "knockback": "2",
+        "ground_knockback": "2",
+        "charge_animation": "1",
+        "speed": "31000",
+        "mouse_take_over_recoil": "true",
+        "spread_recovery_time": "0.1",
+        "spread": [
+            "0.25",
+            "0.25"
+        ],
+        "max_spread": [
+            "0.5",
+            "0.5"
+        ],
+        "zoomed_spread": [
+            "0.2",
+            "0.2"
+        ],
+        "max_zoomed_spread": [
+            "0.45",
+            "0.45"
+        ],
+        "recoil_delay_recovery": "0.08",
+        "recoil_up": "0.3",
+        "recoil_side": "0.1",
+        "recoil_recovery_time": "0.25",
+        "recoil_time": "0.02",
+        "zoomed_recoil_up": "0.25",
+        "zoomed_recoil_side": "0.1",
+        "zoomed_recoil_recovery_time": "0.3",
+        "zoomed_recoil_time": "0.05",
+        "recoil_back": "1",
+        "recoil_back_recovery_time": "0.1",
+        "recoil_back_time": "0.03",
+        "zoomed_scope": "1",
+        "max_damage_distance": "600",
+        "min_damage_distance": "4000",
+        "equip_time": "300",
+        "base_combo_rate": "250",
+        "zoomed_walk_speed": "200",
+        "hit_radius": [
+            "1",
+            "1"
+        ],
+        "loop_animation": "true",
+        "detached_shot_particles": "false",
+        "shot_particles_attached": [
+            "weapon_heavy_machinegun_muzzle_flash",
+            "socket_muzzle",
+            "1"
+        ],
+        "shot_particles_attached_3p": "weapon_heavy_machinegun_muzzle_3p",
+        "missile_particles": "weapon_heavy_machinegun_projectile_3p",
+        "missile_particles_1p": "weapon_heavy_machinegun_projectile",
+        "impact_particles": "weapon_heavy_machinegun_impact",
+        "player_impact_particles": "weapon_heavy_machinegun_player_impact",
+        "model": "assets/shared/models/animations/wp_heavy_machinegun/skm_heavy_machinegun",
+        "model_position": [
+            "0.3",
+            "-1",
+            "1.2"
+        ],
+        "model_scale": "0.06",
+        "model_post_rotation": [
+            "-1.8",
+            "1.5",
+            "0.0080"
+        ],
+        "fov": "52",
+        "model_pivot": [
+            "-0.2",
+            "0",
+            "0"
+        ],
+        "model_position_centered": [
+            "0.4914",
+            "-2.57188",
+            "7.47569"
+        ],
+        "model_scale_centered": "0.0637542",
+        "model_camera_scale": "3.5",
+        "model_post_rotation_centered": [
+            "-2.21",
+            "1.5",
+            "-0.050"
+        ],
+        "burst_sound": "w_hm_fire_burst",
+        "burst_sound_tail": "w_hm_fire_burst_tail",
+        "burst_distance_sound": "w_hm_fire_burst_distant",
+        "burst_distance_sound_tail": "w_hm_fire_burst_distant_tail",
+        "equip_sound": "w_hm_equip",
+        "hit_sound": "fb_enemy_hit",
+        "critical_hit_sound": "fb_enemy_hit_crit",
+        "out_of_ammo_sound": "w_hm_ooa",
+        "impact_sound": "w_mac_impact",
+        "multi_round_particles": "false",
+        "can_upgrade_ammo": "true",
+        "can_upgrade_stock": "true"
+    },
+    {
+        "id": "1",
+        "parent_id": "rogue_heavymachinegun",
+        "weapon_type": "augment",
+        "name": "heavymachinegun_ammo",
+        "name_translation_key": "heavymachinegun_increase_ammo",
+        "desc_translation_key": "heavymachinegun_increase_ammo_desc",
+        "rarity": "common",
+        "preadd": [
+            "max_ammo",
+            "6"
+        ],
+        "max_stacks": "2",
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "2",
+        "parent_id": "rogue_heavymachinegun",
+        "weapon_type": "augment",
+        "name": "heavymachinegun_reload_speed",
+        "name_translation_key": "heavymachinegun_increase_reload_speed",
+        "desc_translation_key": "heavymachinegun_increase_reload_speed_desc",
+        "rarity": "common",
+        "preadd": [
+            "reload",
+            "-400"
+        ],
+        "max_stacks": "1"
+    },
+    {
+        "id": "3",
+        "parent_id": "rogue_heavymachinegun",
+        "weapon_type": "augment",
+        "name": "heavymachinegun_reduced_spread",
+        "name_translation_key": "heavymachinegun_reduced_spread",
+        "desc_translation_key": "heavymachinegun_reduced_spread_desc",
+        "rarity": "rare",
+        "preadd": [
+            "zoomed_spread",
+            "-0.1",
+            "-0.1"
+        ],
+        "max_stacks": "1",
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "4",
+        "parent_id": "rogue_heavymachinegun",
+        "weapon_type": "augment",
+        "name": "heavymachinegun_fire_rate",
+        "name_translation_key": "heavymachinegun_fire_rate",
+        "desc_translation_key": "heavymachinegun_fire_rate_desc",
+        "rarity": "rare",
+        "preadd": [
+            "rate",
+            "-10"
+        ],
+        "max_stacks": "2"
+    },
+    {
+        "id": "5",
+        "parent_id": "rogue_heavymachinegun",
+        "weapon_type": "augment",
+        "name": "heavymachinegun_improved_burst",
+        "name_translation_key": "heavymachinegun_improved_burst",
+        "desc_translation_key": "heavymachinegun_improved_burst_desc",
+        "rarity": "legendary",
+        "preadd": [
+            "critical_damage",
+            "-1.75",
+            "-1.75"
+        ],
+        "overwrite": [
+            "bursts",
+            "4",
+            "0.06"
+        ],
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "rogue_heavysniper",
+        "parent_id": "",
+        "weapon_type": "base",
+        "name_translation_key": "weapon_heavysniper",
+        "desc_translation_key": "weapon_heavysniper_desc",
+        "required_class": "rogue_scout",
+        "can_drop": "true",
+        "selectable": "true",
+        "rarity": "legendary",
+        "respawn_time": "9",
+        "weapon_tag": "hsniper",
+        "default_ammo": "5",
+        "default_ammo_pickup_ammo": "5",
+        "default_weapon_pickup_ammo": "5",
+        "max_ammo": "5",
+        "unlimited_ammo": "false",
+        "reload": "2500",
+        "penetrating": "false",
+        "hide_crosshair": "true",
+        "hide_crosshair_zoomed": "true",
+        "color": "EBBA45",
+        "icon_path": "images/weapon_icons/wp_hud_heavysniper_02.png",
+        "icon_path2": "images/weapon_icons/wp_card_heavysniper.png",
+        "weapon_icon_path": "images/weapon_icons/wp_card_heavysniper_nobg.png",
+        "spread": "6",
+        "zoomed_spread": [
+            "0",
+            "//",
+            "no",
+            "spread",
+            "when",
+            "ads"
+        ],
+        "rate": "1550",
+        "min_charge_damage": [
+            "50",
+            "50"
+        ],
+        "damage": [
+            "65",
+            "65"
+        ],
+        "min_charge_critical_damage": [
+            "115",
+            "115"
+        ],
+        "critical_damage": [
+            "130",
+            "130"
+        ],
+        "scope_charge_time": "1000",
+        "has_noscope_crit": "false",
+        "inner_damage": "85",
+        "knockback": "2",
+        "ground_knockback": "2",
+        "charge_animation": "1",
+        "speed": "33000",
+        "recoil_delay_recovery": "0.125",
+        "recoil_up": "4.75",
+        "recoil_side": "0.5",
+        "recoil_recovery_time": "0.6",
+        "recoil_time": "0.1",
+        "zoom_speed": "150",
+        "zoomed_walk_speed": "175",
+        "zoomed_recoil_up": "3",
+        "zoomed_recoil_side": "0.3",
+        "zoomed_recoil_recovery_time": "0.6",
+        "zoomed_recoil_time": "0.07",
+        "recoil_back": "6",
+        "recoil_back_recovery_time": "0.3",
+        "recoil_back_time": "0.06",
+        "recoil_shake_recovery_time": "0.3",
+        "recoil_shake_time": "0.06",
+        "recoil_shake": "0.3",
+        "equip_time": "450",
+        "base_combo_rate": "300",
+        "gravity_delay_by_distance": "1000",
+        "gravity": "500",
+        "hit_radius": [
+            "1",
+            "1"
+        ],
+        "detached_shot_particles": "false",
+        "shot_particles_attached": [
+            "weapon_heavysniper_muzzle_flash",
+            "socket_muzzle",
+            "1"
+        ],
+        "shot_particles_attached_3p": "weapon_heavysniper_muzzle_3p",
+        "missile_particles": "weapon_heavysniper_projectile_3p",
+        "missile_particles_1p": "weapon_heavysniper_projectile",
+        "impact_particles": "weapon_heavysniper_impact",
+        "player_impact_particles": "weapon_heavysniper_player_impact",
+        "decal": [
+            "decal_glow",
+            "10",
+            "3",
+            "3.561",
+            "false",
+            "false",
+            "alpha",
+            "20"
+        ],
+        "model": "assets/shared/models/animations/wp_heavy_sniper/skm_heavy_sniper",
+        "model_position": [
+            "0.379076",
+            "-0.208433",
+            "1.48947"
+        ],
+        "model_scale": "0.05",
+        "model_post_rotation": [
+            "-2",
+            "-1.4",
+            "0"
+        ],
+        "fov": "47",
+        "model_pivot": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_position_centered": [
+            "0.379076",
+            "-0.208433",
+            "1.48947"
+        ],
+        "model_scale_centered": "0.0136441",
+        "model_camera_scale": "2.8",
+        "muzzle": [
+            "2.7",
+            "-2.8",
+            "14"
+        ],
+        "shot_sound": "w_hs_unscoped_fire",
+        "shot_sound_aim_down": "w_hs_scoped_fire",
+        "shot_sound2": "w_hs_fire_distant",
+        "shot_sound_aim_down_distant": "w_hs_fire_distant",
+        "aim_down_sight_sound_in": "w_hs_scope_in",
+        "aim_down_sight_sound_out": "w_hs_scope_out",
+        "full_scope_charge_sound": "w_hs_scope_max",
+        "scope_charging_sound": "w_hs_scope_charge",
+        "equip_sound": "w_hs_equip",
+        "hit_sound": "fb_enemy_hit",
+        "critical_hit_sound": "fb_enemy_hit_crit",
+        "out_of_ammo_sound": "w_hs_ooa",
+        "impact_sound": "w_hs_impact",
+        "multi_round_particles": "false",
+        "can_upgrade_ammo": "true",
+        "can_upgrade_stock": "true",
+        "can_upgrade_tactical_reload": "true",
+        "zoomed_scope": "2",
+        "zoomed_hide_weapon": "true"
+    },
+    {
+        "id": "1",
+        "parent_id": "rogue_heavysniper",
+        "weapon_type": "augment",
+        "name": "arena_heavysniper_ammo",
+        "name_translation_key": "heavysniper_increase_ammo",
+        "desc_translation_key": "heavysniper_increase_ammo_desc",
+        "rarity": "common",
+        "preadd": [
+            "max_ammo",
+            "2"
+        ],
+        "max_stacks": "2",
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "3",
+        "parent_id": "rogue_heavysniper",
+        "weapon_type": "augment",
+        "name": "arena_heavysniper_increase_noscope_accuracy",
+        "name_translation_key": "heavysniper_increase_noscope_accuracy",
+        "desc_translation_key": "heavysniper_increase_noscope_accuracy_desc",
+        "rarity": "rare",
+        "preadd": [
+            "spread",
+            "-1"
+        ],
+        "max_stacks": "1",
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "4",
+        "parent_id": "rogue_heavysniper",
+        "weapon_type": "augment",
+        "name": "arena_heavysniper_increase_noscope_accuracy",
+        "name_translation_key": "heavysniper_increase_fire_rate",
+        "desc_translation_key": "heavysniper_increase_fire_rate_desc",
+        "rarity": "rare",
+        "preadd": [
+            "rate",
+            "-200"
+        ],
+        "max_stacks": "2"
+    },
+    {
+        "id": "5",
+        "parent_id": "rogue_heavysniper",
+        "weapon_type": "augment",
+        "name": "heavysniper_penetration",
+        "name_translation_key": "heavysniper_penetration",
+        "desc_translation_key": "heavysniper_penetration_desc",
+        "rarity": "legendary",
+        "overwrite": [
+            "penetrating",
+            "true"
+        ],
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "6",
+        "parent_id": "rogue_heavysniper",
+        "weapon_type": "augment",
+        "name": "heavysniper_instant_charge",
+        "name_translation_key": "heavysniper_instant_charge",
+        "desc_translation_key": "heavysniper_instant_charge_desc",
+        "rarity": "artifact",
+        "preadd": [
+            "scope_charge_time",
+            "-650"
+        ],
+        "overwrite": [
+            "pfx",
+            "hs_artifact_barrel",
+            "socket_muzzle",
+            "1"
+        ],
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "7",
+        "parent_id": "rogue_heavysniper",
+        "weapon_type": "augment",
+        "name": "heavysniper_reload_speed",
+        "name_translation_key": "heavysniper_increase_reload_speed",
+        "desc_translation_key": "heavysniper_increase_reload_speed_desc",
+        "rarity": "common",
+        "preadd": [
+            "reload",
+            "-400"
+        ],
+        "max_stacks": "1"
+    },
+    {
+        "id": "rogue_supershotgun",
+        "parent_id": "",
+        "weapon_type": "base",
+        "name_translation_key": "weapon_supershotgun",
+        "desc_translation_key": "weapon_supershotgun_desc",
+        "selectable": "true",
+        "rarity": "rare",
+        "required_class": "rogue_scout",
+        "respawn_time": "9",
+        "weapon_tag": "ss",
+        "charge_animation": "1",
+        "default_ammo": "6",
+        "default_ammo_pickup_ammo": "6",
+        "default_weapon_pickup_ammo": "6",
+        "max_ammo": "6",
+        "unlimited_ammo": "false",
+        "reload": "2000",
+        "color": "1996D9",
+        "icon_path": "images/weapon_icons/wp_hud_shotgun_02.png",
+        "icon_path2": "images/weapon_icons/wp_card_supershotgun.png",
+        "weapon_icon_path": "images/weapon_icons/wp_card_shotgun_nobg.png",
+        "rate": "900",
+        "damage": [
+            "4",
+            "7"
+        ],
+        "knockback": "2",
+        "ground_knockback": "3",
+        "parallel_knockback": "true",
+        "max_damage_distance": "200",
+        "min_damage_distance": "1500",
+        "shots_per_round": "11",
+        "spread": [
+            "6",
+            "6"
+        ],
+        "zoomed_spread": [
+            "4",
+            "4"
+        ],
+        "spread_radius": "1",
+        "min_hits": "2",
+        "bounce": "0",
+        "spread_ring": [
+            "1",
+            "4",
+            "6"
+        ],
+        "spread_ring_angular_offset": [
+            "0",
+            "0",
+            "90"
+        ],
+        "speed": "18000",
+        "impact_particles_distance_delay": "0.12",
+        "independent_upgrade_model": "true",
+        "category": "2",
+        "bind_group": "2",
+        "group_damage": "true",
+        "max_damage_reward": "true",
+        "hit_radius": [
+            "1.7",
+            "3"
+        ],
+        "recoil_delay_recovery": "0.1",
+        "recoil_up": "2.5",
+        "recoil_side": "0.1",
+        "recoil_recovery_time": "0.5",
+        "recoil_time": "0.06",
+        "zoomed_recoil_up": "1.25",
+        "zoomed_recoil_side": "0.025",
+        "zoomed_recoil_recovery_time": "0.4",
+        "zoomed_recoil_time": "0.06",
+        "recoil_back_delay_recovery": "0.1",
+        "recoil_back_recovery_time": "0.12",
+        "recoil_back_time": "0.06",
+        "recoil_back": "6",
+        "zoomed_scope": "1",
+        "zoomed_walk_speed": "200",
+        "equip_time": "400",
+        "base_combo_rate": "250",
+        "shot_particles_attached": [
+            "weapon_shotgun_muzzle_flash",
+            "socket_muzzle",
+            "1"
+        ],
+        "shot_particles_attached_3p": "weapon_shotgun_muzzle_3p",
+        "missile_particles": "weapon_shotgun_projectile",
+        "impact_particles": "weapon_shotgun_impact",
+        "model": "assets/shared/models/animations/wp_shotgun/skm_shotgun",
+        "muzzle": [
+            "2.6",
+            "-2.7",
+            "4.7"
+        ],
+        "particles_clipping_plane": "true",
+        "shot_sound": "w_ss_fire",
+        "shot_sound2": "w_ss_fire_distant",
+        "equip_sound": "w_ss_equip",
+        "out_of_ammo_sound": "w_ss_ooa",
+        "hit_sound": "fb_enemy_hit",
+        "critical_hit_sound": "fb_enemy_hit_crit",
+        "detached_shot_particles": "false",
+        "multi_round_particles": "false"
+    },
+    {
+        "id": "1",
+        "parent_id": "rogue_supershotgun",
+        "weapon_type": "augment",
+        "name": "supershotgun_ammo",
+        "name_translation_key": "shotgun_increase_ammo",
+        "desc_translation_key": "shotgun_increase_ammo_desc",
+        "rarity": "common",
+        "preadd": [
+            "max_ammo",
+            "2"
+        ],
+        "max_stacks": "2",
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "2",
+        "parent_id": "rogue_supershotgun",
+        "weapon_type": "augment",
+        "name": "supershotgun_reload_speed",
+        "name_translation_key": "shotgun_increase_reload_speed",
+        "desc_translation_key": "shotgun_increase_reload_speed_desc",
+        "rarity": "rare",
+        "preadd": [
+            "reload",
+            "-400"
+        ],
+        "max_stacks": "1",
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "4",
+        "parent_id": "rogue_supershotgun",
+        "weapon_type": "augment",
+        "name": "supershotgun_reduce_spread",
+        "name_translation_key": "shotgun_reduce_spread",
+        "desc_translation_key": "shotgun_reduce_spread_desc",
+        "rarity": "rare",
+        "preadd": [
+            "zoomed_spread",
+            "-1",
+            "-1"
+        ],
+        "max_stacks": "1"
+    },
+    {
+        "id": "6",
+        "parent_id": "rogue_supershotgun",
+        "weapon_type": "augment",
+        "name": "supershotgun_shots_hit_increase_movement_speed",
+        "name_translation_key": "shotgun_shots_hit_speed_buff",
+        "desc_translation_key": "shotgun_shots_hit_speed_buff_desc",
+        "rarity": "epic",
+        "overwrite": [
+            "consecutive_hits_required",
+            "11"
+        ]
+    },
+    {
+        "id": "7",
+        "parent_id": "rogue_supershotgun",
+        "weapon_type": "augment",
+        "name": "supershotgun_each_pellet_hit_heals",
+        "name_translation_key": "shotgun_on_hit_heals",
+        "desc_translation_key": "shotgun_on_hit_heals_desc",
+        "rarity": "legendary",
+        "overwrite": [
+            "heal_amount_per_projectile_hit_on_enemy",
+            "1"
+        ],
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "8",
+        "parent_id": "rogue_supershotgun",
+        "weapon_type": "augment",
+        "name": "supershotgun_increased_damage_in_air",
+        "name_translation_key": "shotgun_increased_damage_in_air",
+        "desc_translation_key": "shotgun_increased_damage_in_air_desc",
+        "rarity": "common",
+        "overwrite": [
+            "increased_damage_in_air",
+            "0.25"
+        ]
+    },
+    {
+        "id": "rogue_egun",
+        "parent_id": "",
+        "weapon_type": "base",
+        "name_translation_key": "weapon_egun",
+        "desc_translation_key": "weapon_egun_desc",
+        "selectable": "true",
+        "rarity": "epic",
+        "can_drop": "true",
+        "required_class": "rogue_eggbot",
+        "respawn_time": "9",
+        "weapon_tag": "egun",
+        "maximum_energy": "130",
+        "energy_per_shot": "5",
+        "energy_recharge_per_sec": "65",
+        "delay_energy_regen": "0.1",
+        "unlimited_ammo": "true",
+        "color": "A35EBA",
+        "mouse_take_over_recoil": "true",
+        "recoil_delay_recovery": "0.09",
+        "recoil_up": "0.2",
+        "recoil_recovery_time": "0.3",
+        "recoil_time": "0.05",
+        "zoomed_recoil_up": "0.15",
+        "zoomed_recoil_recovery_time": "0.3",
+        "zoomed_recoil_time": "0.05",
+        "recoil_back": "1",
+        "recoil_back_recovery_time": "0.08",
+        "recoil_back_time": "0.04",
+        "zoomed_scope": "1",
+        "icon_path": "images/weapon_icons/wp_hud_egun_02.png",
+        "icon_path2": "images/weapon_icons/wp_card_egun.png",
+        "weapon_icon_path": "images/weapon_icons/wp_card_egun_nobg.png",
+        "spread": "0.5",
+        "zoomed_spread": "0.2",
+        "rate": "100",
+        "damage": [
+            "6",
+            "11"
+        ],
+        "critical_damage": [
+            "11",
+            "18"
+        ],
+        "knockback": "2",
+        "ground_knockback": "2",
+        "charge_animation": "1",
+        "speed": "12000",
+        "max_damage_distance": "250",
+        "min_damage_distance": "3500",
+        "equip_time": "300",
+        "base_combo_rate": "200",
+        "gravity_delay_by_distance": "1000",
+        "gravity": "500",
+        "hit_radius": [
+            "1",
+            "1"
+        ],
+        "zoomed_walk_speed": "200",
+        "detached_shot_particles": "false",
+        "shot_particles": "weapon_egun_muzzle_flash",
+        "shot_particles_attached": [
+            "weapon_egun_muzzle_flash",
+            "socket_muzzle",
+            "1"
+        ],
+        "shot_particles_attached_3p": "weapon_egun_muzzle_3p",
+        "missile_particles": "weapon_egun_projectile",
+        "missile_particles_1p": "weapon_egun_projectile",
+        "impact_particles": "weapon_egun_impact",
+        "player_impact_particles": "weapon_egun_impact",
+        "decal": [
+            "decal",
+            "8"
+        ],
+        "loop_animation": "true",
+        "model": "assets/shared/models/animations/wp_egun/skm_egun",
+        "model_position": [
+            "0.379076",
+            "-0.4",
+            "0.9"
+        ],
+        "model_scale": "0.02",
+        "model_post_rotation": [
+            "-2",
+            "-1.4",
+            "0"
+        ],
+        "fov": "47",
+        "model_pivot": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_position_centered": [
+            "0.379076",
+            "-0.208433",
+            "1.48947"
+        ],
+        "model_scale_centered": "0.0136441",
+        "model_camera_scale": [
+            "2.8",
+            "//for",
+            "clipping"
+        ],
+        "muzzle": [
+            "2.7",
+            "-2.8",
+            "14"
+        ],
+        "shot_sound": "w_ep_fire",
+        "end_sound": "w_ep_fire_release",
+        "shot_sound2": "w_ep_fire_distant",
+        "end_sound2": "w_ep_fire_distant_release",
+        "equip_sound": "w_ep_equip",
+        "hit_sound": "fb_enemy_hit",
+        "critical_hit_sound": "fb_enemy_hit_crit",
+        "impact_sound": "w_ep_impact",
+        "multi_round_particles": "false",
+        "can_upgrade_ammo": "true",
+        "can_upgrade_stock": "false",
+        "can_upgrade_tactical_reload": "true"
+    },
+    {
+        "id": "1",
+        "parent_id": "rogue_egun",
+        "weapon_type": "augment",
+        "name": "egun_max_energy",
+        "name_translation_key": "egun_increase_max_energy",
+        "desc_translation_key": "egun_increase_max_energy_desc",
+        "rarity": "common",
+        "preadd": [
+            "maximum_energy",
+            "40"
+        ],
+        "max_stacks": "2",
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "2",
+        "parent_id": "rogue_egun",
+        "weapon_type": "augment",
+        "name": "egun_recharge_energy",
+        "name_translation_key": "egun_increase_energy_recharge",
+        "desc_translation_key": "egun_increase_energy_recharge_desc",
+        "rarity": "common",
+        "preadd": [
+            "energy_recharge_per_sec",
+            "40"
+        ],
+        "max_stacks": "2"
+    },
+    {
+        "id": "3",
+        "parent_id": "rogue_egun",
+        "weapon_type": "augment",
+        "name": "egun_projectile_speed",
+        "name_translation_key": "egun_increase_projectile_speed",
+        "desc_translation_key": "egun_increase_projectile_speed_desc",
+        "rarity": "rare",
+        "preadd": [
+            "speed",
+            "2000"
+        ],
+        "max_stacks": "1",
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "5",
+        "parent_id": "rogue_egun",
+        "weapon_type": "augment",
+        "name": "egun_heal_suppression",
+        "name_translation_key": "egun_heal_suppression",
+        "desc_translation_key": "egun_heal_suppression_desc",
+        "rarity": "epic",
+        "overwrite": [
+            "duration",
+            "4000"
+        ]
+    },
+    {
+        "id": "6",
+        "parent_id": "rogue_egun",
+        "weapon_type": "augment",
+        "name": "egun_energy_blast",
+        "name_translation_key": "egun_energy_blast",
+        "desc_translation_key": "egun_energy_blast_desc",
+        "rarity": "legendary",
+        "overwrite": [
+            "effect_damage",
+            "50"
+        ],
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "rogue_rocketlauncher",
+        "parent_id": "",
+        "weapon_type": "base",
+        "name_translation_key": "weapon_rocketlauncher",
+        "desc_translation_key": "weapon_rocketlauncher_desc",
+        "selectable": "true",
+        "rarity": "legendary",
+        "required_class": "rogue_chunk",
+        "respawn_time": "9",
+        "weapon_tag": "rl",
+        "speed": "1100",
+        "rate": "800",
+        "damage": "80",
+        "min_splash_damage": "5",
+        "splash_damage": "80",
+        "self_damage": "30",
+        "splash_hemisphere_offset": "20",
+        "splash_hemisphere_offset_damage_multiplier": "0.30",
+        "default_ammo_pickup_ammo": "6",
+        "default_weapon_pickup_ammo": "6",
+        "default_ammo": "6",
+        "max_ammo": "6",
+        "unlimited_ammo": "false",
+        "ammo_per_reload": "1",
+        "reload": "1000",
+        "category": "3",
+        "bind_group": "3",
+        "hit_radius": [
+            "1",
+            "1"
+        ],
+        "color": "EBBA45",
+        "icon_path": "images/weapon_icons/wp_hud_rocketlauncher_02.png",
+        "icon_path2": "images/weapon_icons/wp_card_rocketlauncher.png",
+        "weapon_icon_path": "images/weapon_icons/wp_card_rocketlauncher_nobg.png",
+        "friendly_name": [
+            "Rocket",
+            "Launcher"
+        ],
+        "description": [
+            "A",
+            "rocket",
+            "launcher."
+        ],
+        "charge_animation": "6",
+        "splash_radius": "150",
+        "knockback": "100",
+        "knockback_self": "113",
+        "ground_knockback": "80",
+        "ground_knockback_self": "113",
+        "center_of_mass_offset": "0",
+        "center_of_mass_offset_self": "0",
+        "recoil_delay_recovery": "0.09",
+        "recoil_up": "2",
+        "recoil_side": "0.15",
+        "recoil_recovery_time": "0.4",
+        "recoil_time": "0.06",
+        "zoomed_recoil_up": "1.25",
+        "zoomed_recoil_side": "0.075",
+        "zoomed_recoil_recovery_time": "0.3",
+        "zoomed_recoil_time": "0.06",
+        "recoil_back_delay_recovery": "0.13",
+        "recoil_back_recovery_time": "0.2",
+        "recoil_back_time": "0.06",
+        "recoil_back": "5",
+        "zoomed_scope": "1",
+        "zoomed_walk_speed": "200",
+        "equip_time": "500",
+        "base_combo_rate": "300",
+        "shot_particles": "empty_system",
+        "shot_particles_attached": [
+            "weapon_rocket_muzzle_flash",
+            "socket_muzzle",
+            "1"
+        ],
+        "shot_particles_attached_3p": "weapon_rocket_muzzle_3p",
+        "missile_particles": "weapon_rocket_projectile",
+        "impact_particles": "weapon_rocket_impact",
+        "model": "assets/shared/models/animations/wp_rocket_launcher/skm_rocket_launcher",
+        "model_scale": "0.07",
+        "model_scale_centered": "0.063",
+        "model_position": [
+            "2.5",
+            "-3",
+            "3.28"
+        ],
+        "model_position_centered": [
+            "0",
+            "-4.1",
+            "5"
+        ],
+        "model_camera_scale": "0.5",
+        "muzzle": [
+            "0",
+            "0",
+            "0"
+        ],
+        "muzzle_offset": [
+            "0",
+            "0",
+            "0"
+        ],
+        "fov": "40",
+        "model_scale_third_person": "1",
+        "model_position_third_person": [
+            "0",
+            "4.5",
+            "4"
+        ],
+        "shot_sound": "w_rl_fire",
+        "shot_sound2": "w_rl_fire_distant",
+        "missile_loop_sound": "w_rl_airbound",
+        "impact_sound": "w_rl_impact",
+        "impact_sound2": "w_rl_impact_distant",
+        "equip_sound": "w_rl_equip",
+        "hit_sound": "fb_enemy_hit",
+        "critical_hit_sound": "fb_enemy_hit_crit",
+        "out_of_ammo_sound": "w_rl_ooa",
+        "detached_shot_particles": "false"
+    },
+    {
+        "id": "1",
+        "parent_id": "rogue_rocketlauncher",
+        "weapon_type": "augment",
+        "name": "rocketlauncher_ammo",
+        "name_translation_key": "rocketlauncher_increase_ammo",
+        "desc_translation_key": "rocketlauncher_increase_ammo_desc",
+        "rarity": "common",
+        "preadd": [
+            "max_ammo",
+            "2"
+        ],
+        "max_stacks": "2",
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "3",
+        "parent_id": "rogue_rocketlauncher",
+        "weapon_type": "augment",
+        "name": "rocketlauncher_reload_ammo",
+        "name_translation_key": "rocketlauncher_increase_reload_ammo",
+        "desc_translation_key": "rocketlauncher_increase_reload_ammo_desc",
+        "rarity": "rare",
+        "preadd": [
+            "ammo_per_reload",
+            "1"
+        ],
+        "max_stacks": "1"
+    },
+    {
+        "id": "4",
+        "parent_id": "rogue_rocketlauncher",
+        "weapon_type": "augment",
+        "name": "rocketlauncher_splash_radius",
+        "name_translation_key": "rocketlauncher_splash_radius",
+        "desc_translation_key": "rocketlauncher_splash_radius_desc",
+        "rarity": "rare",
+        "preadd": [
+            "splash_radius",
+            "20"
+        ],
+        "max_stacks": "1",
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "5",
+        "parent_id": "rogue_rocketlauncher",
+        "weapon_type": "augment",
+        "name": "rocketlauncher_overshield_on_direct_hit",
+        "name_translation_key": "rocketlauncher_overshield_on_direct_hit",
+        "desc_translation_key": "rocketlauncher_overshield_on_direct_hit_desc",
+        "rarity": "epic",
+        "direct_hit_upgrade": "1",
+        "overshield_on_direct_hit": "20"
+    },
+    {
+        "id": "6",
+        "parent_id": "rogue_rocketlauncher",
+        "weapon_type": "augment",
+        "name": "rocketlauncher_no_self_dmg",
+        "name_translation_key": "rocketlauncher_no_self_dmg",
+        "desc_translation_key": "rocketlauncher_no_self_dmg_desc",
+        "rarity": "epic",
+        "overwrite": [
+            "self_damage",
+            "0"
+        ]
+    },
+    {
+        "id": "7",
+        "parent_id": "rogue_rocketlauncher",
+        "weapon_type": "augment",
+        "name": "rocketlauncher_set_fire_on_direct_hit",
+        "name_translation_key": "rocketlauncher_set_fire_on_direct_hit",
+        "desc_translation_key": "rocketlauncher_set_fire_on_direct_hit_desc",
+        "rarity": "legendary",
+        "overwrite": [
+            "impact_effect",
+            "arena_fire"
+        ],
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "8",
+        "parent_id": "rogue_rocketlauncher",
+        "weapon_type": "augment",
+        "name": "rocketlauncher_direct_hit_double_dmg",
+        "name_translation_key": "rocketlauncher_direct_hit_double_dmg",
+        "desc_translation_key": "rocketlauncher_direct_hit_double_dmg_desc",
+        "rarity": "artifact",
+        "overwrite": [
+            "shot_particles_attached",
+            "weapon_rocket_muzzle_flash_artifact",
+            "socket_muzzle",
+            "1"
+        ],
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "rogue_shaft",
+        "parent_id": "",
+        "weapon_type": "base",
+        "name_translation_key": "weapon_shaft",
+        "desc_translation_key": "weapon_shaft_desc",
+        "selectable": "true",
+        "rarity": "epic",
+        "required_class": "rogue_chunk",
+        "respawn_time": "9",
+        "weapon_tag": "shaft",
+        "color": "A35EBA",
+        "category": "4",
+        "bind_group": "4",
+        "unlimited_ammo": "true",
+        "overheat_limit": "1000",
+        "heat_per_shot": "15",
+        "heat_cool_per_sec": "500",
+        "delay_heat_regen": "0.1",
+        "damage": [
+            "4",
+            "4"
+        ],
+        "rate": "52",
+        "min_damage_distance": "767",
+        "max_damage_distance": "768",
+        "hit_radius": [
+            "2.5",
+            "1.1"
+        ],
+        "knockback": "2",
+        "ground_knockback": "2",
+        "distance": "768",
+        "speed": "0",
+        "orb": "true",
+        "orb_lag": "0.00",
+        "recoil_back": "0.5",
+        "recoil_back_recovery_time": "0.0275",
+        "recoil_back_time": "0.0275",
+        "zoomed_scope": "1",
+        "zoomed_walk_speed": "200",
+        "icon_path": "images/weapon_icons/wp_hud_shaft_02.png",
+        "icon_path2": "images/weapon_icons/wp_card_shaft.png",
+        "weapon_icon_path": "images/weapon_icons/wp_card_shaft_nobg.png",
+        "friendly_name": "Shaft",
+        "description": [
+            "Powerful",
+            "medium-range",
+            "sustained-damage",
+            "weapon."
+        ],
+        "equip_time": "400",
+        "base_combo_rate": "200",
+        "shot_particles_attached": [
+            "shaft_muzzle_fire_blue",
+            "socket_muzzle"
+        ],
+        "impact_particles": "shaft_beam_impact_blue",
+        "tracking_particles": "shaft_beam_blue",
+        "loop_animation": "true",
+        "model": "assets/shared/models/animations/wp_shaft/skm_shaft",
+        "model_scale": "0.060",
+        "model_scale_centered": "0.054",
+        "model_position_centered": [
+            "0",
+            "-4",
+            "5"
+        ],
+        "model_position": [
+            "2.5",
+            "-3",
+            "3.6"
+        ],
+        "model_camera_scale": "0.7",
+        "model_scale_third_person": "0.9",
+        "model_position_third_person": [
+            "-3.5",
+            "3.5",
+            "6"
+        ],
+        "muzzle": [
+            "10.0",
+            "-11",
+            "41.0"
+        ],
+        "fov": "45",
+        "parallel_knockback": "true",
+        "particles_clipping_plane": "true",
+        "loop_sound": "w_shaft_loop",
+        "start_sound": "w_shaft_ini",
+        "end_sound": "w_shaft_release",
+        "equip_sound": "w_shaft_equip",
+        "hit_sound": "fb_enemy_hit",
+        "critical_hit_sound": "fb_enemy_hit_crit",
+        "proximity_loop_sound": "w_shaft_idle_loop",
+        "out_of_ammo_sound": "w_shaft_ooa",
+        "impact_sound": "w_shaft_impact",
+        "overheat_sound": "w_shaft_overheat",
+        "detached_shot_particles": "false"
+    },
+    {
+        "id": "1",
+        "parent_id": "rogue_shaft",
+        "weapon_type": "augment",
+        "name": "shaft_heat",
+        "name_translation_key": "shaft_increase_heat_limit",
+        "desc_translation_key": "shaft_increase_heat_limit_desc",
+        "rarity": "common",
+        "preadd": [
+            "overheat_limit",
+            "300"
+        ],
+        "max_stacks": "2"
+    },
+    {
+        "id": "2",
+        "parent_id": "rogue_shaft",
+        "weapon_type": "augment",
+        "name": "shaft_heat_cooling",
+        "name_translation_key": "shaft_reduce_heat_cooldown",
+        "desc_translation_key": "shaft_reduce_heat_cooldown_desc",
+        "rarity": "common",
+        "preadd": [
+            "heat_cool_per_sec",
+            "250"
+        ],
+        "max_stacks": "2",
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "3",
+        "parent_id": "rogue_shaft",
+        "weapon_type": "augment",
+        "name": "shaft_range_increase",
+        "name_translation_key": "shaft_range_increase",
+        "desc_translation_key": "shaft_range_increase_desc",
+        "rarity": "rare",
+        "preadd": [
+            "max_damage_distance",
+            "100"
+        ],
+        "max_stacks": "1",
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "5",
+        "parent_id": "rogue_shaft",
+        "weapon_type": "augment",
+        "name": "shaft_max_range_extra_dmg",
+        "name_translation_key": "shaft_extra_dmg_max_range",
+        "desc_translation_key": "shaft_extra_dmg_max_range_desc",
+        "rarity": "epic",
+        "preadd": [
+            "max_damage_distance",
+            "-125"
+        ],
+        "overwrite": [
+            "damage",
+            "4",
+            "5"
+        ]
+    },
+    {
+        "id": "6",
+        "parent_id": "rogue_shaft",
+        "weapon_type": "augment",
+        "name": "shaft_siphon_armor",
+        "name_translation_key": "shaft_siphon_armor",
+        "desc_translation_key": "shaft_siphon_armor_desc",
+        "rarity": "legendary",
+        "armor_break_upgrade": "1",
+        "overshield_on_armor_break_amount": "15",
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "fists",
+        "parent_id": "",
+        "weapon_type": "base",
+        "name_translation_key": "weapon_fists",
+        "desc_translation_key": "weapon_fists_desc",
+        "can_drop": "true",
+        "show_in_dev_console": "false",
+        "selectable": "false"
+    },
+    {
+        "id": "rogue_crossbow",
+        "parent_id": "",
+        "weapon_type": "base",
+        "name_translation_key": "weapon_crossbow",
+        "desc_translation_key": "weapon_crossbow_desc",
+        "selectable": "true",
+        "rarity": "legendary",
+        "required_class": "rogue_eggbot",
+        "respawn_time": "9",
+        "weapon_tag": "cb",
+        "penetrating": "false",
+        "default_ammo_pickup_ammo": "6",
+        "default_weapon_pickup_ammo": "6",
+        "default_ammo": "6",
+        "max_ammo": "6",
+        "unlimited_ammo": "false",
+        "reload": "2000",
+        "damage": [
+            "50",
+            "65"
+        ],
+        "critical_damage": [
+            "90",
+            "105"
+        ],
+        "rate": "1000",
+        "hit_radius": [
+            "3",
+            "2"
+        ],
+        "speed": "10000",
+        "gravity": "200",
+        "gravity_pitch_offset": "0",
+        "max_damage_distance": "2000",
+        "min_damage_distance": "100",
+        "knockback": "3",
+        "ground_knockback": "3.5",
+        "category": "5",
+        "bind_group": "5",
+        "color": "EBBA45",
+        "icon_path": "images/weapon_icons/wp_hud_crossbow_02.png",
+        "icon_path2": "images/weapon_icons/wp_card_crossbow.png",
+        "weapon_icon_path": "images/weapon_icons/wp_card_crossbow_nobg.png",
+        "recoil_delay_recovery": "0.1",
+        "recoil_up": "1.5",
+        "recoil_side": "0.1",
+        "recoil_recovery_time": "0.25",
+        "recoil_time": "0.05",
+        "zoomed_recoil_up": "0.9",
+        "zoomed_recoil_side": "0.05",
+        "zoomed_recoil_recovery_time": "0.23",
+        "zoomed_recoil_time": "0.05",
+        "recoil_back_delay_recovery": "0.12",
+        "recoil_back_recovery_time": "0.1",
+        "recoil_back_time": "0.05",
+        "recoil_back": "1.5",
+        "zoomed_scope": "1",
+        "zoomed_walk_speed": "200",
+        "equip_time": "350",
+        "base_combo_rate": "250",
+        "shot_particles": "empty_system",
+        "shot_particles_attached": [
+            "cb_vents_r",
+            "socket_went_r",
+            "0.03"
+        ],
+        "shot_particles_attached_3p": "weapon_crossbow_muzzle_3p",
+        "impact_particles": "weapon_crossbow_impact_v2",
+        "pfx": [
+            "weapon_cb_display",
+            "socket_display",
+            "0.03"
+        ],
+        "player_impact_particles": "weapon_crossbow_player_impact",
+        "missile_particles": "weapon_crossbow_projectile",
+        "missile_particles_1p": "weapon_crossbow_projectile",
+        "muzzle_offset": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model": "assets/shared/models/animations/wp_crossbow/skm_crossbow",
+        "model_scale": "0.0625",
+        "model_scale_centered": "0.05625",
+        "model_position_centered": [
+            "0",
+            "-4",
+            "3"
+        ],
+        "model_position": [
+            "2.5",
+            "-3.22",
+            "2.5"
+        ],
+        "model_camera_scale": "0.6",
+        "muzzle": [
+            "0",
+            "0",
+            "0"
+        ],
+        "fov": "40",
+        "model_scale_third_person": "1",
+        "model_position_third_person": [
+            "3",
+            "2",
+            "12"
+        ],
+        "shot_sound": "w_cb_fire",
+        "shot_sound2": "w_cb_fire_distant",
+        "missile_loop_sound": "w_cb_airbound",
+        "impact_sound": "w_cb_impact",
+        "equip_sound": "w_cb_equip",
+        "hit_sound": "fb_enemy_hit",
+        "critical_hit_sound": "fb_enemy_hit_crit",
+        "out_of_ammo_sound": "w_cb_ooa",
+        "detached_shot_particles": "false"
+    },
+    {
+        "id": "1",
+        "parent_id": "rogue_crossbow",
+        "weapon_type": "augment",
+        "name": "crossbow_ammo",
+        "name_translation_key": "crossbow_increase_ammo",
+        "desc_translation_key": "crossbow_increase_ammo_desc",
+        "rarity": "common",
+        "preadd": [
+            "max_ammo",
+            "2"
+        ],
+        "max_stacks": "2",
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "2",
+        "parent_id": "rogue_crossbow",
+        "weapon_type": "augment",
+        "name": "crossbow_projectile_speed",
+        "name_translation_key": "crossbow_increase_projectile_speed",
+        "desc_translation_key": "crossbow_increase_projectile_speed_desc",
+        "rarity": "common",
+        "preadd": [
+            "speed",
+            "2000"
+        ],
+        "max_stacks": "1"
+    },
+    {
+        "id": "3",
+        "parent_id": "rogue_crossbow",
+        "weapon_type": "augment",
+        "name": "crossbow_fire_rate",
+        "name_translation_key": "crossbow_fire_rate",
+        "desc_translation_key": "crossbow_fire_rate_desc",
+        "rarity": "rare",
+        "preadd": [
+            "rate",
+            "-75"
+        ],
+        "max_stacks": "1",
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "4",
+        "parent_id": "rogue_crossbow",
+        "weapon_type": "augment",
+        "name": "crossbow_penetration",
+        "name_translation_key": "crossbow_penetration",
+        "desc_translation_key": "crossbow_penetration_desc",
+        "rarity": "epic",
+        "overwrite": [
+            "penetrating",
+            "true"
+        ]
+    },
+    {
+        "id": "7",
+        "parent_id": "rogue_crossbow",
+        "weapon_type": "augment",
+        "name": "healing_arrows",
+        "name_translation_key": "crossbow_healing_arrows",
+        "desc_translation_key": "crossbow_healing_arrows_desc",
+        "rarity": "legendary",
+        "overwrite": [
+            "heal_amount_per_projectile_hit_on_friendly",
+            "25"
+        ],
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "8",
+        "parent_id": "rogue_crossbow",
+        "weapon_type": "augment",
+        "name": "burst_arrows",
+        "name_translation_key": "crossbow_burst_arrows",
+        "desc_translation_key": "crossbow_burst_arrows_desc",
+        "rarity": "artifact",
+        "overwrite": [
+            "shot_particles_attached",
+            "cb_vents_r_artifact",
+            "socket_went_r",
+            "0.03"
+        ],
+        "locked_in_battlepass": "true"
+    },
+    {
+        "id": "arena_left_hand",
+        "parent_id": "",
+        "weapon_type": "melee",
+        "selectable": "false",
+        "show_in_dev_console": "false",
+        "model": "assets/shared/weapons/eggbot_hand/vfx_hand/left_hand"
+    }
+]

@@ -1,0 +1,8 @@
+asset custom_bigpalmtree
+{
+  type material
+  listed true
+  tags NONE
+  material override_custom_bigpalmtree
+  mat_override true
+}

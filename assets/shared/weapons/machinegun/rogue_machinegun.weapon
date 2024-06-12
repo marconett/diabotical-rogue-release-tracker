@@ -1,0 +1,191 @@
+rogue_machinegun
+{
+	name_translation_key weapon_machinegun
+	desc_translation_key weapon_machinegun_desc
+	
+	required_class rogue_scout rogue_eggbot
+
+	selectable true
+	rarity rare
+	respawn_time 9
+    //unique true
+	weapon_tag mac
+	color 1996D9
+    bind_group 6
+	
+	default_ammo 30
+	default_ammo_pickup_ammo 30
+	default_weapon_pickup_ammo 30
+	max_ammo 30
+	unlimited_ammo false
+	reload 1500
+	
+	rate 100
+	damage 5 10
+	critical_damage 10 15
+	knockback 2
+	ground_knockback 2
+    charge_animation 1
+	speed 30000
+	
+	max_damage_distance 400
+	min_damage_distance 3500
+	
+	spread_recovery_time 0.2
+	spread 0.15 0.15
+	max_spread 1.75 1.75
+	
+	zoomed_spread 0.125 0.125
+	max_zoomed_spread 1.5 1.5
+	
+	mouse_take_over_recoil true
+	recoil_delay_recovery 0.1
+	recoil_up 0.5
+	recoil_side 0.15
+	recoil_recovery_time 0.3
+	recoil_time 0.05
+	
+	zoomed_recoil_up 0.4
+	zoomed_recoil_side 0.1
+	zoomed_recoil_recovery_time 0.3
+	zoomed_recoil_time 0.05
+	
+	recoil_back 0.5
+	recoil_back_recovery_time 0.06
+	recoil_back_time 0.04
+	
+	zoomed_scope 1
+	zoomed_walk_speed 175
+	
+	hit_radius 2 1
+	
+	icon_path images/weapon_icons/wp_hud_machinegun_02.png
+	icon_path2 images/weapon_icons/wp_card_machinegun.png
+	weapon_icon_path images/weapon_icons/wp_card_machinegun_nobg.png
+	
+	equip_time 300
+	base_combo_rate 200
+
+	loop_animation true
+
+    shot_particles weapon_machinegun_muzzle_flash
+    shot_particles_attached weapon_machinegun_muzzle socket_muzzle 0.15
+	shot_particles_attached_3p weapon_machinegun_muzzle_3p
+	impact_particles weapon_machinegun_impact
+	player_impact_particles weapon_machinegun_player_impact
+	missile_particles weapon_machinegun_projectile
+	//missile_particles_1p weapon_revolver_projectile
+// IMPACT DECALS
+	//decal decal 10 3 3.561 false false alpha 1
+	//decal decal_glow_red 16 3 3.561 false false alpha 30
+	//decal decal_glow 10 3 3.561 false false alpha 20
+	
+	model assets/shared/models/animations/wp_machinegun/skm_machinegun
+	model_position 2.25 -3 0.01
+	model_scale 0.11
+	model_scale_centered 0.099
+	model_position_centered 0 -2.68 0.02
+	model_pivot 0 -0.22 0
+	model_camera_scale 0.5
+	fov 40
+	muzzle 2.7 -2.8 14
+	
+	model_scale_third_person 1.1
+	model_position_third_person 6.5 2 2
+	
+	particles_clipping_plane true	
+	
+	shot_sound w_mac_fire
+	shot_sound2 w_mac_fire_distant
+	end_sound w_mac_fire_release
+	end_sound2 w_mac_fire_distant_release
+	// shot_sound_low_ammo mac_fire_low1 mac_fire_low2 mac_fire_low3 mac_fire_low4 mac_fire_low5
+	// low_ammo_threshold 15
+	equip_sound w_mac_equip
+	hit_sound fb_enemy_hit
+	critical_hit_sound	fb_enemy_hit_crit
+	out_of_ammo_sound w_mac_ooa
+	impact_sound w_mac_impact
+	
+	detached_shot_particles false
+	multi_round_particles false
+	
+
+}
+
+rogue_machinegun augment 1
+{
+	name machinegun_ammo
+	name_translation_key machinegun_increase_ammo
+	desc_translation_key machinegun_increase_ammo_desc
+	rarity common
+	preadd default_ammo 5
+	preadd max_ammo 5
+	max_stacks 2
+}
+
+rogue_machinegun augment 2
+{
+	name machinegun_decrease_recoil
+	name_translation_key machinegun_decrease_recoil
+	desc_translation_key machinegun_decrease_recoil_desc
+	rarity common
+	preadd recoil_up -0.4
+	preadd recoil_side -0.1
+	preadd zoomed_recoil_up -0.31
+	preadd zoomed_recoil_side -0.08
+	max_stacks 1
+}
+
+rogue_machinegun augment 3
+{
+	name machinegun_reload_speed
+	name_translation_key machinegun_increase_reload_speed
+	desc_translation_key machinegun_increase_reload_speed_desc
+	rarity rare
+	preadd reload -500
+	max_stacks 1
+}
+
+rogue_machinegun augment 4
+{
+	name machinegun_fire_rate
+	name_translation_key machinegun_fire_rate
+	desc_translation_key machinegun_fire_rate_desc
+	rarity rare
+	preadd rate -5
+	max_stacks 2
+}
+
+rogue_machinegun augment 5
+{
+	name machinegun_overclocking_fire_rate
+	name_translation_key machinegun_increase_fire_rate_after_reload
+	desc_translation_key machinegun_increase_fire_rate_after_reload_desc
+	rarity epic
+	after_reload_upgrade 1
+	overwrite after_reload_fire_rate_multiplier 0.90 //do we want a flat value change here instead? ask (viktor)
+	overwrite after_reload_fire_rate_increase_duration 1
+}
+
+rogue_machinegun augment 6
+{
+	name machinegun_speed_boost_consecutive_hits
+	name_translation_key machinegun_speed_boost_consecutive_hits
+	desc_translation_key machinegun_speed_boost_consecutive_hits_desc
+	rarity epic
+	overwrite duration 2000
+    overwrite speed_boost_amount 20
+	overwrite consecutive_hits_required 8
+}
+
+rogue_machinegun augment 7
+{
+	name machinegun_last_bullet_poisonous
+	name_translation_key machinegun_last_bullet_poisonous
+	desc_translation_key machinegun_last_bullet_poisonous_desc
+	rarity legendary
+	//overwrite first_shot_after_reload_poison true
+	overwrite effect_damage 2.5
+	overwrite impact_effect poison
+}

@@ -1,0 +1,21 @@
+override_hologram
+{
+  {
+    map models/enemy/materials/enemy_cube_obsidian/enemy_obsidian_d.png
+    map models/enemy/materials/enemy_cube_obsidian/enemy_obsidian_n.png
+    map models/enemy/materials/enemy_cube_obsidian/enemy_obsidian_s.png
+    map models/enemy/materials/enemy_cube_obsidian/enemy_obsidian_i.png
+    map models/egg_gods/character/base/weegod_1002_m.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGTA
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    vertex_shader_param bones
+    pixel_shader trans_fresnel.ps.cso
+    pixel_shader_param accent1 bcbcbc
+    pixel_shader_param float_params4 0.0 0.0 0.0 0.0
+    blendfunc blend
+    depth read_only
+  }
+}
+

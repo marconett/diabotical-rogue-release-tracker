@@ -1,0 +1,207 @@
+rogue_revolver
+{
+	name_translation_key weapon_revolver
+	desc_translation_key weapon_revolver_desc
+	
+	required_class rogue_scout
+	selectable true
+	rarity epic
+	can_drop true
+
+	respawn_time 9
+    //unique true
+	weapon_tag rev
+
+	default_ammo 8
+	default_ammo_pickup_ammo 8
+	default_weapon_pickup_ammo 8
+	max_ammo 8
+	unlimited_ammo false
+	reload 1400
+	
+	color A35EBA
+	icon_path images/weapon_icons/wp_hud_revolver_02.png
+	icon_path2 images/weapon_icons/wp_card_revolver.png
+	weapon_icon_path images/weapon_icons/wp_card_revolver_nobg.png
+    
+    spread 0.2
+    zoomed_spread 0.1
+
+	damage 20 30
+	critical_damage 30 40
+	knockback 3
+	ground_knockback 3
+    charge_animation 1
+    speed 26000
+	rate 400
+	
+	//random_recoil_side false
+	recoil_delay_recovery 0.09
+	recoil_up 2.75
+	//recoil_side -0.15
+	recoil_recovery_time 0.33
+	recoil_time 0.06
+	
+	zoomed_recoil_up 1.5
+	//zoomed_recoil_side 0.25
+	zoomed_recoil_recovery_time 0.30
+	zoomed_recoil_time 0.05
+	
+	recoil_back 1.25
+	recoil_back_recovery_time 0.07
+	recoil_back_time 0.05
+	
+	zoomed_scope 1
+	
+	max_damage_distance 400
+    min_damage_distance 4000
+		
+	equip_time 400
+	base_combo_rate 250
+	
+	gravity_delay_by_distance 1000
+	gravity 0
+	
+	hit_radius 1 1
+	zoomed_walk_speed 200
+	
+	detached_shot_particles false
+    //shot_particles weapon_revolver_muzzle_flash
+	shot_particles_attached weapon_revolver_muzzle
+   	shot_particles_attached_3p weapon_revolver_muzzle_3p
+	missile_particles weapon_revolver_projectile
+	missile_particles_1p weapon_revolver_projectile
+	shot_particles_attached weapon_revolver_muzzle_flash socket_muzzle 1
+	impact_particles weapon_revolver_impact
+    player_impact_particles weapon_revolver_player_impact
+	
+// IMPACT DECALS
+	decal decal 10 3 3.561 false false alpha 1
+	decal decal_glow_red 16 3 3.561 false false alpha 30
+	decal decal_glow 10 3 3.561 false false alpha 20
+
+	
+/////	fps model position - fps_revolver /////////////////////////////////////
+	
+	//model assets/shared/weapons/revolver/revolver //Old model
+	model assets/shared/models/animations/wp_revolver/skm_revolver
+	model_position 2 -1.7 4.2
+	model_scale 0.12
+	model_post_rotation -2.5 1 0.07	
+   	model_pivot 0 0 0
+	fov 48
+	muzzle 2.7 -2.8 14
+
+	
+	/////	ADS model position - revolver /////////////////////////////////////
+
+	model_position_centered 1.37144 -1.36169 4.74551
+	model_scale_centered 0.1
+	model_post_rotation_centered -2.5 1 0.07	
+	
+	
+	/////	Third person model position - revolver /////////////////////////////////////
+	//MOVED TO .ani FILE	
+
+	
+	
+	//close
+	shot_sound w_rev_fire
+	//distant
+	shot_sound2 w_rev_fire_distant
+	// shot_sound_low_ammo2 weapon_pistol_fire_distant1 weapon_pistol_fire_distant2 weapon_pistol_fire_distant3 weapon_pistol_fire_distant4 weapon_pistol_fire_distant5
+	equip_sound w_rev_equip
+	hit_sound fb_enemy_hit
+	critical_hit_sound fb_enemy_hit_crit
+	out_of_ammo_sound w_rev_ooa
+	impact_sound w_mac_impact
+    
+	
+	detached_shot_particles false
+	multi_round_particles false
+
+	can_upgrade_ammo true
+	can_upgrade_tactical_reload true
+}
+
+
+rogue_revolver augment 1
+{
+	name revolver_ammo
+	name_translation_key revolver_increase_ammo
+	desc_translation_key revolver_increase_ammo_desc
+	rarity common
+	preadd default_ammo 2
+	preadd max_ammo 2
+	max_stacks 2
+	locked_in_battlepass true
+}
+
+// arena_revolver augment 2
+// {
+// 	name revolver_projectile_speed
+// 	name_translation_key revolver_increase_projectile_speed
+// 	desc_translation_key revolver_increase_projectile_speed_desc
+// 	rarity common
+// 	preadd speed 2000
+// 	max_stacks 2
+// }
+
+rogue_revolver augment 3
+{
+	name revolver_kill_faster_reload
+	name_translation_key revolver_kill_faster_reload
+	desc_translation_key revolver_kill_faster_reload_desc
+	rarity rare
+	reload_time_reduction_on_kill_ms 500
+	locked_in_battlepass true
+}
+
+// arena_revolver augment 4
+// {
+// 	name revolver_equip_time
+// 	name_translation_key revolver_equip_speed
+// 	desc_translation_key revolver_equip_speed_desc
+// 	rarity rare
+// 	preadd equip_time -50
+// 	max_stacks 2
+// }
+
+rogue_revolver augment 5
+{
+	name revolver_penetration
+	name_translation_key revolver_penetration
+	desc_translation_key revolver_penetration_desc
+	rarity epic
+	overwrite penetrating true
+}
+
+rogue_revolver augment 6
+{
+	name revolver_last_chance
+	name_translation_key revolver_last_bullet_extra_dmg
+	desc_translation_key revolver_last_bullet_extra_dmg_desc
+	rarity epic
+	last_bullet_hit_upgrade 1
+	last_bullet_hit_damage_multiplier 1.5
+}
+
+rogue_revolver augment 7
+{
+	name revolver_secondary_rapid_fire
+	name_translation_key revolver_secondary_rapid_fire
+	desc_translation_key revolver_secondary_rapid_fire_desc
+	rarity legendary
+	overwrite alternate_fire_enabled true
+	locked_in_battlepass true
+}
+
+rogue_revolver augment 8
+{
+	name revolver_increased_headshot_damage
+	name_translation_key revolver_increased_headshot_damage
+	desc_translation_key revolver_increased_headshot_damage_desc
+	rarity common
+
+	overwrite critical_damage 35 45
+}

@@ -1,0 +1,82 @@
+rogue_revolver_secondary
+{
+	show_in_dev_console false
+	respawn_time 9
+	weapon_tag rev
+
+	default_ammo 8
+	default_ammo_pickup_ammo 8
+	default_weapon_pickup_ammo 8
+	max_ammo 8
+	unlimited_ammo false
+	reload 1400
+	
+	color fcaf3d
+	icon_path images/weapon_icons/wp_hud_revolver_02.png
+	icon_path2 images/weapon_icons/wp_card_revolver.png
+    
+    spread 0.3
+	
+	bursts 4 0.09
+	damage 12 18
+	critical_damage 15 20
+	knockback 3
+	ground_knockback 3
+    charge_animation 1
+    speed 26000
+	
+	recoil_delay_recovery 0.09
+	recoil_up 2.75
+	recoil_side 2.25
+	recoil_recovery_time 0.5
+	recoil_time 0.1
+
+	max_damage_distance 400
+    min_damage_distance 4000
+		
+	equip_time 400
+	base_combo_rate 250
+	
+	gravity_delay_by_distance 1000
+	gravity 0
+	
+	hit_radius 1 1
+	zoomed_walk_speed 200
+	
+	detached_shot_particles false
+    shot_particles weapon_revolver_muzzle_flash
+	shot_particles_attached weapon_revolver_muzzle
+   	shot_particles_attached_3p weapon_revolver_muzzle_3p
+	missile_particles weapon_revolver_projectile
+	missile_particles_1p weapon_revolver_projectile
+
+	impact_particles weapon_revolver_impact
+    player_impact_particles weapon_revolver_player_impact
+	
+// IMPACT DECALS
+	decal decal 10 3 3.561 false false alpha 1
+	decal decal_glow_red 16 3 3.561 false false alpha 30
+	decal decal_glow 10 3 3.561 false false alpha 20
+
+	model assets/shared/models/animations/wp_revolver/skm_revolver
+	muzzle 2.7 -2.8 14
+	
+	
+	//close
+	shot_sound w_rev_fire
+	//distant
+	shot_sound2 w_rev_fire_distant
+	// shot_sound_low_ammo2 weapon_pistol_fire_distant1 weapon_pistol_fire_distant2 weapon_pistol_fire_distant3 weapon_pistol_fire_distant4 weapon_pistol_fire_distant5
+	equip_sound w_rev_equip
+	hit_sound fb_enemy_hit
+	critical_hit_sound fb_enemy_hit_crit
+	out_of_ammo_sound w_rev_ooa
+	impact_sound w_mac_impact
+    
+	
+	detached_shot_particles false
+	multi_round_particles false
+
+	can_upgrade_ammo true
+	can_upgrade_tactical_reload true
+}

@@ -1,0 +1,9 @@
+arena_left_hand
+{
+	selectable false
+	
+	show_in_dev_console false
+	model assets/shared/weapons/eggbot_hand/vfx_hand/left_hand
+
+	weapon_type melee
+}

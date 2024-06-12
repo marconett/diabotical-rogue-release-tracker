@@ -1,0 +1,232 @@
+smoke_grenade
+{
+	can_drop true
+
+	weapon_tag sgr
+	name_translation_key weapon_smoke_grenade
+	desc_translation_key weapon_smoke_grenade_desc
+	
+	color 7c62d1
+	speed 1200
+ 	rate 1000
+  	damage 1
+
+	default_weapon_pickup_ammo 2
+	default_ammo 0
+	max_ammo 9
+		
+
+	target_indicator true
+	bind_group 7
+	throwable true
+	throw_animation true
+	self_damage 0
+	category 1
+	
+
+	
+	center_of_mass_offset 20
+    gravity_pitch_offset 0.05
+	gravity 250
+	
+	splash_radius 100
+	center_of_mass_offset_self 0
+  	knockback 0
+	knockback_self 0
+  	ground_knockback 0
+	ground_knockback_self 0
+
+	base_combo_rate	0
+	
+	hit_radius 1 1
+	
+	
+
+	shot_particles empty_system
+   	shot_particles_attached empty
+  	missile_particles gl_bullet_v2_green
+	//Played by the engine currently, do not uncomment
+  	impact_particles smoke_weeble_impact
+	missile_trail_particles weeb_dynamic_trail_green
+  	
+	model weaponsmw
+	model_position 1.93727 -5.30881 3.85738
+    model_position_third_person 10 -60 -35
+	model_scale 0.1
+	model_rotation 186 10 -4
+	model_camera_scale 0.5
+	muzzle 0 0 0
+	fov 55
+	muzzle_offset 0 0 0
+	
+	model weaponsmw
+	
+	
+	shot_sound weeble_sw_fire1 weeble_sw_fire2 weeble_sw_fire3 weeble_sw_fire4 weeble_sw_fire5
+	impact_sound bl_impact1
+	equip_sound sw_equip
+	out_of_ammo_sound gl_ooa
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	single_missile_sound weeble_airbound1 weeble_airbound2 weeble_airbound3 weeble_airbound4 weeble_airbound5 weeble_airbound6 weeble_airbound7
+	
+	detached_shot_particles false
+
+	weapon_type stackable
+}
+
+healing_grenade
+{
+	can_drop true
+
+	//pfx slow_weeble_filament slot_pfx_slow_weeble_exhaust
+	//pfx slow_weeble_filament slot_particle_dial
+
+    //Healing weeble is actually in the super weapons category:
+    bind_group 7
+    color 67da80
+    weapon_tag hg
+	name_translation_key weapon_healing_grenade
+	desc_translation_key weapon_healing_desc
+    sort 100
+ 	//group 3
+	unlimited_ammo false
+	speed 1100
+ 	rate 1000
+  	damage 0
+  	splash_radius 260
+
+	default_weapon_pickup_ammo 2
+	throwable true
+	throw_animation true
+	healing true
+    
+	center_of_mass_offset 20
+	
+    gravity_pitch_offset 0.05
+    
+	
+//	bounce 10000
+//	bounce_friction 0.5
+//	duration 2500
+	gravity 200
+
+	shot_particles empty_system
+   	shot_particles_attached empty
+  	missile_particles gl_bullet_v2_green_heal
+	//Played by the engine currently, do not uncomment
+  	//impact_particles heal_weeble_impact
+	missile_trail_particles weeb_dynamic_trail_green_heal
+  	
+	model weaponhw
+	model_position 0.93727 -5.30881 3.85738
+        model_position_third_person 10 -60 -35
+	model_scale 0.1
+	model_rotation 186 10 -4
+	model_camera_scale 0.8
+	muzzle 0 0 0
+	fov 55
+	muzzle_offset 0 0 0
+	
+	
+	shot_sound weeble_hw_fire1 weeble_hw_fire2 weeble_hw_fire3 weeble_hw_fire4 weeble_hw_fire5
+	impact_sound hw_impact1
+	equip_sound hw_equip
+	out_of_ammo_sound gl_ooa
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	single_missile_sound weeble_airbound_short1 weeble_airbound_short2 weeble_airbound_short3 weeble_airbound_short4 weeble_airbound_short5 weeble_airbound_short6 weeble_airbound_short7
+	
+	detached_shot_particles false
+	
+	weapon_type stackable
+}
+
+he_grenade
+{
+	can_drop true
+
+	weapon_tag heg
+	name_translation_key weapon_he_grenade
+	desc_translation_key weapon_he_desc
+	color 7c62d1
+	speed 1200
+ 	rate 1000
+  	damage 0	
+
+	default_weapon_pickup_ammo 2
+	default_ammo 0
+	max_ammo 9		
+
+	target_indicator true
+	bind_group 7
+	throwable true
+	throw_animation true
+	self_damage 0
+	category 1
+	
+	bounce 10000
+	bounce_friction 0.7
+	duration 3000
+	
+	bounce_off_players true	
+	
+	center_of_mass_offset 20
+	center_of_mass_offset_self 0
+    gravity_pitch_offset 0.05
+	gravity 300	
+	
+	splash_radius 240
+	splash_damage 75	
+	min_splash_damage 5    
+	
+  	knockback 250
+	ground_knockback 250
+	knockback_self 200
+	ground_knockback_self 200  	
+
+	base_combo_rate	0
+	
+	hit_radius 1 1	
+		
+	shot_particles empty_system
+   	shot_particles_attached gl_muzzle
+  	missile_particles gl_bullet
+  	impact_particles grenade_impact
+	missile_trail_particles gl_bullet_dynamic_trail
+	
+	shot_sound weeble_sw_fire1 weeble_sw_fire2 weeble_sw_fire3 weeble_sw_fire4 weeble_sw_fire5	
+	impact_sound gl_impact1 gl_impact2 gl_impact3 gl_impact4
+	bounce_sound gl_bounce1 gl_bounce2 gl_bounce3 gl_bounce4 gl_bounce5
+	equip_sound sw_equip
+	out_of_ammo_sound gl_ooa
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75
+	single_missile_sound gl_airbound1 gl_airbound2 gl_airbound3 gl_airbound4
+	
+	
+	detached_shot_particles false
+	
+	model weaponsmw
+	model_position 1.93727 -5.30881 3.85738
+    model_position_third_person 10 -60 -35
+	model_scale 0.1
+	model_rotation 186 10 -4
+	model_camera_scale 0.5
+	muzzle 0 0 0
+	fov 55
+	muzzle_offset 0 0 0
+	
+	model weaponsmw
+	
+	
+	//DECALS
+	//decal decal_explosion 90 
+	decal decal_plasma 40 3 3.561 false 3
+	decal decal_plasma 80 3 3.561 false 3
+	decal decal_plasma 135 3 3.561 false 3
+	decal decal_glow_red 27 3 3.561 false 25
+	decal decal_glow 20 3 3.561 false 20	
+
+	weapon_type stackable
+}

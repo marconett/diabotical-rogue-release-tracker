@@ -1,0 +1,653 @@
+
+//done - omar note
+matlib_mat_lib_concrete
+{
+  {
+    map materials/matlib/shaders/mat_concrete/mat_concrete_d.png
+    map materials/matlib/shaders/mat_concrete/mat_concrete_n.png
+    map materials/matlib/shaders/mat_concrete/mat_concrete_s.png
+    map swatches/black.png
+    map swatches/red.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+    pixel_shader_param accent1 #FFFFFF
+  }
+}
+
+//untouched - omar note
+matlib_mat_lib_glass_transparent
+{
+  {
+    map materials/matlib/shaders/mat_glass/mat_glass_transparent_d.png
+    map materials/matlib/shaders/mat_glass/mat_glass_d_transparent.png
+    map materials/matlib/shaders/mat_glass/mat_glass_s.png
+    map materials/matlib/shaders/mat_glass/mat_glass_edge.png
+    map !depth
+
+    vertex_shader water.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    vertex_shader_param look_and_time
+    pixel_shader glass.ps.cso
+    pixel_shader_param accent1 14335752
+    pixel_shader_param accent2 00000014
+    pixel_shader_param float_params3 1.0 1.0 1.0 0.0
+    pixel_shader_behaviour gi_specular
+    pixel_shader_behaviour receive_light_dir
+    pixel_shader_behaviour receive_light_point
+    pixel_shader_behaviour receive_light_spot
+    blendfunc blend
+    depth transparent
+  }
+
+}
+
+//done - omar note
+matlib_mat_lib_metal_dark
+{
+  {
+    map materials/matlib/shaders/mat_metal_dark/mat_metal_dark_d.png
+    map materials/matlib/shaders/master_base_textures/normals_dented_n.png
+    map materials/matlib/shaders/mat_metal_dark/mat_metal_dark_s.png
+    map swatches/black.png
+    map swatches/black.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+  }
+}
+
+//done - omar note
+matlib_mat_lib_metal_painted_details_floating
+{
+  {
+    map materials/matlib/shaders/mat_metal_painted/mat_metal_painted_details_floating_d.png
+    map materials/matlib/shaders/master_base_textures/details_floating_n.png
+    map materials/matlib/shaders/mat_metal_painted/mat_metal_painted_s.png
+    map swatches/black.png
+    map swatches/red.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+    pixel_shader_param accent1 #FFFFFF
+  }
+}
+
+//done - omar note
+matlib_mat_lib_rubber_floor_diamonds_01
+{
+  {
+    map materials/matlib/shaders/mat_rubber_floor_diamonds/mat_rubber_floor_diamonds_d.png
+    map materials/matlib/shaders/mat_rubber_floor_diamonds/mat_rubber_floor_diamonds_n.png
+    map materials/matlib/shaders/mat_rubber_floor_diamonds/mat_rubber_floor_diamonds_s.png
+    map swatches/black.png
+    map swatches/black.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+  }
+}
+
+//done - omar note
+matlib_mat_lib_tarp_fabric_details
+{
+  {
+    map materials/matlib/shaders/mat_tarp/mat_tarp_fabric_details_d.png
+    map materials/matlib/shaders/mat_tarp/mat_tarp_fabric_details_n.png
+    map materials/matlib/shaders/mat_tarp/mat_tarp_fabric_details_s.png
+    map swatches/black.png
+    map materials/matlib/shaders/mat_tarp/mat_tarp_fabric_details_c.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+    pixel_shader_param accent1 #FFFFFF
+  }
+}
+
+//done - omar note
+matlib_mat_lib_acrylic
+{
+  {
+    map materials/matlib/shaders/mat_acrylic/mat_acrylic_d.png
+    map materials/matlib/shaders/master_base_textures/normals_faint_scratches_n.png
+    map materials/matlib/shaders/mat_acrylic/mat_acrylic_s.png
+    map swatches/black.png
+    map swatches/red.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+    pixel_shader_param accent1 #FFFFFF
+  }
+}
+
+//untouched - omar note
+matlib_mat_lib_flat_color
+{
+  {
+    map swatches/white.png
+    map swatches/normal.png
+    map swatches/black.png
+    map swatches/black.png
+    map swatches/red.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+    pixel_shader_param accent1 #FFFFFF
+  }
+}
+
+//done - omar note
+matlib_mat_lib_metal_bright
+{
+  {
+    map materials/matlib/shaders/mat_metal_bright/mat_metal_bright_d.png
+    map materials/matlib/shaders/master_base_textures/normals_dented_n.png
+    map materials/matlib/shaders/mat_metal_bright/mat_metal_bright_s.png
+    map swatches/black.png
+    map swatches/black.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+  }
+}
+
+//done - omar note
+matlib_mat_lib_metal_floor_circles
+{
+  {
+    map materials/matlib/shaders/mat_metal_floor_circles/mat_metal_floor_circles_d.png
+    map materials/matlib/shaders/mat_metal_floor_circles/mat_metal_floor_circles_n.png
+    map materials/matlib/shaders/mat_metal_floor_circles/mat_metal_floor_circles_s.png
+    map swatches/black.png
+    map swatches/red.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+    pixel_shader_param accent1 #FFFFFF
+  }
+}
+
+//done - omar note
+matlib_mat_lib_metal_shiny_details_floating
+{
+  {
+    map materials/matlib/shaders/mat_metal_shiny/mat_metal_shiny_details_floating_d.png
+    map materials/matlib/shaders/master_base_textures/details_floating_n.png
+    map materials/matlib/shaders/mat_metal_shiny/mat_metal_shiny_s.png
+    map swatches/black.png
+    map swatches/black.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+  }
+}
+
+//done - omar note
+matlib_mat_lib_details_edge
+{
+  {
+    map materials/matlib/shaders/mat_details_edge/mat_details_edge_d.png
+    map materials/matlib/shaders/mat_details_edge/mat_details_edge_n.png
+    map materials/matlib/shaders/mat_details_edge/mat_details_edge_s.png
+    map swatches/black.png
+    map swatches/black.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+  }
+}
+
+//done - omar note
+matlib_mat_lib_hex_solar_panels
+{
+  {
+    map materials/matlib/shaders/mat_hex_solar_panels/mat_hex_solar_panels_colorable_d.png
+    map materials/matlib/shaders/mat_hex_solar_panels/mat_hex_solar_panels_n.png
+    map materials/matlib/shaders/mat_hex_solar_panels/mat_hex_solar_panels_s.png
+    map swatches/black.png
+    map swatches/black.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+    pixel_shader_param accent2 #3d749e
+  }
+}
+
+//done - omar note
+matlib_mat_lib_solar_panels
+{
+  {
+    map materials/matlib/shaders/mat_solar_panels/mat_solar_panels_colorable_d.png
+    map materials/matlib/shaders/mat_solar_panels/mat_solar_panels_n.png
+    map materials/matlib/shaders/mat_solar_panels/mat_solar_panels_s.png
+    map swatches/black.png
+    map swatches/black.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+    pixel_shader_param accent2 #3d749e
+  }
+}
+
+//done - omar note
+matlib_mat_lib_metal_dark_details_floating
+{
+  {
+    map materials/matlib/shaders/mat_metal_dark/mat_metal_dark_details_floating_d.png
+    map materials/matlib/shaders/master_base_textures/details_floating_n.png
+    map materials/matlib/shaders/mat_metal_dark/mat_metal_dark_s.png
+    map swatches/black.png
+    map swatches/black.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+  }
+}
+
+//done - omar note
+matlib_mat_lib_metal_panels_01
+{
+  {
+    map materials/matlib/shaders/mat_metal_panels_01/mat_metal_panels_01_d.png
+    map materials/matlib/shaders/mat_metal_panels_01/mat_metal_panels_01_n.png
+    map materials/matlib/shaders/mat_metal_panels_01/mat_metal_panels_01_s.png
+    map swatches/black.png
+    map materials/matlib/shaders/mat_metal_panels_01/mat_metal_panels_01_c.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+    pixel_shader_param accent1 #FFFFFF
+  }
+}
+
+//done - omar note
+matlib_mat_lib_blockout_face
+{
+  {
+    map materials/matlib/shaders/mat_blockout/mat_blockout_face_d.png
+    map materials/matlib/shaders/mat_blockout/mat_blockout_face_n.png
+    map swatches/black.png
+    map swatches/black.png
+    map swatches/black.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+  }
+}
+
+//untouched - omar note
+matlib_mat_lib_glass
+{
+  {
+    map materials/matlib/shaders/mat_glass/mat_glass_d.png
+    map materials/matlib/shaders/mat_glass/mat_glass_n.png
+    map materials/matlib/shaders/mat_glass/mat_glass_s.png
+    map swatches/black.png
+    map swatches/red.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+    pixel_shader_param accent1 #FFFFFF
+  }
+}
+
+//done - omar note - merged with painted textures
+matlib_mat_lib_plastic
+{
+  {
+    map materials/matlib/shaders/mat_metal_painted/mat_metal_painted_d.png
+	map materials/matlib/shaders/master_base_textures/normals_faint_scratches_n.png
+    map materials/matlib/shaders/mat_metal_painted/mat_metal_painted_s.png
+    map swatches/black.png
+    map swatches/red.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+    pixel_shader_param accent1 #FFFFFF
+  }
+}
+
+//done - omar note
+matlib_mat_lib_metal_gold
+{
+  {
+    map materials/matlib/shaders/mat_metal_gold/mat_metal_gold_d.png
+    map materials/matlib/shaders/master_base_textures/normals_faint_scratches_n.png
+    map materials/matlib/shaders/mat_metal_gold/mat_metal_gold_s.png
+    map swatches/black.png
+    map swatches/black.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+  }
+}
+
+//done - omar note
+matlib_mat_lib_metal_bright_details_floating
+{
+  {
+    map materials/matlib/shaders/mat_metal_bright/mat_metal_bright_details_floating_d.png
+    map materials/matlib/shaders/master_base_textures/details_floating_n.png
+    map materials/matlib/shaders/mat_metal_bright/mat_metal_bright_s.png
+    map swatches/black.png
+    map swatches/black.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+  }
+}
+
+//done - omar note
+matlib_mat_lib_details_floating
+{
+  {
+    map materials/matlib/shaders/mat_details_floating/mat_details_floating_d.png
+    map materials/matlib/shaders/mat_details_floating/mat_details_floating_n.png
+    map materials/matlib/shaders/mat_details_floating/mat_details_floating_s.png
+    map swatches/black.png
+    map materials/matlib/shaders/mat_details_floating/mat_details_floating_c.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+    pixel_shader_param accent1 #FFFFFF
+  }
+}
+
+//done - omar note
+matlib_mat_lib_solar_panels_colorable
+{
+  {
+    map materials/matlib/shaders/mat_solar_panels/mat_solar_panels_colorable_d.png
+    map materials/matlib/shaders/mat_solar_panels/mat_solar_panels_n.png
+    map materials/matlib/shaders/mat_solar_panels/mat_solar_panels_s.png
+    map swatches/black.png
+    map swatches/green.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+    pixel_shader_param accent2 #FFFFFF
+  }
+}
+
+//done - omar note
+matlib_mat_lib_hex_solar_panels_colorable
+{
+  {
+    map materials/matlib/shaders/mat_hex_solar_panels/mat_hex_solar_panels_colorable_d.png
+    map materials/matlib/shaders/mat_hex_solar_panels/mat_hex_solar_panels_n.png
+    map materials/matlib/shaders/mat_hex_solar_panels/mat_hex_solar_panels_s.png
+    map swatches/black.png
+    map swatches/green.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+    pixel_shader_param accent2 #FFFFFF
+  }
+}
+
+//done - omar note
+matlib_mat_lib_metal_dents_01
+{
+  {
+    map materials/matlib/shaders/mat_metal_dents/mat_metal_dents_01_d.png
+    map materials/matlib/shaders/mat_metal_dents/mat_metal_dents_01_n.png
+    map materials/matlib/shaders/mat_metal_dents/mat_metal_dents_01_s.png
+    map swatches/black.png
+    map swatches/black.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+  }
+}
+
+//done - omar note
+matlib_mat_lib_metal_plates
+{
+  {
+    map materials/matlib/shaders/mat_metal_plates/mat_metal_plates_d.png
+    map materials/matlib/shaders/mat_metal_plates/mat_metal_plates_n.png
+    map materials/matlib/shaders/mat_metal_plates/mat_metal_plates_s.png
+    map swatches/black.png
+    map materials/matlib/shaders/mat_metal_plates/mat_metal_plates_c.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+    pixel_shader_param accent1 #FFFFFF
+  }
+}
+
+//done - omar note
+matlib_mat_lib_blockout_trim
+{
+  {
+    map materials/matlib/shaders/mat_blockout/mat_blockout_trim_d.png
+    map materials/matlib/shaders/mat_blockout/mat_blockout_trim_n.png
+    map swatches/black.png
+    map swatches/black.png
+    map swatches/black.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+  }
+}
+
+//untouched - omar note
+matlib_mat_lib_glass_frosted
+{
+  {
+    map materials/matlib/shaders/mat_glass/mat_glass_d_frosted.png
+    map materials/matlib/shaders/mat_glass/mat_glass_n.png
+    map materials/matlib/shaders/mat_glass/mat_glass_s.png
+    map materials/matlib/shaders/mat_glass/mat_glass_edge.png
+    map !depth
+    map !skybox
+    map !colormap
+    vertex_shader water.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    vertex_shader_param look_and_time
+    pixel_shader glass.ps.cso
+    pixel_shader_param accent1 14335752
+    pixel_shader_param accent2 00000014
+    pixel_shader_param float_params3 1.0 1.0 3.0 0.4000000059604645
+    pixel_shader_behaviour gi_specular
+    pixel_shader_behaviour receive_light_dir
+    pixel_shader_behaviour receive_light_point
+    pixel_shader_behaviour receive_light_spot
+    blendfunc blend
+    depth read_only
+  }
+}
+
+//done - omar note
+matlib_mat_lib_metal_copper
+{
+  {
+    map materials/matlib/shaders/mat_metal_copper/mat_metal_copper_d.png
+    map materials/matlib/shaders/master_base_textures/normals_faint_scratches_n.png
+    map materials/matlib/shaders/mat_metal_copper/mat_metal_copper_s.png
+    map swatches/black.png
+    map swatches/black.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+  }
+}
+
+//done - omar note
+matlib_mat_lib_metal_painted
+{
+  {
+    map materials/matlib/shaders/mat_metal_painted/mat_metal_painted_d.png
+    map materials/matlib/shaders/master_base_textures/normals_faint_scratches_n.png
+    map materials/matlib/shaders/mat_metal_painted/mat_metal_painted_s.png
+    map swatches/black.png
+    map swatches/red.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+    pixel_shader_param accent1 #FFFFFF
+  }
+}
+
+//done - omar note
+matlib_mat_lib_rubber_dark
+{
+  {
+    map materials/matlib/shaders/mat_rubber_dark/mat_rubber_dark_d.png
+    map materials/matlib/shaders/master_base_textures/normals_faint_scratches_n.png
+    map materials/matlib/shaders/mat_rubber_dark/mat_rubber_dark_s.png
+    map swatches/black.png
+    map swatches/red.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+    pixel_shader_param accent1 #FFFFFF
+  }
+}
+
+//done - omar note
+matlib_mat_lib_tarp_fabric
+{
+  {
+    map materials/matlib/shaders/mat_tarp/mat_tarp_fabric_d.png
+    map materials/matlib/shaders/mat_tarp/mat_tarp_fabric_n.png
+    map materials/matlib/shaders/mat_tarp/mat_tarp_fabric_s.png
+    map swatches/black.png
+    map swatches/red.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+    pixel_shader_param accent1 #FFFFFF
+  }
+}
+
+//unteouched - omar note
+matlib_mat_lib_emissive
+{
+  {
+    map swatches/gray_mid.png
+    map swatches/normal.png
+    map swatches/emissive_full.png
+    map swatches/black.png
+    map swatches/blue.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+    pixel_shader_param accent3 #FFFFFF
+  }
+}
+
+//done - omar note
+matlib_mat_lib_metal_floor_01
+{
+  {
+    map materials/matlib/shaders/mat_metal_floor/mat_metal_floor_01_d.png
+    map materials/matlib/shaders/master_base_textures/normals_faint_scratches_n.png
+    map materials/matlib/shaders/mat_metal_floor/mat_metal_floor_01_s.png
+    map swatches/black.png
+    map swatches/black.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+  }
+}
+
+//done - omar note
+matlib_mat_lib_metal_shiny
+{
+  {
+    map materials/matlib/shaders/mat_metal_shiny/mat_metal_shiny_d.png
+    map materials/matlib/shaders/master_base_textures/normals_faint_scratches_n.png
+    map materials/matlib/shaders/mat_metal_shiny/mat_metal_shiny_s.png
+    map swatches/black.png
+    map swatches/black.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+  }
+}
+
+//done - omar note
+matlib_mat_lib_lamp
+{
+  {
+    map materials/matlib/shaders/mat_lamp/lamp_d.png
+    map swatches/normal.png
+    map materials/matlib/shaders/mat_lamp/lamp_s.png
+    map swatches/black.png
+    map swatches/black.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+  }
+}

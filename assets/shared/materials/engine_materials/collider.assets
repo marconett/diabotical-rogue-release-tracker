@@ -1,0 +1,8 @@
+asset collider
+{
+	type material
+	listed true
+	tags NONE
+	material override_collider
+	mat_override true
+}

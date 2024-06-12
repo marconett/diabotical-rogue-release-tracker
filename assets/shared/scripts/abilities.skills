@@ -1,0 +1,2427 @@
+// // DONT CHANGE ID NUMBERS ASSIGNED TO  SKILLS!
+// // we rely on tags being equivalent to weapon definition names in code
+
+// skill 0
+// {
+//     name Vampire
+//     description Temporarily grants lifesteal.
+//     hud_icon skill_hud_vampire.png
+//     tag vampire
+//     //TODO: Hardcoded at some places in the engine
+//     duration 6.0
+//     cooldown 20
+//     small_cooldown 0
+//     cost 30
+//     charges 10
+// 	show_in_dev_console false
+// 	//set game_lifesteal 0.5 6
+// }
+
+// skill 1
+// {
+//     name Bolt
+//     description Allows you to thrust yourself in any direction.
+//     hud_icon skill_hud_haste.png
+// 	tag bolt
+//     //4, 12, 0.4
+//     duration 0
+//     cooldown 0
+//     small_cooldown 0
+//     cost 30
+//     charges 10
+// 	show_in_dev_console false
+// }
+
+// skill 2
+// {
+//     name Heal
+//     description Regenerates yourself and your allies around you.
+//     hud_icon skill_hud_heal.png
+//     tag heal
+//     duration 5
+//     cooldown 30
+//     small_cooldown 0
+//     cost 30
+//     charges 10
+// 	show_in_dev_console false
+// }
+
+// skill 3
+// {
+//     name Hook
+//     description Hookitty hooky hook.
+//     name_translation_key skill_hookshot
+//     desc_translation_key skill_hookshot_desc
+//     hud_icon skill_hud_hook.png
+//     tag hook
+//     duration 0
+//     cooldown 14
+//     small_cooldown 0
+//     cost 50
+//     charges 10
+// 	use action hook
+// 	show_in_dev_console false
+// }
+
+// skill 3 mod 1
+// {
+//     charges 15
+// }
+
+// skill 3 mod 1 tier 1
+// {
+//     charges 20
+// }
+
+// skill 3 mod 2
+// {
+//     cooldown 5
+// }
+
+// skill 3 mod 2 tier 1
+// {
+//     cooldown 2
+// }
+
+// skill 4
+// {
+//     name Powerjump
+//     description Allows you to thrust yourself upwards.
+//     name_translation_key skill_powerjump
+//     desc_translation_key skill_powerjump_desc
+//     hud_icon skill_hud_bolt.png
+//     tag powerjump
+//     //4, 12, 0.4
+//     duration 0
+//     cooldown 15
+//     small_cooldown 0
+//     cost 50
+//     charges 10
+// 	show_in_dev_console false
+// }
+
+// skill 4 mod 1
+// {
+//     charges 15
+// }
+
+// skill 4 mod 1 tier 1
+// {
+//     charges 15
+// }
+
+// skill 4 mod 2
+// {
+//     charges 20
+// }
+
+// skill 4 mod 2 tier 1
+// {
+//     charges 25
+// }
+
+
+// skill 5
+// {
+//     name Throw MacGuffin
+//     description Throws the MacGuffin
+//     hud_icon skill_hud_bolt.png
+//     tag throw_macguffin
+//     //4, 12, 0.4
+//     duration 0
+//     cooldown 0
+//     small_cooldown 0
+//     cost 50
+//     charges 1
+// 	show_in_dev_console false
+// }
+
+// skill 6
+// {
+//     name Drop Flag
+//     description Drops the flag
+//     hud_icon skill_hud_bolt.png
+//     tag drop_flag
+//     //4, 12, 0.4
+//     duration 0
+//     cooldown 0
+//     small_cooldown 0
+//     cost 50
+//     charges 1
+// 	show_in_dev_console false
+// }
+
+
+// skill 7
+// {
+//     name Claim weeball
+//     description Claims your weeball
+//     hud_icon skill_hud_bolt.png
+//     tag claim_weeball
+//     duration 0
+//     cooldown 0
+//     small_cooldown 0
+//     cost 50
+//     charges 1
+// 	show_in_dev_console false
+// }
+
+// skill 8
+// {
+//     name Slow
+//     description Slow
+//     hud_icon skill_hud_bolt.png
+//     tag claim_weeball
+//     duration 3
+//     cooldown 10
+//     small_cooldown 0
+//     cost 50
+//     charges 1
+// 	show_in_dev_console false
+// }
+
+// skill 8 mod 1
+// {
+//     cooldown 8
+// }
+
+// skill 8 mod 1 tier 1
+// {
+//     cooldown 8
+// }
+
+// skill 8 mod 2
+// {
+//     cooldown 2
+// }
+
+// skill 8 mod 2 tier 1
+// {
+//     cooldown 1
+// }
+
+
+// skill 9
+// {
+//     name Scan
+//     description Scan
+//     hud_icon skill_hud_bolt.png
+//     tag claim_weeball
+//     duration 3
+//     cooldown 10
+//     small_cooldown 0
+//     cost 50
+//     charges 1
+// 	show_in_dev_console false
+// }
+
+// skill 10
+// {
+//     name Knock weeball
+//     description Knock weeball
+//     hud_icon skill_hud_bolt.png
+//     tag knock_weeball
+//     duration 0
+//     cooldown 30
+//     small_cooldown 0
+//     cost 50
+//     charges 1
+// 	show_in_dev_console false
+// }
+// skill 11
+// {
+//     name Slow weeball
+//     description Slow weeball
+//     name_translation_key skill_weeball
+//     desc_translation_key skill_weeball_desc						
+//     hud_icon images/skill_icons/weapon_sw.svg
+//     tag slowfield_weeball
+	
+//     duration 0
+//     cooldown 35
+//     small_cooldown 0
+//     cost 50
+//     charges 1
+// 	show_in_dev_console false
+// }
+
+// skill 11 mod 1
+// {
+//     desc_translation_key skill_weeball_m1_desc banana sky
+//     cooldown 28
+// }
+
+// skill 11 mod 1 tier 1
+// {
+//     cooldown 20
+// }
+
+// skill 12
+// {
+//     name Smoke weeball
+//     description Smoke weeball
+//     name_translation_key skill_smoke_weeball
+//     desc_translation_key skill_smoke_weeball_desc
+//     hud_icon images/skill_icons/weapon_smw.svg
+//     tag smoke_weeball
+// 	show_in_dev_console false
+	
+//     duration 0
+//     cooldown 25
+//     small_cooldown 0
+//     cost 50
+//     charges 1
+// }
+
+// skill 12 mod 1
+// {
+//     cooldown 20
+// }
+
+// skill 12 mod 1 tier 1
+// {
+//     cooldown 15
+// }
+
+// skill 13
+// {
+//     name Implosive weeball
+//     description Implosive weeball
+//     name_translation_key skill_implosive_weeball
+//     desc_translation_key skill_implosive_weeball_desc
+//     hud_icon images/skill_icons/weapon_iw.svg
+//     tag implosive_weeball
+// 	show_in_dev_console false
+	
+//     duration 0
+//     cooldown 25
+//     small_cooldown 0
+//     cost 50
+//     charges 1
+// }
+
+// skill 13 mod 1
+// {
+// 	cooldown 20
+// }
+
+// skill 13 mod 1 tier 1
+// {
+// 	cooldown 15
+// }
+
+
+// skill 14
+// {
+//     name Explosive weeball
+//     description Explosive weeball
+//     name_translation_key skill_explosive_weeball
+//     desc_translation_key skill_explosive_weeball_desc
+//     hud_icon images/weapon_icons/weapon_gl.svg
+//     tag explosive_weeball
+// 	show_in_dev_console false
+	
+//     duration 0
+//     cooldown 30
+//     small_cooldown 0
+//     cost 50
+//     charges 1
+// }
+
+
+// skill 14 mod 1
+// {
+//     cooldown 35
+// }
+
+// skill 14 mod 1 tier 1
+// {
+//     cooldown 30
+// }
+
+
+// skill 14 mod 2
+// {
+//     cooldown 25
+// }
+
+// skill 14 mod 2 tier 1
+// {
+//     cooldown 20
+// }
+
+
+// skill 15
+// {
+//     name Knock weeball
+//     description Knock weeball
+//     hud_icon skill_hud_bolt.png
+//     tag instagib_knock_weeball
+// 	show_in_dev_console false
+	
+//     duration 0
+//     cooldown 1
+//     small_cooldown 0
+//     cost 50
+//     charges 1
+// }
+
+// skill 16
+// {
+// 	tag hammer_time
+//     name Hammer Time
+//     description Hammer Time
+//     name_translation_key skill_hammer_time
+//     desc_translation_key skill_hammer_time_desc
+//     hud_icon images/weapon_icons/weapon_melee.svg
+    
+// 	show_in_dev_console false
+//     duration 0
+//     cooldown 10
+//     small_cooldown 0
+//     cost 0
+//     charges 10
+// }
+
+// skill 16 mod 1
+// {
+//     charges 15
+// }
+
+// skill 16 mod 1 tier 1
+// {
+//     charges 10
+// }
+
+// skill 16 mod 2
+// {
+//     charges 20
+// }
+
+// skill 16 mod 2 tier 1
+// {
+//     charges 15
+// }
+
+
+// skill 17
+// {
+//     name Melee
+//     description Melee
+//     hud_icon images/weapon_icons/weapon_melee.svg
+//     tag sword
+	
+//     duration 0
+//     cooldown 1
+//     small_cooldown 0
+//     cast_animation false
+// 	show_in_dev_console false
+//     cost 0
+//     charges 10
+// }
+
+// skill 18
+// {
+//     name Translocator
+//     name_translation_key skill_translocator
+//     desc_translation_key skill_translocator_desc
+//     hud_icon images/skill_icons/Rogue_Ability_Icon_Translocator.png
+//     hud_icon2 images/skill_icons/Rogue_Ability_Icon_Translocator_Activate.png
+// 	tag translocator
+	
+// 	selectable false
+// 	show_in_dev_console false
+	
+//     duration 1.5
+//     cooldown 18
+//     small_cooldown 0
+//     cost 0
+//     charges 10
+//     prevent_cooldown_on_initial_fire true
+	
+// 	use teleport
+// 	skill_sound teleport cast weeble_hw_fire1
+// 	skill_sound teleport finish translocator_teleport1
+// }
+
+// skill 18 mod 1
+// {
+// 	name_translation_key skill_translocator
+// 	desc_translation_key skill_lowers_cooldown_desc 10
+//     cooldown 10
+//     duration 15
+// }
+
+// skill 18 mod 1 tier 1
+// {
+// 	name_translation_key skill_translocator
+// 	desc_translation_key skill_lowers_cooldown_desc 5
+	
+//     cooldown 5
+//     duration 20
+// }
+
+// skill 19
+// {
+//     name Egg Gods Bolt
+//     name_translation_key skill_egggods_bolt
+//     desc_translation_key skill_egggods_bolt_desc
+//     hud_icon images/powerup_surge.svg	
+//     tag egggods_bolt
+	
+//     cast_animation false
+// 	show_in_dev_console false
+//     duration 0
+//     cooldown 4
+//     small_cooldown 0
+//     cost 30
+//     charges 10
+// }
+
+
+// skill 19 mod 1
+// {
+//     charges 15
+// }
+
+// skill 19 mod 1 tier 1
+// {
+//     charges 20
+// }
+
+// skill 19 mod 2
+// {
+//     charges 20
+// }
+
+// skill 19 mod 2 tier 1
+// {
+//     charges 25
+// }
+
+// skill 20
+// {
+//     name Egg Gods Heal
+//     description Heal bomb
+//     hud_icon images/skill_icons/weapon_hw.svg	
+//     tag healing_weeball
+// 	show_in_dev_console false
+	
+//     duration 0
+//     cooldown 999
+//     small_cooldown 0
+//     cost 30
+//     charges 1
+// 	max_charges 1
+// 	charge_grant_time 10
+// }
+
+// skill 21
+// {
+//     name inflation
+//     description Heal bomb
+//     hud_icon images/skill_icons/weapon_hw.svg
+//     tag inflation
+// 	show_in_dev_console false
+	
+//     duration 5
+//     cooldown 20
+//     small_cooldown 0
+//     cost 30
+//     charges 10
+// 	use change_size 2.0
+// 	// set phy_speed 225 10
+//     // set game_hp 300 10
+//     // set game_max_hp 300 10
+//     // set game_stable_hp 300 10
+//     // set game_player_hitbox_height 100 10
+//     // set game_player_hitbox_width 40 10
+//     // set game_player_view_height 62 10
+//     // set game_player_crouch_view_height 62 10
+// }
+
+// skill 22
+// {
+//     name Egg Gods Dash
+//     name_translation_key skill_egggods_dash
+//     desc_translation_key skill_egggods_dash_desc
+//     hud_icon images/skill_icons/Rogue_Ability_Icon_Fire_Dash.png  
+// 	hud_icon2 images/skill_icons/Rogue_Ability_Icon_Dash_Rewind.png
+	
+// 	selectable false
+	
+//     duration 0
+//     cooldown 4
+//     cast_animation false
+// 	fov_multiplier 0.85
+// 	use dash
+// 	show_in_dev_console false
+	
+// 	dash_duration 0.13
+// 	dash_damage 0
+// 	dash_speed 2750
+// 	dash_fire_trail_damage 100
+// }
+
+// //Dash distance
+// skill 22 mod 1
+// {
+// 	name_translation_key skill_egggods_dash_m1
+// 	desc_translation_key skill_egggods_dash_m1_desc 585 //x = dash_duration * dash_speed
+
+	
+// 	dash_duration 0.13
+// 	dash_speed 2750
+// }
+
+// skill 22 mod 2
+// {
+// 	name_translation_key skill_egggods_dash_m2
+// 	desc_translation_key skill_egggods_dash_m2_desc 2
+	
+// 	charge_grant_time 4
+//     max_charges 2
+// 	cooldown 0.5
+// }
+
+// //Dash fire trail
+// skill 22 mod 3
+// {
+// 	name_translation_key skill_egggods_dash_m3
+// 	desc_translation_key skill_egggods_dash_m3_desc 20 //x = dash_fire_trail_damage * 2
+	
+//     dash_spawn_fire_trail true
+// 	dash_fire_trail_damage 10
+// }
+
+// //Dash healing trail
+// //skill 22 mod 3 tier 1
+// //{
+// //	name_translation_key skill_egggods_dash_m3_t1
+// //	desc_translation_key skill_egggods_dash_m3_desc 20 //x = dash_fire_trail_damage * 2
+	
+// //	dash_spawn_fire_trail true
+// //	dash_fire_trail_damage 10
+// //    dash_fire_trail_heal true
+// //	dash_fire_trail_heal_amount 10
+	
+// //	selectable false
+// //}
+
+// //Restore Heal
+// skill 22 mod 4
+// {
+// 	name_translation_key skill_egggods_dash_m4
+// 	desc_translation_key skill_egggods_dash_m4_desc
+	
+// 	dash_restore_heal 20
+// }
+
+// //Speed boost
+// skill 22 mod 5
+// {
+// 	name_translation_key skill_egggods_dash_m5
+// 	desc_translation_key skill_egggods_dash_m5_desc 40 3 //y = (dash_speed_boost_multi - 1) * 100
+	
+// 	dash_speed_boost_duration 3
+// 	dash_speed_boost_multi 1.4 
+// }
+
+// //Restore Ammo
+// //skill 22 mod 6
+// //{
+// //	name_translation_key skill_egggods_dash_m6
+// //	desc_translation_key skill_egggods_dash_m6_desc 50
+// //	
+// //	dash_ammo_restore_procent 0.5
+// //}
+
+
+// //Dash Any Direction
+// skill 22 mod 7
+// {
+// 	name_translation_key skill_egggods_dash_m7
+// 	desc_translation_key skill_egggods_dash_m7_desc
+	
+// 	rarity 2
+	
+// 	dash_towards_where_you_aim true
+// }
+
+// //Dash Explode
+// skill 22 mod 8
+// {
+// 	name_translation_key skill_egggods_dash_m8
+// 	desc_translation_key skill_egggods_dash_m8_desc
+	
+// 	rarity 2
+	
+// 	dash_explode true
+// }
+
+// //Dash Multi directonal
+// skill 22 mod 9
+// {
+// 	name_translation_key skill_egggods_dash_m9
+// 	desc_translation_key skill_egggods_dash_m9_desc
+	
+// 	rarity 1
+	
+// 	dash_multi_directional true
+// }
+
+// //Heal Dash
+// skill 22 mod 10
+// {
+// 	name_translation_key skill_egggods_dash_m10
+// 	desc_translation_key skill_egggods_dash_m10_desc
+	
+// 	rarity 5
+	
+// 	dash_healing_dash true
+// }
+
+
+// //Damage Dash
+// skill 22 mod 11
+// {
+// 	name_translation_key skill_egggods_dash_m11
+// 	desc_translation_key skill_egggods_dash_m11_desc
+	
+// 	rarity 3
+	
+// 	dash_damage_enemies true
+// }
+
+// skill 22 mod 12
+// {
+// 	name_translation_key skill_egggods_dash_m12
+// 	desc_translation_key skill_egggods_dash_m12_desc
+	
+// 	prevent_cooldown_on_initial_fire true	
+	
+// 	dash_rewind true
+// }
+
+// skill 23
+// {	
+//     name Freeze
+//     description Freeze
+//     name_translation_key skill_freeze
+//     desc_translation_key skill_freeze_desc
+//     hud_icon images/frozen.svg
+// 	tag freeze
+// 	show_in_dev_console false
+	
+//     duration 2
+//     cooldown 15
+//     small_cooldown 0
+//     cost 30
+	
+// 	use freeze
+// 	skill_sound freeze start freeze_weball_freeze_start1 freeze_weball_freeze_start2 freeze_weball_freeze_start3 freeze_weball_freeze_start4
+// 	skill_sound freeze finish freeze_weball_freeze_end1 freeze_weball_freeze_end2 freeze_weball_freeze_end3 freeze_weball_freeze_end4
+// }
+
+// skill 23 mod 1
+// {	
+//     cooldown 13
+// 	desc_translation_key skill_lowers_cooldown_desc 13
+// }
+
+// skill 23 mod 1 tier 1
+// {
+//     cooldown 11
+// 	desc_translation_key skill_lowers_cooldown_desc 11
+// }
+
+// skill 23 mod 1 tier 2
+// {
+//     cooldown 9
+// 	desc_translation_key skill_lowers_cooldown_desc 9
+// }
+
+// skill 24
+// {	
+//     name Wall Slide
+//     description Wall Slide
+//     hud_icon images/controls_right.svg
+// 	tag wall_slide
+	
+//     duration 0
+//     cooldown 0
+//     small_cooldown 0
+//     cast_animation false
+// 	show_in_dev_console false
+//     charges 10
+// 	use action roll
+//     // set phy_roll_speed 400 3
+//     // set phy_roll_horizontal 1 3
+// 	// set phy_roll_type 1 3
+// 	// set phy_roll_duration 3 3 
+// }
+
+// skill 25
+// {
+//     name Swap
+//     description Swap
+//     name_translation_key skill_swap
+//     desc_translation_key skill_swap_desc
+//     hud_icon images/input_lmb.svg
+// 	tag swap
+// 	show_in_dev_console false
+		
+//     duration 0
+//     cooldown 50
+//     swap true
+// }
+
+// skill 25 mod 1
+// {
+//     cooldown 35
+// }
+
+// skill 25 mod 1 tier 1
+// {
+//     cooldown 30
+// }
+
+// skill 26
+// {	
+//     name Jumppad
+//     description Jumppad
+//     name_translation_key skill_jumppad
+//     desc_translation_key skill_jumppad_desc
+//     hud_icon images/skill_icons/Jummpad_Icon_Rogue.svg
+// 	tag jumppad
+// 	show_in_dev_console false
+	
+//     duration 0
+//     cooldown 20
+//     small_cooldown 0
+//     cost 30
+//     use deploy_jumppad
+//     deploy_jumppad_duration 2
+//     deploy_jumppad_radius 40
+// 	//set phy_air_speed 275 2
+// }
+
+// skill 26 mod 1
+// {
+//     deploy_jumppad_duration 5
+//     deploy_jumppad_radius 80
+// }
+
+// skill 26 mod 1 tier 1
+// {
+//     deploy_jumppad_duration 10
+//     deploy_jumppad_radius 80
+// }
+
+// skill 26 mod 2
+// {
+// 	desc_translation_key skill_lowers_cooldown_desc 10
+	
+//     cooldown 10
+// }
+
+// skill 26 mod 2 tier 1
+// {
+// 	desc_translation_key skill_lowers_cooldown_desc 5
+	
+//     cooldown 5
+// }
+
+
+// skill 27
+// {
+//     name Egg Gods Force Grip
+//     description Grab enemy, ability to move them around and throw on second key press
+//     hud_icon images/weeb_dropped.svg
+//     tag force_grip
+// 	show_in_dev_console false
+	
+//     duration 0
+//     cooldown 10
+//     small_cooldown 0
+//     cost 30
+//     charges 10
+// 	use force_grip
+// 	force_grip_duration 3
+//     force_grip_speed 4
+// }
+
+// skill 27 mod 1
+// {
+//     cooldown 8
+//     force_grip_duration 5
+// }
+
+// skill 27 mod 1 tier 1
+// {
+//     cooldown 5
+// }
+
+// skill 27 mod 2
+// {
+//     force_grip_duration 8
+// }
+
+// skill 27 mod 2 tier 1
+// {
+//     force_grip_duration 12
+// }
+
+// skill 28
+// {	
+//     name Sprint
+//     description Sprint
+//     hud_icon images/controls_right.svg
+// 	tag sprint
+	
+//     duration 999
+//     cooldown 0
+//     small_cooldown 0
+//     cast_animation false
+// 	show_in_dev_console false
+//     cost 30
+//     use	action sprint
+// 	set phy_sprint_max VALUE 105 dur:999999 in:0.1 out:0.1 delay:0.0 prio:-1 parallel:false self_reset:true
+// 	set phy_sprint_rate VALUE 700 dur:999999 in:0.1 out:0.1   0.0 -1 false true
+// 	set phy_max_ground_speed VALUE 350 dur:999999 in:0.1 out:0.1   0.0 -1 false true
+// 	set game_camera_offset ADD 5 dur:999999 in:0.25 out:0.5   0.0 -1 false true
+// 	prevent_overriding_consumable true
+// }
+
+// skill 29
+// {	
+//     name Slide
+//     description Slide
+//     hud_icon images/controls_down.svg
+// 	tag slide
+	
+//     duration 0
+//     cooldown 20
+//     small_cooldown 0
+//     cast_animation false
+// 	show_in_dev_console false
+//     cost 30
+//     use action move_down
+// 	set phy_slide VALUE 1
+// 	set phy_slide_accel VALUE 400 dur:3 in:0.1 out:0.1
+// 	set phy_slide_duration_eigenvalue VALUE 3 dur:3 in:0.1 out:0.1
+// 	set phy_slide_duration_gamma VALUE 3 dur:3 in:0.1 out:0.1
+// 	set phy_slide_duration_max VALUE 3 dur:3 in:0.1 out:0.1
+//     set phy_max_ground_speed VALUE 450 dur:3 in:0.1 out:0.1
+// }
+
+// skill 30
+// {	
+//     name Bounce
+//     description bounce
+//     hud_icon images/controls_up.svg
+// 	tag bounce
+// 	show_in_dev_console false
+	
+//     duration 4
+//     cooldown 20
+//     small_cooldown 0
+//     cost 30
+//     use action bounce
+// }
+
+// skill 31
+// {	
+//     name Reverse
+//     description reverse
+//     hud_icon images/controls_left.svg
+// 	tag reverse
+// 	show_in_dev_console false
+	
+//     duration 0
+//     cooldown 20
+//     small_cooldown 0
+//     cost 30
+//     use action reverse 
+// }
+
+// skill 32
+// {	
+//     name Boost
+//     description boost
+//     name_translation_key skill_boost
+//     desc_translation_key skill_boost_desc
+//     hud_icon images/skill_icons/Boost_Icon_Rogue.svg
+// 	tag boost
+	
+//     cast_animation false
+// 	show_in_dev_console false
+//     duration 0
+//     cooldown 20
+//     small_cooldown 0
+//     cost 30
+//     use action boost 
+	
+// 	//set phy_max_ground_speed ADD 250 dur_1
+// }
+
+// skill 32 mod 1
+// {
+// 	//set phy_max_ground_speed ADD 350 dur_1
+// }
+
+// skill 32 mod 1 tier 1
+// {
+// 	//set phy_max_ground_speed ADD 450 dur_1
+// }
+
+// skill 33
+// {	
+//     name Hug me bot
+//     description Spawn an AI hug me bot, that chases enemies around the arena trying to hug them
+//     hud_icon images/skill_icons/weapon_kw.svg
+// 	tag hugme_bot
+// 	show_in_dev_console false
+	
+//     duration 0
+//     cooldown 20
+//     small_cooldown 0
+//     cost 30
+//     use spawn_bot
+// }
+
+// skill 34
+// {	
+//     name Leap_Slam
+//     description Leap Slam
+//     name_translation_key skill_leap_slam
+//     desc_translation_key skill_leap_slam_desc
+//     hud_icon images/controls_up.svg
+// 	tag leap
+	
+//     cast_animation false
+// 	show_in_dev_console false
+//     duration 0
+//     cooldown 10
+//     small_cooldown 0
+//     cost 30
+	
+// 	selectable false
+	
+//     use leap_slam
+	
+// 	leap_slam_power 50
+// 	leap_slam_damage 20
+// 	leap_slam_radius 400
+	
+	
+// 	camera_shake_duration 0.5
+// 	camera_shake_frequency 50
+// 	camera_shake_amplitude 0.1
+	
+// 	skill_sound leap cast leap_jump1 leap_jump2 leap_jump3 leap_jump4
+	
+// 	set game_camera_offset MULT 2  dur:0.8  in:0.15  out:0.5	
+// }
+
+// skill 34 mod 1
+// {
+// 	name_translation_key skill_leap_slam_m1
+// 	desc_translation_key skill_leap_slam_m1_desc 
+//     cooldown 8
+// }
+
+// skill 34 mod 1 tier 1
+// {
+// 	name_translation_key skill_leap_slam_m1
+// 	desc_translation_key skill_leap_slam_m1_desc 
+//     cooldown 4
+// }
+
+// skill 34 mod 2
+// {
+// 	name_translation_key skill_leap_slam_m2
+// 	desc_translation_key skill_leap_slam_m2_desc 
+// 	leap_slam_knockback 1000
+// }
+
+// skill 34 mod 3
+// {
+// 	name_translation_key skill_leap_slam_m3
+// 	desc_translation_key skill_leap_slam_m3_desc 
+// 	leap_slam_knockback -1000
+// }
+
+// //skill 35
+// //{
+// //	tag firewall
+// //    name Firewall
+// //    description Firewall
+// //	selectable true
+// //    hud_icon images/weapon_bfg.svg
+// //    duration 5
+// //    cooldown 10
+// //    small_cooldown 0
+// //    cost 30
+	
+// //    use firewall
+// //	firewall_damage 10
+// //	skill_sound firewall cast fire_wall_cast
+// //}
+
+// //skill 35 mod 1
+// //{
+// //    duration 10
+//     //firewall_damage 15
+// //}
+
+// //skill 35 mod 1 tier 1
+// //{
+//     //duration 20
+// //}
+
+// //skill 35 mod 2
+// //{
+//     //firewall_damage 20
+// //}
+
+// //skill 35 mod 2 tier 1
+// //{
+//     //firewall_damage 30
+// //}
+
+// skill 36
+// {    
+//     name Projected Shield
+//     description Projected Shield
+//     name_translation_key skill_projected_shield
+//     desc_translation_key skill_projected_shield_desc
+//     hud_icon images/skill_icons/Projectile_Shield_Icon_Rogue.svg
+// 	tag projected_shield
+	
+//     duration 2
+//     cooldown 15
+//     small_cooldown 0
+//     cost 30
+// 	cooldown_on_miss false
+// 	selectable false
+// 	show_in_dev_console false
+	
+//     use projected_shield
+//     projected_shield_armor 25
+//     projected_shield_particle slow_weeble_impact
+// }
+
+// skill 36 mod 1
+// {
+//     duration 3
+// }
+
+// skill 36 mod 1 tier 1
+// {
+//     duration 5
+// }
+
+// skill 36 mod 2
+// {
+//     projected_shield_armor 35
+// }
+
+// skill 36 mod 2 tier 1
+// {
+//     projected_shield_armor 55
+// }
+
+// skill 37
+// {    
+//     name Big Rocket
+//     description Rocket
+//     name_translation_key skill_big_rocket
+//     desc_translation_key skill_big_rocket_desc
+//     hud_icon images/skill_icons/Big_Rocket_Icon_Rogue.svg
+// 	tag big_rocket
+// 	show_in_dev_console false
+	
+//     duration 2
+//     cooldown 20
+//     small_cooldown 0
+//     cost 30
+//     use big_rocket
+// }
+
+// skill 37 mod 1
+// {
+//     desc_translation_key skill_big_rocket_m1_desc 40
+// }
+// skill 37 mod 1 tier 1
+// {
+//     desc_translation_key skill_big_rocket_m1_desc 80
+// }
+// skill 37 mod 1 tier 2
+// {
+//     desc_translation_key skill_big_rocket_m1_desc 120
+// }
+
+
+// skill 38
+// {
+//     name Backdash
+//     description Backdash
+//     name_translation_key skill_backdash
+//     desc_translation_key skill_backdash_desc
+//     hud_icon images/skill_icons/back_dash.svg
+//     tag backdash
+	
+//     duration 0
+//     cooldown 14
+//     small_cooldown 0
+//     cast_animation false
+// 	show_in_dev_console false
+//     cost 30
+// 	use backdash
+// 	backdash_duration 0.1
+// 	backdash_speed 1500
+// 	//set phy_max_ground_speed 550 3
+// 	//set phy_speed 400 3
+// 	skill_sound backdash cast leap_jump1 leap_jump2 leap_jump3 leap_jump4
+// }
+
+// skill 39
+// {   
+//     name Charges Rocket
+//     description Pew pew pew
+//     name_translation_key skill_charges_rocket
+//     desc_translation_key skill_charges_rocket_desc
+//     hud_icon images/skill_icons/RocketBarrage_Icon_Rogue.svg
+// 	tag charges_rocket
+// 	show_in_dev_console false
+	 
+//     duration 2
+//     cooldown 0.2
+//     cost 30
+
+// 	max_charges 3
+// 	charge_grant_time 6
+// }
+
+// skill 40
+// {	
+//     name double_jump
+//     description double_jump
+//     name_translation_key skill_double_jump
+//     desc_translation_key skill_double_jump_desc
+//     hud_icon images/skill_icons/double_jump.svg
+// 	tag double_jump
+	
+//     cast_animation false
+// 	show_in_dev_console false
+//     cost 30	
+// 	set phy_double_jump VALUE 2
+// 	passive 1
+// 	cooldown 99999
+// }
+
+
+
+// skill 41
+// {	
+//     name Anvil
+//     description Anvil
+//     name_translation_key skill_anvil_projectile
+//     desc_translation_key skill_anvil_projectile_desc
+//     hud_icon images/skill_icons/anvil.svg
+// 	tag anvil_projectile
+// 	show_in_dev_console false
+//     cooldown 15
+//     small_cooldown 0
+// 	anvil_fall_down_delay 0.55
+// 	anvil_amount_of_anvils 1
+// 	anvil_size 1
+// 	anvil_range 2000
+// 	show_in_dev_console false
+	
+// 	use anvil
+// 	skill_sound freeze start freeze_weball_freeze_start1 freeze_weball_freeze_start2 freeze_weball_freeze_start3 freeze_weball_freeze_start4
+// 	skill_sound freeze finish freeze_weball_freeze_end1 freeze_weball_freeze_end2 freeze_weball_freeze_end3 freeze_weball_freeze_end4
+// }
+
+
+// skill 41 mod 1
+// {
+// 	desc_translation_key skill_anvil_projectile_m1_desc 0.15
+//     anvil_fall_down_delay 0.15
+// }
+
+// skill 41 mod 2 tier 2
+// {
+// 	desc_translation_key skill_anvil_projectile_m2_t2_desc 2
+// 	anvil_amount_of_anvils 2
+// }
+
+// skill 41 mod 3
+// {
+// 	desc_translation_key skill_lowers_cooldown_desc 12
+//     cooldown 12
+// }
+
+// skill 41 mod 3 tier 1
+// {
+// 	desc_translation_key skill_lowers_cooldown_desc 8
+//     cooldown 8
+// }
+
+
+// skill 42
+// {    
+//     name Delayed Bomb
+// 	name_translation_key skill_delayed_bomb
+//     desc_translation_key skill_delayed_bomb_desc
+//     description Pew pew pew
+//     icon images/weapon_rl.svg
+//     hud_icon images/weapon_icons/weapon_rl.svg
+// 	tag delayed_bomb
+// 	show_in_dev_console false
+	
+//     duration 2
+//     cooldown 10
+//     cost 30
+// }
+
+// skill 43
+// {    
+//     name Charges Rocket
+// 	name_translation_key skill_stream_of_pain
+//     desc_translation_key skill_stream_of_pain_desc
+//     description Pew pew pew
+//     icon images/weapon_rl.svg
+//     hud_icon images/weapon_icons/weapon_rl.svg
+// 	tag stream_of_pain
+// 	show_in_dev_console false
+	
+//     duration 0
+//     cooldown 0.05
+//     cost 30
+// }
+
+// skill 44
+// {    
+//     name bouncy_bomb
+// 	name_translation_key skill_bouncy_bomb
+//     desc_translation_key skill_bouncy_bomb_desc
+//     description Pew pew pew
+//     icon images/weapon_icons/weapon_rl.svg
+//     hud_icon images/weapon_icons/weapon_rl.svg
+// 	tag bouncy_bomb
+// 	show_in_dev_console false
+	
+//     duration 0
+//     cooldown 15
+//     cost 30
+// }
+
+// skill 45
+// {   
+//     name damage_mine
+// 	name_translation_key skill_damage_mine
+//     desc_translation_key skill_damage_mine_desc
+//     description Pew pew pew
+//     icon images/weapon_icons/weapon_rl.svg
+//     hud_icon images/weapon_icons/weapon_rl.svg
+// 	tag damage_mine
+// 	show_in_dev_console false
+	 
+//     duration 0
+//     cooldown 15
+//     cost 30
+// }
+
+// skill 46
+// {
+//     name Soar
+//     name_translation_key skill_soar
+//     desc_translation_key skill_soar_desc
+//     icon images/powerup_surge.svg
+//     hud_icon images/powerup_surge.svg
+// 	tag soar
+    
+// 	use soar
+//     cooldown 25
+//     cast_animation true
+// 	show_in_dev_console false
+//     cost 30
+	
+// 	backdash_speed 375
+// 	duration 1.9
+	
+// 	skill_sound soar cast leap_jump1 leap_jump2 leap_jump3 leap_jump4	
+	
+// }
+
+// skill 46 mod 1
+// {
+// 	desc_translation_key skill_lowers_cooldown_desc 20
+//     cooldown 20
+// }
+
+// skill 46 mod 1 tier 1
+// {
+// 	desc_translation_key skill_lowers_cooldown_desc 15
+//     cooldown 15
+// }
+
+
+// skill 47
+// {	
+//     name speed_hack
+//     description speed_hack
+//     hud_icon images/hud_icon_speed.svg
+// 	tag speed_hack
+	
+//     cast_animation false
+// 	show_in_dev_console false
+//     duration 0
+//     cooldown 20
+//     small_cooldown 0
+//     cost 30
+// 	//set phy_max_ground_speed ADD 100 dur_10
+// 	//set phy_speed ADD 100 dur_10
+// }
+
+// skill 48
+// {	
+//     name speed_hack_double
+//     description speed_hack_double
+//     hud_icon images/hud_icon_speed.svg
+// 	tag speed_hack_double
+	
+//     cast_animation false
+// 	show_in_dev_console false
+//     duration 0
+//     cooldown 20
+//     small_cooldown 0
+//     cost 30
+// 	//set phy_max_ground_speed MULT 2 dur_10
+// 	//set phy_speed MULTI 2 dur_10
+// }
+
+// skill 49
+// {	
+//     name deployable_cover
+//     description deployable_cover
+//     name_translation_key skill_deployable_cover
+//     desc_translation_key skill_deployable_cover_desc
+//     hud_icon images/hud_icon_speed.svg
+// 	tag deployable_cover_projectile
+// 	show_in_dev_console false
+	
+//     duration 2
+//     cooldown 15
+//     small_cooldown 0
+//     cost 30
+	
+// 	skill_sound freeze start freeze_weball_freeze_start1 freeze_weball_freeze_start2 freeze_weball_freeze_start3 freeze_weball_freeze_start4
+// 	skill_sound freeze finish freeze_weball_freeze_end1 freeze_weball_freeze_end2 freeze_weball_freeze_end3 freeze_weball_freeze_end4
+// }
+
+// skill 50
+// {	
+//     name throwing_knife
+//     description throwing_knife
+//     name_translation_key skill_throwing_knife
+//     desc_translation_key skill_throwing_knife_desc
+//     hud_icon images/hud_icon_speed.svg
+// 	tag throwing_knife
+// 	show_in_dev_console false
+	
+//     duration 2
+//     cooldown 15
+//     small_cooldown 0
+//     cost 30
+	
+// 	skill_sound freeze start freeze_weball_freeze_start1 freeze_weball_freeze_start2 freeze_weball_freeze_start3 freeze_weball_freeze_start4
+// 	skill_sound freeze finish freeze_weball_freeze_end1 freeze_weball_freeze_end2 freeze_weball_freeze_end3 freeze_weball_freeze_end4
+
+// }
+
+// skill 51
+// {
+	
+//     name fire_gauntlet
+//     description fire_gauntlet
+// 	name_translation_key skill_fire_gauntlet
+//     desc_translation_key skill_fire_gauntlet_desc
+//     hud_icon images/skill_icons/Rogue_Ability_Icon_Fire_Gauntlet.png
+// 	tag fire_gauntlet
+		
+// 	selectable false
+// 	show_in_dev_console false
+	
+// 	use fire_gauntlet
+	
+//     duration 10
+//     cooldown 30
+//     small_cooldown 0
+//     cost 30
+	
+// 	firegauntlet_fx_equip_time 0.5	// The time it takes until the looping fx starts after equip.
+// 	firegauntlet_fx_shoot_time 0.3	// The time it takes until the looping fx starts again while shooting.
+	
+// 	skill_sound freeze start freeze_weball_freeze_start1 freeze_weball_freeze_start2 freeze_weball_freeze_start3 freeze_weball_freeze_start4
+// 	skill_sound freeze finish freeze_weball_freeze_end1 freeze_weball_freeze_end2 freeze_weball_freeze_end3 freeze_weball_freeze_end4
+
+// }
+
+// skill 51 mod 1
+// {
+// 	name_translation_key skill_fire_gauntlet
+// 	desc_translation_key skill_fire_gauntlet_m1_desc 2.5 //1000 / rate
+// }
+
+// skill 51 mod 1 tier 1
+// {
+// 	name_translation_key skill_fire_gauntlet
+// 	desc_translation_key skill_fire_gauntlet_m1_desc 3 //1000 / rate
+// }
+
+// skill 51 mod 1 tier 2
+// {
+// 	name_translation_key skill_fire_gauntlet
+// 	desc_translation_key skill_fire_gauntlet_m1_desc 3.5 //1000 / rate
+// }
+
+// skill 51 mod 1 tier 3
+// {
+// 	name_translation_key skill_fire_gauntlet
+// 	desc_translation_key skill_fire_gauntlet_m1_desc 4 //1000 / rate
+// }
+
+// skill 51 mod 2
+// {
+// 	name_translation_key skill_fire_gauntlet
+// 	desc_translation_key skill_fire_gauntlet_m2_desc 11
+// }
+
+// skill 51 mod 2 tier 1
+// {
+// 	name_translation_key skill_fire_gauntlet
+// 	desc_translation_key skill_fire_gauntlet_m2_desc 14
+// }
+
+// skill 51 mod 2 tier 2
+// {
+// 	name_translation_key skill_fire_gauntlet
+// 	desc_translation_key skill_fire_gauntlet_m2_desc 17
+// }
+
+// skill 51 mod 2 tier 3
+// {
+// 	name_translation_key skill_fire_gauntlet
+// 	desc_translation_key skill_fire_gauntlet_m2_desc 20
+// }
+
+
+// skill 52
+// {	
+//     name Knockback_Roar
+//     description Knockbacks close enemies
+// 	selectable false
+// 	show_in_dev_console false
+//     name_translation_key skill_knockback_roar
+//     desc_translation_key skill_knockback_roar_desc
+//     hud_icon images/skill_icons/Rogue_Ability_Icon_Smash.png
+// 	tag knockback_roar
+    
+// 	use knockback_roar
+
+// 	set game_camera_offset MULT 2  dur:0.5  in:0.15  out:0.5	
+    
+//     cooldown 10
+// }
+
+// skill 53
+// {	
+//     name throwing_spear
+//     description throwing_spear
+// 	name_translation_key skill_throwing_spear
+//     desc_translation_key skill_throwing_spear_desc
+//     hud_icon images/skill_icons/Rogue_Ability_Icon_Fire_Lightning.png
+// 	tag throwing_spear
+	
+// 	selectable false
+// 	show_in_dev_console false
+		
+// 	use throwing_spear
+
+//     duration 2
+//     cooldown 15
+//     small_cooldown 0
+//     cost 30
+	
+// 	skill_sound freeze start freeze_weball_freeze_start1 freeze_weball_freeze_start2 freeze_weball_freeze_start3 freeze_weball_freeze_start4
+// 	skill_sound freeze finish freeze_weball_freeze_end1 freeze_weball_freeze_end2 freeze_weball_freeze_end3 freeze_weball_freeze_end4
+// }
+
+// skill 54
+// {
+//     name Hookshot
+//     description Rog Hookshot
+//     name_translation_key skill_hookshot
+//     desc_translation_key skill_hookshot_desc
+//     hud_icon images/skill_icons/Rogue_Ability_Icon_Hook.png
+//     hud_icon2 images/skill_icons/Rogue_Ability_Icon_Hook_Disconnect.png
+//     tag hookshot
+	
+// 	selectable false
+// 	show_in_dev_console false
+		
+//     duration 0.65
+//     cooldown 14
+//     small_cooldown 0
+//     cost 50
+//     charges 10
+
+// 	use hookshot
+//     power 5
+//     hookshot_max_target_speed 900
+//     hookshot_min_target_speed 400
+//     prevent_cooldown_on_initial_fire true
+// }
+
+// skill 55
+// {	
+//     name Template
+// 	selectable false
+// 	show_in_dev_console false
+//     name_translation_key skill_template
+//     desc_translation_key skill_template
+//     hud_icon images/skill_icons/Rogue_Ability_Icon_Temp.png
+// 	tag template
+    
+// 	use template	
+    
+//     cooldown 10
+// }
+
+// skill 56
+// {	
+//     name Ground_Slam
+//     description Stuns nearby enemies
+// 	selectable false
+// 	show_in_dev_console false
+	
+//     name_translation_key skill_ground_slam
+//     desc_translation_key skill_ground_slam_desc
+    
+// 	hud_icon images/skill_icons/Rogue_Ability_Icon_Smash.png
+// 	hud_icon2 images/skill_icons/Rogue_Ability_Icon_Smash2.png
+// 	tag ground_slam
+    
+// 	use ground_slam
+	
+// 	ground_slam_damage 10
+// 	ground_slam_radius 400
+// 	groud_slam_shockwave_travel_time 0.5
+
+// 	set game_camera_offset MULT 2  dur:0.5  in:0.15  out:0.5	
+    
+//     cooldown 10
+// }
+
+// skill 56 mod 1
+// {
+// 	ground_slam_knockback -1000
+	
+// 	name_translation_key skill_ground_slam_m1
+// 	desc_translation_key skill_ground_slam_m1_desc
+// }
+
+// skill 56 mod 2
+// {
+// 	ground_slam_knockback 1000
+	
+// 	name_translation_key skill_ground_slam_m2
+// 	desc_translation_key skill_ground_slam_m2_desc
+// }
+// skill 56 mod 3 tier 1
+// {
+// 	cooldown 8
+// 	name_translation_key skill_ground_slam_m3
+// 	desc_translation_key skill_ground_slam_m3_desc
+// }
+
+// skill 56 mod 3 tier 2
+// {
+// 	cooldown 5
+	
+// 	name_translation_key skill_ground_slam_m3
+// 	desc_translation_key skill_ground_slam_m3_desc
+// }
+
+// skill 56 mod 4
+// {
+// 	ground_slam_forward_offset 500
+// 	ground_slam_forward_travel_time 3
+	
+// 	name_translation_key skill_ground_slam_m4
+// 	desc_translation_key skill_ground_slam_m4_desc
+// }
+
+// skill 57 
+// {
+// 	name Rage_Protocol
+	
+// 	description Activates a fiery aura around the character, charges based on damage taken.
+
+// 	name_translation_key skill_rage_protocol
+//     desc_translation_key skill_rage_protocol_desc
+	
+// 	hud_icon images/skill_icons/Rogue_Ability_Icon_Template_CD.png
+// 	hud_icon2 images/skill_icons/Rogue_Ability_Icon_Template_RDY.png
+// 	hud_icon3 images/skill_icons/Rogue_Ability_Icon_Template_Active.png
+	
+// 	selectable false
+// 	show_in_dev_console false
+// 	override_cooldown true
+	
+// 	use rage_protocol
+// 	tag rage_protocol
+	
+// 	cooldown 0;
+	 
+// 	rage_protocol_damage_taken_for_activation 30
+// 	rage_protocol_damage_radius 300
+// 	rage_protocol_damage_per_tick 10
+// 	rage_protocol_damage_tick_time 1.0
+// 	rage_protocol_duration 5.0
+// }
+
+// skill 58
+// {
+// 	name Chain_Lightning
+// 	description Has a chance on hit to trigger a bouncing lightning strike on enemies.
+	
+// 	name_translation_key chain_lightning
+//     desc_translation_key chain_lightning_desc
+	
+// 	selectable false
+// 	show_in_dev_console false
+	
+// 	use chain_lightning
+// 	tag chain_lightning
+
+// 	hud_icon images/skill_icons/Rogue_Ability_Icon_Temp.png
+	
+// 	chain_lightning_max_bounces 4
+// 	chain_lightning_proc_rate 0.2
+// 	chain_lightning_time_between_bounce 0.15
+// 	chain_lightning_bounce_radius 300
+// 	chain_lightning_damage_fall_off_multiplier 0.7
+// }
+
+// skill 59
+// {	
+//     name Hot_Gun
+// 	selectable false
+// 	show_in_dev_console false
+//     name_translation_key skill_template
+//     desc_translation_key skill_template
+//     hud_icon images/skill_icons/Rogue_Ability_Icon_Hot_Gun.png
+//     hud_icon2 images/skill_icons/Rogue_Ability_Icon_Hot_Gun_Active.png
+// 	tag hot_gun
+    
+// 	use hot_gun
+    
+//     cooldown 20
+	
+// 	duration 5
+// 	hot_gun_fire_rate_multiplier 0.65
+	
+// 	prevent_cooldown_on_initial_fire true
+// }
+
+// skill 60 
+// {
+// 	name Airstrike 
+// 	selectable false
+// 	show_in_dev_console false
+// 	name_translation_key skill_airstrike
+// 	desc_translation_key skill_airstrike
+	
+//     hud_icon images/skill_icons/Rogue_Ability_Icon_Template_CD.png
+// 	hud_icon2 images/skill_icons/Rogue_Ability_Icon_Template_RDY.png
+// 	hud_icon3 images/skill_icons/Rogue_Ability_Icon_Template_Active.png
+	
+// 	tag airstrike
+// 	use airstrike
+	
+// 	duration 5
+//     cooldown 18
+//     charges 10
+//     prevent_cooldown_on_initial_fire true
+	
+//     airstrike_damage 5
+//     airstrike_radius 150
+//     max_location_select_distance 900
+// 	airstrike_projectile_interval 0.5
+
+// }
+
+// skill 60 mod 1
+// {	
+// 	name_translation_key NumOfProjectileIncrease_m1
+// 	desc_translation_key NumOfProjectileIncrease_m1_desc
+
+//     airstrike_projectile_interval 0.25
+// }
+
+// skill 60 mod 2
+// {	
+// 	name_translation_key Megabomb_m2
+// 	desc_translation_key Megabomb_m2_desc
+	
+//     is_mega true
+// }
+
+// skill 60 mod 3
+// {
+//     name_translation_key ConePattern_m3
+// 	desc_translation_key ConePattern_m3_desc
+	
+// 	is_cone true
+// 	airstrike_projectile_interval 0.25
+// 	airstrike_cone_length 300
+// 	airstrike_cone_angle 50
+// 	airstrike_projectile_density 0.5
+// }
+
+// skill 60 mod 4 
+// {
+// 	name_translation_key ClusterExplosion_m4
+// 	desc_translation_key ClusterExplosion_m4_desc
+
+// 	is_cluster true
+// 	airstrike_cluster_projectile_count 4
+// 	airstrike_projectile_interval 0.75
+// }
+
+// skill 60 mod 5
+// {
+// 	name_translation_key Napalm_m5
+// 	desc_translation_key Napalm_m5_desc
+	
+// 	is_napalm true
+// 	airstrike_napalm_number_of_rows 4
+// 	airstrike_napalm_number_per_row 2
+// 	airstrike_napalm_length 400
+// 	airstrike_napalm_width 125
+	
+// 	airstrike_napalm_fire_damage 2.5
+// 	airstrike_napalm_fire_tick_interval 0.5
+// 	airstrike_napalm_slow_amount 0.45
+// }
+
+// skill 60 mod 6
+// {
+// 	name_translation_key Shockwave_m6
+// 	desc_translation_key Shockwave_m6_desc
+	
+// 	is_shockwave true
+// 	number_of_shockwave_ticks 6
+// 	max_shockwave_radius 450
+// 	travel_time 1
+// 	shockwave_damage 10
+// 	knockback_force 10000
+// }
+
+// skill 61
+// {	
+//     name Electric_Ring
+
+//     hud_icon images/skill_icons/Rogue_Ability_Icon_Electric_Ring.png
+
+// 	tag electric_ring
+    
+// 	use electric_ring
+// 	show_in_dev_console false
+    
+//     cooldown 20
+// }
+
+// skill 62
+// {	
+//     name Jetpack
+// 	selectable false
+// 	show_in_dev_console false
+
+// 	name_translation_key skill_jetpack
+//     desc_translation_key skill_jetpack_desc
+//     hud_icon images/skill_icons/Rogue_Ability_Icon_Jetpack.png
+
+// 	tag jetpack
+// 	use jetpack
+    
+//     cooldown 22
+// 	charge_grant_time 22
+	
+// 	duration 3
+	
+// 	jetpack_init_thrust_forward_amount 650
+// 	jetpack_init_thrust_up_amount 400
+// }
+
+// skill 62 mod 1
+// {	
+// 	name_translation_key skill_jetpack_m1
+// 	desc_translation_key skill_jetpack_m1_desc
+
+//     jetpack_free_movement true
+// }
+
+// skill 62 mod 2
+// {	
+// 	name_translation_key skill_jetpack_m2
+// 	desc_translation_key skill_jetpack_m2_desc
+	
+//     jetpack_drop_bombs true	
+// }
+
+// skill 62 mod 3
+// {
+// 	name_translation_key skill_jetpack_m3
+// 	desc_translation_key skill_jetpack_m3_desc
+	
+// 	duration 5
+// }
+
+// skill 62 mod 4
+// {
+// 	name_translation_key skill_jetpack_m4
+// 	desc_translation_key skill_jetpack_m4_desc
+	
+// 	cooldown 13
+// 	charge_grant_time 13
+// }
+
+// skill 62 mod 5
+// {
+// 	name_translation_key skill_jetpack_m5
+// 	desc_translation_key skill_jetpack_m5_desc
+	
+// 	jetpack_init_thrust_forward_amount 1100
+// 	jetpack_init_thrust_up_amount 750
+// }
+
+// skill 62 mod 6
+// {
+// 	name_translation_key skill_jetpack_m6
+// 	desc_translation_key skill_jetpack_m6_desc
+	
+// 	cooldown 0.5
+// 	max_charges 2
+// }
+
+// skill 62 mod 7
+// {
+// 	name_translation_key skill_jetpack_m7
+// 	desc_translation_key skill_jetpack_m7_desc
+	
+// 	jetpack_init_explode true
+// }
+
+// skill 62 mod 8
+// {
+// 	name_translation_key skill_jetpack_m8
+// 	desc_translation_key skill_jetpack_m8_desc
+	
+// 	jetpack_barrier true
+// }
+
+
+// skill 63
+// {	
+//     name Charge
+// 	selectable false
+// 	show_in_dev_console false
+	
+//     name_translation_key skill_charge
+//     desc_translation_key skill_charge
+	
+// 	hud_icon images/skill_icons/Rogue_Ability_Icon_Charge.png
+	
+// 	prevent_cooldown_on_initial_fire true
+
+// 	tag charge   
+// 	use charge
+	
+// 	charge_max_speed 1200
+// 	charge_acceleration 1000
+// 	charge_duration 2
+// 	charge_steering_speed 0.5
+// 	charge_steering_acceleration 2
+// 	charge_knockback_power 2000
+    
+//     cooldown 3
+// }
+
+// skill 63 mod 1
+// {	
+// 	name_translation_key skill_charge_m1
+// 	desc_translation_key skill_charge_m1_desc
+	
+// 	charge_steering_speed 3
+// 	charge_steering_acceleration 6
+
+// }
+
+// skill 63 mod 2
+// {	
+// 	desc_translation_key skill_charge_m2_desc
+// 	name_translation_key skill_charge_m2
+	
+// 	charge_has_shield true
+// }
+
+// skill 63 mod 3
+// {	
+// 	name_translation_key skill_charge_m3
+// 	desc_translation_key skill_charge_m3_desc
+// 	charge_has_damage_trail true
+// }
+
+// skill 63 mod 4
+// {	
+// 	name_translation_key skill_charge_m4
+// 	desc_translation_key skill_charge_m4_desc
+// 	charge_increase_duration_on_hit true
+// 	charge_duration_increase_per_hit 0.1
+// 	charge_duration 1.5
+// }
+
+// skill 63 mod 5
+// {	
+// 	name_translation_key skill_charge_m5
+// 	desc_translation_key skill_charge_m5_desc
+// 	charge_explode_on_end true
+// }
+
+// skill 63 mod 6
+// {	
+// 	name_translation_key skill_charge_m6
+// 	desc_translation_key skill_charge_m6_desc
+// 	charge_press_to_cancel true
+// }
+
+// skill 63 mod 7
+// {	
+// 	name_translation_key skill_charge_m7
+// 	desc_translation_key skill_charge_m7_desc
+// 	charge_is_ethereal true
+// }
+
+// skill 63 mod 8
+// {	
+// 	name_translation_key skill_charge_m8
+// 	desc_translation_key skill_charge_m8_desc
+// 	charge_has_legion true
+// }
+
+
+// skill 64
+// {	
+//     name Hoverpack
+
+// 	name_translation_key skill_hoverpack
+//     desc_translation_key skill_hoverpack_desc
+//     hud_icon images/skill_icons/Rogue_Ability_Icon_Hoverpack.png
+
+// 	tag hoverpack
+// 	use hoverpack
+    
+// }
+
+// skill 65
+// {
+// 	name Weak_Point_Scanner
+// 	selectable false
+// 	show_in_dev_console false
+	
+// 	tag wps
+// 	use wps
+	
+// 	name_translation_key skill_weak_point_scanner
+// 	desc_translation_key skill_weak_point_scanner_desc
+	
+// 	hud_icon images/skill_icons/Rogue_Ability_Icon_WPS.png
+	
+// 	wps_critical_hit_size_multiplier 4.5
+// 	wps_radius 1000
+// 	wps_duration 10
+// 	wps_damage_multiplier 1.1
+	
+// 	cooldown 25
+// }
+
+// skill 65 mod 1
+// {
+// 	name_translation_key enhanced_crit_size_m1
+// 	desc_translation_key enhanced_crit_size_m1_desc
+	
+// 	wps_critical_hit_size_multiplier 5.5
+// 	wps_damage_multiplier 1.1
+// }
+
+// skill 65 mod 2
+// {
+// 	name_translation_key cooldown_reduction_m2
+// 	desc_translation_key cooldown_reduction_m2_desc
+	
+	
+// 	wps_critical_hit_size_multiplier 5.5
+// 	wps_damage_multiplier 1.1
+// 	cooldown 20
+// }
+
+// skill 65 mod 3
+// {
+// 	name_translation_key damage_increase_m3
+// 	desc_translation_key damage_increase_m3_desc
+	
+// 	wps_damage_multiplier 1.25
+// 	wps_critical_hit_size_multiplier 5.5
+// 	cooldown 20
+// }
+
+// skill 65 mod 4
+// {
+// 	name_translation_key duration_increase_m4
+// 	desc_translation_key duration_increase_m4_desc
+	
+// 	wps_duration 15
+// 	wps_damage_multiplier 1.25
+// 	wps_critical_hit_size_multiplier 5.5
+// 	cooldown 20
+// }
+
+// skill 65 mod 5
+// {
+// 	name_translation_key distance_increase_m5
+// 	desc_translation_key distance_increase_m5_desc
+	
+// 	wps_radius 1250
+// 	wps_duration 15
+// 	wps_damage_multiplier 1.25
+// 	wps_critical_hit_size_multiplier 5.5
+// 	cooldown 20
+// }
+
+// skill 65 mod 6
+// {
+// 	name_translation_key second_slow_scan_m6
+// 	desc_translation_key second_slow_scan_m6_desc
+	
+// 	wps_radius 1250
+// 	wps_duration 15
+// 	wps_damage_multiplier 1.25
+// 	wps_critical_hit_size_multiplier 5.5
+// 	wps_slow_amount 0.45
+// 	cooldown 20
+// }
+
+// skill 65 mod 7
+// {
+// 	name_translation_key fire_rate_increase_m7
+// 	desc_translation_key fire_rate_increase_m7_desc
+	
+// 	wps_second_scan true
+// 	wps_fire_rate_multiplier 0.75
+// 	wps_fire_rate_upgrade_duration 10
+// 	wps_radius 1250
+// 	wps_duration 15
+// 	wps_damage_multiplier 1.25
+// 	wps_critical_hit_size_multiplier 5.5
+// 	wps_slow_amount 0.45
+	
+// 	cooldown 20
+// }
+
+// skill 66
+// {
+// 	name Movement_Dodge
+// 	selectable false
+// 	show_in_dev_console false
+	
+// 	tag movement_dodge
+// 	use movement_dodge
+	
+// 	cooldown 1
+// 	duration 1.0
+// 	small_cooldown 0
+	
+// 	name_translation_key skill_movement_dodge
+// 	desc_translation_key skill_movement_dodge_desc
+	
+// 	bigbot_dodge_speed 750
+// 	bigbot_dodge_length_units 150
+	
+// 	weesuit_dodge_speed 1500
+// 	weesuit_dodge_length_units 250
+	
+// 	hud_icon images/skill_icons/Rogue_Ability_Icon_WPS.png
+// }
+
+// skill 67
+// {
+// 	name Movement_Bolt
+// 	selectable false
+// 	show_in_dev_console false
+	
+// 	tag movement_bolt
+// 	use movement_bolt
+	
+// 	cooldown 1
+// 	duration 1.0
+// 	small_cooldown 0
+	
+// 	name_translation_key skill_movement_dodge
+// 	desc_translation_key skill_movement_dodge_desc
+
+// 	eggbot_bolt_force 500
+// 	eggbot_bolt_upwards_angle 22.5
+	
+// 	hud_icon images/skill_icons/Rogue_Ability_Icon_Bolt.png	
+// }
+
+	
+// skill 68
+// {
+// 	name Landmine
+	
+// 	name_translation_key skill_landmine
+// 	desc_translation_key skill_landmine_desc
+	
+// 	tag landmine
+// 	use landmine
+	
+// 	selectable false
+	
+// 	show_in_dev_console false
+//     prevent_cooldown_on_initial_fire true
+	
+// 	cooldown 15
+// 	duration 1
+// 	small_cooldown 0
+	
+// 	pfx1 bigbot_leap_groundslam
+	
+// 	landmine_trigger_radius 0
+// 	landmine_explosion_radius 400
+// 	landmine_explosion_delay 0
+// 	landmine_explosion_damage 100
+	
+// 	hud_icon images/skill_icons/Rogue_Ability_Icon_Landmine.png	
+// 	hud_icon2 images/skill_icons/Rogue_Ability_Icon_Detonator.png	
+// }
+
+// skill 68 mod 1 tier 0
+// {
+// 	pfx1 landmine_ice_0
+// 	landmine_explosion_delay 2.5
+// }
+
+// skill 69
+// { 
+// 	name Turret
+	
+// 	name_translation_key skill_turret
+// 	desc_translation_key skill_turret_desc
+	
+// 	tag turret
+// 	use turret
+	
+// 	selectable false
+// 	show_in_dev_console false
+	
+// 	cooldown 10
+
+// 	turret_max_hp 100
+// 	turret_attack_range 1000
+// 	turret_attack_cd 1
+// 	turret_duration 20
+// 	turret_damage 1
+	
+	
+// 	hud_icon images/skill_icons/Rogue_Ability_Icon_Turret.png
+// 	hud_icon2 images/skill_icons/Rogue_Ability_Icon_Turret.png
+// }
+
+// skill 69 mod 1
+// {
+// 	hud_icon images/skill_icons/Rogue_Ability_Icon_Turret.png
+	
+// 	name_translation_key Multiple_Turrets_m1 
+	
+// 	cooldown 1
+// 	charge_grant_time 10
+// 	max_charges 3
+// }
+
+
+// skill 70
+// { 
+// 	name Tether_beacon
+	
+// 	name_translation_key tether_beacon
+// 	desc_translation_key tether_beacon_desc
+	
+// 	tag tether_beacon
+// 	use tether_beacon
+	
+// 	selectable false
+// 	show_in_dev_console false
+	
+// 	cooldown 1
+// 	small_cooldown 0
+	
+// 	tether_radius 200
+// 	tether_lifetime 5
+// 	tether_max_targeted_agents 4
+	
+	
+	
+	
+// 	hud_icon images/skill_icons/Rogue_Ability_Icon_Beacon_Tether.png	
+// }
+
+
+// skill 70 mod 1
+// {	
+// 	hud_icon images/skill_icons/Rogue_Ability_Icon_Beacon_Damage.png	
+
+// 	name_translation_key skill_tether_beacon_m1
+// 	desc_translation_key skill_tether_beacon_m1_desc 
+	
+// 	tether_radius 250
+// }
+
+// skill 70 mod 2
+// {
+// 	hud_icon images/skill_icons/Rogue_Ability_Icon_Beacon_Heal.png	
+
+// 	name_translation_key skill_tether_beacon_m2
+// 	desc_translation_key skill_tether_beacon_m2_desc 
+	
+// 	tether_lifetime 7
+// }
+
+
+// skill 70 mod 3
+// {
+// 	hud_icon images/skill_icons/Rogue_Ability_Icon_Beacon_Heal.png	
+
+// 	name_translation_key skill_tether_beacon_m3
+// 	desc_translation_key skill_tether_beacon_m3_desc 
+	
+// 	cooldown 8
+// }
+
+
+// skill 70 mod 4
+// {
+// 	hud_icon images/skill_icons/Rogue_Ability_Icon_Beacon_Heal.png	
+
+// 	name_translation_key skill_tether_beacon_m4
+// 	desc_translation_key skill_tether_beacon_m4_desc 
+	
+// 	tether_max_targeted_agents 6
+
+// }
+
+// skill 70 mod 5
+// {
+// 	hud_icon images/skill_icons/Rogue_Ability_Icon_Beacon_Heal.png	
+
+// 	name_translation_key skill_tether_beacon_m5
+// 	desc_translation_key skill_tether_beacon_m5_desc 
+	
+// 	tether_share_damage true
+// 	percentage_to_distribute 10
+// }
+
+
+// skill 70 mod 6
+// {
+// 	hud_icon images/skill_icons/Rogue_Ability_Icon_Beacon_Heal.png	
+
+// 	name_translation_key skill_tether_beacon_m6
+// 	desc_translation_key skill_tether_beacon_m6_desc 
+	
+// 	tether_on_demand true
+// }
+
+
+// skill 70 mod 7
+// {
+// 	hud_icon images/skill_icons/Rogue_Ability_Icon_Beacon_Heal.png	
+
+// 	name_translation_key skill_tether_beacon_m7
+// 	desc_translation_key skill_tether_beacon_m7_desc 
+	
+// 	tether_black_hole true
+// }
+
+
+// skill 70 mod 8
+// {
+// 	hud_icon images/skill_icons/Rogue_Ability_Icon_Beacon_Heal.png	
+
+// 	name_translation_key skill_tether_beacon_m8
+// 	desc_translation_key skill_tether_beacon_m8_desc 
+	
+// 	tether_lock_in_air true
+// }
+
+
+// skill 70 mod 9
+// {
+// 	hud_icon images/skill_icons/Rogue_Ability_Icon_Beacon_Heal.png	
+
+// 	name_translation_key skill_tether_beacon_m9
+// 	desc_translation_key skill_tether_beacon_m9_desc 
+	
+// 	tether_horsy_mode true
+// }
+
+// //DISREGARD, WILLIAM AND LUKAS TESTING
+
+// skill 71 
+// {
+// 	name Orbs	
+// 	name_translation_key skill_orbs
+// 	desc_translation_key skill_orbs_desc
+	
+// 	tag orbs
+// 	use orbs
+	
+	
+// 	selectable false
+// 	show_in_dev_console false
+// 	cooldown 1
+// 	orbs_max_amount 5
+// 	orbs_amount_per_use 1
+	
+// 	orbs_damage_amount 20
+	
+// 	hud_icon images/skill_icons/Rogue_Ability_Icon_Orbs.png	
+// }
+// skill 71 mod 1
+// {
+// 	hud_icon images/skill_icons/Rogue_Ability_Icon_Orbs.png	
+
+// 	name_translation_key skill_orbs_m1
+// 	desc_translation_key skill_orbs_m1_desc 
+	
+// 	orbs_damage_amount 0
+	
+// 	orbs_celestial true	
+// 	orbs_heal_amount 20
+// }

@@ -1,0 +1,54 @@
+asset pf_teleport_exit_wallmount_testing
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name light_48
+        position 23.99957 0.15105 0
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param color 2d6fff
+        param falloff 0.7
+        param group_member_id 1
+        param intensity 1.5
+        param radius 150
+        param type point
+        param visibility_function valleys
+        param visibility_function_min 0.8
+        param visibility_function_speed 0.6
+    }
+    prefab_entity
+    {
+        name pfx_env_teleport_out
+        position -7.99976 -0.30210 0
+        rotation 0 -0.00003 -89.99999
+        scale 1.00000 1.00000 1.00000
+        param color 
+        param delay 0
+        param destroy_on_loop false
+        param group_member_id 2
+        param max_distance 0
+        param pfx_scale 1
+        param random_delay_max 0
+        param range_multiplier 1
+        param repeat_interval 0
+        param repeat_lifetime 0
+        param system env_teleport_out2
+    }
+    prefab_entity
+    {
+        name prop_teleport_pad_out_1
+        position -15.99976 0.15105 0
+        rotation 90.00000 0 -90.00001
+        scale 1.00000 1.25000 1.00000
+        param __shadow true
+        param clip noclip
+        param color3_matlib_mat_de52b4b86a0_lib_emit_blue aadaf7ff
+        param color3_matlib_mat_lib_emissive ffffffff
+        param force_shadows true
+        param model teleport_pad_out_01
+        param override_effect_5 matlib_mat_lib_emissive
+        param override_effect_7 matlib_mat_lib_emissive
+    }
+}

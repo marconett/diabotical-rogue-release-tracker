@@ -1,0 +1,14 @@
+override_collider
+{
+	{
+		map swatches/white.png
+		material_id 61
+		vertex_shader statictrans.vs.cso 111 NGT
+		vertex_shader_param inverse
+		vertex_shader_param camera
+		pixel_shader statictrans_col.ps.cso
+		pixel_shader_param accent1 e87d267a
+		pixel_shader_param float_params2 0.4 0 0 0
+		blendfunc blend
+	}
+}

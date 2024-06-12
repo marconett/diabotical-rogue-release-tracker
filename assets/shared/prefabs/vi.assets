@@ -1,0 +1,66 @@
+asset vi
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name prop_blockout_box_floor
+        position -7.70828 0.01100 -51.67225
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param color eb6bffff
+        param force_shadows true
+        param model blockout_box_floor
+        param prefab_component prop_blockout_box_floor
+        param prefab_parent prefab_vi_1
+    }
+    prefab_entity
+    {
+        name prop_blockout_cylinder_hol
+        position 7.54886 42.48377 73.52776
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param color 0ace10ff
+        param force_shadows true
+        param model blockout_cylinder_hollow_center
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

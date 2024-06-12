@@ -1,0 +1,8 @@
+asset hologram
+{
+    type material
+    listed true
+    tags NONE
+    material override_hologram
+	mat_override true
+}

@@ -1,0 +1,16 @@
+override_grate
+{
+  {
+    map models/environment/industrial/modular_materials/grates_01/grates_01_d.png
+    map models/environment/industrial/modular_materials/grates_01/grates_01_n.png
+    map models/environment/industrial/modular_materials/grates_01/grates_01_s.png
+    map swatches/black.png
+    map swatches/black.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+  }
+}
+

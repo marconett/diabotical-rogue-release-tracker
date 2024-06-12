@@ -1,0 +1,8 @@
+asset grate
+{
+    type material
+    listed true
+    tags NONE
+    material override_grate
+	mat_override true
+}

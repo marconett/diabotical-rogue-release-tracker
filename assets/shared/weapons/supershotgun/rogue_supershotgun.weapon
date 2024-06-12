@@ -1,0 +1,207 @@
+rogue_supershotgun
+{
+	name_translation_key weapon_supershotgun
+	desc_translation_key weapon_supershotgun_desc
+								
+	selectable true
+	rarity rare
+	required_class rogue_scout
+
+	respawn_time 9
+	weapon_tag ss
+	charge_animation 1
+	
+	default_ammo 6
+	default_ammo_pickup_ammo 6
+	default_weapon_pickup_ammo 6
+	max_ammo 6
+	unlimited_ammo false
+	reload 2000
+	
+	color 1996D9
+	icon_path images/weapon_icons/wp_hud_shotgun_02.png
+	icon_path2 images/weapon_icons/wp_card_supershotgun.png
+	weapon_icon_path images/weapon_icons/wp_card_shotgun_nobg.png
+	
+    rate 900
+	damage 4 7
+//	critical_damage 10
+
+	knockback 2
+	ground_knockback 3
+	parallel_knockback true
+
+	max_damage_distance 200
+    min_damage_distance 1500
+	
+	shots_per_round 11
+	spread 6 6
+	zoomed_spread 4 4
+    spread_radius 1
+	min_hits 2
+	bounce 0
+	spread_ring 1 4 6
+    spread_ring_angular_offset 0 0 90
+	speed 18000
+	
+	impact_particles_distance_delay 0.12
+	independent_upgrade_model true
+	category 2
+	bind_group 2
+	group_damage true
+	max_damage_reward true
+	
+	hit_radius 1.7 3
+	
+	recoil_delay_recovery 0.1
+	recoil_up 2.5
+	recoil_side 0.1
+	recoil_recovery_time 0.5
+	recoil_time 0.06
+	
+	zoomed_recoil_up 1.25
+	zoomed_recoil_side 0.025
+	zoomed_recoil_recovery_time 0.4
+	zoomed_recoil_time 0.06
+	
+	recoil_back_delay_recovery 0.1
+	recoil_back_recovery_time 0.12
+	recoil_back_time 0.06
+	recoil_back 6
+	
+	//recoil_shake_delay_recovery 0.1
+	//recoil_shake_recovery_time 0.12
+	//recoil_shake_time 0.06
+	//recoil_shake 0.2
+	
+	zoomed_scope 1
+	zoomed_walk_speed 200
+	
+	equip_time 400
+	base_combo_rate 250
+	
+	//shot_particles weapon_shotgun_muzzle_flash
+  	shot_particles_attached weapon_shotgun_muzzle
+	shot_particles_attached_3p weapon_shotgun_muzzle_3p
+	missile_particles sg_projectile
+	impact_particles weapon_shotgun_impact
+	missile_particles weapon_shotgun_projectile
+	shot_particles_attached weapon_shotgun_muzzle_flash socket_muzzle 1
+
+	
+// IMPACT DECALS
+	//decal decal 7 3 3.561 false false alpha 7	 
+	//decal decal_glow_red 16 3 3.561 false false alpha 30
+	//decal decal_glow 10 3 3.561 false false alpha 50
+	
+	//old model assets/shared/weapons/supershotgun/supershotgun
+	model assets/shared/models/animations/wp_shotgun/skm_shotgun
+
+	muzzle 2.6 -2.7 4.7
+	
+	particles_clipping_plane true
+	
+	shot_sound w_ss_fire
+	shot_sound2 w_ss_fire_distant
+	equip_sound w_ss_equip
+	out_of_ammo_sound w_ss_ooa
+	hit_sound fb_enemy_hit
+	critical_hit_sound fb_enemy_hit_crit
+	
+	detached_shot_particles false
+	multi_round_particles false
+	
+	//UPGRADE
+	//shots_per_round_2 10
+	//spread_2 3.5
+	
+
+}
+
+rogue_supershotgun augment 1
+{
+	name supershotgun_ammo
+	name_translation_key shotgun_increase_ammo
+	desc_translation_key shotgun_increase_ammo_desc
+	rarity common
+	preadd default_ammo 2
+	preadd max_ammo 2
+	max_stacks 2
+	locked_in_battlepass true
+}
+
+rogue_supershotgun augment 2
+{
+	name supershotgun_reload_speed
+	name_translation_key shotgun_increase_reload_speed
+	desc_translation_key shotgun_increase_reload_speed_desc
+	rarity rare
+	preadd reload -400
+	max_stacks 1
+	locked_in_battlepass true
+}
+
+// rogue_supershotgun augment 3
+// {
+// 	name supershotgun_equip_speed
+// 	name_translation_key shotgun_equip_speed
+// 	desc_translation_key shotgun_equip_speed_desc
+// 	rarity rare
+// 	preadd equip_time -50
+// 	max_stacks 2
+// }
+
+rogue_supershotgun augment 4
+{
+	name supershotgun_reduce_spread
+	name_translation_key shotgun_reduce_spread
+	desc_translation_key shotgun_reduce_spread_desc	
+	rarity rare
+	preadd spread -2 -2
+	preadd zoomed_spread -1 -1
+	max_stacks 1
+}
+
+//rogue_supershotgun augment 5
+//{
+//	name supershotgun_automatic_shotgun
+//	name_translation_key shotgun_increase_rate_of_fire
+//	desc_translation_key shotgun_increase_rate_of_fire_desc	
+//	rarity legendary
+//    preadd rate -650
+//	overwrite damage 2 4
+//
+//	old values -> testing
+//	//preadd rate -225
+//	//overwrite damage 3 6
+//}
+
+rogue_supershotgun augment 6
+{
+	name supershotgun_shots_hit_increase_movement_speed
+	name_translation_key shotgun_shots_hit_speed_buff
+	desc_translation_key shotgun_shots_hit_speed_buff_desc
+	rarity epic
+	overwrite duration 2000
+    overwrite speed_boost_amount 20
+	overwrite consecutive_hits_required 11
+}
+
+rogue_supershotgun augment 7
+{
+	name supershotgun_each_pellet_hit_heals
+	name_translation_key shotgun_on_hit_heals
+	desc_translation_key shotgun_on_hit_heals_desc
+	rarity legendary	
+	overwrite heal_amount_per_projectile_hit_on_enemy 1
+	locked_in_battlepass true
+}
+
+rogue_supershotgun augment 8 
+{
+	name supershotgun_increased_damage_in_air
+	name_translation_key shotgun_increased_damage_in_air
+	desc_translation_key shotgun_increased_damage_in_air_desc
+	rarity common
+	overwrite increased_damage_in_air 0.25
+}

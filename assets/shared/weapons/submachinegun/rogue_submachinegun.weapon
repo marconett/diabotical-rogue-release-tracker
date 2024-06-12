@@ -1,0 +1,198 @@
+rogue_submachinegun
+{
+	name_translation_key weapon_submachinegun
+	desc_translation_key weapon_submachinegun_desc
+	
+	selectable true
+	rarity rare
+	can_drop true
+	required_class rogue_eggbot
+
+	respawn_time 9
+    //unique true
+	weapon_tag smg	
+	bind_group 6
+
+	default_ammo 30
+	default_ammo_pickup_ammo 30
+	default_weapon_pickup_ammo 30
+	max_ammo 30
+	unlimited_ammo false
+	reload 1000
+	
+    rate 65
+	damage 3 7
+	critical_damage 6 12 
+	knockback 2
+	ground_knockback 2
+    charge_animation 1	
+	speed 26000
+	
+	max_damage_distance 300
+    min_damage_distance 1500
+	
+	color 1996D9
+	icon_path images/weapon_icons/wp_hud_submachinegun_02.png
+	icon_path2 images/weapon_icons/wp_card_submachinegun.png
+	weapon_icon_path images/weapon_icons/wp_card_submachinegun_nobg.png
+	
+	mouse_take_over_recoil true
+	recoil_delay_recovery 0.0675
+	recoil_up 0.4
+	recoil_side 0.15
+	recoil_recovery_time 0.3
+	recoil_time 0.05
+	
+	zoomed_recoil_up 0.3
+	zoomed_recoil_side 0.075
+	zoomed_recoil_recovery_time 0.3
+	zoomed_recoil_time 0.05
+		
+	recoil_back 0.4
+	recoil_back_recovery_time 0.04
+	recoil_back_time 0.03
+	
+	equip_time 250
+	base_combo_rate 150
+
+	spread_recovery_time 0.2
+	spread 0.15 0.15
+	max_spread 2.75 2.75
+	
+	zoomed_spread 0.125 0.125
+	max_zoomed_spread 2.5 2.5
+	
+	// gravity_delay_by_distance 1000
+	// gravity 500
+	
+	zoomed_scope 1
+	zoomed_walk_speed 200
+	
+	hit_radius 1 1
+
+	loop_animation true
+
+	detached_shot_particles false
+    
+	shot_particles_attached weapon_submachinegun_muzzle
+	pfx weapon_submachinegun_laser socket_laser 1
+   	shot_particles_attached_3p weapon_submachinegun_muzzle_3p
+	missile_particles weapon_submachinegun_projectile
+	missile_particles_1p weapon_submachinegun_projectile
+	impact_particles weapon_submachinegun_impact
+    player_impact_particles weapon_submachinegun_player_impact
+// IMPACT DECALS
+	//decal decal 10 3 3.561 false false alpha 1
+	//decal decal_glow_red 16 3 3.561 false false alpha 30
+	//decal decal_glow 10 3 3.561 false false alpha 20
+	
+
+    
+/////	fps model position - fps_submachinegun /////////////////////////////////////
+	
+	//model assets/shared/weapons/submachinegun/submachinegun //Old model
+	model assets/shared/models/animations/wp_submachinegun/skm_submachinegun
+	model_scale 0.2
+	model_scale_centered 0.0495
+	model_position 1.2 -3 2.2
+	model_position_centered 0 -3.4 3.1
+	model_scale_third_person 0.9
+	model_pivot 0 0.24 0
+	model_position_third_person 0 0 0
+	model_camera_scale 0.55
+	muzzle 2.5 -1.5 8
+	fov 50
+   	
+/////	ADS model position - submachinegun /////////////////////////////////////
+	
+	model_position_centered 1.33286 -0.920046 5.13452
+	model_scale_centered 0.0331852
+    model_camera_scale 3
+	
+	//close
+	shot_sound w_smg_fire
+	//first_shot_sound w_smg_fire_first
+	end_sound w_smg_fire_release
+	//distant
+	shot_sound2 w_smg_fire_distant 
+	end_sound2 w_smg_fire_distant_release 
+	equip_sound w_smg_equip
+	hit_sound fb_enemy_hit
+	critical_hit_sound fb_enemy_hit_crit
+    impact_sound w_mac_impact
+	
+	detached_shot_particles false
+	multi_round_particles false
+
+	can_upgrade_ammo true
+	can_upgrade_stock true
+}
+
+rogue_submachinegun augment 1
+{
+	name submachinegun_ammo
+	name_translation_key submachinegun_increase_ammo
+	desc_translation_key submachinegun_increase_ammo_desc
+	rarity common
+	preadd default_ammo 5
+	preadd max_ammo 5
+	max_stacks 2
+	locked_in_battlepass true
+}
+
+rogue_submachinegun augment 2
+{
+	name submachinegun_ammo
+	name_translation_key submachinegun_reduced_spread
+	desc_translation_key submachinegun_reduced_spread_desc
+	rarity common
+	preadd spread -0.025 0.025
+	preadd max_spread -0.75 -0.75
+	preadd zoomed_spread -0.025 0.025
+	preadd max_zoomed_spread -0.7 -0.7
+	max_stacks 1
+}
+
+rogue_submachinegun augment 3
+{
+	name submachinegun_decrease_recoil
+	name_translation_key submachinegun_decrease_recoil
+	desc_translation_key submachinegun_decrease_recoil_desc
+	rarity rare
+	overwrite recoil_up 0.15
+	overwrite recoil_side 0.05
+	overwrite zoomed_recoil_up 0.125
+	overwrite zoomed_recoil_side 0.025
+	max_stacks 1
+	locked_in_battlepass true
+}
+
+rogue_submachinegun augment 4
+{
+	name submachinegun_reload_speed
+	name_translation_key submachinegun_increase_reload_speed
+	desc_translation_key submachinegun_increase_reload_speed_desc
+	rarity rare
+	preadd reload -250
+	max_stacks 1
+}
+
+rogue_submachinegun augment 5
+{
+	name submachinegun_overclocking_fire_rate
+	name_translation_key submachinegun_increase_fire_rate_after_reload
+	desc_translation_key submachinegun_increase_fire_rate_after_reload_desc
+	rarity epic
+	overwrite after_reload_fire_rate_multiplier 0.90 //do we want a flat value change here instead? ask (viktor)
+	overwrite after_reload_fire_rate_increase_duration 1
+	locked_in_battlepass true
+}
+
+rogue_submachinegun augment 6 
+{
+	name submachinegun_chance_to_regain_ammo
+	name_translation_key submachinegun_chance_to_regain_ammo
+	desc_translation_key submachinegun_chance_to_regain_ammo_desc
+	rarity legendary
+	overwrite self_on_shoot_ammo_regain 50
+}

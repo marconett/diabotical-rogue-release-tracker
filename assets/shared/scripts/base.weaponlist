@@ -1,0 +1,162 @@
+
+////    DO NOT CHANGE ANYTHING IN THE EGGBOT CLASS     ////
+
+	//0
+	weapon rogue_sword
+	weapon rogue_machinegun
+	weapon rogue_blaster
+	weapon rogue_supershotgun
+	weapon rogue_rocketlauncher
+	//5
+	weapon rogue_shaft
+	weapon rogue_crossbow
+	weapon rogue_pncr
+	weapon rogue_grenadelauncher
+	weapon weapon9
+	
+	////    DO NOT CHANGE ANYTHING IN THE EGGBOT CLASS     ////
+	
+	//10
+	weapon minigun
+	weapon showtime
+	weapon healingweeble
+	weapon implosiveweeble
+	weapon slowfieldweeble
+	//15   
+	weapon explosiveweeble
+	weapon smokeweeble
+    weapon knockweeble
+	weapon hook
+	weapon rogue_voidcannon
+    //20
+	weapon william_is_a_dummy
+    weapon rogue_rocketlauncher_secondary
+	weapon rogue_voidcannon_secondary
+	weapon dummy
+	weapon hammer_time
+	//25
+	weapon translocator
+	weapon egggods_bolt
+	weapon inflation
+	weapon egggods_dash
+	weapon freeze
+	//30
+	weapon wall_slide
+	weapon swap
+	weapon jumppad
+	weapon force_grip
+	weapon sprint
+	//35
+	weapon slide
+	weapon bounce
+	weapon reverse
+	weapon boost
+	weapon hugme_bot
+	//40
+	weapon leap_slam
+	weapon machinegun2
+	weapon dummy
+	weapon dummy
+    weapon projected_shield
+	//45
+    weapon big_rocket
+	weapon dummy
+	weapon dummy
+	weapon dummy
+	weapon doublebarreled_shotgun
+	//50
+	weapon dummy
+	weapon charges_rocket
+	weapon anvil_impact_weapon
+	weapon delayed_bomb
+	weapon stream_of_pain
+	//55
+	weapon bouncy_bomb
+	weapon damage_mine
+	weapon anvil_projectile
+	weapon deployable_cover_projectile
+	weapon throwing_knife
+	//60
+	weapon dummy
+	weapon rogue_tommygun
+	weapon rogue_heavysniper
+	weapon dummy
+	weapon spawn_ramp_grenade
+	//65
+	weapon spawn_cover_grenade
+	weapon smoke_grenade
+	weapon fire_gauntlet
+	weapon healing_grenade
+	weapon knockback_roar
+	//70
+	weapon he_grenade
+	weapon throwing_spear
+	weapon anvil
+	weapon medkit_small
+	weapon medkit_large
+	//75
+	weapon hookshot
+	weapon orbiting_saw
+	weapon weapon_enemy_energy_01
+	weapon dummy
+	weapon dummy
+	//80	
+	weapon dummy
+	weapon dummy
+	weapon fists
+	weapon ground_slam
+	weapon dash_explosion
+	//85
+	weapon enemy_energy_artillery_01
+	weapon rage_protocol
+	weapon airstrike
+	weapon jetpack_drop_bomb
+	weapon landmine_nade
+	//90
+	weapon tether_beacon_nade
+	weapon turret_nade
+	weapon airstrike_megabomb
+	weapon airstrike_cluster_deploy
+	weapon airstrike_cluster
+	//95
+	weapon airstrike_napalm
+	weapon jetpack_explosion
+	weapon airstrike_shockwave
+	weapon dummy
+	weapon enemy_bomb
+	//100
+	weapon rogue_submachinegun
+	weapon rogue_pistol
+	weapon rogue_sniper
+	weapon rogue_bow
+	weapon rogue_doublebarreled_shotgun
+	//105
+	weapon rogue_egun
+	weapon rogue_heavymachinegun
+	weapon rogue_revolver
+	weapon rogue_shotgun
+	weapon healing_orb
+	//110
+	weapon deployable_medpack
+	weapon rogue_left_hand
+	weapon nexus_bomb
+	weapon rogue_hammerswing
+	weapon grenade
+	//115 
+	weapon overload_orb
+	weapon implosion_orb
+	weapon rogue_revolver_secondary
+	weapon explosiveweeble_cluster
+	weapon scanner_grenade
+	//120
+	weapon mini_rocket
+	weapon overload_orb_mini
+	weapon nexus_bomb_mini
+	weapon instigator_missile
+	weapon mini_rocket_homing
+	weapon rogue_blaster_secondary
+	weapon beam
+
+//// PITFALL: When adding new weapons WEAPON_COUNT may need to be incremented
+
+////    DO NOT CHANGE ANYTHING IN THE EGGBOT CLASS     ////

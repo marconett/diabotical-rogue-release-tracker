@@ -1,0 +1,224 @@
+rogue_heavysniper
+{
+	
+	name_translation_key weapon_heavysniper
+	desc_translation_key weapon_heavysniper_desc
+	
+	required_class rogue_scout
+	can_drop true
+	selectable true
+	rarity legendary
+	respawn_time 9
+    //unique true
+	weapon_tag hsniper
+
+	default_ammo 5
+	default_ammo_pickup_ammo 5
+	default_weapon_pickup_ammo 5
+	max_ammo 5
+	unlimited_ammo false
+	reload 2500
+	penetrating false
+	hide_crosshair true
+	hide_crosshair_zoomed true
+	
+	color EBBA45
+	
+	icon_path images/weapon_icons/wp_hud_heavysniper_02.png
+	icon_path2 images/weapon_icons/wp_card_heavysniper.png
+	weapon_icon_path images/weapon_icons/wp_card_heavysniper_nobg.png
+
+	spread 6
+    zoomed_spread 0 // no spread when ads
+
+	rate 1550
+	min_charge_damage 50 50
+	damage 65 65	
+	min_charge_critical_damage 115 115
+	critical_damage 130 130		
+	scope_charge_time 1000		
+	has_noscope_crit false
+	inner_damage 85
+	knockback 2
+	ground_knockback 2
+    charge_animation 1
+    speed 33000
+	
+	recoil_delay_recovery 0.125
+	recoil_up 4.75
+	recoil_side 0.5
+	recoil_recovery_time 0.6
+	recoil_time 0.1
+	
+	zoom_speed 150
+	zoomed_walk_speed 175
+	
+	zoomed_recoil_up 3
+	zoomed_recoil_side 0.3
+	zoomed_recoil_recovery_time 0.6
+	zoomed_recoil_time 0.07
+	
+	recoil_back 6
+	recoil_back_recovery_time 0.3
+	recoil_back_time 0.06
+	
+	recoil_shake_recovery_time 0.3
+	recoil_shake_time 0.06
+	recoil_shake 0.3
+		
+	equip_time 450
+	base_combo_rate 300
+	
+	gravity_delay_by_distance 1000
+	gravity 500
+	
+	hit_radius 1 1
+	
+	detached_shot_particles false
+    //shot_particles weapon_heavysniper_muzzle_flash
+	shot_particles_attached weapon_heavysniper_muzzle
+   	shot_particles_attached_3p weapon_heavysniper_muzzle_3p
+	missile_particles weapon_heavysniper_projectile_3p
+	missile_particles_1p weapon_heavysniper_projectile
+	shot_particles_attached weapon_heavysniper_muzzle_flash socket_muzzle 1
+	impact_particles weapon_heavysniper_impact
+	player_impact_particles weapon_heavysniper_player_impact
+    	
+// IMPACT DECALS
+	decal decal 10 3 3.561 false false alpha 1
+	decal decal_glow_red 16 3 3.561 false false alpha 30
+	decal decal_glow 10 3 3.561 false false alpha 20
+	
+
+	//model assets/shared/weapons/heavysniper/heavysniper //Old model
+	model assets/shared/models/animations/wp_heavy_sniper/skm_heavy_sniper
+	/////	fps model position - fps_heavy_sniper /////////////////////////////////////
+	
+	model_position 0.379076 -0.208433 1.48947
+	model_scale 0.05
+    model_post_rotation -2 -1.4 0
+	fov 47
+	model_pivot 0 0 0
+
+	/////	ADS model position - pistol /////////////////////////////////////
+
+	model_position_centered 0.379076 -0.208433 1.48947
+	model_scale_centered 0.0136441
+	//for clipping
+	model_camera_scale 2.8				
+	muzzle 2.7 -2.8 14
+	
+	//close
+	shot_sound w_hs_unscoped_fire
+	shot_sound_aim_down w_hs_scoped_fire
+	//distant
+	shot_sound2 w_hs_fire_distant
+	shot_sound_aim_down_distant w_hs_fire_distant
+	aim_down_sight_sound_in w_hs_scope_in
+	aim_down_sight_sound_out w_hs_scope_out
+	full_scope_charge_sound w_hs_scope_max
+	scope_charging_sound w_hs_scope_charge
+	equip_sound w_hs_equip
+	hit_sound fb_enemy_hit
+	critical_hit_sound	fb_enemy_hit_crit
+	out_of_ammo_sound w_hs_ooa
+	impact_sound w_hs_impact
+
+	
+	detached_shot_particles false
+	multi_round_particles false
+
+    can_upgrade_ammo true
+	can_upgrade_stock true
+	can_upgrade_tactical_reload true
+
+	zoomed_scope 2
+	zoomed_hide_weapon true
+	
+}
+
+rogue_heavysniper augment 1
+{
+	name arena_heavysniper_ammo
+	name_translation_key heavysniper_increase_ammo
+	desc_translation_key heavysniper_increase_ammo_desc
+	rarity common
+	preadd default_ammo 2
+	preadd max_ammo 2
+	max_stacks 2
+	locked_in_battlepass true
+}
+
+// arena_heavysniper augment 2
+// {
+// 	name arena_heavysniper_scope_time
+// 	name_translation_key heavysniper_scope_and_draw
+// 	desc_translation_key heavysniper_scope_and_draw_desc
+// 	rarity common
+// 	preadd zoom_speed -50
+// 	preadd equip_time -50
+// 	max_stacks 2
+// }
+
+rogue_heavysniper augment 3
+{
+	name arena_heavysniper_increase_noscope_accuracy
+	name_translation_key heavysniper_increase_noscope_accuracy
+	desc_translation_key heavysniper_increase_noscope_accuracy_desc
+	rarity rare
+	preadd spread -1
+	max_stacks 1
+	locked_in_battlepass true
+}
+
+rogue_heavysniper augment 4
+{
+	name arena_heavysniper_increase_noscope_accuracy
+	name_translation_key heavysniper_increase_fire_rate
+	desc_translation_key heavysniper_increase_fire_rate_desc
+	rarity rare
+	preadd rate -200
+	max_stacks 2
+}
+
+rogue_heavysniper augment 5
+{
+	name heavysniper_penetration
+	name_translation_key heavysniper_penetration
+	desc_translation_key heavysniper_penetration_desc
+	rarity legendary
+	overwrite penetrating true
+	locked_in_battlepass true
+}
+
+rogue_heavysniper augment 6
+{
+	name heavysniper_instant_charge
+	name_translation_key heavysniper_instant_charge
+	desc_translation_key heavysniper_instant_charge_desc
+	rarity artifact
+	preadd scope_charge_time -650
+	overwrite rate 1150
+	//overwrite shot_particles weapon_heavysniper_muzzle_flash_artifact
+	overwrite shot_particles_attached weapon_hs_muzzle_artifact
+   	overwrite shot_particles_attached_3p hs_muzzle_3p_artifact
+	overwrite missile_particles weapon_heavysniper_projectile_3p_artifact
+	overwrite missile_particles weapon_hs_artifact_projectile
+	overwrite missile_particles_1p weapon_hs_artifact_projectile
+	overwrite shot_particles_attached weapon_hs_muzzle_flash_artifact socket_muzzle 1
+	overwrite impact_particles weapon_hs_impact_artifact
+	overwrite player_impact_particles hs_player_impact_artifact
+
+	overwrite pfx hs_artifact_barrel socket_muzzle 1
+	locked_in_battlepass true
+}
+
+rogue_heavysniper augment 7 
+{
+	name heavysniper_reload_speed
+	name_translation_key heavysniper_increase_reload_speed
+	desc_translation_key heavysniper_increase_reload_speed_desc
+	rarity common
+	preadd reload -400
+	max_stacks 1
+}

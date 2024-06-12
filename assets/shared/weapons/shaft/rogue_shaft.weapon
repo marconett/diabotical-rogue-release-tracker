@@ -1,0 +1,183 @@
+rogue_shaft
+{
+	name_translation_key weapon_shaft
+	desc_translation_key weapon_shaft_desc
+	
+	selectable true
+	rarity epic
+	required_class rogue_chunk
+
+	
+	respawn_time 9
+	weapon_tag shaft
+	color A35EBA
+	category 4
+	bind_group 4
+	
+	unlimited_ammo true
+	overheat_limit 1000	
+	heat_per_shot 15
+	heat_cool_per_sec 500
+	delay_heat_regen 0.1
+	
+	damage 4 4
+	rate 52
+	min_damage_distance 767
+    max_damage_distance 768
+
+	hit_radius 2.5 1.1
+
+	knockback 2
+	ground_knockback 2
+	distance 768
+	speed 0
+	orb true
+	orb_lag 0.00
+	
+	recoil_back 0.5
+	recoil_back_recovery_time 0.0275
+	recoil_back_time 0.0275
+	
+	//switch_recoil_shake true
+	//recoil_shake_recovery_time 0.0275
+	//recoil_shake_time 0.0275
+	//recoil_shake 0.085
+	
+	zoomed_scope 1
+	zoomed_walk_speed 200
+	
+	icon_path images/weapon_icons/wp_hud_shaft_02.png
+	icon_path2 images/weapon_icons/wp_card_shaft.png
+	weapon_icon_path images/weapon_icons/wp_card_shaft_nobg.png
+    
+    friendly_name Shaft
+    description Powerful medium-range sustained-damage weapon.
+	
+	equip_time 400
+	base_combo_rate 200
+	
+	//shot_particles_attached shaft_muzzle_fire_blue
+	shot_particles_attached shaft_muzzle_fire_blue socket_muzzle
+	//missile_particles vc_bullet
+  	//impact_particles vc_explode
+	impact_particles shaft_beam_impact_blue
+//tracking_particles shaft_beam_particles
+    tracking_particles shaft_beam_blue
+    //pfx shaft_filament muzzle
+	
+	//decal decal 8
+	//decal decal_glow_red 16 false false alpha 2.5
+	//decal decal_shaft_back_connector 1.7 20 3.561 1 true false min
+	//decal decal_shaft_connector 2 5 3.561 2 true false max
+	//decal decal_shaft_back 1.7 20 3.561 1 true true min
+	//decal decal_df 2 5 3.561 2 true true max
+	//decal decal_shaft_back_connector 1.7 20 3.561 true false min
+	//decal decal_shaft_connector 2 5 3.561 true false max
+	//decal decal_shaft_back 1.7 20 3.561 true true min
+	//decal decal_shaft 2 5 3.561 true true max
+	
+	loop_animation true
+	
+	//model assets/shared/weapons/shaft/shaft //Old model
+	model assets/shared/models/animations/wp_shaft/skm_shaft
+	model_scale 0.060
+	model_scale_centered 0.054
+	//model_position_centered 0 -2.5 3.5
+	model_position_centered 0 -4 5
+	model_position 2.5 -3 3.6
+	model_camera_scale 0.7
+	model_scale_third_person 0.9
+	model_position_third_person -3.5 3.5 6
+
+	muzzle 10.0 -11 41.0
+	fov 45
+	
+	parallel_knockback true
+	
+	particles_clipping_plane true
+	
+	loop_sound w_shaft_loop
+	start_sound w_shaft_ini
+	end_sound w_shaft_release
+	// low_ammo_sound shaft_low1
+	// low_ammo_threshold 40
+	// low_ammo_final_pitch 0.5
+	equip_sound w_shaft_equip
+	hit_sound fb_enemy_hit
+	critical_hit_sound fb_enemy_hit_crit
+	proximity_loop_sound w_shaft_idle_loop
+	out_of_ammo_sound w_shaft_ooa
+	impact_sound w_shaft_impact
+	overheat_sound w_shaft_overheat
+	
+	//light 1.3 -0.5 -2.5 0.65	3187ff 15
+	//light 3.5 2 0 5 3187ff 10
+	detached_shot_particles false	
+
+}
+
+rogue_shaft augment 1
+{
+	name shaft_heat
+	name_translation_key shaft_increase_heat_limit
+	desc_translation_key shaft_increase_heat_limit_desc
+	rarity common
+	preadd overheat_limit 300
+	max_stacks 2
+}
+
+rogue_shaft augment 2
+{
+	name shaft_heat_cooling
+	name_translation_key shaft_reduce_heat_cooldown
+	desc_translation_key shaft_reduce_heat_cooldown_desc
+	rarity common
+	preadd heat_cool_per_sec 250
+	max_stacks 2
+	locked_in_battlepass true
+}
+
+rogue_shaft augment 3
+{
+	name shaft_range_increase
+	name_translation_key shaft_range_increase
+	desc_translation_key shaft_range_increase_desc
+	rarity rare
+	preadd distance 100
+	preadd min_damage_distance 100
+	preadd max_damage_distance 100
+	max_stacks 1
+	locked_in_battlepass true
+}
+
+// rogue_shaft augment 4
+// {
+// 	name shaft_equip_time
+// 	name_translation_key shaft_equip_speed
+// 	desc_translation_key shaft_equip_speed_desc
+// 	rarity rare
+// 	preadd equip_time -50
+// 	max_stacks 2
+// }
+
+rogue_shaft augment 5
+{
+	name shaft_max_range_extra_dmg
+	name_translation_key shaft_extra_dmg_max_range
+	desc_translation_key shaft_extra_dmg_max_range_desc
+	rarity epic
+	preadd min_damage_distance -125
+	preadd max_damage_distance -125
+	overwrite damage 4 5
+}
+
+rogue_shaft augment 6
+{
+	name shaft_siphon_armor
+	name_translation_key shaft_siphon_armor
+	desc_translation_key shaft_siphon_armor_desc
+	rarity legendary
+	armor_break_upgrade 1
+	overshield_on_armor_break_amount 15
+	locked_in_battlepass true
+}

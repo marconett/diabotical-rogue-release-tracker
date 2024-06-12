@@ -1,0 +1,222 @@
+rogue_crossbow
+{
+	name_translation_key weapon_crossbow
+	desc_translation_key weapon_crossbow_desc
+	
+	selectable true
+	rarity legendary
+	required_class rogue_eggbot
+	
+	respawn_time 9
+	//weapon_tag bl
+	weapon_tag cb
+    penetrating false
+
+	default_ammo_pickup_ammo 6
+	default_weapon_pickup_ammo 6
+	default_ammo 6
+	max_ammo 6
+	unlimited_ammo false
+	reload 2000
+	
+  	damage 50 65
+  	critical_damage 90 105
+ 	rate 1000
+	hit_radius 3 2
+	speed 10000
+	gravity 200
+    gravity_pitch_offset 0
+	
+	max_damage_distance 2000
+	min_damage_distance 100
+	
+	knockback 3
+	ground_knockback 3.5
+
+	category 5
+	bind_group 5
+	color EBBA45
+		
+	icon_path images/weapon_icons/wp_hud_crossbow_02.png
+	icon_path2 images/weapon_icons/wp_card_crossbow.png
+	weapon_icon_path images/weapon_icons/wp_card_crossbow_nobg.png
+        
+	recoil_delay_recovery 0.1
+	recoil_up 1.5
+	recoil_side 0.1
+	recoil_recovery_time 0.25
+	recoil_time 0.05
+	
+	zoomed_recoil_up 0.9
+	zoomed_recoil_side 0.05
+	zoomed_recoil_recovery_time 0.23
+	zoomed_recoil_time 0.05
+	
+	recoil_back_delay_recovery 0.12
+	recoil_back_recovery_time 0.1
+	recoil_back_time 0.05
+	recoil_back 1.5
+
+	//recoil_shake_delay_recovery 0.12
+	//recoil_shake_recovery_time 0.1
+	//recoil_shake_time 0.05
+	//recoil_shake 0.2
+	
+	zoomed_scope 1
+	zoomed_walk_speed 200
+		
+	equip_time 350
+	base_combo_rate 250
+	
+	shot_particles empty_system
+   	shot_particles_attached weapon_crossbow_muzzle
+	shot_particles_attached_3p weapon_crossbow_muzzle_3p
+  	//missile_particles bl_bullet
+	//missile_particles crossbow_projectile
+  	//impact_particles crossbow_impact
+	//missile_trail_particles crossbow_bolt_dynamic_trail
+	impact_particles weapon_crossbow_impact_v2
+	pfx weapon_cb_connections_l socket_arm_01_l 0.03
+	pfx weapon_cb_connections_r socket_arm_01_r 0.03
+	shot_particles_attached weapon_cb_wing_l socket_arm_02_l 0.1
+	shot_particles_attached weapon_cb_wing_r socket_arm_02_r 0.1
+	shot_particles_attached weapon_cb_arrow_socket socket_arrow 0.1
+	shot_particles_attached weapon_cb_wind_jet socket_capacitor_l 0.13
+	player_impact_particles weapon_crossbow_player_impact
+	pfx weapon_cb_display socket_display 0.03
+	shot_particles_attached cb_vents_l socket_went_l 0.03
+	shot_particles_attached cb_vents_r socket_went_r 0.03
+	//TEMP
+	missile_particles weapon_crossbow_projectile
+	missile_particles_1p weapon_crossbow_projectile
+
+//IMPACT DECAL
+
+	//decal decal_plasma 30 3 3.561 false false alpha 5
+	//decal decal_plasma 40 3 3.561 false false alpha 5
+	//decal decal_glow_blue 30 3 3.561 false false alpha 5
+	//decal decal_glow_blue 15 3 3.561 false false alpha 5
+
+    //loop_animation true
+  	
+	muzzle_offset 0 0 0
+	
+	//model assets/shared/weapons/crossbow/crossbow
+	model assets/shared/models/animations/wp_crossbow/skm_crossbow
+	model_scale 0.0625
+	model_scale_centered 0.05625
+	model_position_centered 0 -4 3
+	//model_position 2.5 -2.8 7
+	//model_rotation 169 -8.5  -8
+	//model_position 2.5 -3.22 3.52
+	
+	//Centered: model_position 0 -3.22 2.5
+	model_position 2.5 -3.22 2.5
+
+	model_camera_scale 0.6
+	muzzle 0 0 0
+	fov 40
+	model_scale_third_person 1
+	model_position_third_person 3 2 12
+	
+	shot_sound w_cb_fire
+	shot_sound2	w_cb_fire_distant
+	// shot_sound_low_ammo cb_fire_low1 cb_fire_low2 cb_fire_low3 cb_fire_low4 cb_fire_low5
+	// low_ammo_threshold 4
+	missile_loop_sound w_cb_airbound
+	impact_sound w_cb_impact 
+	equip_sound w_cb_equip
+	hit_sound fb_enemy_hit
+	critical_hit_sound	fb_enemy_hit_crit
+	out_of_ammo_sound w_cb_ooa
+	
+	detached_shot_particles false
+	//pickup_upgrade_weapon crossbow_pickup pncr
+}
+
+rogue_crossbow augment 1
+{
+	name crossbow_ammo
+	name_translation_key crossbow_increase_ammo
+	desc_translation_key crossbow_increase_ammo_desc
+	rarity common
+	preadd default_ammo 2
+	preadd max_ammo 2
+	max_stacks 2
+	locked_in_battlepass true
+}
+
+rogue_crossbow augment 2
+{
+	name crossbow_projectile_speed
+	name_translation_key crossbow_increase_projectile_speed
+	desc_translation_key crossbow_increase_projectile_speed_desc
+	rarity common
+	preadd speed 2000
+	max_stacks 1
+}
+
+rogue_crossbow augment 3
+{
+	name crossbow_fire_rate
+	name_translation_key crossbow_fire_rate
+	desc_translation_key crossbow_fire_rate_desc
+	rarity rare
+	preadd rate -75
+	max_stacks 1
+	locked_in_battlepass true
+}
+
+rogue_crossbow augment 4
+{
+	name crossbow_penetration
+	name_translation_key crossbow_penetration
+	desc_translation_key crossbow_penetration_desc
+	rarity epic
+	overwrite penetrating true
+}
+
+// //arena_crossbow augment 5
+// {
+// 	name freezing_arrows
+// 	name_translation_key crossbow_freeze_on_hit
+// 	desc_translation_key crossbow_freeze_on_hit_desc
+// 	rarity epic
+// 	overwrite chill_movement_multiplier 0.80
+// 	overwrite chill_duration 2.5
+// }
+
+rogue_crossbow augment 7
+{
+	name healing_arrows
+	name_translation_key crossbow_healing_arrows
+	desc_translation_key crossbow_healing_arrows_desc
+	rarity legendary
+	overwrite heal_amount_per_projectile_hit_on_friendly 25
+	locked_in_battlepass true
+}
+
+rogue_crossbow augment 8
+{
+	name burst_arrows
+	name_translation_key crossbow_burst_arrows
+	desc_translation_key crossbow_burst_arrows_desc
+	rarity artifact
+	overwrite bursts 2 0.1
+	overwrite missile_particles weapon_cb_projectile_artifact
+	overwrite missile_particles_1p weapon_cb_projectile_artifact
+	overwrite impact_particles cb_impact_artifact_v1
+	overwrite shot_particles_attached weapon_cb_muzzle_artifact
+	overwrite shot_particles_attached_3p weapon_cb_muzzle_3p_artifact
+	overwrite pfx weapon_cb_connections_artifact socket_arm_01_l 0.035
+	overwrite pfx weapon_cb_connections_artifact_r socket_arm_01_r 0.035
+	overwrite player_impact_particles weapon_cb_player_impact_artifact
+	overwrite shot_particles_attached cb_artifact_socket_arm_02_l socket_arm_02_l 0.1
+	overwrite shot_particles_attached cb_artifact_socket_arm_02_r socket_arm_02_r 0.1
+	overwrite shot_particles_attached cb_artifact_socket_arrow socket_arrow 0.1
+	overwrite pfx cb_display_artifact socket_display 0.03
+	overwrite shot_particles_attached cb_artifact_wind_jet socket_capacitor_l 0.13
+	overwrite shot_particles_attached cb_vents_l_artifact socket_went_l 0.03
+	overwrite shot_particles_attached cb_vents_r_artifact socket_went_r 0.03
+	locked_in_battlepass true
+}

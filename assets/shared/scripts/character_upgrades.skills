@@ -1,0 +1,187 @@
+//CHARACTER UPGRADES
+skill 80000
+{
+	name hp_increase 
+	name_translation_key hp_increase
+	desc_translation_key hp_increase_desc
+	selectable true
+	show_in_dev_console true
+	category character_upgrade
+	character_upgrade_type tank
+	rarity common
+	extra_max_hp 30
+}
+
+skill 80001
+{
+	name shield_regen 
+	name_translation_key shield_regen
+	desc_translation_key shield_regen_desc
+	selectable true
+	show_in_dev_console true
+	category character_upgrade
+	character_upgrade_type tank
+	rarity common
+	extra_ooc_armor_regen_per_s 2
+}
+
+
+skill 80002
+{
+	name hp_increase_regen 
+	name_translation_key hp_increase_regen
+	desc_translation_key hp_increase_regen_desc
+	selectable true
+	show_in_dev_console true
+	category character_upgrade
+	character_upgrade_type tank
+	rarity rare
+	extra_max_hp 30
+	extra_ooc_hp_regen_per_s 1
+}
+
+
+skill 80003
+{
+	name shield_hp_increase 
+	name_translation_key shield_hp_increase
+	desc_translation_key shield_hp_increase_desc
+	selectable true
+	show_in_dev_console true
+	category character_upgrade
+	character_upgrade_type tank
+	rarity rare
+	extra_max_armor 20
+	extra_max_hp 20
+}
+
+skill 80004
+{
+	name crit_chance
+	name_translation_key crit_chance
+	desc_translation_key crit_chance_desc
+	selectable true
+	show_in_dev_console true
+	category character_upgrade
+	character_upgrade_type dps
+	rarity common
+	critical_hit_chance 10
+}
+
+
+skill 80005
+{
+	name shield_increase_regen
+	name_translation_key shield_increase_regen
+	desc_translation_key shield_increase_regen_desc
+	selectable true
+	show_in_dev_console true
+	category character_upgrade
+	character_upgrade_type tank
+	rarity rare
+	extra_max_armor 20
+	extra_ooc_armor_regen_per_s 2
+}
+
+
+skill 80006
+{
+	name hp_increase_regen_epic
+	name_translation_key shield_increase_regen_epic
+	desc_translation_key shield_increase_regen_epic_desc
+	selectable true
+	show_in_dev_console true
+	category character_upgrade
+	character_upgrade_type tank
+	rarity epic
+	extra_max_hp 50
+	extra_ooc_hp_regen_per_s 2
+	//TODO + 5 hp/s after crit hit for 5 seconds
+
+}
+
+skill 80007
+{
+	name shield_increase_regen_epic
+	name_translation_key shield_increase_regen_epic
+	desc_translation_key shield_increase_regen_epic_desc
+	selectable true
+	show_in_dev_console true
+	category character_upgrade
+	character_upgrade_type utility
+	passive true
+	rarity epic
+	extra_max_armor 30
+	extra_ooc_armor_regen_per_s 3
+	//TODO + Reset shield regen on crit 
+}
+
+
+skill 80008
+{
+	name armadillo
+	name_translation_key armadillo
+	desc_translation_key armadillo_desc
+	selectable true
+	show_in_dev_console true
+	category character_upgrade
+	character_upgrade_type utility
+	rarity epic
+	extra_max_armor 50
+	extra_max_hp 50
+	//TODO 40 % damage reduction when stationary
+}
+
+skill 80009
+{
+	name hp_regen
+	name_translation_key hp_regen
+	desc_translation_key hp_regen_desc
+	selectable true
+	show_in_dev_console true
+	category character_upgrade
+	character_upgrade_type tank
+	rarity common
+	extra_ooc_hp_regen_per_s 1
+}
+
+
+skill 80010
+{
+	name fire_rate_increase
+	name_translation_key fire_rate_increase
+	desc_translation_key fire_rate_increase_desc
+	selectable true
+	show_in_dev_console true
+	category character_upgrade
+	character_upgrade_type dps
+	rarity common
+	fire_rate_increase 10
+}
+
+
+skill 80011
+{
+	name reload_speed_increase
+	name_translation_key reload_speed_increase
+	desc_translation_key reload_speed_increase_desc
+	selectable true
+	show_in_dev_console true
+	category character_upgrade
+	character_upgrade_type dps
+	rarity common
+	reload_speed_increase 10
+}
+
+skill 80012
+{
+	name crit_damage_boost
+	name_translation_key crit_damage_boost
+	desc_translation_key crit_damage_boost_desc
+	selectable true
+	show_in_dev_console true
+	category character_upgrade
+	character_upgrade_type dps
+	rarity common
+	crit_damage_boost 10
+}

@@ -1,0 +1,16 @@
+missing
+{
+  {
+    map textures/core/missing.png
+    map swatches/normal.png
+    map swatches/black.png
+    map swatches/black.png
+    map swatches/black.png
+    material_id 242
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tile.ps.cso
+  }
+}
+

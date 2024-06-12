@@ -1,0 +1,19 @@
+override_core_glow
+{
+  {
+    map models/enemy/materials/enemy_cube_obsidian/enemy_obsidian_d.png
+    map models/enemy/materials/enemy_cube_obsidian/enemy_obsidian_n.png
+    map models/enemy/materials/enemy_cube_obsidian/enemy_obsidian_s.png
+    map models/enemy/materials/enemy_cube_obsidian/enemy_obsidian_i.png
+    map models/enemy/materials/enemy_cube_obsidian/enemy_obsidian_height.png
+    map models/enemy/materials/enemy_cube_obsidian/enemy_obsidian_height.png
+    material_id 61
+    vertex_shader tilestaticbatch.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tile_dissolve.ps.cso
+    pixel_shader_param float_params3 0.75 0.75 0.0 0.0 //scale_xy_offset_zw
+    pixel_shader_param float_params4 0.0 0.2 1.0 1.0 //rgb glow color, a intenstiy
+  }
+}
+

@@ -1,0 +1,194 @@
+rogue_heavymachinegun
+{
+	name_translation_key weapon_heavymachinegun
+	desc_translation_key weapon_heavymachinegun_desc
+	
+	selectable true
+	rarity rare
+	can_drop true
+	required_class rogue_chunk
+
+
+	respawn_time 9
+    //unique true
+	weapon_tag hmg	
+	
+	default_ammo 30
+	default_ammo_pickup_ammo 30
+	default_weapon_pickup_ammo 30
+	max_ammo 30
+	unlimited_ammo false
+	reload 2000
+	
+	color 1996D9
+	
+	icon_path images/weapon_icons/wp_hud_heavymachinegun_02.png
+	icon_path2 images/weapon_icons/wp_card_heavymachinegun.png
+	weapon_icon_path images/weapon_icons/wp_card_heavymachinegun_nobg.png
+	
+	//overheat_limit 150
+	//heat_per_shot 2
+	//heat_cool_per_sec 10
+
+	bursts 3 0.06
+    rate 380
+	damage 7 12
+	critical_damage 11 19
+	knockback 2
+	ground_knockback 2
+    charge_animation 1	
+	speed 31000
+	
+	mouse_take_over_recoil true
+	spread_recovery_time 0.1
+	spread 0.25 0.25
+	max_spread 0.5 0.5
+	
+	zoomed_spread 0.2 0.2
+	max_zoomed_spread 0.45 0.45
+	
+	recoil_delay_recovery 0.08
+	recoil_up 0.3
+	recoil_side 0.1
+	recoil_recovery_time 0.25
+	recoil_time 0.02
+	
+	zoomed_recoil_up 0.25
+	zoomed_recoil_side 0.1
+	zoomed_recoil_recovery_time 0.3
+	zoomed_recoil_time 0.05
+	
+	recoil_back 1
+	recoil_back_recovery_time 0.1
+	recoil_back_time 0.03
+	
+	//recoil_shake_recovery_time 0.03
+	//recoil_shake_time 0.03
+	//recoil_shake 0.15
+	
+	zoomed_scope 1
+	
+	max_damage_distance 600
+    min_damage_distance 4000
+		
+	equip_time 300
+	base_combo_rate 250
+	
+	zoomed_walk_speed 200
+	
+	hit_radius 1 1
+
+	loop_animation true
+    
+	detached_shot_particles false
+    //shot_particles weapon_heavy_machinegun_muzzle_flash
+	shot_particles_attached weapon_heavy_machinegun_muzzle
+   	shot_particles_attached_3p weapon_heavy_machinegun_muzzle_3p
+	missile_particles weapon_heavy_machinegun_projectile_3p
+	missile_particles_1p weapon_heavy_machinegun_projectile
+	shot_particles_attached weapon_heavy_machinegun_muzzle_flash socket_muzzle 1
+	impact_particles weapon_heavy_machinegun_impact
+	player_impact_particles weapon_heavy_machinegun_player_impact
+// IMPACT DECALS
+	//decal decal 10 3 3.561 false false alpha 1
+	//decal decal_glow_red 16 3 3.561 false false alpha 30
+	//decal decal_glow 10 3 3.561 false false alpha 20
+	
+
+	/////	fps model position - heavymachinegun  /////////////////////////////////////
+	//model assets/shared/weapons/heavymachinegun/heavymachinegun //Old model
+	model assets/shared/models/animations/wp_heavy_machinegun/skm_heavy_machinegun
+	model_position 0.3 -1 1.2
+	model_scale 0.06
+	model_post_rotation -1.8 1.5 0.0080
+	fov 52
+    model_pivot -0.2 0 0
+	
+
+	/////	ADS model position - heavymachinegun  /////////////////////////////////////
+
+	model_position_centered 0.4914 -2.57188 7.47569
+	model_scale_centered 0.0637542
+	model_camera_scale 3.5
+	model_post_rotation_centered -2.21 1.5 -0.050
+	
+/////	Third person model position - heavymachinegun /////////////////////////////////////
+	//MOVED TO .ani FILE 
+	
+	
+	// close
+	burst_sound w_hm_fire_burst
+	burst_sound_tail w_hm_fire_burst_tail
+	// distant
+	burst_distance_sound w_hm_fire_burst_distant
+	burst_distance_sound_tail w_hm_fire_burst_distant_tail
+	equip_sound w_hm_equip
+	hit_sound fb_enemy_hit
+	critical_hit_sound	fb_enemy_hit_crit
+	out_of_ammo_sound w_hm_ooa
+    impact_sound w_mac_impact
+    
+	
+	detached_shot_particles false
+	multi_round_particles false
+
+	can_upgrade_ammo true
+	can_upgrade_stock true
+}
+
+rogue_heavymachinegun augment 1
+{
+	name heavymachinegun_ammo
+	name_translation_key heavymachinegun_increase_ammo
+	desc_translation_key heavymachinegun_increase_ammo_desc
+	rarity common
+	preadd default_ammo 6
+	preadd max_ammo 6
+	max_stacks 2
+	locked_in_battlepass true
+}
+
+rogue_heavymachinegun augment 2
+{
+	name heavymachinegun_reload_speed
+	name_translation_key heavymachinegun_increase_reload_speed
+	desc_translation_key heavymachinegun_increase_reload_speed_desc
+	rarity common
+	preadd reload -400
+	max_stacks 1
+}
+
+rogue_heavymachinegun augment 3
+{
+	name heavymachinegun_reduced_spread
+	name_translation_key heavymachinegun_reduced_spread
+	desc_translation_key heavymachinegun_reduced_spread_desc
+	rarity rare
+	preadd spread -0.1 -0.1
+	preadd zoomed_spread -0.1 -0.1
+	max_stacks 1
+	locked_in_battlepass true
+}
+
+rogue_heavymachinegun augment 4
+{
+	name heavymachinegun_fire_rate
+	name_translation_key heavymachinegun_fire_rate
+	desc_translation_key heavymachinegun_fire_rate_desc
+	rarity rare
+	preadd rate -10
+	max_stacks 2
+}
+
+rogue_heavymachinegun augment 5
+{
+	name heavymachinegun_improved_burst
+	name_translation_key heavymachinegun_improved_burst
+	desc_translation_key heavymachinegun_improved_burst_desc
+	rarity legendary
+	preadd damage -1.75 -1.75
+	preadd critical_damage -1.75 -1.75
+	overwrite bursts 4 0.06
+	locked_in_battlepass true
+}
+

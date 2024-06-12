@@ -1,0 +1,16 @@
+override_monitor_screen1
+{
+  {
+	map !render_target_0
+    map swatches/normal.png
+    map swatches/emissive_full.png
+    map swatches/black.png
+    map swatches/blue.png	
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+	pixel_shader_param accent3 161b1cff	
+  }
+}

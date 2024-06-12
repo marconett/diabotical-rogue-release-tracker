@@ -1,0 +1,8 @@
+asset glass
+{
+    type material
+    listed true
+    tags NONE
+    material override_glass
+	mat_override true
+}

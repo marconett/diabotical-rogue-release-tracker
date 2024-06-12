@@ -1,0 +1,14 @@
+rocky_decal
+{
+  {
+    map textures/experiments/rock_decal_d.png
+    map textures/experiments/rock_decal_n.png
+    map textures/experiments/rock_decal_s.png
+    vertex_shader tiledecalns.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    decal_with_normals true
+    pixel_shader tiledecalns.ps.cso
+  }
+}
+

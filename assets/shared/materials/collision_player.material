@@ -1,0 +1,14 @@
+collision_player
+{
+  {
+    map swatches/collision_player.png
+    map swatches/normal.png
+    map swatches/gray40.png
+    material_id 250
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader collision.ps.cso
+  }
+}
+

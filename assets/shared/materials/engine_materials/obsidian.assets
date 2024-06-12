@@ -1,0 +1,8 @@
+asset obsidian
+{
+    type material
+    listed true
+    tags NONE
+    material override_obsidian
+	mat_override true
+}

@@ -1,0 +1,288 @@
+//////////////////
+// DROP PRESETS //
+//////////////////
+drop_presets
+{
+    // A PRESET DEFINES A NUMBER OF DROP-SELECTION INSTRUCTIONS:
+    // To drop by category:      category <roll_odds> <min_count> [<max_count> <min_rarity> <max_rarity> include <categories> exclude <categories>]
+    // To drop a specific item:  item <unique_name> <roll_odds> <min_count> [<max_count>]
+
+    chest
+    {
+        category 0.85  1 1 0 3 include weapons
+        item medkit 0.15 1 2      //<-- 15% x 1-2 medkits
+    }
+    dome_red
+    {
+        category 1.0 7 7 2 3 include consumables
+        category 1.0 3 3 0 3 exclude special    //<-- 3 random items, but nothing special
+    }
+    dome_green
+    {
+        category 1.0 7 7 2 3 include ammo
+        category 1.0 3 3 0 3 exclude special
+    }
+    dome_blue
+    {
+        category 1.0 7 7 2 3 include tactical
+        category 1.0 3 3 0 3 exclude special
+    }
+    dome_yellow
+    {
+        category 1.0 7 7 2 3 include weapons
+        category 1.0 3 3 0 3 exclude special
+    }
+    loot_spawner
+    {
+        category 1.0 10 10 0 3 exclude weapons special
+    }
+    player_death_always_drop
+    {
+        item light_ammo 1.0 1
+        item heavy_ammo 1.0 1
+        item weeball_core 1.0 1
+    }
+}
+
+
+
+
+///////////////////////////
+// ITEM LOOT DEFINITIONS //
+///////////////////////////
+
+///////////////////
+// SKILL RELATED //
+///////////////////
+orblue
+{
+    orbblue
+    {
+        object_id 14
+        tier 0
+        categories skills
+    }
+}
+
+weeball_core
+{
+    weeball_core
+    {
+        object_id 39
+        tier 3
+        categories special
+    }
+}
+
+//////////
+// AMMO //
+//////////
+ammo_pickup
+{
+    light_ammo
+    {
+        object_id 20
+        tier 0
+        categories ammo
+        chest_max_drop_count 2
+        remaining_ammo 30
+    }
+    heavy_ammo
+    {
+        object_id 21
+        tier 0
+        categories ammo
+        chest_max_drop_count 2
+        remaining_ammo 15
+    }
+}
+
+////////////////////////////
+// EQUIPMENT (WEAPON BAR) //
+////////////////////////////
+weapon_slot_drop
+{
+    // Actual weapons /////////////////////////////
+    bow
+    {
+        tier 0
+        categories equipment weapons
+    }
+    doublebarreled_shotgun
+    {
+        tier 0
+        categories equipment weapons
+    }
+    egun
+    {
+        tier 0
+        categories equipment weapons
+    }
+    heavy_sniper
+    {
+        tier 0
+        categories equipment weapons
+    }
+    heavymachinegun
+    {
+        tier 0
+        categories equipment weapons
+    }
+    machinegun
+    {
+        tier 0
+        categories equipment weapons
+    }
+    pistol
+    {
+        tier 0
+        categories equipment weapons
+    }
+    revolver
+    {
+        tier 0
+        categories equipment weapons
+    }
+    rogue_pncr
+    {
+        tier 0
+        categories equipment weapons
+    }
+    shotty
+    {
+        tier 0
+        categories equipment weapons
+    }
+    sniper
+    {
+        tier 0
+        categories equipment weapons
+    }
+    submachinegun
+    {
+        tier 0
+        categories equipment weapons
+    }
+    tgun
+    {
+        tier 0
+        categories equipment weapons
+    }
+    // Tactical / utility /////////////////////////////
+    he_grenade
+    {
+        tier 0
+        categories equipment weapons tactical
+    }
+    smoke_grenade
+    {
+        tier 0
+        categories equipment tactical
+    }
+    spawn_cover_grenade
+    {
+        tier 0
+        categories equipment tactical
+    }
+    spawn_ramp_grenade
+    {
+        tier 0
+        categories equipment tactical
+    }
+    healing_grenade
+    {
+        tier 0
+        categories equipment tactical consumables
+    }
+    // Consumable but equipable ///////////////////////
+    medkit
+    {
+        tier 0
+        categories equipment consumables
+    }
+}
+
+// /////////////////
+// // WEAPON MODS //
+// /////////////////
+// ammo_upgrade_pickup
+// {
+//     ammo_upgrade_0
+//     {
+//         object_id 23
+//         tier 0
+//         categories mod magazine
+//     }    
+//     ammo_upgrade_1
+//     {
+//         object_id 24
+//         tier 1
+//         categories mod magazine
+//     }    
+//     ammo_upgrade_2
+//     {
+//         object_id 25
+//         tier 2
+//         categories mod magazine
+//     }    
+//     ammo_upgrade_3
+//     {
+//         object_id 26
+//         tier 3
+//         categories mod magazine
+//     }
+// }
+// stock_pickup
+// {
+//     stock_0
+//     {
+//         object_id 27
+//         tier 0
+//         categories mod stock
+//     }    
+//     stock_1
+//     {
+//         object_id 28
+//         tier 1
+//         categories mod stock
+//     }    
+//     stock_2
+//     {
+//         object_id 29
+//         tier 2
+//         categories mod stock
+//     }    
+//     stock_3
+//     {
+//         object_id 30
+//         tier 3
+//         categories mod stock
+//     }
+// }
+// tactical_reload_pickup
+// {
+//     tac_reload_0
+//     {
+//         object_id 31
+//         tier 0
+//         categories mod tac_reload
+//     }    
+//     tac_reload_1
+//     {
+//         object_id 32
+//         tier 1
+//         categories mod tac_reload
+//     }    
+//     tac_reload_2
+//     {
+//         object_id 33
+//         tier 2
+//         categories mod tac_reload
+//     }    
+//     tac_reload_3
+//     {
+//         object_id 34
+//         tier 3
+//         categories mod tac_reload
+//     }
+// }

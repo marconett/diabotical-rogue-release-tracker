@@ -1,0 +1,170 @@
+blue
+{
+	category night
+	skybox skybox_night3
+	envmap 
+	light_sun_color 0 0 1 1 
+	light_ambient_color 0 0 1 1 
+	light_fog_color 0 0 0 0 
+	shadow_color 0 0 0 1 
+	light_sun_rotation 58.5 22.5 0 
+	skybox_rotation 0
+	light_sun_intensity 1
+	light_ambient_intensity 1
+	light_fog_intensity 0
+	weather 
+}
+
+default
+{
+	category all
+	skybox default_skybox
+	envmap 
+	light_sun_color 0.56 0.66 0.73 1 
+	light_ambient_color 0.37 0.4 0.44 1 
+	light_fog_color 0.4 0.73 1 1 
+	shadow_color 0 0 0 1 
+	light_sun_rotation 58.5 22.5 0 
+	skybox_rotation 0
+	light_sun_intensity 4
+	light_ambient_intensity 0
+	light_fog_intensity 0.69
+	weather 
+}
+
+desert_day_01a
+{
+	category all
+	skybox desert_day_01a_dome
+	envmap tropical_day_01a_cm
+	light_sun_color 0.882353 0.776471 0.647059 1 
+	light_ambient_color 0.4 0.4 0.4 1 
+	light_fog_color 0.866667 0.8 0.65098 1 
+	shadow_color 0 0 0 1 
+	light_sun_rotation 44 260 400 
+	skybox_rotation 0
+	light_sun_intensity 2.8
+	light_ambient_intensity 0
+	light_fog_intensity 0.35
+	weather 
+}
+
+green
+{
+	category dusk
+	skybox default_skybox
+	envmap 
+	light_sun_color 0 1 0 1 
+	light_ambient_color 0 1 0 1 
+	light_fog_color 0 0 0 0 
+	shadow_color 0 0 0 1 
+	light_sun_rotation 58.5 22.5 0 
+	skybox_rotation 0
+	light_sun_intensity 1
+	light_ambient_intensity 1
+	light_fog_intensity 0
+	weather 
+}
+
+light_blue
+{
+	category night
+	skybox evening_meadow
+	envmap 
+	light_sun_color 0.4 0.4 1 1 
+	light_ambient_color 0.4 0.4 1 1 
+	light_fog_color 0 0 0 0 
+	shadow_color 0 0 0 1 
+	light_sun_rotation 58.5 22.5 0 
+	skybox_rotation 0
+	light_sun_intensity 1
+	light_ambient_intensity 1
+	light_fog_intensity 0
+	weather 
+}
+
+overgrown_day_01a
+{
+	category all
+	skybox overgrown_day_01a_dome
+	envmap overgrown_day_01a_cm
+	light_sun_color 0.882353 0.776471 0.647059 1 
+	light_ambient_color 0.4 0.4 0.4 1 
+	light_fog_color 0.588235 0.913725 0.819608 1 
+	shadow_color 0 0 0 1 
+	light_sun_rotation 42 -15 400 
+	skybox_rotation 0
+	light_sun_intensity 2.8
+	light_ambient_intensity 0
+	light_fog_intensity 0.66
+	weather 
+}
+
+overgrown_night_01a
+{
+	category all
+	skybox overgrown_night_01a_dome
+	envmap default_envmap
+	light_sun_color 0.647059 0.729412 0.882353 1 
+	light_ambient_color 0.4 0.4 0.4 1 
+	light_fog_color 0.392157 0.447059 0.819608 1 
+	shadow_color 0 0 0 1 
+	light_sun_rotation 40 -90 200 
+	skybox_rotation 0
+	light_sun_intensity 2
+	light_ambient_intensity 0
+	light_fog_intensity 0.15
+	weather 
+}
+
+purple
+{
+	category day
+	skybox desert_envmap
+	envmap 
+	light_sun_color 1 0 1 1 
+	light_ambient_color 1 0 1 1 
+	light_fog_color 0 0 0 0 
+	shadow_color 0 0 0 1 
+	light_sun_rotation 58.5 22.5 0 
+	skybox_rotation 0
+	light_sun_intensity 1
+	light_ambient_intensity 1
+	light_fog_intensity 0
+	weather 
+}
+
+red
+{
+	category dawn
+	skybox skybox_dawn
+	envmap 
+	light_sun_color 1 0 0 1 
+	light_ambient_color 1 0 0 1 
+	light_fog_color 0 0 0 0 
+	shadow_color 0 0 0 1 
+	light_sun_rotation 58.5 22.5 0 
+	skybox_rotation 0
+	light_sun_intensity 1
+	light_ambient_intensity 1
+	light_fog_intensity 0
+	weather 
+}
+
+tropical_day_01a
+{
+	category all
+	skybox tropical_day_01a_dome
+	envmap tropical_day_01a_cm
+	light_sun_color 0.952941 0.788235 0.584314 1 
+	light_ambient_color 0.4 0.4 0.4 1 
+	light_fog_color 0.584314 0.839216 0.94902 1 
+	shadow_color 0 0 0 1 
+	light_sun_rotation 60 215 0 
+	skybox_rotation 0
+	light_sun_intensity 3.1
+	light_ambient_intensity 0
+	light_fog_intensity 0.4
+	weather 
+}
+
