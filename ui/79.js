@@ -318,6 +318,7 @@ const Servers = new function() {
     this.on_set_locations_handlers = [];
     this.on_set_regions_handlers = [];
     let ping_update_in_progress = false;
+    let scheduled_set_region_selection = null;
     this.init = json_loc_data => {
         try {
             data = JSON.parse(json_loc_data)
@@ -350,6 +351,9 @@ const Servers = new function() {
             this.server_locations_initialized = true;
             for (let cb of this.on_locations_init_handlers) {
                 if (typeof cb === "function") cb(this.regions, this.locations)
+            }
+            if (scheduled_set_region_selection) {
+                this.set_region_selection(scheduled_set_region_selection)
             }
             this.ping_locations()
         } else {
@@ -411,6 +415,10 @@ const Servers = new function() {
         }
     };
     this.set_region_selection = regions_string => {
+        if (!this.server_locations_initialized) {
+            scheduled_set_region_selection = regions_string;
+            return
+        }
         let regions = regions_string.split(":");
         let missing_regions = false;
         this.selected_regions.clear();

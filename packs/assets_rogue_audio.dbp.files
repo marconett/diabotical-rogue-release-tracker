@@ -203,7 +203,7 @@ assets\rogue\audio\arena_eggbot_self_footsteps.sounds	8692
 assets\rogue\audio\arena_eggbot_self_jumps.sounds	1104
 assets\rogue\audio\arena_eggbot_self_lands.sounds	5688
 assets\rogue\audio\arena_environmental_entities.sounds	1439
-assets\rogue\audio\arena_feedback_hit.sounds	1384
+assets\rogue\audio\arena_feedback_hit.sounds	1892
 assets\rogue\audio\arena_feedback_misc.sounds	394
 assets\rogue\audio\arena_frag_notifications.sounds	312
 assets\rogue\audio\arena_melee.sounds	1303
@@ -537,6 +537,11 @@ assets\rogue\audio\feedback\feedback_ping_enemy.wav	340346
 assets\rogue\audio\feedback\feedback_shield_broken.wav	137170
 assets\rogue\audio\feedback\feedback_shield_broken_self.wav	160794
 assets\rogue\audio\feedback\frag_notifications\frag_notification_default.wav	244138
+assets\rogue\audio\feedback\hit_sounds\fb_healing_hit01.wav	264644
+assets\rogue\audio\feedback\hit_sounds\fb_healing_hit02.wav	264644
+assets\rogue\audio\feedback\hit_sounds\fb_healing_hit03.wav	264644
+assets\rogue\audio\feedback\hit_sounds\fb_healing_hit04.wav	264644
+assets\rogue\audio\feedback\hit_sounds\fb_healing_hit05.wav	264644
 assets\rogue\audio\feedback\hit_sounds\fb_hit_enemy-001.wav	38770
 assets\rogue\audio\feedback\hit_sounds\fb_hit_enemy_crit-001.wav	94682
 assets\rogue\audio\feedback\hit_sounds\fb_take_damage_self-001.wav	88244
@@ -544,9 +549,9 @@ assets\rogue\audio\feedback\hit_sounds\fb_take_damage_self-002.wav	82364
 assets\rogue\audio\feedback\hit_sounds\fb_take_damage_self-003.wav	82364
 assets\rogue\audio\feedback\hit_sounds\fb_take_damage_self-004.wav	88244
 assets\rogue\audio\feedback\hit_sounds\fb_take_damage_self-005.wav	88244
-assets\rogue\audio\feedback_hit.events	3841
+assets\rogue\audio\feedback_hit.events	4983
 assets\rogue\audio\feedback_misc.events	3574
-assets\rogue\audio\mixer_settings.mxr	8573
+assets\rogue\audio\mixer_settings.mxr	8586
 assets\rogue\audio\user_interface.events	6188
 assets\rogue\audio\weapon_blaster.events	12321
 assets\rogue\audio\weapon_crossbow.events	10664

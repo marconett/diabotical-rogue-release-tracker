@@ -6752,6 +6752,38 @@ const TRANSLATION_en_source = {
         text: "Select your build",
         engine: true
     },
+    shop_passive_upgrade: {
+        text: "Passive Upgrade",
+        engine: true
+    },
+    shop_passive_upgrade_desc: {
+        text: "Affects All Suits",
+        engine: true
+    },
+    shop_ability_upgrade: {
+        text: "Ability Upgrade",
+        engine: true
+    },
+    shop_ability_upgrade_desc: {
+        text: "Affects {ability}",
+        engine: true
+    },
+    shop_weapon_upgrade: {
+        text: "Weapon Upgrade",
+        engine: true
+    },
+    shop_weapon_upgrade_desc: {
+        text: "Affects {weapon}",
+        engine: true
+    },
+    shop_artifact: {
+        text: "Artifact",
+        engine: true
+    },
+    shop_artifact_desc: {
+        text: "Lasts for one round",
+        engine: true
+    },
     chunk_progression: {
         text: "Chunk progression",
         engine: true

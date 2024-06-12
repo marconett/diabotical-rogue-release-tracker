@@ -1056,6 +1056,8 @@ assets\shared\particles\system_definitions\cluster_deploy.particles	1529
 assets\shared\particles\system_definitions\cluster_explosion.particles	7672
 assets\shared\particles\system_definitions\cluster_explosion_blue.particles	11152
 assets\shared\particles\system_definitions\colorgradient_test.particles	1472
+assets\shared\particles\system_definitions\common_card_back_screen.particles	24256
+assets\shared\particles\system_definitions\common_card_front_screen.particles	21220
 assets\shared\particles\system_definitions\common_circle_card_jewel_screen.particles	31167
 assets\shared\particles\system_definitions\common_circle_card_jewel_screen2.particles	25867
 assets\shared\particles\system_definitions\common_diamond_card_jewel_screen.particles	32851

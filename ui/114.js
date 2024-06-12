@@ -69,6 +69,7 @@ const main_panel_rogue = new function() {
     let create_button = null;
     let locker_button = null;
     let progression_button = null;
+    let menu_party_list = null;
     let rejoin_data = null;
     this.init = () => {
         root = _id("main_panel_rogue");
@@ -82,6 +83,7 @@ const main_panel_rogue = new function() {
         create_button = root.querySelector(".main_button.create");
         locker_button = root.querySelector(".main_button.locker");
         progression_button = root.querySelector(".main_button.progression");
+        menu_party_list = root.querySelector(".menu_party_list");
         Lobby.add_join_listener((() => {
             lobby_button.classList.remove("inactive");
             lobby_button.classList.remove("disabled");
@@ -183,6 +185,14 @@ const main_panel_rogue = new function() {
             rejoin_button.classList.add("inactive");
             rejoin_button.classList.add("disabled");
             rejoin_data = null
+        }));
+        global_on_ms_connected.push((() => {
+            if (!global_ms_connected) {
+                _empty(menu_party_list)
+            }
+        }));
+        party_status_handlers.push((function(party_changed, party, removed) {
+            update_menu_party_list(global_self.user_id, party)
         }))
     };
 
@@ -272,6 +282,57 @@ const main_panel_rogue = new function() {
                 }
             }
             genericModal(localize("title_reconnect"), msg, button_negative, button_negative_cb, button_positive, button_positive_cb)
+        }
+    }
+
+    function update_menu_party_list(own_user_id, party) {
+        _empty(menu_party_list);
+        let count = 4;
+        if (party.size > count) count = party.size;
+        if (global_self && global_self.data && global_self.user_id in party.members) {
+            let member = _createElement("div", "member");
+            let avatar = _createElement("div", "avatar");
+            set_store_avatar(true, avatar, party.members[global_self.user_id].client_user_id, party.members[global_self.user_id].client_source);
+            member.appendChild(avatar);
+            if (party.member_ids.length > 1 && global_self.user_id == party.leader_id) {
+                member.appendChild(_createElement("div", "leader"))
+            }
+            menu_party_list.appendChild(member);
+            member.addEventListener("click", (() => {
+                open_screen("friends_panel", {
+                    tab: "friends_panel_tab_party"
+                })
+            }));
+            _addButtonSounds(member, 4)
+        }
+        for (let i = 0; i < count; i++) {
+            let member_user_id = null;
+            if (i <= party.member_ids.length) {
+                member_user_id = party.member_ids[i]
+            }
+            if (member_user_id && member_user_id === own_user_id) continue;
+            let member = _createElement("div", "member");
+            let avatar = _createElement("div", "avatar");
+            if (member_user_id && member_user_id in party.members) {
+                set_store_avatar(false, avatar, party.members[member_user_id].client_user_id, party.members[member_user_id].client_source)
+            } else {
+                avatar.appendChild(_createElement("div", "plus"))
+            }
+            member.appendChild(avatar);
+            if (member_user_id && member_user_id == party.leader_id) {
+                member.appendChild(_createElement("div", "leader"))
+            }
+            menu_party_list.appendChild(member);
+            member.addEventListener("click", (() => {
+                if (member_user_id && member_user_id in party.members) {
+                    open_screen("friends_panel", {
+                        tab: "friends_panel_tab_party"
+                    })
+                } else {
+                    open_screen("friends_panel")
+                }
+            }));
+            _addButtonSounds(member, 4)
         }
     }
 };

@@ -6,12 +6,12 @@ new MenuScreen({
     init: () => {
         friends_panel.init()
     },
-    open_handler: () => {
+    open_handler: params => {
         historyPushState({
             page: "friends_panel"
         });
         set_blur(false);
-        friends_panel.on_open()
+        friends_panel.on_open(params)
     },
     post_open_handler: () => {},
     close_handler: () => {
@@ -344,13 +344,17 @@ const friends_panel = new function() {
             }
         }
     };
-    this.on_open = () => {
+    this.on_open = params => {
         Navigation.set_active({
             lb_rb: "friends_panel_tabs",
             up_down: null,
             left_right: null
         });
-        Navigation.reset("lb_rb");
+        if (params && params.tab && params.tab in tab_map) {
+            Navigation.select_element("friends_panel_tabs", _id(params.tab))
+        } else {
+            Navigation.reset("lb_rb")
+        }
         set_tab(tab_map, _id(tab_map.current_tab));
         _id("main_menu").addEventListener("click", outside_click)
     };
