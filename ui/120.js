@@ -363,7 +363,7 @@ const page_play_rogue = new function() {
             let desc = _createElement("div", "desc", localize(card_mode.desc_i18n));
             info.appendChild(title);
             info.appendChild(desc);
-            if (card_mode.mode_key in global_mode_definitions && global_mode_definitions[card_mode.mode_key].mode_name === "rogue_wipeout") {
+            if (card_mode.type === "warmup" || card_mode.mode_key in global_mode_definitions && global_mode_definitions[card_mode.mode_key].mode_name === "rogue_wipeout") {
                 let vs = _createElement("div", "vs");
                 vs.appendChild(_createElement("div", "icon"));
                 vs.appendChild(_createElement("div", "text", card_mode.vs));

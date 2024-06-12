@@ -4496,6 +4496,10 @@ const TRANSLATION_en_source = {
         text: "No data centers have been selected",
         engine: true
     },
+    party_no_valid_mode_selected: {
+        text: "Select a matchmaking mode before searching",
+        engine: true
+    },
     party_players_active_queue_disabled: {
         text: "Unable to queue while party is still in a match",
         engine: true
