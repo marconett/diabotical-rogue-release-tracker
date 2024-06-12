@@ -1,0 +1,36 @@
+# File system junk files
+Desktop.ini
+Thumbs.db
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+.apdisk
+.fseventsd
+.Trash-*
+__pycache__
+
+# Editor files
+*.sublime-*
+.netrwhist
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+.c9
+.idea/
+.phpintel/
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# Application specific files
+game/
+*.exe
+*.rbr
+*.rbe
+*.dbp
+*.dds
+*.fbx
+*.dbm
+*.png
+/.gitkeep
