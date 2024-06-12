@@ -425,7 +425,7 @@
         "parent_id": "20002",
         "skill_type": "augment",
         "name_translation_key": "skill_smoke_weeble_a4",
-        "desc_translation_key": "skill_smoke_weeble_a4desc",
+        "desc_translation_key": "skill_smoke_weeble_a4_desc",
         "rarity": "legendary",
         "overwrite": "damage_boost 1.2",
         "skill_prereq": "augment 5",

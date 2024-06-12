@@ -4075,6 +4075,9 @@ const TRANSLATION_en_source = {
     weapon: {
         text: "Weapon"
     },
+    passive: {
+        text: "Passive"
+    },
     ability: {
         text: "Ability"
     },
