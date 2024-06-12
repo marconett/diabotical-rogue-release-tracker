@@ -14,8 +14,8 @@ game rogue_wipeout
 	setting game_score_limit 5
 	setting game_enable_reload 1
 	setting game_reload_fire_cancel_delay_ms 250
-	setting game_additional_currency_per_round 200
-	setting game_initial_currency 400
+	setting game_additional_currency_per_round 50
+	setting game_initial_currency 300
 	setting game_currency_per_kill 15
 	setting game_currency_per_assist 5
 	
@@ -201,6 +201,7 @@ game rogue_teamdeathmatch
 	setting game_spawn_protection_s 2
 	setting game_minimum_respawn_time_ms 30000
 	setting game_maximum_respawn_time_ms 30000
+	setting game_warmup_respawn_time_override 20000
 	
 	setting game_hp 100
 	setting game_stable_hp 100

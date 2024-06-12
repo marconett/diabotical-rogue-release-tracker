@@ -6510,11 +6510,11 @@ const TRANSLATION_en_source = {
         engine: true
     },
     currency_reward: {
-        text: "Team Reward: +150 Currency",
+        text: "Team Reward: +{value} Currency",
         engine: true
     },
     overshield_reward: {
-        text: "Team Reward: +20 overshield",
+        text: "Team Reward: +{value} overshield",
         engine: true
     },
     legendary_reward: {
@@ -6605,6 +6605,14 @@ const TRANSLATION_en_source = {
         text: "Find out what the GD Weeble has to say to you.",
         engine: true
     },
+    shop_option_type_no_cards_left: {
+        text: "No cards left",
+        engine: true
+    },
+    shop_option_type_no_cards_left_desc: {
+        text: "This loadout has no cards left",
+        engine: true
+    },
     shop_ready_button: {
         text: "Ready",
         engine: true
@@ -6619,6 +6627,10 @@ const TRANSLATION_en_source = {
     },
     signal_weeble: {
         text: "So many new recruits!",
+        engine: true
+    },
+    signal_weeble_2: {
+        text: "MacGuffin Airlines Flight 834, you are clear for takeoff!",
         engine: true
     },
     viewer_weeble: {

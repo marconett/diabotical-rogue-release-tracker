@@ -43,6 +43,7 @@ overshield_2_screen
 ability_temporary_shield_impact
 ability_leap_shield
 ability_leap_shield_end
+ability_leap_shield_impact
 movement_leap_jump
 movement_leap_land
 ability_leap_artifact_land
