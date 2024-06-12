@@ -1659,7 +1659,7 @@ const TRANSLATION_es_ES = {
     skill_healing_orb_a6: "Oleada de Renovación",
     skill_healing_orb_a6_desc: "El Haz Curativo obtiene mayor capacidad de curación y una tasa de recarga de energía mejorada.",
     skill_healing_orb_a7: "Encadenamiento",
-    skill_healing_orb_a7_desc: "Tu Haz Curativo es potenciado, encadenando a los aliados a su paso.",
+    skill_healing_orb_a7_desc: "Tu Haz Curativo es potenciado, extendiéndose hacia más aliados cercanos.",
     skill_increase_orb_damage: "Aumento de Daño de Orbe",
     skill_increase_orb_damage_desc: "Aumenta la cantidad de daño infligido por el orbe explosivo.",
     skill_beam_a4: "Orbe Explosivo",

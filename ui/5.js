@@ -166,7 +166,7 @@ const TRANSLATION_ja = {
     ingame_your_team_won: "ラウンド勝利",
     ingame_your_team_lost: "ラウンド敗北",
     ingame_a_team_won_: "チーム",
-    ingame_a_team_won_round: "チーム {value} がラウンドを勝利しました",
+    ingame_a_team_won_round: "チーム{value}の勝利",
     ingame_a_team_won_game: "チーム {value} がマッチに勝利しました",
     ingame_message_warmup: "ウォームアップ",
     ingame_message_fragged_self: "自分を撃破しました。",

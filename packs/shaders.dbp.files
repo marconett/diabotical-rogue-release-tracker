@@ -76,6 +76,7 @@ shaders\gaussian_blur_y.ps.cso	8280
 shaders\glass.ps.cso	17000
 shaders\gui.ps.cso	1136
 shaders\gui.vs.cso	1160
+shaders\highq_reflections.ps.cso	16320
 shaders\hiz.cs.cso	2564
 shaders\holo.ps.cso	568
 shaders\indicator.ps.cso	6236
@@ -87,6 +88,7 @@ shaders\lens_flares.ps.cso	1708
 shaders\lens_flares.vs.cso	3572
 shaders\lightprobe_bake.ps.cso	55100
 shaders\lod_color.ps.cso	4712
+shaders\lowq_reflections.ps.cso	6804
 shaders\mask_hsl_shift.ps.cso	9520
 shaders\mst_alpha.ps.cso	26000
 shaders\mst_gi.ps.cso	56232
@@ -161,7 +163,6 @@ shaders\smb.vs.cso	624
 shaders\smc.vs.cso	840
 shaders\snfps.cso	4236
 shaders\snfvs.cso	1144
-shaders\ssr.ps.cso	16368
 shaders\static.vs.cso	1400
 shaders\static_batching_debug.ps.cso	6648
 shaders\statictrans.ps.cso	2120

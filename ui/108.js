@@ -652,7 +652,19 @@ const page_locker = new function() {
                 rarity: 0
             }
         } else {
-            if (item_element.dataset.id in global_customization_data_map) current_customization = global_customization_data_map[item_element.dataset.id]
+            if (item_element.dataset.id in global_customization_data_map) {
+                current_customization = global_customization_data_map[item_element.dataset.id]
+            } else {
+                let game_customizations = GAME.get_data("customizations", data.active_ctype.type_id);
+                if (game_customizations && data.active_ctype.sub_type in game_customizations) {
+                    for (let c of game_customizations[data.active_ctype.sub_type]) {
+                        if (c.customization_id === item_element.dataset.id) {
+                            current_customization = c;
+                            break
+                        }
+                    }
+                }
+            }
         }
         show_customization_preview_scene("locker", data.active_ctype, item_element.dataset.id, current_customization, html.preview_area, create_customization_preview_info);
         current_selection = item_element.dataset.id;

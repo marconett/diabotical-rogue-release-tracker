@@ -751,6 +751,10 @@ const Navigation = new function() {
         if (!(name in nav_cache)) return;
         nav_cache[name].reset_selection()
     };
+    this.reset_to_first = name => {
+        if (!(name in nav_cache)) return;
+        nav_cache[name].reset_to_first()
+    };
     this.reset_to_last = name => {
         if (!(name in nav_cache)) return;
         nav_cache[name].reset_to_last()

@@ -30,9 +30,13 @@ const friends_panel = new function() {
         recent: null,
         settings_list: null,
         settings_party: null,
+        settings_incoming: null,
+        settings_incoming_input: null,
         allow_friend_requests: null,
         party_privacy: null,
         party_leave: null,
+        friend_copy_id: null,
+        friend_send_request: null,
         page_menu: null,
         page_menu_text: null,
         action_menu: null,
@@ -44,6 +48,7 @@ const friends_panel = new function() {
     let recent_players = [];
     let current_page = 1;
     const MAX_ITEMS_PER_PAGE = 9;
+    const MAX_ITEMS_PER_PAGE_INCOMING = 8;
     let list_fragment = new DocumentFragment;
     let list_filter = "";
     let action_menu_open = false;
@@ -56,9 +61,13 @@ const friends_panel = new function() {
         html.recent = _id("friends_panel_tab_content_recent");
         html.settings_list = html.root.querySelector(".settings .settings_list");
         html.settings_party = html.root.querySelector(".settings .settings_party");
+        html.settings_incoming = html.root.querySelector(".settings .settings_incoming");
+        html.settings_incoming_input = html.settings_incoming.querySelector("input");
         html.allow_friend_requests = html.root.querySelector(".settings .allow_friend_requests");
         html.party_privacy = html.root.querySelector(".settings .party_privacy");
         html.party_leave = html.root.querySelector(".settings .party_leave");
+        html.friend_copy_id = html.settings_incoming.querySelector(".settings .friend_copy_id");
+        html.friend_send_request = html.settings_incoming.querySelector(".settings .friend_send_request");
         html.page_menu = html.root.querySelector(".page_menu");
         html.page_menu_text = html.page_menu.querySelector(".text");
         html.action_menu = html.root.querySelector(".action_menu");
@@ -217,6 +226,24 @@ const friends_panel = new function() {
                 }
             }))
         }
+        if (html.settings_incoming_input) {
+            let placeholder = html.settings_incoming_input.parentElement.querySelector(".placeholder");
+            html.settings_incoming_input.parentElement.addEventListener("click", (() => {
+                html.settings_incoming_input.focus()
+            }));
+            html.settings_incoming_input.addEventListener("focus", (() => {
+                if (placeholder) placeholder.style.display = "none"
+            }));
+            html.settings_incoming_input.addEventListener("blur", (() => {
+                if (placeholder) {
+                    if (html.settings_incoming_input.value.length) {
+                        placeholder.style.display = "none"
+                    } else {
+                        placeholder.style.display = "flex"
+                    }
+                }
+            }))
+        }
     };
 
     function setting_action(element, action) {
@@ -242,6 +269,16 @@ const friends_panel = new function() {
         send_json_data({
             action: "party-leave"
         })
+    };
+    this.copy_user_id = () => {
+        engine.call("copy_text", global_self.user_id)
+    };
+    this.send_friend_request = () => {
+        if (html.settings_incoming_input) {
+            send_string(CLIENT_COMMAND_SEND_FRIEND_REQUEST, html.settings_incoming_input.value);
+            html.settings_incoming_input.value = "";
+            html.settings_incoming_input.dispatchEvent(new Event("blur"))
+        }
     };
 
     function update_settings_visibility() {
@@ -272,6 +309,17 @@ const friends_panel = new function() {
         } else {
             html.allow_friend_requests.style.display = "none";
             html.allow_friend_requests.classList.add("disabled")
+        }
+        if (tab_map.current_tab === "friends_panel_tab_incoming") {
+            html.friend_copy_id.style.display = "flex";
+            html.friend_copy_id.classList.remove("disabled");
+            html.friend_send_request.style.display = "flex";
+            html.friend_send_request.classList.remove("disabled")
+        } else {
+            html.friend_copy_id.style.display = "none";
+            html.friend_copy_id.classList.add("disabled");
+            html.friend_send_request.style.display = "none";
+            html.friend_send_request.classList.add("disabled")
         }
     }
     let tab_map = {
@@ -434,6 +482,7 @@ const friends_panel = new function() {
                 up_down: "friends_panel_party"
             })
         } else if (tab_map.current_tab === "friends_panel_tab_incoming") {
+            Navigation.reset_selection("friends_panel_settings");
             Navigation.set_active({
                 up_down: "friends_panel_incoming"
             })
@@ -617,7 +666,8 @@ const friends_panel = new function() {
             hover_sound: "ui_hover2",
             action_sound: "ui_click1",
             action_cb_type: "input",
-            action_cb: friend_action
+            action_cb: friend_action,
+            past_first_cb: past_first_select
         })
     }
 
@@ -643,6 +693,8 @@ const friends_panel = new function() {
             Navigation.reset_selection("friends_panel_list")
         } else if (tab_map.current_tab === "friends_panel_tab_party") {
             Navigation.reset_selection("friends_panel_party")
+        } else if (tab_map.current_tab === "friends_panel_tab_incoming") {
+            Navigation.reset_selection("friends_panel_incoming")
         }
     }
 
@@ -651,12 +703,20 @@ const friends_panel = new function() {
             Navigation.set_active({
                 up_down: "friends_panel_list"
             });
-            Navigation.reset_selection("friends_panel_settings")
+            Navigation.reset_selection("friends_panel_settings");
+            Navigation.reset_to_first("friends_panel_list")
         } else if (tab_map.current_tab === "friends_panel_tab_party") {
             Navigation.set_active({
                 up_down: "friends_panel_party"
             });
-            Navigation.reset_selection("friends_panel_settings")
+            Navigation.reset_selection("friends_panel_settings");
+            Navigation.reset_to_first("friends_panel_party")
+        } else if (tab_map.current_tab === "friends_panel_tab_incoming") {
+            Navigation.set_active({
+                up_down: "friends_panel_incoming"
+            });
+            Navigation.reset_selection("friends_panel_settings");
+            Navigation.reset_to_first("friends_panel_incoming")
         }
     }
 
@@ -729,12 +789,12 @@ const friends_panel = new function() {
                 return e.obj.name.toLowerCase().includes(list_filter.toLowerCase())
             }))
         }
-        let start_index = (current_page - 1) * MAX_ITEMS_PER_PAGE;
+        let start_index = (current_page - 1) * MAX_ITEMS_PER_PAGE_INCOMING;
         while (start_index >= incoming.length && current_page > 1) {
             current_page--;
-            start_index = (current_page - 1) * MAX_ITEMS_PER_PAGE
+            start_index = (current_page - 1) * MAX_ITEMS_PER_PAGE_INCOMING
         }
-        for (let i = start_index; i < start_index + MAX_ITEMS_PER_PAGE; i++) {
+        for (let i = start_index; i < start_index + MAX_ITEMS_PER_PAGE_INCOMING; i++) {
             if (i >= incoming.length) break;
             if (incoming[i].type === "invite") {
                 let friend_element = create_invite_el(incoming[i].obj);
@@ -746,7 +806,7 @@ const friends_panel = new function() {
                 html.active_element_list.push(friend_element)
             }
         }
-        let max_page = Math.ceil(incoming.length / MAX_ITEMS_PER_PAGE);
+        let max_page = Math.ceil(incoming.length / MAX_ITEMS_PER_PAGE_INCOMING);
         _empty(html.incoming);
         html.incoming.appendChild(list_fragment);
         render_page_menu(current_page, max_page)

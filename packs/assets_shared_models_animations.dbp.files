@@ -1,5 +1,9 @@
 assets\shared\models\animations\1p_cam.dbm	266
 assets\shared\models\animations\1p_cam.fbx	33884
+assets\shared\models\animations\bigbot\bigbot_materials\bigbot_base_materials\bigbot_base_c.png	716615
+assets\shared\models\animations\bigbot\bigbot_materials\bigbot_base_materials\bigbot_base_d.png	4853162
+assets\shared\models\animations\bigbot\bigbot_materials\bigbot_base_materials\bigbot_base_n.png	3633278
+assets\shared\models\animations\bigbot\bigbot_materials\bigbot_base_materials\bigbot_base_s.png	3613371
 assets\shared\models\animations\chunkbot\1p\blaster_equip_chunkbot.dbm	209151
 assets\shared\models\animations\chunkbot\1p\blaster_equip_chunkbot.fbx	989276
 assets\shared\models\animations\chunkbot\1p\blaster_reload_chunkbot.dbm	486207

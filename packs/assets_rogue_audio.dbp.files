@@ -1,5 +1,5 @@
 assets\rogue\audio\ID_list.txt	3556
-assets\rogue\audio\abilities.events	66280
+assets\rogue\audio\abilities.events	68004
 assets\rogue\audio\abilities\bolt\ability_bolt_enemy1.wav	441044
 assets\rogue\audio\abilities\bolt\ability_bolt_enemy2.wav	441044
 assets\rogue\audio\abilities\bolt\ability_bolt_enemy3.wav	441044
@@ -18,8 +18,9 @@ assets\rogue\audio\abilities\chunk_shield\ab_chunk_shield_hit04.wav	41204
 assets\rogue\audio\abilities\chunk_shield\ab_chunk_shield_hit05.wav	41204
 assets\rogue\audio\abilities\chunk_shield\ab_chunk_shield_init01.wav	147044
 assets\rogue\audio\abilities\chunk_shield\ab_chunk_shield_loop01.wav	882044
+assets\rogue\audio\abilities\chunky_beam\ab_chunky_beam_charge.wav	119094
 assets\rogue\audio\abilities\chunky_beam\ab_chunky_beam_impact.wav	219106
-assets\rogue\audio\abilities\chunky_beam\ab_chunky_beam_use.wav	790830
+assets\rogue\audio\abilities\chunky_beam\ab_chunky_beam_use.wav	592382
 assets\rogue\audio\abilities\dash\dash_use1.wav	252934
 assets\rogue\audio\abilities\dash\dash_use2.wav	268682
 assets\rogue\audio\abilities\dash\dash_use3.wav	242698
@@ -185,7 +186,7 @@ assets\rogue\audio\ambience\prop\amb_prop_sparks_scifi.wav	3528044
 assets\rogue\audio\ambience\prop\amb_prop_suit_pod.wav	3528044
 assets\rogue\audio\ambience\prop\amb_prop_toya_pump.wav	3528044
 assets\rogue\audio\announcer.events	19587
-assets\rogue\audio\arena_abilities.sounds	18557
+assets\rogue\audio\arena_abilities.sounds	18647
 assets\rogue\audio\arena_ambience.sounds	10865
 assets\rogue\audio\arena_announcer_julie.sounds	42884
 assets\rogue\audio\arena_chunkbot_enemy_footsteps.sounds	9941

@@ -161,7 +161,7 @@ assets\shared\scripts\general.loot	5589
 assets\shared\scripts\new.games	20655
 assets\shared\scripts\particles.preload	4063
 assets\shared\scripts\passives.skills	5928
-assets\shared\scripts\passives_rogue.skills	7433
+assets\shared\scripts\passives_rogue.skills	7461
 assets\shared\scripts\rogue_classes.classdef	316
 assets\shared\scripts\shaders\core_glow.material	3438
 assets\shared\scripts\shaders\fresnel_holo.material	822

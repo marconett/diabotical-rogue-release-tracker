@@ -2,6 +2,12 @@
     {
         "app_id": 2805060,
         "depot_id": 2805061,
+        "manifest_gid": 7077270277889959405,
+        "creation_time": "2024-06-10 21:39:04 GMT+1"
+    },
+    {
+        "app_id": 2805060,
+        "depot_id": 2805061,
         "manifest_gid": 3449321466558553928,
         "creation_time": "2024-06-10 04:15:41 GMT+1"
     },

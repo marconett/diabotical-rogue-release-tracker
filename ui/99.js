@@ -1023,10 +1023,7 @@ const page_game_report = new function() {
         }
     };
     this.requeue = () => {
-        if (last_match.game_status.hasOwnProperty("match_type")) {
-            send_string(CLIENT_COMMAND_REQUEUE, last_match.game_status.match_type)
-        }
-        button_game_over_quit(true)
+        engine.call("requeue")
     };
 
     function show_game_report(visible, instant) {

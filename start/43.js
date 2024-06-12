@@ -127,7 +127,7 @@ function init_i18n() {
                 ru: {
                     translation: TRANSLATION_ru
                 },
-                es_es: {
+                es: {
                     translation: TRANSLATION_es_ES
                 },
                 es_mx: {

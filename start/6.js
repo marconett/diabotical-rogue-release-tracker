@@ -722,6 +722,12 @@ const TRANSLATION_en_source = {
         text: "Match Invite",
         engine: true
     },
+    friends_list_copy_own_request_id: {
+        text: "Copy own request id"
+    },
+    request_id: {
+        text: "Request id"
+    },
     ingame_press_attack_to_respawn: {
         text: "Press attack to respawn.",
         engine: true
@@ -2755,6 +2761,9 @@ const TRANSLATION_en_source = {
     },
     setting_dynamic_reflections: {
         text: "Dynamic Reflections"
+    },
+    setting_reflections: {
+        text: "Reflections"
     },
     settings_video_shadows: {
         text: "Shadow Quality"
