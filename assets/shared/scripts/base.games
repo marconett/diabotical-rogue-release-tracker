@@ -20,6 +20,7 @@ game default
 	setting game_attack_defense 0
 	setting game_attack_siege 0
 	setting game_teamdeathmatch 0
+	setting game_survival 0
 
 	setting game_enable_items 1
 	setting game_enable_drop 0

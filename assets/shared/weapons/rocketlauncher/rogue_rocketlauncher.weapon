@@ -131,7 +131,6 @@ rogue_rocketlauncher augment 1
 	preadd default_ammo 2
 	preadd max_ammo 2
 	max_stacks 2
-	locked_in_battlepass true
 }
 
 // rogue_rocketlauncher augment 2
@@ -152,6 +151,7 @@ rogue_rocketlauncher augment 3
 	rarity rare
 	preadd ammo_per_reload 1
 	max_stacks 1
+	locked_in_battlepass true
 }
 
 rogue_rocketlauncher augment 4

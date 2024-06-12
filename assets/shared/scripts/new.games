@@ -175,8 +175,8 @@ game rogue_wipeout
 	weapon rogue_rocketlauncher 1
 	weapon rogue_shaft 1
 	weapon rogue_machinegun 1
-	weapon rogue_blaster 1
-	weapon rogue_supershotgun 1
+	// weapon rogue_blaster 1
+	// weapon rogue_supershotgun 1
 	weapon rogue_submachinegun 1
 	weapon rogue_heavysniper 1
 	weapon rogue_egun 1
@@ -198,6 +198,8 @@ game rogue_teamdeathmatch
 	setting game_reload_fire_cancel_delay_ms 250
 	setting game_gain_score_on_kill 1
 	setting game_currency_per_round 1000
+	setting game_currency_per_kill 100
+	setting game_currency_per_assist 25
 	
 	setting game_spawn_protection_s 2
 	setting game_minimum_respawn_time_ms 30000
@@ -351,8 +353,8 @@ game rogue_teamdeathmatch
 	weapon rogue_rocketlauncher 1
 	weapon rogue_shaft 1
 	weapon rogue_machinegun 1
-	weapon rogue_blaster 1
-	weapon rogue_supershotgun 1
+	// weapon rogue_blaster 1
+	// weapon rogue_supershotgun 1
 	weapon rogue_submachinegun 1
 	weapon rogue_heavysniper 1
 	weapon rogue_egun 1
@@ -501,8 +503,8 @@ game rogue_edit
 	weapon rogue_rocketlauncher 1
 	weapon rogue_shaft 1
 	weapon rogue_machinegun 1
-	weapon rogue_blaster 1
-	weapon rogue_supershotgun 1
+	// weapon rogue_blaster 1
+	// weapon rogue_supershotgun 1
 	weapon rogue_submachinegun 1
 	weapon rogue_heavysniper 1
 	weapon rogue_egun 1
@@ -666,8 +668,8 @@ game rogue_hub
 	weapon rogue_rocketlauncher 1
 	weapon rogue_shaft 1
 	weapon rogue_machinegun 1
-	weapon rogue_blaster 1
-	weapon rogue_supershotgun 1
+	// weapon rogue_blaster 1
+	// weapon rogue_supershotgun 1
 	weapon rogue_submachinegun 1
 	weapon rogue_heavysniper 1
 	weapon rogue_egun 1

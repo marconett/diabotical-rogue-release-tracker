@@ -432,7 +432,7 @@ const page_play_rogue = new function() {
                 }))
             } else if (card_mode.type === "warmup") {
                 let overlay = _createElement("div", "overlay");
-                let text = _createElement("div", "text", "You can join the warm-up even while queuing for other modes");
+                let text = _createElement("div", "text", localize("warmup_queue_info"));
                 let btn = _createElement("div", "btn-style-2", localize("menu_warmup"));
                 overlay.appendChild(text);
                 overlay.appendChild(btn);

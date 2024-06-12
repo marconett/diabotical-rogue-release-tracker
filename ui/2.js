@@ -4396,6 +4396,10 @@ const TRANSLATION_en_source = {
         text: "Incompatible party size",
         engine: true
     },
+    warmup_queue_info: {
+        text: "You can join the warm-up even while queuing for other modes",
+        engine: true
+    },
     menu_select_mode: {
         text: "Select mode"
     },
@@ -5837,7 +5841,7 @@ const TRANSLATION_en_source = {
         engine: true
     },
     skill_nexus_bomb_desc: {
-        text: "Throw an exploding energy bomb that heals teammates and damages enemies.",
+        text: "Throw an energy bomb that heals teammates over time.",
         engine: true
     },
     skill_nexus_bomb_a3: {
@@ -5861,7 +5865,7 @@ const TRANSLATION_en_source = {
         engine: true
     },
     skill_nexus_bomb_a6_desc: {
-        text: "Teammates hit with the Holy Sphere are healed over time. Enemies are damaged over time.",
+        text: "Enemies hit by the Holy Sphere are ignited.",
         engine: true
     },
     skill_nexus_bomb_a7: {
@@ -6408,6 +6412,14 @@ const TRANSLATION_en_source = {
     },
     early_access_msg: {
         text: "Welcome to Diabotical Rogue Early Access. Hopefully it doesn't break! We'd super appreciate bug reports & feedback. Hopefully you enjoy the game and we look forward to updating the game based off your feedback. :)"
+    },
+    legendary_reward_claimed: {
+        text: "The legendary reward was claimed!",
+        engine: true
+    },
+    epic_reward_claimed: {
+        text: "The epic reward was claimed!",
+        engine: true
     },
     win_epic_reward: {
         text: "Your Team Picked Up The Epic Reward",
@@ -7017,6 +7029,10 @@ const TRANSLATION_en_source = {
     },
     tree_page_ability_upgrade_card: {
         text: "Ability Upgrade Card",
+        engine: true
+    },
+    tree_page_passive_skill_card: {
+        text: "Passive Upgrade Card",
         engine: true
     }
 };

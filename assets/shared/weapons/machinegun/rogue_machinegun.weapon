@@ -3,7 +3,7 @@ rogue_machinegun
 	name_translation_key weapon_machinegun
 	desc_translation_key weapon_machinegun_desc
 	
-	required_class rogue_scout rogue_eggbot
+	required_class rogue_scout
 
 	selectable true
 	rarity rare

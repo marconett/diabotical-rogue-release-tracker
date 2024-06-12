@@ -247,7 +247,9 @@ const page_game_report = new function() {
                     last_match.game_status.teams[teamId] = {
                         score: 0,
                         placement: 999,
-                        name: "Team " + (teamId + 1),
+                        name: localize_ext("team_with_idx", {
+                            value: teamId + 1
+                        }),
                         color: "#ffffff"
                     }
                 }

@@ -1424,7 +1424,7 @@ assets\shared\models\animations\wp_heavy_machinegun\reload.dbm	64567
 assets\shared\models\animations\wp_heavy_machinegun\reload.fbx	172860
 assets\shared\models\animations\wp_heavy_machinegun\run.dbm	21559
 assets\shared\models\animations\wp_heavy_machinegun\run.fbx	138060
-assets\shared\models\animations\wp_heavy_machinegun\skm_heavy_machinegun.ani	1438
+assets\shared\models\animations\wp_heavy_machinegun\skm_heavy_machinegun.ani	1439
 assets\shared\models\animations\wp_heavy_machinegun\skm_heavy_machinegun.dbm	935660
 assets\shared\models\animations\wp_heavy_machinegun\skm_heavy_machinegun.fbx	697836
 assets\shared\models\animations\wp_heavy_machinegun\wp_heavy_machinegun.assets	230
@@ -1579,7 +1579,7 @@ assets\shared\models\animations\wp_machinegun\reload.dbm	33853
 assets\shared\models\animations\wp_machinegun\reload.fbx	110972
 assets\shared\models\animations\wp_machinegun\run.dbm	13437
 assets\shared\models\animations\wp_machinegun\run.fbx	89884
-assets\shared\models\animations\wp_machinegun\skm_machinegun.ani	1852
+assets\shared\models\animations\wp_machinegun\skm_machinegun.ani	1855
 assets\shared\models\animations\wp_machinegun\skm_machinegun.dbm	410777
 assets\shared\models\animations\wp_machinegun\skm_machinegun.fbx	339436
 assets\shared\models\animations\wp_machinegun\slide.dbm	16253
@@ -1736,7 +1736,7 @@ assets\shared\models\animations\wp_rocket_launcher\rocketlauncher_materials\rock
 assets\shared\models\animations\wp_rocket_launcher\rocketlauncher_materials\rocketlauncher_vintage\skm_rocket_launcher_preview_rog_we_rl_vintage.material	723
 assets\shared\models\animations\wp_rocket_launcher\run.dbm	52661
 assets\shared\models\animations\wp_rocket_launcher\run.fbx	318924
-assets\shared\models\animations\wp_rocket_launcher\skm_rocket_launcher.ani	1311
+assets\shared\models\animations\wp_rocket_launcher\skm_rocket_launcher.ani	1313
 assets\shared\models\animations\wp_rocket_launcher\skm_rocket_launcher.dbm	1713893
 assets\shared\models\animations\wp_rocket_launcher\skm_rocket_launcher.fbx	1245148
 assets\shared\models\animations\wp_rocket_launcher\slide.dbm	51441
@@ -1858,7 +1858,7 @@ assets\shared\models\animations\wp_shotgun\shotgun_materials\shotgun_vintage\skm
 assets\shared\models\animations\wp_shotgun\shotgun_materials\shotgun_vintage\skm_shotgun_1p.material	603
 assets\shared\models\animations\wp_shotgun\shotgun_materials\shotgun_vintage\skm_shotgun_3p.material	590
 assets\shared\models\animations\wp_shotgun\shotgun_materials\shotgun_vintage\skm_shotgun_preview_rog_we_ss_vintage.material	608
-assets\shared\models\animations\wp_shotgun\skm_shotgun.ani	1255
+assets\shared\models\animations\wp_shotgun\skm_shotgun.ani	1256
 assets\shared\models\animations\wp_shotgun\skm_shotgun.dbm	316828
 assets\shared\models\animations\wp_shotgun\skm_shotgun.fbx	275724
 assets\shared\models\animations\wp_shotgun\slide.dbm	16271
@@ -1889,7 +1889,7 @@ assets\shared\models\animations\wp_submachinegun\reload.dbm	33813
 assets\shared\models\animations\wp_submachinegun\reload.fbx	146172
 assets\shared\models\animations\wp_submachinegun\run.dbm	31765
 assets\shared\models\animations\wp_submachinegun\run.fbx	143292
-assets\shared\models\animations\wp_submachinegun\skm_submachinegun.ani	1567
+assets\shared\models\animations\wp_submachinegun\skm_submachinegun.ani	1568
 assets\shared\models\animations\wp_submachinegun\skm_submachinegun.assets	215
 assets\shared\models\animations\wp_submachinegun\skm_submachinegun.dbm	1220251
 assets\shared\models\animations\wp_submachinegun\skm_submachinegun.fbx	572492

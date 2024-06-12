@@ -1387,7 +1387,7 @@ assets\shared\particles\system_definitions\heal_aoe_agent_impact_3p.particles	24
 assets\shared\particles\system_definitions\heal_aura.particles	21196
 assets\shared\particles\system_definitions\heal_aura_big.particles	29470
 assets\shared\particles\system_definitions\heal_aura_intersection.particles	9063
-assets\shared\particles\system_definitions\heal_aura_intersection_2.particles	10241
+assets\shared\particles\system_definitions\heal_aura_intersection_2.particles	18859
 assets\shared\particles\system_definitions\heal_aura_loop.particles	17606
 assets\shared\particles\system_definitions\heal_aura_loop_big.particles	15286
 assets\shared\particles\system_definitions\heal_aura_loop_small.particles	15358
@@ -2094,7 +2094,7 @@ assets\shared\particles\system_definitions\vfx_door_sparks.particles	2629
 assets\shared\particles\system_definitions\vfx_windsurf.particles	2089
 assets\shared\particles\system_definitions\walljump.particles	4284
 assets\shared\particles\system_definitions\water_drip.particles	8510
-assets\shared\particles\system_definitions\weapon_blaster_impact.particles	17736
+assets\shared\particles\system_definitions\weapon_blaster_impact.particles	17425
 assets\shared\particles\system_definitions\weapon_blaster_impact_gold.particles	12734
 assets\shared\particles\system_definitions\weapon_blaster_impact_gold_v2.particles	11023
 assets\shared\particles\system_definitions\weapon_blaster_muzzle.particles	11553
@@ -2148,7 +2148,7 @@ assets\shared\particles\system_definitions\weapon_grenade_launcher_muzzle.partic
 assets\shared\particles\system_definitions\weapon_grenade_launcher_muzzle_3p.particles	23952
 assets\shared\particles\system_definitions\weapon_grenade_launcher_muzzle_flash.particles	1705
 assets\shared\particles\system_definitions\weapon_grenade_projectile.particles	5600
-assets\shared\particles\system_definitions\weapon_heavy_machinegun_impact.particles	29680
+assets\shared\particles\system_definitions\weapon_heavy_machinegun_impact.particles	29749
 assets\shared\particles\system_definitions\weapon_heavy_machinegun_muzzle.particles	17101
 assets\shared\particles\system_definitions\weapon_heavy_machinegun_muzzle_3p.particles	16087
 assets\shared\particles\system_definitions\weapon_heavy_machinegun_muzzle_3p_v1.particles	19017
@@ -2157,7 +2157,7 @@ assets\shared\particles\system_definitions\weapon_heavy_machinegun_muzzle_v1.par
 assets\shared\particles\system_definitions\weapon_heavy_machinegun_player_impact.particles	12638
 assets\shared\particles\system_definitions\weapon_heavy_machinegun_projectile.particles	7713
 assets\shared\particles\system_definitions\weapon_heavymachinegun_projectile.particles	1188
-assets\shared\particles\system_definitions\weapon_heavysniper_impact.particles	79971
+assets\shared\particles\system_definitions\weapon_heavysniper_impact.particles	80299
 assets\shared\particles\system_definitions\weapon_heavysniper_impact_v2.particles	57311
 assets\shared\particles\system_definitions\weapon_heavysniper_muzzle.particles	60755
 assets\shared\particles\system_definitions\weapon_heavysniper_muzzle_3p.particles	59312
@@ -2166,12 +2166,12 @@ assets\shared\particles\system_definitions\weapon_heavysniper_player_impact.part
 assets\shared\particles\system_definitions\weapon_heavysniper_projectile.particles	32312
 assets\shared\particles\system_definitions\weapon_heavysniper_projectile_3p.particles	21698
 assets\shared\particles\system_definitions\weapon_hs_artifact_projectile.particles	61702
-assets\shared\particles\system_definitions\weapon_hs_impact_artifact.particles	95095
+assets\shared\particles\system_definitions\weapon_hs_impact_artifact.particles	95578
 assets\shared\particles\system_definitions\weapon_hs_muzzle_artifact.particles	88002
 assets\shared\particles\system_definitions\weapon_hs_muzzle_flash_artifact.particles	1274
 assets\shared\particles\system_definitions\weapon_hs_player_impact.particles	84975
 assets\shared\particles\system_definitions\weapon_hs_player_impact_artifact.particles	98370
-assets\shared\particles\system_definitions\weapon_machinegun_impact.particles	29360
+assets\shared\particles\system_definitions\weapon_machinegun_impact.particles	29428
 assets\shared\particles\system_definitions\weapon_machinegun_impact_gold.particles	7928
 assets\shared\particles\system_definitions\weapon_machinegun_muzzle.particles	17401
 assets\shared\particles\system_definitions\weapon_machinegun_muzzle_3p.particles	15923
@@ -2203,7 +2203,7 @@ assets\shared\particles\system_definitions\weapon_pncr_impact_ring.particles	188
 assets\shared\particles\system_definitions\weapon_pncr_muzzle.particles	14012
 assets\shared\particles\system_definitions\weapon_pncr_muzzle_3p.particles	10220
 assets\shared\particles\system_definitions\weapon_pncr_muzzle_gold.particles	5172
-assets\shared\particles\system_definitions\weapon_revolver_impact.particles	29446
+assets\shared\particles\system_definitions\weapon_revolver_impact.particles	29514
 assets\shared\particles\system_definitions\weapon_revolver_muzzle.particles	36242
 assets\shared\particles\system_definitions\weapon_revolver_muzzle_3p.particles	36003
 assets\shared\particles\system_definitions\weapon_revolver_muzzle_flash.particles	3384
@@ -2240,7 +2240,7 @@ assets\shared\particles\system_definitions\weapon_shotgun_muzzle_3p.particles	13
 assets\shared\particles\system_definitions\weapon_shotgun_muzzle_flash.particles	1658
 assets\shared\particles\system_definitions\weapon_shotgun_muzzle_gold.particles	9999
 assets\shared\particles\system_definitions\weapon_shotgun_projectile.particles	10602
-assets\shared\particles\system_definitions\weapon_submachinegun_impact.particles	10383
+assets\shared\particles\system_definitions\weapon_submachinegun_impact.particles	10224
 assets\shared\particles\system_definitions\weapon_submachinegun_laser.particles	911
 assets\shared\particles\system_definitions\weapon_submachinegun_muzzle.particles	15935
 assets\shared\particles\system_definitions\weapon_submachinegun_muzzle_3p.particles	9088

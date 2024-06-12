@@ -2267,9 +2267,9 @@ nexus_bomb
 	speed 2000
  	rate 1000
   	self_damage 0
-	damage 40 //IMPORTANT, change this weapons augment 10 damage to be this damage value * direct_hit_multiplier from skill 20015 augment 8 :)
-	splash_damage 40
-	min_splash_damage 10
+	damage 0 //IMPORTANT, change this weapons augment 10 damage to be this damage value * direct_hit_multiplier from skill 20015 augment 8 :)
+	splash_damage 0
+	min_splash_damage 0
 	throwable true
 	throw_animation true
 
@@ -2340,10 +2340,10 @@ nexus_bomb augment 9
 	preadd splash_radius 100
 }
 
-nexus_bomb augment 10
-{
-	overwrite damage 52
-}
+// nexus_bomb augment 10
+// {
+// 	overwrite damage 52
+// }
 
 nexus_bomb_mini
 {
@@ -2390,7 +2390,7 @@ scanner_grenade
     weapon_tag hw
     sort 100
 	unlimited_ammo false
-	speed 1100
+	speed 1400
  	rate 1000
   	damage 0
   	splash_radius 260
@@ -2412,7 +2412,7 @@ scanner_grenade
 //	bounce 10000
 //	bounce_friction 0.5
 //	duration 2500
-	gravity 200
+	gravity 500
 
 	shot_particles empty_system
    	shot_particles_attached empty
@@ -2579,7 +2579,7 @@ explosiveweeble
     weapon_tag bw
  	//group 3
 	unlimited_ammo false
-	speed 1100
+	speed 1400
  	rate 1000
   	damage 50
 	no_self_damage 0
@@ -2603,7 +2603,7 @@ explosiveweeble
     
     gravity_pitch_offset 0.05
 	
-	gravity 400
+	gravity 500
 
   	missile_particles explode_weeble_projectile
 	impact_particles explode_weeble
@@ -2691,7 +2691,7 @@ healingweeble
 {
     weapon_tag hw
 	unlimited_ammo false
-	speed 1100
+	speed 1400
 	rate 1000
   	damage 0
   	splash_radius 260
@@ -2704,7 +2704,7 @@ healingweeble
 	
     gravity_pitch_offset 0.05
 
-	gravity 200
+	gravity 500
 
   	missile_particles heal_weeble_projectile
 	missile_trail_particles weeb_dynamic_trail_green_heal
@@ -2783,7 +2783,7 @@ smokeweeble
 {
     weapon_tag smw
 	unlimited_ammo false
-	speed 1100
+	speed 1400
  	rate 1000
   	damage 5
 	no_self_damage 1
@@ -2800,7 +2800,7 @@ smokeweeble
 	
     gravity_pitch_offset 0.05
 
-	gravity 200
+	gravity 500
 
   	missile_particles smoke_weeble_projectile
 	missile_trail_particles weeb_dynamic_trail_green
