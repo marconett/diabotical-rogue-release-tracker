@@ -159,7 +159,7 @@ assets\shared\scripts\entities.assets	13085
 assets\shared\scripts\equipment.loot	17
 assets\shared\scripts\general.loot	5589
 assets\shared\scripts\new.games	20655
-assets\shared\scripts\particles.preload	4037
+assets\shared\scripts\particles.preload	4063
 assets\shared\scripts\passives.skills	5928
 assets\shared\scripts\passives_rogue.skills	7433
 assets\shared\scripts\rogue_classes.classdef	316
@@ -177,8 +177,8 @@ assets\shared\scripts\trees\g2_eggbot_base.json	15871
 assets\shared\scripts\trees\g2_scout.json	20818
 assets\shared\scripts\trees\g2_scout_base.json	15581
 assets\shared\scripts\weapon_mods.loot	17
-assets\shared\scripts\weapons\grenades.weapons	5175
-assets\shared\scripts\weapons\skills.weapons	61543
+assets\shared\scripts\weapons\grenades.weapons	5133
+assets\shared\scripts\weapons\skills.weapons	60568
 assets\shared\weapons\blaster\rogue_blaster.weapon	4049
 assets\shared\weapons\crossbow\rogue_crossbow.weapon	6361
 assets\shared\weapons\eggbot_hand\arena_left_hand.weapon	156

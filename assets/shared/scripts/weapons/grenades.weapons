@@ -49,7 +49,7 @@ smoke_grenade
   	impact_particles smoke_weeble_impact
 	missile_trail_particles weeb_dynamic_trail_green
   	
-	model weaponsmw
+	//model weaponsmw
 	model_position 1.93727 -5.30881 3.85738
     model_position_third_person 10 -60 -35
 	model_scale 0.1
@@ -57,10 +57,7 @@ smoke_grenade
 	model_camera_scale 0.5
 	muzzle 0 0 0
 	fov 55
-	muzzle_offset 0 0 0
-	
-	model weaponsmw
-	
+	muzzle_offset 0 0 0	
 	
 	shot_sound weeble_sw_fire1 weeble_sw_fire2 weeble_sw_fire3 weeble_sw_fire4 weeble_sw_fire5
 	impact_sound bl_impact1
@@ -207,7 +204,7 @@ he_grenade
 	
 	detached_shot_particles false
 	
-	model weaponsmw
+	//model weaponsmw
 	model_position 1.93727 -5.30881 3.85738
     model_position_third_person 10 -60 -35
 	model_scale 0.1
@@ -215,10 +212,7 @@ he_grenade
 	model_camera_scale 0.5
 	muzzle 0 0 0
 	fov 55
-	muzzle_offset 0 0 0
-	
-	model weaponsmw
-	
+	muzzle_offset 0 0 0	
 	
 	//DECALS
 	//decal decal_explosion 90 

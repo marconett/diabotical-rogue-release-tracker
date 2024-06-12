@@ -103,7 +103,7 @@ hammer_time
 	shot_sound hammer_time_fire1 hammer_time_fire2 hammer_time_fire3 hammer_time_fire4
 	impact_sound hammer_time_impact1 hammer_time_impact2 hammer_time_impact3 hammer_time_impact4
 	
-	model weaponsmw
+	//model weaponsmw
 	model_position 1.93727 -5.30881 3.85738
     model_position_third_person 10 -60 -35
 	model_scale 0.1
@@ -2037,7 +2037,6 @@ healing_orb
 	gravity 0
 	show_in_dev_console false 
 	
-	model assets/shared/weapons/weebles/explosive_weeble/explosiveweeble
   	missile_particles heal_orb_projectile
 }
 
@@ -2072,7 +2071,6 @@ deployable_medpack
 	
   	missile_particles heal_pickup_projectile
 	
-	model assets/shared/weapons/weebles/explosive_weeble/explosiveweeble
 	model_position_third_person 10 -60 -35
 	model_position 1.93727 -5.30881 3.85738
 	model_scale 0.1
@@ -2124,7 +2122,6 @@ overload_orb
 	
   	missile_particles overload_chest_orb_loop
 	
-	model assets/shared/weapons/weebles/explosive_weeble/explosiveweeble
 	fov 55
 	
 	hit_sound hit_sound_hit1
@@ -2191,7 +2188,6 @@ overload_orb_mini
   	missile_particles overload_chest_orb_loop
 	impact_particles ability_overload_impact_small
 
-	model assets/shared/weapons/weebles/explosive_weeble/explosiveweeble
 	fov 55
 	
 
@@ -2242,7 +2238,6 @@ implosion_orb
 	
   	missile_particles implosion_orb_loop
 	
-	model assets/shared/weapons/weebles/explosive_weeble/explosiveweeble
 	fov 55
 	
 	hit_sound hit_sound_hit1
@@ -2295,7 +2290,6 @@ nexus_bomb
 	
   	missile_particles heal_bomb_projectile
 	
-	model assets/shared/weapons/weebles/explosive_weeble/explosiveweeble
 	fov 55
 	
 	hit_sound hit_sound_hit1
@@ -2379,7 +2373,6 @@ nexus_bomb_mini
 	
   	missile_particles heal_bomb_projectile
 	
-	model assets/shared/weapons/weebles/explosive_weeble/explosiveweeble
 	fov 55
 	
 	hit_sound hit_sound_hit1
@@ -2426,15 +2419,7 @@ scanner_grenade
   	missile_particles scanner_weeble_projectile
 	missile_trail_particles weeb_dynamic_trail_green_heal
   	
-	model assets/shared/weapons//weebles/healing_weeble/healingweeble
-	model_position 0.93727 -5.30881 3.85738
-	model_position_third_person 10 -60 -35
-	model_scale 0.1
-	model_rotation 186 10 -4
-	model_camera_scale 0.8
-	muzzle 0 0 0
 	fov 55
-	muzzle_offset 0 0 0
 	
 	
 	//shot_sound weeble_hw_fire1 weeble_hw_fire2 weeble_hw_fire3 weeble_hw_fire4 weeble_hw_fire5
@@ -2462,7 +2447,6 @@ mini_rocket
 	// impact_particles rocket_impact_diabotical
 	impact_particles weapon_rocket_impact
 	
-	// model assets/shared/weapons/weebles/explosive_weeble/explosiveweeble
 	fov 55
 	
 	hit_sound hit_sound_hit1
@@ -2515,7 +2499,6 @@ mini_rocket_homing
 	// impact_particles rocket_impact_diabotical
 	impact_particles weapon_rocket_impact_artifact
 	
-	// model assets/shared/weapons/weebles/explosive_weeble/explosiveweeble
 	fov 55
 	
 	hit_sound hit_sound_hit1
@@ -2575,7 +2558,6 @@ instigator_missile
   	missile_particles weapon_rocket_projectile
   	impact_particles arcane_explode_v4
 	
-	// model assets/shared/weapons/weebles/explosive_weeble/explosiveweeble
 	fov 55
 	
 	hit_sound hit_sound_hit1

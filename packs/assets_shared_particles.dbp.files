@@ -1010,7 +1010,7 @@ assets\shared\particles\system_definitions\cave_smoke.particles	3235
 assets\shared\particles\system_definitions\cb_artifact_socket_arm_02_l.particles	11921
 assets\shared\particles\system_definitions\cb_artifact_socket_arm_02_r.particles	12860
 assets\shared\particles\system_definitions\cb_artifact_socket_arrow.particles	14452
-assets\shared\particles\system_definitions\cb_artifact_wind_jet.particles	26454
+assets\shared\particles\system_definitions\cb_artifact_wind_jet.particles	30115
 assets\shared\particles\system_definitions\cb_display_artifact.particles	3597
 assets\shared\particles\system_definitions\cb_impact_artifact_v1.particles	41057
 assets\shared\particles\system_definitions\cb_impact_artifact_v2.particles	27781
@@ -1482,7 +1482,7 @@ assets\shared\particles\system_definitions\heal_sphere_v2.particles	27292
 assets\shared\particles\system_definitions\heal_trail.particles	10264
 assets\shared\particles\system_definitions\heal_weeble_impact.particles	34836
 assets\shared\particles\system_definitions\heal_weeble_impact_end.particles	8252
-assets\shared\particles\system_definitions\heal_weeble_impact_loop.particles	31606
+assets\shared\particles\system_definitions\heal_weeble_impact_loop.particles	37080
 assets\shared\particles\system_definitions\heal_weeble_impact_old.particles	36680
 assets\shared\particles\system_definitions\heal_weeble_impact_v14.particles	55099
 assets\shared\particles\system_definitions\heal_weeble_impact_v15.particles	61595
@@ -1882,6 +1882,7 @@ assets\shared\particles\system_definitions\scan_weeble_impact3.particles	14866
 assets\shared\particles\system_definitions\scan_weeble_impact4.particles	18406
 assets\shared\particles\system_definitions\scan_weeble_impact5.particles	43187
 assets\shared\particles\system_definitions\scan_weeble_impact_10.particles	19017
+assets\shared\particles\system_definitions\scan_weeble_impact_white.particles	23183
 assets\shared\particles\system_definitions\scanner_detect.particles	1031
 assets\shared\particles\system_definitions\scanner_scan.particles	900
 assets\shared\particles\system_definitions\scanner_target.particles	1053
@@ -1968,7 +1969,7 @@ assets\shared\particles\system_definitions\slowfield_orb_1.particles	18583
 assets\shared\particles\system_definitions\slowfield_orb_2.particles	18583
 assets\shared\particles\system_definitions\smash_explosion.particles	21739
 assets\shared\particles\system_definitions\smash_explosion_v2.particles	19610
-assets\shared\particles\system_definitions\smoke_blindness_screen.particles	4322
+assets\shared\particles\system_definitions\smoke_blindness_screen.particles	5864
 assets\shared\particles\system_definitions\smoke_blindness_screen_exit.particles	10513
 assets\shared\particles\system_definitions\smoke_bloom_test.particles	1655
 assets\shared\particles\system_definitions\smoke_cloak_3p_team.particles	5492

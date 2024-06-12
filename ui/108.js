@@ -69,24 +69,13 @@ const page_locker = new function() {
         html.page_next = html.page.nextElementSibling;
         html.screen_actions = _get_first_with_class_in_parent(html.root, "screen_actions");
         GAME.add_activate_callback((game_id => {
-            create_customization_groups();
-            update_new_counts();
-            Navigation.generate_nav({
-                name: "locker_main",
-                nav_root: html.menu_overview,
-                nav_class: "item",
-                hover_sound: "ui_hover1",
-                action_sound: "ui_click1",
-                mouse_click: "action",
-                action_cb_type: "input",
-                grid: true,
-                action_cb: category_action_cb,
-                select_cb: item_select_cb,
-                deselect_cb: item_deselect_cb
-            })
+            init_groups()
         }));
         global_customization_seen_handlers.push((() => {
             update_new_counts()
+        }));
+        global_customization_update_handlers.push((() => {
+            init_groups()
         }));
         Navigation.listen("locker", "lt", prev_page);
         Navigation.listen("locker", "rt", next_page);
@@ -99,6 +88,24 @@ const page_locker = new function() {
             engine.call("ui_sound", "ui_hover2")
         }))
     };
+
+    function init_groups() {
+        create_customization_groups();
+        update_new_counts();
+        Navigation.generate_nav({
+            name: "locker_main",
+            nav_root: html.menu_overview,
+            nav_class: "item",
+            hover_sound: "ui_hover1",
+            action_sound: "ui_click1",
+            mouse_click: "action",
+            action_cb_type: "input",
+            grid: true,
+            action_cb: category_action_cb,
+            select_cb: item_select_cb,
+            deselect_cb: item_deselect_cb
+        })
+    }
 
     function prev_page() {
         data.item_page--;
@@ -196,7 +203,17 @@ const page_locker = new function() {
                 }
                 item.dataset.category = c.id;
                 let item_image = _createElement("div", "item_image");
-                item_image.appendChild(_createElement("div", "image"));
+                let image = _createElement("div", "image");
+                let category_data = GAME.get_data("customization_category_map", c.id);
+                if (category_data && category_data.length) {
+                    current_customization_id = get_current_customization(category_data[0]);
+                    if (current_customization_id) {
+                        image.style.backgroundImage = "url(" + getCustomizationImagePath(current_customization_id, category_data[0].type_id) + ")"
+                    } else if (category_data[0].type === "weapon") {
+                        image.style.backgroundImage = "url(" + getCustomizationImagePath("we_" + category_data[0].sub_type, category_data[0].type_id) + ")"
+                    }
+                }
+                item_image.appendChild(image);
                 let new_count = _createElement("div", "new_count");
                 item.appendChild(item_image);
                 let title = _createElement("div", "item_title", localize(c.i18n));

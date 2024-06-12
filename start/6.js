@@ -6978,8 +6978,28 @@ const TRANSLATION_en_source = {
         text: "Unlock to add this card to your upgrade deck.",
         engine: true
     },
-    tree_page_hold_to_purchase: {
-        text: "Hold to purchase",
+    tree_page_hold_to_unlock: {
+        text: "Hold to unlock",
+        engine: true
+    },
+    tree_page_not_enough_points: {
+        text: "Not enough points",
+        engine: true
+    },
+    tree_page_node_unlocked: {
+        text: "Unlocked",
+        engine: true
+    },
+    tree_page_node_locked: {
+        text: "Locked",
+        engine: true
+    },
+    tree_page_node_pending: {
+        text: "Pending",
+        engine: true
+    },
+    tree_page_failed_to_unlock: {
+        text: "Failed to unlock",
         engine: true
     },
     tree_page_weapon_upgrade_card: {
