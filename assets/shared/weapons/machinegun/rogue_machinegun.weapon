@@ -145,6 +145,7 @@ rogue_machinegun augment 3
 	rarity rare
 	preadd reload -500
 	max_stacks 1
+	locked_in_battlepass true
 }
 
 rogue_machinegun augment 4
@@ -166,6 +167,7 @@ rogue_machinegun augment 5
 	after_reload_upgrade 1
 	overwrite after_reload_fire_rate_multiplier 0.90 //do we want a flat value change here instead? ask (viktor)
 	overwrite after_reload_fire_rate_increase_duration 1
+	locked_in_battlepass true
 }
 
 rogue_machinegun augment 6

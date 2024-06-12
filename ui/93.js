@@ -706,5 +706,6 @@ GAME.set_initial_data(GAME.ids.DIABOTICAL, {
         weapon_attachment: [new CustomizationType("weapon_attachment", "melee"), new CustomizationType("weapon_attachment", "mac"), new CustomizationType("weapon_attachment", "bl"), new CustomizationType("weapon_attachment", "ss"), new CustomizationType("weapon_attachment", "rl"), new CustomizationType("weapon_attachment", "shaft"), new CustomizationType("weapon_attachment", "cb"), new CustomizationType("weapon_attachment", "pncr"), new CustomizationType("weapon_attachment", "gl"), new CustomizationType("weapon_attachment", "vc")]
     },
     flat_bg_scene_screens: ["coin_shop", "notification", "battlepass", "shop", "shop_item", "player_profile", "locker"],
-    map_names: {}
+    map_names: {},
+    sniper_zoom_indexes: []
 });

@@ -517,7 +517,8 @@
             "reload",
             "-500"
         ],
-        "max_stacks": "1"
+        "max_stacks": "1",
+        "locked_in_battlepass": "true"
     },
     {
         "id": "4",
@@ -545,7 +546,8 @@
         "overwrite": [
             "after_reload_fire_rate_increase_duration",
             "1"
-        ]
+        ],
+        "locked_in_battlepass": "true"
     },
     {
         "id": "6",

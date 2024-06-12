@@ -148,7 +148,7 @@ assets\shared\materials\triangle_count_debug.material	301
 assets\shared\prefabs\pf_teleport_exit_wallmount_testing.assets	1569
 assets\shared\prefabs\vi.assets	794
 assets\shared\scripts\abilities.skills	52923
-assets\shared\scripts\abilities_rogue.skills	38211
+assets\shared\scripts\abilities_rogue.skills	38234
 assets\shared\scripts\ammo.loot	17
 assets\shared\scripts\atmosphere.presets	3353
 assets\shared\scripts\base.games	8173
@@ -192,7 +192,7 @@ assets\shared\weapons\grenade\weesuit_grenade.fbx	122844
 assets\shared\weapons\heavymachinegun\rogue_heavymachinegun.weapon	4880
 assets\shared\weapons\heavysniper\rogue_heavysniper.weapon	5967
 assets\shared\weapons\heavysniper\scope_heavny_sniper_rifle_01.png.dds	1882548
-assets\shared\weapons\machinegun\rogue_machinegun.weapon	4830
+assets\shared\weapons\machinegun\rogue_machinegun.weapon	4886
 assets\shared\weapons\melee\rogue_sword.weapon	1388
 assets\shared\weapons\revolver\rogue_revolver.weapon	5130
 assets\shared\weapons\revolver\rogue_revolver_secondary.weapon	1994

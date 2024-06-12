@@ -1242,6 +1242,10 @@ const TRANSLATION_en_source = {
         text: "Weekly Points",
         engine: true
     },
+    daily_points: {
+        text: "Daily Points",
+        engine: true
+    },
     points: {
         text: "Points",
         engine: true
@@ -2765,6 +2769,9 @@ const TRANSLATION_en_source = {
     setting_reflections: {
         text: "Reflections"
     },
+    settings_video_bloom: {
+        text: "Bloom"
+    },
     settings_video_shadows: {
         text: "Shadow Quality"
     },
@@ -2881,6 +2888,9 @@ const TRANSLATION_en_source = {
     },
     zoom: {
         text: "Zoom"
+    },
+    sniper_zoom: {
+        text: "Sniper Zoom"
     },
     settings_mouse_showing_normal: {
         text: "Normal"

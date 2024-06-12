@@ -1402,6 +1402,19 @@ function generateFullCrosshairDefinition(short_string) {
 
 function updateEngineCrosshairDefinition(engine_variable, crosshair_definition) {
     var crosshair_string = generateShortCrosshairString(crosshair_definition);
+    if (engine_variable.startsWith("hud_zoom_crosshair_definition")) {
+        let parts = engine_variable.split(":");
+        if (parts.length > 1) {
+            let weapon_id = parseInt(parts[1]);
+            let sniper_zoom_indexes = GAME.get_data("sniper_zoom_indexes");
+            if (sniper_zoom_indexes && sniper_zoom_indexes.includes(weapon_id)) {
+                for (let id of sniper_zoom_indexes) {
+                    if (id === weapon_id) continue;
+                    engine.call("set_string_variable", "hud_zoom_crosshair_definition" + id, crosshair_string)
+                }
+            }
+        }
+    }
     engine.call("set_string_variable", engine_variable, crosshair_string)
 }
 

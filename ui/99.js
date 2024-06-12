@@ -149,8 +149,11 @@ const page_game_report = new function() {
             if ("progression_updates" in data && "global_points_update" in data.progression_updates) {
                 if (last_match && last_match.manifest && last_match.manifest.match_id === data.match_id) {
                     last_match.master_data.points_earned = data.progression_updates.global_points_update.points_earned;
-                    if (data.progression_updates.global_points_update.points_earned_bonus) {
-                        last_match.master_data.points_earned += data.progression_updates.global_points_update.points_earned_bonus
+                    if (data.progression_updates.global_points_update.points_earned_bonus_weekly) {
+                        last_match.master_data.points_earned += data.progression_updates.global_points_update.points_earned_bonus_weekly
+                    }
+                    if (data.progression_updates.global_points_update.points_earned_bonus_daily) {
+                        last_match.master_data.points_earned += data.progression_updates.global_points_update.points_earned_bonus_daily
                     }
                     render_match_info()
                 }

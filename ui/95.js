@@ -844,5 +844,6 @@ GAME.set_initial_data(GAME.ids.ROGUE, {
                 amount: 1
             }]
         }
-    }
+    },
+    sniper_zoom_indexes: [64]
 });

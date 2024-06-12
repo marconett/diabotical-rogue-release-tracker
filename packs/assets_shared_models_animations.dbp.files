@@ -217,8 +217,8 @@ assets\shared\models\animations\chunkbot\weapon_poses.dbm	82573
 assets\shared\models\animations\chunkbot\weapon_poses.fbx	779948
 assets\shared\models\animations\eggbot\1p\bow_skm_bow_eggbot.dbm	660873
 assets\shared\models\animations\eggbot\1p\bow_skm_bow_eggbot.fbx	962748
-assets\shared\models\animations\eggbot\1p\crossbow_ability_orb_eggbot.dbm	386761
-assets\shared\models\animations\eggbot\1p\crossbow_ability_orb_eggbot.fbx	943116
+assets\shared\models\animations\eggbot\1p\crossbow_ability_orb_eggbot.dbm	406971
+assets\shared\models\animations\eggbot\1p\crossbow_ability_orb_eggbot.fbx	990748
 assets\shared\models\animations\eggbot\1p\crossbow_crouch_idle_eggbot.dbm	6471
 assets\shared\models\animations\eggbot\1p\crossbow_crouch_idle_eggbot.fbx	160284
 assets\shared\models\animations\eggbot\1p\crossbow_crouch_run_eggbot.dbm	6470
@@ -828,7 +828,7 @@ assets\shared\models\animations\weeble\hub_anim09.dbm	96715
 assets\shared\models\animations\weeble\hub_anim09.fbx	182588
 assets\shared\models\animations\weeble\hub_anim10.dbm	102539
 assets\shared\models\animations\weeble\hub_anim10.fbx	190124
-assets\shared\models\animations\weeble\skm_weeble.ani	500
+assets\shared\models\animations\weeble\skm_weeble.ani	660
 assets\shared\models\animations\weeble\skm_weeble.assets	163
 assets\shared\models\animations\weeble\skm_weeble.dbm	263981
 assets\shared\models\animations\weeble\skm_weeble.fbx	268492
@@ -852,7 +852,7 @@ assets\shared\models\animations\weeble\weeble_floatie_flamingo\skm_weeble_floati
 assets\shared\models\animations\weeble\weeble_floatie_flamingo\skm_weeble_floatie_flamingo.fbx	386556
 assets\shared\models\animations\weeble\weeble_hammer\hammering_01.dbm	13517
 assets\shared\models\animations\weeble\weeble_hammer\hammering_01.fbx	119276
-assets\shared\models\animations\weeble\weeble_hammer\skm_weeble_hammer.ani	72
+assets\shared\models\animations\weeble\weeble_hammer\skm_weeble_hammer.ani	153
 assets\shared\models\animations\weeble\weeble_hammer\skm_weeble_hammer.assets	196
 assets\shared\models\animations\weeble\weeble_hammer\skm_weeble_hammer.dbm	402181
 assets\shared\models\animations\weeble\weeble_hammer\skm_weeble_hammer.fbx	375548

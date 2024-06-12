@@ -122,7 +122,7 @@ skill 20002 augment 4
 {
 	name_translation_key skill_smoke_weeble_a4
 	desc_translation_key skill_smoke_weeble_a4_desc
-	rarity legendary
+	rarity epic
 	overwrite damage_boost 1.2
 	skill_prereq augment 5
 	locked_in_battlepass true
@@ -1112,6 +1112,7 @@ skill 20016 augment 4
 	preadd overshield_amount 10 //per hit agent
 	rarity epic
 	max_stacks 1
+	locked_in_battlepass true
 }
 
 skill 20016 augment 5

@@ -290,5 +290,6 @@ GAME.set_initial_data(GAME.ids.INVASION, {
         w_bow: [new CustomizationType("weapon", "bow")]
     },
     flat_bg_scene_screens: ["coin_shop", "notification", "battlepass", "shop", "shop_item", "player_profile", "locker", "custom"],
-    map_names: {}
+    map_names: {},
+    sniper_zoom_indexes: [64]
 });
