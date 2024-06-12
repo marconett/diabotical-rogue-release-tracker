@@ -83,11 +83,6 @@ const credits_page = new function() {
     }, {
         type: "credit",
         title: "Engine Programmer",
-        name: "Sean Berwick",
-        br: false
-    }, {
-        type: "credit",
-        title: "Engine Programmer",
         name: "Marcus Cazzola",
         br: false
     }, {

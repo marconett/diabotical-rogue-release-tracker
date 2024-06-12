@@ -1185,6 +1185,7 @@
         "weapon": "nexus_bomb",
         "required_class": "rogue_eggbot",
         "pfx1": "heal_bomb_impact",
+        "direct_hit_multiplier": "1",
         "cooldown": "10",
         "prevent_cooldown_on_initial_fire": "false",
         "power": "1",
@@ -1915,6 +1916,7 @@
         "name_translation_key": "skill_movement_bolt_a4",
         "desc_translation_key": "skill_movement_bolt_a4_desc",
         "rarity": "artifact",
+        "locked_in_battlepass": "true",
         "overwrite": "radius 200"
     },
     {

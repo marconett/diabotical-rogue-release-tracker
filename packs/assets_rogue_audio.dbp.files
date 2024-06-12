@@ -203,7 +203,7 @@ assets\rogue\audio\arena_eggbot_self_footsteps.sounds	8692
 assets\rogue\audio\arena_eggbot_self_jumps.sounds	1104
 assets\rogue\audio\arena_eggbot_self_lands.sounds	5688
 assets\rogue\audio\arena_environmental_entities.sounds	1439
-assets\rogue\audio\arena_feedback_hit.sounds	1892
+assets\rogue\audio\arena_feedback_hit.sounds	2097
 assets\rogue\audio\arena_feedback_misc.sounds	394
 assets\rogue\audio\arena_frag_notifications.sounds	312
 assets\rogue\audio\arena_melee.sounds	1303
@@ -549,7 +549,7 @@ assets\rogue\audio\feedback\hit_sounds\fb_take_damage_self-002.wav	82364
 assets\rogue\audio\feedback\hit_sounds\fb_take_damage_self-003.wav	82364
 assets\rogue\audio\feedback\hit_sounds\fb_take_damage_self-004.wav	88244
 assets\rogue\audio\feedback\hit_sounds\fb_take_damage_self-005.wav	88244
-assets\rogue\audio\feedback_hit.events	4983
+assets\rogue\audio\feedback_hit.events	5265
 assets\rogue\audio\feedback_misc.events	3574
 assets\rogue\audio\mixer_settings.mxr	8586
 assets\rogue\audio\user_interface.events	6188
@@ -1293,5 +1293,5 @@ assets\rogue\audio\weesuit\land_self\weesuit_land_self_water4.wav	102712
 assets\rogue\audio\weesuit\land_self\weesuit_land_self_water5.wav	102712
 assets\rogue\audio\weesuit\land_self\weesuit_land_self_water6.wav	102712
 assets\rogue\audio\wip_anders.events	0
-assets\rogue\audio\wip_mike.events	15042
+assets\rogue\audio\wip_mike.events	15094
 assets\rogue\audio\wip_mike.sounds	5002

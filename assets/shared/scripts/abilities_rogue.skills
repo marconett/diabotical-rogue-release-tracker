@@ -967,6 +967,7 @@ skill 20015
     required_class rogue_eggbot
 
     pfx1 heal_bomb_impact
+	direct_hit_multiplier 1
 
     cooldown 10
     prevent_cooldown_on_initial_fire false
@@ -1816,8 +1817,8 @@ skill 40001 augment 4
     desc_translation_key skill_movement_bolt_a4_desc
 	rarity artifact
 
+	locked_in_battlepass true
 	overwrite bolt_artifact_enabled true
-
 	overwrite knockback 1000 //knockback force
 	overwrite damage 30
 	overwrite radius 200

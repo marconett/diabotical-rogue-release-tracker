@@ -1,6 +1,6 @@
 assets\shared\particles\effects.atlas	12410
 assets\shared\particles\effects.atlas.old	8033
-assets\shared\particles\effects_dave.atlas	28172
+assets\shared\particles\effects_dave.atlas	28258
 assets\shared\particles\effects_extra.atlas	50595
 assets\shared\particles\effects_scott.atlas	4879
 assets\shared\particles\effects_sean.atlas	11784
@@ -1754,7 +1754,7 @@ assets\shared\particles\system_definitions\overload_player_3p7.particles	35282
 assets\shared\particles\system_definitions\overload_player_3p8.particles	37680
 assets\shared\particles\system_definitions\overload_screen.particles	1223
 assets\shared\particles\system_definitions\overshield_2_screen.particles	2174
-assets\shared\particles\system_definitions\overshield_on_kill.particles	40203
+assets\shared\particles\system_definitions\overshield_on_kill.particles	42207
 assets\shared\particles\system_definitions\overshield_screen.particles	2057
 assets\shared\particles\system_definitions\plasma_bullet.particles	9285
 assets\shared\particles\system_definitions\plasma_core.particles	15405
@@ -1946,6 +1946,7 @@ assets\shared\particles\system_definitions\skill_teleport_out.particles	45560
 assets\shared\particles\system_definitions\skill_teleport_out_1p_screen.particles	28525
 assets\shared\particles\system_definitions\slash.particles	4491
 assets\shared\particles\system_definitions\slicer.particles	2229
+assets\shared\particles\system_definitions\slide_dash_screen.particles	15662
 assets\shared\particles\system_definitions\slow_aura.particles	24938
 assets\shared\particles\system_definitions\slow_aura2.particles	9252
 assets\shared\particles\system_definitions\slow_aura3.particles	11773
@@ -2876,6 +2877,7 @@ assets\shared\particles\textures\beam_mask_2.png.dds	3236
 assets\shared\particles\textures\beam_mask_3.png.dds	3236
 assets\shared\particles\textures\beam_mask_4.png.dds	3236
 assets\shared\particles\textures\beam_mask_5.png.dds	87588
+assets\shared\particles\textures\big_ring_diss.png.dds	349700
 assets\shared\particles\textures\big_smoke_puff.png.dds	5592580
 assets\shared\particles\textures\binary_lightning_v1.png.dds	5592580
 assets\shared\particles\textures\bird_1.png.dds	349700
