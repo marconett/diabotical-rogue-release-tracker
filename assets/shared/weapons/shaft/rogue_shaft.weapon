@@ -21,7 +21,7 @@ rogue_shaft
 	delay_heat_regen 0.1
 	
 	damage 4 4
-	rate 52
+	rate 55
 	min_damage_distance 767
     max_damage_distance 768
 

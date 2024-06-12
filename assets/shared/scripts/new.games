@@ -15,8 +15,8 @@ game rogue_wipeout
 	setting game_reload_fire_cancel_delay_ms 250
 	setting game_additional_currency_per_round 200
 	setting game_initial_currency 400
-	setting game_currency_per_kill 60
-	setting game_currency_per_assist 20
+	setting game_currency_per_kill 15
+	setting game_currency_per_assist 5
 	
 	setting game_spawn_protection_s 1
 	setting game_respawn_time_increment_per_death_ms 6000

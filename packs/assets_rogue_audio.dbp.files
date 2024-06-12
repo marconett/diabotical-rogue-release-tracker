@@ -544,8 +544,8 @@ assets\rogue\audio\feedback\hit_sounds\fb_take_damage_self-002.wav	82364
 assets\rogue\audio\feedback\hit_sounds\fb_take_damage_self-003.wav	82364
 assets\rogue\audio\feedback\hit_sounds\fb_take_damage_self-004.wav	88244
 assets\rogue\audio\feedback\hit_sounds\fb_take_damage_self-005.wav	88244
-assets\rogue\audio\feedback_hit.events	3781
-assets\rogue\audio\feedback_misc.events	1725
+assets\rogue\audio\feedback_hit.events	3841
+assets\rogue\audio\feedback_misc.events	3574
 assets\rogue\audio\mixer_settings.mxr	8573
 assets\rogue\audio\user_interface.events	6188
 assets\rogue\audio\weapon_blaster.events	12321

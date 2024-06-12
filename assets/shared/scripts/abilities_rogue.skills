@@ -765,6 +765,7 @@ skill 20011 augment 5
 	overwrite max_charges 3	
 	preadd leap_slam_damage 30
  	preadd leap_slam_radius 400	
+	locked_in_battlepass true
 }
 
 skill 20012

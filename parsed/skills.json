@@ -1005,7 +1005,8 @@
         "desc_translation_key": "skill_leap_slam_a5_desc",
         "rarity": "artifact",
         "overwrite": "max_charges 3",
-        "preadd": "leap_slam_radius 400"
+        "preadd": "leap_slam_radius 400",
+        "locked_in_battlepass": "true"
     },
     {
         "id": "20012",
