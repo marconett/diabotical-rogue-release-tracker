@@ -196,12 +196,12 @@ rogue_revolver augment 7
 	locked_in_battlepass true
 }
 
-rogue_revolver augment 8
-{
-	name revolver_increased_headshot_damage
-	name_translation_key revolver_increased_headshot_damage
-	desc_translation_key revolver_increased_headshot_damage_desc
-	rarity common
-
-	overwrite critical_damage 35 45
-}
+//rogue_revolver augment 8
+//{
+//	name revolver_increased_headshot_damage
+//	name_translation_key revolver_increased_headshot_damage
+//	desc_translation_key revolver_increased_headshot_damage_desc
+//	rarity common
+//
+//	overwrite critical_damage 35 45
+//}

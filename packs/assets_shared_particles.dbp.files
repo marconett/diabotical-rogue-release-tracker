@@ -880,6 +880,12 @@ assets\shared\particles\system_definitions\artifact_laser_beam_charge.particles	
 assets\shared\particles\system_definitions\artifact_laser_beam_impact.particles	34421
 assets\shared\particles\system_definitions\artifact_player.particles	12029
 assets\shared\particles\system_definitions\artifact_player_icon_screen.particles	9775
+assets\shared\particles\system_definitions\artifact_submachine_barrel.particles	11655
+assets\shared\particles\system_definitions\artifact_submachine_muzzle.particles	21192
+assets\shared\particles\system_definitions\artifact_submachine_muzzle_3p.particles	21236
+assets\shared\particles\system_definitions\artifact_submachinegun_impact.particles	17986
+assets\shared\particles\system_definitions\artifact_submachinegun_player_impact.particles	10934
+assets\shared\particles\system_definitions\artifact_submachinegun_projectile.particles	7166
 assets\shared\particles\system_definitions\artifact_weapon_bar_screen.particles	33022
 assets\shared\particles\system_definitions\attackdefense_point.particles	3548
 assets\shared\particles\system_definitions\aura_surge_ability_loop.particles	24910
@@ -2127,7 +2133,7 @@ assets\shared\particles\system_definitions\weapon_crossbow_projectile.particles	
 assets\shared\particles\system_definitions\weapon_crossbow_projectile_artifacts.particles	32465
 assets\shared\particles\system_definitions\weapon_egun_impact.particles	25843
 assets\shared\particles\system_definitions\weapon_egun_muzzle.particles	12620
-assets\shared\particles\system_definitions\weapon_egun_muzzle_3p.particles	46321
+assets\shared\particles\system_definitions\weapon_egun_muzzle_3p.particles	46319
 assets\shared\particles\system_definitions\weapon_egun_muzzle_flash.particles	1064
 assets\shared\particles\system_definitions\weapon_egun_muzzle_v1.particles	10471
 assets\shared\particles\system_definitions\weapon_egun_muzzle_v2.particles	12549

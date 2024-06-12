@@ -2455,7 +2455,6 @@ mini_rocket
     sort 100
 	speed 500
  	rate 750
-  	damage 35
 	duration 150000
 	
   	missile_particles weapon_rocket_projectile
@@ -2491,10 +2490,11 @@ mini_rocket
     // team_damage 0
     // splash_team_damage 0
 
-	self_damage 50
-  	splash_radius 150
-	splash_damage 35
-	min_splash_damage 10
+  	damage 30
+	self_damage 40
+  	splash_radius 165
+	splash_damage 30
+	min_splash_damage 1
 
 	bounce 0
 	bounce_friction 1
@@ -2508,7 +2508,6 @@ mini_rocket_homing
     sort 100
 	speed 500
  	rate 750
-  	damage 25
 	duration 150000
 	
   	missile_particles weapon_rocket_projectile_artifact
@@ -2540,10 +2539,11 @@ mini_rocket_homing
     // team_damage 0
     // splash_team_damage 0
 
-	self_damage 50
-  	splash_radius 150
+  	damage 25
+	self_damage 40
+  	splash_radius 165
 	splash_damage 25
-	min_splash_damage 5
+	min_splash_damage 1
 
 	bounce 0
 	bounce_friction 1

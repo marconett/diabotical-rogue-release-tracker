@@ -2094,7 +2094,7 @@ const TRANSLATION_en_source = {
         engine: true
     },
     submachinegun_chance_to_regain_ammo_desc: {
-        text: "Your Spectre has a 50% chance to not consume your ammo when hitting an enemy.",
+        text: "Your Spectre has a 50% chance to not consume ammo when missing an enemy.",
         engine: true
     },
     weapon_heavymachinegun: {
@@ -4631,6 +4631,10 @@ const TRANSLATION_en_source = {
         text: "Unable to join, session does not exist anymore.",
         engine: true
     },
+    rarity: {
+        text: "Rarity",
+        engine: true
+    },
     rarity_all: {
         text: "All rarities"
     },
@@ -5736,11 +5740,11 @@ const TRANSLATION_en_source = {
         engine: true
     },
     skill_healing_orb: {
-        text: "Healing Orb",
+        text: "Healing Beam",
         engine: true
     },
     skill_healing_orb_desc: {
-        text: "An orb of energy that heals nearby teammates.",
+        text: "A beam of energy that heals nearby teammates.",
         engine: true
     },
     skill_healing_orb_a3: {
@@ -5748,7 +5752,7 @@ const TRANSLATION_en_source = {
         engine: true
     },
     skill_healing_orb_a3_desc: {
-        text: "Healing teammates with the Healing Orb also heals yourself.",
+        text: "Healing teammates with the Healing Beam also heals yourself.",
         engine: true
     },
     skill_healing_orb_a4: {
@@ -5756,7 +5760,7 @@ const TRANSLATION_en_source = {
         engine: true
     },
     skill_healing_orb_a4_desc: {
-        text: "Increases amount of healing done by the Healing Orb.",
+        text: "Increases amount of healing done by the Healing Beam.",
         engine: true
     },
     skill_healing_orb_a5: {
@@ -5772,7 +5776,7 @@ const TRANSLATION_en_source = {
         engine: true
     },
     skill_healing_orb_a6_desc: {
-        text: "The Healing Orb gains elevated healing capabilities, alongside an improved energy recharge rate.",
+        text: "The Healing Beam gains elevated healing capabilities, alongside an improved energy recharge rate.",
         engine: true
     },
     skill_healing_orb_a7: {
@@ -5780,7 +5784,7 @@ const TRANSLATION_en_source = {
         engine: true
     },
     skill_healing_orb_a7_desc: {
-        text: "Your Healing Orb becomes empowered, chaining it's path between teammates.",
+        text: "Your Healing Beam becomes empowered, chaining it's path between teammates.",
         engine: true
     },
     skill_increase_orb_damage: {
@@ -6745,11 +6749,11 @@ const TRANSLATION_en_source = {
         engine: true
     },
     shop_title_pack: {
-        text: "Select your pack",
+        text: "Select your suit",
         engine: true
     },
     shop_title_build: {
-        text: "Select your build",
+        text: "Select your suit",
         engine: true
     },
     shop_passive_upgrade: {
@@ -6797,7 +6801,7 @@ const TRANSLATION_en_source = {
         engine: true
     },
     card_selection_popup: {
-        text: "Weapon pack",
+        text: "Select your suit",
         engine: true
     },
     show_loadout: {
@@ -6964,6 +6968,26 @@ const TRANSLATION_en_source = {
     },
     bind_interact_in_settings: {
         text: 'Bind "Interact" in settings',
+        engine: true
+    },
+    tree_page_upgrade_type: {
+        text: "Type",
+        engine: true
+    },
+    tree_page_card_disclaimer: {
+        text: "Unlock to add this card to your upgrade deck.",
+        engine: true
+    },
+    tree_page_hold_to_purchase: {
+        text: "Hold to purchase",
+        engine: true
+    },
+    tree_page_weapon_upgrade_card: {
+        text: "Weapon Upgrade Card",
+        engine: true
+    },
+    tree_page_ability_upgrade_card: {
+        text: "Ability Upgrade Card",
         engine: true
     }
 };

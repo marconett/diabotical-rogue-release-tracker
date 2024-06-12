@@ -67,7 +67,7 @@ rogue_heavysniper
 	recoil_shake 0.3
 		
 	equip_time 450
-	base_combo_rate 300
+	base_combo_rate 350
 	
 	gravity_delay_by_distance 1000
 	gravity 500

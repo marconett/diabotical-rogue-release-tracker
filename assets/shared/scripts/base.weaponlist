@@ -154,6 +154,7 @@
 	weapon nexus_bomb_mini
 	weapon instigator_missile
 	weapon mini_rocket_homing
+	//125
 	weapon rogue_blaster_secondary
 	weapon beam
 

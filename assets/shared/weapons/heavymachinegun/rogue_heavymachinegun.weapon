@@ -31,7 +31,7 @@ rogue_heavymachinegun
 	//heat_cool_per_sec 10
 
 	bursts 3 0.06
-    rate 380
+    rate 390
 	damage 7 12
 	critical_damage 11 19
 	knockback 2

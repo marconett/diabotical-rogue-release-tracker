@@ -139,6 +139,7 @@ const page_game_report = new function() {
             show_game_report(false, true)
         }));
         on_post_match_updates.push((data => {
+            console.log("past_match_updates", data);
             if ("rematch_enabled" in data) {
                 rematch_enabled = data.rematch_enabled
             } else {
@@ -148,6 +149,9 @@ const page_game_report = new function() {
             if ("progression_updates" in data && "global_points_update" in data.progression_updates) {
                 if (last_match && last_match.manifest && last_match.manifest.match_id === data.match_id) {
                     last_match.master_data.points_earned = data.progression_updates.global_points_update.points_earned;
+                    if (data.progression_updates.global_points_update.points_earned_bonus) {
+                        last_match.master_data.points_earned += data.progression_updates.global_points_update.points_earned_bonus
+                    }
                     render_match_info()
                 }
             }

@@ -1668,6 +1668,7 @@
         "required_class": "rogue_chunk",
         "selectable": "true",
         "hud_icon": "images/skill_icons/Arena_Ability_Icon_Beam.png",
+        "weapon": "beam",
         "prevent_cooldown_on_initial_fire": "false",
         "cooldown": "25",
         "duration": "0.7",

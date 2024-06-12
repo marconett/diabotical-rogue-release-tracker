@@ -173,4 +173,9 @@ overshield_on_kill
 ability_marked_target
 bot_spawn
 legendary_scan_weeble_impact
-
+artifact_submachinegun_impact
+artifact_submachinegun_player_impact
+artifact_submachine_muzzle_3p
+artifact_submachinegun_projectile
+artifact_submachine_barrel
+artifact_submachine_muzzle

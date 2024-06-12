@@ -67,7 +67,7 @@ rogue_egun
 	zoomed_walk_speed 200
 	
 	detached_shot_particles false
-    shot_particles weapon_egun_muzzle_flash
+   //shot_particles weapon_egun_muzzle_flash
 	shot_particles_attached weapon_egun_muzzle
    	shot_particles_attached_3p weapon_egun_muzzle_3p
 	missile_particles weapon_egun_projectile

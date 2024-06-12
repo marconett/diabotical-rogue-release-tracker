@@ -83,7 +83,7 @@ game rogue_wipeout
 	setting phy_ground_speed_loss 150
 
     setting phy_air_speed 300
-    setting phy_accel_air 1.15
+    setting phy_accel_air 1.3
     setting phy_air_speed_anisotropy 1
     setting phy_accel_air_anisotropy 1
 
@@ -142,14 +142,15 @@ game rogue_wipeout
 	setting game_ads 1
 	
 	setting phy_roll_type 0
-	setting phy_roll_activation_speed 299
+	setting phy_roll_activation_speed 296
 	setting phy_roll_control 10
-	setting phy_roll_speed 100
+	setting phy_roll_speed 129
     setting phy_roll_minimum_speed 250
 	setting phy_roll_slowdown 0.999
 	setting phy_roll_slide_combo_impulse 0
+	setting phy_roll_slide_combo_impulse_max_speed 450
 	setting phy_roll_duration 0.35
-	setting phy_roll_cooldown 2
+	setting phy_roll_cooldown 1.5
 	
 	setting game_warmup_time -1
 	setting game_camera_offset 0
@@ -258,7 +259,7 @@ game rogue_teamdeathmatch
 	setting phy_ground_speed_loss 150
 
     setting phy_air_speed 300
-    setting phy_accel_air 1.15
+    setting phy_accel_air 1.3
     setting phy_air_speed_anisotropy 1
     setting phy_accel_air_anisotropy 1
 
@@ -317,14 +318,15 @@ game rogue_teamdeathmatch
 	setting game_ads 1
 	
 	setting phy_roll_type 0
-	setting phy_roll_activation_speed 299
+	setting phy_roll_activation_speed 296
 	setting phy_roll_control 10
-	setting phy_roll_speed 100
+	setting phy_roll_speed 129
     setting phy_roll_minimum_speed 250
 	setting phy_roll_slowdown 0.999
 	setting phy_roll_slide_combo_impulse 0
+	setting phy_roll_slide_combo_impulse_max_speed 450
 	setting phy_roll_duration 0.35
-	setting phy_roll_cooldown 2
+	setting phy_roll_cooldown 1.5
 	
 	setting game_warmup_time -1
 	setting game_camera_offset 0
@@ -412,7 +414,7 @@ game rogue_edit
 	setting phy_ground_speed_loss 150
 
     setting phy_air_speed 300
-    setting phy_accel_air 1.15
+    setting phy_accel_air 1.3
     setting phy_air_speed_anisotropy 1
     setting phy_accel_air_anisotropy 1
 
@@ -471,14 +473,15 @@ game rogue_edit
 	setting game_ads 1
 	
 	setting phy_roll_type 0
-	setting phy_roll_activation_speed 299
+	setting phy_roll_activation_speed 296
 	setting phy_roll_control 10
-	setting phy_roll_speed 100
+	setting phy_roll_speed 129
     setting phy_roll_minimum_speed 250
 	setting phy_roll_slowdown 0.999
 	setting phy_roll_slide_combo_impulse 0
+	setting phy_roll_slide_combo_impulse_max_speed 450
 	setting phy_roll_duration 0.35
-	setting phy_roll_cooldown 2
+	setting phy_roll_cooldown 1.5
 	
 	setting game_warmup_time -1
 	setting game_camera_offset 0
@@ -575,7 +578,7 @@ game rogue_hub
 	setting phy_ground_speed_loss 150
 
     setting phy_air_speed 300
-    setting phy_accel_air 1.15
+    setting phy_accel_air 1.3
     setting phy_air_speed_anisotropy 1
     setting phy_accel_air_anisotropy 1
 
@@ -634,14 +637,15 @@ game rogue_hub
 	setting game_ads 1
 	
 	setting phy_roll_type 0
-	setting phy_roll_activation_speed 299
+	setting phy_roll_activation_speed 296
 	setting phy_roll_control 10
-	setting phy_roll_speed 100
+	setting phy_roll_speed 129
     setting phy_roll_minimum_speed 250
 	setting phy_roll_slowdown 0.999
 	setting phy_roll_slide_combo_impulse 0
+	setting phy_roll_slide_combo_impulse_max_speed 450
 	setting phy_roll_duration 0.35
-	setting phy_roll_cooldown 2
+	setting phy_roll_cooldown 1.5
 	
 	setting game_camera_offset 0
 	setting game_camera_hor_offset 0

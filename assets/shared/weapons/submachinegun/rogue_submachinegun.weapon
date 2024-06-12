@@ -193,6 +193,15 @@ rogue_submachinegun augment 6
 	name submachinegun_chance_to_regain_ammo
 	name_translation_key submachinegun_chance_to_regain_ammo
 	desc_translation_key submachinegun_chance_to_regain_ammo_desc
-	rarity legendary
+	rarity artifact
 	overwrite self_on_shoot_ammo_regain 50
+	overwrite shot_particles_attached artifact_submachine_muzzle socket_muzzle 0.1
+	//overwrite shot_particles_attached artifact_submachine_muzzle 0.1
+	overwrite pfx weapon_submachinegun_laser socket_laser 1
+   	overwrite shot_particles_attached_3p artifact_submachinegun_muzzle_3p
+	//overwrite missile_particles artifact_submachinegun_projectile
+	overwrite missile_particles_1p artifact_submachinegun_projectile
+	overwrite impact_particles artifact_submachinegun_impact
+    overwrite player_impact_particles artifact_submachinegun_player_impact
+	overwrite pfx artifact_submachine_barrel socket_muzzle 1
 }

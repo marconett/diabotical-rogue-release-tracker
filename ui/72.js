@@ -454,23 +454,11 @@ function customization_preview_mousemove(e) {
     global_preview_rotation_position.x = e.clientX;
     global_preview_rotation_position.y = e.clientY
 }
-const ITEM_PREVIEW_CAMERAS = {
-    eggbot_locker: 0,
-    weapon_locker: 1,
-    empty: 2,
-    weapon_battlepass: 3,
-    eggbot_battlepass: 4,
-    eggbot_profile: 5,
-    weapon_shop: 6,
-    eggbot_shop: 7,
-    weapon_notification: 8,
-    eggbot_notification: 9,
-    eggbot_shield_locker: 10,
-    eggbot_shield_battlepass: 11,
-    eggbot_shield_shop: 12,
-    eggbot_shield_notification: 13
-};
 let global_customization_blur_active = false;
+let global_customization_preview = {
+    ctype: null,
+    id: null
+};
 
 function show_customization_preview_scene(screen, ctype, id, customization, container, callback) {
     if (!ctype.type.length) return;
@@ -480,21 +468,23 @@ function show_customization_preview_scene(screen, ctype, id, customization, cont
     if (locker_preview_scale && ctype.type in locker_preview_scale && ctype.sub_type in locker_preview_scale[ctype.type]) {
         preview_size_multiplier = locker_preview_scale[ctype.type][ctype.sub_type]
     }
-    if (ctype.type == "weapon") {
-        engine.call("on_show_customization_screen", true);
-        engine.call("weapon_customization_select_weapon", ctype.sub_type);
-        engine.call("set_preview_weapon_skin", ctype.sub_type, id);
-        setup_customization_preview_rotation_listeners(container, true);
-        if (screen != "locker") engine.call("reset_locker_agent_rotation")
-    } else if (ctype.type == "suit") {
-        engine.call("on_show_customization_screen", true);
-        engine.call("set_preview_class_skin", ctype.sub_type, id);
-        setup_customization_preview_rotation_listeners(container, true)
-    } else {
-        engine.call("on_show_customization_screen", true);
-        setup_customization_preview_rotation_listeners(container, true);
-        if (screen != "locker") engine.call("reset_locker_agent_rotation")
+    engine.call("on_show_customization_screen", true);
+    let update_coords = false;
+    if (!global_customization_preview.ctype || global_customization_preview.ctype.type !== ctype.type || global_customization_preview.ctype.sub_type !== ctype.sub_type || global_customization_preview.id !== id) {
+        global_customization_preview.ctype = ctype;
+        global_customization_preview.id = id;
+        update_coords = true;
+        if (ctype.type == "weapon") {
+            engine.call("weapon_customization_select_weapon", ctype.sub_type);
+            engine.call("set_preview_weapon_skin", ctype.sub_type, id);
+            if (screen != "locker") engine.call("reset_locker_agent_rotation")
+        } else if (ctype.type == "suit") {
+            engine.call("set_preview_class_skin", ctype.sub_type, id)
+        } else {
+            if (screen != "locker") engine.call("reset_locker_agent_rotation")
+        }
     }
+    setup_customization_preview_rotation_listeners(container, true);
     global_customization_blur_active = false;
     _empty(container);
     if (!customization.hasOwnProperty("customization_id")) {
@@ -517,7 +507,9 @@ function show_customization_preview_scene(screen, ctype, id, customization, cont
         let center_y = window.outerHeight / 2;
         coordinates = [center_x, center_y, width, height]
     } else if (screen === "notification") {} else if (screen === "shop_item") {} else if (screen === "battlepass") {}
-    engine.call("set_locker_container_coords", ...coordinates);
+    if (update_coords) {
+        engine.call("set_locker_container_coords", ...coordinates)
+    }
     let preview_container = _createElement("div", "preview_container");
     preview_container.style.left = coordinates[0] - coordinates[2] / 2 + "px";
     preview_container.style.top = coordinates[1] - coordinates[3] / 2 + "px";

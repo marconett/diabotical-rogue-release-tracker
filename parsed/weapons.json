@@ -273,17 +273,78 @@
         "locked_in_battlepass": "true"
     },
     {
-        "id": "8",
-        "parent_id": "rogue_revolver",
-        "weapon_type": "augment",
-        "name": "revolver_increased_headshot_damage",
-        "name_translation_key": "revolver_increased_headshot_damage",
-        "desc_translation_key": "revolver_increased_headshot_damage_desc",
-        "rarity": "common",
-        "overwrite": [
-            "critical_damage",
-            "35",
-            "45"
+        "id": "rogue_sword",
+        "parent_id": "",
+        "weapon_type": "melee",
+        "selectable": "false",
+        "show_in_dev_console": "false",
+        "weapon_tag": "melee",
+        "bind_group": "9",
+        "color": "888888",
+        "damage": "40",
+        "knockback": "100",
+        "ground_knockback": "100",
+        "rate": "700",
+        "speed": "0",
+        "unlimited_ammo": "true",
+        "distance": "60",
+        "hit_radius": "50",
+        "allow_during_bolt": "true",
+        "icon_path": "images/weapon_icons/Melee_TEMP.png.png",
+        "melee_reward": "true",
+        "shot_particles": "empty_system",
+        "shot_particles_attached": "empty_system",
+        "impact_particles": "rail_impact",
+        "melee_animation": "true",
+        "model": "assets/shared/weapons/melee/katana/katana",
+        "model_position": [
+            "6.2",
+            "-7",
+            "8.7"
+        ],
+        "model_scale": [
+            "0.10",
+            "0.10",
+            "0.10"
+        ],
+        "model_camera_scale": "0.3",
+        "model_rotation": [
+            "175",
+            "-4",
+            "0"
+        ],
+        "muzzle": [
+            "4.5",
+            "-6",
+            "20"
+        ],
+        "fov": "59",
+        "shot_sound": [
+            "m_fire1",
+            "m_fire2",
+            "m_fire3",
+            "m_fire4",
+            "m_fire5"
+        ],
+        "impact_sound": [
+            "m_impact1",
+            "m_impact2",
+            "m_impact3",
+            "m_impact4",
+            "m_impact5"
+        ],
+        "hit_sound": "testhit1",
+        "equip_sound": "m_equip",
+        "model_scale_third_person": "0.15",
+        "model_position_third_person": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_rotation_third_person": [
+            "0",
+            "0",
+            "0"
         ]
     },
     {
@@ -906,10 +967,12 @@
         "name": "submachinegun_chance_to_regain_ammo",
         "name_translation_key": "submachinegun_chance_to_regain_ammo",
         "desc_translation_key": "submachinegun_chance_to_regain_ammo_desc",
-        "rarity": "legendary",
+        "rarity": "artifact",
         "overwrite": [
-            "self_on_shoot_ammo_regain",
-            "50"
+            "pfx",
+            "artifact_submachine_barrel",
+            "socket_muzzle",
+            "1"
         ]
     },
     {
@@ -938,7 +1001,7 @@
             "3",
             "0.06"
         ],
-        "rate": "380",
+        "rate": "390",
         "damage": [
             "7",
             "12"
@@ -1201,7 +1264,7 @@
         "recoil_shake_time": "0.06",
         "recoil_shake": "0.3",
         "equip_time": "450",
-        "base_combo_rate": "300",
+        "base_combo_rate": "350",
         "gravity_delay_by_distance": "1000",
         "gravity": "500",
         "hit_radius": [
@@ -1622,7 +1685,6 @@
         ],
         "zoomed_walk_speed": "200",
         "detached_shot_particles": "false",
-        "shot_particles": "weapon_egun_muzzle_flash",
         "shot_particles_attached": [
             "weapon_egun_muzzle_flash",
             "socket_muzzle",

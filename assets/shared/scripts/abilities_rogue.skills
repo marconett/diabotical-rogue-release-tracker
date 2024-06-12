@@ -1475,7 +1475,7 @@ skill 20023
 
 	hud_icon images/skill_icons/Arena_Ability_Icon_Beam.png
 
-	// weapon mini_rocket
+	weapon beam
 
 	prevent_cooldown_on_initial_fire false
 
