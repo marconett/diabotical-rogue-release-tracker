@@ -1,5 +1,5 @@
 assets\rogue\audio\ID_list.txt	3556
-assets\rogue\audio\abilities.events	68038
+assets\rogue\audio\abilities.events	69871
 assets\rogue\audio\abilities\bolt\ability_bolt_enemy1.wav	441044
 assets\rogue\audio\abilities\bolt\ability_bolt_enemy2.wav	441044
 assets\rogue\audio\abilities\bolt\ability_bolt_enemy3.wav	441044
@@ -42,6 +42,11 @@ assets\rogue\audio\abilities\double_jump\double_jump_use1.wav	113546
 assets\rogue\audio\abilities\double_jump\double_jump_use2.wav	113546
 assets\rogue\audio\abilities\double_jump\double_jump_use3.wav	113546
 assets\rogue\audio\abilities\double_jump\double_jump_use4.wav	113546
+assets\rogue\audio\abilities\explosive_grenade\ab_explosive_grenade_explode1.wav	253758
+assets\rogue\audio\abilities\explosive_grenade\ab_explosive_grenade_explode2.wav	253758
+assets\rogue\audio\abilities\explosive_grenade\ab_explosive_grenade_explode3.wav	253758
+assets\rogue\audio\abilities\explosive_grenade\ab_explosive_grenade_explode4.wav	253758
+assets\rogue\audio\abilities\explosive_grenade\ab_explosive_grenade_impact.wav	159258
 assets\rogue\audio\abilities\healing_grenade\grenade_healing_impact.wav	1164894
 assets\rogue\audio\abilities\healing_orb\ab_healing_orb_idle_loop01.wav	882044
 assets\rogue\audio\abilities\healing_orb\ab_healing_orb_init01.wav	352844
@@ -204,7 +209,7 @@ assets\rogue\audio\ambience\prop\amb_prop_sparks_scifi.wav	3528044
 assets\rogue\audio\ambience\prop\amb_prop_suit_pod.wav	3528044
 assets\rogue\audio\ambience\prop\amb_prop_toya_pump.wav	3528044
 assets\rogue\audio\announcer.events	19587
-assets\rogue\audio\arena_abilities.sounds	19229
+assets\rogue\audio\arena_abilities.sounds	19982
 assets\rogue\audio\arena_ambience.sounds	12416
 assets\rogue\audio\arena_announcer_julie.sounds	42884
 assets\rogue\audio\arena_chunkbot_enemy_footsteps.sounds	9941

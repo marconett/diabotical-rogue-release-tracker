@@ -303,7 +303,7 @@
         "category": "passive",
         "selectable": "true",
         "show_in_dev_console": "true",
-        "rarity": "common",
+        "rarity": "legendary",
         "damage_over_time": "2"
     },
     {
@@ -316,7 +316,7 @@
         "category": "passive",
         "selectable": "true",
         "show_in_dev_console": "true",
-        "rarity": "common",
+        "rarity": "legendary",
         "damage_over_time": "2"
     },
     {
@@ -1331,7 +1331,7 @@
         "name": "Overshield_Drain",
         "name_translation_key": "skill_overload_a4",
         "desc_translation_key": "skill_overload_a4_desc",
-        "preadd": "overshield_amount 10 //per hit agent",
+        "preadd": "overshield_amount 10",
         "rarity": "epic",
         "max_stacks": "1",
         "locked_in_battlepass": "true"
@@ -1469,8 +1469,7 @@
         "name_translation_key": "skill_scanner_grenade_a4",
         "desc_translation_key": "skill_scanner_grenade_a4_desc",
         "rarity": "epic",
-        "overwrite": "give_overshield true",
-        "power": "15"
+        "preadd": "overshield_amount 5"
     },
     {
         "id": "5",

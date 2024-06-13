@@ -2573,7 +2573,6 @@ instigator_missile
 	bounce 0
 	bounce_friction 1
 }
-
 explosiveweeble
 {
     weapon_tag bw
@@ -2606,9 +2605,8 @@ explosiveweeble
 	gravity 500
 
   	missile_particles explode_weeble_projectile
-	impact_particles explode_weeble
 	missile_trail_particles gl_bullet_dynamic_trail
-	impact_sound rl_impact1 rl_impact2 rl_impact3 rl_impact4
+	impact_sound ab_grenade_explosive_impact_explode
 
 	
 	detached_shot_particles false
@@ -2626,7 +2624,7 @@ explosiveweeble augment 3
 {
 	overwrite bounce 2
 	overwrite bounce_off_players true
-	overwrite bounce_friction 0.99
+	overwrite bounce_friction 0.8
 	overwrite trigger_explosion_on_bounce true 
 	overwrite explode_delay_after_last_impact 0
 	overwrite attach false
@@ -2635,7 +2633,7 @@ explosiveweeble augment 3
 explosiveweeble augment 4
 {
   	preadd splash_radius 100
-	overwrite impact_particles explode_weeble_scale_2 
+	//overwrite impact_particles explode_weeble_scale_2 
 	max_stacks 1
 }
 
@@ -2647,16 +2645,15 @@ explosiveweeble_cluster
  	rate 1000
   	damage 20
 	duration 1000
-	bounce 2
+	bounce 10
 	ignore_players true
-	explode_delay_after_last_impact 0.1
 	bounce_friction 0.4
 
 	no_self_damage 0
 
 	min_splash_damage 5
 	splash_damage 20
-  	splash_radius 250
+  	splash_radius 100
 
     team_damage 0
     splash_team_damage 0
@@ -2669,17 +2666,15 @@ explosiveweeble_cluster
 	center_of_mass_offset 20
 	center_of_mass_offset_self 0
         
-    gravity_pitch_offset 0.05
+    gravity_pitch_offset 0
 	
-	gravity 450
+	gravity 500
 	
 	shot_particles empty_system
    	shot_particles_attached empty
   	missile_particles explode_weeble_projectile
-  	impact_particles explode_weeble
-		
-	impact_sound rl_impact1 rl_impact2 rl_impact3 rl_impact4
-
+  	impact_sound ab_grenade_explosive_impact_explode
+	impact_particles explode_weeble
 	equip_sound bw_equip
 	out_of_ammo_sound gl_ooa
 	hit_sound hit_sound_hit1

@@ -316,7 +316,7 @@ skill 30022
 	category passive
 	selectable true
 	show_in_dev_console true
-	rarity common
+	rarity legendary
 
 	damage_over_time 2
 }
@@ -329,7 +329,7 @@ skill 30023
 	category passive
 	selectable true
 	show_in_dev_console true
-	rarity common
+	rarity legendary
 
 	damage_over_time 2
 }

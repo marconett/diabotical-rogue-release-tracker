@@ -367,7 +367,9 @@ const page_game_report = new function() {
                 team_stats[t.team_id][GLOBAL_ABBR.STATS_KEY_DAMAGE_INFLICTED] = 0;
                 team_stats[t.team_id][GLOBAL_ABBR.STATS_KEY_DAMAGE_TAKEN] = 0;
                 team_stats[t.team_id][GLOBAL_ABBR.STATS_KEY_TEAM_HEALING] = 0;
-                team_stats[t.team_id][GLOBAL_ABBR.STATS_KEY_OWN_HEALING] = 0
+                team_stats[t.team_id][GLOBAL_ABBR.STATS_KEY_OWN_HEALING] = 0;
+                team_stats[t.team_id][GLOBAL_ABBR.STATS_KEY_COLLECTED_ORBS] = 0;
+                team_stats[t.team_id][GLOBAL_ABBR.STATS_KEY_COLLECTED_MAJOR_ORBS] = 0
             }
             for (let c of last_match.game_status.clients) {
                 if (t.team_id == c.team) {
@@ -380,7 +382,9 @@ const page_game_report = new function() {
                         if (GLOBAL_ABBR.STATS_KEY_DAMAGE_INFLICTED in c.stats) team_stats[t.team_id][GLOBAL_ABBR.STATS_KEY_DAMAGE_INFLICTED] += c.stats[GLOBAL_ABBR.STATS_KEY_DAMAGE_INFLICTED];
                         if (GLOBAL_ABBR.STATS_KEY_DAMAGE_TAKEN in c.stats) team_stats[t.team_id][GLOBAL_ABBR.STATS_KEY_DAMAGE_TAKEN] += c.stats[GLOBAL_ABBR.STATS_KEY_DAMAGE_TAKEN];
                         if (GLOBAL_ABBR.STATS_KEY_TEAM_HEALING in c.stats) team_stats[t.team_id][GLOBAL_ABBR.STATS_KEY_TEAM_HEALING] += c.stats[GLOBAL_ABBR.STATS_KEY_TEAM_HEALING];
-                        if (GLOBAL_ABBR.STATS_KEY_OWN_HEALING in c.stats) team_stats[t.team_id][GLOBAL_ABBR.STATS_KEY_OWN_HEALING] += c.stats[GLOBAL_ABBR.STATS_KEY_OWN_HEALING]
+                        if (GLOBAL_ABBR.STATS_KEY_OWN_HEALING in c.stats) team_stats[t.team_id][GLOBAL_ABBR.STATS_KEY_OWN_HEALING] += c.stats[GLOBAL_ABBR.STATS_KEY_OWN_HEALING];
+                        if (GLOBAL_ABBR.STATS_KEY_COLLECTED_ORBS in c.stats) team_stats[t.team_id][GLOBAL_ABBR.STATS_KEY_COLLECTED_ORBS] += c.stats[GLOBAL_ABBR.STATS_KEY_COLLECTED_ORBS];
+                        if (GLOBAL_ABBR.STATS_KEY_COLLECTED_MAJOR_ORBS in c.stats) team_stats[t.team_id][GLOBAL_ABBR.STATS_KEY_COLLECTED_MAJOR_ORBS] += c.stats[GLOBAL_ABBR.STATS_KEY_COLLECTED_MAJOR_ORBS]
                     }
                     if (c.user_id === global_self.user_id) {
                         team_id_self = t.team_id;
@@ -447,10 +451,12 @@ const page_game_report = new function() {
                 show_loadout = false;
                 pages = {
                     1: [],
-                    2: []
+                    2: [],
+                    3: []
                 };
                 page_idx["damage"] = 1;
-                page_idx["healing"] = 2
+                page_idx["healing"] = 2;
+                page_idx["pickups"] = 3
             }
             for (let t of teams) {
                 if (parseInt(t.team_id) === SPECTATING_TEAM || t.team_id === undefined) continue;
@@ -555,6 +561,22 @@ const page_game_report = new function() {
                         }
                         head.appendChild(double);
                         pages[page_idx["damage"]].push(double)
+                    } {
+                        let double = _createElement("div", ["double", "minor_pickups"]);
+                        double.appendChild(_createElement("div", "label", localize("stats_minor_pickups")));
+                        if (!ffa_mode && t.team_id in team_stats) {
+                            double.appendChild(_createElement("div", "value", _shorten_large_number(team_stats[t.team_id][GLOBAL_ABBR.STATS_KEY_COLLECTED_ORBS])))
+                        }
+                        head.appendChild(double);
+                        pages[page_idx["pickups"]].push(double)
+                    } {
+                        let double = _createElement("div", ["double", "major_pickups"]);
+                        double.appendChild(_createElement("div", "label", localize("stats_major_pickups")));
+                        if (!ffa_mode && t.team_id in team_stats) {
+                            double.appendChild(_createElement("div", "value", _shorten_large_number(team_stats[t.team_id][GLOBAL_ABBR.STATS_KEY_COLLECTED_MAJOR_ORBS])))
+                        }
+                        head.appendChild(double);
+                        pages[page_idx["pickups"]].push(double)
                     }
                     if (on_match_finish) {
                         head.appendChild(_createElement("div", ["label", "commend"], localize("commend")))
@@ -650,6 +672,24 @@ const page_game_report = new function() {
                             }
                             player.appendChild(el);
                             pages[page_idx["healing"]].push(el)
+                        } {
+                            let el = _createElement("div", ["value", "minor_pickups"]);
+                            if (GLOBAL_ABBR.STATS_KEY_COLLECTED_ORBS in p.stats) {
+                                el.textContent = p.stats[GLOBAL_ABBR.STATS_KEY_COLLECTED_ORBS]
+                            } else {
+                                el.textContent = "0"
+                            }
+                            player.appendChild(el);
+                            pages[page_idx["pickups"]].push(el)
+                        } {
+                            let el = _createElement("div", ["value", "major_pickups"]);
+                            if (GLOBAL_ABBR.STATS_KEY_COLLECTED_MAJOR_ORBS in p.stats) {
+                                el.textContent = p.stats[GLOBAL_ABBR.STATS_KEY_COLLECTED_MAJOR_ORBS]
+                            } else {
+                                el.textContent = "0"
+                            }
+                            player.appendChild(el);
+                            pages[page_idx["pickups"]].push(el)
                         }
                         if (on_match_finish) {
                             let el = _createElement("div", ["value", "commend"]);
@@ -718,6 +758,14 @@ const page_game_report = new function() {
                             let el = _createElement("div", ["value", "own_healing"]);
                             player.appendChild(el);
                             pages[page_idx["healing"]].push(el)
+                        } {
+                            let el = _createElement("div", ["value", "minor_pickups"]);
+                            player.appendChild(el);
+                            pages[page_idx["pickups"]].push(el)
+                        } {
+                            let el = _createElement("div", ["value", "major_pickups"]);
+                            player.appendChild(el);
+                            pages[page_idx["pickups"]].push(el)
                         }
                         if (on_match_finish) {
                             player.appendChild(_createElement("div", ["value", "commend"]))
@@ -838,37 +886,11 @@ const page_game_report = new function() {
             }
         }
         stats.appendChild(weapon_table);
-        html.stats.appendChild(stats);
-        if (player.stats && GLOBAL_ABBR.STATS_KEY_ITEMS in player.stats) {
-            let count = 0;
-            let pickups_cont = _createElement("div", "stats_cont");
-            pickups_cont.appendChild(_createElement("div", "title", localize("match_tab_pickups")));
-            let item_lookup_map = {};
-            for (let pickups of player.stats[GLOBAL_ABBR.STATS_KEY_ITEMS]) item_lookup_map[pickups[GLOBAL_ABBR.STATS_KEY_ITEM_IDX]] = pickups[GLOBAL_ABBR.STATS_KEY_COUNT];
-            let items = GAME.get_data("item_pickups_in_scoreboard");
-            if (items) {
-                for (let item of items) {
-                    if (!item_lookup_map.hasOwnProperty(item)) continue;
-                    let pickup = _createElement("div", "single_stat");
-                    let icon = _createElement("div", "icon");
-                    let item_data = GAME.get_data("item_name_map", item);
-                    if (item_data) icon.style.backgroundImage = "url(" + item_data[2] + "?fill=" + item_data[0] + ")";
-                    pickup.appendChild(icon);
-                    pickup.appendChild(_createElement("div", "count", item_lookup_map[item]));
-                    pickups_cont.appendChild(pickup);
-                    count++
-                }
-            }
-            if (GLOBAL_ABBR.STATS_KEY_COLLECTED_ORBS in player.stats) {}
-            if (GLOBAL_ABBR.STATS_KEY_COLLECTED_MAJOR_ORBS in player.stats) {}
-            if (count) {
-                stats.appendChild(pickups_cont)
-            }
-        } {
+        html.stats.appendChild(stats); {
             let count = 0;
             let other_cont = _createElement("div", "stats_cont");
             other_cont.appendChild(_createElement("div", "title", localize("stats")));
-            let other_stats = [GLOBAL_ABBR.STATS_KEY_TEAM_HEALING, GLOBAL_ABBR.STATS_KEY_OWN_HEALING, GLOBAL_ABBR.STATS_KEY_DAMAGE_INFLICTED, GLOBAL_ABBR.STATS_KEY_DAMAGE_TAKEN];
+            let other_stats = [GLOBAL_ABBR.STATS_KEY_TEAM_HEALING, GLOBAL_ABBR.STATS_KEY_OWN_HEALING, GLOBAL_ABBR.STATS_KEY_DAMAGE_INFLICTED, GLOBAL_ABBR.STATS_KEY_DAMAGE_TAKEN, GLOBAL_ABBR.STATS_KEY_COLLECTED_ORBS, GLOBAL_ABBR.STATS_KEY_COLLECTED_MAJOR_ORBS];
             for (let stat of other_stats) {
                 let other_stat = _createElement("div", "single_stat");
                 let label = _createElement("div", "label");
@@ -877,6 +899,8 @@ const page_game_report = new function() {
                 else if (stat == GLOBAL_ABBR.STATS_KEY_OWN_HEALING) label.textContent = localize("stats_own_healing");
                 else if (stat == GLOBAL_ABBR.STATS_KEY_DAMAGE_INFLICTED) label.textContent = localize("stats_dmg_done");
                 else if (stat == GLOBAL_ABBR.STATS_KEY_DAMAGE_TAKEN) label.textContent = localize("stats_dmg_taken");
+                else if (stat == GLOBAL_ABBR.STATS_KEY_COLLECTED_ORBS) label.textContent = localize("stats_minor_pickups");
+                else if (stat == GLOBAL_ABBR.STATS_KEY_COLLECTED_MAJOR_ORBS) label.textContent = localize("stats_major_pickups");
                 let value = _createElement("div", "count");
                 other_stat.appendChild(value);
                 if (player.stats.hasOwnProperty(stat)) {

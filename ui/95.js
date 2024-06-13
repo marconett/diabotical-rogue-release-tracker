@@ -11,7 +11,7 @@ GAME.set_initial_data(GAME.ids.ROGUE, {
     lobby_location_selection_type: 1,
     online_screens: ["achievements", "coin_shop", "create", "custom", "friends_blocked_panel", "friends_panel", "locker", "play_rogue", "shop_item", "shop_screen"],
     item_name_map: {},
-    item_pickups_in_scoreboard: ["hpt3", "armort4", "armort3", "armort2", "doubledamage", "tripledamage", "vanguard", "survival", "haste"],
+    item_pickups_in_scoreboard: [""],
     weapons_priority_default: ["rl", "shaft", "ss", "bl", "pncr", "vc", "cb", "mac", "melee"],
     weapon_sound_packs: {
         0: [],

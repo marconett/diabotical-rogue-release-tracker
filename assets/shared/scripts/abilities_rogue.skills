@@ -1109,7 +1109,8 @@ skill 20016 augment 4
 	name Overshield_Drain
 	name_translation_key skill_overload_a4
     desc_translation_key skill_overload_a4_desc
-	preadd overshield_amount 10 //per hit agent
+	preadd overshield_amount 10
+
 	rarity epic
 	max_stacks 1
 	locked_in_battlepass true
@@ -1251,8 +1252,7 @@ skill 20018 augment 4
 	name_translation_key skill_scanner_grenade_a4
 	desc_translation_key skill_scanner_grenade_a4_desc
 	rarity epic
-	overwrite give_overshield true
-	power 15
+	preadd overshield_amount 5
 }
 
 skill 20018 augment 5

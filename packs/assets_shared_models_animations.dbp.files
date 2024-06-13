@@ -3,7 +3,7 @@ assets\shared\models\animations\1p_cam.fbx	33884
 assets\shared\models\animations\bigbot\bigbot_materials\bigbot_base_materials\bigbot_base_c.png	716615
 assets\shared\models\animations\bigbot\bigbot_materials\bigbot_base_materials\bigbot_base_d.png	4853162
 assets\shared\models\animations\bigbot\bigbot_materials\bigbot_base_materials\bigbot_base_n.png	3633278
-assets\shared\models\animations\bigbot\bigbot_materials\bigbot_base_materials\bigbot_base_s.png	3613371
+assets\shared\models\animations\bigbot\bigbot_materials\bigbot_base_materials\bigbot_base_s.png	3117734
 assets\shared\models\animations\chunkbot\1p\blaster_equip_chunkbot.dbm	209151
 assets\shared\models\animations\chunkbot\1p\blaster_equip_chunkbot.fbx	989276
 assets\shared\models\animations\chunkbot\1p\blaster_reload_chunkbot.dbm	486207
@@ -788,6 +788,10 @@ assets\shared\models\animations\eggbot\teleport_controller.dbm	180731
 assets\shared\models\animations\eggbot\teleport_controller.fbx	816764
 assets\shared\models\animations\eggbot\teleport_controller_pose.dbm	25595
 assets\shared\models\animations\eggbot\teleport_controller_pose.fbx	593164
+assets\shared\models\animations\enemies\summoner\material\summoner_d.png	2730887
+assets\shared\models\animations\enemies\summoner\material\summoner_n.png	3233559
+assets\shared\models\animations\enemies\summoner\material\summoner_s.png	1350259
+assets\shared\models\animations\enemies\summoner\source\workfiles\summoner.blend	1662441
 assets\shared\models\animations\gadgets\gadget_healsphere\workfiles\gadget_healsphere.blend	1479477
 assets\shared\models\animations\hub_chunkbot\display_pose.dbm	29241
 assets\shared\models\animations\hub_chunkbot\display_pose.fbx	679388

@@ -227,6 +227,31 @@ class CrosshairCreator {
                 crBot: 1,
                 crLef: 1,
                 crHCE: 0,
+                crCol: "000000",
+                crOCo: "000000",
+                crHCo: "FF0000",
+                crLen: 40,
+                crThi: 2,
+                crGap: 0,
+                crRot: 0,
+                crOTh: 0,
+                crOSt: "persistent"
+            },
+            layer2: {
+                type: "none"
+            },
+            layer3: {
+                type: "none"
+            },
+            designVh: "1440"
+        }, {
+            layer1: {
+                type: "cross",
+                crTop: 1,
+                crRig: 1,
+                crBot: 1,
+                crLef: 1,
+                crHCE: 0,
                 crCol: "FFFFFF",
                 crOCo: "000000",
                 crHCo: "FF0000",
@@ -268,7 +293,7 @@ class CrosshairCreator {
             layer3: {
                 type: "none"
             },
-            designVh: 1080
+            designVh: "1080"
         }, {
             layer1: {
                 type: "dot",
@@ -442,7 +467,7 @@ class CrosshairCreator {
             layer3: {
                 type: "none"
             },
-            designVh: 1080
+            designVh: "1080"
         }, {
             layer1: {
                 type: "cross",
@@ -577,7 +602,7 @@ class CrosshairCreator {
             layer3: {
                 type: "none"
             },
-            designVh: 1080
+            designVh: "1080"
         }, {
             layer1: {
                 type: "pointer",
@@ -602,7 +627,7 @@ class CrosshairCreator {
             layer3: {
                 type: "none"
             },
-            designVh: 1080
+            designVh: "1080"
         }, {
             layer1: {
                 type: "cross",
@@ -641,7 +666,7 @@ class CrosshairCreator {
             layer3: {
                 type: "none"
             },
-            designVh: 1080
+            designVh: "1080"
         }, {
             layer1: {
                 type: "pointer",
@@ -680,7 +705,7 @@ class CrosshairCreator {
             layer3: {
                 type: "none"
             },
-            designVh: 1080
+            designVh: "1080"
         }, {
             layer1: {
                 type: "cross",
@@ -733,7 +758,7 @@ class CrosshairCreator {
                 crOTh: "1",
                 crOSt: "persistent"
             },
-            designVh: 1080
+            designVh: "1080"
         }, {
             layer1: {
                 type: "cross",
@@ -791,7 +816,7 @@ class CrosshairCreator {
             layer3: {
                 type: "none"
             },
-            designVh: 1080
+            designVh: "1080"
         }, {
             layer1: {
                 type: "cross",

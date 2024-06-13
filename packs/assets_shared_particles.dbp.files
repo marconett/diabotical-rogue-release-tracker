@@ -863,6 +863,7 @@ assets\shared\particles\system_definitions\arcane_teleport_exit_1p.particles	146
 assets\shared\particles\system_definitions\artefact_player.particles	9068
 assets\shared\particles\system_definitions\artefact_player_icon_screen.particles	10047
 assets\shared\particles\system_definitions\artefact_player_screen.particles	9707
+assets\shared\particles\system_definitions\artifact_ability_icon.particles	36704
 assets\shared\particles\system_definitions\artifact_card_back_screen.particles	28196
 assets\shared\particles\system_definitions\artifact_card_back_screen2.particles	52758
 assets\shared\particles\system_definitions\artifact_card_back_screen3.particles	30084
@@ -1201,7 +1202,7 @@ assets\shared\particles\system_definitions\env_display_hub.particles	11746
 assets\shared\particles\system_definitions\env_display_keypad.particles	2461
 assets\shared\particles\system_definitions\env_display_map1.particles	9630
 assets\shared\particles\system_definitions\env_display_mcg.particles	3051
-assets\shared\particles\system_definitions\env_display_mountains.particles	4608
+assets\shared\particles\system_definitions\env_display_mountains.particles	4568
 assets\shared\particles\system_definitions\env_display_welcome.particles	11784
 assets\shared\particles\system_definitions\env_door_sparks.particles	2651
 assets\shared\particles\system_definitions\env_doorfog1.particles	1927
@@ -1292,7 +1293,7 @@ assets\shared\particles\system_definitions\env_waterfall_100.particles	14209
 assets\shared\particles\system_definitions\env_waterfall_1000.particles	19923
 assets\shared\particles\system_definitions\env_waterfall_1000_bkg.particles	21353
 assets\shared\particles\system_definitions\env_waterfall_100_bkg.particles	12992
-assets\shared\particles\system_definitions\env_waterfall_200.particles	21999
+assets\shared\particles\system_definitions\env_waterfall_200.particles	22484
 assets\shared\particles\system_definitions\env_waterfall_200_bkg.particles	17758
 assets\shared\particles\system_definitions\env_waterfall_500.particles	24408
 assets\shared\particles\system_definitions\env_waterfall_500_bkg.particles	21225
@@ -1303,10 +1304,10 @@ assets\shared\particles\system_definitions\env_waterfall_top1.particles	11080
 assets\shared\particles\system_definitions\env_waterfall_top2.particles	12258
 assets\shared\particles\system_definitions\env_waterfall_wide_100.particles	22863
 assets\shared\particles\system_definitions\env_waterfall_wide_100_bkg.particles	21567
-assets\shared\particles\system_definitions\env_waterfall_wide_200.particles	23301
+assets\shared\particles\system_definitions\env_waterfall_wide_200.particles	23754
 assets\shared\particles\system_definitions\env_waterfall_wide_200_bkg.particles	21102
 assets\shared\particles\system_definitions\env_waves4.particles	11933
-assets\shared\particles\system_definitions\env_waves4_curved.particles	19104
+assets\shared\particles\system_definitions\env_waves4_curved.particles	21326
 assets\shared\particles\system_definitions\env_wavesplash1.particles	3020
 assets\shared\particles\system_definitions\env_window_fog.particles	3740
 assets\shared\particles\system_definitions\epic_capture_cube.particles	58126
@@ -1527,7 +1528,7 @@ assets\shared\particles\system_definitions\hookshot_launch_1400.particles	27439
 assets\shared\particles\system_definitions\hookshot_loop.particles	11083
 assets\shared\particles\system_definitions\hookshot_muzzle.particles	3143
 assets\shared\particles\system_definitions\hookshot_retract.particles	16967
-assets\shared\particles\system_definitions\hs_artifact_barrel.particles	38148
+assets\shared\particles\system_definitions\hs_artifact_barrel.particles	43291
 assets\shared\particles\system_definitions\hs_muzzle_3p_artifact.particles	88781
 assets\shared\particles\system_definitions\hs_player_impact_artifact.particles	14798
 assets\shared\particles\system_definitions\ice_block.particles	18914
@@ -1892,6 +1893,7 @@ assets\shared\particles\system_definitions\screen_artifact_icon_scoreboard.parti
 assets\shared\particles\system_definitions\screen_artifact_iron_scoreboard_glare.particles	22066
 assets\shared\particles\system_definitions\screen_artifact_startup_animation.particles	14673
 assets\shared\particles\system_definitions\screen_icon_scoreboard.particles	31874
+assets\shared\particles\system_definitions\screen_tree_link.particles	3628
 assets\shared\particles\system_definitions\sg_tier_2_muzzle.particles	8570
 assets\shared\particles\system_definitions\shadow_laser_beam.particles	58326
 assets\shared\particles\system_definitions\shadow_laser_beam_charge.particles	22343
@@ -1954,6 +1956,7 @@ assets\shared\particles\system_definitions\skill_teleport_out.particles	45560
 assets\shared\particles\system_definitions\skill_teleport_out_1p_screen.particles	28525
 assets\shared\particles\system_definitions\slash.particles	4491
 assets\shared\particles\system_definitions\slicer.particles	2229
+assets\shared\particles\system_definitions\slide_3p_v1.particles	12685
 assets\shared\particles\system_definitions\slide_dash_screen.particles	15662
 assets\shared\particles\system_definitions\slow_aura.particles	24938
 assets\shared\particles\system_definitions\slow_aura2.particles	9252

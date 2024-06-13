@@ -148,7 +148,7 @@ assets\shared\materials\triangle_count_debug.material	301
 assets\shared\prefabs\pf_teleport_exit_wallmount_testing.assets	1569
 assets\shared\prefabs\vi.assets	794
 assets\shared\scripts\abilities.skills	52923
-assets\shared\scripts\abilities_rogue.skills	38234
+assets\shared\scripts\abilities_rogue.skills	38205
 assets\shared\scripts\ammo.loot	17
 assets\shared\scripts\atmosphere.presets	3353
 assets\shared\scripts\base.games	8173
@@ -161,7 +161,7 @@ assets\shared\scripts\general.loot	5589
 assets\shared\scripts\new.games	20754
 assets\shared\scripts\particles.preload	4084
 assets\shared\scripts\passives.skills	5928
-assets\shared\scripts\passives_rogue.skills	7445
+assets\shared\scripts\passives_rogue.skills	7451
 assets\shared\scripts\rogue_classes.classdef	316
 assets\shared\scripts\shaders\core_glow.material	3438
 assets\shared\scripts\shaders\fresnel_holo.material	822
@@ -178,7 +178,7 @@ assets\shared\scripts\trees\g2_scout.json	20818
 assets\shared\scripts\trees\g2_scout_base.json	15581
 assets\shared\scripts\weapon_mods.loot	17
 assets\shared\scripts\weapons\grenades.weapons	5133
-assets\shared\scripts\weapons\skills.weapons	60577
+assets\shared\scripts\weapons\skills.weapons	60480
 assets\shared\weapons\blaster\rogue_blaster.weapon	4049
 assets\shared\weapons\crossbow\rogue_crossbow.weapon	6361
 assets\shared\weapons\eggbot_hand\arena_left_hand.weapon	156
@@ -198,5 +198,5 @@ assets\shared\weapons\revolver\rogue_revolver.weapon	5130
 assets\shared\weapons\revolver\rogue_revolver_secondary.weapon	1994
 assets\shared\weapons\rocketlauncher\rogue_rocketlauncher.weapon	5835
 assets\shared\weapons\shaft\rogue_shaft.weapon	4467
-assets\shared\weapons\submachinegun\rogue_submachinegun.weapon	5723
+assets\shared\weapons\submachinegun\rogue_submachinegun.weapon	5726
 assets\shared\weapons\supershotgun\rogue_supershotgun.weapon	4855
