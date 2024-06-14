@@ -588,7 +588,6 @@
         "id": "1",
         "parent_id": "20005",
         "skill_type": "augment",
-        "locked_in_battlepass": "true",
         "name_translation_key": "skill_lowers_cooldown",
         "desc_translation_key": "skill_lowers_cooldown_desc",
         "preadd": "cooldown -2",
@@ -618,10 +617,10 @@
         "id": "4",
         "parent_id": "20005",
         "skill_type": "augment",
-        "locked_in_battlepass": "true",
         "name_translation_key": "skill_explosive_weeble_a4",
         "desc_translation_key": "skill_explosive_weeble_a4_desc",
-        "preadd": "cluster_count 3"
+        "preadd": "cluster_count 3",
+        "rarity": "legendary"
     },
     {
         "id": "5",
@@ -630,7 +629,8 @@
         "name_translation_key": "skill_increase_damage",
         "desc_translation_key": "skill_increase_damage_desc",
         "weapon_augment": "2",
-        "max_stacks": "2"
+        "max_stacks": "2",
+        "rarity": "rare"
     },
     {
         "id": "6",
@@ -640,7 +640,8 @@
         "desc_translation_key": "skill_increase_radius_desc",
         "weapon_augment": "4",
         "rarity": "rare",
-        "max_stacks": "1"
+        "max_stacks": "1",
+        "locked_in_battlepass": "true"
     },
     {
         "id": "7",
@@ -648,7 +649,7 @@
         "skill_type": "augment",
         "name_translation_key": "skill_explosive_weeble_a7",
         "desc_translation_key": "skill_explosive_weeble_a7_desc",
-        "rarity": "rare",
+        "rarity": "epic",
         "overwrite": "damage_over_time 3",
         "max_stacks": "1"
     },
@@ -1006,8 +1007,7 @@
         "name_translation_key": "skill_leap_slam_a5",
         "desc_translation_key": "skill_leap_slam_a5_desc",
         "rarity": "artifact",
-        "overwrite": "max_charges 3",
-        "preadd": "leap_slam_radius 400",
+        "overwrite": "artifact_enabled true",
         "locked_in_battlepass": "true"
     },
     {

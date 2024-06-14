@@ -1,11 +1,16 @@
 assets\shared\audio\music.sounds	216
 assets\shared\audio\music\diabotical_menu_theme_draft2.wav	28576844
 assets\shared\audio\shared_music.events	6143
-assets\shared\audio\shared_ui.sounds	8726
+assets\shared\audio\shared_ui.sounds	9294
 assets\shared\audio\ui\battlepass\ui_battlepass_upgrade.wav	1329152
 assets\shared\audio\ui\battlepass\ui_battlepass_upgrade_s3.wav	2003768
 assets\shared\audio\ui\battlepass\ui_battlepass_upgrade_s4.wav	1270484
 assets\shared\audio\ui\ctf\flag_pickup.wav	80646
+assets\shared\audio\ui\progression_tree\ui_progtree_amb_loop.wav	3628982
+assets\shared\audio\ui\progression_tree\ui_progtree_amb_start.wav	1512182
+assets\shared\audio\ui\progression_tree\ui_progtree_mouseover.wav	152958
+assets\shared\audio\ui\progression_tree\ui_progtree_upg_click_hold.wav	400230
+assets\shared\audio\ui\progression_tree\ui_progtree_upg_complete.wav	302582
 assets\shared\audio\ui\ranked\ui_ranked_rank_down.wav	613214
 assets\shared\audio\ui\ranked\ui_ranked_rank_up.wav	988850
 assets\shared\audio\ui\ranked\ui_ranked_rank_up_elite.wav	1155410

@@ -198,7 +198,7 @@ assets\shared\models\animations\chunkbot\shaft_aim.dbm	26959
 assets\shared\models\animations\chunkbot\shaft_aim.fbx	665724
 assets\shared\models\animations\chunkbot\shaft_idle.dbm	26960
 assets\shared\models\animations\chunkbot\shaft_idle.fbx	665740
-assets\shared\models\animations\chunkbot\skm_chunkbot.ani	27043
+assets\shared\models\animations\chunkbot\skm_chunkbot.ani	27007
 assets\shared\models\animations\chunkbot\skm_chunkbot.assets	171
 assets\shared\models\animations\chunkbot\skm_chunkbot.dbm	2364981
 assets\shared\models\animations\chunkbot\skm_chunkbot.fbx	2211612
@@ -541,7 +541,7 @@ assets\shared\models\animations\eggbot\1p\shotgun_skm_shotgun_eggbot.dbm	637445
 assets\shared\models\animations\eggbot\1p\shotgun_skm_shotgun_eggbot.fbx	443644
 assets\shared\models\animations\eggbot\1p\shotgun_slide_eggbot.dbm	6465
 assets\shared\models\animations\eggbot\1p\shotgun_slide_eggbot.fbx	160108
-assets\shared\models\animations\eggbot\1p\skm_eggbot_1p.ani	1277
+assets\shared\models\animations\eggbot\1p\skm_eggbot_1p.ani	1316
 assets\shared\models\animations\eggbot\1p\skm_eggbot_1p.dbm	628205
 assets\shared\models\animations\eggbot\1p\skm_eggbot_1p.fbx	991900
 assets\shared\models\animations\eggbot\1p\sniper_crouch_idle_eggbot.dbm	6471
@@ -769,7 +769,7 @@ assets\shared\models\animations\eggbot\run_right_b.dbm	406971
 assets\shared\models\animations\eggbot\run_right_b.fbx	1030268
 assets\shared\models\animations\eggbot\run_right_f.dbm	406971
 assets\shared\models\animations\eggbot\run_right_f.fbx	1026188
-assets\shared\models\animations\eggbot\skm_eggbot.ani	12712
+assets\shared\models\animations\eggbot\skm_eggbot.ani	12678
 assets\shared\models\animations\eggbot\skm_eggbot.assets	165
 assets\shared\models\animations\eggbot\skm_eggbot.dbm	2416101
 assets\shared\models\animations\eggbot\skm_eggbot.fbx	1806892
@@ -1137,7 +1137,7 @@ assets\shared\models\animations\weesuit\shotgun_aim.dbm	26175
 assets\shared\models\animations\weesuit\shotgun_aim.fbx	638220
 assets\shared\models\animations\weesuit\shotgun_idle.dbm	26176
 assets\shared\models\animations\weesuit\shotgun_idle.fbx	638220
-assets\shared\models\animations\weesuit\skm_weesuit.ani	13945
+assets\shared\models\animations\weesuit\skm_weesuit.ani	13909
 assets\shared\models\animations\weesuit\skm_weesuit.assets	168
 assets\shared\models\animations\weesuit\skm_weesuit.dbm	5107385
 assets\shared\models\animations\weesuit\skm_weesuit.fbx	3426092

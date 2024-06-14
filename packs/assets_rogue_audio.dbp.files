@@ -215,7 +215,7 @@ assets\rogue\audio\arena_announcer_julie.sounds	42884
 assets\rogue\audio\arena_chunkbot_enemy_footsteps.sounds	9941
 assets\rogue\audio\arena_chunkbot_enemy_jumps.sounds	969
 assets\rogue\audio\arena_chunkbot_enemy_lands.sounds	5455
-assets\rogue\audio\arena_chunkbot_misc.sounds	3592
+assets\rogue\audio\arena_chunkbot_misc.sounds	5597
 assets\rogue\audio\arena_chunkbot_self_footsteps.sounds	8193
 assets\rogue\audio\arena_chunkbot_self_jumps.sounds	1165
 assets\rogue\audio\arena_chunkbot_self_lands.sounds	6698
@@ -257,7 +257,7 @@ assets\rogue\audio\arena_weesuit_enemy_lands.sounds	5392
 assets\rogue\audio\arena_weesuit_self_footsteps.sounds	8096
 assets\rogue\audio\arena_weesuit_self_jumps.sounds	1180
 assets\rogue\audio\arena_weesuit_self_lands.sounds	6525
-assets\rogue\audio\character_chunkbot.events	55083
+assets\rogue\audio\character_chunkbot.events	61430
 assets\rogue\audio\character_eggbot.events	9672
 assets\rogue\audio\character_weesuit.events	48349
 assets\rogue\audio\chunkbot\chunkbot_ads_in.wav	41882
@@ -280,6 +280,15 @@ assets\rogue\audio\chunkbot\chunkbot_self\chunkbot_slide_start1.wav	159258
 assets\rogue\audio\chunkbot\chunkbot_self\chunkbot_slide_start2.wav	152170
 assets\rogue\audio\chunkbot\chunkbot_self\chunkbot_slide_start3.wav	171070
 assets\rogue\audio\chunkbot\chunkbot_self\chunkbot_slide_start4.wav	157682
+assets\rogue\audio\chunkbot\chunkbot_self\chunkbot_slide_water_end1.wav	135634
+assets\rogue\audio\chunkbot\chunkbot_self\chunkbot_slide_water_end2.wav	135634
+assets\rogue\audio\chunkbot\chunkbot_self\chunkbot_slide_water_end3.wav	135634
+assets\rogue\audio\chunkbot\chunkbot_self\chunkbot_slide_water_end4.wav	135634
+assets\rogue\audio\chunkbot\chunkbot_self\chunkbot_slide_water_loop.wav	869582
+assets\rogue\audio\chunkbot\chunkbot_self\chunkbot_slide_water_start1.wav	159258
+assets\rogue\audio\chunkbot\chunkbot_self\chunkbot_slide_water_start2.wav	123822
+assets\rogue\audio\chunkbot\chunkbot_self\chunkbot_slide_water_start3.wav	123822
+assets\rogue\audio\chunkbot\chunkbot_self\chunkbot_slide_water_start4.wav	159258
 assets\rogue\audio\chunkbot\footstep_enemy\chunkbot_footstep_enemy_default1.wav	75446
 assets\rogue\audio\chunkbot\footstep_enemy\chunkbot_footstep_enemy_default2.wav	75446
 assets\rogue\audio\chunkbot\footstep_enemy\chunkbot_footstep_enemy_default3.wav	75446
@@ -578,7 +587,7 @@ assets\rogue\audio\feedback\hit_sounds\fb_take_damage_self-004.wav	88244
 assets\rogue\audio\feedback\hit_sounds\fb_take_damage_self-005.wav	88244
 assets\rogue\audio\feedback_hit.events	5272
 assets\rogue\audio\feedback_misc.events	3574
-assets\rogue\audio\mixer_settings.mxr	8736
+assets\rogue\audio\mixer_settings.mxr	9457
 assets\rogue\audio\user_interface.events	6348
 assets\rogue\audio\weapon_blaster.events	12321
 assets\rogue\audio\weapon_crossbow.events	11491
@@ -1320,6 +1329,6 @@ assets\rogue\audio\weesuit\land_self\weesuit_land_self_water3.wav	102712
 assets\rogue\audio\weesuit\land_self\weesuit_land_self_water4.wav	102712
 assets\rogue\audio\weesuit\land_self\weesuit_land_self_water5.wav	102712
 assets\rogue\audio\weesuit\land_self\weesuit_land_self_water6.wav	102712
-assets\rogue\audio\wip_anders.events	0
+assets\rogue\audio\wip_anders.events	3624
 assets\rogue\audio\wip_mike.events	15103
 assets\rogue\audio\wip_mike.sounds	4646

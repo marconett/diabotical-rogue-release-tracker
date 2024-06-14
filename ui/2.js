@@ -2502,6 +2502,9 @@ const TRANSLATION_en_source = {
     settings_toggable_zoom: {
         text: "Toggle zoom"
     },
+    settings_toggable_zoom_desc: {
+        text: "If enabled, pressing the zoom key will toggle zooming on and off, but holding the key down will still allow you to instantly zoom in after reloading or using abilities that force you to unzoom"
+    },
     settings_advanced: {
         text: "Advanced"
     },
@@ -7051,8 +7054,32 @@ const TRANSLATION_en_source = {
         text: "Passive Upgrade Card",
         engine: true
     },
+    announcement_respawn: {
+        text: "Spawn Wave",
+        engine: true
+    },
+    announcement_respawn_in_seconds: {
+        text: "Everyone respawn in {seconds} seconds!",
+        engine: true
+    },
+    announcement_has_spawned: {
+        text: "Spawned!",
+        engine: true
+    },
+    announcement_respawn_and_epic_pickup: {
+        text: "Spawn Wave & Epic Pickup",
+        engine: true
+    },
+    announcement_respawn_and_legendary_pickup: {
+        text: "Spawn Wave & Legendary Pickup",
+        engine: true
+    },
+    announcement_respawn_and_sudden_death: {
+        text: "Spawn Wave & Sudden Death",
+        engine: true
+    },
     announcement_begins_in_seconds: {
-        text: "Begins ins {seconds} seconds!",
+        text: "Begins in {seconds} seconds!",
         engine: true
     }
 };

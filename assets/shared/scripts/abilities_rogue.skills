@@ -303,7 +303,6 @@ skill 20005
 
 skill 20005 augment 1
 {
-	locked_in_battlepass true
 	name_translation_key skill_lowers_cooldown
     desc_translation_key skill_lowers_cooldown_desc
 	preadd cooldown -2
@@ -333,10 +332,10 @@ skill 20005 augment 3
 
 skill 20005 augment 4
 {
-	locked_in_battlepass true
 	name_translation_key skill_explosive_weeble_a4
     desc_translation_key skill_explosive_weeble_a4_desc
 	preadd cluster_count 3
+	rarity legendary
 }
 
 
@@ -346,6 +345,7 @@ skill 20005 augment 5
    	desc_translation_key skill_increase_damage_desc
 	weapon_augment 2
 	max_stacks 2
+	rarity rare
 }
 
 
@@ -356,6 +356,7 @@ skill 20005 augment 6
 	weapon_augment 4
 	rarity rare
 	max_stacks 1
+	locked_in_battlepass true
 }
 
 
@@ -363,7 +364,7 @@ skill 20005 augment 7
 {
 	name_translation_key skill_explosive_weeble_a7
    	desc_translation_key skill_explosive_weeble_a7_desc
-	rarity rare
+	rarity epic
 	overwrite damage_over_time 3
 	max_stacks 1
 }
@@ -763,8 +764,7 @@ skill 20011 augment 5
 	rarity artifact
 	overwrite cooldown 0.5
 	overwrite max_charges 3	
-	preadd leap_slam_damage 30
- 	preadd leap_slam_radius 400	
+	overwrite artifact_enabled true
 	locked_in_battlepass true
 }
 
@@ -1820,7 +1820,7 @@ skill 40001 augment 4
 	rarity artifact
 
 	locked_in_battlepass true
-	overwrite bolt_artifact_enabled true
+	overwrite artifact_enabled true
 	overwrite knockback 1000 //knockback force
 	overwrite damage 30
 	overwrite radius 200

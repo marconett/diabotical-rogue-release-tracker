@@ -2573,6 +2573,7 @@ instigator_missile
 	bounce 0
 	bounce_friction 1
 }
+
 explosiveweeble
 {
     weapon_tag bw
@@ -2622,6 +2623,9 @@ explosiveweeble augment 2
 
 explosiveweeble augment 3
 {
+	multiply damage 0.5
+	multiply min_splash_damage 0.5
+	multiply splash_damage 0.5
 	overwrite bounce 2
 	overwrite bounce_off_players true
 	overwrite bounce_friction 0.8
@@ -2809,4 +2813,21 @@ beam
 	weapon_tag beam
   	damage 85
 	critical_damage 100
+}
+
+leap_artifact_slam
+{
+  	damage 30
+	splash_damage 30
+	min_splash_damage 5
+	splash_radius 400
+    team_damage 0
+	no_self_damage 1
+	speed 10000
+	knockback 100
+	ground_knockback 100
+	knockback_self 0
+	ground_knockback_self 0
+	impact_sound rl_impact1 rl_impact2 rl_impact3 rl_impact4
+	impact_particles ability_leap_artifact_land
 }

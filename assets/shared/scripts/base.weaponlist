@@ -157,6 +157,7 @@
 	//125
 	weapon rogue_blaster_secondary
 	weapon beam
+	weapon leap_artifact_slam
 
 //// PITFALL: When adding new weapons WEAPON_COUNT may need to be incremented
 

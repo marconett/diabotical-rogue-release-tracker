@@ -18,6 +18,8 @@ game rogue_wipeout
 	setting game_initial_currency 300
 	setting game_currency_per_kill 15
 	setting game_currency_per_assist 5
+	setting game_currency_per_loss 150
+	setting game_currency_multiplier_on_mvp_kill 2
 	
 	setting game_spawn_protection_s 1
 	setting game_respawn_time_increment_per_death_ms 6000
