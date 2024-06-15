@@ -1246,6 +1246,14 @@ const TRANSLATION_en_source = {
         text: "Daily bonus points",
         engine: true
     },
+    weekly_bonus_points_tooltip: {
+        text: "The number of bonus points you've earned this week. When this meter is full, you earn points at the normal rate.",
+        engine: true
+    },
+    daily_bonus_points_tooltip: {
+        text: "The number of bonus points you've earned today. When this meter is full, you earn points at the normal rate.",
+        engine: true
+    },
     points: {
         text: "Points",
         engine: true
@@ -2540,6 +2548,12 @@ const TRANSLATION_en_source = {
     },
     settings_enemy_team_color: {
         text: "Enemy team color"
+    },
+    armor_color: {
+        text: "Armor color"
+    },
+    overshield_color: {
+        text: "Overshield color"
     },
     settings_auto_spec_fragger: {
         text: "Automatically follow fragger on death"

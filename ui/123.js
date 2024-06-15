@@ -275,7 +275,7 @@ const credits_page = new function() {
         title: "Everlight Studio"
     }, {
         type: "credit",
-        title: "Lightning Artist",
+        title: "Lighting Artist",
         name: "Tomas Lidström",
         br: true
     }, {

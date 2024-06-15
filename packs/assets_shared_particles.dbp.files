@@ -1728,6 +1728,7 @@ assets\shared\particles\system_definitions\orb_heal_start.particles	8743
 assets\shared\particles\system_definitions\orb_heal_v2.particles	7684
 assets\shared\particles\system_definitions\orb_test_10.particles	19774
 assets\shared\particles\system_definitions\orb_tests_7.particles	91822
+assets\shared\particles\system_definitions\over_shield_loop.particles	9573
 assets\shared\particles\system_definitions\overload_charge_screen.particles	26597
 assets\shared\particles\system_definitions\overload_charge_screen2.particles	23011
 assets\shared\particles\system_definitions\overload_charge_screen_end.particles	38963
