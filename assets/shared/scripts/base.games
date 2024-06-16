@@ -243,7 +243,7 @@ game default
 	setting phy_strafe_mode 1
 	setting phy_triple_jump 0
 	setting net_server_hitscan 0
-	setting net_max_backwards_reconciliation_ping 0.12
+	setting net_max_backwards_reconciliation_ping 0.15
 
 	setting game_unlimited_reserve_ammo 0
 

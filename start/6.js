@@ -2588,6 +2588,12 @@ const TRANSLATION_en_source = {
     settings_capture_windows_key: {
         text: "Capture windows key"
     },
+    settings_global_console_shortcut: {
+        text: "Global console shortcut"
+    },
+    settings_global_console_shortcut_desc: {
+        text: "If enabled, it will be possible to open the console with Grave/Tilde. If disabled, it will be possible to open the console (except while in the menus), with the key assigned to the console in the controls menu; if you wish to fully disable it, also unassign the console key in the controls menu."
+    },
     settings_deadkey_fix: {
         text: "Euro-layout console dead-key fix"
     },

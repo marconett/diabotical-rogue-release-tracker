@@ -126,7 +126,7 @@ game rogue_wipeout
 	setting phy_strafe_mode 1
 	setting phy_triple_jump 0
 	setting net_server_hitscan 1
-	setting net_max_backwards_reconciliation_ping 0.12
+	setting net_max_backwards_reconciliation_ping 0.15
 	
 	setting game_ring_enabled 0
 	setting game_dome_enabled 0
@@ -304,7 +304,7 @@ game rogue_teamdeathmatch
 	setting phy_strafe_mode 1
 	setting phy_triple_jump 0
 	setting net_server_hitscan 1
-	setting net_max_backwards_reconciliation_ping 0.12
+	setting net_max_backwards_reconciliation_ping 0.15
 	
 	setting game_ring_enabled 0
 	setting game_dome_enabled 0
@@ -459,7 +459,7 @@ game rogue_edit
 	setting phy_strafe_mode 1
 	setting phy_triple_jump 0
 	setting net_server_hitscan 1
-	setting net_max_backwards_reconciliation_ping 0.12
+	setting net_max_backwards_reconciliation_ping 0.15
 	
 	setting game_ring_enabled 0
 	setting game_dome_enabled 0
@@ -623,7 +623,7 @@ game rogue_hub
 	setting phy_strafe_mode 1
 	setting phy_triple_jump 0
 	setting net_server_hitscan 1
-	setting net_max_backwards_reconciliation_ping 0.12
+	setting net_max_backwards_reconciliation_ping 0.15
 	
 	setting game_ring_enabled 0
 	setting game_dome_enabled 0

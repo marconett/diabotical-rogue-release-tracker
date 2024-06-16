@@ -182,6 +182,8 @@ artifact_submachine_barrel
 artifact_submachine_muzzle
 scan_weeble_impact_white
 slide_3p_v1
-artifact_wrecking_ball
 artifact_ability_icon
 over_shield_loop
+artifact_wrecking_ball
+overload_teleport_enter
+overload_loop_teleport

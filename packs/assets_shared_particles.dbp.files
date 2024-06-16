@@ -888,6 +888,7 @@ assets\shared\particles\system_definitions\artifact_submachinegun_impact.particl
 assets\shared\particles\system_definitions\artifact_submachinegun_player_impact.particles	10934
 assets\shared\particles\system_definitions\artifact_submachinegun_projectile.particles	7166
 assets\shared\particles\system_definitions\artifact_weapon_bar_screen.particles	33022
+assets\shared\particles\system_definitions\artifact_wrecking_ball.particles	27209
 assets\shared\particles\system_definitions\attackdefense_point.particles	3548
 assets\shared\particles\system_definitions\aura_surge_ability_loop.particles	24910
 assets\shared\particles\system_definitions\backstab.particles	1057
@@ -1750,6 +1751,7 @@ assets\shared\particles\system_definitions\overload_decal_loop.particles	4578
 assets\shared\particles\system_definitions\overload_fire_ground.particles	19109
 assets\shared\particles\system_definitions\overload_fire_screen.particles	3768
 assets\shared\particles\system_definitions\overload_fire_tick.particles	5384
+assets\shared\particles\system_definitions\overload_loop_teleport.particles	51169
 assets\shared\particles\system_definitions\overload_orb2.particles	5496
 assets\shared\particles\system_definitions\overload_player.particles	30910
 assets\shared\particles\system_definitions\overload_player_1p.particles	38121
@@ -1763,6 +1765,7 @@ assets\shared\particles\system_definitions\overload_player_3p6.particles	34163
 assets\shared\particles\system_definitions\overload_player_3p7.particles	35282
 assets\shared\particles\system_definitions\overload_player_3p8.particles	37680
 assets\shared\particles\system_definitions\overload_screen.particles	1223
+assets\shared\particles\system_definitions\overload_teleport_enter.particles	45878
 assets\shared\particles\system_definitions\overshield_2_screen.particles	2174
 assets\shared\particles\system_definitions\overshield_on_kill.particles	42207
 assets\shared\particles\system_definitions\overshield_screen.particles	2057
