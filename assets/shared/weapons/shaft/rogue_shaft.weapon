@@ -45,6 +45,7 @@ rogue_shaft
 	
 	zoomed_scope 1
 	zoomed_walk_speed 200
+	zoomed_crouch_speed 175
 	
 	icon_path images/weapon_icons/wp_hud_shaft_02.png
 	icon_path2 images/weapon_icons/wp_card_shaft.png

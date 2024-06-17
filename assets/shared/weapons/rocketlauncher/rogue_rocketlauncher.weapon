@@ -76,6 +76,7 @@ rogue_rocketlauncher
 	
 	zoomed_scope 1
 	zoomed_walk_speed 200
+	zoomed_crouch_speed 175
 		
 	equip_time 500
 	base_combo_rate 300

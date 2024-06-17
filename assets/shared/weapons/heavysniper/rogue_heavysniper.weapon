@@ -52,6 +52,7 @@ rogue_heavysniper
 	
 	zoom_speed 150
 	zoomed_walk_speed 175
+	zoomed_crouch_speed 150
 	
 	zoomed_recoil_up 3
 	zoomed_recoil_side 0.3

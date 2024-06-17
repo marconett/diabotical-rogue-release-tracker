@@ -3572,6 +3572,9 @@ const TRANSLATION_en_source = {
     datacenter_yek: {
         text: "Yekaterinburg"
     },
+    datacenter_gua: {
+        text: "Guam"
+    },
     datacenter_tes: {
         text: "Test"
     },
@@ -6453,11 +6456,11 @@ const TRANSLATION_en_source = {
         text: "Welcome to Diabotical Rogue Early Access. Hopefully it doesn't break! We'd super appreciate bug reports & feedback. Hopefully you enjoy the game and we look forward to updating the game based off your feedback. :)"
     },
     legendary_reward_claimed: {
-        text: "The legendary reward was claimed!",
+        text: "The Legendary reward was claimed!",
         engine: true
     },
     epic_reward_claimed: {
-        text: "The epic reward was claimed!",
+        text: "The Epic reward was claimed!",
         engine: true
     },
     win_epic_reward: {
@@ -6473,7 +6476,7 @@ const TRANSLATION_en_source = {
         engine: true
     },
     spawn_epic_pickup: {
-        text: "An epic pickup has spawned",
+        text: "An Epic pickup has spawned",
         engine: true
     },
     win_legendary_reward: {
@@ -6674,6 +6677,14 @@ const TRANSLATION_en_source = {
     },
     helper_credits_desc: {
         text: "Find out what the GD Weeble has to say to you.",
+        engine: true
+    },
+    helper_crouch_slide_title: {
+        text: "Crouch & Slide",
+        engine: true
+    },
+    helper_crouch_slide_desc: {
+        text: "You can Crouch by pressing the {keybind} key. If you're running and then you Crouch, you will Slide. Try it out now!",
         engine: true
     },
     shop_option_type_no_cards_left: {
@@ -6907,11 +6918,11 @@ const TRANSLATION_en_source = {
         engine: true
     },
     loading_screen_tip_10: {
-        text: "In Wipeout, an epic reward appears at 1:30 every round. Capture it to give your team full HP and armor, plus an overshield!",
+        text: "In Wipeout, an Epic reward appears at 1:30 every round. Capture it to give your team full HP and armor, plus an overshield!",
         engine: true
     },
     loading_screen_tip_11: {
-        text: "In Wipeout, A legendary reward appears at 3:00 every round. Capture it to give your team full HP and armor, an overshield, a movement buff, and a map scan to reveal enemies!",
+        text: "In Wipeout, a Legendary reward appears at 3:00 every round. Capture it to give your team full HP and armor, an overshield, a movement buff, and a map scan to reveal enemies!",
         engine: true
     },
     loading_screen_tip_12: {
@@ -7079,7 +7090,7 @@ const TRANSLATION_en_source = {
         engine: true
     },
     announcement_respawn_in_seconds: {
-        text: "Everyone respawn in {seconds} seconds!",
+        text: "Everyone respawns in {seconds} {seconds, plural, one {second} other {seconds}}!",
         engine: true
     },
     announcement_has_spawned: {
@@ -7098,8 +7109,12 @@ const TRANSLATION_en_source = {
         text: "Spawn Wave & Sudden Death",
         engine: true
     },
+    announcement_respawn_and_overtime: {
+        text: "Spawn Wave & Overtime",
+        engine: true
+    },
     announcement_begins_in_seconds: {
-        text: "Begins in {seconds} seconds!",
+        text: "Begins in {seconds} {seconds, plural, one {second} other {seconds}}!",
         engine: true
     }
 };

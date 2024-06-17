@@ -673,8 +673,8 @@ const TRANSLATION_ru = {
     settings_mouse_filtering: "Фильтрация мыши",
     settings_multithreaded_input: "Многопоточный ввод",
     settings_capture_windows_key: "Захват кнопки Windows",
-    settings_global_console_shortcut: "Global console shortcut",
-    settings_global_console_shortcut_desc: "If enabled, it will be possible to open the console with Grave/Tilde. If disabled, it will be possible to open the console (except while in the menus), with the key assigned to the console in the controls menu; if you wish to fully disable it, also unassign the console key in the controls menu.",
+    settings_global_console_shortcut: "Глобальный вызов консоли",
+    settings_global_console_shortcut_desc: "Если эта функция включена, то консоль можно будет открыть с помощью тильды [~/Ё]. Если отключить, то консоль будет открываться с помощью назначенной в настройках клавиши (если не находитесь в меню); если вы хотите полностью отключить консоль, отвяжите клавиши консоли в настройках управления.",
     settings_deadkey_fix: "Исправление мертвой клавиши консоли с еврораскладкой",
     settings_alt_tab_mode: "Сворачивать при Alt+Tab",
     settings_camera_bob: "Тряска камеры",
@@ -1889,6 +1889,8 @@ const TRANSLATION_ru = {
     helper_locker_desc: "Это шкафчик, где вы можете экипировать все крутые скины, которые вы заработали.",
     helper_credits_title: "Хорошая штука",
     helper_credits_desc: "Узнайте, что хочет сказать вам GD Weeble.",
+    helper_crouch_slide_title: "Crouch & Slide",
+    helper_crouch_slide_desc: "You can Crouch by pressing the {keybind} key. If you're running and then you Crouch, you will Slide. Try it out now!",
     shop_ready_button: "Готов",
     shop_random_button_tooltip: "Случайно выбрать карточку из всех возможных.\nЦена: ",
     shop_reroll_button_tooltip: "Поменять текущие варианты.\nЦена: ",
@@ -1993,5 +1995,6 @@ const TRANSLATION_ru = {
     announcement_respawn_and_epic_pickup: "Волна возрождения и эпический предмет",
     announcement_respawn_and_legendary_pickup: "Волна возрождения и легендарный предмет",
     announcement_respawn_and_sudden_death: "Волна возрождения и прекращение возрождений",
+    announcement_respawn_and_overtime: "Spawn Wave & Overtime",
     announcement_begins_in_seconds: "Начинается через {seconds} секунд!"
 };

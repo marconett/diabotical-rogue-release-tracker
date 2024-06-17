@@ -67,6 +67,7 @@ rogue_submachinegun
 	
 	zoomed_scope 1
 	zoomed_walk_speed 200
+	zoomed_crouch_speed 175
 	
 	hit_radius 1 1
 

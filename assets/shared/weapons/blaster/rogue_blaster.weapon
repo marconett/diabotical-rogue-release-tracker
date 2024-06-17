@@ -59,6 +59,7 @@ rogue_blaster
 	zoomed_scope 1
 	
 	zoomed_walk_speed 200
+	zoomed_crouch_speed 175
 	
 	equip_time 300
 	base_combo_rate 200

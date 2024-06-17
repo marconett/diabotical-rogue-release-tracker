@@ -673,8 +673,8 @@ const TRANSLATION_pt_BR = {
     settings_mouse_filtering: "Filtro de mouse",
     settings_multithreaded_input: "Entrada multinuclear",
     settings_capture_windows_key: "Tecla de captura do Windows",
-    settings_global_console_shortcut: "Global console shortcut",
-    settings_global_console_shortcut_desc: "If enabled, it will be possible to open the console with Grave/Tilde. If disabled, it will be possible to open the console (except while in the menus), with the key assigned to the console in the controls menu; if you wish to fully disable it, also unassign the console key in the controls menu.",
+    settings_global_console_shortcut: "Atalho global do console",
+    settings_global_console_shortcut_desc: "Ao ativar, será possível abrir o console com a tecla de acento grave ou til. Ao desativar, será possível abrir o console (exceto enquanto nos menus) com a tecla vinculada a ele no menu de controles. Se quiser desativá-lo, desvincule a tecla do console no menu de controles.",
     settings_deadkey_fix: "Corrigir console em teclado europeu",
     settings_alt_tab_mode: "Minimizar ao apertar Alt+Tab ",
     settings_camera_bob: "Balanço de câmera",
@@ -1889,6 +1889,8 @@ const TRANSLATION_pt_BR = {
     helper_locker_desc: "Este é o Inventário. Aqui, você pode equipar-se com todos os visuais maneiros que conseguiu.",
     helper_credits_title: "O que tem de bom e melhor",
     helper_credits_desc: "Vá ver o que o Weeble GD tem a lhe dizer.",
+    helper_crouch_slide_title: "Crouch & Slide",
+    helper_crouch_slide_desc: "You can Crouch by pressing the {keybind} key. If you're running and then you Crouch, you will Slide. Try it out now!",
     shop_ready_button: "Pronto",
     shop_random_button_tooltip: "Seleciona aleatoriamente uma carta entre todas as cartas possíveis.\nCusto: ",
     shop_reroll_button_tooltip: "Muda as opções atuais.\nCusto: ",
@@ -1993,5 +1995,6 @@ const TRANSLATION_pt_BR = {
     announcement_respawn_and_epic_pickup: "Onda de surgimento e item épico",
     announcement_respawn_and_legendary_pickup: "Onda de surgimento e item lendário",
     announcement_respawn_and_sudden_death: "Onda de surgimento e morte súbita",
+    announcement_respawn_and_overtime: "Spawn Wave & Overtime",
     announcement_begins_in_seconds: "Começa em {seconds} segundo(s)!"
 };

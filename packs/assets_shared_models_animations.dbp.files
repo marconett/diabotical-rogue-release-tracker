@@ -788,10 +788,6 @@ assets\shared\models\animations\eggbot\teleport_controller.dbm	180731
 assets\shared\models\animations\eggbot\teleport_controller.fbx	816764
 assets\shared\models\animations\eggbot\teleport_controller_pose.dbm	25595
 assets\shared\models\animations\eggbot\teleport_controller_pose.fbx	593164
-assets\shared\models\animations\enemies\summoner\material\summoner_d.png	2730887
-assets\shared\models\animations\enemies\summoner\material\summoner_n.png	3233559
-assets\shared\models\animations\enemies\summoner\material\summoner_s.png	1350259
-assets\shared\models\animations\enemies\summoner\source\workfiles\summoner.blend	1662441
 assets\shared\models\animations\gadgets\gadget_healsphere\workfiles\gadget_healsphere.blend	1479477
 assets\shared\models\animations\hub_chunkbot\display_pose.dbm	29241
 assets\shared\models\animations\hub_chunkbot\display_pose.fbx	679388
@@ -987,7 +983,7 @@ assets\shared\models\animations\weesuit\1p\shotgun_skm_shotgun_weesuit.dbm	16239
 assets\shared\models\animations\weesuit\1p\shotgun_skm_shotgun_weesuit.fbx	1547724
 assets\shared\models\animations\weesuit\1p\shotgun_skm_shotgun_weesuit_1p.dbm	1623945
 assets\shared\models\animations\weesuit\1p\shotgun_skm_shotgun_weesuit_1p.fbx	1547724
-assets\shared\models\animations\weesuit\1p\skm_weesuit_1p.ani	1423
+assets\shared\models\animations\weesuit\1p\skm_weesuit_1p.ani	1443
 assets\shared\models\animations\weesuit\1p\skm_weesuit_1p.dbm	1468039
 assets\shared\models\animations\weesuit\1p\skm_weesuit_1p.fbx	1436268
 assets\shared\models\animations\weesuit\crouch_back.dbm	152633
@@ -1433,7 +1429,7 @@ assets\shared\models\animations\wp_heavy_machinegun\skm_heavy_machinegun.dbm	935
 assets\shared\models\animations\wp_heavy_machinegun\skm_heavy_machinegun.fbx	697836
 assets\shared\models\animations\wp_heavy_machinegun\wp_heavy_machinegun.assets	230
 assets\shared\models\animations\wp_heavy_sniper\crouch_idle.dbm	68569
-assets\shared\models\animations\wp_heavy_sniper\crouch_idle.fbx	180108
+assets\shared\models\animations\wp_heavy_sniper\crouch_idle.fbx	179900
 assets\shared\models\animations\wp_heavy_sniper\crouch_run.dbm	27225
 assets\shared\models\animations\wp_heavy_sniper\crouch_run.fbx	142060
 assets\shared\models\animations\wp_heavy_sniper\default.material	376
@@ -1490,7 +1486,7 @@ assets\shared\models\animations\wp_heavy_sniper\reload.dbm	84889
 assets\shared\models\animations\wp_heavy_sniper\reload.fbx	197260
 assets\shared\models\animations\wp_heavy_sniper\run.dbm	25049
 assets\shared\models\animations\wp_heavy_sniper\run.fbx	139004
-assets\shared\models\animations\wp_heavy_sniper\skm_heavy_sniper.ani	880
+assets\shared\models\animations\wp_heavy_sniper\skm_heavy_sniper.ani	941
 assets\shared\models\animations\wp_heavy_sniper\skm_heavy_sniper.dbm	1342699
 assets\shared\models\animations\wp_heavy_sniper\skm_heavy_sniper.fbx	629452
 assets\shared\models\animations\wp_heavy_sniper\slide.dbm	68569

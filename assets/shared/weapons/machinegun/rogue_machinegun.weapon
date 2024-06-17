@@ -56,6 +56,7 @@ rogue_machinegun
 	
 	zoomed_scope 1
 	zoomed_walk_speed 175
+	zoomed_crouch_speed 150
 	
 	hit_radius 2 1
 	

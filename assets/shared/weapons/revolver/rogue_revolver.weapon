@@ -63,7 +63,8 @@ rogue_revolver
 	gravity 0
 	
 	hit_radius 1 1
-	zoomed_walk_speed 200
+	zoomed_walk_speed 175
+	zoomed_crouch_speed 150
 	
 	detached_shot_particles false
     //shot_particles weapon_revolver_muzzle_flash

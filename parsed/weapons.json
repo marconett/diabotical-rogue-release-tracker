@@ -141,7 +141,8 @@
             "1",
             "1"
         ],
-        "zoomed_walk_speed": "200",
+        "zoomed_walk_speed": "175",
+        "zoomed_crouch_speed": "150",
         "detached_shot_particles": "false",
         "shot_particles_attached": [
             "weapon_revolver_muzzle_flash",
@@ -413,6 +414,7 @@
         "recoil_back_time": "0.04",
         "zoomed_scope": "1",
         "zoomed_walk_speed": "175",
+        "zoomed_crouch_speed": "150",
         "hit_radius": [
             "2",
             "1"
@@ -625,6 +627,7 @@
         "recoil_back_time": "0.05",
         "zoomed_scope": "1",
         "zoomed_walk_speed": "200",
+        "zoomed_crouch_speed": "175",
         "equip_time": "300",
         "base_combo_rate": "200",
         "loop_animation": "true",
@@ -826,6 +829,7 @@
         ],
         "zoomed_scope": "1",
         "zoomed_walk_speed": "200",
+        "zoomed_crouch_speed": "175",
         "hit_radius": [
             "1",
             "1"
@@ -1049,6 +1053,7 @@
         "equip_time": "300",
         "base_combo_rate": "250",
         "zoomed_walk_speed": "200",
+        "zoomed_crouch_speed": "175",
         "hit_radius": [
             "1",
             "1"
@@ -1252,6 +1257,7 @@
         "recoil_time": "0.1",
         "zoom_speed": "150",
         "zoomed_walk_speed": "175",
+        "zoomed_crouch_speed": "150",
         "zoomed_recoil_up": "3",
         "zoomed_recoil_side": "0.3",
         "zoomed_recoil_recovery_time": "0.6",
@@ -1513,6 +1519,7 @@
         "recoil_back": "6",
         "zoomed_scope": "1",
         "zoomed_walk_speed": "200",
+        "zoomed_crouch_speed": "175",
         "equip_time": "400",
         "base_combo_rate": "250",
         "shot_particles_attached": [
@@ -1683,6 +1690,7 @@
             "1"
         ],
         "zoomed_walk_speed": "200",
+        "zoomed_crouch_speed": "175",
         "detached_shot_particles": "false",
         "shot_particles_attached": [
             "weapon_egun_muzzle_flash",
@@ -1885,6 +1893,7 @@
         "recoil_back": "5",
         "zoomed_scope": "1",
         "zoomed_walk_speed": "200",
+        "zoomed_crouch_speed": "175",
         "equip_time": "500",
         "base_combo_rate": "300",
         "shot_particles": "empty_system",
@@ -2077,6 +2086,7 @@
         "recoil_back_time": "0.0275",
         "zoomed_scope": "1",
         "zoomed_walk_speed": "200",
+        "zoomed_crouch_speed": "175",
         "icon_path": "images/weapon_icons/wp_hud_shaft_02.png",
         "icon_path2": "images/weapon_icons/wp_card_shaft.png",
         "weapon_icon_path": "images/weapon_icons/wp_card_shaft_nobg.png",
@@ -2279,6 +2289,7 @@
         "recoil_back": "1.5",
         "zoomed_scope": "1",
         "zoomed_walk_speed": "200",
+        "zoomed_crouch_speed": "175",
         "equip_time": "350",
         "base_combo_rate": "250",
         "shot_particles": "empty_system",

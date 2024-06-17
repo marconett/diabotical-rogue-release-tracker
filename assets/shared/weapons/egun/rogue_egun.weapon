@@ -65,6 +65,7 @@ rogue_egun
 	
 	hit_radius 1 1
 	zoomed_walk_speed 200
+	zoomed_crouch_speed 175
 	
 	detached_shot_particles false
    //shot_particles weapon_egun_muzzle_flash

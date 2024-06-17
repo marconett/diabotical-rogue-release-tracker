@@ -169,6 +169,13 @@ const global_datacenter_map = {
         provider: "i3D.net",
         name: "Frankfurt"
     },
+    gua: {
+        type: 1,
+        flag: "gu",
+        i18n: "datacenter_gua",
+        provider: "oneQode.com",
+        name: "Guam"
+    },
     hon: {
         type: 1,
         flag: "hk",
