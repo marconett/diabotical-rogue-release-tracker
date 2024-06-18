@@ -5687,7 +5687,7 @@ const TRANSLATION_en_source = {
         engine: true
     },
     skill_explosive_weeble_a2_desc: {
-        text: "The Explosive Grenade now bounces before exploding.",
+        text: "Your grenade now bounces twice before its final detonation, exploding on each bounce.",
         engine: true
     },
     skill_explosive_weeble_a4: {

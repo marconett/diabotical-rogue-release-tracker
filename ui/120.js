@@ -221,22 +221,37 @@ const page_play_rogue = new function() {
         let counts = html.cards.querySelectorAll(".card .count .value");
         for (let c of counts) {
             let total_playing = 0;
-            if (queue_stats && c.dataset.mode_key && c.dataset.mode_key in queue_stats) {
-                for (let region in queue_stats[c.dataset.mode_key]) {
-                    if (region === "total") {
-                        total_playing = 0;
-                        if ("s" in queue_stats[c.dataset.mode_key]["total"]) total_playing += queue_stats[c.dataset.mode_key]["total"].s;
-                        if ("p" in queue_stats[c.dataset.mode_key]["total"]) total_playing += queue_stats[c.dataset.mode_key]["total"].p;
-                        break
-                    }
-                    if (Servers.selected_regions.has(region)) {
-                        let region_total = 0;
-                        if ("s" in queue_stats[c.dataset.mode_key][region]) region_total += queue_stats[c.dataset.mode_key][region].s;
-                        if ("p" in queue_stats[c.dataset.mode_key][region]) region_total += queue_stats[c.dataset.mode_key][region].p;
-                        if (region_total > total_playing) total_playing = region_total
+            if (queue_stats) {
+                let key = null;
+                if (c.dataset.mode_key && c.dataset.mode_key in queue_stats) {
+                    key = c.dataset.mode_key
+                } else if (c.dataset.type === "warmup") {
+                    key = "warmup"
+                }
+                if (key) {
+                    for (let region in queue_stats[key]) {
+                        if (region === "total") {
+                            total_playing = 0;
+                            if ("s" in queue_stats[key]["total"]) total_playing += queue_stats[key]["total"].s;
+                            if ("p" in queue_stats[key]["total"]) total_playing += queue_stats[key]["total"].p;
+                            break
+                        }
+                        if (key === "warmup") {
+                            if (Servers.selected_regions.has(region)) {
+                                if ("p" in queue_stats[key][region]) total_playing += queue_stats[key][region].p
+                            }
+                        } else {
+                            if (Servers.selected_regions.has(region)) {
+                                let region_total = 0;
+                                if ("s" in queue_stats[key][region]) region_total += queue_stats[key][region].s;
+                                if ("p" in queue_stats[key][region]) region_total += queue_stats[key][region].p;
+                                if (region_total > total_playing) total_playing = region_total
+                            }
+                        }
                     }
                 }
             }
+            console.log("update_queue_stats", c.dataset.type, c.dataset.mode_key, total_playing);
             c.textContent = total_playing;
             if (total_playing) {
                 c.parentElement.classList.add("visible")
@@ -399,6 +414,7 @@ const page_play_rogue = new function() {
             let count = _createElement("div", "count");
             count.appendChild(_createElement("div", "icon"));
             let value = _createElement("div", "value");
+            value.dataset.type = card_mode.type;
             value.dataset.mode_key = card_mode.mode_key;
             count.appendChild(value);
             card.appendChild(count);
