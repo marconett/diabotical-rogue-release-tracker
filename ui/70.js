@@ -479,10 +479,15 @@ const Lobby = {
         const coop_modes = GAME.get_data("CUSTOM_SPECIAL_COOP_MODES");
         const multi_team_modes = GAME.get_data("CUSTOM_MULTI_TEAM_MODES");
         const solo_modes = GAME.get_data("CUSTOM_SOLO_MODES");
+        const mode_defaults = GAME.get_data("CUSTOM_MODE_DEFAULTS");
         if (coop_modes && coop_modes.includes(mode)) {
             this.settings["team_count"][1] = 1;
             this.settings["time_limit"][1] = 0;
             this.settings["score_limit"][1] = 0;
+            if (mode in mode_defaults) {
+                if ("time_limit" in mode_defaults[mode]) this.settings["time_limit"][1] = mode_defaults[mode]["time_limit"];
+                if ("score_limit" in mode_defaults[mode]) this.settings["score_limit"][1] = mode_defaults[mode]["score_limit"]
+            }
             changed_settings.push("team_count");
             changed_settings.push("time_limit");
             changed_settings.push("score_limit");

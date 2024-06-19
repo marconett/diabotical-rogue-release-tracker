@@ -30,8 +30,8 @@ const page_custom = new function() {
         ui_max_teams: 2,
         ui_min_players_per_team: 6,
         ui_render_team_player_slots: 6,
-        ui_small_size_after_teams: 8,
-        ui_extra_small_size_after_teams: 12,
+        ui_small_size_after_team_size: 8,
+        ui_extra_small_size_after_team_size: 12,
         quick_info_settings: ["private", "mode", "datacenter"]
     };
     this.preset = {
@@ -444,12 +444,10 @@ const page_custom = new function() {
     }, this.set_lobby_colors = () => {
         let team_size = Lobby.get_setting("team_size");
         let team_count = Lobby.get_setting("team_count");
-        if (team_size === 1 && team_count > 2) {
-            html.team_0.classList.add("ffa");
-            html.team_1.classList.add("ffa")
+        if (team_size === 1 && team_count > 2 || team_count === 1) {
+            html.team_0.style.setProperty("--team_color", "#" + get_own_colors().color);
+            html.team_1.style.setProperty("--team_color", "#" + get_own_colors().color)
         } else {
-            html.team_0.classList.remove("ffa");
-            html.team_1.classList.remove("ffa");
             if (Lobby.state.own_team === 0 || Lobby.state.own_team === 255) {
                 html.team_0.style.setProperty("--team_color", "#" + get_own_colors().color);
                 html.team_1.style.setProperty("--team_color", "#" + get_enemy_colors().color)
@@ -697,16 +695,14 @@ const page_custom = new function() {
             }
         }
         let is_it_me = false;
-        for (var t = 0; t < Lobby.get_setting("team_count"); t++) {
-            if (teams.hasOwnProperty(t)) {
-                for (let i = 0; i < state.ui_render_team_player_slots; i++) {
-                    if (teams[t][i] == undefined) {
-                        this.set_slot_empty(t, i)
-                    } else {
-                        is_it_me = false;
-                        if (global_self.user_id === teams[t][i].user_id) is_it_me = true;
-                        this.set_slot_player(t, i, is_it_me, teams[t][i])
-                    }
+        for (let t = 0; t < state.ui_max_teams; t++) {
+            for (let i = 0; i < state.ui_render_team_player_slots; i++) {
+                if (!teams.hasOwnProperty(t) || teams[t][i] == undefined) {
+                    this.set_slot_empty(t, i)
+                } else {
+                    is_it_me = false;
+                    if (global_self.user_id === teams[t][i].user_id) is_it_me = true;
+                    this.set_slot_player(t, i, is_it_me, teams[t][i])
                 }
             }
         }
@@ -771,7 +767,7 @@ const page_custom = new function() {
                 sc.appendChild(label)
             }))
         } else if (team >= 0) {
-            let slot_idx = this.team_slot_to_idx(team, slot, Lobby.get_setting("team_size"));
+            let slot_idx = this.team_slot_to_idx(team, slot, Lobby.get_setting("team_size"), Lobby.get_setting("team_count"));
             slot_elem = this.get_player_slot(slot_idx);
             _for_first_with_class_in_parent(slot_elem, "slot_content", (function(sc) {
                 _empty(sc);
@@ -801,7 +797,7 @@ const page_custom = new function() {
     this.set_slot_player = (team, slot, is_it_me, user) => {
         let slot_elem = undefined;
         if (team >= 0) {
-            let slot_idx = this.team_slot_to_idx(team, slot, Lobby.get_setting("team_size"));
+            let slot_idx = this.team_slot_to_idx(team, slot, Lobby.get_setting("team_size"), Lobby.get_setting("team_count"));
             if (team == SPECTATING_TEAM) {
                 slot_elem = this.get_spec_slot(slot_idx)
             } else {
@@ -837,9 +833,21 @@ const page_custom = new function() {
             dragElement(slot_elem, null, onMouseDown = () => {
                 if (currentlyDraggedElement) {
                     currentlyDraggedElement.classList.add("drag");
-                    if (Lobby.get_setting("team_size") > state.ui_extra_small_size_after_teams) {
+                    let check_value = Lobby.get_setting("team_size");
+                    let extra_small_after = state.ui_extra_small_size_after_team_size;
+                    let small_after = state.ui_small_size_after_team_size;
+                    if (Lobby.get_setting("team_count") === 1) {
+                        check_value = Lobby.get_setting("team_size");
+                        extra_small_after = state.ui_extra_small_size_after_team_size * 2;
+                        small_after = state.ui_small_size_after_team_size * 2
+                    } else if (Lobby.get_setting("team_size") === 1 && Lobby.get_setting("team_count") > 2) {
+                        check_value = Lobby.get_setting("team_count");
+                        extra_small_after = state.ui_extra_small_size_after_team_size * 2;
+                        small_after = state.ui_small_size_after_team_size * 2
+                    }
+                    if (check_value > extra_small_after) {
                         currentlyDraggedElement.classList.add("extra_small")
-                    } else if (Lobby.get_setting("team_size") > state.ui_small_size_after_teams) {
+                    } else if (check_value > small_after) {
                         currentlyDraggedElement.classList.add("small")
                     }
                 }
@@ -939,9 +947,12 @@ const page_custom = new function() {
             slot: team_slot_idx
         }
     };
-    this.team_slot_to_idx = (team, slot, max_slots) => {
+    this.team_slot_to_idx = (team, slot, team_size, team_count) => {
         if (team == SPECTATING_TEAM) return slot;
-        return team * max_slots + slot
+        if (team_count === 1) {
+            return team * state.ui_render_team_player_slots + slot
+        }
+        return team * team_size + slot
     };
     this.init_modes = () => {
         _empty(elements.mode);
@@ -1171,10 +1182,22 @@ const page_custom = new function() {
                 html.team_players[idx].removeChild(html.team_players[idx].lastChild)
             }
         }
-        if (team_size > state.ui_extra_small_size_after_teams) {
+        let check_value = team_size;
+        let extra_small_after = state.ui_extra_small_size_after_team_size;
+        let small_after = state.ui_small_size_after_team_size;
+        if (team_count === 1) {
+            check_value = team_size;
+            extra_small_after = state.ui_extra_small_size_after_team_size * 2;
+            small_after = state.ui_small_size_after_team_size * 2
+        } else if (team_size === 1 && team_count > 2) {
+            check_value = team_count;
+            extra_small_after = state.ui_extra_small_size_after_team_size * 2;
+            small_after = state.ui_small_size_after_team_size * 2
+        }
+        if (check_value > extra_small_after) {
             html.lobby.classList.add("extra_small");
             html.lobby.classList.remove("small")
-        } else if (team_size > state.ui_small_size_after_teams) {
+        } else if (check_value > small_after) {
             html.lobby.classList.add("small");
             html.lobby.classList.remove("extra_small")
         } else {
@@ -1184,8 +1207,8 @@ const page_custom = new function() {
         state.ui_render_team_player_slots = state.ui_min_players_per_team;
         let total_player_slots = team_size * team_count;
         if (team_count === 1 || team_count > 2 && team_size === 1) {
-            state.ui_render_team_player_slots = total_player_slots / state.ui_max_teams;
-            if (state.ui_render_team_player_slots % 2 !== 0) state.ui_render_team_player_slots++;
+            state.ui_render_team_player_slots = Math.ceil(total_player_slots / state.ui_max_teams);
+            if (state.ui_render_team_player_slots < 6) state.ui_render_team_player_slots = 6;
             let slot_idx = 0;
             for (let team_idx = 0; team_idx < state.ui_max_teams; team_idx++) {
                 for (let team_slot_idx = 0; team_slot_idx < state.ui_render_team_player_slots; team_slot_idx++) {

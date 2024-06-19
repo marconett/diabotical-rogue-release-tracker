@@ -16,5 +16,12 @@ rogue_scout
 {
 	view_height 46.0
 	crouch_view_height 28.0
-	model animations/weesuit/skm_weesuit	
+	model animations/weesuit/skm_weesuit
+}
+
+rogue_bigbot
+{
+	view_height 53.0
+	crouch_view_height 35.0
+	model animations/bigbot/skm_bigbot
 }

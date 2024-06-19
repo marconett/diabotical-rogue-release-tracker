@@ -189,6 +189,6 @@ rogue_egun augment 6
 	overwrite applied_stack_event 1
 	overwrite required_applied_stacks 10
 	overwrite duration 2000
-	overwrite effect_damage 50
+	overwrite effect_damage 20
 	locked_in_battlepass true
 }

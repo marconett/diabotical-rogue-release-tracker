@@ -28,8 +28,8 @@ rogue_submachinegun
     charge_animation 1	
 	speed 26000
 	
-	max_damage_distance 300
-    min_damage_distance 1500
+	max_damage_distance 500
+    min_damage_distance 1750
 	
 	color 1996D9
 	icon_path images/weapon_icons/wp_hud_submachinegun_02.png

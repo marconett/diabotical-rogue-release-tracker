@@ -38,7 +38,7 @@
         "recoil_recovery_time": "0.5",
         "recoil_time": "0.1",
         "max_damage_distance": "400",
-        "min_damage_distance": "4000",
+        "min_damage_distance": "3250",
         "equip_time": "400",
         "base_combo_rate": "250",
         "gravity_delay_by_distance": "1000",
@@ -132,7 +132,7 @@
         "recoil_back_time": "0.05",
         "zoomed_scope": "1",
         "max_damage_distance": "400",
-        "min_damage_distance": "4000",
+        "min_damage_distance": "3250",
         "equip_time": "400",
         "base_combo_rate": "250",
         "gravity_delay_by_distance": "1000",
@@ -381,7 +381,7 @@
         "charge_animation": "1",
         "speed": "30000",
         "max_damage_distance": "400",
-        "min_damage_distance": "3500",
+        "min_damage_distance": "3000",
         "spread_recovery_time": "0.2",
         "spread": [
             "0.15",
@@ -789,8 +789,8 @@
         "ground_knockback": "2",
         "charge_animation": "1",
         "speed": "26000",
-        "max_damage_distance": "300",
-        "min_damage_distance": "1500",
+        "max_damage_distance": "500",
+        "min_damage_distance": "1750",
         "color": "1996D9",
         "icon_path": "images/weapon_icons/wp_hud_submachinegun_02.png",
         "icon_path2": "images/weapon_icons/wp_card_submachinegun.png",
@@ -1236,8 +1236,8 @@
             "65"
         ],
         "min_charge_critical_damage": [
-            "115",
-            "115"
+            "85",
+            "85"
         ],
         "critical_damage": [
             "130",
@@ -1821,7 +1821,7 @@
         "rarity": "legendary",
         "overwrite": [
             "effect_damage",
-            "50"
+            "20"
         ],
         "locked_in_battlepass": "true"
     },
@@ -2249,12 +2249,12 @@
         "unlimited_ammo": "false",
         "reload": "2000",
         "damage": [
-            "50",
-            "65"
+            "55",
+            "70"
         ],
         "critical_damage": [
-            "90",
-            "105"
+            "100",
+            "115"
         ],
         "rate": "1000",
         "hit_radius": [

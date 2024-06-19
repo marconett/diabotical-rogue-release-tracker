@@ -34,7 +34,7 @@ rogue_heavysniper
 	rate 1550
 	min_charge_damage 50 50
 	damage 65 65	
-	min_charge_critical_damage 115 115
+	min_charge_critical_damage 85 85
 	critical_damage 130 130		
 	scope_charge_time 1000		
 	has_noscope_crit false

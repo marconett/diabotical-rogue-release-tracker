@@ -19,8 +19,8 @@ rogue_crossbow
 	unlimited_ammo false
 	reload 2000
 	
-  	damage 50 65
-  	critical_damage 90 105
+  	damage 55 70
+  	critical_damage 100 115
  	rate 1000
 	hit_radius 3 2
 	speed 10000

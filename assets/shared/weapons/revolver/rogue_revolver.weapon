@@ -54,7 +54,7 @@ rogue_revolver
 	zoomed_scope 1
 	
 	max_damage_distance 400
-    min_damage_distance 4000
+    min_damage_distance 3250
 		
 	equip_time 400
 	base_combo_rate 250

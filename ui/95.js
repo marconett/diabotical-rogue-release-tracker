@@ -24,7 +24,6 @@ GAME.set_initial_data(GAME.ids.ROGUE, {
     CUSTOM_ROUND_BASED_MODES: ["rogue_wipeout", "rogue_attack_defense"],
     CUSTOM_TIMELIMIT_ONLY_MODES: ["duel", "race"],
     CUSTOM_RACE_MODES: ["race"],
-    CUSTOM_SPECIAL_COOP_MODES: [],
     CUSTOM_TUTORIAL_MODES: ["tutorial"],
     CUSTOM_ROUND_LIMITS: [1, 2, 3, 4, 5, 6, 7, 8],
     CUSTOM_CAPTURE_LIMITS: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 20, 0],
@@ -47,7 +46,6 @@ GAME.set_initial_data(GAME.ids.ROGUE, {
             enabled: true,
             image: "/html/images/gamemodes/wipeout_big.jpg",
             icon: "",
-            variable_team_size: false,
             rules: ["game_mode_2_rules_wipeout_1", "game_mode_2_rules_wipeout_2", "game_mode_2_rules_wipeout_3", "game_mode_2_rules_wipeout_4"]
         },
         rogue_siege: {
@@ -58,8 +56,7 @@ GAME.set_initial_data(GAME.ids.ROGUE, {
             announce: "announcer_common_gamemode_siege",
             enabled: false,
             image: "/html/images/gamemodes/siege.png",
-            icon: "",
-            variable_team_size: false
+            icon: ""
         },
         rogue_teamdeathmatch: {
             mode: "rogue_teamdeathmatch",
@@ -69,8 +66,7 @@ GAME.set_initial_data(GAME.ids.ROGUE, {
             announce: "announcer_common_gamemode_domination",
             enabled: false,
             image: "/html/images/gamemodes/tdm.png",
-            icon: "",
-            variable_team_size: true
+            icon: ""
         },
         rogue_domination: {
             mode: "rogue_domination",
@@ -80,8 +76,7 @@ GAME.set_initial_data(GAME.ids.ROGUE, {
             announce: "announcer_common_gamemode_domination",
             enabled: false,
             image: "/html/images/gamemodes/domination.png",
-            icon: "",
-            variable_team_size: true
+            icon: ""
         },
         rogue_attack_defense: {
             mode: "rogue_attack_defense",
@@ -91,8 +86,7 @@ GAME.set_initial_data(GAME.ids.ROGUE, {
             announce: "announcer_common_gamemode_attack_defense",
             enabled: false,
             image: "/html/images/gamemodes/attack_defense.png",
-            icon: "",
-            variable_team_size: false
+            icon: ""
         },
         warmup: {
             mode: "warmup",

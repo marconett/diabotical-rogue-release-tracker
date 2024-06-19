@@ -377,6 +377,8 @@ skill 20006
     desc_translation_key skill_hookshot_desc
     hud_icon images/skill_icons/Arena_Ability_Icon_Hookshot.png
     hud_icon2 images/skill_icons/Rogue_Ability_Icon_Hook_Disconnect.png
+	hud_icon4 images/skill_icons/Arena_Ability_Icon_Hookshot_Artifact_V3.png
+	hud_icon5 images/skill_icons/Rogue_Ability_Icon_Hook_Disconnect_Artifact.png
 	
 	selectable false
 	rarity epic
@@ -421,9 +423,9 @@ skill 20006 augment 2
 
 skill 20006 augment 3
 {
-	rarity rare
+	rarity legendary
 	preadd max_charges 1
-	max_stacks 2
+	max_stacks 1
 	name_translation_key skill_increase_max_charges
     desc_translation_key skill_increase_max_charges_desc
 }
@@ -704,7 +706,8 @@ skill 20011
     desc_translation_key skill_leap_slam_desc
 	
     hud_icon images/skill_icons/Arena_Ability_Icon_Leap.png
-	
+	hud_icon4 images/skill_icons/Arena_Ability_Icon_Leap_Artifact.png
+
 	prevent_cooldown_on_initial_fire true
     duration 0
     cooldown 6
@@ -1771,6 +1774,7 @@ skill 40001
     desc_translation_key skill_movement_bolt_desc
 
 	hud_icon images/skill_icons/Arena_Ability_Icon_Bolt.png
+	hud_icon4 images/skill_icons/Arena_Ability_Icon_Bolt_Artifact.png
 
 	prevent_cooldown_on_initial_fire true
 	show_in_dev_console false

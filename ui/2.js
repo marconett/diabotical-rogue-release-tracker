@@ -4570,6 +4570,10 @@ const TRANSLATION_en_source = {
         text: "All party members must leave their current match before joining a new match.",
         engine: true
     },
+    party_already_searching_error: {
+        text: "Party is already searching.",
+        engine: true
+    },
     menu_select_region: {
         text: "Select Datacenters"
     },

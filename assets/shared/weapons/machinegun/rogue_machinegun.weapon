@@ -29,7 +29,7 @@ rogue_machinegun
 	speed 30000
 	
 	max_damage_distance 400
-	min_damage_distance 3500
+	min_damage_distance 3000
 	
 	spread_recovery_time 0.2
 	spread 0.15 0.15
