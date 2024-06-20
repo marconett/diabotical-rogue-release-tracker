@@ -64,8 +64,9 @@ const page_crosshair = new function() {
                 SNIPER_ZOOM_INDEX = []
             }
         }));
+        let settings_crosshair = _id("settings-crosshair-preview");
         global_crosshair_creators[GAME.ids.ROGUE] = {};
-        global_crosshair_creators[GAME.ids.ROGUE]["normal"] = new CrosshairCreator(GAME.ids.ROGUE, _id("crosshair_screen_normal"));
+        global_crosshair_creators[GAME.ids.ROGUE]["normal"] = new CrosshairCreator(GAME.ids.ROGUE, _id("crosshair_screen_normal"), settings_crosshair);
         global_crosshair_creators[GAME.ids.ROGUE]["zoom"] = new CrosshairCreator(GAME.ids.ROGUE, _id("crosshair_screen_zoom"));
         this.select_weapon(current_id)
     };

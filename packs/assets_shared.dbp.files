@@ -144,6 +144,7 @@ assets\shared\materials\missing.material	336
 assets\shared\materials\static_batching_debug.material	303
 assets\shared\materials\texel_density.material	287
 assets\shared\materials\texel_px.material	277
+assets\shared\materials\texture_size_debug.material	297
 assets\shared\materials\triangle_count_debug.material	301
 assets\shared\prefabs\pf_teleport_exit_wallmount_testing.assets	1569
 assets\shared\prefabs\vi.assets	794

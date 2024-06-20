@@ -944,9 +944,11 @@ class CrosshairCreator {
     }
     updateCrosshairPreview(crosshair_definition) {
         drawCrosshair(crosshair_definition, "", this.ctxCrosshairPreviewMap.default, this.ctxCrosshairPreviewMap.hit);
-        this.ctxCrosshairPreviewMap.menu.clearRect(0, 0, this.ctxCrosshairPreviewMap.menu.canvas.width, this.ctxCrosshairPreviewMap.menu.canvas.height);
-        this.ctxCrosshairPreviewMap.menu.beginPath();
-        this.ctxCrosshairPreviewMap.menu.drawImage(this.canvasCrosshairPreviewMap.default, 0, 0)
+        if (this.engine_variable.endsWith(":0")) {
+            this.ctxCrosshairPreviewMap.menu.clearRect(0, 0, this.ctxCrosshairPreviewMap.menu.canvas.width, this.ctxCrosshairPreviewMap.menu.canvas.height);
+            this.ctxCrosshairPreviewMap.menu.beginPath();
+            this.ctxCrosshairPreviewMap.menu.drawImage(this.canvasCrosshairPreviewMap.default, 0, 0)
+        }
     }
     initialize_saved_crosshairs() {
         const saved_container = this.container.querySelector(".crosshair_saved_preset_container");

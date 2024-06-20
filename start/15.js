@@ -1310,7 +1310,7 @@ const TRANSLATION_pt_BR = {
     party_players_active_queue_disabled: "Impossível buscar uma partida enquanto o grupo está em uma",
     party_players_in_active_ranked_match: "Todos os membros do grupo devem sair da partida atual para buscarem uma nova partida.",
     party_players_in_match_error: "Todos os membros do grupo devem sair da partida atual para entrarem em uma nova partida.",
-    party_already_searching_error: "Party is already searching.",
+    party_already_searching_error: "O grupo já está buscando.",
     menu_select_region: "Selecione data centers",
     datacenters: "Data centers",
     disconnected_error_generic: "Você foi desconectado(a) do servidor.",

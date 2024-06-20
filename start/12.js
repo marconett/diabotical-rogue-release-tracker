@@ -1310,7 +1310,7 @@ const TRANSLATION_es_ES = {
     party_players_active_queue_disabled: "No es posible unirse a la cola mientras el grupo sigue en partida",
     party_players_in_active_ranked_match: "No es posible unirse a la cola con integrantes en el grupo aún en partidas activas.",
     party_players_in_match_error: "Todos los integrantes del grupo deben dejar su partida actual antes de unirse a una nueva partida.",
-    party_already_searching_error: "Party is already searching.",
+    party_already_searching_error: "El grupo ya se encuentra buscando.",
     menu_select_region: "Selecciona Servidores",
     datacenters: "Regiones",
     disconnected_error_generic: "Desconectado del servidor.",

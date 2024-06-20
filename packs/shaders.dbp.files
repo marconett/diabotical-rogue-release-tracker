@@ -164,7 +164,7 @@ shaders\smc.vs.cso	840
 shaders\snfps.cso	4236
 shaders\snfvs.cso	1144
 shaders\static.vs.cso	1400
-shaders\static_batching_debug.ps.cso	6648
+shaders\static_batching_debug.ps.cso	6996
 shaders\statictrans.ps.cso	2120
 shaders\statictrans.vs.cso	7132
 shaders\statictrans_col.ps.cso	4388
