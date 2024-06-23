@@ -145,6 +145,8 @@ rogue_crossbow augment 1
 	preadd max_ammo 2
 	max_stacks 2
 	locked_in_battlepass true
+
+	selectable true
 }
 
 rogue_crossbow augment 2
@@ -155,6 +157,8 @@ rogue_crossbow augment 2
 	rarity common
 	preadd speed 2000
 	max_stacks 1
+
+	selectable true
 }
 
 rogue_crossbow augment 3
@@ -166,6 +170,8 @@ rogue_crossbow augment 3
 	preadd rate -75
 	max_stacks 1
 	locked_in_battlepass true
+
+	selectable true
 }
 
 rogue_crossbow augment 4
@@ -175,6 +181,8 @@ rogue_crossbow augment 4
 	desc_translation_key crossbow_penetration_desc
 	rarity epic
 	overwrite penetrating true
+
+	selectable true
 }
 
 // //arena_crossbow augment 5
@@ -195,6 +203,8 @@ rogue_crossbow augment 7
 	rarity legendary
 	overwrite heal_amount_per_projectile_hit_on_friendly 25
 	locked_in_battlepass true
+
+	selectable true
 }
 
 rogue_crossbow augment 8
@@ -220,4 +230,6 @@ rogue_crossbow augment 8
 	overwrite shot_particles_attached cb_vents_l_artifact socket_went_l 0.03
 	overwrite shot_particles_attached cb_vents_r_artifact socket_went_r 0.03
 	locked_in_battlepass true
+
+	selectable true
 }

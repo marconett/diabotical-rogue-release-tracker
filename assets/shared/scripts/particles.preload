@@ -188,3 +188,6 @@ artifact_wrecking_ball
 overload_teleport_enter
 overload_loop_teleport
 chain_elec_100
+hologram_platform_v1
+target_ball_v1
+target_ball_hitmaker

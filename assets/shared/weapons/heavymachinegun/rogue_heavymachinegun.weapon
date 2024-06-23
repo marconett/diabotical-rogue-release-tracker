@@ -147,6 +147,8 @@ rogue_heavymachinegun augment 1
 	preadd max_ammo 6
 	max_stacks 2
 	locked_in_battlepass true
+
+	selectable true
 }
 
 rogue_heavymachinegun augment 2
@@ -157,6 +159,8 @@ rogue_heavymachinegun augment 2
 	rarity common
 	preadd reload -400
 	max_stacks 1
+
+	selectable true
 }
 
 rogue_heavymachinegun augment 3
@@ -169,6 +173,8 @@ rogue_heavymachinegun augment 3
 	preadd zoomed_spread -0.1 -0.1
 	max_stacks 1
 	locked_in_battlepass true
+
+	selectable true
 }
 
 rogue_heavymachinegun augment 4
@@ -179,6 +185,8 @@ rogue_heavymachinegun augment 4
 	rarity rare
 	preadd rate -10
 	max_stacks 2
+
+	selectable true
 }
 
 rogue_heavymachinegun augment 5
@@ -191,5 +199,7 @@ rogue_heavymachinegun augment 5
 	preadd critical_damage -1.75 -1.75
 	overwrite bursts 4 0.06
 	locked_in_battlepass true
+
+	selectable true
 }
 

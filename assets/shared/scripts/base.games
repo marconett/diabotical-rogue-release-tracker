@@ -132,7 +132,7 @@ game default
 
 	setting game_allow_player_downed 0
 
-	setting game_bot_count_max 30
+	setting game_bot_count_max 160
 
 	setting game_player_starting_rerolls 0
 

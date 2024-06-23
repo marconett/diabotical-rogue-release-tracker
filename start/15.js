@@ -1919,6 +1919,7 @@ const TRANSLATION_pt_BR = {
     spinner_9_weeble: "Deu de treino por hoje. Hora de relaxar.",
     rusty_9_weeble: "Não tá vendo que agora eu não posso?",
     chill_6_weeble: "Boas-vindas!",
+    on_break_weeble: "Foi mal, tô no intervalo agora. Não aperta o botão vermelho, por favor, ele ainda não tá pronto.",
     shop_title_default: "Loja",
     shop_title_upgrade: "Escolha sua melhoria",
     shop_title_suit: "Escolha seu traje",

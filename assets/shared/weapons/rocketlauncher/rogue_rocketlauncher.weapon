@@ -132,6 +132,8 @@ rogue_rocketlauncher augment 1
 	preadd default_ammo 2
 	preadd max_ammo 2
 	max_stacks 2
+
+	selectable true
 }
 
 // rogue_rocketlauncher augment 2
@@ -153,6 +155,8 @@ rogue_rocketlauncher augment 3
 	preadd ammo_per_reload 1
 	max_stacks 1
 	locked_in_battlepass true
+
+	selectable true
 }
 
 rogue_rocketlauncher augment 4
@@ -164,6 +168,8 @@ rogue_rocketlauncher augment 4
 	preadd splash_radius 20
 	max_stacks 1
 	locked_in_battlepass true
+
+	selectable true
 }
 
 rogue_rocketlauncher augment 5
@@ -174,6 +180,8 @@ rogue_rocketlauncher augment 5
 	rarity epic
 	direct_hit_upgrade 1
 	overshield_on_direct_hit 20
+
+	selectable true
 }
 
 rogue_rocketlauncher augment 6
@@ -183,6 +191,8 @@ rogue_rocketlauncher augment 6
 	desc_translation_key rocketlauncher_no_self_dmg_desc
 	rarity epic
 	overwrite self_damage 0
+
+	selectable true
 }
 
 rogue_rocketlauncher augment 7
@@ -196,6 +206,8 @@ rogue_rocketlauncher augment 7
 	overwrite effect_number_of_ticks 5
 	overwrite impact_effect arena_fire
 	locked_in_battlepass true
+
+	selectable true
 }
 
 rogue_rocketlauncher augment 8
@@ -212,4 +224,6 @@ rogue_rocketlauncher augment 8
 	overwrite pfx rocket_test_v2 socket_muzzle 1
 	overwrite shot_particles_attached weapon_rocket_muzzle_flash_artifact socket_muzzle 1
 	locked_in_battlepass true
+
+	selectable true
 }

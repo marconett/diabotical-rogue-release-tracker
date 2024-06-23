@@ -222,7 +222,8 @@
             "2"
         ],
         "max_stacks": "2",
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "3",
@@ -233,7 +234,8 @@
         "desc_translation_key": "revolver_kill_faster_reload_desc",
         "rarity": "rare",
         "reload_time_reduction_on_kill_ms": "500",
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "5",
@@ -246,7 +248,8 @@
         "overwrite": [
             "penetrating",
             "true"
-        ]
+        ],
+        "selectable": "true"
     },
     {
         "id": "6",
@@ -257,7 +260,8 @@
         "desc_translation_key": "revolver_last_bullet_extra_dmg_desc",
         "rarity": "epic",
         "last_bullet_hit_upgrade": "1",
-        "last_bullet_hit_damage_multiplier": "1.5"
+        "last_bullet_hit_damage_multiplier": "1.5",
+        "selectable": "true"
     },
     {
         "id": "7",
@@ -271,7 +275,20 @@
             "alternate_fire_enabled",
             "true"
         ],
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
+    },
+    {
+        "id": "9",
+        "parent_id": "rogue_revolver",
+        "weapon_type": "augment",
+        "name_translation_key": "revolver_unlimited_ammo",
+        "desc_translation_key": "revolver_unlimited_ammo_desc",
+        "overwrite": [
+            "reload",
+            "0"
+        ],
+        "rarity": "legendary"
     },
     {
         "id": "rogue_sword",
@@ -491,7 +508,8 @@
             "max_ammo",
             "5"
         ],
-        "max_stacks": "2"
+        "max_stacks": "2",
+        "selectable": "true"
     },
     {
         "id": "2",
@@ -505,7 +523,8 @@
             "zoomed_recoil_side",
             "-0.08"
         ],
-        "max_stacks": "1"
+        "max_stacks": "1",
+        "selectable": "true"
     },
     {
         "id": "3",
@@ -520,7 +539,8 @@
             "-500"
         ],
         "max_stacks": "1",
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "4",
@@ -534,7 +554,8 @@
             "rate",
             "-5"
         ],
-        "max_stacks": "2"
+        "max_stacks": "2",
+        "selectable": "true"
     },
     {
         "id": "5",
@@ -549,7 +570,8 @@
             "after_reload_fire_rate_increase_duration",
             "1"
         ],
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "6",
@@ -562,7 +584,8 @@
         "overwrite": [
             "consecutive_hits_required",
             "8"
-        ]
+        ],
+        "selectable": "true"
     },
     {
         "id": "7",
@@ -575,7 +598,8 @@
         "overwrite": [
             "impact_effect",
             "poison"
-        ]
+        ],
+        "selectable": "true"
     },
     {
         "id": "rogue_blaster",
@@ -698,7 +722,8 @@
             "overheat_limit",
             "40"
         ],
-        "max_stacks": "2"
+        "max_stacks": "2",
+        "selectable": "true"
     },
     {
         "id": "2",
@@ -712,7 +737,8 @@
             "heat_cool_per_sec",
             "20"
         ],
-        "max_stacks": "2"
+        "max_stacks": "2",
+        "selectable": "true"
     },
     {
         "id": "3",
@@ -727,7 +753,8 @@
             "250"
         ],
         "max_stacks": "1",
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "4",
@@ -741,7 +768,8 @@
             "splash_damage",
             "8"
         ],
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "5",
@@ -755,7 +783,8 @@
             "self_knockback_on_fire",
             "150"
         ],
-        "max_stacks": "1"
+        "max_stacks": "1",
+        "selectable": "true"
     },
     {
         "id": "rogue_submachinegun",
@@ -903,7 +932,8 @@
             "5"
         ],
         "max_stacks": "2",
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "2",
@@ -918,7 +948,8 @@
             "-0.7",
             "-0.7"
         ],
-        "max_stacks": "1"
+        "max_stacks": "1",
+        "selectable": "true"
     },
     {
         "id": "3",
@@ -933,7 +964,8 @@
             "0.025"
         ],
         "max_stacks": "1",
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "4",
@@ -947,7 +979,8 @@
             "reload",
             "-250"
         ],
-        "max_stacks": "1"
+        "max_stacks": "1",
+        "selectable": "true"
     },
     {
         "id": "5",
@@ -961,7 +994,8 @@
             "after_reload_fire_rate_increase_duration",
             "1"
         ],
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "6",
@@ -976,7 +1010,8 @@
             "artifact_submachine_barrel",
             "socket_muzzle",
             "1"
-        ]
+        ],
+        "selectable": "true"
     },
     {
         "id": "rogue_heavymachinegun",
@@ -1126,7 +1161,8 @@
             "6"
         ],
         "max_stacks": "2",
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "2",
@@ -1140,7 +1176,8 @@
             "reload",
             "-400"
         ],
-        "max_stacks": "1"
+        "max_stacks": "1",
+        "selectable": "true"
     },
     {
         "id": "3",
@@ -1156,7 +1193,8 @@
             "-0.1"
         ],
         "max_stacks": "1",
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "4",
@@ -1170,7 +1208,8 @@
             "rate",
             "-10"
         ],
-        "max_stacks": "2"
+        "max_stacks": "2",
+        "selectable": "true"
     },
     {
         "id": "5",
@@ -1190,7 +1229,8 @@
             "4",
             "0.06"
         ],
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "rogue_heavysniper",
@@ -1360,7 +1400,8 @@
             "2"
         ],
         "max_stacks": "2",
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "3",
@@ -1375,7 +1416,8 @@
             "-1"
         ],
         "max_stacks": "1",
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "4",
@@ -1389,7 +1431,8 @@
             "rate",
             "-200"
         ],
-        "max_stacks": "2"
+        "max_stacks": "2",
+        "selectable": "true"
     },
     {
         "id": "5",
@@ -1403,7 +1446,8 @@
             "penetrating",
             "true"
         ],
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "6",
@@ -1423,7 +1467,8 @@
             "socket_muzzle",
             "1"
         ],
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "7",
@@ -1437,7 +1482,8 @@
             "reload",
             "-400"
         ],
-        "max_stacks": "1"
+        "max_stacks": "1",
+        "selectable": "true"
     },
     {
         "id": "rogue_supershotgun",
@@ -1559,7 +1605,8 @@
             "2"
         ],
         "max_stacks": "2",
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "2",
@@ -1574,7 +1621,8 @@
             "-400"
         ],
         "max_stacks": "1",
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "4",
@@ -1589,7 +1637,8 @@
             "-1",
             "-1"
         ],
-        "max_stacks": "1"
+        "max_stacks": "1",
+        "selectable": "true"
     },
     {
         "id": "6",
@@ -1602,7 +1651,8 @@
         "overwrite": [
             "consecutive_hits_required",
             "11"
-        ]
+        ],
+        "selectable": "true"
     },
     {
         "id": "7",
@@ -1616,7 +1666,8 @@
             "heal_amount_per_projectile_hit_on_enemy",
             "1"
         ],
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "8",
@@ -1629,7 +1680,8 @@
         "overwrite": [
             "increased_damage_in_air",
             "0.25"
-        ]
+        ],
+        "selectable": "true"
     },
     {
         "id": "rogue_egun",
@@ -1767,7 +1819,8 @@
             "40"
         ],
         "max_stacks": "2",
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "2",
@@ -1781,7 +1834,8 @@
             "energy_recharge_per_sec",
             "40"
         ],
-        "max_stacks": "2"
+        "max_stacks": "2",
+        "selectable": "true"
     },
     {
         "id": "3",
@@ -1796,7 +1850,8 @@
             "2000"
         ],
         "max_stacks": "1",
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "5",
@@ -1809,7 +1864,8 @@
         "overwrite": [
             "duration",
             "4000"
-        ]
+        ],
+        "selectable": "true"
     },
     {
         "id": "6",
@@ -1823,7 +1879,8 @@
             "effect_damage",
             "20"
         ],
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "rogue_rocketlauncher",
@@ -1959,7 +2016,8 @@
             "max_ammo",
             "2"
         ],
-        "max_stacks": "2"
+        "max_stacks": "2",
+        "selectable": "true"
     },
     {
         "id": "3",
@@ -1974,7 +2032,8 @@
             "1"
         ],
         "max_stacks": "1",
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "4",
@@ -1989,7 +2048,8 @@
             "20"
         ],
         "max_stacks": "1",
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "5",
@@ -2000,7 +2060,8 @@
         "desc_translation_key": "rocketlauncher_overshield_on_direct_hit_desc",
         "rarity": "epic",
         "direct_hit_upgrade": "1",
-        "overshield_on_direct_hit": "20"
+        "overshield_on_direct_hit": "20",
+        "selectable": "true"
     },
     {
         "id": "6",
@@ -2013,7 +2074,8 @@
         "overwrite": [
             "self_damage",
             "0"
-        ]
+        ],
+        "selectable": "true"
     },
     {
         "id": "7",
@@ -2027,7 +2089,8 @@
             "impact_effect",
             "arena_fire"
         ],
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "8",
@@ -2043,7 +2106,8 @@
             "socket_muzzle",
             "1"
         ],
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "rogue_shaft",
@@ -2158,7 +2222,8 @@
             "overheat_limit",
             "300"
         ],
-        "max_stacks": "2"
+        "max_stacks": "2",
+        "selectable": "true"
     },
     {
         "id": "2",
@@ -2173,7 +2238,8 @@
             "250"
         ],
         "max_stacks": "2",
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "3",
@@ -2188,7 +2254,8 @@
             "100"
         ],
         "max_stacks": "1",
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "5",
@@ -2206,7 +2273,8 @@
             "damage",
             "4",
             "5"
-        ]
+        ],
+        "selectable": "true"
     },
     {
         "id": "6",
@@ -2218,7 +2286,8 @@
         "rarity": "legendary",
         "armor_break_upgrade": "1",
         "overshield_on_armor_break_amount": "15",
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "fists",
@@ -2362,7 +2431,8 @@
             "2"
         ],
         "max_stacks": "2",
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "2",
@@ -2376,7 +2446,8 @@
             "speed",
             "2000"
         ],
-        "max_stacks": "1"
+        "max_stacks": "1",
+        "selectable": "true"
     },
     {
         "id": "3",
@@ -2391,7 +2462,8 @@
             "-75"
         ],
         "max_stacks": "1",
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "4",
@@ -2404,7 +2476,8 @@
         "overwrite": [
             "penetrating",
             "true"
-        ]
+        ],
+        "selectable": "true"
     },
     {
         "id": "7",
@@ -2418,7 +2491,8 @@
             "heal_amount_per_projectile_hit_on_friendly",
             "25"
         ],
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "8",
@@ -2434,7 +2508,8 @@
             "socket_went_r",
             "0.03"
         ],
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "arena_left_hand",

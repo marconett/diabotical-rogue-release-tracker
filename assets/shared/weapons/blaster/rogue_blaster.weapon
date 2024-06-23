@@ -124,6 +124,8 @@ rogue_blaster augment 1
 	rarity common
 	preadd overheat_limit 40
 	max_stacks 2
+
+	selectable true
 }
 
 rogue_blaster augment 2
@@ -134,6 +136,8 @@ rogue_blaster augment 2
 	rarity common
 	preadd heat_cool_per_sec 20
 	max_stacks 2
+
+	selectable true
 }
 
 rogue_blaster augment 3
@@ -145,6 +149,8 @@ rogue_blaster augment 3
 	preadd speed 250
 	max_stacks 1
 	locked_in_battlepass true
+
+	selectable true
 }
 
 rogue_blaster augment 4 
@@ -157,6 +163,8 @@ rogue_blaster augment 4
 	overwrite min_splash_damage 4
 	overwrite splash_damage 8
 	locked_in_battlepass true
+
+	selectable true
 }
 
 rogue_blaster augment 5 
@@ -168,4 +176,6 @@ rogue_blaster augment 5
 
 	preadd self_knockback_on_fire 150
 	max_stacks 1
+
+	selectable true
 }

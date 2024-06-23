@@ -665,6 +665,7 @@ game rogue_hub
 	
 	setting game_unlimited_ammo	0
 	setting game_enable_roguelike 1
+	setting game_bot_count_max 160
 	
 	//true indicates which weapon(s) you start with
 	//the weapons in this list are the ones that will exist in the roguelike pool.

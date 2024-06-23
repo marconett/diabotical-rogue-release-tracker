@@ -5578,6 +5578,14 @@ const TRANSLATION_en_source = {
         text: "Your Ironclad has increased headshot damage.",
         engine: true
     },
+    revolver_unlimited_ammo: {
+        text: "Endless Chambers.",
+        engine: true
+    },
+    revolver_unlimited_ammo_desc: {
+        text: "Your Ironclad will never need to be reloaded.",
+        engine: true
+    },
     skill_lowers_cooldown: {
         text: "Cooldown Reduction",
         engine: true
@@ -6801,6 +6809,10 @@ const TRANSLATION_en_source = {
     },
     chill_6_weeble: {
         text: "Welcome!",
+        engine: true
+    },
+    on_break_weeble: {
+        text: "Sorry, I'm on break right now. Please don't touch the red button, it's work in progress.",
         engine: true
     },
     shop_title_default: {

@@ -123,6 +123,8 @@ rogue_machinegun augment 1
 	preadd default_ammo 5
 	preadd max_ammo 5
 	max_stacks 2
+
+	selectable true
 }
 
 rogue_machinegun augment 2
@@ -136,6 +138,8 @@ rogue_machinegun augment 2
 	preadd zoomed_recoil_up -0.31
 	preadd zoomed_recoil_side -0.08
 	max_stacks 1
+
+	selectable true
 }
 
 rogue_machinegun augment 3
@@ -147,6 +151,8 @@ rogue_machinegun augment 3
 	preadd reload -500
 	max_stacks 1
 	locked_in_battlepass true
+
+	selectable true
 }
 
 rogue_machinegun augment 4
@@ -157,6 +163,8 @@ rogue_machinegun augment 4
 	rarity rare
 	preadd rate -5
 	max_stacks 2
+
+	selectable true
 }
 
 rogue_machinegun augment 5
@@ -169,6 +177,8 @@ rogue_machinegun augment 5
 	overwrite after_reload_fire_rate_multiplier 0.90 //do we want a flat value change here instead? ask (viktor)
 	overwrite after_reload_fire_rate_increase_duration 1
 	locked_in_battlepass true
+
+	selectable true
 }
 
 rogue_machinegun augment 6
@@ -180,6 +190,8 @@ rogue_machinegun augment 6
 	overwrite duration 2000
     overwrite speed_boost_amount 20
 	overwrite consecutive_hits_required 8
+
+	selectable true
 }
 
 rogue_machinegun augment 7
@@ -191,4 +203,6 @@ rogue_machinegun augment 7
 	//overwrite first_shot_after_reload_poison true
 	overwrite effect_damage 2.5
 	overwrite impact_effect poison
+
+	selectable true
 }

@@ -125,6 +125,8 @@ rogue_shaft augment 1
 	rarity common
 	preadd overheat_limit 300
 	max_stacks 2
+
+	selectable true
 }
 
 rogue_shaft augment 2
@@ -136,6 +138,8 @@ rogue_shaft augment 2
 	preadd heat_cool_per_sec 250
 	max_stacks 2
 	locked_in_battlepass true
+
+	selectable true
 }
 
 rogue_shaft augment 3
@@ -149,6 +153,8 @@ rogue_shaft augment 3
 	preadd max_damage_distance 100
 	max_stacks 1
 	locked_in_battlepass true
+
+	selectable true
 }
 
 // rogue_shaft augment 4
@@ -170,6 +176,8 @@ rogue_shaft augment 5
 	preadd min_damage_distance -125
 	preadd max_damage_distance -125
 	overwrite damage 4 5
+
+	selectable true
 }
 
 rogue_shaft augment 6
@@ -181,4 +189,6 @@ rogue_shaft augment 6
 	armor_break_upgrade 1
 	overshield_on_armor_break_amount 15
 	locked_in_battlepass true
+
+	selectable true
 }

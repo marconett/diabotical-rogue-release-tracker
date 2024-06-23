@@ -136,6 +136,8 @@ rogue_egun augment 1
 	preadd maximum_energy 40
 	max_stacks 2
 	locked_in_battlepass true
+
+	selectable true
 }
 
 rogue_egun augment 2
@@ -146,6 +148,8 @@ rogue_egun augment 2
 	rarity common
 	preadd energy_recharge_per_sec 40
 	max_stacks 2
+
+	selectable true
 }
 
 rogue_egun augment 3
@@ -157,6 +161,8 @@ rogue_egun augment 3
 	preadd speed 2000
 	max_stacks 1
 	locked_in_battlepass true
+
+	selectable true
 }
 
 // rogue_egun augment 4
@@ -178,6 +184,8 @@ rogue_egun augment 5
 	overwrite heal_suppression_percentage 100
 	overwrite reapply_cooldown 10000
 	overwrite duration 4000
+
+	selectable true
 }
 
 rogue_egun augment 6
@@ -191,4 +199,6 @@ rogue_egun augment 6
 	overwrite duration 2000
 	overwrite effect_damage 20
 	locked_in_battlepass true
+
+	selectable true
 }

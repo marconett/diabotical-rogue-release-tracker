@@ -129,6 +129,8 @@ rogue_supershotgun augment 1
 	preadd max_ammo 2
 	max_stacks 2
 	locked_in_battlepass true
+
+	selectable true
 }
 
 rogue_supershotgun augment 2
@@ -140,6 +142,8 @@ rogue_supershotgun augment 2
 	preadd reload -400
 	max_stacks 1
 	locked_in_battlepass true
+
+	selectable true
 }
 
 // rogue_supershotgun augment 3
@@ -161,6 +165,8 @@ rogue_supershotgun augment 4
 	preadd spread -2 -2
 	preadd zoomed_spread -1 -1
 	max_stacks 1
+
+	selectable true
 }
 
 //rogue_supershotgun augment 5
@@ -186,6 +192,8 @@ rogue_supershotgun augment 6
 	overwrite duration 2000
     overwrite speed_boost_amount 20
 	overwrite consecutive_hits_required 11
+
+	selectable true
 }
 
 rogue_supershotgun augment 7
@@ -196,6 +204,8 @@ rogue_supershotgun augment 7
 	rarity legendary	
 	overwrite heal_amount_per_projectile_hit_on_enemy 1
 	locked_in_battlepass true
+
+	selectable true
 }
 
 rogue_supershotgun augment 8 
@@ -205,4 +215,6 @@ rogue_supershotgun augment 8
 	desc_translation_key shotgun_increased_damage_in_air_desc
 	rarity common
 	overwrite increased_damage_in_air 0.25
+
+	selectable true
 }

@@ -136,6 +136,8 @@ rogue_revolver augment 1
 	preadd max_ammo 2
 	max_stacks 2
 	locked_in_battlepass true
+
+	selectable true
 }
 
 // arena_revolver augment 2
@@ -156,6 +158,8 @@ rogue_revolver augment 3
 	rarity rare
 	reload_time_reduction_on_kill_ms 500
 	locked_in_battlepass true
+
+	selectable true
 }
 
 // arena_revolver augment 4
@@ -175,6 +179,8 @@ rogue_revolver augment 5
 	desc_translation_key revolver_penetration_desc
 	rarity epic
 	overwrite penetrating true
+
+	selectable true
 }
 
 rogue_revolver augment 6
@@ -185,6 +191,8 @@ rogue_revolver augment 6
 	rarity epic
 	last_bullet_hit_upgrade 1
 	last_bullet_hit_damage_multiplier 1.5
+
+	selectable true
 }
 
 rogue_revolver augment 7
@@ -195,6 +203,8 @@ rogue_revolver augment 7
 	rarity legendary
 	overwrite alternate_fire_enabled true
 	locked_in_battlepass true
+
+	selectable true
 }
 
 //rogue_revolver augment 8
@@ -206,3 +216,14 @@ rogue_revolver augment 7
 //
 //	overwrite critical_damage 35 45
 //}
+
+rogue_revolver augment 9
+{
+	name_translation_key revolver_unlimited_ammo
+	desc_translation_key revolver_unlimited_ammo_desc
+	overwrite unlimited_ammo true
+	overwrite reload 0
+	rarity legendary
+	
+	//purposefully not selectable
+}

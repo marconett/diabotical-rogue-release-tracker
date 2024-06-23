@@ -148,6 +148,8 @@ rogue_heavysniper augment 1
 	preadd max_ammo 2
 	max_stacks 2
 	locked_in_battlepass true
+
+	selectable true
 }
 
 // arena_heavysniper augment 2
@@ -170,6 +172,8 @@ rogue_heavysniper augment 3
 	preadd spread -1
 	max_stacks 1
 	locked_in_battlepass true
+
+	selectable true
 }
 
 rogue_heavysniper augment 4
@@ -180,6 +184,8 @@ rogue_heavysniper augment 4
 	rarity rare
 	preadd rate -200
 	max_stacks 2
+
+	selectable true
 }
 
 rogue_heavysniper augment 5
@@ -190,6 +196,8 @@ rogue_heavysniper augment 5
 	rarity legendary
 	overwrite penetrating true
 	locked_in_battlepass true
+
+	selectable true
 }
 
 rogue_heavysniper augment 6
@@ -212,6 +220,8 @@ rogue_heavysniper augment 6
 
 	overwrite pfx hs_artifact_barrel socket_muzzle 1
 	locked_in_battlepass true
+
+	selectable true
 }
 
 rogue_heavysniper augment 7 
@@ -222,4 +232,6 @@ rogue_heavysniper augment 7
 	rarity common
 	preadd reload -400
 	max_stacks 1
+
+	selectable true
 }
