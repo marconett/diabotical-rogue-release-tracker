@@ -1612,6 +1612,8 @@ const TRANSLATION_pt_BR = {
     revolver_secondary_rapid_fire_desc: "Usar o disparo secundário com a Rígida atira todas as balas em uma única rajada.",
     revolver_increased_headshot_damage: "Na Mosca",
     revolver_increased_headshot_damage_desc: "O dano de tiros na cabeça com a Rígida é maior ainda.",
+    revolver_unlimited_ammo: "Câmara Sem Fundo",
+    revolver_unlimited_ammo_desc: "A Rígida não precisa ser recarregada.",
     skill_lowers_cooldown: "Redução do Tempo de Recarga",
     skill_lowers_cooldown_desc: "Reduz o tempo de recarga da habilidade.",
     skill_increase_damage: "Aumento de Dano",

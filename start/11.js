@@ -1612,6 +1612,8 @@ const TRANSLATION_ru = {
     revolver_secondary_rapid_fire_desc: "При использовании альтернативного огня выпускает очередью все пули.",
     revolver_increased_headshot_damage: "В яблочко",
     revolver_increased_headshot_damage_desc: "Увеличивает урон в голову.",
+    revolver_unlimited_ammo: "Бесконечный барабан",
+    revolver_unlimited_ammo_desc: "Ваш револьвер Ironclad больше не нужно перезаряжать.",
     skill_lowers_cooldown: "Ускорение перезарядки",
     skill_lowers_cooldown_desc: "Ускоряет перезарядку способности.",
     skill_increase_damage: "Увеличение урона",

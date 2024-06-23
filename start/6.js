@@ -706,6 +706,10 @@ const TRANSLATION_en_source = {
     friends_list_action_remove_friend: {
         text: "Remove Friend"
     },
+    open_steam_profile: {
+        text: "Open Steam Profile",
+        engine: true
+    },
     friends_list_title_friend_request: {
         text: "Friend Request",
         engine: true
@@ -5579,7 +5583,7 @@ const TRANSLATION_en_source = {
         engine: true
     },
     revolver_unlimited_ammo: {
-        text: "Endless Chambers.",
+        text: "Endless Chambers",
         engine: true
     },
     revolver_unlimited_ammo_desc: {
@@ -6812,7 +6816,7 @@ const TRANSLATION_en_source = {
         engine: true
     },
     on_break_weeble: {
-        text: "Sorry, I'm on break right now. Please don't touch the red button, it's work in progress.",
+        text: "Sorry, I'm on break right now. Please don't touch the red button, it's a work in progress.",
         engine: true
     },
     shop_title_default: {

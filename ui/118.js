@@ -1019,6 +1019,15 @@ const friends_panel = new function() {
                         html.action_menu.appendChild(option_msg);
                         options.push(option_msg)
                     }
+                    if (Friends.state.source === CLIENT_SOURCE_NAME.STEAM && Friends.state.all[user_id].storefriend && Friends.state.all[user_id].client_user_id) {
+                        let option_msg = _createElement("div", "option");
+                        option_msg.appendChild(_createElement("div", ["accent", "positive"]));
+                        option_msg.appendChild(_createElement("div", "label", localize("open_steam_profile")));
+                        option_msg.dataset.name = "open-steam-profile";
+                        option_msg.dataset.user_id = user_id;
+                        html.action_menu.appendChild(option_msg);
+                        options.push(option_msg)
+                    }
                     if (Friends.state.all[user_id].game_id === GAME.active) {
                         if ((Friends.state.all[user_id].friendship_state == 0 || Friends.state.all[user_id].storefriend) && Friends.state.all[user_id].ingame) {
                             if (Friends.state.all[user_id].party_privacy == false && !(user_id in global_party.members)) {
@@ -1183,6 +1192,11 @@ const friends_panel = new function() {
             Friends.exec_mapped_user_id(el.dataset.user_id, (function(mapped_user_id) {
                 engine.call("message_user", mapped_user_id)
             }));
+            close_action_menu()
+        } else if (el.dataset.name === "open-steam-profile") {
+            if (el.dataset.user_id in Friends.state.all && Friends.state.all[el.dataset.user_id].client_user_id) {
+                engine.call("open_browser", "https://steamcommunity.com/profiles/" + Friends.state.all[el.dataset.user_id].client_user_id)
+            }
             close_action_menu()
         } else if (el.dataset.name === "join-party") {
             Friends.exec_mapped_user_id(el.dataset.user_id, (function(mapped_user_id) {
