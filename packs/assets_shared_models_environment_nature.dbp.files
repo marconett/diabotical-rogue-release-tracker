@@ -5544,8 +5544,16 @@ assets\shared\models\environment\nature\trees\tree_mangrove_root\shaders\moss_d.
 assets\shared\models\environment\nature\trees\tree_mangrove_root\shaders\moss_n.png.dds	1398276
 assets\shared\models\environment\nature\trees\tree_mangrove_root\shaders\moss_s.png.dds	1398276
 assets\shared\models\environment\nature\trees\tree_mangrove_root\tree_mangrove_root_02\mangroveroots.material	938
-assets\shared\models\environment\nature\trees\tree_mangrove_root\tree_mangrove_root_02\tree_mangrove_root_02.assets	372
+assets\shared\models\environment\nature\trees\tree_mangrove_root\tree_mangrove_root_02\tree_mangrove_root_02.assets	267
 assets\shared\models\environment\nature\trees\tree_mangrove_root\tree_mangrove_root_02\tree_mangrove_root_02_thumb.png.dds	22020
+assets\shared\models\environment\nature\trees\tree_mangrove_root\tree_mangrove_root_02\tree_mangrove_root_02_vercol-lod0.dbm	45397
+assets\shared\models\environment\nature\trees\tree_mangrove_root\tree_mangrove_root_02\tree_mangrove_root_02_vercol-lod0.fbx	73760
+assets\shared\models\environment\nature\trees\tree_mangrove_root\tree_mangrove_root_02\tree_mangrove_root_02_vercol-lod1.dbm	24025
+assets\shared\models\environment\nature\trees\tree_mangrove_root\tree_mangrove_root_02\tree_mangrove_root_02_vercol-lod1.fbx	46816
+assets\shared\models\environment\nature\trees\tree_mangrove_root\tree_mangrove_root_02\tree_mangrove_root_02_vercol-lod2.dbm	13213
+assets\shared\models\environment\nature\trees\tree_mangrove_root\tree_mangrove_root_02\tree_mangrove_root_02_vercol-lod2.fbx	33168
+assets\shared\models\environment\nature\trees\tree_mangrove_root\tree_mangrove_root_02\tree_mangrove_root_02_vercol-lod3.dbm	7837
+assets\shared\models\environment\nature\trees\tree_mangrove_root\tree_mangrove_root_02\tree_mangrove_root_02_vercol-lod3.fbx	27968
 assets\shared\models\environment\nature\trees\tree_mangrove_root\tree_mangrove_root_02\tree_mangrove_root_02_vercol.dbm	67198
 assets\shared\models\environment\nature\trees\tree_mangrove_root\tree_mangrove_root_02\tree_mangrove_root_02_vercol.fbx	117388
 assets\shared\models\environment\nature\turtleplant\shaders\turtleplant.material	785

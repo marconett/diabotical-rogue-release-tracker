@@ -205,6 +205,7 @@ shaders\tilebutterfly.vs.cso	7292
 shaders\tilecolor.ps.cso	2708
 shaders\tilecolorblend.ps.cso	9020
 shaders\tilecolorblend_mask.ps.cso	11416
+shaders\tilecolorblend_mask_hsl.ps.cso	15616
 shaders\tilecolorblend_reflection.ps.cso	9448
 shaders\tilecryst.ps.cso	11760
 shaders\tiledecal.ps.cso	9704
@@ -244,6 +245,7 @@ shaders\ui.ps.cso	452
 shaders\ui.vs.cso	492
 shaders\vertex_color.ps.cso	1152
 shaders\vertex_color.vs.cso	1504
+shaders\vertex_paint_debug.ps.cso	1096
 shaders\vfx_dash.ps.cso	1216
 shaders\vfx_force_grip.ps.cso	1204
 shaders\vfx_postprocess.vs.cso	1400

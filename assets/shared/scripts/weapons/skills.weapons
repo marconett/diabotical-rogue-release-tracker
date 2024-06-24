@@ -2171,6 +2171,12 @@ overload_orb augment 4
 	overwrite gravity 1
 }
 
+overload_orb augment 5
+{
+	overwrite knockback_self 0
+	overwrite ground_knockback_self 0
+}
+
 overload_orb_mini
 {
 	show_in_dev_console false 

@@ -6855,6 +6855,14 @@ const TRANSLATION_en_source = {
         text: "Affects All Suits",
         engine: true
     },
+    shop_upgrade_locked_in_skill_tree: {
+        text: "Locked in the Progression tree",
+        engine: true
+    },
+    shop_upgrade_locked_in_skill_tree_desc: {
+        text: "Hub-only until unlocked",
+        engine: true
+    },
     shop_ability_upgrade: {
         text: "Ability Upgrade",
         engine: true
@@ -6893,6 +6901,22 @@ const TRANSLATION_en_source = {
     },
     card_selection_popup: {
         text: "Select your suit",
+        engine: true
+    },
+    pack_selection: {
+        text: "Select your loadout",
+        engine: true
+    },
+    weapon_selection: {
+        text: "Weapon upgrades",
+        engine: true
+    },
+    ability_selection: {
+        text: "Ability upgrades",
+        engine: true
+    },
+    artifact_selection: {
+        text: "Artifacts",
         engine: true
     },
     show_loadout: {

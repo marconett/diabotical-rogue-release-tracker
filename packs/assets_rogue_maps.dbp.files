@@ -1,9 +1,9 @@
 assets\rogue\maps\a_hub-b.png	87551
 assets\rogue\maps\a_hub-c.png	130837
-assets\rogue\maps\a_hub-h.png	371187
+assets\rogue\maps\a_hub-h.png	371283
 assets\rogue\maps\a_hub-r.dds	12584020
-assets\rogue\maps\a_hub-t.png	237667
-assets\rogue\maps\a_hub.rbe	41580244
+assets\rogue\maps\a_hub-t.png	238744
+assets\rogue\maps\a_hub.rbe	41581726
 assets\rogue\maps\arcol-b.png	51526
 assets\rogue\maps\arcol-c.png	232507
 assets\rogue\maps\arcol-h.png	379833
@@ -35,10 +35,10 @@ assets\rogue\maps\titan-t.png	193769
 assets\rogue\maps\titan.rbe	53442090
 assets\rogue\maps\toya-b.png	81631
 assets\rogue\maps\toya-c.png	145083
-assets\rogue\maps\toya-h.png	403873
+assets\rogue\maps\toya-h.png	403864
 assets\rogue\maps\toya-r.dds	8389396
-assets\rogue\maps\toya-t.png	256400
-assets\rogue\maps\toya.rbe	56482589
+assets\rogue\maps\toya-t.png	249712
+assets\rogue\maps\toya.rbe	56482787
 assets\rogue\maps\wellspring-b.png	63935
 assets\rogue\maps\wellspring-c.png	126597
 assets\rogue\maps\wellspring-h.png	444978
