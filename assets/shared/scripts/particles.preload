@@ -90,8 +90,10 @@ jump_land_splash
 jets_for_feet
 jet_for_feet_burst
 shield_broken
-tick_fire
-tick_acid
+acid_tick
+acid_apply
+fire_tick
+fire_apply
 death_sparkles
 death_lightning
 jumppad
@@ -192,3 +194,4 @@ hologram_platform_v1
 target_ball_v1
 target_ball_hitmaker
 skill_teleport_out_signal
+env_display8

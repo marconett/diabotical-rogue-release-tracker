@@ -519,7 +519,7 @@ assets\shared\textures\trees\Diabotical_Rogue_Logo.svg	5193
 assets\shared\textures\trees\Rogue_Logo_SVG_1.svg	1015
 assets\shared\textures\trees\achievement_icon.png.dds	87556
 assets\shared\textures\trees\achievement_icon.svg	1376
-assets\shared\textures\trees\centre_bigbot.dds	349700
+assets\shared\textures\trees\centre_bigbot.png.dds	349700
 assets\shared\textures\trees\centre_chunk.png.dds	349700
 assets\shared\textures\trees\centre_eggbot.png.dds	349700
 assets\shared\textures\trees\centre_weesuit.png.dds	349700
@@ -527,6 +527,7 @@ assets\shared\textures\trees\left_panel_bigbot.dds	1398276
 assets\shared\textures\trees\left_panel_chunk.png.dds	1398276
 assets\shared\textures\trees\left_panel_eggbot.png.dds	1398276
 assets\shared\textures\trees\left_panel_scout.png.dds	1398276
+assets\shared\textures\trees\old_centre_bigbot.dds	349700
 assets\shared\textures\trees\skilltree_background_bluecyan_1920x1080.png.dds	2766372
 assets\shared\textures\trees\skilltree_background_bluecyan_3840x2160.png.dds	11060772
 assets\shared\textures\trees\skilltree_background_cyanpurple_1920x1080.png.dds	2766372
@@ -541,7 +542,6 @@ assets\shared\textures\trees\skilltree_bar_character_bonus_1024x128.png.dds	1750
 assets\shared\textures\trees\skilltree_bar_frame_1024x128.png.dds	175012
 assets\shared\textures\trees\skilltree_bar_total_points_1024x128.png.dds	175012
 assets\shared\textures\trees\skilltree_bar_weekly_bonus_1024x128.png.dds	175012
-assets\shared\textures\trees\skilltree_centre_bigbot_512x512.png.dds	349700
 assets\shared\textures\trees\skilltree_centre_eggbot_512x512.png.dds	349700
 assets\shared\textures\trees\skilltree_centre_weeble_512x512.png.dds	349700
 assets\shared\textures\trees\skilltree_centre_weesuit_512x512.png.dds	349700

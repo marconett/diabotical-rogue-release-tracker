@@ -22,6 +22,7 @@ game default
 	setting game_teamdeathmatch 0
 	setting game_survival 0
 
+	setting game_allow_respawns 1
 	setting game_enable_items 1
 	setting game_enable_drop 0
 	setting game_initial_item_time 0

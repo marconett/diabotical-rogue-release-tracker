@@ -1041,37 +1041,47 @@ const TRANSLATION_en_source = {
         engine: true
     },
     report_title: {
-        text: "Report Player"
+        text: "Report Player",
+        engine: true
     },
     report_thank_you: {
-        text: "Thank you for the report!"
+        text: "Thank you for the report!",
+        engine: true
     },
     report_label_player_name: {
-        text: "Player name"
+        text: "Player name",
+        engine: true
     },
     report_label_reason: {
-        text: "Report reason"
+        text: "Report reason",
+        engine: true
     },
     report_label_additional_info: {
-        text: "Additional info"
+        text: "Additional info",
+        engine: true
     },
     report_reason_offensive_sticker_setup: {
         text: "Offensive Sticker Setup"
     },
     report_reason_cheating: {
-        text: "Cheating"
+        text: "Cheating",
+        engine: true
     },
     report_reason_offensive_speech: {
-        text: "Offensive Speech"
+        text: "Offensive Speech",
+        engine: true
     },
     report_reason_bug_exploit: {
-        text: "Bug Exploit"
+        text: "Bug Exploit",
+        engine: true
     },
     report_reason_griefing: {
-        text: "Griefing"
+        text: "Griefing",
+        engine: true
     },
     report_reason_pause_abuse: {
-        text: "Pause abuse"
+        text: "Pause abuse",
+        engine: true
     },
     title_error: {
         text: "Error",

@@ -3,7 +3,7 @@ assets\shared\particles\effects.atlas.old	8033
 assets\shared\particles\effects_dave.atlas	29328
 assets\shared\particles\effects_extra.atlas	50595
 assets\shared\particles\effects_scott.atlas	4879
-assets\shared\particles\effects_sean.atlas	11784
+assets\shared\particles\effects_sean.atlas	11879
 assets\shared\particles\meshes\100_units_wind_mesh.dbm	23789
 assets\shared\particles\meshes\100_units_wind_mesh.fbx	38060
 assets\shared\particles\meshes\100unit.dbm	1575
@@ -815,6 +815,8 @@ assets\shared\particles\system_definitions\ability_temporary_shield_frontal2.par
 assets\shared\particles\system_definitions\ability_temporary_shield_impact.particles	7112
 assets\shared\particles\system_definitions\ability_temporary_shield_impact_break.particles	12849
 assets\shared\particles\system_definitions\ability_temporary_shield_impact_friendly.particles	7138
+assets\shared\particles\system_definitions\acid_apply.particles	9845
+assets\shared\particles\system_definitions\acid_tick.particles	9958
 assets\shared\particles\system_definitions\airstrike__cone_target_release.particles	2346
 assets\shared\particles\system_definitions\airstrike_bomb.particles	2964
 assets\shared\particles\system_definitions\airstrike_cluster_bomb_big.particles	3072
@@ -1346,6 +1348,7 @@ assets\shared\particles\system_definitions\explode_weeble_scale_2.particles	2704
 assets\shared\particles\system_definitions\explode_weeble_v2.particles	65571
 assets\shared\particles\system_definitions\extracharge_screen.particles	739
 assets\shared\particles\system_definitions\fb_dyn_trail.particles	1235
+assets\shared\particles\system_definitions\fire_apply.particles	6203
 assets\shared\particles\system_definitions\fire_cartoon1.particles	5236
 assets\shared\particles\system_definitions\fire_cube1.particles	11323
 assets\shared\particles\system_definitions\fire_dash_impact.particles	35855
@@ -1355,6 +1358,7 @@ assets\shared\particles\system_definitions\fire_impact_neon.particles	36021
 assets\shared\particles\system_definitions\fire_proj1.particles	9688
 assets\shared\particles\system_definitions\fire_screen.particles	2388
 assets\shared\particles\system_definitions\fire_test.particles	745
+assets\shared\particles\system_definitions\fire_tick.particles	6151
 assets\shared\particles\system_definitions\firefly.particles	2307
 assets\shared\particles\system_definitions\firegaultlet_impact_v2.particles	16958
 assets\shared\particles\system_definitions\firegauntlet_hand_loop.particles	7642
@@ -1834,7 +1838,7 @@ assets\shared\particles\system_definitions\poison_projectile_3.particles	24865
 assets\shared\particles\system_definitions\poison_projectile_4.particles	31113
 assets\shared\particles\system_definitions\poison_projectile_5.particles	27298
 assets\shared\particles\system_definitions\poison_projectile_6.particles	31145
-assets\shared\particles\system_definitions\poison_screen.particles	38310
+assets\shared\particles\system_definitions\poison_screen.particles	38671
 assets\shared\particles\system_definitions\poison_screen_test.particles	12146
 assets\shared\particles\system_definitions\poison_small_impact.particles	23475
 assets\shared\particles\system_definitions\poison_splash1.particles	4522
@@ -1860,6 +1864,11 @@ assets\shared\particles\system_definitions\rare_diamond_card_jewel_screen2.parti
 assets\shared\particles\system_definitions\rare_hexagon_card_jewel_screen.particles	34984
 assets\shared\particles\system_definitions\rare_hexagon_card_jewel_screen2.particles	25922
 assets\shared\particles\system_definitions\reap.particles	3356
+assets\shared\particles\system_definitions\rift.particles	4518
+assets\shared\particles\system_definitions\rift_1.particles	7311
+assets\shared\particles\system_definitions\rift_2.particles	20873
+assets\shared\particles\system_definitions\rift_3.particles	20005
+assets\shared\particles\system_definitions\rift_4.particles	19678
 assets\shared\particles\system_definitions\rl_muzzle_fire.particles	6339
 assets\shared\particles\system_definitions\rl_projectile_4.particles	17908
 assets\shared\particles\system_definitions\rl_projectile_5.particles	15373
@@ -2087,7 +2096,8 @@ assets\shared\particles\system_definitions\test_beam_1_3p.particles	11558
 assets\shared\particles\system_definitions\testing.particles	1417
 assets\shared\particles\system_definitions\texture_test1.particles	824
 assets\shared\particles\system_definitions\thurst_for_eggbot_v1.particles	27310
-assets\shared\particles\system_definitions\tick_acid.particles	9981
+assets\shared\particles\system_definitions\tick_acid.particles	10011
+assets\shared\particles\system_definitions\tick_acid_small.particles	10213
 assets\shared\particles\system_definitions\tick_fire.particles	6697
 assets\shared\particles\system_definitions\titan1.particles	1296
 assets\shared\particles\system_definitions\titan2.particles	3980
@@ -2274,14 +2284,6 @@ assets\shared\particles\system_definitions\wind_cone.particles	2499
 assets\shared\particles\system_definitions\wind_mesh.particles	3159
 assets\shared\particles\system_definitions\windsurf.particles	1727
 assets\shared\particles\system_definitions\wormhole1.particles	8450
-assets\shared\particles\system_definitions\zoh_flipbook.particles	10717
-assets\shared\particles\system_definitions\zoh_flipbook_2.particles	10445
-assets\shared\particles\system_definitions\zoh_flipbook_3.particles	13709
-assets\shared\particles\system_definitions\zoh_flipbook_4.particles	13454
-assets\shared\particles\system_definitions\zoh_flipbook_5.particles	12908
-assets\shared\particles\system_definitions\zoh_flipbook_6.particles	18404
-assets\shared\particles\system_definitions\zoh_flipbook_7.particles	26078
-assets\shared\particles\system_definitions\zoh_flipbook_8.particles	31928
 assets\shared\particles\system_thumbnails\1_big_heal_aura.png.dds	153972
 assets\shared\particles\system_thumbnails\1_big_heal_aura_v1.png.dds	153972
 assets\shared\particles\system_thumbnails\1_big_heal_aura_v8.png.dds	153972
@@ -2434,6 +2436,7 @@ assets\shared\particles\system_thumbnails\bigbot_leap_glove.png.dds	153972
 assets\shared\particles\system_thumbnails\bigbot_leap_glove_start.png.dds	153972
 assets\shared\particles\system_thumbnails\bigbot_leap_groundslam.png.dds	153972
 assets\shared\particles\system_thumbnails\bigbot_leap_jump.png.dds	153972
+assets\shared\particles\system_thumbnails\bigbot_shrink.png.dds	153972
 assets\shared\particles\system_thumbnails\birds1.png.dds	153972
 assets\shared\particles\system_thumbnails\birds2.png.dds	153972
 assets\shared\particles\system_thumbnails\black_hole.png.dds	153972
@@ -2671,6 +2674,8 @@ assets\shared\particles\system_thumbnails\enemy_beam_5.png.dds	153972
 assets\shared\particles\system_thumbnails\enemy_beam_7.png.dds	153972
 assets\shared\particles\system_thumbnails\enemy_beam_8.png.dds	153972
 assets\shared\particles\system_thumbnails\enemy_beam_9.png.dds	153972
+assets\shared\particles\system_thumbnails\enemy_blink.png.dds	153972
+assets\shared\particles\system_thumbnails\enemy_blink2.png.dds	153972
 assets\shared\particles\system_thumbnails\enemy_box1.png.dds	153972
 assets\shared\particles\system_thumbnails\enemy_box2.png.dds	153972
 assets\shared\particles\system_thumbnails\enemy_box3.png.dds	153972
@@ -3362,6 +3367,7 @@ assets\shared\particles\system_thumbnails\rare_diamond_card_jewel_screen2.png.dd
 assets\shared\particles\system_thumbnails\rare_hexagon_card_jewel_screen.png.dds	153972
 assets\shared\particles\system_thumbnails\rare_hexagon_card_jewel_screen2.png.dds	153972
 assets\shared\particles\system_thumbnails\rarity_drop_pfx_1.png.dds	153972
+assets\shared\particles\system_thumbnails\rift.png.dds	153972
 assets\shared\particles\system_thumbnails\rl_muzzle_fire.png.dds	153972
 assets\shared\particles\system_thumbnails\rl_projectile_4.png.dds	153972
 assets\shared\particles\system_thumbnails\rl_projectile_5.png.dds	153972
@@ -3583,6 +3589,7 @@ assets\shared\particles\system_thumbnails\swirltest3.png.dds	153972
 assets\shared\particles\system_thumbnails\t1g.png.dds	153972
 assets\shared\particles\system_thumbnails\tank_pack_screen.png.dds	153972
 assets\shared\particles\system_thumbnails\target_ball_hitmaker.png.dds	153972
+assets\shared\particles\system_thumbnails\target_ball_v1.png.dds	153972
 assets\shared\particles\system_thumbnails\tele_orb_v2.png.dds	153972
 assets\shared\particles\system_thumbnails\teleport.png.dds	153972
 assets\shared\particles\system_thumbnails\teleport_cast_3p.png.dds	153972
@@ -3881,7 +3888,7 @@ assets\shared\particles\textures\cardboarder2.png.dds	1398276
 assets\shared\particles\textures\cardboarder_03.png.dds	5592580
 assets\shared\particles\textures\cardboarder_04.png.dds	5592580
 assets\shared\particles\textures\cardboarder_05.png.dds	1398276
-assets\shared\particles\textures\cardboarder_06.png	1658975
+assets\shared\particles\textures\cardboarder_06.png.dds	5592580
 assets\shared\particles\textures\cardboarder_glow_03.png.dds	5592580
 assets\shared\particles\textures\cardboarder_glow_04.png.dds	5592580
 assets\shared\particles\textures\cardboarder_glow_05.png.dds	1398276
@@ -4450,6 +4457,7 @@ assets\shared\particles\textures\rgba_hexgon_01.png.dds	1398276
 assets\shared\particles\textures\rgba_mask_sharp.png.dds	1398276
 assets\shared\particles\textures\rgba_sparks_01.png.dds	1398276
 assets\shared\particles\textures\rgba_waves_01.png.dds	1398276
+assets\shared\particles\textures\rift_gradient_01.png.dds	699192
 assets\shared\particles\textures\ring.png.dds	349700
 assets\shared\particles\textures\ring_blur.png.dds	349700
 assets\shared\particles\textures\ring_blur_v2.png.dds	349700
