@@ -6081,7 +6081,7 @@ const TRANSLATION_en_source = {
         engine: true
     },
     skill_hookshot_a5: {
-        text: "Deaths Kiss",
+        text: "Death's Kiss",
         engine: true
     },
     skill_hookshot_a5_desc: {

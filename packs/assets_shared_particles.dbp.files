@@ -474,6 +474,7 @@ assets\shared\particles\meshes\plane2.dbm	1436
 assets\shared\particles\meshes\plane2.fbx	19360
 assets\shared\particles\meshes\plane2_1s.dbm	5345
 assets\shared\particles\meshes\plane2_1s.fbx	38928
+assets\shared\particles\meshes\plane2_2s_hipoly.fbx	231812
 assets\shared\particles\meshes\plane2_hipoly.dbm	51104
 assets\shared\particles\meshes\plane2_hipoly.fbx	40224
 assets\shared\particles\meshes\plane3.dbm	1413
@@ -931,7 +932,6 @@ assets\shared\particles\system_definitions\bigbot_leap_glove.particles	13806
 assets\shared\particles\system_definitions\bigbot_leap_glove_start.particles	13385
 assets\shared\particles\system_definitions\bigbot_leap_groundslam.particles	14721
 assets\shared\particles\system_definitions\bigbot_leap_jump.particles	1763
-assets\shared\particles\system_definitions\bigbot_shrink.particles	1834
 assets\shared\particles\system_definitions\birds1.particles	589
 assets\shared\particles\system_definitions\birds2.particles	590
 assets\shared\particles\system_definitions\black_hole.particles	21341
@@ -1624,6 +1624,7 @@ assets\shared\particles\system_definitions\jetpack_initial_thrust.particles	1895
 assets\shared\particles\system_definitions\jetpack_takeoff.particles	5332
 assets\shared\particles\system_definitions\jetpack_thrust.particles	6463
 assets\shared\particles\system_definitions\jets_for_feet.particles	28685
+assets\shared\particles\system_definitions\jets_for_platform.particles	16467
 assets\shared\particles\system_definitions\jump.particles	3138
 assets\shared\particles\system_definitions\jump_3p.particles	3153
 assets\shared\particles\system_definitions\jump_land.particles	4838
@@ -1865,10 +1866,6 @@ assets\shared\particles\system_definitions\rare_hexagon_card_jewel_screen.partic
 assets\shared\particles\system_definitions\rare_hexagon_card_jewel_screen2.particles	25922
 assets\shared\particles\system_definitions\reap.particles	3356
 assets\shared\particles\system_definitions\rift.particles	4518
-assets\shared\particles\system_definitions\rift_1.particles	7311
-assets\shared\particles\system_definitions\rift_2.particles	20873
-assets\shared\particles\system_definitions\rift_3.particles	20005
-assets\shared\particles\system_definitions\rift_4.particles	19678
 assets\shared\particles\system_definitions\rl_muzzle_fire.particles	6339
 assets\shared\particles\system_definitions\rl_projectile_4.particles	17908
 assets\shared\particles\system_definitions\rl_projectile_5.particles	15373
@@ -2053,6 +2050,7 @@ assets\shared\particles\system_definitions\starsystem.particles	23895
 assets\shared\particles\system_definitions\stuck_attacker_screen.particles	796
 assets\shared\particles\system_definitions\stuck_victim_screen.particles	600
 assets\shared\particles\system_definitions\study_1.particles	10622
+assets\shared\particles\system_definitions\study_14.particles	13506
 assets\shared\particles\system_definitions\study_2.particles	27636
 assets\shared\particles\system_definitions\study_3.particles	30717
 assets\shared\particles\system_definitions\study_4.particles	34885
@@ -2115,7 +2113,6 @@ assets\shared\particles\system_definitions\translocator_projectile.particles	501
 assets\shared\particles\system_definitions\translocator_teleport_enter.particles	16809
 assets\shared\particles\system_definitions\translocator_teleport_exit.particles	32370
 assets\shared\particles\system_definitions\translocator_teleport_exit_1p.particles	37429
-assets\shared\particles\system_definitions\valorant_test.particles	20291
 assets\shared\particles\system_definitions\vect_tornado.particles	851
 assets\shared\particles\system_definitions\vector_smoke1.particles	855
 assets\shared\particles\system_definitions\vectorfield1.particles	749
@@ -2273,6 +2270,9 @@ assets\shared\particles\system_definitions\weapon_shotgun_muzzle_3p.particles	13
 assets\shared\particles\system_definitions\weapon_shotgun_muzzle_flash.particles	1658
 assets\shared\particles\system_definitions\weapon_shotgun_muzzle_gold.particles	9999
 assets\shared\particles\system_definitions\weapon_shotgun_projectile.particles	10602
+assets\shared\particles\system_definitions\weapon_sticky_bomb.particles	5997
+assets\shared\particles\system_definitions\weapon_sticky_impact.particles	33611
+assets\shared\particles\system_definitions\weapon_sticky_projectile.particles	5471
 assets\shared\particles\system_definitions\weapon_submachinegun_impact.particles	19035
 assets\shared\particles\system_definitions\weapon_submachinegun_laser.particles	911
 assets\shared\particles\system_definitions\weapon_submachinegun_muzzle.particles	15935
@@ -2319,6 +2319,8 @@ assets\shared\particles\system_thumbnails\ability_temporary_shield_frontal2.png.
 assets\shared\particles\system_thumbnails\ability_temporary_shield_impact.png.dds	153972
 assets\shared\particles\system_thumbnails\ability_temporary_shield_impact_break.png.dds	153972
 assets\shared\particles\system_thumbnails\ability_temporary_shield_impact_friendly.png.dds	153972
+assets\shared\particles\system_thumbnails\acid_apply.png.dds	153972
+assets\shared\particles\system_thumbnails\acid_tick.png.dds	153972
 assets\shared\particles\system_thumbnails\airstrike__cone_target_release.png.dds	153972
 assets\shared\particles\system_thumbnails\airstrike_bomb.png.dds	153972
 assets\shared\particles\system_thumbnails\airstrike_cluster_bomb_big.png.dds	153972
@@ -2374,6 +2376,7 @@ assets\shared\particles\system_thumbnails\artefact_player.png.dds	153972
 assets\shared\particles\system_thumbnails\artefact_player_icon_screen.png.dds	153972
 assets\shared\particles\system_thumbnails\artefact_player_screen.png.dds	153972
 assets\shared\particles\system_thumbnails\artifact_ability_icon.png.dds	153972
+assets\shared\particles\system_thumbnails\artifact_ability_icon_v2.png.dds	153972
 assets\shared\particles\system_thumbnails\artifact_card_back_screen.png.dds	153972
 assets\shared\particles\system_thumbnails\artifact_card_back_screen2.png.dds	153972
 assets\shared\particles\system_thumbnails\artifact_card_back_screen3.png.dds	153972
@@ -3368,6 +3371,10 @@ assets\shared\particles\system_thumbnails\rare_hexagon_card_jewel_screen.png.dds
 assets\shared\particles\system_thumbnails\rare_hexagon_card_jewel_screen2.png.dds	153972
 assets\shared\particles\system_thumbnails\rarity_drop_pfx_1.png.dds	153972
 assets\shared\particles\system_thumbnails\rift.png.dds	153972
+assets\shared\particles\system_thumbnails\rift_1.png.dds	153972
+assets\shared\particles\system_thumbnails\rift_2.png.dds	153972
+assets\shared\particles\system_thumbnails\rift_3.png.dds	153972
+assets\shared\particles\system_thumbnails\rift_4.png.dds	153972
 assets\shared\particles\system_thumbnails\rl_muzzle_fire.png.dds	153972
 assets\shared\particles\system_thumbnails\rl_projectile_4.png.dds	153972
 assets\shared\particles\system_thumbnails\rl_projectile_5.png.dds	153972
@@ -3602,6 +3609,7 @@ assets\shared\particles\system_thumbnails\test_beam_1_3p.png.dds	153972
 assets\shared\particles\system_thumbnails\texture_test1.png.dds	153972
 assets\shared\particles\system_thumbnails\thurst_for_eggbot_v1.png.dds	153972
 assets\shared\particles\system_thumbnails\tick_acid.png.dds	153972
+assets\shared\particles\system_thumbnails\tick_acid_small.png.dds	153972
 assets\shared\particles\system_thumbnails\tick_fire.png.dds	153972
 assets\shared\particles\system_thumbnails\titan1.png.dds	153972
 assets\shared\particles\system_thumbnails\titan2.png.dds	153972
@@ -3805,6 +3813,9 @@ assets\shared\particles\system_thumbnails\weapon_shotgun_muzzle_3p.png.dds	15397
 assets\shared\particles\system_thumbnails\weapon_shotgun_muzzle_flash.png.dds	153972
 assets\shared\particles\system_thumbnails\weapon_shotgun_muzzle_gold.png.dds	153972
 assets\shared\particles\system_thumbnails\weapon_shotgun_projectile.png.dds	153972
+assets\shared\particles\system_thumbnails\weapon_sticky_bomb.png.dds	153972
+assets\shared\particles\system_thumbnails\weapon_sticky_impact.png.dds	153972
+assets\shared\particles\system_thumbnails\weapon_sticky_projectile.png.dds	153972
 assets\shared\particles\system_thumbnails\weapon_submachinegun_impact.png.dds	153972
 assets\shared\particles\system_thumbnails\weapon_submachinegun_laser.png.dds	153972
 assets\shared\particles\system_thumbnails\weapon_submachinegun_muzzle.png.dds	153972

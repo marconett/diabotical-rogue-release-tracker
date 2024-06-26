@@ -161,7 +161,7 @@ assets\shared\scripts\entities.assets	13085
 assets\shared\scripts\equipment.loot	17
 assets\shared\scripts\general.loot	5589
 assets\shared\scripts\new.games	20885
-assets\shared\scripts\particles.preload	4357
+assets\shared\scripts\particles.preload	4376
 assets\shared\scripts\passives.skills	5928
 assets\shared\scripts\passives_rogue.skills	7451
 assets\shared\scripts\rogue_classes.classdef	419
@@ -172,8 +172,6 @@ assets\shared\scripts\skills.games	0
 assets\shared\scripts\trees\backup_chunk.json	21348
 assets\shared\scripts\trees\backup_eggbot.json	21211
 assets\shared\scripts\trees\backup_scout.json	20818
-assets\shared\scripts\trees\g2_bigbot.json	20750
-assets\shared\scripts\trees\g2_bigbot_base.json	20722
 assets\shared\scripts\trees\g2_chunk.json	21077
 assets\shared\scripts\trees\g2_chunk_base.json	15766
 assets\shared\scripts\trees\g2_eggbot.json	21219
