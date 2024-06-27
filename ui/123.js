@@ -78,11 +78,6 @@ const credits_page = new function() {
     }, {
         type: "credit",
         title: "Engine Programmer",
-        name: "Viktor Rissanen",
-        br: false
-    }, {
-        type: "credit",
-        title: "Engine Programmer",
         name: "Marcus Cazzola",
         br: false
     }, {
@@ -114,6 +109,11 @@ const credits_page = new function() {
         type: "credit",
         title: "Design & Gameplay Programmer",
         name: "William Ask",
+        br: false
+    }, {
+        type: "credit",
+        title: "Design & Gameplay Programmer",
+        name: "Viktor Rissanen",
         br: false
     }, {
         type: "credit",

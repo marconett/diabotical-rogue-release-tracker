@@ -821,6 +821,34 @@ const TRANSLATION_en_source = {
         text: "Team {value} won the game",
         engine: true
     },
+    ingame_mvp: {
+        text: "MVP",
+        engine: true
+    },
+    ingame_team_mvp: {
+        text: "Team MVP",
+        engine: true
+    },
+    ingame_mvp_round_most_frags: {
+        text: "Fragged {count} {count, plural, one {player} other {players}} this round",
+        engine: true
+    },
+    ingame_mvp_round_most_assists: {
+        text: "Assisted {count} {count, plural, one {frag} other {frags}} this round",
+        engine: true
+    },
+    ingame_mvp_round_no_deaths: {
+        text: "Did not die this round",
+        engine: true
+    },
+    ingame_mvp_round_least_deaths: {
+        text: "Only died {count} {count, plural, one {time} other {times}} this round",
+        engine: true
+    },
+    ingame_mvp_round_selected_randomly: {
+        text: "Being an awesome player",
+        engine: true
+    },
     ingame_message_warmup: {
         text: "Warmup",
         engine: true
@@ -4514,7 +4542,8 @@ const TRANSLATION_en_source = {
         text: "Confirm All"
     },
     menu_button_cancel: {
-        text: "Cancel"
+        text: "Cancel",
+        engine: true
     },
     menu_button_filter: {
         text: "Filter"
@@ -4547,7 +4576,8 @@ const TRANSLATION_en_source = {
         text: "Friends only"
     },
     menu_button_send: {
-        text: "Send"
+        text: "Send",
+        engine: true
     },
     menu_button_equip: {
         text: "Equip selection"

@@ -196,3 +196,4 @@ target_ball_hitmaker
 skill_teleport_out_signal
 env_display8
 jets_for_platform
+env_light_fogbeam3
