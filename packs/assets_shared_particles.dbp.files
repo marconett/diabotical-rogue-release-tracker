@@ -1,9 +1,9 @@
 assets\shared\particles\effects.atlas	12410
 assets\shared\particles\effects.atlas.old	8033
-assets\shared\particles\effects_dave.atlas	29639
+assets\shared\particles\effects_dave.atlas	29853
 assets\shared\particles\effects_extra.atlas	50595
-assets\shared\particles\effects_scott.atlas	4879
-assets\shared\particles\effects_sean.atlas	11879
+assets\shared\particles\effects_scott.atlas	5027
+assets\shared\particles\effects_sean.atlas	12078
 assets\shared\particles\meshes\100_units_wind_mesh.dbm	23789
 assets\shared\particles\meshes\100_units_wind_mesh.fbx	38060
 assets\shared\particles\meshes\100unit.dbm	1575
@@ -991,8 +991,8 @@ assets\shared\particles\system_definitions\bullet_tgun.particles	833
 assets\shared\particles\system_definitions\button_galaxy_hover.particles	21094
 assets\shared\particles\system_definitions\button_galaxy_press.particles	21144
 assets\shared\particles\system_definitions\button_on_screen.particles	2453
-assets\shared\particles\system_definitions\button_pt_hover.particles	20949
-assets\shared\particles\system_definitions\button_pt_press.particles	20806
+assets\shared\particles\system_definitions\button_pt_hover.particles	20445
+assets\shared\particles\system_definitions\button_pt_press.particles	20870
 assets\shared\particles\system_definitions\cahrge_shield2.particles	7662
 assets\shared\particles\system_definitions\capture_crystal_cube.particles	7083
 assets\shared\particles\system_definitions\capture_cube.particles	12260
@@ -1327,7 +1327,7 @@ assets\shared\particles\system_definitions\env_waves4.particles	11933
 assets\shared\particles\system_definitions\env_waves4_curved.particles	23105
 assets\shared\particles\system_definitions\env_wavesplash1.particles	3020
 assets\shared\particles\system_definitions\env_window_fog.particles	3740
-assets\shared\particles\system_definitions\epic_capture_cube.particles	58126
+assets\shared\particles\system_definitions\epic_capture_cube.particles	44019
 assets\shared\particles\system_definitions\epic_capture_cube_end.particles	65279
 assets\shared\particles\system_definitions\epic_capture_cube_warmup.particles	147089
 assets\shared\particles\system_definitions\epic_card_back_screen.particles	52443
@@ -1366,7 +1366,7 @@ assets\shared\particles\system_definitions\firegauntlet_hand_shoot.particles	138
 assets\shared\particles\system_definitions\firegauntlet_impact.particles	16353
 assets\shared\particles\system_definitions\firegauntlet_projectile.particles	11572
 assets\shared\particles\system_definitions\flame_dash_test.particles	13886
-assets\shared\particles\system_definitions\flipbook_lightning.particles	23306
+assets\shared\particles\system_definitions\flipbook_lightning.particles	24205
 assets\shared\particles\system_definitions\flipbook_test.particles	16846
 assets\shared\particles\system_definitions\fly_water_ripple.particles	676
 assets\shared\particles\system_definitions\flying_pull.particles	57509
@@ -1651,7 +1651,7 @@ assets\shared\particles\system_definitions\landmine_projectile.particles	1576
 assets\shared\particles\system_definitions\laser_beam_screen_warmup.particles	9537
 assets\shared\particles\system_definitions\leaves_1.particles	1339
 assets\shared\particles\system_definitions\leaves_loop.particles	1358
-assets\shared\particles\system_definitions\legendary_capture_cube.particles	76721
+assets\shared\particles\system_definitions\legendary_capture_cube.particles	70086
 assets\shared\particles\system_definitions\legendary_capture_cube_end.particles	56888
 assets\shared\particles\system_definitions\legendary_capture_cube_screen.particles	724
 assets\shared\particles\system_definitions\legendary_capture_cube_warmup.particles	118324
@@ -1845,8 +1845,8 @@ assets\shared\particles\system_definitions\poison_screen_test.particles	12146
 assets\shared\particles\system_definitions\poison_small_impact.particles	23475
 assets\shared\particles\system_definitions\poison_splash1.particles	4522
 assets\shared\particles\system_definitions\projected_shield.particles	15525
-assets\shared\particles\system_definitions\pt_animated_background.particles	19840
-assets\shared\particles\system_definitions\pt_animated_foreground.particles	15793
+assets\shared\particles\system_definitions\pt_animated_background.particles	17871
+assets\shared\particles\system_definitions\pt_animated_foreground.particles	14253
 assets\shared\particles\system_definitions\pull_4.particles	11999
 assets\shared\particles\system_definitions\pull_6.particles	12051
 assets\shared\particles\system_definitions\pull_weeble_impact.particles	550
@@ -1915,7 +1915,7 @@ assets\shared\particles\system_definitions\screen_artifact_icon_scoreboard.parti
 assets\shared\particles\system_definitions\screen_artifact_iron_scoreboard_glare.particles	22066
 assets\shared\particles\system_definitions\screen_artifact_startup_animation.particles	14673
 assets\shared\particles\system_definitions\screen_icon_scoreboard.particles	31874
-assets\shared\particles\system_definitions\screen_tree_link.particles	12448
+assets\shared\particles\system_definitions\screen_tree_link.particles	8771
 assets\shared\particles\system_definitions\screen_tree_link_unlock.particles	14174
 assets\shared\particles\system_definitions\sg_tier_2_muzzle.particles	8570
 assets\shared\particles\system_definitions\shadow_laser_beam.particles	58326
@@ -2427,11 +2427,13 @@ assets\shared\particles\system_thumbnails\beam_impact_1.png.dds	153972
 assets\shared\particles\system_thumbnails\beam_rainbow.png.dds	153972
 assets\shared\particles\system_thumbnails\beam_v1.png.dds	153972
 assets\shared\particles\system_thumbnails\big_bomb_screen.png.dds	153972
+assets\shared\particles\system_thumbnails\bigbot_arm1fx_loop.png.dds	153972
 assets\shared\particles\system_thumbnails\bigbot_groundslam.png.dds	153972
 assets\shared\particles\system_thumbnails\bigbot_groundslam_cascade.png.dds	153972
 assets\shared\particles\system_thumbnails\bigbot_groundslam_cascade_v2.png.dds	153972
 assets\shared\particles\system_thumbnails\bigbot_groundslam_start.png.dds	153972
 assets\shared\particles\system_thumbnails\bigbot_groundslam_v2.png.dds	153972
+assets\shared\particles\system_thumbnails\bigbot_handfx_loop.png.dds	153972
 assets\shared\particles\system_thumbnails\bigbot_leap_glove.png.dds	153972
 assets\shared\particles\system_thumbnails\bigbot_leap_glove_start.png.dds	153972
 assets\shared\particles\system_thumbnails\bigbot_leap_groundslam.png.dds	153972
@@ -3833,6 +3835,8 @@ assets\shared\particles\textures\4_fire_diss_v1.png.dds	1398276
 assets\shared\particles\textures\ammo_boxes_d.png.dds	1398276
 assets\shared\particles\textures\anime_lens_flares_v2.png.dds	349700
 assets\shared\particles\textures\aringtest1.png.dds	349700
+assets\shared\particles\textures\armfx_1.png.dds	699192
+assets\shared\particles\textures\armfx_2.png.dds	699192
 assets\shared\particles\textures\artichoke_leaf_single_d.png.dds	1398276
 assets\shared\particles\textures\artichoke_leaf_single_mask.png.dds	349700
 assets\shared\particles\textures\basic_cloud.png.dds	5592580
@@ -4134,6 +4138,8 @@ assets\shared\particles\textures\fb_fire_cycle_end.png.dds	5592580
 assets\shared\particles\textures\fb_floor_smoke_v1.png.dds	1398276
 assets\shared\particles\textures\fb_floor_smoke_v2.png.dds	699236
 assets\shared\particles\textures\fb_ground_lightning.png	213411
+assets\shared\particles\textures\fb_ground_lightning_v2.png.dds	2796388
+assets\shared\particles\textures\fb_ground_lightning_v3.png.dds	2796388
 assets\shared\particles\textures\fb_impacts_v1.png.dds	1398276
 assets\shared\particles\textures\fb_impacts_v3.png.dds	1398276
 assets\shared\particles\textures\fb_lighting_climb.png.dds	5592580
@@ -4145,6 +4151,7 @@ assets\shared\particles\textures\fb_lightning_push_v6.png.dds	2796388
 assets\shared\particles\textures\fb_lightning_spin.png.dds	1398276
 assets\shared\particles\textures\fb_lightning_spin_v1.png.dds	5592580
 assets\shared\particles\textures\fb_lightning_spin_v2.png.dds	5592580
+assets\shared\particles\textures\fb_lightning_strike_02.png.dds	2796344
 assets\shared\particles\textures\fb_line_lightning.png.dds	2796388
 assets\shared\particles\textures\fb_loop_lightning.png.dds	5592580
 assets\shared\particles\textures\fb_multi_burst_diss.png.dds	1398276

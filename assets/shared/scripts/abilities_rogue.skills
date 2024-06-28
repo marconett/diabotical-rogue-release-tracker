@@ -1781,6 +1781,7 @@ skill 40001
 	show_in_dev_console false
 	selectable false
 	category movement
+	required_class rogue_eggbot
 
 	cooldown 0.5
 	charge_grant_time 3.0

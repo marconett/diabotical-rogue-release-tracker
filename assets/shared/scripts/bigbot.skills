@@ -1,0 +1,158 @@
+skill 20027
+{
+    name_translation_key skill_shield_throw
+    desc_translation_key skill_shield_throw_desc
+    required_class rogue_bigbot
+
+    weapon throwing_shield
+    selectable false
+    cooldown 10
+}
+
+skill 20027 augment 1
+{
+	locked_in_battlepass true
+	name_translation_key skill_shield_throw_a1
+	desc_translation_key skill_shield_throw_a1_desc
+	rarity rare
+
+	//Travel back upgrade
+}
+
+skill 20027 augment 2
+{
+	locked_in_battlepass true
+	name_translation_key skill_shield_throw_a2
+	desc_translation_key skill_shield_throw_a2_desc
+	rarity legendary
+	overwrite rebound true
+	//Bounce upgrade
+}
+
+skill 20027 augment 3
+{
+	locked_in_battlepass true
+	name_translation_key skill_shield_throw_a3
+	desc_translation_key skill_shield_throw_a3_desc
+	rarity legendary
+	
+	//Projetile speed
+}
+
+skill 20027 augment 4
+{
+	locked_in_battlepass true
+	name_translation_key skill_shield_throw_a4
+	desc_translation_key skill_shield_throw_a4_desc
+	rarity rare
+	
+	preadd cooldown -2
+	max_stacks 2
+}
+skill 20028
+{
+	name_translation_key skill_big_shield
+	desc_translation_key skill_big_shield_desc
+	required_class rogue_bigbot
+
+	prevent_cooldown_on_initial_fire true
+	selectable false
+	cooldown 15
+
+	damage 750 //shield health
+	radius 0.75 //movement modifier
+}
+
+skill 20028 augment 1
+{
+	locked_in_battlepass true
+	name_translation_key skill_big_shield_a1
+	desc_translation_key skill_big_shield_a1_desc
+	rarity epic
+
+	//Reflect upgrade
+}
+
+skill 20028 augment 2
+{
+	locked_in_battlepass true
+	name_translation_key skill_big_shield_a2
+	desc_translation_key skill_big_shield_a2_desc
+	rarity legendary
+
+	//Overshield on hit with depleting shield when held
+}
+
+skill 20029
+{
+	name_translation_key skill_shield_charge
+	desc_translation_key skill_shield_charge_desc
+	required_class rogue_bigbot
+
+	selectable false
+	cooldown 15
+}
+
+skill 20029 augment 1
+{
+	locked_in_battlepass true
+	name_translation_key skill_shield_charge_a1
+	desc_translation_key skill_shield_charge_a1_desc
+	rarity epic
+
+	//Fast turn at the start of charge
+}
+
+skill 20029 augment 2
+{
+	locked_in_battlepass true
+	name_translation_key skill_shield_charge_a2
+	desc_translation_key skill_shield_charge_a2_desc
+	rarity legendary
+
+	//Slam at the end of charge that gives overshield for each enemy hit
+}
+
+skill 20030 
+{
+	name_translation_key skill_punch
+	desc_translation_key skill_punch_desc
+	selectable false
+
+	max_charges 1
+}
+
+skill 40003 
+{
+	name movement_transmutation
+	name_translation_key skill_movement_transmutation
+	name_translation_desc skill_movement_transmutation_desc
+	// prevent_cooldown_on_initial_fire true
+
+	hud_icon images/skill_icons/movement_skill_transmutation_small.png
+	hud_icon2 images/skill_icons/movement_skill_transmutation_big.png
+
+	selectable false
+	show_in_dev_console false
+	cooldown 5.0
+
+	artifact_enabled false
+	homing_module_enabled false
+}
+
+skill 40003 augment 1 
+{
+	name_translation_key movement_transmutation_a1
+	name_translation_desc movement_transmutation_a1_desc
+	selectable true
+
+	overwrite artifact_enabled true
+}
+
+skill 40003 augment 2
+{
+	name_translation_key movement_transmutation_a2
+	name_translation_desc movement_transmutation_a2_desc
+
+	overwrite homing_module_enabled true
+}

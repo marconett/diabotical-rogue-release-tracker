@@ -197,3 +197,6 @@ skill_teleport_out_signal
 env_display8
 jets_for_platform
 env_light_fogbeam3
+skill_shield_throw_projectile
+skill_shield_throw_impact
+bigbot_arm1fx_loop
