@@ -2175,6 +2175,8 @@ overload_orb augment 5
 {
 	overwrite knockback_self 0
 	overwrite ground_knockback_self 0
+	overwrite missile_particles overload_chest_orb_rocket_warp
+	overwrite impact_particles ability_overload_impact_rocket_warp
 }
 
 overload_orb_mini

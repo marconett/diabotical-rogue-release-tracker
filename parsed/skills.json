@@ -274,7 +274,8 @@
         "desc_translation_key": "currency_earn_rate_increase_a1_desc",
         "preadd": "power 5",
         "max_stacks": "4",
-        "rarity": "epic"
+        "rarity": "epic",
+        "selectable": "false"
     },
     {
         "id": "30010",
@@ -550,7 +551,8 @@
         "name_translation_key": "skill_lowers_cooldown",
         "desc_translation_key": "skill_lowers_cooldown_desc",
         "preadd": "cooldown -2",
-        "max_stacks": "2"
+        "max_stacks": "2",
+        "selectable": "true"
     },
     {
         "id": "2",
@@ -560,7 +562,8 @@
         "desc_translation_key": "skill_increase_radius_desc",
         "preadd": "radius 100",
         "rarity": "rare",
-        "max_stacks": "1"
+        "max_stacks": "1",
+        "selectable": "true"
     },
     {
         "id": "3",
@@ -570,7 +573,8 @@
         "name_translation_key": "skill_smoke_weeble_a3",
         "desc_translation_key": "skill_smoke_weeble_a3_desc",
         "rarity": "legendary",
-        "overwrite": "grenade_enable_periodic_damage true"
+        "overwrite": "grenade_enable_periodic_damage true",
+        "selectable": "true"
     },
     {
         "id": "4",
@@ -581,7 +585,8 @@
         "rarity": "epic",
         "overwrite": "damage_boost 1.2",
         "skill_prereq": "augment 5",
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "5",
@@ -590,7 +595,8 @@
         "name_translation_key": "skill_smoke_weeble_a5",
         "desc_translation_key": "skill_smoke_weeble_a5_desc",
         "rarity": "legendary",
-        "preadd": "cloak_duration 5"
+        "preadd": "cloak_duration 5",
+        "selectable": "true"
     },
     {
         "id": "6",
@@ -600,7 +606,8 @@
         "desc_translation_key": "skill_increase_duration_desc",
         "locked_in_battlepass": "true",
         "rarity": "rare",
-        "preadd": "duration 5"
+        "preadd": "duration 5",
+        "selectable": "true"
     },
     {
         "id": "7",
@@ -610,7 +617,8 @@
         "name_translation_key": "skill_smoke_weeble_a7",
         "desc_translation_key": "skill_smoke_weeble_a7_desc",
         "rarity": "epic",
-        "preadd": "stun_duration 5"
+        "preadd": "stun_duration 5",
+        "selectable": "true"
     },
     {
         "id": "20003",
@@ -741,7 +749,8 @@
         "name_translation_key": "skill_lowers_cooldown",
         "desc_translation_key": "skill_lowers_cooldown_desc",
         "preadd": "cooldown -2",
-        "max_stacks": "2"
+        "max_stacks": "2",
+        "selectable": "true"
     },
     {
         "id": "2",
@@ -753,7 +762,8 @@
         "desc_translation_key": "skill_explosive_weeble_a2_desc",
         "rarity": "legendary",
         "postadd": "cooldown 5",
-        "multiply": "damage 0.5"
+        "multiply": "damage 0.5",
+        "selectable": "true"
     },
     {
         "id": "3",
@@ -761,7 +771,8 @@
         "skill_type": "augment",
         "name_translation_key": "skill_increase_knockback",
         "desc_translation_key": "skill_increase_knockback_desc",
-        "preadd": "knockback 50"
+        "preadd": "knockback 50",
+        "selectable": "true"
     },
     {
         "id": "4",
@@ -770,7 +781,8 @@
         "name_translation_key": "skill_explosive_weeble_a4",
         "desc_translation_key": "skill_explosive_weeble_a4_desc",
         "preadd": "cluster_count 3",
-        "rarity": "legendary"
+        "rarity": "legendary",
+        "selectable": "true"
     },
     {
         "id": "5",
@@ -780,7 +792,8 @@
         "desc_translation_key": "skill_increase_damage_desc",
         "weapon_augment": "2",
         "max_stacks": "2",
-        "rarity": "rare"
+        "rarity": "rare",
+        "selectable": "true"
     },
     {
         "id": "6",
@@ -791,7 +804,8 @@
         "weapon_augment": "4",
         "rarity": "rare",
         "max_stacks": "1",
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "7",
@@ -801,7 +815,8 @@
         "desc_translation_key": "skill_explosive_weeble_a7_desc",
         "rarity": "epic",
         "overwrite": "damage_over_time 3",
-        "max_stacks": "1"
+        "max_stacks": "1",
+        "selectable": "true"
     },
     {
         "id": "20006",
@@ -841,7 +856,8 @@
         "preadd": "charge_grant_time -1",
         "max_stacks": "2",
         "name_translation_key": "skill_lowers_cooldown",
-        "desc_translation_key": "skill_lowers_cooldown_desc"
+        "desc_translation_key": "skill_lowers_cooldown_desc",
+        "selectable": "true"
     },
     {
         "id": "2",
@@ -851,7 +867,8 @@
         "overwrite": "hookshot_swing_enabled true",
         "max_stacks": "1",
         "name_translation_key": "skill_hookshot_a2",
-        "desc_translation_key": "skill_hookshot_a2_desc"
+        "desc_translation_key": "skill_hookshot_a2_desc",
+        "selectable": "true"
     },
     {
         "id": "3",
@@ -861,7 +878,8 @@
         "preadd": "max_charges 1",
         "max_stacks": "1",
         "name_translation_key": "skill_increase_max_charges",
-        "desc_translation_key": "skill_increase_max_charges_desc"
+        "desc_translation_key": "skill_increase_max_charges_desc",
+        "selectable": "true"
     },
     {
         "id": "5",
@@ -872,7 +890,9 @@
         "rarity": "legendary",
         "max_stacks": "1",
         "name_translation_key": "skill_hookshot_a5",
-        "desc_translation_key": "skill_hookshot_a5_desc"
+        "desc_translation_key": "skill_hookshot_a5_desc",
+        "selectable": "true",
+        "excluded_game_mode": "rogue_hub"
     },
     {
         "id": "7",
@@ -882,7 +902,8 @@
         "desc_translation_key": "skill_hookshot_a7_desc",
         "rarity": "artifact",
         "overwrite": "charge_grant_time 4",
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "20007",
@@ -1008,7 +1029,8 @@
         "desc_translation_key": "skill_increase_range_desc",
         "max_stacks": "1",
         "preadd": "detach_range 250",
-        "rarity": "rare"
+        "rarity": "rare",
+        "selectable": "true"
     },
     {
         "id": "2",
@@ -1017,7 +1039,8 @@
         "preadd": "max_energy 50",
         "name_translation_key": "skill_increase_max_energy",
         "desc_translation_key": "skill_increase_max_energy_desc",
-        "max_stacks": "2"
+        "max_stacks": "2",
+        "selectable": "true"
     },
     {
         "id": "3",
@@ -1027,7 +1050,8 @@
         "name_translation_key": "skill_healing_orb_a3",
         "desc_translation_key": "skill_healing_orb_a3_desc",
         "max": "stacks 1",
-        "rarity": "epic"
+        "rarity": "epic",
+        "selectable": "true"
     },
     {
         "id": "4",
@@ -1038,7 +1062,8 @@
         "name_translation_key": "skill_healing_orb_a4",
         "desc_translation_key": "skill_healing_orb_a4_desc",
         "max_stacks": "2",
-        "rarity": "common"
+        "rarity": "common",
+        "selectable": "true"
     },
     {
         "id": "5",
@@ -1048,7 +1073,8 @@
         "desc_translation_key": "skill_healing_orb_a5_desc",
         "max_stacks": "1",
         "rarity": "epic",
-        "overshield_amount": "1"
+        "overshield_amount": "1",
+        "selectable": "true"
     },
     {
         "id": "7",
@@ -1058,7 +1084,8 @@
         "name_translation_key": "skill_healing_orb_a7",
         "desc_translation_key": "skill_healing_orb_a7_desc",
         "rarity": "legendary",
-        "preadd": "chain_max_targets 5"
+        "preadd": "chain_max_targets 5",
+        "selectable": "true"
     },
     {
         "id": "20010",
@@ -1121,7 +1148,8 @@
         "preadd": "leap_slam_forward_force 100",
         "rarity": "rare",
         "name_translation_key": "skill_leap_slam_a1",
-        "desc_translation_key": "skill_leap_slam_a1_desc"
+        "desc_translation_key": "skill_leap_slam_a1_desc",
+        "selectable": "true"
     },
     {
         "id": "2",
@@ -1130,7 +1158,8 @@
         "preadd": "charge_grant_time -1",
         "name_translation_key": "skill_lowers_cooldown",
         "desc_translation_key": "skill_lowers_cooldown_desc",
-        "max_stacks": "2"
+        "max_stacks": "2",
+        "selectable": "true"
     },
     {
         "id": "3",
@@ -1139,7 +1168,8 @@
         "name_translation_key": "skill_leap_slam_a3",
         "desc_translation_key": "skill_leap_slam_a3_desc",
         "overwrite": "leap_slam_mid_air true",
-        "rarity": "epic"
+        "rarity": "epic",
+        "selectable": "true"
     },
     {
         "id": "4",
@@ -1150,7 +1180,8 @@
         "desc_translation_key": "skill_leap_slam_a4_desc",
         "overwrite": "shield_enabled true",
         "preadd": "shootable_hp 50",
-        "rarity": "legendary"
+        "rarity": "legendary",
+        "selectable": "true"
     },
     {
         "id": "5",
@@ -1161,7 +1192,8 @@
         "desc_translation_key": "skill_leap_slam_a5_desc",
         "rarity": "artifact",
         "overwrite": "artifact_enabled true",
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "20012",
@@ -1261,7 +1293,8 @@
         "preadd": "cooldown -3",
         "name_translation_key": "skill_lowers_cooldown",
         "desc_translation_key": "skill_lowers_cooldown_desc",
-        "max_stacks": "2"
+        "max_stacks": "2",
+        "selectable": "true"
     },
     {
         "id": "2",
@@ -1272,7 +1305,8 @@
         "name_translation_key": "skill_increase_radius",
         "desc_translation_key": "skill_increase_radius_desc",
         "rarity": "rare",
-        "max_stacks": "1"
+        "max_stacks": "1",
+        "selectable": "true"
     },
     {
         "id": "3",
@@ -1282,7 +1316,8 @@
         "name_translation_key": "skill_increase_duration",
         "desc_translation_key": "skill_increase_duration_desc",
         "rarity": "rare",
-        "max_stacks": "1"
+        "max_stacks": "1",
+        "selectable": "true"
     },
     {
         "id": "4",
@@ -1293,7 +1328,8 @@
         "desc_translation_key": "skill_heal_aura_a4_desc",
         "preadd": "movement_speed_boost 60",
         "rarity": "legendary",
-        "max_stacks": "1"
+        "max_stacks": "1",
+        "selectable": "true"
     },
     {
         "id": "5",
@@ -1304,7 +1340,8 @@
         "desc_translation_key": "skill_heal_aura_a5_desc",
         "preadd": "knockback 500",
         "rarity": "epic",
-        "max_stacks": "1"
+        "max_stacks": "1",
+        "selectable": "true"
     },
     {
         "id": "7",
@@ -1314,7 +1351,8 @@
         "desc_translation_key": "skill_increase_healing_desc",
         "rarity": "common",
         "max_stacks": "2",
-        "preadd": "heal_amount 2"
+        "preadd": "heal_amount 2",
+        "selectable": "true"
     },
     {
         "id": "8",
@@ -1324,7 +1362,8 @@
         "desc_translation_key": "skill_heal_aura_a8_desc",
         "rarity": "rare",
         "max_stacks": "1",
-        "overwrite": "reset true //Reset armor regen"
+        "overwrite": "reset true //Reset armor regen",
+        "selectable": "true"
     },
     {
         "id": "20015",
@@ -1356,7 +1395,8 @@
         "desc_translation_key": "skill_lowers_cooldown_desc",
         "preadd": "cooldown -2",
         "max_stacks": "2",
-        "rarity": "common"
+        "rarity": "common",
+        "selectable": "true"
     },
     {
         "id": "3",
@@ -1367,7 +1407,8 @@
         "desc_translation_key": "skill_increase_knockback_desc",
         "weapon_augment": "1",
         "max_stacks": "1",
-        "rarity": "rare"
+        "rarity": "rare",
+        "selectable": "true"
     },
     {
         "id": "4",
@@ -1378,7 +1419,8 @@
         "name_translation_key": "skill_nexus_bomb_a4",
         "desc_translation_key": "skill_nexus_bomb_a4_desc",
         "overwrite": "radius 300 //the search radius for the projectile",
-        "rarity": "legendary"
+        "rarity": "legendary",
+        "selectable": "true"
     },
     {
         "id": "5",
@@ -1389,7 +1431,8 @@
         "desc_translation_key": "skill_increase_power_desc",
         "preadd": "power 0.2",
         "max_stacks": "2",
-        "rarity": "common"
+        "rarity": "common",
+        "selectable": "true"
     },
     {
         "id": "6",
@@ -1400,7 +1443,8 @@
         "name_translation_key": "skill_nexus_bomb_a6",
         "desc_translation_key": "skill_nexus_bomb_a6_desc",
         "rarity": "epic",
-        "preadd": "damage_over_time 5"
+        "preadd": "damage_over_time 5",
+        "selectable": "true"
     },
     {
         "id": "7",
@@ -1410,7 +1454,8 @@
         "name_translation_key": "skill_increase_radius",
         "desc_translation_key": "skill_increase_radius_desc",
         "rarity": "rare",
-        "weapon_augment": "9"
+        "weapon_augment": "9",
+        "selectable": "true"
     },
     {
         "id": "8",
@@ -1420,7 +1465,8 @@
         "name_translation_key": "skill_direct_hit_bonus",
         "desc_translation_key": "skill_direct_hit_bonus_desc",
         "rarity": "epic",
-        "overwrite": "direct_hit_multiplier 1.3 //Important: If you change this value, you need to manually change the weapons augment 10 damage to match the new value."
+        "overwrite": "direct_hit_multiplier 1.3 //Important: If you change this value, you need to manually change the weapons augment 10 damage to match the new value.",
+        "selectable": "true"
     },
     {
         "id": "20016",
@@ -1453,7 +1499,8 @@
         "desc_translation_key": "skill_lowers_cooldown_desc",
         "rarity": "common",
         "max_stacks": "2",
-        "preadd": "cooldown -2"
+        "preadd": "cooldown -2",
+        "selectable": "true"
     },
     {
         "id": "2",
@@ -1464,7 +1511,8 @@
         "name_translation_key": "skill_overload_a2",
         "desc_translation_key": "skill_overload_a2_desc",
         "rarity": "rare",
-        "weapon_augment": "1"
+        "weapon_augment": "1",
+        "selectable": "true"
     },
     {
         "id": "3",
@@ -1475,7 +1523,8 @@
         "desc_translation_key": "skill_increase_damage_desc",
         "rarity": "common",
         "weapon_augment": "3",
-        "max_stacks": "2"
+        "max_stacks": "2",
+        "selectable": "true"
     },
     {
         "id": "4",
@@ -1487,7 +1536,8 @@
         "preadd": "overshield_amount 10",
         "rarity": "epic",
         "max_stacks": "1",
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "selectable": "true"
     },
     {
         "id": "5",
@@ -1497,7 +1547,8 @@
         "name_translation_key": "skill_overload_a5",
         "desc_translation_key": "skill_overload_a5_desc",
         "overwrite": "power 0.05 //how much of the base damage is applied per tick",
-        "rarity": "epic"
+        "rarity": "epic",
+        "selectable": "true"
     },
     {
         "id": "6",
@@ -1509,7 +1560,8 @@
         "desc_translation_key": "skill_overload_a6_desc",
         "rarity": "legendary",
         "weapon_augment": "5 //disables self_knockback",
-        "overwrite": "teleport true"
+        "overwrite": "teleport true",
+        "selectable": "true"
     },
     {
         "id": "7",
@@ -1518,7 +1570,8 @@
         "name": "No_Gravity",
         "name_translation_key": "skill_overload_a7",
         "desc_translation_key": "skill_overload_a7_desc",
-        "weapon_augment": "4"
+        "weapon_augment": "4",
+        "selectable": "true"
     },
     {
         "id": "20017",
@@ -1594,7 +1647,8 @@
         "name_translation_key": "skill_increase_radius",
         "desc_translation_key": "skill_increase_radius_desc",
         "rarity": "rare",
-        "preadd": "radius 200"
+        "preadd": "radius 200",
+        "selectable": "true"
     },
     {
         "id": "2",
@@ -1603,7 +1657,8 @@
         "name_translation_key": "skill_lowers_cooldown",
         "desc_translation_key": "skill_lowers_cooldown_desc",
         "preadd": "cooldown -5",
-        "max_stacks": "2"
+        "max_stacks": "2",
+        "selectable": "true"
     },
     {
         "id": "3",
@@ -1614,7 +1669,8 @@
         "desc_translation_key": "skill_scanner_grenade_a3_desc",
         "rarity": "legendary",
         "preadd": "emp_duration 3",
-        "overwrite": "max_duration 0.5"
+        "overwrite": "max_duration 0.5",
+        "selectable": "true"
     },
     {
         "id": "4",
@@ -1623,7 +1679,8 @@
         "name_translation_key": "skill_scanner_grenade_a4",
         "desc_translation_key": "skill_scanner_grenade_a4_desc",
         "rarity": "epic",
-        "preadd": "overshield_amount 5"
+        "preadd": "overshield_amount 5",
+        "selectable": "true"
     },
     {
         "id": "5",
@@ -1635,7 +1692,8 @@
         "preadd": "count 1",
         "max_stacks": "2",
         "rarity": "common",
-        "skill_disqreq": "3"
+        "skill_disqreq": "3",
+        "selectable": "true"
     },
     {
         "id": "6",
@@ -1644,7 +1702,8 @@
         "name_translation_key": "skill_scanner_grenade_a6",
         "desc_translation_key": "skill_scanner_grenade_a6_desc",
         "overwrite": "broadcast_wallhack true",
-        "rarity": "legendary"
+        "rarity": "legendary",
+        "selectable": "true"
     },
     {
         "id": "20019",
@@ -1842,7 +1901,8 @@
         "desc_translation_key": "skill_lowers_cooldown_desc",
         "rarity": "epic",
         "cooldown": "-5",
-        "max_stacks": "2"
+        "max_stacks": "2",
+        "selectable": "true"
     },
     {
         "id": "2",
@@ -1852,7 +1912,8 @@
         "desc_translation_key": "skill_increase_radius_desc",
         "rarity": "rare",
         "radius": "15",
-        "max_stacks": "1"
+        "max_stacks": "1",
+        "selectable": "true"
     },
     {
         "id": "3",
@@ -1862,7 +1923,8 @@
         "desc_translation_key": "skill_increase_damage_desc",
         "rarity": "epic",
         "damage": "10",
-        "max_stacks": "2"
+        "max_stacks": "2",
+        "selectable": "true"
     },
     {
         "id": "4",
@@ -1874,7 +1936,8 @@
         "rarity": "legendary",
         "overwrite": "dash_explode true",
         "skill_disqreq": "augment 5",
-        "max_stacks": "1"
+        "max_stacks": "1",
+        "selectable": "true"
     },
     {
         "id": "5",
@@ -1886,7 +1949,8 @@
         "rarity": "legendary",
         "skill_disqreq": "augment 4",
         "overwrite": "shadow_piercer_enabled true",
-        "max_stacks": "1"
+        "max_stacks": "1",
+        "selectable": "true"
     },
     {
         "id": "7",
@@ -1896,7 +1960,8 @@
         "desc_translation_key": "skill_beam_a7_desc",
         "rarity": "epic",
         "overwrite": "piercing_damage_increase true",
-        "max_stacks": "1"
+        "max_stacks": "1",
+        "selectable": "true"
     },
     {
         "id": "8",
@@ -1905,7 +1970,8 @@
         "name_translation_key": "skill_beam_a8",
         "desc_translation_key": "skill_beam_a8_desc",
         "rarity": "epic",
-        "overwrite": "damage_over_time 1"
+        "overwrite": "damage_over_time 1",
+        "selectable": "true"
     },
     {
         "id": "20024",
@@ -1938,7 +2004,8 @@
         "rarity": "rare",
         "skill_disqreq": "augment 1",
         "preadd": "rocket_count 2",
-        "max_stacks": "1"
+        "max_stacks": "1",
+        "selectable": "true"
     },
     {
         "id": "4",
@@ -1950,7 +2017,8 @@
         "rarity": "common",
         "skill_disqreq": "augment 1",
         "preadd": "rocket_range 1000",
-        "max_stacks": "1"
+        "max_stacks": "1",
+        "selectable": "true"
     },
     {
         "id": "5",
@@ -1961,7 +2029,8 @@
         "rarity": "epic",
         "skill_disqreq": "augment 1",
         "preadd": "rocket_speed 500",
-        "max_stacks": "1"
+        "max_stacks": "1",
+        "selectable": "true"
     },
     {
         "id": "6",
@@ -1972,7 +2041,8 @@
         "rarity": "common",
         "skill_disqreq": "augment 1",
         "preadd": "cooldown -5",
-        "max_stacks": "2"
+        "max_stacks": "2",
+        "selectable": "true"
     },
     {
         "id": "9",
@@ -1982,7 +2052,8 @@
         "name_translation_key": "skill_mini_rocket_a9",
         "desc_translation_key": "skill_mini_rocket_a9_desc",
         "rarity": "legendary",
-        "overwrite": "homing_module_enabled true"
+        "overwrite": "homing_module_enabled true",
+        "selectable": "true"
     },
     {
         "id": "20025",
@@ -2048,7 +2119,8 @@
         "desc_translation_key": "skill_increase_max_charges_desc",
         "rarity": "rare",
         "preadd": "max_charges 1",
-        "max_stacks": "2"
+        "max_stacks": "2",
+        "selectable": "true"
     },
     {
         "id": "2",
@@ -2057,7 +2129,8 @@
         "name_translation_key": "skill_movement_bolt_a2",
         "desc_translation_key": "skill_movement_bolt_a2_desc",
         "rarity": "legendary",
-        "overwrite": "reset true //reset multi_jump"
+        "overwrite": "reset true //reset multi_jump",
+        "selectable": "true"
     },
     {
         "id": "3",
@@ -2066,7 +2139,8 @@
         "name_translation_key": "skill_movement_bolt_a3",
         "desc_translation_key": "skill_movement_bolt_a3_desc",
         "preadd": "duration 2",
-        "rarity": "epic"
+        "rarity": "epic",
+        "selectable": "true"
     },
     {
         "id": "4",
@@ -2076,7 +2150,8 @@
         "desc_translation_key": "skill_movement_bolt_a4_desc",
         "rarity": "artifact",
         "locked_in_battlepass": "true",
-        "overwrite": "radius 200"
+        "overwrite": "radius 200",
+        "selectable": "true"
     },
     {
         "id": "40002",

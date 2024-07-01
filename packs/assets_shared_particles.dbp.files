@@ -1,9 +1,9 @@
 assets\shared\particles\effects.atlas	12410
 assets\shared\particles\effects.atlas.old	8033
-assets\shared\particles\effects_dave.atlas	29853
+assets\shared\particles\effects_dave.atlas	29654
 assets\shared\particles\effects_extra.atlas	50595
 assets\shared\particles\effects_scott.atlas	5027
-assets\shared\particles\effects_sean.atlas	12078
+assets\shared\particles\effects_sean.atlas	12232
 assets\shared\particles\meshes\100_units_wind_mesh.dbm	23789
 assets\shared\particles\meshes\100_units_wind_mesh.fbx	38060
 assets\shared\particles\meshes\100unit.dbm	1575
@@ -799,6 +799,7 @@ assets\shared\particles\system_definitions\ability_leap_shield_impact.particles	
 assets\shared\particles\system_definitions\ability_marked_target.particles	10046
 assets\shared\particles\system_definitions\ability_offcooldown_screen.particles	2566
 assets\shared\particles\system_definitions\ability_overload_fire_ground.particles	21207
+assets\shared\particles\system_definitions\ability_overload_impact_rocket_warp.particles	52071
 assets\shared\particles\system_definitions\ability_overload_impact_small.particles	76608
 assets\shared\particles\system_definitions\ability_recast_screen.particles	2986
 assets\shared\particles\system_definitions\ability_red_screen.particles	2511
@@ -1757,6 +1758,7 @@ assets\shared\particles\system_definitions\overload_chest_orb_loop.particles	222
 assets\shared\particles\system_definitions\overload_chest_orb_loop2.particles	19113
 assets\shared\particles\system_definitions\overload_chest_orb_loop3.particles	22005
 assets\shared\particles\system_definitions\overload_chest_orb_loop4.particles	16608
+assets\shared\particles\system_definitions\overload_chest_orb_rocket_warp.particles	22760
 assets\shared\particles\system_definitions\overload_chest_orb_start.particles	42596
 assets\shared\particles\system_definitions\overload_chest_orb_start2.particles	27952
 assets\shared\particles\system_definitions\overload_chest_orb_start_end.particles	69075
@@ -1765,7 +1767,8 @@ assets\shared\particles\system_definitions\overload_decal_loop.particles	4578
 assets\shared\particles\system_definitions\overload_fire_ground.particles	19109
 assets\shared\particles\system_definitions\overload_fire_screen.particles	3768
 assets\shared\particles\system_definitions\overload_fire_tick.particles	5384
-assets\shared\particles\system_definitions\overload_loop_teleport.particles	51169
+assets\shared\particles\system_definitions\overload_loop_teleport.particles	53045
+assets\shared\particles\system_definitions\overload_loop_teleport_v2.particles	53401
 assets\shared\particles\system_definitions\overload_orb2.particles	5496
 assets\shared\particles\system_definitions\overload_player.particles	30910
 assets\shared\particles\system_definitions\overload_player_1p.particles	38121
@@ -1779,7 +1782,7 @@ assets\shared\particles\system_definitions\overload_player_3p6.particles	34163
 assets\shared\particles\system_definitions\overload_player_3p7.particles	35282
 assets\shared\particles\system_definitions\overload_player_3p8.particles	37680
 assets\shared\particles\system_definitions\overload_screen.particles	1223
-assets\shared\particles\system_definitions\overload_teleport_enter.particles	45878
+assets\shared\particles\system_definitions\overload_teleport_enter.particles	47239
 assets\shared\particles\system_definitions\overshield_2_screen.particles	2174
 assets\shared\particles\system_definitions\overshield_on_kill.particles	9470
 assets\shared\particles\system_definitions\overshield_screen.particles	2057
@@ -2014,11 +2017,11 @@ assets\shared\particles\system_definitions\smoke_cloak_player_team_feet.particle
 assets\shared\particles\system_definitions\smoke_cloak_player_team_hands.particles	7674
 assets\shared\particles\system_definitions\smoke_cloak_screen.particles	4455
 assets\shared\particles\system_definitions\smoke_cloak_screen_end.particles	4274
-assets\shared\particles\system_definitions\smoke_degen_weeble_impact.particles	81196
+assets\shared\particles\system_definitions\smoke_degen_weeble_impact.particles	42431
 assets\shared\particles\system_definitions\smoke_degen_weeble_impact2.particles	48895
 assets\shared\particles\system_definitions\smoke_degen_weeble_impact_2.particles	50914
 assets\shared\particles\system_definitions\smoke_degen_weeble_impact_3.particles	50914
-assets\shared\particles\system_definitions\smoke_degen_weeble_impact_long.particles	44841
+assets\shared\particles\system_definitions\smoke_degen_weeble_impact_long.particles	42376
 assets\shared\particles\system_definitions\smoke_degen_weeble_impact_optimized.particles	58836
 assets\shared\particles\system_definitions\smoke_degen_weeble_impact_optimized2.particles	2392
 assets\shared\particles\system_definitions\smoke_ex.particles	7624
@@ -2138,10 +2141,10 @@ assets\shared\particles\system_definitions\weapon_blaster_projectile_1p2.particl
 assets\shared\particles\system_definitions\weapon_blaster_projectile_3p.particles	18684
 assets\shared\particles\system_definitions\weapon_blaster_projectile_gold.particles	9119
 assets\shared\particles\system_definitions\weapon_cb_arrow_socket.particles	26051
-assets\shared\particles\system_definitions\weapon_cb_connections_artifact.particles	29791
-assets\shared\particles\system_definitions\weapon_cb_connections_artifact_r.particles	30360
-assets\shared\particles\system_definitions\weapon_cb_connections_l.particles	16799
-assets\shared\particles\system_definitions\weapon_cb_connections_r.particles	18880
+assets\shared\particles\system_definitions\weapon_cb_connections_artifact.particles	26405
+assets\shared\particles\system_definitions\weapon_cb_connections_artifact_r.particles	30913
+assets\shared\particles\system_definitions\weapon_cb_connections_l.particles	15295
+assets\shared\particles\system_definitions\weapon_cb_connections_r.particles	19463
 assets\shared\particles\system_definitions\weapon_cb_display.particles	18527
 assets\shared\particles\system_definitions\weapon_cb_impact_artifact.particles	36838
 assets\shared\particles\system_definitions\weapon_cb_muzzle_3p_artifact.particles	46261
@@ -3374,6 +3377,8 @@ assets\shared\particles\system_thumbnails\rift_1.png.dds	153972
 assets\shared\particles\system_thumbnails\rift_2.png.dds	153972
 assets\shared\particles\system_thumbnails\rift_3.png.dds	153972
 assets\shared\particles\system_thumbnails\rift_4.png.dds	153972
+assets\shared\particles\system_thumbnails\rift_4_2.png.dds	153972
+assets\shared\particles\system_thumbnails\rift_4_3.png.dds	153972
 assets\shared\particles\system_thumbnails\rl_muzzle_fire.png.dds	153972
 assets\shared\particles\system_thumbnails\rl_projectile_4.png.dds	153972
 assets\shared\particles\system_thumbnails\rl_projectile_5.png.dds	153972
@@ -3835,8 +3840,10 @@ assets\shared\particles\textures\4_fire_diss_v1.png.dds	1398276
 assets\shared\particles\textures\ammo_boxes_d.png.dds	1398276
 assets\shared\particles\textures\anime_lens_flares_v2.png.dds	349700
 assets\shared\particles\textures\aringtest1.png.dds	349700
-assets\shared\particles\textures\armfx_1.png.dds	699192
+assets\shared\particles\textures\armfx_1.png.dds	1398276
 assets\shared\particles\textures\armfx_2.png.dds	699192
+assets\shared\particles\textures\armfx_3.png.dds	1398276
+assets\shared\particles\textures\armfx_4.png.dds	1398276
 assets\shared\particles\textures\artichoke_leaf_single_d.png.dds	1398276
 assets\shared\particles\textures\artichoke_leaf_single_mask.png.dds	349700
 assets\shared\particles\textures\basic_cloud.png.dds	5592580
@@ -4120,14 +4127,11 @@ assets\shared\particles\textures\fb_burst_v8.png.dds	2796388
 assets\shared\particles\textures\fb_burst_v9.png.dds	699236
 assets\shared\particles\textures\fb_cartoon_burst_v3.png.dds	1398276
 assets\shared\particles\textures\fb_centre_puff_burst.png.dds	1398276
-assets\shared\particles\textures\fb_chain_lightning_v1.png.dds	2796388
-assets\shared\particles\textures\fb_chain_lightning_v2.png.dds	2796388
 assets\shared\particles\textures\fb_circuit_v3.png.dds	5592580
 assets\shared\particles\textures\fb_circuit_v5.png.dds	5592580
 assets\shared\particles\textures\fb_cross_burst.png.dds	1398276
 assets\shared\particles\textures\fb_dot_burst_v1.png.dds	349700
 assets\shared\particles\textures\fb_dot_burst_v2.png.dds	349700
-assets\shared\particles\textures\fb_fatty_lightning_v1.png.dds	2796388
 assets\shared\particles\textures\fb_fire_burst_soft.png.dds	5592580
 assets\shared\particles\textures\fb_fire_burst_v1.png.dds	5592580
 assets\shared\particles\textures\fb_fire_burst_v2.png.dds	5592580
@@ -4144,6 +4148,7 @@ assets\shared\particles\textures\fb_impacts_v1.png.dds	1398276
 assets\shared\particles\textures\fb_impacts_v3.png.dds	1398276
 assets\shared\particles\textures\fb_lighting_climb.png.dds	5592580
 assets\shared\particles\textures\fb_lighting_loop.png.dds	2796388
+assets\shared\particles\textures\fb_lightning_loops_rgb.png.dds	5592580
 assets\shared\particles\textures\fb_lightning_push.png.dds	2796388
 assets\shared\particles\textures\fb_lightning_push_v2.png.dds	2796388
 assets\shared\particles\textures\fb_lightning_push_v3.png.dds	2796388
@@ -4154,6 +4159,7 @@ assets\shared\particles\textures\fb_lightning_spin_v2.png.dds	5592580
 assets\shared\particles\textures\fb_lightning_strike_02.png.dds	2796344
 assets\shared\particles\textures\fb_line_lightning.png.dds	2796388
 assets\shared\particles\textures\fb_loop_lightning.png.dds	5592580
+assets\shared\particles\textures\fb_loop_lightning_v3.png.dds	1398276
 assets\shared\particles\textures\fb_multi_burst_diss.png.dds	1398276
 assets\shared\particles\textures\fb_multi_burst_v2.png.dds	1398276
 assets\shared\particles\textures\fb_muzzle_lighting_v2.png.dds	5592580
@@ -4509,7 +4515,6 @@ assets\shared\particles\textures\simple_radial_mask_v1.png.dds	349700
 assets\shared\particles\textures\simple_radial_mask_v2.png.dds	349700
 assets\shared\particles\textures\simple_radial_mask_v3.png.dds	349700
 assets\shared\particles\textures\simple_ray_v3.png.dds	349700
-assets\shared\particles\textures\single_line_light.png.dds	2796388
 assets\shared\particles\textures\slam_spike_v3.png.dds	349700
 assets\shared\particles\textures\slam_spike_v4.png.dds	349700
 assets\shared\particles\textures\slash_01.png.dds	699236

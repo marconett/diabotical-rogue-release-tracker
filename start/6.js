@@ -6989,6 +6989,10 @@ const TRANSLATION_en_source = {
     show_upgrades: {
         text: "Show upgrades"
     },
+    next_loadout_page: {
+        text: "Next page: {keybind}",
+        engine: true
+    },
     loading_screen_tip_1: {
         text: "Use crouch to slide down hills! It's much faster than walking.",
         engine: true

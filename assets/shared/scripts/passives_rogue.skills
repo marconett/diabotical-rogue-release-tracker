@@ -145,6 +145,7 @@ skill 30009 augment 1
 	preadd power 5
 	max_stacks 4
 	rarity epic
+	selectable false
 }
 
 skill 30010
