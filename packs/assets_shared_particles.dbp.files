@@ -1366,7 +1366,7 @@ assets\shared\particles\system_definitions\firegauntlet_hand_shoot.particles	138
 assets\shared\particles\system_definitions\firegauntlet_impact.particles	16353
 assets\shared\particles\system_definitions\firegauntlet_projectile.particles	11572
 assets\shared\particles\system_definitions\flame_dash_test.particles	13886
-assets\shared\particles\system_definitions\flipbook_lightning.particles	24205
+assets\shared\particles\system_definitions\flipbook_lightning.particles	25141
 assets\shared\particles\system_definitions\flipbook_test.particles	16846
 assets\shared\particles\system_definitions\fly_water_ripple.particles	676
 assets\shared\particles\system_definitions\flying_pull.particles	57509
@@ -1651,7 +1651,7 @@ assets\shared\particles\system_definitions\landmine_projectile.particles	1576
 assets\shared\particles\system_definitions\laser_beam_screen_warmup.particles	9537
 assets\shared\particles\system_definitions\leaves_1.particles	1339
 assets\shared\particles\system_definitions\leaves_loop.particles	1358
-assets\shared\particles\system_definitions\legendary_capture_cube.particles	70086
+assets\shared\particles\system_definitions\legendary_capture_cube.particles	70101
 assets\shared\particles\system_definitions\legendary_capture_cube_end.particles	56888
 assets\shared\particles\system_definitions\legendary_capture_cube_screen.particles	724
 assets\shared\particles\system_definitions\legendary_capture_cube_warmup.particles	118324

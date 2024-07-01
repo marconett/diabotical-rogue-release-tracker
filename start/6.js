@@ -1961,46 +1961,6 @@ const TRANSLATION_en_source = {
         text: "Increase Grenade Launcher projectile speed.",
         engine: true
     },
-    grenadelauncher_no_self_damage: {
-        text: "Grenade Immunity",
-        engine: true
-    },
-    grenadelauncher_no_self_damage_desc: {
-        text: "Your own grenades can no longer damage you.",
-        engine: true
-    },
-    grenadelauncher_lead_balloon: {
-        text: "Lead Balloon",
-        engine: true
-    },
-    grenadelauncher_lead_balloon_desc: {
-        text: "Less bounce, lower fuse time, more gravity",
-        engine: true
-    },
-    grenadelauncher_direct_hit: {
-        text: "Dart Detonator",
-        engine: true
-    },
-    grenadelauncher_direct_hit_desc: {
-        text: "Explode on direct hit, otherwise dissipate. Dealing more dmg.",
-        engine: true
-    },
-    grenadelauncher_sticky: {
-        text: "Sticky Slinger",
-        engine: true
-    },
-    grenadelauncher_sticky_desc: {
-        text: "Using secondary fire with the launcher, shoots stickies which has longer lifetime and detonate when pressing primary fire.",
-        engine: true
-    },
-    grenadelauncher_floor_is_lava: {
-        text: "Floor is Lava",
-        engine: true
-    },
-    grenadelauncher_floor_is_lava_desc: {
-        text: "A hot small lava puddle is created after each grenade explosion, dealing damage and igniting whomever touches it.",
-        engine: true
-    },
     weapon_machinegun: {
         text: "SB-34 MG",
         engine: true
@@ -5144,6 +5104,10 @@ const TRANSLATION_en_source = {
         text: "Credits",
         engine: true
     },
+    control_panel: {
+        text: "Control Panel",
+        engine: true
+    },
     created_maps: {
         text: "Created maps"
     },
@@ -6112,130 +6076,6 @@ const TRANSLATION_en_source = {
     },
     skill_temporary_shield_desc: {
         text: "Place a destructible dome shield that protects you and your teammates.",
-        engine: true
-    },
-    skill_movement_transmutation: {
-        text: "Big/Small bot?",
-        engine: true
-    },
-    skill_movement_transmutation_desc: {
-        text: "Transmute yourself to big or small bot. Bigbot: More health Smallbot: Shorter. Changing the behaviour of your one time use [e] ability. ",
-        engine: true
-    },
-    movement_transmutation_a1: {
-        text: "TODO: Transmutation a1 (artifact)",
-        engine: true
-    },
-    movement_transmutation_a1_desc: {
-        text: "TODO: Desc a1 (FIX: name is movement_transmutation_a1_desc and not skill_movement_transmutation_a1_desc)",
-        engine: true
-    },
-    movement_transmutation_a2: {
-        text: "TODO: Transmutation a2",
-        engine: true
-    },
-    movement_transmutation_a2_desc: {
-        text: "TODO: Desc a2 (FIX: name is movement_transmutation_a2_desc and not skill_movement_transmutation_a2_desc)",
-        engine: true
-    },
-    skill_punch: {
-        text: "Punch/Uppercut",
-        engine: true
-    },
-    skill_punch_desc: {
-        text: "Size doesn't matter, you can still inflict massive damage.",
-        engine: true
-    },
-    skill_shield_throw: {
-        text: "Cpt Bot",
-        engine: true
-    },
-    skill_shield_throw_desc: {
-        text: "Throw your shield, dealing damage to anything that passes in between.",
-        engine: true
-    },
-    skill_shield_throw_a1: {
-        text: "Boomerang Shield",
-        engine: true
-    },
-    skill_shield_throw_a1_desc: {
-        text: "Ensures that your shield travels back to its owner, damaging eveything in its path.",
-        engine: true
-    },
-    skill_shield_throw_a2: {
-        text: "Pinball Plate",
-        engine: true
-    },
-    skill_shield_throw_a2_Desc: {
-        text: "Makes your shield throw bounce on objects and players.",
-        engine: true
-    },
-    skill_shield_throw_a3: {
-        text: "Spring Arm",
-        engine: true
-    },
-    skill_shield_throw_a3_desc: {
-        text: "Increases Shield Throw projectile speed.",
-        engine: true
-    },
-    skill_shield_throw_a4: {
-        text: "TODO: A4",
-        engine: true
-    },
-    skill_shield_throw_a4_desc: {
-        text: "TODO: A4 desc",
-        engine: true
-    },
-    skill_big_shield: {
-        text: "Shield Field",
-        engine: true
-    },
-    skill_big_shield_desc: {
-        text: "A small carryable shield which can be used to protect you and your teammates.",
-        engine: true
-    },
-    skill_big_shield_a1: {
-        text: "Deflecto-Disc",
-        engine: true
-    },
-    skill_big_shield_a1_desc: {
-        text: "Big Shield can now deflect projectiles, dealing 25% original damage, and takes 2x damage.",
-        engine: true
-    },
-    skill_big_shield_a2: {
-        text: "Bubble Trouble",
-        engine: true
-    },
-    skill_big_shield_a2_desc: {
-        text: "When your shield is damaged, gain oversheid. Your shield also depletes when used.",
-        engine: true
-    },
-    skill_shield_charge: {
-        text: "Charge",
-        engine: true
-    },
-    skill_shield_charge_desc: {
-        text: "Break into a charge state: Hitting players inflicts massive damage.",
-        engine: true
-    },
-    skill_shield_charge_a1: {
-        text: "Soccer Cleats",
-        engine: true
-    },
-    skill_shield_charge_a1_desc: {
-        text: "Boots with spikes, providing additional traction: Increases the Turn speed at the start of the Charge.",
-        engine: true
-    },
-    skill_shield_charge_a2: {
-        text: "War Stompers",
-        engine: true
-    },
-    skill_shield_charge_a2_desc: {
-        text: "Heavy boots designed for battle: Slam at the end of charge that gives overshield for each enemy hit",
-        engine: true
-    },
-    skill_landmine: {
-        text: "Landmine",
         engine: true
     },
     skill_teleport_to_friend: {

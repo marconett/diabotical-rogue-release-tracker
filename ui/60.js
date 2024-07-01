@@ -213,7 +213,7 @@ function _format_number(number, type, options) {
 }
 
 function _shorten_large_number(number) {
-    if (number >= 0 && number < 9999 || number < 0 && number > -9999) return number;
+    if (number >= 0 && number <= 9999 || number < 0 && number >= -9999) return number;
     number = number / 1e3;
     return numeral(number).format("0.0") + "k"
 }

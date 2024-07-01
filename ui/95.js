@@ -251,29 +251,12 @@ GAME.set_initial_data(GAME.ids.ROGUE, {
     },
     COMMUNITY_MAPS: true,
     customization_group_map: {
-        suits: {
-            i18n: "customize_group_suit",
+        eggbot: {
+            i18n: "class_rogue_eggbot",
             categories: [{
                 id: "c_eggbot",
                 type: "suit",
-                i18n: "class_rogue_eggbot"
-            }, {
-                id: "c_weesuit",
-                type: "suit",
-                i18n: "class_rogue_scout"
-            }, {
-                id: "c_chunk",
-                type: "suit",
-                i18n: "class_rogue_chunk"
-            }]
-        },
-        weapons_eggbot: {
-            i18n: "customize_group_weapons_eggbot",
-            categories: [{
-                id: "w_mac_eggbot",
-                type: "weapon",
-                color_id: "1",
-                i18n: "weapon_machinegun"
+                i18n: "customization_type_suit"
             }, {
                 id: "w_smg_eggbot",
                 type: "weapon",
@@ -291,18 +274,17 @@ GAME.set_initial_data(GAME.ids.ROGUE, {
                 i18n: "weapon_crossbow"
             }]
         },
-        weapons_scout: {
-            i18n: "customize_group_weapons_scout",
+        scout: {
+            i18n: "class_rogue_scout",
             categories: [{
+                id: "c_weesuit",
+                type: "suit",
+                i18n: "customization_type_suit"
+            }, {
                 id: "w_mac_scout",
                 type: "weapon",
                 color_id: "1",
                 i18n: "weapon_machinegun"
-            }, {
-                id: "w_ss_scout",
-                type: "weapon",
-                color_id: "3",
-                i18n: "weapon_supershotgun"
             }, {
                 id: "w_rev_scout",
                 type: "weapon",
@@ -315,18 +297,17 @@ GAME.set_initial_data(GAME.ids.ROGUE, {
                 i18n: "weapon_heavysniper"
             }]
         },
-        weapons_chunk: {
-            i18n: "customize_group_weapons_chunk",
+        chunk: {
+            i18n: "class_rogue_chunk",
             categories: [{
+                id: "c_chunk",
+                type: "suit",
+                i18n: "customization_type_suit"
+            }, {
                 id: "w_hmg_chunk",
                 type: "weapon",
                 color_id: "106",
                 i18n: "weapon_heavymachinegun"
-            }, {
-                id: "w_bl_chunk",
-                type: "weapon",
-                color_id: "2",
-                i18n: "weapon_blaster"
             }, {
                 id: "w_shaft_chunk",
                 type: "weapon",
@@ -346,15 +327,12 @@ GAME.set_initial_data(GAME.ids.ROGUE, {
         c_chunk: [new CustomizationType("suit", "8")],
         w_cb_eggbot: [new CustomizationType("weapon", "cb", "7")],
         w_smg_eggbot: [new CustomizationType("weapon", "smg", "7")],
-        w_mac_eggbot: [new CustomizationType("weapon", "mac", "7")],
         w_egun_eggbot: [new CustomizationType("weapon", "egun", "7")],
         w_mac_scout: [new CustomizationType("weapon", "mac", "6")],
         w_hsniper_scout: [new CustomizationType("weapon", "hsniper", "6")],
-        w_ss_scout: [new CustomizationType("weapon", "ss", "6")],
         w_rev_scout: [new CustomizationType("weapon", "rev", "6")],
         w_hmg_chunk: [new CustomizationType("weapon", "hmg", "8")],
         w_shaft_chunk: [new CustomizationType("weapon", "shaft", "8")],
-        w_bl_chunk: [new CustomizationType("weapon", "bl", "8")],
         w_rl_chunk: [new CustomizationType("weapon", "rl", "8")]
     },
     flat_bg_scene_screens: ["coin_shop", "notification", "battlepass", "shop", "shop_item", "player_profile", "locker"],

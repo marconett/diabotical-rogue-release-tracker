@@ -78,6 +78,7 @@ const page_game_report = new function() {
         html.btn_leave = html.root.querySelector(".report_controls .buttons .leave");
         html.btn_close = html.root.querySelector(".report_controls .buttons .close");
         html.match_info = html.root.querySelector(".report_match_info");
+        html.match_id = html.root.querySelector(".report_match_id");
         html.scoreboard = _id("game_report_scoreboard");
         html.stats = _id("game_report_stats");
         html.maps = _id("game_report_map_vote");
@@ -343,6 +344,10 @@ const page_game_report = new function() {
         showing_last_match = !on_match_finish;
         if (showing_last_match) {
             set_modal_engine_call(true, true, true)
+        }
+        if (html.match_id) {
+            _empty(html.match_id);
+            html.match_id.textContent = "Match ID: " + last_match.game_status.match_id
         }
         let team_size = Number(last_match.snafu_data["game_data.team_size"]);
         let team_count = Number(last_match.snafu_data["game_data.team_count"]);

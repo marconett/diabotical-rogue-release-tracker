@@ -86,8 +86,7 @@ function init_i18n() {
             if (typeof numeral !== "undefined") numeral.locale("de")
         } else if (global_language == "ko") {
             global_translations = TRANSLATION_ko;
-            if (typeof COUNTRIES_ko !== "undefined") global_countries = COUNTRIES_ko;
-            if (typeof numeral !== "undefined") numeral.locale("ko")
+            if (typeof COUNTRIES_ko !== "undefined") global_countries = COUNTRIES_ko
         } else if (global_language == "pl") {
             global_translations = TRANSLATION_pl;
             if (typeof COUNTRIES_ko !== "undefined") global_countries = COUNTRIES_en;
