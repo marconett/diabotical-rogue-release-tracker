@@ -66161,7 +66161,7 @@ use_hub_tutorial_completed_spawn
 Completed tutorial tasks
 game_tutorial_completion
 border
-0.21.29a
+0.21.29b
 [ERROR] CAMERA_FOV effect requires duration
 [ERROR] Invalid values for camera shake effect
 firewall2
@@ -66853,6 +66853,7 @@ ffffff
 @333333
 @333333
 @333333
+RSDSG
 C:\Users\Username\Documents\Repo\tmp_symbols_EVE_ReleaseSteam\diabotical.pdb
 .text
 .text$di
