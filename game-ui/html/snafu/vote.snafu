@@ -1,0 +1,135 @@
+BEGIN TEMPLATE vote
+    SETTING align pivot
+
+    RASTERIZE_TEXT "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" font fontSize
+ON_UPDATE
+
+    IF vote.state == 0
+        discard
+    END IF
+
+    DOUBLE row_height
+    row_height = fontSize * 1.5
+
+    DOUBLE row_height2
+    row_height2 = fontSize * 2
+
+    DOUBLE indent
+    indent = fontSize * 0.5
+
+
+    OUTPUT 0 0 lvalue "map_vote_created_text"
+    OUTPUT 0 0 value vote.creator
+    OUTPUT 0 0 value2 vote.map_name
+    LOCALIZE 0 0
+    OUTPUT 0 0 height row_height
+    OUTPUT 0 0 font font
+    OUTPUT 0 0 shadow 1
+    OUTPUT 0 0 color color
+
+
+    IF vote.state == 1
+
+        STRING yes_bg
+        yes_bg = "#00000066"
+        IF vote.voted == 1
+            yes_bg = "#2fd42f"
+        END IF
+
+        STRING no_bg
+        no_bg = "#00000066"
+        IF vote.voted == 2
+            no_bg = "#ff0000"
+        END IF 
+
+        STRING yes_key
+        yes_key = "["
+        yes_key = yes_key & vote.yes_key
+        yes_key = yes_key & "]"
+
+        STRING no_key
+        no_key = "["
+        no_key = no_key & vote.no_key
+        no_key = no_key & "]"
+
+        ECHO yes_key
+
+        OUTPUT 1 0 value yes_key
+        OUTPUT 1 0 font font
+        OUTPUT 1 0 height row_height2
+        OUTPUT 1 0 shadow 1
+        OUTPUT 1 0 fill yes_bg
+        OUTPUT 1 0 indent DOUBLE (indent * 0.5)
+
+        OUTPUT 1 1 lvalue "yes_str"
+        LOCALIZE 1 1
+        OUTPUT 1 1 font font
+        OUTPUT 1 1 height row_height2
+        OUTPUT 1 1 shadow 1
+        OUTPUT 1 1 fill yes_bg
+        OUTPUT 1 1 indent indent
+
+        OUTPUT 1 2 value vote.yes_count
+        OUTPUT 1 2 font font
+        OUTPUT 1 2 height row_height2
+        OUTPUT 1 2 shadow 1
+        OUTPUT 1 2 width row_height
+        OUTPUT 1 2 fill "#00000044"
+
+        OUTPUT 1 3 width DOUBLE (fontSize * 1)
+
+        OUTPUT 1 4 value no_key
+        OUTPUT 1 4 font font
+        OUTPUT 1 4 height row_height2
+        OUTPUT 1 4 shadow 1
+        OUTPUT 1 4 fill no_bg
+        OUTPUT 1 4 indent DOUBLE (indent * 0.5)
+
+        OUTPUT 1 5 lvalue "no_str"
+        LOCALIZE 1 5
+        OUTPUT 1 5 font font
+        OUTPUT 1 5 height row_height2
+        OUTPUT 1 5 shadow 1
+        OUTPUT 1 5 fill no_bg
+        OUTPUT 1 5 indent indent
+
+        OUTPUT 1 6 value vote.no_count
+        OUTPUT 1 6 font font
+        OUTPUT 1 6 height row_height2
+        OUTPUT 1 6 shadow 1
+        OUTPUT 1 6 width row_height
+        OUTPUT 1 6 fill "#00000044"
+
+        OUTPUT 2 0 lvalue "vote_seconds_remaining"
+        OUTPUT 2 0 value vote.countdown
+        LOCALIZE 2 0
+        OUTPUT 2 0 font font
+        OUTPUT 2 0 height row_height2
+        OUTPUT 2 0 shadow 1
+    END IF 
+
+    IF vote.state == 3 
+        OUTPUT 1 0 lvalue "vote_failed"
+        LOCALIZE 1 0
+        OUTPUT 1 0 height row_height
+        OUTPUT 1 0 font font
+        OUTPUT 1 0 shadow 1
+        OUTPUT 1 0 color "#ff0000"
+        OUTPUT 1 0 indent 0
+    END IF 
+
+    IF vote.state == 2
+        OUTPUT 1 0 lvalue "vote_success"
+        LOCALIZE 1 0
+        OUTPUT 1 0 height row_height
+        OUTPUT 1 0 font font
+        OUTPUT 1 0 shadow 1
+        OUTPUT 1 0 color "#2fd42f"
+        OUTPUT 1 0 indent 0
+    END IF
+
+END TEMPLATE
+
+
+yes color: #2fd42f; }
+no  color: #ff0000; }

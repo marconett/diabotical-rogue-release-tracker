@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 181.89">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="white_icons_L_exp" data-name="white icons L exp">
+    <g id="_3" data-name="3">
+      <g>
+        <rect class="cls-1" x="15.16" y="30.32" width="234.95" height="121.26"/>
+        <path class="cls-1" d="m234.95,45.47v90.95H30.32V45.47h204.63m29.32-30.32H1c-.55,0-1,.45-1,1v149.58c0,.55.45,1,1,1h263.26c.55,0,1-.45,1-1V16.16c0-.55-.45-1-1-1h0Z"/>
+      </g>
+      <rect class="cls-1" x="303.16" y="11.37" width="53.05" height="159.16" rx="1" ry="1"/>
+      <path class="cls-1" d="m401.44,176.52l18.74,5.08c4.88,1.32,9.83-1.86,9.83-6.31V6.62c0-4.46-4.95-7.64-9.83-6.31l-18.74,5.08c-3.17.86-5.33,3.42-5.33,6.31v158.51c0,2.9,2.16,5.46,5.33,6.31Z"/>
+    </g>
+  </g>
+</svg>

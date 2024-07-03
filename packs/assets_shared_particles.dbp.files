@@ -1269,11 +1269,13 @@ assets\shared\particles\system_definitions\env_leaves_vortex.particles	1500
 assets\shared\particles\system_definitions\env_light_fogbeam1.particles	3728
 assets\shared\particles\system_definitions\env_light_fogbeam2.particles	1902
 assets\shared\particles\system_definitions\env_light_fogbeam3.particles	2116
+assets\shared\particles\system_definitions\env_light_fogbeam4.particles	1872
 assets\shared\particles\system_definitions\env_mission_ring.particles	7694
 assets\shared\particles\system_definitions\env_mist_plane1.particles	3323
 assets\shared\particles\system_definitions\env_mist_plane2.particles	1916
 assets\shared\particles\system_definitions\env_mist_plane3.particles	1634
 assets\shared\particles\system_definitions\env_mist_plane4.particles	3766
+assets\shared\particles\system_definitions\env_mist_plane5.particles	3669
 assets\shared\particles\system_definitions\env_no_connection.particles	3469
 assets\shared\particles\system_definitions\env_panel1.particles	7845
 assets\shared\particles\system_definitions\env_panel2.particles	8777
@@ -1289,6 +1291,7 @@ assets\shared\particles\system_definitions\env_smoke_column1.particles	1949
 assets\shared\particles\system_definitions\env_smoke_column2.particles	2096
 assets\shared\particles\system_definitions\env_smoke_interval.particles	1775
 assets\shared\particles\system_definitions\env_splashy_steam.particles	2954
+assets\shared\particles\system_definitions\env_spooky_sweep1.particles	1825
 assets\shared\particles\system_definitions\env_spore_mushroom.particles	3893
 assets\shared\particles\system_definitions\env_spores_small.particles	1062
 assets\shared\particles\system_definitions\env_starsystem2.particles	13703
@@ -2302,6 +2305,7 @@ assets\shared\particles\system_thumbnails\ability_leap_shield_impact.png.dds	153
 assets\shared\particles\system_thumbnails\ability_marked_target.png.dds	153972
 assets\shared\particles\system_thumbnails\ability_offcooldown_screen.png.dds	153972
 assets\shared\particles\system_thumbnails\ability_overload_fire_ground.png.dds	153972
+assets\shared\particles\system_thumbnails\ability_overload_impact_rocket_warp.png.dds	153972
 assets\shared\particles\system_thumbnails\ability_overload_impact_small.png.dds	153972
 assets\shared\particles\system_thumbnails\ability_recast_screen.png.dds	153972
 assets\shared\particles\system_thumbnails\ability_red_screen.png.dds	153972
@@ -2431,12 +2435,14 @@ assets\shared\particles\system_thumbnails\beam_rainbow.png.dds	153972
 assets\shared\particles\system_thumbnails\beam_v1.png.dds	153972
 assets\shared\particles\system_thumbnails\big_bomb_screen.png.dds	153972
 assets\shared\particles\system_thumbnails\bigbot_arm1fx_loop.png.dds	153972
+assets\shared\particles\system_thumbnails\bigbot_arm1fx_loop_small.png.dds	153972
 assets\shared\particles\system_thumbnails\bigbot_groundslam.png.dds	153972
 assets\shared\particles\system_thumbnails\bigbot_groundslam_cascade.png.dds	153972
 assets\shared\particles\system_thumbnails\bigbot_groundslam_cascade_v2.png.dds	153972
 assets\shared\particles\system_thumbnails\bigbot_groundslam_start.png.dds	153972
 assets\shared\particles\system_thumbnails\bigbot_groundslam_v2.png.dds	153972
 assets\shared\particles\system_thumbnails\bigbot_handfx_loop.png.dds	153972
+assets\shared\particles\system_thumbnails\bigbot_handfx_loop_small.png.dds	153972
 assets\shared\particles\system_thumbnails\bigbot_leap_glove.png.dds	153972
 assets\shared\particles\system_thumbnails\bigbot_leap_glove_start.png.dds	153972
 assets\shared\particles\system_thumbnails\bigbot_leap_groundslam.png.dds	153972
@@ -2803,11 +2809,13 @@ assets\shared\particles\system_thumbnails\env_leaves_vortex.png.dds	153972
 assets\shared\particles\system_thumbnails\env_light_fogbeam1.png.dds	153972
 assets\shared\particles\system_thumbnails\env_light_fogbeam2.png.dds	153972
 assets\shared\particles\system_thumbnails\env_light_fogbeam3.png.dds	153972
+assets\shared\particles\system_thumbnails\env_light_fogbeam4.png.dds	153972
 assets\shared\particles\system_thumbnails\env_mission_ring.png.dds	153972
 assets\shared\particles\system_thumbnails\env_mist_plane1.png.dds	153972
 assets\shared\particles\system_thumbnails\env_mist_plane2.png.dds	153972
 assets\shared\particles\system_thumbnails\env_mist_plane3.png.dds	153972
 assets\shared\particles\system_thumbnails\env_mist_plane4.png.dds	153972
+assets\shared\particles\system_thumbnails\env_mist_plane5.png.dds	153972
 assets\shared\particles\system_thumbnails\env_no_connection.png.dds	153972
 assets\shared\particles\system_thumbnails\env_panel1.png.dds	153972
 assets\shared\particles\system_thumbnails\env_panel2.png.dds	153972
@@ -2825,6 +2833,7 @@ assets\shared\particles\system_thumbnails\env_smoke_column1.png.dds	153972
 assets\shared\particles\system_thumbnails\env_smoke_column2.png.dds	153972
 assets\shared\particles\system_thumbnails\env_smoke_interval.png.dds	153972
 assets\shared\particles\system_thumbnails\env_splashy_steam.png.dds	153972
+assets\shared\particles\system_thumbnails\env_spooky_sweep1.png.dds	153972
 assets\shared\particles\system_thumbnails\env_spore_mushroom.png.dds	153972
 assets\shared\particles\system_thumbnails\env_spores_small.png.dds	153972
 assets\shared\particles\system_thumbnails\env_starsystem2.png.dds	153972
@@ -3350,6 +3359,7 @@ assets\shared\particles\system_thumbnails\poison_projectile_4.png.dds	153972
 assets\shared\particles\system_thumbnails\poison_projectile_5.png.dds	153972
 assets\shared\particles\system_thumbnails\poison_projectile_6.png.dds	153972
 assets\shared\particles\system_thumbnails\poison_screen.png.dds	153972
+assets\shared\particles\system_thumbnails\poison_screen_test.png.dds	153972
 assets\shared\particles\system_thumbnails\poison_small_impact.png.dds	153972
 assets\shared\particles\system_thumbnails\poison_splash1.png.dds	153972
 assets\shared\particles\system_thumbnails\projected_shield.png.dds	153972
@@ -3484,6 +3494,7 @@ assets\shared\particles\system_thumbnails\skill_jetpack_trail.png.dds	153972
 assets\shared\particles\system_thumbnails\skill_sawblade.png.dds	153972
 assets\shared\particles\system_thumbnails\skill_shield_throw.png.dds	153972
 assets\shared\particles\system_thumbnails\skill_shield_throw_impact.png.dds	153972
+assets\shared\particles\system_thumbnails\skill_shield_throw_projectile.particles	5513
 assets\shared\particles\system_thumbnails\skill_shield_throw_projectile.png.dds	153972
 assets\shared\particles\system_thumbnails\skill_spear_equip.png.dds	153972
 assets\shared\particles\system_thumbnails\skill_spear_equip_old.png.dds	153972

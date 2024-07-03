@@ -1,0 +1,211 @@
+BEGIN TEMPLATE announcements
+    SETTING item_direction "vertical"
+    SETTING cell_direction "horizontal"
+    SETTING align "top-edge"
+    SETTING row_align "center"
+    SETTING item_spacing 0
+    SETTING cell_spacing 0
+
+    STRING font
+    font = "montserrat-bold"
+
+    COL_OUTPUT 0 font font
+    COL_OUTPUT 0 shadow 1
+    COL_OUTPUT 0 uppercase 1
+
+    RASTERIZE_TEXT "ABCDEFGHIJKLMNOPQRSTUVWXYZ.:!" font 4
+    RASTERIZE_TEXT "0123456789." font 5
+    RASTERIZE_TEXT "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.!" font 7
+    RASTERIZE_TEXT "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.:!" font 2
+ON_UPDATE
+
+    INT lines
+    lines = 1
+
+    DOUBLE fontsize1
+    DOUBLE fontsize2
+
+    fontsize1 = 4
+    fontsize2 = 5
+
+    INT show
+    show = 0
+
+    IF announce.type == "countdown"
+        show = 1
+        fontsize1 = 7
+
+        OUTPUT 0 0 value announce.value
+    END IF
+
+    IF announce.type == "round_countdown"
+        show = 1
+        lines = 2
+        fontsize1 = 4
+        fontsize2 = 7
+
+        OUTPUT 0 0 lvalue "ingame_message_round_begins_in"
+        LOCALIZE 0 0
+        OUTPUT 2 0 value announce.value
+    END IF
+
+    IF announce.type == "respawn_countdown"
+        show = 1
+        lines = 2
+        fontsize1 = 4
+        fontsize2 = 5
+
+        OUTPUT 0 0 lvalue "ingame_message_respawning_in"
+        LOCALIZE 0 0
+        OUTPUT 2 0 value announce.value
+    END IF
+
+    IF announce.type == "pause_resume"
+        show = 1
+        lines = 2
+        fontsize1 = 4
+        fontsize2 = 7
+
+        OUTPUT 0 0 lvalue "ingame_message_match_resumes_in"
+        LOCALIZE 0 0
+        OUTPUT 2 0 value announce.value
+    END IF
+
+    IF announce.type == "pre_countdown"
+        show = 1
+        lines = 2
+        fontsize1 = 4
+        fontsize2 = 2
+
+        OUTPUT 0 0 lvalue "ingame_message_get_ready"
+        LOCALIZE 0 0
+        OUTPUT 2 0 lvalue "ingame_message_start_countdown"
+        OUTPUT 2 0 value announce.value
+        LOCALIZE 2 0
+    END IF
+
+    IF announce.type == "overtime"
+        show = 1
+        lines = 2
+        fontsize1 = 4
+        fontsize2 = 2
+
+        OUTPUT 0 0 lvalue "ingame_message_overtime"
+        LOCALIZE 0 0
+        OUTPUT 2 0 lvalue "ingame_message_overtime_seconds"
+        OUTPUT 2 0 value announce.value
+        LOCALIZE 2 0
+    END IF
+
+    IF announce.type == "score_overtime"
+        show = 1
+        lines = 2
+        fontsize1 = 4
+        fontsize2 = 2
+
+        OUTPUT 0 0 lvalue "ingame_message_overtime"
+        LOCALIZE 0 0
+        OUTPUT 2 0 lvalue "ingame_message_overtime_fraglimit"
+        OUTPUT 2 0 value announce.value
+        LOCALIZE 2 0
+    END IF
+
+    IF announce.type == "saved_map"
+        show = 1
+
+        OUTPUT 0 0 lvalue "editor_saved_map"
+        OUTPUT 0 0 value announce.value
+        LOCALIZE 0 0
+    END IF
+
+    IF announce.type == "baked_map"
+        show = 1
+
+        OUTPUT 0 0 lvalue "editor_baked_map"
+        OUTPUT 0 0 value announce.value
+        LOCALIZE 0 0
+    END IF
+
+    IF announce.type == "bake_map_failed"
+        show = 1
+
+        OUTPUT 0 0 lvalue "editor_map_bake_failed"
+        LOCALIZE 0 0
+    END IF
+
+    IF announce.type == "round_x"
+        show = 1
+        fontsize1 = 4
+
+        OUTPUT 0 0 lvalue "ingame_message_round_x"
+        OUTPUT 0 0 value announce.value
+        LOCALIZE 0 0
+    END IF
+
+    IF announce.type == "round_cleared"
+        show = 1
+        fontsize1 = 4
+
+        OUTPUT 0 0 lvalue "ingame_message_round_cleared"
+        LOCALIZE 0 0
+    END IF
+
+    IF announce.type == "fragged_by"
+        show = 1
+
+        OUTPUT 0 0 lvalue "ingame_message_fragged_by"
+        OUTPUT 0 0 value announce.value
+        LOCALIZE 0 0
+    END IF
+
+    IF announce.type == "self_frag"
+        show = 1
+
+        OUTPUT 0 0 lvalue "ingame_message_fragged_self"
+        LOCALIZE 0 0
+    END IF
+
+    IF announce.type == "announce"
+        show = 1
+        fontsize1 = 4
+
+        OUTPUT 0 0 value announce.value
+    END IF
+
+    IF announce.type == "fight"
+        show = 1
+        fontsize1 = 7
+
+        OUTPUT 0 0 lvalue "ingame_message_fight"
+        LOCALIZE 0 0
+    END IF
+
+
+    OUTPUT 0 0 opacity announce.opacity
+    OUTPUT 0 0 font_size fontsize1
+    OUTPUT 0 0 height DOUBLE (fontsize1 + 1)
+
+    # Hack to avoid unknown messages from getting prior announcements stuck on the screen
+    IF show == 0
+        OUTPUT 0 0 lvalue "empty"
+        LOCALIZE 0 0
+    END IF
+
+    IF lines == 2
+        # Bottom border line
+        OUTPUT 1 0 fill "#ffffff80"
+        OUTPUT 1 0 height 0.2
+        OUTPUT 1 0 width 35
+
+        OUTPUT 1 0 opacity announce.opacity
+        OUTPUT 2 0 opacity announce.opacity
+
+        OUTPUT 2 0 font_size fontsize2
+        OUTPUT 2 0 height DOUBLE (fontsize2 + 1)
+    ELSE
+        OUTPUT 1 0 opacity 0
+        OUTPUT 2 0 opacity 0
+    END IF
+
+
+END TEMPLATE

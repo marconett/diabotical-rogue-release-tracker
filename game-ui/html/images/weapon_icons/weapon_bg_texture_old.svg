@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="526" height="526" viewBox="0 0 526 526">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="526" height="562" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-Texture">
+      <rect width="526" height="526"/>
+    </clipPath>
+  </defs>
+  <g id="Texture" clip-path="url(#clip-Texture)">
+    <g id="Repeat_Grid_70" data-name="Repeat Grid 70" transform="translate(0 2)" opacity="1" clip-path="url(#clip-path)">
+      <rect id="Rectangle_4004" data-name="Rectangle 4004" width="526" height="12" fill="#fff"/>
+      <g transform="translate(0 30)">
+        <rect id="Rectangle_4004-2" data-name="Rectangle 4004" width="526" height="12" fill="#fff"/>
+      </g>
+      <g transform="translate(0 60)">
+        <rect id="Rectangle_4004-3" data-name="Rectangle 4004" width="526" height="12" fill="#fff"/>
+      </g>
+      <g transform="translate(0 90)">
+        <rect id="Rectangle_4004-4" data-name="Rectangle 4004" width="526" height="12" fill="#fff"/>
+      </g>
+      <g transform="translate(0 120)">
+        <rect id="Rectangle_4004-5" data-name="Rectangle 4004" width="526" height="12" fill="#fff"/>
+      </g>
+      <g transform="translate(0 150)">
+        <rect id="Rectangle_4004-6" data-name="Rectangle 4004" width="526" height="12" fill="#fff"/>
+      </g>
+      <g transform="translate(0 180)">
+        <rect id="Rectangle_4004-7" data-name="Rectangle 4004" width="526" height="12" fill="#fff"/>
+      </g>
+      <g transform="translate(0 210)">
+        <rect id="Rectangle_4004-8" data-name="Rectangle 4004" width="526" height="12" fill="#fff"/>
+      </g>
+      <g transform="translate(0 240)">
+        <rect id="Rectangle_4004-9" data-name="Rectangle 4004" width="526" height="12" fill="#fff"/>
+      </g>
+      <g transform="translate(0 270)">
+        <rect id="Rectangle_4004-10" data-name="Rectangle 4004" width="526" height="12" fill="#fff"/>
+      </g>
+      <g transform="translate(0 300)">
+        <rect id="Rectangle_4004-11" data-name="Rectangle 4004" width="526" height="12" fill="#fff"/>
+      </g>
+      <g transform="translate(0 330)">
+        <rect id="Rectangle_4004-12" data-name="Rectangle 4004" width="526" height="12" fill="#fff"/>
+      </g>
+      <g transform="translate(0 360)">
+        <rect id="Rectangle_4004-13" data-name="Rectangle 4004" width="526" height="12" fill="#fff"/>
+      </g>
+      <g transform="translate(0 390)">
+        <rect id="Rectangle_4004-14" data-name="Rectangle 4004" width="526" height="12" fill="#fff"/>
+      </g>
+      <g transform="translate(0 420)">
+        <rect id="Rectangle_4004-15" data-name="Rectangle 4004" width="526" height="12" fill="#fff"/>
+      </g>
+      <g transform="translate(0 450)">
+        <rect id="Rectangle_4004-16" data-name="Rectangle 4004" width="526" height="12" fill="#fff"/>
+      </g>
+      <g transform="translate(0 480)">
+        <rect id="Rectangle_4004-17" data-name="Rectangle 4004" width="526" height="12" fill="#fff"/>
+      </g>
+      <g transform="translate(0 510)">
+        <rect id="Rectangle_4004-18" data-name="Rectangle 4004" width="526" height="12" fill="#fff"/>
+      </g>
+      <g transform="translate(0 540)">
+        <rect id="Rectangle_4004-19" data-name="Rectangle 4004" width="526" height="12" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

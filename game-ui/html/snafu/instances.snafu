@@ -1,0 +1,46 @@
+### ROGUE
+#INSTANCE 1 alive 10 32
+#INSTANCE 1 consumables 66 88
+#INSTANCE 1 frags 6.5 32
+#INSTANCE 1 reload_progress 50 54
+#INSTANCE 1 rogue_game_timer 3 32
+#INSTANCE 1 rogue_player_name 51 86.75
+#INSTANCE 1 rogue_time_limit 1.5 36
+#INSTANCE 1 rogue_armor_bar 51 88
+#INSTANCE 1 rogue_hp_bar 51 89.85
+#INSTANCE 1 rogue_hp 63.25 86.75
+#INSTANCE 1 eg_item 8 98.5
+#INSTANCE 1 eg_item_accent_lines 50 86.55
+#INSTANCE 1 speed_data 50 75
+
+#INSTANCE 1 yaw_value 50 3
+#INSTANCE 1 compass 50 3
+#INSTANCE 1 medkit_progress 50 65
+#INSTANCE 1 eg_player_portrait 8 85.2
+
+#INSTANCE 1 report_chat 1 95
+#INSTANCE 1 respawn_msg 50 78
+
+#INSTANCE 1 scoreboard_top 0.6 12
+#INSTANCE 1 scoreboard_main_table_header 0.6 21
+#INSTANCE 1 scoreboard_main 0.6 24
+#INSTANCE 1 scoreboard_spectators 0.6 24
+#INSTANCE 1 scoreboard_connecting 0.6 24
+
+
+
+### ARENA
+INSTANCE 2 afk_countdown 50 42
+#INSTANCE 2 announcements 50 21
+INSTANCE 2 pause_msg 50 42
+INSTANCE 2 ready_up_msg 50 35.5
+INSTANCE 2 waiting_msg 50 20
+INSTANCE 2 respawn_msg 50 78
+
+
+#INSTANCE 2 report_chat 1 95
+#INSTANCE 2 scoreboard_top 0.6 12
+#INSTANCE 2 scoreboard_main_table_header 0.6 21
+#INSTANCE 2 scoreboard_main 0.6 24
+#INSTANCE 2 scoreboard_spectators 0.6 24
+#INSTANCE 2 scoreboard_connecting 0.6 24

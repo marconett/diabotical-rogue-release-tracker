@@ -200,3 +200,6 @@ env_light_fogbeam3
 skill_shield_throw_projectile
 skill_shield_throw_impact
 bigbot_arm1fx_loop
+bigbot_handfx_loop
+bigbot_arm1fx_loop_small
+bigbot_handfx_loop_small

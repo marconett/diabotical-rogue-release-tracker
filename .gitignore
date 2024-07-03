@@ -26,11 +26,12 @@ __pycache__
 # Application specific files
 game/
 *.exe
-*.rbr
-*.rbe
 *.dbp
 *.dds
 *.fbx
 *.dbm
-*.png
+*.ttf
+*.otf
+*.woff
+*.woff2
 /.gitkeep

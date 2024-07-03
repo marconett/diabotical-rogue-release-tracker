@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="113.241" height="100.254" viewBox="0 0 113.241 100.254">
+  <defs>
+    <filter id="Icon_material-warning" x="0" y="0" width="113.241" height="100.254" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Icon_material-warning)">
+    <path id="Icon_material-warning-2" data-name="Icon material-warning" d="M1.5,85.254H96.741L49.121,3ZM53.45,72.266H44.792V63.608H53.45Zm0-17.317H44.792V37.633H53.45Z" transform="translate(7.5 3)" fill="#00c0f1"/>
+  </g>
+</svg>

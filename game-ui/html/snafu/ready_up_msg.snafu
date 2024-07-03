@@ -1,0 +1,65 @@
+BEGIN TEMPLATE ready_up_msg
+    SETTING align "center"
+
+    RASTERIZE_TEXT "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" "roboto-bold" 3
+ON_UPDATE
+
+    IF game_data.spectator
+        discard
+    END IF
+
+    IF game_data.game_stage != 1
+        discard
+    END IF
+
+    IF battle_data.is_editor_loaded
+        discard
+    END IF
+
+    IF !game_data.can_start
+        discard
+    END IF 
+
+    IF battle_data.self.ready
+        discard
+    END IF
+
+    OUTPUT 0 0 lvalue "ingame_status_unready"
+    OUTPUT 0 0 value battle_data.ready_key
+    LOCALIZE 0 0
+    OUTPUT 0 0 font "roboto-bold"
+    OUTPUT 0 0 font_size 3
+    OUTPUT 0 0 shadow 1    
+
+END TEMPLATE
+
+BEGIN TEMPLATE waiting_msg
+    SETTING align "center"
+
+    RASTERIZE_TEXT "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" "roboto-bold" 3
+ON_UPDATE
+
+    IF game_data.spectator
+        discard
+    END IF
+
+    IF game_data.game_stage > 1
+        discard
+    END IF
+
+    IF battle_data.is_editor_loaded
+        discard
+    END IF
+
+    IF game_data.can_start
+        discard
+    END IF
+        
+    OUTPUT 0 0 lvalue "ingame_message_more_players"
+    LOCALIZE 0 0
+    OUTPUT 0 0 font "roboto-bold"
+    OUTPUT 0 0 font_size 3
+    OUTPUT 0 0 shadow 1 
+    OUTPUT 0 0 opacity 0.6
+
+END TEMPLATE
