@@ -1,5 +1,5 @@
 assets\rogue\audio\ID_list.txt	3556
-assets\rogue\audio\abilities.events	69871
+assets\rogue\audio\abilities.events	90532
 assets\rogue\audio\abilities\bolt\ability_bolt_enemy1.wav	441044
 assets\rogue\audio\abilities\bolt\ability_bolt_enemy2.wav	441044
 assets\rogue\audio\abilities\bolt\ability_bolt_enemy3.wav	441044
@@ -47,6 +47,7 @@ assets\rogue\audio\abilities\explosive_grenade\ab_explosive_grenade_explode2.wav
 assets\rogue\audio\abilities\explosive_grenade\ab_explosive_grenade_explode3.wav	253758
 assets\rogue\audio\abilities\explosive_grenade\ab_explosive_grenade_explode4.wav	253758
 assets\rogue\audio\abilities\explosive_grenade\ab_explosive_grenade_impact.wav	159258
+assets\rogue\audio\abilities\ground_slam\ground_slam_use.wav	302582
 assets\rogue\audio\abilities\healing_grenade\grenade_healing_impact.wav	1164894
 assets\rogue\audio\abilities\healing_orb\ab_healing_orb_idle_loop01.wav	882044
 assets\rogue\audio\abilities\healing_orb\ab_healing_orb_init01.wav	352844
@@ -95,6 +96,10 @@ assets\rogue\audio\abilities\hookshot\ab_hookshot_release_enemy_01.wav	92740
 assets\rogue\audio\abilities\hookshot\ab_hookshot_release_enemy_02.wav	92740
 assets\rogue\audio\abilities\hookshot\ab_hookshot_release_enemy_03.wav	92740
 assets\rogue\audio\abilities\hookshot\ab_hookshot_release_enemy_04.wav	92740
+assets\rogue\audio\abilities\jetpack\jetpack_end.wav	85234
+assets\rogue\audio\abilities\jetpack\jetpack_loop.wav	548282
+assets\rogue\audio\abilities\jetpack\jetpack_start.wav	55306
+assets\rogue\audio\abilities\lava_floor\ability_lava_floor_loop.wav	1572030
 assets\rogue\audio\abilities\leap\leap_jump1.wav	276594
 assets\rogue\audio\abilities\leap\leap_jump2.wav	276594
 assets\rogue\audio\abilities\leap\leap_jump3.wav	276594
@@ -124,6 +129,9 @@ assets\rogue\audio\abilities\scanner_grenade\grenade_sonar_impact.wav	353770
 assets\rogue\audio\abilities\scanner_grenade\grenade_sonar_impact_loop.wav	1814582
 assets\rogue\audio\abilities\scanner_grenade\grenade_sonar_impact_ping.wav	491582
 assets\rogue\audio\abilities\scanner_grenade\grenade_sonar_player_ping.wav	46646
+assets\rogue\audio\abilities\shield_throw\shield_throw_airbound_loop.wav	529382
+assets\rogue\audio\abilities\shield_throw\shield_throw_impact.wav	189182
+assets\rogue\audio\abilities\shield_throw\shield_throw_use.wav	321482
 assets\rogue\audio\abilities\smoke_grenade\grenade_smoke_impact1.wav	1164106
 assets\rogue\audio\abilities\smoke_grenade\grenade_smoke_impact2.wav	1164106
 assets\rogue\audio\abilities\smoke_grenade\grenade_smoke_impact3.wav	1164106
@@ -132,6 +140,16 @@ assets\rogue\audio\abilities\smoke_grenade\grenade_smoke_impact_lightning1.wav	1
 assets\rogue\audio\abilities\smoke_grenade\grenade_smoke_impact_lightning2.wav	1164106
 assets\rogue\audio\abilities\smoke_grenade\grenade_smoke_impact_lightning3.wav	1164106
 assets\rogue\audio\abilities\smoke_grenade\grenade_smoke_impact_lightning4.wav	1164106
+assets\rogue\audio\abilities\transformation\transformation_big1.wav	302582
+assets\rogue\audio\abilities\transformation\transformation_big2.wav	302582
+assets\rogue\audio\abilities\transformation\transformation_big3.wav	302582
+assets\rogue\audio\abilities\transformation\transformation_big4.wav	302582
+assets\rogue\audio\abilities\transformation\transformation_small1.wav	302582
+assets\rogue\audio\abilities\transformation\transformation_small2.wav	302582
+assets\rogue\audio\abilities\transformation\transformation_small3.wav	302582
+assets\rogue\audio\abilities\transformation\transformation_small4.wav	302582
+assets\rogue\audio\abilities\uppercut\uppercut_impact.wav	203358
+assets\rogue\audio\abilities\uppercut\uppercut_swing.wav	160834
 assets\rogue\audio\ambience.events	50510
 assets\rogue\audio\ambience\amb_insects_flies_sparce.wav	3528044
 assets\rogue\audio\ambience\amb_prop_jumppad_loop.wav	1833446
@@ -209,7 +227,7 @@ assets\rogue\audio\ambience\prop\amb_prop_sparks_scifi.wav	3528044
 assets\rogue\audio\ambience\prop\amb_prop_suit_pod.wav	3528044
 assets\rogue\audio\ambience\prop\amb_prop_toya_pump.wav	3528044
 assets\rogue\audio\announcer.events	19587
-assets\rogue\audio\arena_abilities.sounds	19982
+assets\rogue\audio\arena_abilities.sounds	22041
 assets\rogue\audio\arena_ambience.sounds	12416
 assets\rogue\audio\arena_announcer_julie.sounds	42884
 assets\rogue\audio\arena_bigbot_enemy_footsteps.sounds	16764
@@ -240,7 +258,7 @@ assets\rogue\audio\arena_weapon_bow.sounds	5695
 assets\rogue\audio\arena_weapon_crossbow.sounds	3540
 assets\rogue\audio\arena_weapon_double_shotgun.sounds	1906
 assets\rogue\audio\arena_weapon_energy_pistol.sounds	4847
-assets\rogue\audio\arena_weapon_grenade_launcher.sounds	4578
+assets\rogue\audio\arena_weapon_grenade_launcher.sounds	5460
 assets\rogue\audio\arena_weapon_heavy_machinegun.sounds	9988
 assets\rogue\audio\arena_weapon_heavy_sniper.sounds	5261
 assets\rogue\audio\arena_weapon_machinegun.sounds	6121
@@ -434,7 +452,7 @@ assets\rogue\audio\bigbot\land_enemy\bigbot_land_enemy_small_water3.wav	116004
 assets\rogue\audio\bigbot\land_enemy\bigbot_land_enemy_small_water4.wav	116004
 assets\rogue\audio\bigbot\land_enemy\bigbot_land_enemy_small_water5.wav	116004
 assets\rogue\audio\bigbot\land_enemy\bigbot_land_enemy_small_water6.wav	116004
-assets\rogue\audio\character_bigbot.events	47570
+assets\rogue\audio\character_bigbot.events	73673
 assets\rogue\audio\character_chunkbot.events	62445
 assets\rogue\audio\character_eggbot.events	9672
 assets\rogue\audio\character_weesuit.events	48349
@@ -776,7 +794,7 @@ assets\rogue\audio\user_interface.events	6348
 assets\rogue\audio\weapon_blaster.events	12321
 assets\rogue\audio\weapon_crossbow.events	11491
 assets\rogue\audio\weapon_energy_pistol.events	14528
-assets\rogue\audio\weapon_grenade_launcher.events	13312
+assets\rogue\audio\weapon_grenade_launcher.events	16264
 assets\rogue\audio\weapon_heavy_machinegun.events	13375
 assets\rogue\audio\weapon_heavy_sniper.events	15497
 assets\rogue\audio\weapon_machinegun.events	18772
@@ -944,6 +962,11 @@ assets\rogue\audio\weapons\grenade_launcher\gl_fire_enemy1.wav	240334
 assets\rogue\audio\weapons\grenade_launcher\gl_fire_enemy2.wav	240334
 assets\rogue\audio\weapons\grenade_launcher\gl_fire_enemy3.wav	240334
 assets\rogue\audio\weapons\grenade_launcher\gl_fire_enemy4.wav	240334
+assets\rogue\audio\weapons\grenade_launcher\gl_fire_sticky1.wav	472682
+assets\rogue\audio\weapons\grenade_launcher\gl_fire_sticky2.wav	472682
+assets\rogue\audio\weapons\grenade_launcher\gl_fire_sticky3.wav	472682
+assets\rogue\audio\weapons\grenade_launcher\gl_fire_sticky4.wav	472682
+assets\rogue\audio\weapons\grenade_launcher\gl_fire_sticky_charge.wav	201782
 assets\rogue\audio\weapons\grenade_launcher\gl_impact1.wav	437476
 assets\rogue\audio\weapons\grenade_launcher\gl_impact2.wav	446380
 assets\rogue\audio\weapons\grenade_launcher\gl_impact3.wav	431964
@@ -952,6 +975,7 @@ assets\rogue\audio\weapons\grenade_launcher\gl_impact_distant1.wav	302546
 assets\rogue\audio\weapons\grenade_launcher\gl_impact_distant2.wav	302546
 assets\rogue\audio\weapons\grenade_launcher\gl_impact_distant3.wav	302546
 assets\rogue\audio\weapons\grenade_launcher\gl_impact_distant4.wav	302546
+assets\rogue\audio\weapons\grenade_launcher\gl_sticky_impact.wav	49006
 assets\rogue\audio\weapons\grenades\grenade_generic_throw_01.wav	176444
 assets\rogue\audio\weapons\grenades\grenade_generic_throw_02.wav	176444
 assets\rogue\audio\weapons\grenades\grenade_generic_throw_03.wav	176444

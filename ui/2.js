@@ -4045,7 +4045,8 @@ const TRANSLATION_en_source = {
         engine: true
     },
     stats_fired: {
-        text: "Fired"
+        text: "Fired",
+        engine: true
     },
     stats_hit: {
         text: "Hit"
@@ -6765,6 +6766,14 @@ const TRANSLATION_en_source = {
     },
     helper_crouch_slide_desc: {
         text: "You can Crouch by pressing the {keybind} key. If you're running and then you Crouch, you will Slide. Try it out now!",
+        engine: true
+    },
+    helper_joined_aim_trainer_duel_title: {
+        text: "Duel time",
+        engine: true
+    },
+    helper_joined_aim_trainer_duel_desc: {
+        text: "You're in a duel with {username}. Shoot a target when you're ready to begin.",
         engine: true
     },
     shop_option_type_no_cards_left: {

@@ -546,7 +546,7 @@ assets\shared\models\animations\eggbot\1p\shotgun_skm_shotgun_eggbot.dbm	637445
 assets\shared\models\animations\eggbot\1p\shotgun_skm_shotgun_eggbot.fbx	443644
 assets\shared\models\animations\eggbot\1p\shotgun_slide_eggbot.dbm	6465
 assets\shared\models\animations\eggbot\1p\shotgun_slide_eggbot.fbx	160108
-assets\shared\models\animations\eggbot\1p\skm_eggbot_1p.ani	1316
+assets\shared\models\animations\eggbot\1p\skm_eggbot_1p.ani	1189
 assets\shared\models\animations\eggbot\1p\skm_eggbot_1p.dbm	628205
 assets\shared\models\animations\eggbot\1p\skm_eggbot_1p.fbx	991900
 assets\shared\models\animations\eggbot\1p\sniper_crouch_idle_eggbot.dbm	6471
@@ -988,7 +988,7 @@ assets\shared\models\animations\weesuit\1p\shotgun_skm_shotgun_weesuit.dbm	16239
 assets\shared\models\animations\weesuit\1p\shotgun_skm_shotgun_weesuit.fbx	1547724
 assets\shared\models\animations\weesuit\1p\shotgun_skm_shotgun_weesuit_1p.dbm	1623945
 assets\shared\models\animations\weesuit\1p\shotgun_skm_shotgun_weesuit_1p.fbx	1547724
-assets\shared\models\animations\weesuit\1p\skm_weesuit_1p.ani	1451
+assets\shared\models\animations\weesuit\1p\skm_weesuit_1p.ani	1320
 assets\shared\models\animations\weesuit\1p\skm_weesuit_1p.dbm	1468039
 assets\shared\models\animations\weesuit\1p\skm_weesuit_1p.fbx	1436268
 assets\shared\models\animations\weesuit\crouch_back.dbm	152633

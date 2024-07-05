@@ -49,6 +49,7 @@ skill 20027 augment 4
 	preadd cooldown -2
 	max_stacks 2
 }
+
 skill 20028
 {
 	name_translation_key skill_big_shield

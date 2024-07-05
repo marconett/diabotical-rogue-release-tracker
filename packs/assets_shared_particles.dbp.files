@@ -1,9 +1,9 @@
 assets\shared\particles\effects.atlas	12410
 assets\shared\particles\effects.atlas.old	8033
-assets\shared\particles\effects_dave.atlas	29654
+assets\shared\particles\effects_dave.atlas	29755
 assets\shared\particles\effects_extra.atlas	50595
 assets\shared\particles\effects_scott.atlas	5027
-assets\shared\particles\effects_sean.atlas	12232
+assets\shared\particles\effects_sean.atlas	12309
 assets\shared\particles\meshes\100_units_wind_mesh.dbm	23789
 assets\shared\particles\meshes\100_units_wind_mesh.fbx	38060
 assets\shared\particles\meshes\100unit.dbm	1575
@@ -1274,7 +1274,7 @@ assets\shared\particles\system_definitions\env_mission_ring.particles	7694
 assets\shared\particles\system_definitions\env_mist_plane1.particles	3323
 assets\shared\particles\system_definitions\env_mist_plane2.particles	1916
 assets\shared\particles\system_definitions\env_mist_plane3.particles	1634
-assets\shared\particles\system_definitions\env_mist_plane4.particles	3766
+assets\shared\particles\system_definitions\env_mist_plane4.particles	3854
 assets\shared\particles\system_definitions\env_mist_plane5.particles	3669
 assets\shared\particles\system_definitions\env_no_connection.particles	3469
 assets\shared\particles\system_definitions\env_panel1.particles	7845
@@ -1286,6 +1286,7 @@ assets\shared\particles\system_definitions\env_planet_moon.particles	4204
 assets\shared\particles\system_definitions\env_planet_system.particles	19802
 assets\shared\particles\system_definitions\env_planet_system2.particles	26214
 assets\shared\particles\system_definitions\env_pump_smoke.particles	8788
+assets\shared\particles\system_definitions\env_red_lightning.particles	8882
 assets\shared\particles\system_definitions\env_shooting_range.particles	8499
 assets\shared\particles\system_definitions\env_smoke_column1.particles	1949
 assets\shared\particles\system_definitions\env_smoke_column2.particles	2096
@@ -1296,6 +1297,7 @@ assets\shared\particles\system_definitions\env_spore_mushroom.particles	3893
 assets\shared\particles\system_definitions\env_spores_small.particles	1062
 assets\shared\particles\system_definitions\env_starsystem2.particles	13703
 assets\shared\particles\system_definitions\env_steam1.particles	1221
+assets\shared\particles\system_definitions\env_storm_clouds1.particles	2544
 assets\shared\particles\system_definitions\env_teleport.particles	20473
 assets\shared\particles\system_definitions\env_teleport2way.particles	11753
 assets\shared\particles\system_definitions\env_teleport_exit.particles	9420
@@ -2130,6 +2132,7 @@ assets\shared\particles\system_definitions\vfx_door_sparks.particles	2629
 assets\shared\particles\system_definitions\vfx_windsurf.particles	2089
 assets\shared\particles\system_definitions\walljump.particles	4284
 assets\shared\particles\system_definitions\water_drip.particles	8510
+assets\shared\particles\system_definitions\weapon_artifact_grenade_launcher_muzzle.particles	27492
 assets\shared\particles\system_definitions\weapon_blaster_impact.particles	29309
 assets\shared\particles\system_definitions\weapon_blaster_impact_gold.particles	12734
 assets\shared\particles\system_definitions\weapon_blaster_impact_gold_v2.particles	11023
@@ -2207,6 +2210,7 @@ assets\shared\particles\system_definitions\weapon_hs_muzzle_artifact.particles	1
 assets\shared\particles\system_definitions\weapon_hs_muzzle_flash_artifact.particles	1274
 assets\shared\particles\system_definitions\weapon_hs_player_impact.particles	84975
 assets\shared\particles\system_definitions\weapon_hs_player_impact_artifact.particles	98370
+assets\shared\particles\system_definitions\weapon_lava_projectile.particles	26536
 assets\shared\particles\system_definitions\weapon_machinegun_impact.particles	55779
 assets\shared\particles\system_definitions\weapon_machinegun_impact_gold.particles	7928
 assets\shared\particles\system_definitions\weapon_machinegun_muzzle.particles	17401
@@ -3494,8 +3498,8 @@ assets\shared\particles\system_thumbnails\skill_jetpack_trail.png.dds	153972
 assets\shared\particles\system_thumbnails\skill_sawblade.png.dds	153972
 assets\shared\particles\system_thumbnails\skill_shield_throw.png.dds	153972
 assets\shared\particles\system_thumbnails\skill_shield_throw_impact.png.dds	153972
-assets\shared\particles\system_thumbnails\skill_shield_throw_projectile.particles	5513
 assets\shared\particles\system_thumbnails\skill_shield_throw_projectile.png.dds	153972
+assets\shared\particles\system_thumbnails\skill_shield_throw_return.png.dds	153972
 assets\shared\particles\system_thumbnails\skill_spear_equip.png.dds	153972
 assets\shared\particles\system_thumbnails\skill_spear_equip_old.png.dds	153972
 assets\shared\particles\system_thumbnails\skill_spear_held_loop.png.dds	153972
@@ -3855,6 +3859,7 @@ assets\shared\particles\textures\armfx_1.png.dds	1398276
 assets\shared\particles\textures\armfx_2.png.dds	699192
 assets\shared\particles\textures\armfx_3.png.dds	1398276
 assets\shared\particles\textures\armfx_4.png.dds	1398276
+assets\shared\particles\textures\armfx_5.png.dds	699192
 assets\shared\particles\textures\artichoke_leaf_single_d.png.dds	1398276
 assets\shared\particles\textures\artichoke_leaf_single_mask.png.dds	349700
 assets\shared\particles\textures\basic_cloud.png.dds	5592580
@@ -4164,6 +4169,7 @@ assets\shared\particles\textures\fb_lightning_push.png.dds	2796388
 assets\shared\particles\textures\fb_lightning_push_v2.png.dds	2796388
 assets\shared\particles\textures\fb_lightning_push_v3.png.dds	2796388
 assets\shared\particles\textures\fb_lightning_push_v6.png.dds	2796388
+assets\shared\particles\textures\fb_lightning_smooth.png.dds	1398276
 assets\shared\particles\textures\fb_lightning_spin.png.dds	1398276
 assets\shared\particles\textures\fb_lightning_spin_v1.png.dds	5592580
 assets\shared\particles\textures\fb_lightning_spin_v2.png.dds	5592580
