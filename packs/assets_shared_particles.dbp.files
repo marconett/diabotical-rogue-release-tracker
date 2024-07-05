@@ -1,6 +1,6 @@
 assets\shared\particles\effects.atlas	12410
 assets\shared\particles\effects.atlas.old	8033
-assets\shared\particles\effects_dave.atlas	29755
+assets\shared\particles\effects_dave.atlas	29839
 assets\shared\particles\effects_extra.atlas	50595
 assets\shared\particles\effects_scott.atlas	5027
 assets\shared\particles\effects_sean.atlas	12309
@@ -1392,6 +1392,7 @@ assets\shared\particles\system_definitions\gl_bounce.particles	2216
 assets\shared\particles\system_definitions\gl_impact_v2.particles	28725
 assets\shared\particles\system_definitions\glow_example.particles	1758
 assets\shared\particles\system_definitions\grenade_impact.particles	28822
+assets\shared\particles\system_definitions\grenade_impact_2.particles	45221
 assets\shared\particles\system_definitions\grenade_impact_4.particles	38505
 assets\shared\particles\system_definitions\headshot_orb.particles	25001
 assets\shared\particles\system_definitions\headshot_orb_v7.particles	48115
@@ -2132,7 +2133,7 @@ assets\shared\particles\system_definitions\vfx_door_sparks.particles	2629
 assets\shared\particles\system_definitions\vfx_windsurf.particles	2089
 assets\shared\particles\system_definitions\walljump.particles	4284
 assets\shared\particles\system_definitions\water_drip.particles	8510
-assets\shared\particles\system_definitions\weapon_artifact_grenade_launcher_muzzle.particles	27492
+assets\shared\particles\system_definitions\weapon_artifact_grenade_launcher_muzzle.particles	29633
 assets\shared\particles\system_definitions\weapon_blaster_impact.particles	29309
 assets\shared\particles\system_definitions\weapon_blaster_impact_gold.particles	12734
 assets\shared\particles\system_definitions\weapon_blaster_impact_gold_v2.particles	11023
@@ -2183,6 +2184,7 @@ assets\shared\particles\system_definitions\weapon_grenade_bounce.particles	17855
 assets\shared\particles\system_definitions\weapon_grenade_bounce_gold.particles	2329
 assets\shared\particles\system_definitions\weapon_grenade_impact.particles	35379
 assets\shared\particles\system_definitions\weapon_grenade_impact_gold.particles	18960
+assets\shared\particles\system_definitions\weapon_grenade_impact_lava.particles	46303
 assets\shared\particles\system_definitions\weapon_grenade_launcher_muzzle.particles	23121
 assets\shared\particles\system_definitions\weapon_grenade_launcher_muzzle_3p.particles	23952
 assets\shared\particles\system_definitions\weapon_grenade_launcher_muzzle_flash.particles	1705
@@ -2210,7 +2212,8 @@ assets\shared\particles\system_definitions\weapon_hs_muzzle_artifact.particles	1
 assets\shared\particles\system_definitions\weapon_hs_muzzle_flash_artifact.particles	1274
 assets\shared\particles\system_definitions\weapon_hs_player_impact.particles	84975
 assets\shared\particles\system_definitions\weapon_hs_player_impact_artifact.particles	98370
-assets\shared\particles\system_definitions\weapon_lava_projectile.particles	26536
+assets\shared\particles\system_definitions\weapon_lava_projectile.particles	26547
+assets\shared\particles\system_definitions\weapon_lava_projectile_2.particles	26653
 assets\shared\particles\system_definitions\weapon_machinegun_impact.particles	55779
 assets\shared\particles\system_definitions\weapon_machinegun_impact_gold.particles	7928
 assets\shared\particles\system_definitions\weapon_machinegun_muzzle.particles	17401
@@ -4248,6 +4251,7 @@ assets\shared\particles\textures\glow_splash_v1.png.dds	87556
 assets\shared\particles\textures\glow_splash_v3.png.dds	87556
 assets\shared\particles\textures\glow_splash_v4.png.dds	87556
 assets\shared\particles\textures\goldencapgrove_capgrove_d.png.dds	87556
+assets\shared\particles\textures\goo_diss_v1.png.dds	1398276
 assets\shared\particles\textures\grad_horiz1.png.dds	87556
 assets\shared\particles\textures\grad_horiz2.png.dds	87556
 assets\shared\particles\textures\gradientnoise002.png.dds	349700

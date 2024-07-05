@@ -2,6 +2,7 @@
 game rogue_wipeout
 {
 	map arcol
+	map cassini
 	map furnace
 	map toya
 	map titan

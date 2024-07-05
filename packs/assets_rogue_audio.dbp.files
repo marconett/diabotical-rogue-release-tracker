@@ -1,5 +1,5 @@
 assets\rogue\audio\ID_list.txt	3556
-assets\rogue\audio\abilities.events	90532
+assets\rogue\audio\abilities.events	97283
 assets\rogue\audio\abilities\bolt\ability_bolt_enemy1.wav	441044
 assets\rogue\audio\abilities\bolt\ability_bolt_enemy2.wav	441044
 assets\rogue\audio\abilities\bolt\ability_bolt_enemy3.wav	441044
@@ -10,6 +10,14 @@ assets\rogue\audio\abilities\bolt\ability_bolt_self2.wav	441044
 assets\rogue\audio\abilities\bolt\ability_bolt_self3.wav	441044
 assets\rogue\audio\abilities\bolt\ability_bolt_self4.wav	441044
 assets\rogue\audio\abilities\bolt\ability_bolt_self5.wav	441044
+assets\rogue\audio\abilities\charge\charge_bump.wav	115942
+assets\rogue\audio\abilities\charge\charge_final_impact.wav	378182
+assets\rogue\audio\abilities\charge\charge_heavy_footstep1.wav	130122
+assets\rogue\audio\abilities\charge\charge_heavy_footstep2.wav	130122
+assets\rogue\audio\abilities\charge\charge_heavy_footstep3.wav	130122
+assets\rogue\audio\abilities\charge\charge_heavy_footstep4.wav	130122
+assets\rogue\audio\abilities\charge\charge_heavy_footstep5.wav	130122
+assets\rogue\audio\abilities\charge\charge_use.wav	982982
 assets\rogue\audio\abilities\chunk_shield\ab_chunk_shield_end01.wav	305804
 assets\rogue\audio\abilities\chunk_shield\ab_chunk_shield_hit01.wav	41204
 assets\rogue\audio\abilities\chunk_shield\ab_chunk_shield_hit02.wav	41204
@@ -227,7 +235,7 @@ assets\rogue\audio\ambience\prop\amb_prop_sparks_scifi.wav	3528044
 assets\rogue\audio\ambience\prop\amb_prop_suit_pod.wav	3528044
 assets\rogue\audio\ambience\prop\amb_prop_toya_pump.wav	3528044
 assets\rogue\audio\announcer.events	19587
-assets\rogue\audio\arena_abilities.sounds	22041
+assets\rogue\audio\arena_abilities.sounds	22877
 assets\rogue\audio\arena_ambience.sounds	12416
 assets\rogue\audio\arena_announcer_julie.sounds	42884
 assets\rogue\audio\arena_bigbot_enemy_footsteps.sounds	16764
@@ -452,7 +460,7 @@ assets\rogue\audio\bigbot\land_enemy\bigbot_land_enemy_small_water3.wav	116004
 assets\rogue\audio\bigbot\land_enemy\bigbot_land_enemy_small_water4.wav	116004
 assets\rogue\audio\bigbot\land_enemy\bigbot_land_enemy_small_water5.wav	116004
 assets\rogue\audio\bigbot\land_enemy\bigbot_land_enemy_small_water6.wav	116004
-assets\rogue\audio\character_bigbot.events	73673
+assets\rogue\audio\character_bigbot.events	98205
 assets\rogue\audio\character_chunkbot.events	62445
 assets\rogue\audio\character_eggbot.events	9672
 assets\rogue\audio\character_weesuit.events	48349

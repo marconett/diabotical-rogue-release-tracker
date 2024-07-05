@@ -204,3 +204,5 @@ bigbot_handfx_loop
 bigbot_arm1fx_loop_small
 bigbot_handfx_loop_small
 shockwave_punch
+weapon_grenade_impact_lava
+weapon_lava_projectile
