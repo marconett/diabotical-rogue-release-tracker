@@ -214,7 +214,8 @@ const page_play_rogue = new function() {
                 render_custom_list()
             }
         }
-        render_screen_actions(tab_map[tab_map.current_tab].short)
+        render_screen_actions(tab_map[tab_map.current_tab].short);
+        request_queue_stats()
     };
 
     function update_queue_stats() {

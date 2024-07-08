@@ -1,5 +1,5 @@
 assets\rogue\audio\ID_list.txt	3556
-assets\rogue\audio\abilities.events	97283
+assets\rogue\audio\abilities.events	97466
 assets\rogue\audio\abilities\bolt\ability_bolt_enemy1.wav	441044
 assets\rogue\audio\abilities\bolt\ability_bolt_enemy2.wav	441044
 assets\rogue\audio\abilities\bolt\ability_bolt_enemy3.wav	441044
@@ -958,10 +958,10 @@ assets\rogue\audio\weapons\grenade_launcher\gl_bounce3.wav	134022
 assets\rogue\audio\weapons\grenade_launcher\gl_bounce4.wav	129298
 assets\rogue\audio\weapons\grenade_launcher\gl_bounce5.wav	133234
 assets\rogue\audio\weapons\grenade_launcher\gl_equip.wav	64204
-assets\rogue\audio\weapons\grenade_launcher\gl_fire1.wav	363970
-assets\rogue\audio\weapons\grenade_launcher\gl_fire2.wav	378146
-assets\rogue\audio\weapons\grenade_launcher\gl_fire3.wav	378146
-assets\rogue\audio\weapons\grenade_launcher\gl_fire4.wav	378146
+assets\rogue\audio\weapons\grenade_launcher\gl_fire1.wav	467958
+assets\rogue\audio\weapons\grenade_launcher\gl_fire2.wav	467958
+assets\rogue\audio\weapons\grenade_launcher\gl_fire3.wav	467958
+assets\rogue\audio\weapons\grenade_launcher\gl_fire4.wav	467958
 assets\rogue\audio\weapons\grenade_launcher\gl_fire_distant1.wav	302546
 assets\rogue\audio\weapons\grenade_launcher\gl_fire_distant2.wav	302546
 assets\rogue\audio\weapons\grenade_launcher\gl_fire_distant3.wav	302546
