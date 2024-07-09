@@ -874,11 +874,35 @@ const TRANSLATION_en_source = {
         engine: true
     },
     ingame_message_fragged_self: {
-        text: "You fragged yourself.",
+        text: "You fragged yourself",
         engine: true
     },
     ingame_message_fragged_by: {
         text: "{name} fragged you.",
+        engine: true
+    },
+    ingame_message_picked_up: {
+        text: "Claimed",
+        engine: true
+    },
+    ingame_message_currency: {
+        text: "Currency",
+        engine: true
+    },
+    ingame_message_card: {
+        text: "Card",
+        engine: true
+    },
+    ingame_message_overshield: {
+        text: "Overshield",
+        engine: true
+    },
+    ingame_message_epic_orb: {
+        text: "Epic Reward",
+        engine: true
+    },
+    ingame_message_legendary_orb: {
+        text: "Legendary Reward",
         engine: true
     },
     ingame_message_respawning_in: {
@@ -6788,12 +6812,16 @@ const TRANSLATION_en_source = {
         text: "Ready",
         engine: true
     },
+    shop_ready_button_tooltip: {
+        text: "Ready to start round.",
+        engine: true
+    },
     shop_random_button_tooltip: {
-        text: "Randomly select a card from all possible cards.\nCost: ",
+        text: "Randomly select a card from all possible cards.",
         engine: true
     },
     shop_reroll_button_tooltip: {
-        text: "Reroll current options.\nCost: ",
+        text: "Reroll current options.",
         engine: true
     },
     signal_weeble: {
@@ -7228,6 +7256,10 @@ const TRANSLATION_en_source = {
     },
     announcement_respawn_and_sudden_death: {
         text: "Spawn Wave & Sudden Death",
+        engine: true
+    },
+    announcement_no_more_respawns: {
+        text: "No more respawns!",
         engine: true
     },
     announcement_respawn_and_overtime: {

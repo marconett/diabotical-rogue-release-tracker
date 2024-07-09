@@ -1,6 +1,6 @@
 assets\shared\particles\effects.atlas	12410
 assets\shared\particles\effects.atlas.old	8033
-assets\shared\particles\effects_dave.atlas	29917
+assets\shared\particles\effects_dave.atlas	30001
 assets\shared\particles\effects_extra.atlas	50595
 assets\shared\particles\effects_scott.atlas	5027
 assets\shared\particles\effects_sean.atlas	12309
@@ -890,6 +890,7 @@ assets\shared\particles\system_definitions\artifact_hexagon_card_jewel_screen2.p
 assets\shared\particles\system_definitions\artifact_laser_beam.particles	59265
 assets\shared\particles\system_definitions\artifact_laser_beam_charge.particles	24598
 assets\shared\particles\system_definitions\artifact_laser_beam_impact.particles	34421
+assets\shared\particles\system_definitions\artifact_lava_pool.particles	37617
 assets\shared\particles\system_definitions\artifact_player.particles	12029
 assets\shared\particles\system_definitions\artifact_player_icon_screen.particles	9775
 assets\shared\particles\system_definitions\artifact_submachine_barrel.particles	11655
@@ -2133,7 +2134,7 @@ assets\shared\particles\system_definitions\vfx_door_sparks.particles	2629
 assets\shared\particles\system_definitions\vfx_windsurf.particles	2089
 assets\shared\particles\system_definitions\walljump.particles	4284
 assets\shared\particles\system_definitions\water_drip.particles	8510
-assets\shared\particles\system_definitions\weapon_artifact_grenade_launcher_muzzle.particles	30492
+assets\shared\particles\system_definitions\weapon_artifact_grenade_launcher_muzzle.particles	30383
 assets\shared\particles\system_definitions\weapon_blaster_impact.particles	29309
 assets\shared\particles\system_definitions\weapon_blaster_impact_gold.particles	12734
 assets\shared\particles\system_definitions\weapon_blaster_impact_gold_v2.particles	11023
@@ -2182,9 +2183,10 @@ assets\shared\particles\system_definitions\weapon_egun_muzzle_v2.particles	12549
 assets\shared\particles\system_definitions\weapon_egun_projectile.particles	27403
 assets\shared\particles\system_definitions\weapon_grenade_bounce.particles	17855
 assets\shared\particles\system_definitions\weapon_grenade_bounce_gold.particles	2329
+assets\shared\particles\system_definitions\weapon_grenade_bounce_lava.particles	31098
 assets\shared\particles\system_definitions\weapon_grenade_impact.particles	35379
 assets\shared\particles\system_definitions\weapon_grenade_impact_gold.particles	18960
-assets\shared\particles\system_definitions\weapon_grenade_impact_lava.particles	46184
+assets\shared\particles\system_definitions\weapon_grenade_impact_lava.particles	54244
 assets\shared\particles\system_definitions\weapon_grenade_launcher_muzzle.particles	23121
 assets\shared\particles\system_definitions\weapon_grenade_launcher_muzzle_3p.particles	23952
 assets\shared\particles\system_definitions\weapon_grenade_launcher_muzzle_flash.particles	3467
@@ -2212,7 +2214,7 @@ assets\shared\particles\system_definitions\weapon_hs_muzzle_artifact.particles	1
 assets\shared\particles\system_definitions\weapon_hs_muzzle_flash_artifact.particles	1274
 assets\shared\particles\system_definitions\weapon_hs_player_impact.particles	84975
 assets\shared\particles\system_definitions\weapon_hs_player_impact_artifact.particles	98370
-assets\shared\particles\system_definitions\weapon_lava_projectile.particles	36877
+assets\shared\particles\system_definitions\weapon_lava_projectile.particles	43198
 assets\shared\particles\system_definitions\weapon_lava_projectile_2.particles	26653
 assets\shared\particles\system_definitions\weapon_machinegun_impact.particles	55779
 assets\shared\particles\system_definitions\weapon_machinegun_impact_gold.particles	7928
@@ -2251,7 +2253,7 @@ assets\shared\particles\system_definitions\weapon_revolver_muzzle.particles	3624
 assets\shared\particles\system_definitions\weapon_revolver_muzzle_3p.particles	36003
 assets\shared\particles\system_definitions\weapon_revolver_muzzle_flash.particles	3384
 assets\shared\particles\system_definitions\weapon_revolver_player_impact.particles	22276
-assets\shared\particles\system_definitions\weapon_revolver_projectile.particles	8169
+assets\shared\particles\system_definitions\weapon_revolver_projectile.particles	9864
 assets\shared\particles\system_definitions\weapon_rocket_impact.particles	75491
 assets\shared\particles\system_definitions\weapon_rocket_impact_artifact.particles	81236
 assets\shared\particles\system_definitions\weapon_rocket_impact_artifact_v3.particles	48048
@@ -4252,6 +4254,7 @@ assets\shared\particles\textures\glow_splash_v3.png.dds	87556
 assets\shared\particles\textures\glow_splash_v4.png.dds	87556
 assets\shared\particles\textures\goldencapgrove_capgrove_d.png.dds	87556
 assets\shared\particles\textures\goo_diss_v1.png.dds	1398276
+assets\shared\particles\textures\goo_diss_v2.png.dds	1398276
 assets\shared\particles\textures\grad_horiz1.png.dds	87556
 assets\shared\particles\textures\grad_horiz2.png.dds	87556
 assets\shared\particles\textures\gradientnoise002.png.dds	349700
@@ -4520,6 +4523,7 @@ assets\shared\particles\textures\shaft_ammo_lightning.png.dds	174948
 assets\shared\particles\textures\shape_circle.png.dds	349700
 assets\shared\particles\textures\shape_star.png.dds	349700
 assets\shared\particles\textures\shield.png	10399
+assets\shared\particles\textures\shield_crack_01.png	1240975
 assets\shared\particles\textures\shieldrim.png.dds	349700
 assets\shared\particles\textures\shockwave3.png.dds	349700
 assets\shared\particles\textures\shockwave4x2_1.png.dds	174948
