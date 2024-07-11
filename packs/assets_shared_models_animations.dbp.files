@@ -988,7 +988,7 @@ assets\shared\models\animations\weesuit\1p\shotgun_skm_shotgun_weesuit.dbm	16239
 assets\shared\models\animations\weesuit\1p\shotgun_skm_shotgun_weesuit.fbx	1547724
 assets\shared\models\animations\weesuit\1p\shotgun_skm_shotgun_weesuit_1p.dbm	1623945
 assets\shared\models\animations\weesuit\1p\shotgun_skm_shotgun_weesuit_1p.fbx	1547724
-assets\shared\models\animations\weesuit\1p\skm_weesuit_1p.ani	1320
+assets\shared\models\animations\weesuit\1p\skm_weesuit_1p.ani	1312
 assets\shared\models\animations\weesuit\1p\skm_weesuit_1p.dbm	1468039
 assets\shared\models\animations\weesuit\1p\skm_weesuit_1p.fbx	1436268
 assets\shared\models\animations\weesuit\crouch_back.dbm	152633
@@ -1381,8 +1381,8 @@ assets\shared\models\animations\wp_grenade_launcher\jump.dbm	19634
 assets\shared\models\animations\wp_grenade_launcher\jump.fbx	144188
 assets\shared\models\animations\wp_grenade_launcher\land.dbm	4402
 assets\shared\models\animations\wp_grenade_launcher\land.fbx	118492
-assets\shared\models\animations\wp_grenade_launcher\reload.dbm	4404
-assets\shared\models\animations\wp_grenade_launcher\reload.fbx	118508
+assets\shared\models\animations\wp_grenade_launcher\reload.dbm	46835
+assets\shared\models\animations\wp_grenade_launcher\reload.fbx	160012
 assets\shared\models\animations\wp_grenade_launcher\run.dbm	22897
 assets\shared\models\animations\wp_grenade_launcher\run.fbx	145260
 assets\shared\models\animations\wp_grenade_launcher\skm_grenade_launcher.ani	1184

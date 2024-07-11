@@ -1,9 +1,9 @@
 assets\shared\particles\effects.atlas	12410
 assets\shared\particles\effects.atlas.old	8033
-assets\shared\particles\effects_dave.atlas	30001
+assets\shared\particles\effects_dave.atlas	30184
 assets\shared\particles\effects_extra.atlas	50595
 assets\shared\particles\effects_scott.atlas	5027
-assets\shared\particles\effects_sean.atlas	12309
+assets\shared\particles\effects_sean.atlas	12649
 assets\shared\particles\meshes\100_units_wind_mesh.dbm	23789
 assets\shared\particles\meshes\100_units_wind_mesh.fbx	38060
 assets\shared\particles\meshes\100unit.dbm	1575
@@ -26,6 +26,7 @@ assets\shared\particles\meshes\4_cone_uneven.dbm	2754
 assets\shared\particles\meshes\4_cone_uneven.fbx	19420
 assets\shared\particles\meshes\700unit_cone_ds_v1.dbm	5096
 assets\shared\particles\meshes\700unit_cone_ds_v1.fbx	14220
+assets\shared\particles\meshes\70_plane_1.fbx	11452
 assets\shared\particles\meshes\Barrel_Mesh.dbm	21809
 assets\shared\particles\meshes\Barrel_Mesh.fbx	38112
 assets\shared\particles\meshes\Barrel_R_Mesh.dbm	21813
@@ -3865,6 +3866,8 @@ assets\shared\particles\textures\armfx_2.png.dds	699192
 assets\shared\particles\textures\armfx_3.png.dds	1398276
 assets\shared\particles\textures\armfx_4.png.dds	1398276
 assets\shared\particles\textures\armfx_5.png.dds	699192
+assets\shared\particles\textures\armfx_6.png.dds	1398276
+assets\shared\particles\textures\armfx_7.png.dds	1398276
 assets\shared\particles\textures\artichoke_leaf_single_d.png.dds	1398276
 assets\shared\particles\textures\artichoke_leaf_single_mask.png.dds	349700
 assets\shared\particles\textures\basic_cloud.png.dds	5592580
@@ -4115,6 +4118,7 @@ assets\shared\particles\textures\effect_cross.png.dds	87556
 assets\shared\particles\textures\effects1.png.dds	1398276
 assets\shared\particles\textures\effects2.png.dds	1398276
 assets\shared\particles\textures\effects_additive.png.dds	1398276
+assets\shared\particles\textures\effects_dave.atlas	30274
 assets\shared\particles\textures\egun_projectile_mask.png.dds	349700
 assets\shared\particles\textures\egun_square_diss.png.dds	1398276
 assets\shared\particles\textures\elec_01.png.dds	349700
@@ -4191,6 +4195,7 @@ assets\shared\particles\textures\fb_neon_shapes.png.dds	349700
 assets\shared\particles\textures\fb_pop_smoke2.png.dds	1398276
 assets\shared\particles\textures\fb_quick_bolt_lightning_v1.png.dds	2796388
 assets\shared\particles\textures\fb_simple_burst_v1.png.dds	1398276
+assets\shared\particles\textures\fb_simple_burst_v2.png.dds	1398276
 assets\shared\particles\textures\fb_smoke_puffs_v1.png.dds	1398276
 assets\shared\particles\textures\fb_smoke_puffs_v2.png.dds	1398276
 assets\shared\particles\textures\fb_spin_puffs_v2.png.dds	1398276
@@ -4523,7 +4528,8 @@ assets\shared\particles\textures\shaft_ammo_lightning.png.dds	174948
 assets\shared\particles\textures\shape_circle.png.dds	349700
 assets\shared\particles\textures\shape_star.png.dds	349700
 assets\shared\particles\textures\shield.png	10399
-assets\shared\particles\textures\shield_crack_01.png	1240975
+assets\shared\particles\textures\shield_crack_01.png.dds	1398276
+assets\shared\particles\textures\shield_crack_02.png.dds	5592580
 assets\shared\particles\textures\shieldrim.png.dds	349700
 assets\shared\particles\textures\shockwave3.png.dds	349700
 assets\shared\particles\textures\shockwave4x2_1.png.dds	174948
@@ -4549,6 +4555,7 @@ assets\shared\particles\textures\small_puff_v2.png.dds	1398276
 assets\shared\particles\textures\small_shockwave.png.dds	349700
 assets\shared\particles\textures\smoke_01.png.dds	349700
 assets\shared\particles\textures\smoke_04.png.dds	5592580
+assets\shared\particles\textures\smoke_jet_diss.png.dds	699236
 assets\shared\particles\textures\smoke_jet_v1.png.dds	1398276
 assets\shared\particles\textures\smoke_jet_v2.png.dds	1398276
 assets\shared\particles\textures\smoke_jet_v3.png.dds	1398276
@@ -4670,6 +4677,7 @@ assets\shared\particles\textures\wf_mask5.png.dds	87556
 assets\shared\particles\textures\white.png.dds	1540
 assets\shared\particles\textures\white_hitmaker.png.dds	5592580
 assets\shared\particles\textures\white_star.png.dds	5592580
+assets\shared\particles\textures\wind_diss_v1.png.dds	1398276
 assets\shared\particles\textures\wind_long.png.dds	349732
 assets\shared\particles\textures\wind_long_2.png.dds	349732
 assets\shared\particles\textures\wind_long_3.png.dds	349732

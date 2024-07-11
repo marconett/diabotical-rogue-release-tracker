@@ -891,7 +891,7 @@ const TRANSLATION_en_source =
         "engine": true
     },
     "ingame_message_card": {
-        "text": "Card",
+        "text": "Upgrade card",
         "engine": true
     },
     "ingame_message_overshield": {
