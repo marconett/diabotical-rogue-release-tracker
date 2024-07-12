@@ -52,6 +52,10 @@ const TRANSLATION_en_source =
         "text": "Vintage",
         "engine": true
     },
+    "customization_rog_we_egun_rixor": {
+        "text": "Rixor",
+        "engine": true
+    },
     "customization_rog_we_hmg_excavator": {
         "text": "Excavator",
         "engine": true
@@ -74,6 +78,10 @@ const TRANSLATION_en_source =
     },
     "customization_rog_we_hmg_vintage": {
         "text": "Vintage",
+        "engine": true
+    },
+    "customization_rog_we_hmg_hardwing": {
+        "text": "Hardwing",
         "engine": true
     },
     "customization_rog_we_hsniper_excavator": {
@@ -310,6 +318,22 @@ const TRANSLATION_en_source =
     },
     "achievement_desc_0_g2_kill_rogue_eggbot": {
         "text": "Eliminate Eggbot 100 times",
+        "engine": true
+    },
+    "achievement_g2_kill_rogue_bigbot": {
+        "text": "Size Doesn't Matter",
+        "engine": true
+    },
+    "achievement_desc_0_g2_kill_rogue_bigbot": {
+        "text": "Eliminate Tiny 100 times",
+        "engine": true
+    },
+    "achievement_g2_kills_with_rogue_bigbot": {
+        "text": "Larger Than Life",
+        "engine": true
+    },
+    "achievement_desc_0_g2_kills_with_rogue_bigbot": {
+        "text": "Get 100 eliminations with Tiny",
         "engine": true
     },
     "achievement_g2_last_man_standing_survive": {
@@ -1984,6 +2008,46 @@ const TRANSLATION_en_source =
     },
     "weapon_grenadelauncher_a3_desc": {
         "text": "Increase Grenade Launcher projectile speed.",
+        "engine": true
+    },
+    "grenadelauncher_no_self_damage": {
+        "text": "Grenade Immunity",
+        "engine": true
+    },
+    "grenadelauncher_no_self_damage_desc": {
+        "text": "Your own grenades can no longer damage you.",
+        "engine": true
+    },
+    "grenadelauncher_splash_radius": {
+        "text": "Grenade Blast",
+        "engine": true
+    },
+    "grenadelauncher_splash_radius_desc": {
+        "text": "Increase grenade explosion radius.",
+        "engine": true
+    },
+    "grenadelauncher_lead_balloon": {
+        "text": "Lead Balloon",
+        "engine": true
+    },
+    "grenadelauncher_lead_balloon_desc": {
+        "text": "Your grenades bounce less, and have a shorter fuse time.",
+        "engine": true
+    },
+    "grenadelauncher_sticky": {
+        "text": "Sticky Slinger",
+        "engine": true
+    },
+    "grenadelauncher_sticky_desc": {
+        "text": "Use secondary fire to shoot sticky grenades. These grenades have a longer life span and can be detonated early using primary fire.",
+        "engine": true
+    },
+    "grenadelauncher_floor_is_lava": {
+        "text": "Floor is Lava",
+        "engine": true
+    },
+    "grenadelauncher_floor_is_lava_desc": {
+        "text": "A small lava puddle is created after each grenade explosion, dealing damage to enemies that touch it.",
         "engine": true
     },
     "weapon_machinegun": {
@@ -6104,6 +6168,150 @@ const TRANSLATION_en_source =
         "text": "Place a destructible dome shield that protects you and your teammates.",
         "engine": true
     },
+    "skill_movement_transmutation": {
+        "text": "Big/Small",
+        "engine": true
+    },
+    "skill_movement_transmutation_desc": {
+        "text": "Activate to change your size. In Big Mode, you have increased health. In Small Mode, you move faster, deal less damage, and can hover using jump.",
+        "engine": true
+    },
+    "movement_transmutation_a1": {
+        "text": "Olympian",
+        "engine": true
+    },
+    "movement_transmutation_a1_desc": {
+        "text": "Gain a temporary speed boost when switching to Small mode.",
+        "engine": true
+    },
+    "movement_transmutation_a2": {
+        "text": "Overshield",
+        "engine": true
+    },
+    "movement_transmutation_a2_desc": {
+        "text": "Gain overshield when switching from Small to Big mode.",
+        "engine": true
+    },
+    "movement_transmutation_a3": {
+        "text": "Heavy Object",
+        "engine": true
+    },
+    "movement_transmutation_a3_desc": {
+        "text": "Doubles the landing impact damage after a big fall when switching from Small to Big mode while airborne.",
+        "engine": true
+    },
+    "skill_punch": {
+        "text": "Punch/Uppercut",
+        "engine": true
+    },
+    "skill_punch_desc": {
+        "text": "In Big Mode, slam the ground. In Small Mode, throw an uppercut.",
+        "engine": true
+    },
+    "skill_shield_throw": {
+        "text": "Cpt. Bot",
+        "engine": true
+    },
+    "skill_shield_throw_desc": {
+        "text": "Throw your shield, dealing damage to enemies that it hits.",
+        "engine": true
+    },
+    "skill_shield_throw_a1": {
+        "text": "Boomerang Shield",
+        "engine": true
+    },
+    "skill_shield_throw_a1_desc": {
+        "text": "Your shield returns after being thrown, damaging enemies on the return flight.",
+        "engine": true
+    },
+    "skill_shield_throw_a2": {
+        "text": "Pinball Plate",
+        "engine": true
+    },
+    "skill_shield_throw_a2_desc": {
+        "text": "Your shield will ricochet off of players in close proximity to one another.",
+        "engine": true
+    },
+    "skill_shield_throw_a3": {
+        "text": "Spring Arm",
+        "engine": true
+    },
+    "skill_shield_throw_a3_desc": {
+        "text": "Increases the projectile speed of your shield throw.",
+        "engine": true
+    },
+    "skill_big_shield": {
+        "text": "Shield Field",
+        "engine": true
+    },
+    "skill_big_shield_desc": {
+        "text": "Deploy a handheld shield to protect yourself and your teammates.",
+        "engine": true
+    },
+    "skill_big_shield_a1": {
+        "text": "Deflecto-Disc",
+        "engine": true
+    },
+    "skill_big_shield_a1_desc": {
+        "text": "Shield Field can now deflect projectiles, dealing 25% damage to enemies hit by deflections. The shield now breaks easier.",
+        "engine": true
+    },
+    "skill_big_shield_a2": {
+        "text": "Weight Loss",
+        "engine": true
+    },
+    "skill_big_shield_a2_desc": {
+        "text": "Increases the activated Shield Field movement speed.",
+        "engine": true
+    },
+    "skill_big_shield_a3": {
+        "text": "Increased Durability",
+        "engine": true
+    },
+    "skill_big_shield_a3_desc": {
+        "text": "Your shield has increased durability.",
+        "engine": true
+    },
+    "skill_big_shield_a4": {
+        "text": "Transparency Module",
+        "engine": true
+    },
+    "skill_big_shield_a4_desc": {
+        "text": "Teammates are now able to shoot through your shield.",
+        "engine": true
+    },
+    "skill_shield_charge": {
+        "text": "Charge",
+        "engine": true
+    },
+    "skill_shield_charge_desc": {
+        "text": "Charge forward with your shield, dealing damage to enemies caught in your path.",
+        "engine": true
+    },
+    "skill_shield_charge_a1": {
+        "text": "Soccer Cleats",
+        "engine": true
+    },
+    "skill_shield_charge_a1_desc": {
+        "text": "You have increased traction, granting you increased turning at the start of your charge.",
+        "engine": true
+    },
+    "skill_shield_charge_a2": {
+        "text": "Overshield",
+        "engine": true
+    },
+    "skill_shield_charge_a2_desc": {
+        "text": "Gain 10 Overshield for each enemy hit with charge.",
+        "engine": true
+    },
+    "skill_shield_charge_a4": {
+        "text": "Speed Increase",
+        "engine": true
+    },
+    "skill_shield_charge_a4_desc": {
+        "text": "Increases the max speed of your charge.",
+        "engine": true
+    },
     "skill_teleport_to_friend": {
         "text": "Teleport To Friend",
         "engine": true
@@ -6528,6 +6736,14 @@ const TRANSLATION_en_source =
         "text": "The 'in your face' type of suit. Can leap into combat and drop shields for protection.",
         "engine": true
     },
+    "class_rogue_bigbot": {
+        "text": "Tiny",
+        "engine": true
+    },
+    "class_rogue_bigbot_desc": {
+        "text": "A very large and defensive suit... except when it's not.",
+        "engine": true
+    },
     "connection_status": {
         "text": "Connection Status"
     },
@@ -6814,7 +7030,7 @@ const TRANSLATION_en_source =
         "engine": true
     },
     "shop_ready_button_tooltip": {
-        "text": "Ready to start round.",
+        "text": "Press when you are ready to close the Shop and play.",
         "engine": true
     },
     "shop_random_button_tooltip": {
@@ -6999,6 +7215,10 @@ const TRANSLATION_en_source =
     },
     "eggbot_progression": {
         "text": "Eggbot progression",
+        "engine": true
+    },
+    "bigbot_progression": {
+        "text": "Tiny progression",
         "engine": true
     },
     "card_selection_popup": {

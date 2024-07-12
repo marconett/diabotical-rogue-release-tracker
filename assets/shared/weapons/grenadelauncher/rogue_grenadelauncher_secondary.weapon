@@ -1,0 +1,133 @@
+rogue_grenadelauncher_secondary
+{
+	respawn_time 9
+	weapon_tag gl
+	selectable false
+
+	show_in_dev_console false
+
+ 	//group 3
+	speed 1300
+ 	rate 600
+  	damage 80
+	min_splash_damage 5
+	splash_damage 80
+	self_damage 30
+	//self_damage has been half of splash damage
+	splash_hemisphere_offset 20
+	splash_hemisphere_offset_damage_multiplier 0.3
+
+	
+	duration 4000
+	default_ammo 4
+	max_ammo 4
+	unlimited_ammo false
+	ammo_per_reload 1
+	reload 800
+	
+	target_indicator true
+	bind_group 10
+	bind_group 10
+	hit_radius 1 1
+
+	gravity 450
+	gravity_pitch_offset 0.2
+	
+  	splash_radius 150
+	knockback 80
+	knockback_self 113
+	ground_knockback 80
+	ground_knockback_self 113
+	center_of_mass_offset 4
+	center_of_mass_offset_self 0
+
+	manual_detonation true
+	explode_delay_after_last_impact 4
+	//attach true
+
+	recoil_delay_recovery 0.125
+	recoil_up 3
+	//recoil_side 0.3
+	recoil_recovery_time 0.6
+	recoil_time 0.09
+	
+	zoomed_recoil_up 2
+	//zoomed_recoil_side 0.2
+	zoomed_recoil_recovery_time 0.45
+	zoomed_recoil_time 0.08
+	
+	zoomed_scope 1
+	
+	equip_time 500
+	base_combo_rate 600
+	
+	shot_particles weapon_grenade_launcher_muzzle_flash
+   	shot_particles_attached weapon_grenade_launcher_muzzle
+	shot_particles_attached_3p weapon_grenade_launcher_muzzle_3p
+  	//missile_particles gl_bullet
+  	missile_particles weapon_sticky_bomb
+  	impact_particles weapon_sticky_impact
+	//missile_trail_particles gl_bullet_dynamic_trail
+  	
+	//IMPACT DECALS
+
+	//decal decal_explosion 100 3 3.561 false false alpha 10
+	//decal decal_plasma 100 3 3.561 false false alpha 3
+	//decal decal_plasma 175 3 3.561 false false alpha 3
+	//decal decal_glow_red 60 3 3.561 false false alpha 25
+	//decal decal_glow 35 3 3.561 false false alpha 20
+	model_camera_scale 0.5
+
+	//model assets/shared/weapons/grenadelauncher/grenadelauncher
+	model assets/shared/models/animations/wp_grenade_launcher/skm_grenade_launcher
+	model_scale 0.1
+	model_scale_centered 0.09
+	model_position 2.5 -3.15 3.15
+	model_position_centered 0 -3.1 3.35
+	model_pivot 0 -0.4 0
+	model_camera_scale 0.6
+	muzzle 0 0 0
+	fov 40
+	
+	model_scale_third_person 1.1
+	model_position_third_person 7 -4 28
+	
+	shot_sound w_gl_fire_sticky 
+	shot_sound2 w_gl_fire_distant 
+	impact_sound w_gl_impact 
+	impact_sound2 w_gl_impact_distant 
+	attach_sound w_gl_sticky_grenade_stuck
+	equip_sound w_gl_equip
+	single_missile_sound w_gl_airbound 
+	hit_sound fb_enemy_hit
+	critical_hit_sound	fb_enemy_hit_crit
+	out_of_ammo_sound w_gl_ooa
+	charge_sound fb_heal_receive_loop
+
+	detached_shot_particles false
+	//team_colored_trail true
+}
+
+rogue_grenadelauncher_secondary augment 2
+{
+	name grenadelauncher_no_self_damage
+	name_translation_key grenadelauncher_no_self_damage
+	desc_translation_key grenadelauncher_no_self_damage_desc
+	rarity rare
+	selectable true
+
+	overwrite self_damage 0
+
+	locked_in_battlepass true
+}
+
+rogue_grenadelauncher_secondary augment 7
+{
+	name grenadelauncher_splash_radius
+	name_translation_key grenadelauncher_splash_radius
+	desc_translation_key grenadelauncher_splash_radius_desc
+	rarity rare
+	selectable true
+	preadd splash_radius 20
+	max_stacks 1
+}

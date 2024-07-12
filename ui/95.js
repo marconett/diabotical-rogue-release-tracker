@@ -319,12 +319,36 @@ GAME.set_initial_data(GAME.ids.ROGUE, {
                 color_id: "4",
                 i18n: "weapon_rocketlauncher"
             }]
+        },
+        bigbot: {
+            i18n: "class_rogue_bigbot",
+            categories: [{
+                id: "c_bigbot",
+                type: "suit",
+                i18n: "customization_type_suit"
+            }, {
+                id: "w_ss_bigbot",
+                type: "weapon",
+                color_id: "3",
+                i18n: "weapon_supershotgun"
+            }, {
+                id: "w_bl_bigbot",
+                type: "weapon",
+                color_id: "2",
+                i18n: "weapon_blaster"
+            }, {
+                id: "w_gl_bigbot",
+                type: "weapon",
+                color_id: "8",
+                i18n: "weapon_grenadelauncher"
+            }]
         }
     },
     customization_category_map: {
         c_eggbot: [new CustomizationType("suit", "7")],
         c_weesuit: [new CustomizationType("suit", "6")],
         c_chunk: [new CustomizationType("suit", "8")],
+        c_bigbot: [new CustomizationType("suit", "9")],
         w_cb_eggbot: [new CustomizationType("weapon", "cb", "7")],
         w_smg_eggbot: [new CustomizationType("weapon", "smg", "7")],
         w_egun_eggbot: [new CustomizationType("weapon", "egun", "7")],
@@ -333,7 +357,10 @@ GAME.set_initial_data(GAME.ids.ROGUE, {
         w_rev_scout: [new CustomizationType("weapon", "rev", "6")],
         w_hmg_chunk: [new CustomizationType("weapon", "hmg", "8")],
         w_shaft_chunk: [new CustomizationType("weapon", "shaft", "8")],
-        w_rl_chunk: [new CustomizationType("weapon", "rl", "8")]
+        w_rl_chunk: [new CustomizationType("weapon", "rl", "8")],
+        w_ss_bigbot: [new CustomizationType("weapon", "ss", "9")],
+        w_bl_bigbot: [new CustomizationType("weapon", "bl", "9")],
+        w_gl_bigbot: [new CustomizationType("weapon", "gl", "9")]
     },
     flat_bg_scene_screens: ["coin_shop", "notification", "battlepass", "shop", "shop_item", "player_profile", "locker"],
     map_names: {
@@ -810,6 +837,39 @@ GAME.set_initial_data(GAME.ids.ROGUE, {
                 customization_id: "rog_we_ss_vintage",
                 customization_type: 6,
                 customization_sub_type: "ss",
+                customization_set_id: null,
+                rarity: 3,
+                seen: true,
+                amount: 1
+            }],
+            gl: [{
+                customization_id: "rog_we_gl_excavator",
+                customization_type: 6,
+                customization_sub_type: "gl",
+                customization_set_id: null,
+                rarity: 0,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_gl_juno",
+                customization_type: 6,
+                customization_sub_type: "gl",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_gl_stinger",
+                customization_type: 6,
+                customization_sub_type: "gl",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_gl_vintage",
+                customization_type: 6,
+                customization_sub_type: "gl",
                 customization_set_id: null,
                 rarity: 3,
                 seen: true,

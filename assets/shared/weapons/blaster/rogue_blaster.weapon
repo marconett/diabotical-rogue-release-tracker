@@ -3,7 +3,7 @@ rogue_blaster
 	name_translation_key weapon_blaster
 	desc_translation_key weapon_blaster_desc
 	
-	required_class rogue_chunk
+	required_class rogue_bigbot
 	selectable true
 	rarity rare
  	respawn_time 9

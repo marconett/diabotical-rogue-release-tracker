@@ -43,6 +43,8 @@ skill 20001 augment 1
 	desc_translation_key skill_increase_max_charges_desc
 	preadd max_charges 1
 	max_stacks 1
+
+	locked_in_battle_pass true
 }
 
 //skill 20001 augment 2
@@ -108,6 +110,7 @@ skill 20002 augment 2
 	preadd radius 100
 	rarity rare
 	max_stacks 1
+	locked_in_battle_pass true
 
 	selectable true
 }
@@ -1637,6 +1640,7 @@ skill 20023 augment 2
 
 skill 20023 augment 3
 {
+	locked_in_battle_pass true
 	name_translation_key skill_increase_damage
 	desc_translation_key skill_increase_damage_desc
 	rarity epic
@@ -1805,6 +1809,7 @@ skill 20024 augment 4
 
 skill 20024 augment 5 
 {
+	locked_in_battle_pass true
 	name_translation_key skill_mini_rocket_a5
 	desc_translation_key skill_mini_rocket_a5_desc
 	rarity epic
@@ -1995,3 +2000,308 @@ skill 40002
 	charged_jump_min_force 500
 	charged_jump_forward_force 150
 }
+
+skill 20027
+{
+    name_translation_key skill_shield_throw
+    desc_translation_key skill_shield_throw_desc
+    required_class rogue_bigbot
+
+	hud_icon images/skill_icons/Arena_Ability_Icon_Shield_Throw.png
+
+    weapon throwing_shield
+    selectable true
+    cooldown 10
+}
+
+skill 20027 augment 1
+{
+	name_translation_key skill_shield_throw_a1
+	desc_translation_key skill_shield_throw_a1_desc
+	rarity epic
+	overwrite rebound true
+
+	selectable true
+	//Travel back upgrade
+}
+
+skill 20027 augment 2
+{
+	name_translation_key skill_shield_throw_a2
+	desc_translation_key skill_shield_throw_a2_desc
+
+
+	rarity legendary
+	bounces 3
+	radius 300
+	weapon_augment 1
+
+	selectable true
+
+	//Bounce upgrade
+}
+
+skill 20027 augment 3
+{
+	name_translation_key skill_shield_throw_a3
+	desc_translation_key skill_shield_throw_a3_desc
+	rarity legendary
+	weapon_augment 2
+	selectable true
+
+
+	//Projetile speed
+}
+
+skill 20027 augment 4
+{
+	name_translation_key skill_lowers_cooldown
+	desc_translation_key skill_lowers_cooldown_desc
+	rarity rare
+
+	selectable true
+	
+	preadd cooldown -2
+	max_stacks 2
+}
+
+skill 20028
+{
+	name_translation_key skill_big_shield
+	desc_translation_key skill_big_shield_desc
+	required_class rogue_bigbot
+
+	hud_icon images/skill_icons/Arena_Ability_Icon_Big_Shield.png
+	hud_icon2 images/skill_icons/Arena_Ability_Icon_Big_Shield.png
+
+	prevent_cooldown_on_initial_fire true
+	selectable true
+	cooldown 12
+
+	damage 300 //shield health
+	movement_speed_boost 0.75 //movement modifier
+
+	homing_module_enabled false
+	artifact_enabled false
+}
+
+skill 20028 augment 1
+{
+	locked_in_battlepass true
+	name_translation_key skill_big_shield_a1
+	desc_translation_key skill_big_shield_a1_desc
+	rarity legendary
+
+	selectable true
+
+	overwrite artifact_enabled true
+
+	//Reflect upgrade
+}
+
+skill 20028 augment 2
+{
+	locked_in_battlepass true
+	name_translation_key skill_big_shield_a2
+	desc_translation_key skill_big_shield_a2_desc
+	rarity common
+
+	selectable true
+
+	overwrite movement_speed_boost 0.85
+
+	//Reduce movement speed reduction from holding shield
+}
+
+skill 20028 augment 3
+{
+	name_translation_key skill_big_shield_a3
+	desc_translation_key skill_big_shield_a3_desc
+	rarity common
+
+	selectable true
+
+	preadd damage 50
+}
+
+skill 20028 augment 4
+{
+	name_translation_key skill_big_shield_a4
+	desc_translation_key skill_big_shield_a4_desc
+	rarity epic
+
+	selectable true
+
+	overwrite homing_module_enabled true //teammates can shoot through shield, temp var used for now
+}
+
+skill 20029
+{
+	name_translation_key skill_shield_charge
+	desc_translation_key skill_shield_charge_desc
+	required_class rogue_bigbot
+
+	prevent_cooldown_on_initial_fire true
+
+	hud_icon images/skill_icons/Arena_Ability_Icon_Shield_Charge.png
+	hud_icon2 images/skill_icons/Arena_Ability_Icon_Shield_Charge.png
+
+	selectable true
+	cooldown 12
+
+	charge_max_speed 1200
+	charge_acceleration 1000
+	charge_duration 2
+	charge_steering_speed 0.5
+	charge_steering_acceleration 2
+	charge_knockback_power 2000
+
+	duration 5
+
+	artifact_enabled false
+	homing_module_enabled false
+}
+
+skill 20029 augment 1
+{
+	locked_in_battlepass true
+	name_translation_key skill_shield_charge_a1
+	desc_translation_key skill_shield_charge_a1_desc
+	rarity epic
+
+	selectable true
+
+	overwrite homing_module_enabled true
+	overwrite damage 1.0
+
+	//Fast turn at the start of charge
+}
+
+skill 20029 augment 2
+{
+	locked_in_battlepass true
+	name_translation_key skill_shield_charge_a2
+	desc_translation_key skill_shield_charge_a2_desc
+	rarity legendary
+
+	selectable true
+
+	overwrite artifact_enabled true
+
+	//Slam at the end of charge that gives overshield for each enemy hit
+}
+
+skill 20029 augment 3
+{
+	name_translation_key skill_lowers_cooldown
+	desc_translation_key skill_lowers_cooldown_desc
+
+
+	selectable true
+
+	preadd cooldown -2.5
+	max_stacks 2
+}
+
+skill 20029 augment 4
+{
+	name_translation_key skill_shield_charge_a4
+	desc_translation_key skill_shield_charge_a4_desc
+
+	selectable true
+
+	preadd charge_max_speed 200
+	preadd charge_acceleration 100
+}
+
+skill 20030 
+{
+	name_translation_key skill_punch
+	desc_translation_key skill_punch_desc
+	selectable false
+	required_class rogue_bigbot
+
+	prevent_cooldown_on_initial_fire true
+
+	hud_icon images/skill_icons/gadget_hud_punch.png
+	hud_icon2 images/skill_icons/gadget_hud_punch.png
+	hud_icon3 images/skill_icons/gadget_hud_punch.png
+
+	color 2E7AE5
+
+	selectable false
+
+	grant_charges_on_death true
+
+	max_charges 3
+
+	cooldown 2
+
+	damage 50
+	knockback 600
+}
+
+skill 40003 
+{
+	name movement_transmutation
+	name_translation_key skill_movement_transmutation
+	desc_translation_key skill_movement_transmutation_desc
+	// prevent_cooldown_on_initial_fire true
+
+	hud_icon images/skill_icons/Arena_Ability_Icon_Shrink.png
+	hud_icon2 images/skill_icons/Arena_Ability_Icon_Grow.png
+
+	prevent_cooldown_on_initial_fire true
+
+	selectable false
+	show_in_dev_console false
+	cooldown 2.0
+
+	damage 5.0 // HOVER FUEL
+
+	artifact_enabled false
+	homing_module_enabled false
+	piercing_damage_increase false
+}
+
+skill 40003 augment 1 
+{
+	name_translation_key movement_transmutation_a1
+	desc_translation_key movement_transmutation_a1_desc
+	rarity common
+	selectable true
+
+	overwrite artifact_enabled true
+	overwrite duration 1.0
+	overwrite movement_speed_boost 1.5
+}
+
+skill 40003 augment 2
+{
+	name_translation_key movement_transmutation_a2
+	desc_translation_key movement_transmutation_a2_desc
+	rarity common
+	selectable true
+
+	overwrite homing_module_enabled true
+	overwrite overshield_amount 35
+}
+
+skill 40003 augment 3 
+{
+	name_translation_key movement_transmutation_a3
+	desc_translation_key movement_transmutation_a3_desc
+	selectable true
+
+	overwrite piercing_damage_increase true 
+}
+
+// skill 40003 augment 4
+// {
+// 	name_translation_key movement_transmutation_a4
+// 	name_translation_desc movement_transmutation_a4_desc
+// 	rarity rare
+// 	selectable false
+
+// 	preadd damage 2.5
+// }

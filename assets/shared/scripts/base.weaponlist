@@ -158,6 +158,20 @@
 	weapon rogue_blaster_secondary
 	weapon beam
 	weapon leap_artifact_slam
+	weapon throwing_shield
+	weapon rogue_grenadelauncher_secondary
+	//130
+	weapon artillery_projectile
+	weapon blinker_ranged_beam
+	weapon imp_projectile
+	weapon throwing_shield_rebound
+	weapon brute_swing
+	//135
+	weapon brute_slam_aoe
+	weapon bomber_insta_explode
+	weapon brute_pummel
+	weapon uppercut_punch
+	weapon ground_slam
 
 //// PITFALL: When adding new weapons WEAPON_COUNT may need to be incremented
 

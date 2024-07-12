@@ -303,6 +303,8 @@ const page_game_report = new function() {
             return "/html/images/rogue_avatars/small_square_eggbot.png.dds"
         } else if (class_name === "rogue_scout") {
             return "/html/images/rogue_avatars/small_square_weesuit.png.dds"
+        } else if (class_name === "rogue_bigbot") {
+            return "/html/images/rogue_avatars/small_square_bigbot.png.dds"
         }
         return ""
     }

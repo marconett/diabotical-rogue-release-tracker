@@ -2839,3 +2839,79 @@ leap_artifact_slam
 	impact_sound rl_impact1 rl_impact2 rl_impact3 rl_impact4
 	impact_particles ability_leap_artifact_land
 }
+
+throwing_shield 
+{
+	weapon_tag throwable_shield
+	damage 50
+	speed 3000
+
+	gravity 0
+
+	missile_particles skill_shield_throw_projectile
+	impact_particles skill_shield_throw_impact
+	missile_trail_particles weeb_dynamic_trail_green
+
+	missile_loop_sound ab_shield_throw_airbound_loop
+	impact_sound ab_shield_throw_impact
+
+	hit_radius 10 5
+}
+
+throwing_shield augment 1
+{
+	overwrite penetrating true
+}
+
+throwing_shield augment 2
+{
+	preadd speed 2000
+}
+
+throwing_shield_rebound
+{
+	weapon_tag throwable_shield_rebound
+	damage 50
+	speed 3000
+	penetrating true
+
+	gravity 0
+
+	missile_particles skill_shield_throw_projectile
+	impact_particles skill_shield_throw_impact
+	missile_trail_particles weeb_dynamic_trail_green
+
+	missile_loop_sound ab_shield_throw_airbound_loop
+	impact_sound ab_shield_throw_impact
+}
+
+uppercut_punch 
+{
+	weapon_tag uppercut_punch
+	rate 10000
+  	damage 70
+	speed 0
+	distance 75
+	hit_radius 50
+
+	hit_sound ab_uppercut_impact
+}
+
+ground_slam 
+{
+	weapon_tag ground_slam
+	speed 1
+  	damage 70
+	min_splash_damage 10
+	splash_damage 70
+	self_damage 0
+	insta_explode true
+	gravity 1
+  	splash_radius 200
+	knockback 600
+	knockback_self 0
+	ground_knockback 150
+	ground_knockback_self 0
+
+	impact_sound w_rl_impact
+}

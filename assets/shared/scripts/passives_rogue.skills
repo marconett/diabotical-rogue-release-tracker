@@ -20,6 +20,7 @@ skill 30002
 	name_translation_key passive_cooldown_reduction_on_kill
 	desc_translation_key passive_cooldown_reduction_on_kill_desc
 
+	locked_in_battle_pass true
 	selectable true
 	show_in_dev_console true
 	category passive
@@ -185,6 +186,7 @@ skill 30012
 	rarity epic
 	show_in_dev_console true
 	power 1.3 //multiplier
+	locked_in_battle_pass true
 }
 
 skill 30013
@@ -304,6 +306,7 @@ skill 30021
 	selectable true
 	show_in_dev_console true
 	rarity epic
+	locked_in_battle_pass true
 
 	movement_speed_boost 100
 	duration 1.5

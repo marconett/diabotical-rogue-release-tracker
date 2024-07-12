@@ -4,8 +4,8 @@ rogue_supershotgun
 	desc_translation_key weapon_supershotgun_desc
 								
 	selectable true
-	rarity rare
-	required_class rogue_scout
+	rarity epic
+	required_class rogue_bigbot
 
 	respawn_time 9
 	weapon_tag ss
@@ -18,7 +18,7 @@ rogue_supershotgun
 	unlimited_ammo false
 	reload 2000
 	
-	color 1996D9
+	color A35EBA
 	icon_path images/weapon_icons/wp_hud_shotgun_02.png
 	icon_path2 images/weapon_icons/wp_card_supershotgun.png
 	weapon_icon_path images/weapon_icons/wp_card_shotgun_nobg.png

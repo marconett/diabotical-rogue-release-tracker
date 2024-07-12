@@ -1,0 +1,211 @@
+rogue_grenadelauncher
+{
+	name_translation_key weapon_grenadelauncher
+	desc_translation_key weapon_grenadelauncher_desc
+	
+	selectable true	
+	required_class rogue_bigbot
+
+	alternate_fire_enabled true
+
+	respawn_time 9
+	weapon_tag gl
+ 	//group 3
+	speed 1300
+ 	rate 600
+  	damage 80
+	min_splash_damage 5
+	splash_damage 80
+	self_damage 30
+	//self_damage has been half of splash damage
+	splash_hemisphere_offset 20
+	splash_hemisphere_offset_damage_multiplier 0.3
+	
+	bounce_off_players false
+	bounce 24
+	duration 3000
+	default_ammo 4
+	max_ammo 4
+	unlimited_ammo false
+	ammo_per_reload 1
+	reload 800
+	
+	target_indicator true
+	bind_group 10
+	bind_group 10
+	hit_radius 1 1
+
+	color EBBA45
+	rarity legendary
+	icon_path images/weapon_icons/wp_hud_grenadelauncher_02.png
+	icon_path2 images/weapon_icons/wp_card_grenadelauncher.png
+	weapon_icon_path images/weapon_icons/wp_card_grenadelauncher_nobg.png
+
+	gravity 450
+	gravity_pitch_offset 0.1
+	bounce_friction 0.73
+	
+  	splash_radius 150
+	knockback 80
+	knockback_self 113
+	ground_knockback 80
+	ground_knockback_self 113
+	center_of_mass_offset 4
+	center_of_mass_offset_self 0
+	
+	recoil_delay_recovery 0.125
+	recoil_up 3
+	//recoil_side 0.3
+	recoil_recovery_time 0.6
+	recoil_time 0.09
+	
+	zoomed_recoil_up 2
+	//zoomed_recoil_side 0.2
+	zoomed_recoil_recovery_time 0.45
+	zoomed_recoil_time 0.08
+	
+	zoomed_scope 1
+	
+	equip_time 500
+	base_combo_rate 600
+	
+	shot_particles weapon_grenade_launcher_muzzle_flash
+   	shot_particles_attached weapon_grenade_launcher_muzzle
+	shot_particles_attached_3p weapon_grenade_launcher_muzzle_3p
+	shot_particles_attached weapon_grenade_launcher_muzzle_flash socket_muzzle 1
+  	//missile_particles gl_bullet
+  	missile_particles weapon_grenade_projectile
+  	impact_particles weapon_grenade_impact
+	missile_trail_particles gl_bullet_dynamic_trail
+	bounce_particles weapon_grenade_bounce
+  	
+	//IMPACT DECALS
+
+	//decal decal_explosion 100 3 3.561 false false alpha 10
+	//decal decal_plasma 100 3 3.561 false false alpha 3
+	//decal decal_plasma 175 3 3.561 false false alpha 3
+	//decal decal_glow_red 60 3 3.561 false false alpha 25
+	//decal decal_glow 35 3 3.561 false false alpha 20
+	model_camera_scale 0.5
+
+	//model assets/shared/weapons/grenadelauncher/grenadelauncher
+	model assets/shared/models/animations/wp_grenade_launcher/skm_grenade_launcher
+	model_scale 0.1
+	model_scale_centered 0.09
+	model_position 2.5 -3.15 3.15
+	model_position_centered 0 -3.1 3.35
+	model_pivot 0 -0.4 0
+	model_camera_scale 0.6
+	muzzle 0 0 0
+	fov 40
+	
+	model_scale_third_person 1.1
+	model_position_third_person 7 -4 28
+	
+	shot_sound w_gl_fire 
+	shot_sound2 w_gl_fire_distant 
+	impact_sound w_gl_impact 
+	impact_sound2 w_gl_impact_distant 
+	bounce_sound w_gl_bounce 
+	equip_sound w_gl_equip
+	single_missile_sound w_gl_airbound 
+	hit_sound fb_enemy_hit
+	critical_hit_sound	fb_enemy_hit_crit
+	out_of_ammo_sound w_gl_ooa
+	
+	detached_shot_particles false
+	//team_colored_trail true
+}
+
+rogue_grenadelauncher augment 1
+{
+	name grenadelauncher_ammo
+	name_translation_key weapon_increase_ammo
+	desc_translation_key weapon_increase_ammo_desc
+	rarity common
+	preadd default_ammo 1
+	preadd max_ammo 1
+	selectable true
+	max_stacks 1
+}
+
+rogue_grenadelauncher augment 2
+{
+	name grenadelauncher_no_self_damage
+	name_translation_key grenadelauncher_no_self_damage
+	desc_translation_key grenadelauncher_no_self_damage_desc
+	rarity epic
+	selectable true
+
+	locked_in_battle_pass true
+
+	overwrite self_damage 0
+}
+
+rogue_grenadelauncher augment 3
+{
+	name grenadelauncher_lead_balloon
+	name_translation_key grenadelauncher_lead_balloon
+	desc_translation_key grenadelauncher_lead_balloon_desc
+	rarity epic
+	selectable true
+	locked_in_battlepass true
+	preadd duration -1000
+	preadd splash_radius 20
+	preadd bounce_friction -0.4
+	//Less bounce and larger splash radius. Plus faster fuse time.
+}
+
+//rogue_grenadelauncher augment 4
+{
+	name grenadelauncher_increase_reload_ammo
+	name_translation_key grenadelauncher_increase_reload_ammo
+	desc_translation_key grenadelauncher_increase_reload_ammo_desc
+	rarity rare
+	selectable true
+	preadd ammo_per_reload 1
+	max_stacks 1
+	locked_in_battlepass true
+}
+
+// rogue_grenadelauncher augment 5
+// {
+// 	name grenadelauncher_sticky
+// 	name_translation_key grenadelauncher_sticky
+// 	desc_translation_key grenadelauncher_sticky_desc
+// 	rarity legendary
+// 	selectable true
+
+// 	overwrite alternate_fire_enabled true
+// 	locked_in_battlepass true
+
+// 	//Gain a secondary right click that shoots stickies which detonate when pressing mouse 1 or after like 4 seconds.
+// }
+
+rogue_grenadelauncher augment 6
+{
+	name grenadelauncher_floor_is_lava
+	name_translation_key grenadelauncher_floor_is_lava
+	desc_translation_key grenadelauncher_floor_is_lava_desc
+	rarity artifact
+	selectable true
+	overwrite deploy_tick_damage_pfx artifact_lava_pool
+	overwrite shot_particles_attached weapon_artifact_grenade_launcher_muzzle
+	overwrite missile_particles weapon_lava_projectile
+	overwrite impact_particles weapon_grenade_impact_lava
+	overwrite bounce_particles weapon_grenade_bounce_lava
+	overwrite pfx weapon_grenade_artifact_muzzle_lava socket_muzzle 1
+	locked_in_battlepass true
+	//Floor is lava, a small lava puddle is created after each grenade explosion which lasts for a couple seconds.
+}
+
+rogue_grenadelauncher augment 7
+{
+	name grenadelauncher_splash_radius
+	name_translation_key grenadelauncher_splash_radius
+	desc_translation_key grenadelauncher_splash_radius_desc
+	rarity rare
+	selectable true
+	preadd splash_radius 20
+	max_stacks 1
+}
