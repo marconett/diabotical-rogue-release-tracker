@@ -5,7 +5,7 @@
 65f0f3752ba84c2b213fddee1f198de0741020fd	EOSSDK-Win64-Shipping.dll	18107368
 0000000000000000000000000000000000000000	EasyAntiCheat	0
 0000000000000000000000000000000000000000	EasyAntiCheat/Certificates	0
-b75c08a3894743a3d8aca3b059a1182c94918d10	EasyAntiCheat/Certificates/base.bin	107529
+bc42ad969e65457b217862c1bac89c4fd62a865c	EasyAntiCheat/Certificates/base.bin	107525
 9c2830873dad7dd06ba339c45e2d445267e1940c	EasyAntiCheat/Certificates/base.cer	1165
 4e7a7776c6673b6e51935b79a5834d8309ec3760	EasyAntiCheat/Certificates/runtime.conf	1108
 656de3845bd34bb1e7928e936415c5b9b3d854a5	EasyAntiCheat/EasyAntiCheat_EOS_Setup.exe	960752
@@ -73,7 +73,7 @@ fa6720939ec1bf988b3f21fc56e03601ae618b1c	cohtml.WindowsDesktop.dll	6642640
 ffef1f54ada8d40776dbf3a7ab5c936c963e0e41	d3dcompiler_47.dll	4163840
 74d43e48cf87c48168a65159c308bb67cf691012	dbghelp.dll	1256080
 3ee29ef4f6af0624f71d98e636b17f8a725095dd	devtools_resources.pak	5066068
-cf10881ffed4135ca35717769aa75c850ff07104	diabotical.exe	21548032
+920e223a68f93e3ff9ed53b67b06e9ba690b9b6c	diabotical.exe	21553152
 77de68daecd823babbb58edb1c8e14d7106e83bb	flag_tiling.txt	1
 83efcb8df7fbd91628cdd10d9c65b892b8ec6760	gmp-10.dll	419840
 1ecbe1bd741c7101c72361d1d3dab5ad9056c2a1	icudtl.dat	10490576
@@ -9244,7 +9244,7 @@ e3e395b5246473ccb04e92ee99ee16977c538edd	ui/html/translations/countries_ja.js	11
 ce8ed4d3c8ebcbd2414b1010ccff184addf87865	ui/html/translations/countries_ru.js	17837
 1028c3305da5eb675b2090dd02163c93bb5588e9	ui/html/translations/countries_tw.js	9178
 9343b5d7f3910f58b2e3c306b81449454e036b37	ui/html/translations/translation-de.js	131669
-b2b36c4d5c61914385ba50a5c844a9258bf2aeb0	ui/html/translations/translation-en.js	201561
+5bd70a889a88ffda2c5f7ef6e3b27a6c7204f0a9	ui/html/translations/translation-en.js	201748
 9a9e76a92307d0bce4988eff571f30ad1b05539c	ui/html/translations/translation-es-ES.js	131984
 49d24d7edbfa361bdde7fa1fbbf6baee0e60f511	ui/html/translations/translation-es-MX.js	130878
 ad722a5f0fe8145f5385fab5652f8610c8adff22	ui/html/translations/translation-fr.js	119811

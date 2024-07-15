@@ -3991,6 +3991,10 @@ const TRANSLATION_en_source = {
         text: "Progress tree under development, subject to change based off feedback",
         engine: true
     },
+    progression_tree_all_suits: {
+        text: "All Suits",
+        engine: true
+    },
     achievements: {
         text: "Achievements"
     },
@@ -4847,6 +4851,10 @@ const TRANSLATION_en_source = {
         text: "Rarity",
         engine: true
     },
+    cost: {
+        text: "Cost",
+        engine: true
+    },
     rarity_all: {
         text: "All rarities"
     },
@@ -5087,7 +5095,8 @@ const TRANSLATION_en_source = {
         text: "Purchase as a gift"
     },
     shop_item_owned: {
-        text: "Owned"
+        text: "Owned",
+        engine: true
     },
     shop_insufficient_funds: {
         text: "Insufficient funds"
