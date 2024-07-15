@@ -937,8 +937,8 @@ assets\shared\particles\system_definitions\beam_v1.particles	14775
 assets\shared\particles\system_definitions\big_bomb_screen.particles	6631
 assets\shared\particles\system_definitions\bigbot_arm1fx_loop.particles	7486
 assets\shared\particles\system_definitions\bigbot_arm1fx_loop_small.particles	7658
-assets\shared\particles\system_definitions\bigbot_back_jet_end.particles	30672
-assets\shared\particles\system_definitions\bigbot_back_jet_start.particles	26432
+assets\shared\particles\system_definitions\bigbot_back_jet_end.particles	30666
+assets\shared\particles\system_definitions\bigbot_back_jet_start.particles	27226
 assets\shared\particles\system_definitions\bigbot_groundslam.particles	19999
 assets\shared\particles\system_definitions\bigbot_groundslam_cascade.particles	18422
 assets\shared\particles\system_definitions\bigbot_groundslam_cascade_v2.particles	11216

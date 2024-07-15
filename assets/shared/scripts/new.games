@@ -358,8 +358,9 @@ game rogue_teamdeathmatch
 	weapon rogue_rocketlauncher 1
 	weapon rogue_shaft 1
 	weapon rogue_machinegun 1
-	// weapon rogue_blaster 1
-	// weapon rogue_supershotgun 1
+	weapon rogue_blaster 1
+	weapon rogue_supershotgun 1
+	weapon rogue_grenadelauncher 1
 	weapon rogue_submachinegun 1
 	weapon rogue_heavysniper 1
 	weapon rogue_egun 1

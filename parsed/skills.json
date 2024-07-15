@@ -9,7 +9,9 @@
         "selectable": "false",
         "category": "passive",
         "multi_jump_extra_jumps": "1",
-        "multi_jump_impulse_multiplier": "1.3 //multiplies the deafult impulse by this value, makes the double jump seem more impactful"
+        "multi_jump_impulse_multiplier": "1.3 //multiplies the deafult impulse by this value, makes the double jump seem more impactful",
+        "hud_icon": "images/ability_card_double_jump.png",
+        "hud_icon2": "images/ability_card_double_jump.png"
     },
     {
         "id": "30002",
@@ -22,7 +24,9 @@
         "selectable": "true",
         "show_in_dev_console": "true",
         "category": "passive",
-        "cooldown_reduction_per_kill": "2"
+        "cooldown_reduction_per_kill": "2",
+        "hud_icon": "images/ability_card_hourglass.png",
+        "hud_icon2": "images/ability_card_hourglass.png"
     },
     {
         "id": "30003",
@@ -141,7 +145,9 @@
         "show_in_dev_console": "true",
         "power": "5 //currency",
         "duration": "2 //time between currency",
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "hud_icon": "images/ability_card_roge_coins.png",
+        "hud_icon2": "images/ability_card_roge_coins.png"
     },
     {
         "id": "30011",
@@ -155,7 +161,9 @@
         "show_in_dev_console": "true",
         "rarity": "epic",
         "power": "0.25 //percentage of max ammo restored on kill",
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "hud_icon": "images/ability_card_combat_reload.png",
+        "hud_icon2": "images/ability_card_combat_reload.png"
     },
     {
         "id": "30012",
@@ -169,7 +177,9 @@
         "rarity": "epic",
         "show_in_dev_console": "true",
         "power": "1.3 //multiplier",
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "hud_icon": "images/ability_card_data_mining.png",
+        "hud_icon2": "images/ability_card_data_mining.png"
     },
     {
         "id": "30013",
@@ -321,7 +331,9 @@
         "selectable": "true",
         "show_in_dev_console": "true",
         "rarity": "legendary",
-        "damage_over_time": "2"
+        "damage_over_time": "2",
+        "hud_icon": "images/ability_card_incendiary_bullets.png",
+        "hud_icon2": "images/ability_card_incendiary_bullets.png"
     },
     {
         "id": "30024",
@@ -334,7 +346,9 @@
         "selectable": "true",
         "show_in_dev_console": "true",
         "rarity": "common",
-        "locked_in_battlepass": "true"
+        "locked_in_battlepass": "true",
+        "hud_icon": "images/ability_card_make_it_count.png",
+        "hud_icon2": "images/ability_card_make_it_count.png"
     },
     {
         "id": "20000",

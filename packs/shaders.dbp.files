@@ -198,7 +198,7 @@ shaders\tile_building.cs.cso	8488
 shaders\tile_col.ps.cso	2596
 shaders\tile_dissolve.ps.cso	7720
 shaders\tile_foliage.ps.cso	5532
-shaders\tileanim.vs.cso	10040
+shaders\tileanim.vs.cso	10152
 shaders\tileblend.ps.cso	3028
 shaders\tileblend2d.ps.cso	2460
 shaders\tileblend2db.ps.cso	3860
