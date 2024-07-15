@@ -784,6 +784,7 @@
             "150"
         ],
         "max_stacks": "1",
+        "locked_in_battlepass": "true",
         "selectable": "true"
     },
     {
@@ -1605,7 +1606,6 @@
             "2"
         ],
         "max_stacks": "2",
-        "locked_in_battlepass": "true",
         "selectable": "true"
     },
     {
@@ -2318,7 +2318,7 @@
             "1"
         ],
         "gravity": "450",
-        "gravity_pitch_offset": "0.2",
+        "gravity_pitch_offset": "0.1",
         "splash_radius": "150",
         "knockback": "80",
         "knockback_self": "113",
@@ -2553,7 +2553,7 @@
         "desc_translation_key": "grenadelauncher_no_self_damage_desc",
         "rarity": "epic",
         "selectable": "true",
-        "locked_in_battle_pass": "true",
+        "locked_in_battlepass": "true",
         "overwrite": [
             "self_damage",
             "0"
@@ -2575,7 +2575,7 @@
         ]
     },
     {
-        "asset_name": "5cc1c7ba-71f8-4438-9c9f-956e986ea76f",
+        "asset_name": "26992bde-e2e1-46a4-8dc4-89c36d7b95eb",
         "dynamic_rules": [],
         "name": "grenadelauncher_increase_reload_ammo",
         "name_translation_key": "grenadelauncher_increase_reload_ammo",

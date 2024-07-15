@@ -6228,7 +6228,7 @@ const TRANSLATION_en_source = {
         engine: true
     },
     skill_shield_throw_a2_desc: {
-        text: "Your shield will ricochet off of players in close proximity to one another.",
+        text: "Your shield will ricochet off of enemies in close proximity to one another.",
         engine: true
     },
     skill_shield_throw_a3: {
@@ -6292,7 +6292,7 @@ const TRANSLATION_en_source = {
         engine: true
     },
     skill_shield_charge_a1_desc: {
-        text: "You have increased traction, granting you increased turning at the start of your charge.",
+        text: "You have increased traction, granting you increased turning at the start of your Charge.",
         engine: true
     },
     skill_shield_charge_a2: {
@@ -6300,7 +6300,7 @@ const TRANSLATION_en_source = {
         engine: true
     },
     skill_shield_charge_a2_desc: {
-        text: "Gain 10 Overshield for each enemy hit with charge.",
+        text: "Gain 10 overshield for each enemy hit with Charge.",
         engine: true
     },
     skill_shield_charge_a4: {
@@ -6308,7 +6308,7 @@ const TRANSLATION_en_source = {
         engine: true
     },
     skill_shield_charge_a4_desc: {
-        text: "Increases the max speed of your charge.",
+        text: "Increases the max speed of your Charge.",
         engine: true
     },
     skill_teleport_to_friend: {

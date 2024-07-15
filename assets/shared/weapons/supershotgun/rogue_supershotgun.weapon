@@ -128,7 +128,6 @@ rogue_supershotgun augment 1
 	preadd default_ammo 2
 	preadd max_ammo 2
 	max_stacks 2
-	locked_in_battlepass true
 
 	selectable true
 }

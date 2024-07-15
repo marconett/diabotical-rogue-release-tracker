@@ -31,7 +31,7 @@ rogue_grenadelauncher_secondary
 	hit_radius 1 1
 
 	gravity 450
-	gravity_pitch_offset 0.2
+	gravity_pitch_offset 0.1
 	
   	splash_radius 150
 	knockback 80

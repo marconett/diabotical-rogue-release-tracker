@@ -176,6 +176,7 @@ rogue_blaster augment 5
 
 	preadd self_knockback_on_fire 150
 	max_stacks 1
+	locked_in_battlepass true
 
 	selectable true
 }

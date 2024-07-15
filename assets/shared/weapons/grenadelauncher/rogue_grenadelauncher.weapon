@@ -137,7 +137,7 @@ rogue_grenadelauncher augment 2
 	rarity epic
 	selectable true
 
-	locked_in_battle_pass true
+	locked_in_battlepass true
 
 	overwrite self_damage 0
 }

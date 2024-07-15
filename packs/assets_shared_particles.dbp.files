@@ -2185,7 +2185,7 @@ assets\shared\particles\system_definitions\vfx_door_sparks.particles	2629
 assets\shared\particles\system_definitions\vfx_windsurf.particles	2089
 assets\shared\particles\system_definitions\walljump.particles	4284
 assets\shared\particles\system_definitions\water_drip.particles	8510
-assets\shared\particles\system_definitions\weapon_artifact_grenade_launcher_muzzle.particles	33421
+assets\shared\particles\system_definitions\weapon_artifact_grenade_launcher_muzzle.particles	33411
 assets\shared\particles\system_definitions\weapon_blaster_impact.particles	29309
 assets\shared\particles\system_definitions\weapon_blaster_impact_gold.particles	12734
 assets\shared\particles\system_definitions\weapon_blaster_impact_gold_v2.particles	11023
@@ -2332,7 +2332,7 @@ assets\shared\particles\system_definitions\weapon_shaft_muzzle_fire_gold.particl
 assets\shared\particles\system_definitions\weapon_shotgun_impact.particles	7530
 assets\shared\particles\system_definitions\weapon_shotgun_impact_2.particles	20265
 assets\shared\particles\system_definitions\weapon_shotgun_impact_gold.particles	4756
-assets\shared\particles\system_definitions\weapon_shotgun_muzzle.particles	14968
+assets\shared\particles\system_definitions\weapon_shotgun_muzzle.particles	12487
 assets\shared\particles\system_definitions\weapon_shotgun_muzzle_3p.particles	13446
 assets\shared\particles\system_definitions\weapon_shotgun_muzzle_flash.particles	1658
 assets\shared\particles\system_definitions\weapon_shotgun_muzzle_gold.particles	9999

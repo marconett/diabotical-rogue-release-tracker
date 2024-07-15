@@ -44,7 +44,7 @@ skill 20001 augment 1
 	preadd max_charges 1
 	max_stacks 1
 
-	locked_in_battle_pass true
+	locked_in_battlepass true
 }
 
 //skill 20001 augment 2
@@ -110,7 +110,7 @@ skill 20002 augment 2
 	preadd radius 100
 	rarity rare
 	max_stacks 1
-	locked_in_battle_pass true
+	locked_in_battlepass true
 
 	selectable true
 }
@@ -1640,7 +1640,7 @@ skill 20023 augment 2
 
 skill 20023 augment 3
 {
-	locked_in_battle_pass true
+	locked_in_battlepass true
 	name_translation_key skill_increase_damage
 	desc_translation_key skill_increase_damage_desc
 	rarity epic
@@ -1809,7 +1809,7 @@ skill 20024 augment 4
 
 skill 20024 augment 5 
 {
-	locked_in_battle_pass true
+	locked_in_battlepass true
 	name_translation_key skill_mini_rocket_a5
 	desc_translation_key skill_mini_rocket_a5_desc
 	rarity epic
@@ -2022,6 +2022,7 @@ skill 20027 augment 1
 	overwrite rebound true
 
 	selectable true
+	locked_in_battlepass true
 	//Travel back upgrade
 }
 
@@ -2037,7 +2038,7 @@ skill 20027 augment 2
 	weapon_augment 1
 
 	selectable true
-
+	locked_in_battlepass true
 	//Bounce upgrade
 }
 
