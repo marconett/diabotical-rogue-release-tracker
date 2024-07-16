@@ -829,6 +829,10 @@ const TRANSLATION_en_source = {
         text: "Overtime",
         engine: true
     },
+    ingame_message_overtime_desc: {
+        text: "Continuous ticking damage!",
+        engine: true
+    },
     ingame_message_round_x: {
         text: "Round {round}",
         engine: true

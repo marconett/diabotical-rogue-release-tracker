@@ -1,0 +1,1 @@
+console.log("PERF #0 body begin", performance.now());

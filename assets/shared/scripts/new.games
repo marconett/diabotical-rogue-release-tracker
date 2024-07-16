@@ -500,8 +500,8 @@ game rogue_edit
 	setting game_player_col_radius_ver_top 60
 	
 	setting game_model 0
-	setting game_player_hitbox_height 105
-	setting game_player_hitbox_width 50
+	setting game_player_hitbox_height 1
+	setting game_player_hitbox_width 1
 	
 	setting game_unlimited_ammo	1
 	setting game_enable_roguelike 0

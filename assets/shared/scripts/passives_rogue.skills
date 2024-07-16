@@ -214,6 +214,9 @@ skill 30013
 	rarity legendary
 	power 0.5
 	locked_in_battlepass true
+
+	hud_icon images/ability_card_blood_pact.png
+	hud_icon2 images/ability_card_blood_pact.png
 }
 
 
@@ -242,6 +245,9 @@ skill 30015
 	show_in_dev_console true
 	rarity legendary
 	power 150
+	
+	hud_icon images/ability_card_mark_for_delete.png
+	hud_icon2 images/ability_card_mark_for_delete.png
 }
 
 skill 30016

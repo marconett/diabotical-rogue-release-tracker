@@ -3,7 +3,7 @@ assets\shared\particles\effects.atlas.old	8033
 assets\shared\particles\effects_dave.atlas	30184
 assets\shared\particles\effects_extra.atlas	50595
 assets\shared\particles\effects_scott.atlas	5027
-assets\shared\particles\effects_sean.atlas	12649
+assets\shared\particles\effects_sean.atlas	12738
 assets\shared\particles\meshes\100_units_wind_mesh.dbm	23789
 assets\shared\particles\meshes\100_units_wind_mesh.fbx	38060
 assets\shared\particles\meshes\100unit.dbm	1575
@@ -667,6 +667,7 @@ assets\shared\particles\meshes\splash_mesh.dbm	18932
 assets\shared\particles\meshes\splash_mesh.fbx	34316
 assets\shared\particles\meshes\splash_mesh_inside.dbm	18940
 assets\shared\particles\meshes\splash_mesh_inside.fbx	34076
+assets\shared\particles\meshes\splash_mesh_v1.fbx	38028
 assets\shared\particles\meshes\square_jet.dbm	16516
 assets\shared\particles\meshes\square_jet.fbx	16780
 assets\shared\particles\meshes\sweep1.dbm	46286
@@ -812,6 +813,7 @@ assets\shared\particles\system_definitions\ability_overload_fire_ground.particle
 assets\shared\particles\system_definitions\ability_overload_impact_rocket_warp.particles	52071
 assets\shared\particles\system_definitions\ability_overload_impact_small.particles	76608
 assets\shared\particles\system_definitions\ability_recast_screen.particles	2986
+assets\shared\particles\system_definitions\ability_red_gadget_screen.particles	2610
 assets\shared\particles\system_definitions\ability_red_screen.particles	2511
 assets\shared\particles\system_definitions\ability_slot_disable.particles	22272
 assets\shared\particles\system_definitions\ability_temporary_shield.particles	38818
@@ -900,7 +902,7 @@ assets\shared\particles\system_definitions\artifact_hexagon_card_jewel_screen2.p
 assets\shared\particles\system_definitions\artifact_laser_beam.particles	59265
 assets\shared\particles\system_definitions\artifact_laser_beam_charge.particles	24598
 assets\shared\particles\system_definitions\artifact_laser_beam_impact.particles	34421
-assets\shared\particles\system_definitions\artifact_lava_pool.particles	37617
+assets\shared\particles\system_definitions\artifact_lava_pool.particles	37664
 assets\shared\particles\system_definitions\artifact_player.particles	12029
 assets\shared\particles\system_definitions\artifact_player_icon_screen.particles	9775
 assets\shared\particles\system_definitions\artifact_submachine_barrel.particles	11655
@@ -1390,7 +1392,7 @@ assets\shared\particles\system_definitions\firegauntlet_hand_shoot.particles	138
 assets\shared\particles\system_definitions\firegauntlet_impact.particles	16353
 assets\shared\particles\system_definitions\firegauntlet_projectile.particles	11572
 assets\shared\particles\system_definitions\flame_dash_test.particles	13886
-assets\shared\particles\system_definitions\flipbook_lightning.particles	25141
+assets\shared\particles\system_definitions\flipbook_lightning.particles	25363
 assets\shared\particles\system_definitions\flipbook_test.particles	16846
 assets\shared\particles\system_definitions\fly_water_ripple.particles	676
 assets\shared\particles\system_definitions\flying_pull.particles	57509
@@ -1965,7 +1967,7 @@ assets\shared\particles\system_definitions\shaft_muzzle_fire_blue_3p.particles	7
 assets\shared\particles\system_definitions\shaft_muzzle_fire_blue_yellow.particles	11199
 assets\shared\particles\system_definitions\shield_broken.particles	22033
 assets\shared\particles\system_definitions\shield_impact_dave.particles	4889
-assets\shared\particles\system_definitions\shockwave_punch.particles	32689
+assets\shared\particles\system_definitions\shockwave_punch.particles	32681
 assets\shared\particles\system_definitions\shockwave_punch2.particles	20582
 assets\shared\particles\system_definitions\shotgun_muzzle_flash.particles	21046
 assets\shared\particles\system_definitions\shotgun_muzzle_flash_3p.particles	22397
@@ -2232,10 +2234,10 @@ assets\shared\particles\system_definitions\weapon_egun_muzzle_flash.particles	10
 assets\shared\particles\system_definitions\weapon_egun_muzzle_v1.particles	10471
 assets\shared\particles\system_definitions\weapon_egun_muzzle_v2.particles	12549
 assets\shared\particles\system_definitions\weapon_egun_projectile.particles	27403
-assets\shared\particles\system_definitions\weapon_grenade_artifact_muzzle_lava.particles	33611
+assets\shared\particles\system_definitions\weapon_grenade_artifact_muzzle_lava.particles	38754
 assets\shared\particles\system_definitions\weapon_grenade_bounce.particles	17855
 assets\shared\particles\system_definitions\weapon_grenade_bounce_gold.particles	2329
-assets\shared\particles\system_definitions\weapon_grenade_bounce_lava.particles	31098
+assets\shared\particles\system_definitions\weapon_grenade_bounce_lava.particles	33961
 assets\shared\particles\system_definitions\weapon_grenade_impact.particles	35644
 assets\shared\particles\system_definitions\weapon_grenade_impact_gold.particles	18960
 assets\shared\particles\system_definitions\weapon_grenade_impact_lava.particles	54244
@@ -2266,7 +2268,7 @@ assets\shared\particles\system_definitions\weapon_hs_muzzle_artifact.particles	1
 assets\shared\particles\system_definitions\weapon_hs_muzzle_flash_artifact.particles	1274
 assets\shared\particles\system_definitions\weapon_hs_player_impact.particles	84975
 assets\shared\particles\system_definitions\weapon_hs_player_impact_artifact.particles	98370
-assets\shared\particles\system_definitions\weapon_lava_projectile.particles	43198
+assets\shared\particles\system_definitions\weapon_lava_projectile.particles	44708
 assets\shared\particles\system_definitions\weapon_lava_projectile_2.particles	26653
 assets\shared\particles\system_definitions\weapon_machinegun_impact.particles	55779
 assets\shared\particles\system_definitions\weapon_machinegun_impact_gold.particles	7928
@@ -4095,6 +4097,7 @@ assets\shared\particles\textures\diss_hexagons_v1.png.dds	349700
 assets\shared\particles\textures\diss_licks.png.dds	349700
 assets\shared\particles\textures\diss_lightning.png.dds	349700
 assets\shared\particles\textures\diss_lightning_2.png.dds	349700
+assets\shared\particles\textures\diss_octagons.png.dds	699192
 assets\shared\particles\textures\diss_portal_opening.png.dds	349700
 assets\shared\particles\textures\diss_slash_test3.png.dds	174948
 assets\shared\particles\textures\diss_smoke_puffs.png.dds	349700
