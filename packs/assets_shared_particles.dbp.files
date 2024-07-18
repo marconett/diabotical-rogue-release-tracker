@@ -2462,6 +2462,7 @@ assets\shared\particles\system_thumbnails\artifact_hexagon_card_jewel_screen2.pn
 assets\shared\particles\system_thumbnails\artifact_laser_beam.png.dds	153972
 assets\shared\particles\system_thumbnails\artifact_laser_beam_charge.png.dds	153972
 assets\shared\particles\system_thumbnails\artifact_laser_beam_impact.png.dds	153972
+assets\shared\particles\system_thumbnails\artifact_lava_pool.png.dds	153972
 assets\shared\particles\system_thumbnails\artifact_player.png.dds	153972
 assets\shared\particles\system_thumbnails\artifact_player_icon_screen.png.dds	153972
 assets\shared\particles\system_thumbnails\artifact_submachine_barrel.png.dds	153972
@@ -2502,6 +2503,7 @@ assets\shared\particles\system_thumbnails\beam_v1.png.dds	153972
 assets\shared\particles\system_thumbnails\big_bomb_screen.png.dds	153972
 assets\shared\particles\system_thumbnails\bigbot_arm1fx_loop.png.dds	153972
 assets\shared\particles\system_thumbnails\bigbot_arm1fx_loop_small.png.dds	153972
+assets\shared\particles\system_thumbnails\bigbot_back_jet_end.png.dds	153972
 assets\shared\particles\system_thumbnails\bigbot_groundslam.png.dds	153972
 assets\shared\particles\system_thumbnails\bigbot_groundslam_cascade.png.dds	153972
 assets\shared\particles\system_thumbnails\bigbot_groundslam_cascade_v2.png.dds	153972
@@ -2893,6 +2895,7 @@ assets\shared\particles\system_thumbnails\env_planet_system.png.dds	153972
 assets\shared\particles\system_thumbnails\env_planet_system2.png	114435
 assets\shared\particles\system_thumbnails\env_puffs_green_1.png.dds	153972
 assets\shared\particles\system_thumbnails\env_pump_smoke.png.dds	153972
+assets\shared\particles\system_thumbnails\env_red_lightning.png.dds	153972
 assets\shared\particles\system_thumbnails\env_shooting_range.png.dds	153972
 assets\shared\particles\system_thumbnails\env_smoke_blue_1.png.dds	153972
 assets\shared\particles\system_thumbnails\env_smoke_column1.png.dds	153972
@@ -2954,6 +2957,7 @@ assets\shared\particles\system_thumbnails\epic_hexagon_card_jewel_screen2.png.dd
 assets\shared\particles\system_thumbnails\epic_player_icon_screen.png.dds	153972
 assets\shared\particles\system_thumbnails\evemy_warmtest1.png.dds	153972
 assets\shared\particles\system_thumbnails\fb_dyn_trail.png.dds	153972
+assets\shared\particles\system_thumbnails\fire_apply.png.dds	153972
 assets\shared\particles\system_thumbnails\fire_cartoon1.png.dds	153972
 assets\shared\particles\system_thumbnails\fire_cube1.png.dds	153972
 assets\shared\particles\system_thumbnails\fire_dash_impact.png.dds	153972
@@ -2962,6 +2966,7 @@ assets\shared\particles\system_thumbnails\fire_impact_1.png.dds	153972
 assets\shared\particles\system_thumbnails\fire_impact_neon.png.dds	153972
 assets\shared\particles\system_thumbnails\fire_proj1.png.dds	153972
 assets\shared\particles\system_thumbnails\fire_test.png.dds	153972
+assets\shared\particles\system_thumbnails\fire_tick.png.dds	153972
 assets\shared\particles\system_thumbnails\firegaultlet_impact_v2.png.dds	153972
 assets\shared\particles\system_thumbnails\firegauntlet_hand_loop.png.dds	153972
 assets\shared\particles\system_thumbnails\firegauntlet_hand_shoot.png.dds	153972
@@ -2989,6 +2994,7 @@ assets\shared\particles\system_thumbnails\gauntlet_fb_trail2.png.dds	153972
 assets\shared\particles\system_thumbnails\gizmo1.png.dds	153972
 assets\shared\particles\system_thumbnails\glow_example.png.dds	153972
 assets\shared\particles\system_thumbnails\grenade_impact.png.dds	153972
+assets\shared\particles\system_thumbnails\grenade_impact_2.png.dds	153972
 assets\shared\particles\system_thumbnails\heal_aura_intersection_2.png	36784
 assets\shared\particles\system_thumbnails\heal_bomb_agent_impact.png.dds	153972
 assets\shared\particles\system_thumbnails\heal_bomb_agent_impact2.png.dds	153972
@@ -3205,6 +3211,7 @@ assets\shared\particles\system_thumbnails\jetpack_initial_thrust.png.dds	153972
 assets\shared\particles\system_thumbnails\jetpack_takeoff.png.dds	153972
 assets\shared\particles\system_thumbnails\jetpack_thrust.png.dds	153972
 assets\shared\particles\system_thumbnails\jets_for_feet.png.dds	153972
+assets\shared\particles\system_thumbnails\jets_for_platform.png.dds	153972
 assets\shared\particles\system_thumbnails\jump.png.dds	153972
 assets\shared\particles\system_thumbnails\jump_3p.png.dds	153972
 assets\shared\particles\system_thumbnails\jump_land.png.dds	153972
@@ -3336,6 +3343,7 @@ assets\shared\particles\system_thumbnails\overload_chest_orb_loop.png.dds	153972
 assets\shared\particles\system_thumbnails\overload_chest_orb_loop2.png.dds	153972
 assets\shared\particles\system_thumbnails\overload_chest_orb_loop3.png.dds	153972
 assets\shared\particles\system_thumbnails\overload_chest_orb_loop4.png.dds	153972
+assets\shared\particles\system_thumbnails\overload_chest_orb_rocket_warp.png.dds	153972
 assets\shared\particles\system_thumbnails\overload_chest_orb_start.png.dds	153972
 assets\shared\particles\system_thumbnails\overload_chest_orb_start2.png.dds	153972
 assets\shared\particles\system_thumbnails\overload_chest_orb_start_end.png.dds	153972
@@ -3345,6 +3353,7 @@ assets\shared\particles\system_thumbnails\overload_fire_ground.png.dds	153972
 assets\shared\particles\system_thumbnails\overload_fire_screen.png.dds	153972
 assets\shared\particles\system_thumbnails\overload_fire_tick.png.dds	153972
 assets\shared\particles\system_thumbnails\overload_loop_teleport.png.dds	153972
+assets\shared\particles\system_thumbnails\overload_loop_teleport_v2.png.dds	153972
 assets\shared\particles\system_thumbnails\overload_orb2.png.dds	153972
 assets\shared\particles\system_thumbnails\overload_player.png.dds	153972
 assets\shared\particles\system_thumbnails\overload_player_1p.png.dds	153972
@@ -3448,13 +3457,21 @@ assets\shared\particles\system_thumbnails\rare_diamond_card_jewel_screen2.png.dd
 assets\shared\particles\system_thumbnails\rare_hexagon_card_jewel_screen.png.dds	153972
 assets\shared\particles\system_thumbnails\rare_hexagon_card_jewel_screen2.png.dds	153972
 assets\shared\particles\system_thumbnails\rarity_drop_pfx_1.png.dds	153972
+assets\shared\particles\system_thumbnails\reap.png.dds	153972
 assets\shared\particles\system_thumbnails\rift.png.dds	153972
 assets\shared\particles\system_thumbnails\rift_1.png.dds	153972
+assets\shared\particles\system_thumbnails\rift_1_2.png.dds	153972
 assets\shared\particles\system_thumbnails\rift_2.png.dds	153972
+assets\shared\particles\system_thumbnails\rift_2_2.png.dds	153972
 assets\shared\particles\system_thumbnails\rift_3.png.dds	153972
+assets\shared\particles\system_thumbnails\rift_3_2.png.dds	153972
 assets\shared\particles\system_thumbnails\rift_4.png.dds	153972
 assets\shared\particles\system_thumbnails\rift_4_2.png.dds	153972
 assets\shared\particles\system_thumbnails\rift_4_3.png.dds	153972
+assets\shared\particles\system_thumbnails\rift_4_4.png.dds	153972
+assets\shared\particles\system_thumbnails\rift_4_5.png.dds	153972
+assets\shared\particles\system_thumbnails\rift_ash.png.dds	153972
+assets\shared\particles\system_thumbnails\rift_lightning_chain_1.png.dds	153972
 assets\shared\particles\system_thumbnails\rl_muzzle_fire.png.dds	153972
 assets\shared\particles\system_thumbnails\rl_projectile_4.png.dds	153972
 assets\shared\particles\system_thumbnails\rl_projectile_5.png.dds	153972
@@ -3487,6 +3504,7 @@ assets\shared\particles\system_thumbnails\rocket_muzzle_flash_diabotical_3p.png.
 assets\shared\particles\system_thumbnails\rocket_muzzle_flash_diabotical_v2.png.dds	153972
 assets\shared\particles\system_thumbnails\rocket_muzzle_flash_diabotical_v2_3p.png.dds	153972
 assets\shared\particles\system_thumbnails\rocket_muzzle_flash_diabotical_v3.png.dds	153972
+assets\shared\particles\system_thumbnails\rocket_test_v2.png.dds	153972
 assets\shared\particles\system_thumbnails\scan_weeble_impact.png.dds	153972
 assets\shared\particles\system_thumbnails\scan_weeble_impact2.png.dds	153972
 assets\shared\particles\system_thumbnails\scan_weeble_impact3.png.dds	153972
@@ -3525,8 +3543,18 @@ assets\shared\particles\system_thumbnails\shaft_muzzle_fire_blue_3p.png.dds	1539
 assets\shared\particles\system_thumbnails\shaft_muzzle_fire_blue_yellow.png.dds	153972
 assets\shared\particles\system_thumbnails\shield_broken.png.dds	153972
 assets\shared\particles\system_thumbnails\shield_impact_dave.png.dds	153972
+assets\shared\particles\system_thumbnails\shockwave_punch.png.dds	153972
+assets\shared\particles\system_thumbnails\shockwave_punch2.png.dds	153972
 assets\shared\particles\system_thumbnails\shotgun_muzzle_flash.png.dds	153972
 assets\shared\particles\system_thumbnails\shotgun_muzzle_flash_3p.png.dds	153972
+assets\shared\particles\system_thumbnails\skill_bigbot_grow.png.dds	153972
+assets\shared\particles\system_thumbnails\skill_bigbot_grow_indicator_screen.png.dds	153972
+assets\shared\particles\system_thumbnails\skill_bigbot_grow_indicator_screen2.png.dds	153972
+assets\shared\particles\system_thumbnails\skill_bigbot_grow_screen.png.dds	153972
+assets\shared\particles\system_thumbnails\skill_bigbot_shrink.png.dds	153972
+assets\shared\particles\system_thumbnails\skill_bigbot_shrink_indicator_screen.png.dds	153972
+assets\shared\particles\system_thumbnails\skill_bigbot_shrink_indicator_screen2.png.dds	153972
+assets\shared\particles\system_thumbnails\skill_bigbot_shrink_screen.png.dds	153972
 assets\shared\particles\system_thumbnails\skill_bolt_eggbot.png.dds	153972
 assets\shared\particles\system_thumbnails\skill_chain_lightning.png.dds	153972
 assets\shared\particles\system_thumbnails\skill_dash_camera.png.dds	153972
@@ -3556,8 +3584,16 @@ assets\shared\particles\system_thumbnails\skill_electric_ring.png.dds	153972
 assets\shared\particles\system_thumbnails\skill_fire_ring.png.dds	153972
 assets\shared\particles\system_thumbnails\skill_fire_trail.png.dds	153972
 assets\shared\particles\system_thumbnails\skill_frost_aura.png.dds	153972
+assets\shared\particles\system_thumbnails\skill_groundslam.png.dds	153972
 assets\shared\particles\system_thumbnails\skill_jetpack_trail.png.dds	153972
 assets\shared\particles\system_thumbnails\skill_sawblade.png.dds	153972
+assets\shared\particles\system_thumbnails\skill_shield_big.png.dds	153972
+assets\shared\particles\system_thumbnails\skill_shield_big2.png.dds	153972
+assets\shared\particles\system_thumbnails\skill_shield_big3.png.dds	153972
+assets\shared\particles\system_thumbnails\skill_shield_big5.png.dds	153972
+assets\shared\particles\system_thumbnails\skill_shield_big_arm.png.dds	153972
+assets\shared\particles\system_thumbnails\skill_shield_big_block.png.dds	153972
+assets\shared\particles\system_thumbnails\skill_shield_big_break.png.dds	153972
 assets\shared\particles\system_thumbnails\skill_shield_throw.png.dds	153972
 assets\shared\particles\system_thumbnails\skill_shield_throw_impact.png.dds	153972
 assets\shared\particles\system_thumbnails\skill_shield_throw_projectile.png.dds	153972
@@ -3826,6 +3862,7 @@ assets\shared\particles\system_thumbnails\weapon_hs_muzzle_artifact.png.dds	1539
 assets\shared\particles\system_thumbnails\weapon_hs_muzzle_flash_artifact.png.dds	153972
 assets\shared\particles\system_thumbnails\weapon_hs_player_impact.png.dds	153972
 assets\shared\particles\system_thumbnails\weapon_hs_player_impact_artifact.png.dds	153972
+assets\shared\particles\system_thumbnails\weapon_lava_projectile.png.dds	153972
 assets\shared\particles\system_thumbnails\weapon_machinegun_impact.png.dds	153972
 assets\shared\particles\system_thumbnails\weapon_machinegun_impact_gold.png.dds	153972
 assets\shared\particles\system_thumbnails\weapon_machinegun_muzzle.png.dds	153972

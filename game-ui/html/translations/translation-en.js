@@ -2941,6 +2941,9 @@ const TRANSLATION_en_source =
     "aa_smaa": {
         "text": "SMAA"
     },
+    "aa_smaa_t2x": {
+        "text": "SMAA (Temporal)"
+    },
     "setting_dynamic_reflections": {
         "text": "Dynamic Reflections"
     },

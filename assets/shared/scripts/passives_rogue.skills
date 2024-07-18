@@ -315,6 +315,9 @@ skill 30020
 	show_in_dev_console true
 	rarity legendary
 	locked_in_battlepass true
+
+	hud_icon images/ability_card_tortoise.png
+	hud_icon2 images/ability_card_tortoise.png
 }
 
 skill 30021 
