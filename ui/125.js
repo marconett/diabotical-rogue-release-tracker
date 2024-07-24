@@ -1,1 +1,1 @@
-console.log("PERF #0 head begin", performance.now());
+console.log("PERF #0 body end", performance.now());

@@ -1535,7 +1535,7 @@ assets\shared\models\environment\nature\flowers\flower_lily\flower_lily_01\flowe
 assets\shared\models\environment\nature\flowers\flower_lily\flower_lily_01\flower_lily_01_vercol-lod3.dbm	50392
 assets\shared\models\environment\nature\flowers\flower_lily\flower_lily_01\flower_lily_01_vercol-lod3.fbx	307440
 assets\shared\models\environment\nature\flowers\flower_lily\flower_lily_01\flower_lily_01_vercol.dbm	98711
-assets\shared\models\environment\nature\flowers\flower_lily\flower_lily_01\flower_lily_01_vercol.fbx	127180
+assets\shared\models\environment\nature\flowers\flower_lily\flower_lily_01\flower_lily_01_vercol.fbx	128028
 assets\shared\models\environment\nature\flowers\flower_lily\flower_lily_01\lilyflower.material	867
 assets\shared\models\environment\nature\flowers\flower_lily\flower_lily_01\lods.lock	2
 assets\shared\models\environment\nature\flowers\flower_lily\flower_lily_02\flower_lily_02.assets	254
@@ -1565,10 +1565,10 @@ assets\shared\models\environment\nature\flowers\flower_lily\flower_lily_04\flowe
 assets\shared\models\environment\nature\flowers\flower_lily\flower_lily_04\flower_lily_04_vercol.fbx	113036
 assets\shared\models\environment\nature\flowers\flower_lily\flower_lily_04\lods.lock	2
 assets\shared\models\environment\nature\flowers\flower_lily\shaders\lilyflower.material	867
-assets\shared\models\environment\nature\flowers\flower_lily\shaders\mat_flower_lily_c.png.dds	22020
-assets\shared\models\environment\nature\flowers\flower_lily\shaders\mat_flower_lily_d.png.dds	349700
-assets\shared\models\environment\nature\flowers\flower_lily\shaders\mat_flower_lily_n.png.dds	349700
-assets\shared\models\environment\nature\flowers\flower_lily\shaders\mat_flower_lily_s.png.dds	349700
+assets\shared\models\environment\nature\flowers\flower_lily\shaders\mat_flower_lily_c.png	50011
+assets\shared\models\environment\nature\flowers\flower_lily\shaders\mat_flower_lily_d.png	137680
+assets\shared\models\environment\nature\flowers\flower_lily\shaders\mat_flower_lily_n.png	105478
+assets\shared\models\environment\nature\flowers\flower_lily\shaders\mat_flower_lily_s.png	26495
 assets\shared\models\environment\nature\flowers\flower_ricrac\flower_ricrac_l_01\flower_ricrac_l_01.assets	259
 assets\shared\models\environment\nature\flowers\flower_ricrac\flower_ricrac_l_01\flower_ricrac_l_01_thumb.png.dds	22020
 assets\shared\models\environment\nature\flowers\flower_ricrac\flower_ricrac_l_01\flower_ricrac_l_01_vercol-col.dbm	264

@@ -147,6 +147,7 @@ GAME.set_initial_data(GAME.ids.ROGUE, {
         private: ["bool", true, true],
         name: ["string", "", ""],
         mode: ["string", "", ""],
+        mode_name: ["string", "", ""],
         datacenter: ["string", "", ""],
         map_list: ["custom", [],
             []
@@ -180,8 +181,8 @@ GAME.set_initial_data(GAME.ids.ROGUE, {
         },
         lobby_custom_mode: {
             name: "mode",
-            cb_type: "select",
-            type: "string"
+            cb_type: "custom",
+            type: "json"
         },
         lobby_custom_teams: {
             name: "team_count",

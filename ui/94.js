@@ -122,6 +122,7 @@ GAME.set_initial_data(GAME.ids.INVASION, {
     LOBBY_SETTINGS_LIST: {
         private: ["bool", true, true],
         mode: ["string", "", ""],
+        mode_name: ["string", "", ""],
         datacenter: ["string", "", ""],
         map_list: ["custom", [],
             []
@@ -147,8 +148,8 @@ GAME.set_initial_data(GAME.ids.INVASION, {
         },
         lobby_custom_mode: {
             name: "mode",
-            cb_type: "select",
-            type: "string"
+            cb_type: "custom",
+            type: "json"
         },
         lobby_custom_teams: {
             name: "team_count",

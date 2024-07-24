@@ -360,12 +360,26 @@ const map_selection_modal = {
             }))
         } else if (category === "official") {
             this.state.official.length = 0;
-            if (global_game_mode_map_lists.hasOwnProperty(this.state.mode) && global_game_mode_map_lists[this.state.mode].length) {
-                for (let m of global_game_mode_map_lists[this.state.mode]) {
-                    this.state.official.push(m)
+            if (global_game_mode_map_lists.hasOwnProperty(this.state.mode)) {
+                if (global_game_mode_map_lists[this.state.mode].length) {
+                    for (let m of global_game_mode_map_lists[this.state.mode]) {
+                        this.state.official.push(m)
+                    }
                 }
+                this.render_map_choices("official")
+            } else {
+                api_request("GET", `/mode_maps?mode_name=${this.state.mode}`, {}, (mode => {
+                    if (mode) {
+                        set_global_map_list_from_api(mode.mode_name, mode.maps);
+                        if (this.state.mode === mode.mode_name) {
+                            this.update_map_choices({
+                                category: this.state.active_category,
+                                order: this.el.map_choice_sort.dataset.value
+                            })
+                        }
+                    }
+                }))
             }
-            this.render_map_choices("official")
         }
     },
     update_map_choices_page: function() {

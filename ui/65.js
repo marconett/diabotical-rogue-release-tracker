@@ -315,19 +315,6 @@ window.addEventListener("load", (function() {
             engine.call("initialize_color_value", current_variable)
         }
     }));
-    bind_event("set_mode_maps", (function(data) {
-        try {
-            let mode_maps = JSON.parse(data);
-            for (let mode in mode_maps) {
-                global_game_mode_map_lists[mode] = mode_maps[mode].map((map => ({
-                    name: _format_map_name(map),
-                    map: map
-                })))
-            }
-        } catch (e) {
-            console.error("Error parsing set_mode_maps", e.message, data)
-        }
-    }));
     bind_event("set_restart_required", (function(restart_required) {
         if (restart_required) {
             _for_each_in_class("settings_message_container", (el => {
@@ -786,4 +773,15 @@ function getCompSeasonModes(comp_season_id, cb) {
         comp_data[comp_key].modes = modes;
         cb(modes)
     }))
+}
+
+function set_global_map_list_from_api(mode, maps) {
+    global_game_mode_map_lists[mode] = [];
+    for (let map of maps) {
+        global_game_mode_map_lists[mode].push({
+            name: _format_map_name(map[0], map[1]),
+            map: map[0],
+            official: map[2]
+        })
+    }
 }

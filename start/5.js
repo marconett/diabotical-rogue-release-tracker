@@ -139,7 +139,7 @@ function send_api_request(type, target, params, callback, secondtry) {
                 if (apiHandler().token_errors < 5) {
                     send_string(CLIENT_COMMAND_GET_API_TOKEN, "", "apitoken", (function(token) {
                         apiHandler().updateToken(token);
-                        send_api_request("GET", target, params, callback, true)
+                        send_api_request(type, target, params, callback, true)
                     }))
                 }
             }

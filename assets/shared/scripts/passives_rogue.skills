@@ -333,6 +333,9 @@ skill 30021
 
 	movement_speed_boost 100
 	duration 1.5
+	
+	hud_icon images/ability_card_reload_marathon.png
+	hud_icon2 images/ability_card_reload_marathon.png
 }
 
 skill 30022 

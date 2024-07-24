@@ -311,7 +311,9 @@
         "rarity": "epic",
         "locked_in_battlepass": "true",
         "movement_speed_boost": "100",
-        "duration": "1.5"
+        "duration": "1.5",
+        "hud_icon": "images/ability_card_reload_marathon.png",
+        "hud_icon2": "images/ability_card_reload_marathon.png"
     },
     {
         "id": "30022",

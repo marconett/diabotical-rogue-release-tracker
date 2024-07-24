@@ -1,88 +1,50 @@
 {
-    const button_timeouts = [];
     new MenuScreen({
-        game_id: GAME.ids.COMMON,
-        name: "modal_panel",
-        screen_element: _id("modal_panel"),
+        game_id: GAME.ids.ROGUE,
+        name: "ingame_panel",
+        screen_element: _id("ingame_panel"),
         sound_open: "ui_panel_right_in",
         init: () => {
-            modal_panel.init()
+            ingame_panel.init()
         },
         open_handler: () => {
-            historyPushState({
-                page: "modal_panel"
-            });
             set_blur(false);
             Navigation.set_active({
                 lb_rb: null,
-                up_down: "modal_panel",
+                up_down: "ingame_panel",
                 left_right: null
-            })
+            });
+            ingame_panel.set_fully_open(false);
+            ingame_panel.on_open()
         },
         post_open_handler: () => {
-            let delay = 0;
-            let elements = _id("modal_panel").querySelectorAll(".main_button");
-            for (let i = 0; i < elements.length; i++) {
-                button_timeouts.push(setTimeout((() => {
-                    elements[i].classList.remove("hidden");
-                    engine.call("ui_sound", "ui_locker_item_counter")
-                }), delay));
-                delay += 40
-            }
+            ingame_panel.set_fully_open(true)
         },
         close_handler: () => {
-            for (let timeout of button_timeouts) {
-                clearTimeout(timeout)
-            }
-            button_timeouts.length = 0;
+            ingame_panel.set_fully_open(false);
             Navigation.reset_active()
         },
-        post_close_handler: () => {}
+        post_close_handler: () => {
+            ingame_panel.set_fully_open(false)
+        }
     })
 }
-const modal_panel = new function() {
+const ingame_panel = new function() {
+    let is_fully_open = false;
+    this.set_fully_open = bool => {
+        is_fully_open = bool
+    };
     let html = {
         root: null,
-        title: null,
-        text: null,
-        options: null,
-        screen_actions: null
+        screen_actions: null,
+        vote: null
     };
     this.init = () => {
-        html.root = _id("modal_panel");
-        html.title = html.root.querySelector(".modal_title");
-        html.text = html.root.querySelector(".modal_text");
-        html.options = html.root.querySelector(".nav");
-        html.screen_actions = html.root.querySelector(".screen_actions")
-    };
-    this.open = (title, text, options) => {
-        if (!title || !title.length) return;
-        if (!options || !Array.isArray(options) || !options.length) return;
-        html.title.textContent = title;
-        _empty(html.text);
-        if (text && text.length) {
-            html.text.textContent = text;
-            html.text.classList.remove("hidden")
-        } else {
-            html.text.classList.add("hidden")
-        }
-        _empty(html.options);
-        for (let opt of options) {
-            let button = _createElement("div", ["main_button", "hidden"]);
-            if (opt.callback && typeof opt.callback === "function") {
-                button.callback = opt.callback
-            }
-            if (opt.disabled) {
-                button.classList.add("disabled")
-            }
-            let title = _createElement("div", "title", opt.title);
-            button.appendChild(title);
-            let arrow = _createElement("div", "arrow");
-            button.appendChild(arrow);
-            html.options.appendChild(button)
-        }
+        html.root = _id("ingame_panel");
+        html.screen_actions = html.root.querySelector(".screen_actions");
+        html.vote = html.root.querySelector(".main_button.vote");
         Navigation.generate_nav({
-            name: "modal_panel",
+            name: "ingame_panel",
             nav_root: html.root,
             nav_class: "main_button",
             mouse_click: "action",
@@ -90,12 +52,168 @@ const modal_panel = new function() {
             action_sound: "ui_click1",
             action_cb_type: "input",
             action_cb: (element, action) => {
-                if (typeof element.callback === "function") {
-                    element.callback()
+                if (element.dataset.button) {
+                    button_pressed(element.dataset.button)
                 }
             }
         });
-        Navigation.render_actions([global_action_buttons.back], html.screen_actions);
-        open_screen("modal_panel")
+        html.root.addEventListener("click", (e => {
+            e.stopPropagation()
+        }));
+        _id("main_menu").addEventListener("click", (e => {
+            if (global_menu_page === "ingame_panel" && is_fully_open) {
+                let root_rect = html.root.getBoundingClientRect();
+                if (e.clientX < root_rect.x) {
+                    historyBack()
+                }
+            }
+        }));
+        on_match_manifest_handlers.push((() => {
+            update_vote()
+        }));
+        on_in_game_handlers.push(((in_game, map_name, game_mode) => {
+            update_vote()
+        }))
+    };
+    this.on_open = () => {
+        Navigation.render_actions([global_action_buttons.back], html.screen_actions)
+    };
+
+    function update_vote() {
+        let show_vote_button = false;
+        if (!IN_HUB) {
+            if (current_match.allow_map_voting) {
+                show_vote_button = true
+            }
+        }
+        if (show_vote_button) {
+            html.vote.classList.remove("disabled");
+            html.vote.classList.remove("inactive")
+        } else {
+            html.vote.classList.add("disabled");
+            html.vote.classList.add("inactive")
+        }
+    }
+
+    function button_pressed(button) {
+        if (button === "main_panel") {
+            if (GAME.active === GAME.ids.ROGUE) {
+                open_screen("main_panel_rogue")
+            } else {
+                open_screen("main_panel")
+            }
+        } else if (button === "settings") {
+            open_screen("settings_panel")
+        } else if (button === "vote") {
+            create_map_vote()
+        } else if (button === "join") {
+            ingame_menu_join_match()
+        } else if (button === "join_spec") {
+            ingame_menu_spectate()
+        } else if (button === "join_team_0") {
+            ingame_menu_join_team(0)
+        } else if (button === "join_team_1") {
+            ingame_menu_join_team(1)
+        }
+    }
+
+    function ingame_menu_spectate() {
+        engine.call("join_team", SPECTATING_TEAM);
+        close_menu()
+    }
+
+    function ingame_menu_join_team(team_id) {
+        let player_count = undefined;
+        team_id = Number(team_id);
+        if (menu_game_data.own_team_id == team_id) {
+            close_menu();
+            return
+        }
+        if (team_id != SPECTATING_TEAM) {
+            for (let i = 0; i < menu_game_data.teams.length; i++) {
+                if (menu_game_data.teams[i].team_id == team_id) {
+                    if ("players" in menu_game_data.teams[i]) {
+                        player_count = menu_game_data.teams[i].players.length
+                    } else {
+                        player_count = 0
+                    }
+                    break
+                }
+            }
+            if (player_count != undefined && player_count >= menu_game_data.team_size) {
+                queue_dialog_msg({
+                    title: localize("title_info"),
+                    msg: localize("message_team_already_full")
+                });
+                return
+            }
+        }
+        if (menu_game_data.spectator) {
+            let allowed_team_ids = [];
+            let lowest_player_count = 100;
+            for (let i = 0; i < menu_game_data.teams.length; i++) {
+                if (menu_game_data.teams[i].players) {
+                    if (menu_game_data.teams[i].players.length < lowest_player_count) lowest_player_count = menu_game_data.teams[i].players.length
+                } else {
+                    lowest_player_count = 0;
+                    break
+                }
+            }
+            for (let i = 0; i < menu_game_data.teams.length; i++) {
+                if (!menu_game_data.teams[i].players || menu_game_data.teams[i].players.length == lowest_player_count) {
+                    allowed_team_ids.push(menu_game_data.teams[i].team_id)
+                }
+            }
+            if (!allowed_team_ids.includes(team_id)) {
+                queue_dialog_msg({
+                    title: localize("title_info"),
+                    msg: localize("message_team_join_uneven")
+                });
+                return
+            }
+        } else {
+            let prev_team_count = menu_game_data.own_team.players.length;
+            let next_team_count = player_count;
+            let diff_before = Math.abs(next_team_count - prev_team_count);
+            prev_team_count--;
+            next_team_count++;
+            let diff_after = Math.abs(next_team_count - prev_team_count);
+            if (diff_after > diff_before) {
+                queue_dialog_msg({
+                    title: localize("title_info"),
+                    msg: localize("message_team_join_uneven")
+                });
+                return
+            }
+        }
+        engine.call("join_team", team_id);
+        close_menu()
+    }
+
+    function ingame_menu_join_match() {
+        let team_id = get_fairest_team_id(menu_game_data);
+        if (team_id === SPECTATING_TEAM) {
+            queue_dialog_msg({
+                title: localize("title_info"),
+                msg: localize("message_team_already_full")
+            });
+            return
+        }
+        engine.call("join_team", team_id);
+        close_menu()
+    }
+
+    function create_map_vote() {
+        const mode = current_match.mode ? current_match.mode : "";
+        map_selection_modal.open("vote", mode, null, start_map_vote)
+    }
+
+    function start_map_vote(selected) {
+        let map_json = JSON.stringify({
+            map: selected[0],
+            name: selected[1],
+            community_map: selected[2]
+        });
+        send_string(CLIENT_COMMAND_START_MAP_VOTE, map_json)
     }
 };

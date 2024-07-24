@@ -1,277 +1,457 @@
-let global_coin_shop_offers_loaded = false;
-let global_coin_shop_offers = {};
-let global_coin_shop_is_rendered = false;
-let global_steam_shop_loading = false;
-let global_steam_shop = null;
+let global_active_shop_item_group = null;
+let global_active_shop_item_group_index = null;
 new MenuScreen({
     game_id: GAME.ids.COMMON,
-    name: "coin_shop",
-    screen_element: _id("coin_shop_screen"),
+    name: "shop_item",
+    screen_element: _id("shop_item_screen"),
     button_element: null,
     fullscreen: false,
     init: () => {
-        add_on_get_api_token_handler(false, (() => {
-            if (global_store_id === CLIENT_SOURCE_NAME.STEAM) {
-                load_steam_shop(render_coin_shop)
-            }
-        }))
+        init_shop_item_debug_listeners()
     },
     open_handler: params => {
         set_blur(true);
-        historyPushState({
-            page: "coin_shop"
-        });
-        load_coin_shop()
+        let historyObj = {
+            page: "shop_item"
+        };
+        if (params) {
+            historyObj.item_group_data = params.item_group_data;
+            historyObj.item_index = params.item_index
+        }
+        historyPushState(historyObj);
+        if (params) {
+            render_shop_item(params.item_group_data, params.item_index)
+        }
+    },
+    close_handler: () => {
+        set_blur(false)
     }
 });
-const global_coin_packs = {
-    "9fd5168913d04eb2b9afdd722cfe7929": {
-        extra: 0,
-        image: "/html/images/coins/coin_option_1.png.dds"
-    },
-    "9bccc75b097e47c5b49e3fb8bd78652b": {
-        extra: 13,
-        image: "/html/images/coins/coin_option_2.png.dds"
-    },
-    "480a137bf2214faeb233be6aefa92599": {
-        extra: 25,
-        image: "/html/images/coins/coin_option_3.png.dds"
-    },
-    "9bfa21b7b6994da59f74e8a816fcd026": {
-        extra: 35,
-        image: "/html/images/coins/coin_option_4.png.dds"
-    },
-    1: {
-        extra: 0,
-        image: "/html/images/coins/coin_option_1.png.dds"
-    },
-    2: {
-        extra: 13,
-        image: "/html/images/coins/coin_option_2.png.dds"
-    },
-    3: {
-        extra: 25,
-        image: "/html/images/coins/coin_option_3.png.dds"
-    },
-    4: {
-        extra: 35,
-        image: "/html/images/coins/coin_option_4.png.dds"
-    }
-};
-const global_coin_pack_map = {
-    "9fd5168913d04eb2b9afdd722cfe7929": "ab206b19926347b1b2b4daeb301d23f5",
-    "9bccc75b097e47c5b49e3fb8bd78652b": "299df8725b6a47518493bf0325f402e7",
-    "480a137bf2214faeb233be6aefa92599": "9cbd99d29eda471a83cf4654a69f2468",
-    "9bfa21b7b6994da59f74e8a816fcd026": "f13ea94a77d0401f93b5569eea33c32f"
-};
-const global_coin_item_packs = ["ab206b19926347b1b2b4daeb301d23f5", "299df8725b6a47518493bf0325f402e7", "9cbd99d29eda471a83cf4654a69f2468", "f13ea94a77d0401f93b5569eea33c32f"];
 
-function handle_coin_offers_update(offers) {
-    global_coin_shop_offers = offers;
-    global_coin_shop_offers_loaded = true
-}
-
-function load_coin_shop() {
-    if (global_store_id === CLIENT_SOURCE_NAME.EGS) {
-        let fetch_shop = false;
-        if (global_shop_raw_data === null) {
-            fetch_shop = true
-        }
-        if (global_shop_is_loading) {
-            setTimeout(load_coin_shop, 100);
-            return
-        }
-        if (fetch_shop) {
-            load_shop_data(load_coin_shop)
-        } else {
-            if (!global_coin_shop_is_rendered && global_coin_shop_offers_loaded) {
-                render_coin_shop()
-            }
-        }
-    } else if (global_store_id === CLIENT_SOURCE_NAME.STEAM) {
-        let fetch_shop = false;
-        if (global_steam_shop === null) {
-            fetch_shop = true
-        }
-        if (global_steam_shop_loading) {
-            setTimeout(load_coin_shop, 100);
-            return
-        }
-        if (fetch_shop) {
-            load_steam_shop(render_coin_shop)
-        } else {
-            if (!global_coin_shop_is_rendered) {
-                render_coin_shop()
-            }
-        }
-    }
-}
-
-function load_steam_shop(cb) {
-    global_steam_shop_loading = true;
-    api_request("GET", "/shop/steam", {}, (function(data) {
-        global_steam_shop = data;
-        global_steam_shop_loading = false;
-        if (typeof cb === "function") {
-            cb()
-        }
-    }))
-}
-let coin_shop_item_pack_lookup = {};
-
-function render_coin_shop() {
-    global_coin_shop_is_rendered = true;
-    let cont = _id("coin_shop_options");
-    _empty(cont);
-    if (global_store_id === CLIENT_SOURCE_NAME.EGS) {
-        if (global_shop_raw_data.hasOwnProperty("packs")) {
-            for (let pack of global_shop_raw_data.packs) {
-                if (pack.eos_offer_id in global_coin_shop_offers) {
-                    coin_shop_item_pack_lookup[pack.eos_offer_id] = pack
-                }
-            }
-        }
-        const sortedKeyOffers = Object.keys(global_coin_shop_offers).sort(((i, j) => global_coin_shop_offers[i].current_price - global_coin_shop_offers[j].current_price));
-        let shop_group = _createElement("div", "shop_group");
-        let container = _createElement("div", "container");
-        shop_group.appendChild(container);
-        cont.appendChild(shop_group);
-        for (let offerKey of sortedKeyOffers) {
-            const offer = global_coin_shop_offers[offerKey];
-            if (offer.purchase_limit === 1) continue;
-            let item_pack = false;
-            if (offerKey in global_coin_pack_map) {
-                if (global_coin_pack_map[offerKey] in coin_shop_item_pack_lookup) {
-                    if (!is_shop_item_owned(coin_shop_item_pack_lookup[global_coin_pack_map[offerKey]])) {
-                        item_pack = coin_shop_item_pack_lookup[global_coin_pack_map[offerKey]]
-                    }
-                }
-            }
-            if (item_pack !== false) {
-                container.appendChild(new ShopGroup([item_pack], "coin_shop").container)
-            } else {
-                container.appendChild(render_epic_coin_offer(offerKey, offer))
-            }
-        }
-    } else if (global_store_id === CLIENT_SOURCE_NAME.STEAM) {
-        let shop_group = _createElement("div", "shop_group");
-        let container = _createElement("div", "container");
-        shop_group.appendChild(container);
-        cont.appendChild(shop_group);
-        if (global_steam_shop) {
-            global_steam_shop.sort(((a, b) => a.usd_price - b.usd_price));
-            for (let i of global_steam_shop) {
-                container.appendChild(render_steam_shop_item(i))
-            }
-        }
-    }
-}
-
-function render_epic_coin_offer(offerKey, offer) {
-    let fragment = new DocumentFragment;
-    let option = _createElement("div", "option");
-    _addButtonSounds(option, 1);
-    let bg = _createElement("div", "bg");
-    bg.appendChild(_createElement("div", "inner_bg"));
-    option.appendChild(bg);
-    let top = _createElement("div", ["top", "category_" + offer.title]);
-    let image = null;
-    if (offerKey in global_coin_packs && global_coin_packs[offerKey].image.length) {
-        image = _createElement("div", "image");
-        image.style.backgroundImage = "url(" + global_coin_packs[offerKey].image + ")";
-        top.appendChild(image)
-    }
-    let amount_cont = _createElement("div", "amount_cont");
-    amount_cont.appendChild(_createElement("div", "label", offer.title));
-    top.appendChild(amount_cont);
-    option.appendChild(top);
-    let bottom = _createElement("div", "bottom");
-    bottom.appendChild(_createElement("div", "price", _format_number(offer.current_price, "currency", {
-        currency_code: offer.currency_code,
-        areCents: true
-    })));
-    option.appendChild(bottom);
-    if (offerKey in global_coin_packs) {
-        if (global_coin_packs[offerKey].extra > 0) {
-            option.appendChild(_createElement("div", "tag", localize_ext("shop_coins_extra", {
-                count: global_coin_packs[offerKey].extra
-            })))
-        }
-    }
-    option.addEventListener("mouseenter", (function() {
-        if (image !== null) image.classList.add("hover")
-    }));
-    option.addEventListener("mouseleave", (function() {
-        if (image !== null) image.classList.remove("hover")
-    }));
-    option.addEventListener("click", (function() {
-        engine.call("eos_checkout", offerKey)
-    }));
-    fragment.appendChild(option);
-    return fragment
-}
-
-function render_steam_shop_item(i) {
-    let price = _format_number(i.usd_price, "currency", {
-        currency_code: "USD",
-        areCents: true
-    });
-    if (i.local_currency && i.local_price) {
-        price = _format_number(i.local_price, "currency", {
-            currency_code: i.local_currency,
-            areCents: true
+function render_shop_item(group_items, item_idx) {
+    global_active_shop_item_group = group_items;
+    global_active_shop_item_group_index = item_idx;
+    let selected_item = group_items[item_idx];
+    let item_references = [];
+    let item_name = "";
+    let item_box = _id("shop_item_screen").querySelector(".shop_item_box");
+    _empty(item_box);
+    let item_preview = _id("shop_item_screen").querySelector(".shop_item_preview_area");
+    let init_item = selected_item;
+    let items = [];
+    let item_owned = is_shop_item_owned(selected_item);
+    if (selected_item.item_type == "c") {
+        items.push({
+            customization_id: init_item.customization_id,
+            customization_type: init_item.customization_type,
+            customization_sub_type: init_item.customization_sub_type,
+            customization_set_id: init_item.customization_set_id,
+            rarity: init_item.rarity,
+            amount: init_item.amount
         })
-    }
-    let fragment = new DocumentFragment;
-    let label = "";
-    if (i.action && i.action.actions) {
-        for (let a of i.action.actions) {
-            if (a.action === "grant_coins" && a.amount) {
-                label = localize_ext("shop_pack_coins", {
-                    count: a.amount
-                });
+    } else if (selected_item.item_type == "p") {
+        items = _sort_customization_items(init_item.customizations);
+        for (let i = 0; i < items.length; i++) {
+            if (items[i].customization_type !== global_customization_type_id_map["currency"]) {
+                init_item = items[i];
                 break
             }
         }
     }
-    let option = _createElement("div", "option");
-    _addButtonSounds(option, 3);
-    let top = _createElement("div", ["top"]);
-    let image = null;
-    if (i.steam_shop_item_id in global_coin_packs && global_coin_packs[i.steam_shop_item_id].image.length) {
-        image = _createElement("div", "image");
-        image.style.backgroundImage = "url(" + global_coin_packs[i.steam_shop_item_id].image + ")";
-        top.appendChild(image)
+    item_box.style.setProperty("--item_rarity_color", "var(--rarity_" + init_item.rarity + ")");
+    let fragment = new DocumentFragment;
+    let div_top = _createElement("div", "top");
+    let btn_back = _createElement("div", ["db-btn", "plain", "back"]);
+    _addButtonSounds(btn_back, 2);
+    btn_back.addEventListener("click", historyBack);
+    div_top.appendChild(btn_back);
+    item_name = localize("customization_" + init_item.customization_id);
+    if (selected_item.customization_pack_name && selected_item.customization_pack_name.length) {
+        div_top.appendChild(_createElement("div", "title", localize("customization_pack_" + selected_item.customization_pack_name)));
+        item_name = localize("customization_pack_" + selected_item.customization_pack_name)
     }
-    let amount_cont = _createElement("div", "amount_cont");
-    amount_cont.appendChild(_createElement("div", "label", label));
-    top.appendChild(amount_cont);
-    option.appendChild(top);
+    fragment.appendChild(div_top);
+    let header = _createElement("div", "header");
+    header.appendChild(_createElement("div", "background"));
+    let customization_info = createCustomizationInfo(init_item);
+    header.appendChild(customization_info);
+    fragment.appendChild(header);
+    let body = _createElement("div", "body");
+    fragment.appendChild(body);
+    if (items.length <= 8) body.classList.add("short");
+    let item_list = _createElement("div", ["item_list", "scroll-outer"]);
+    let scroll_bar = _createElement("div", "scroll-bar");
+    scroll_bar.appendChild(_createElement("div", "scroll-thumb"));
+    item_list.appendChild(scroll_bar);
+    let scroll_inner = _createElement("div", "scroll-inner");
+    for (let i = 0; i < items.length; i++) {
+        let type_name = global_customization_type_map[items[i].customization_type].name;
+        let c_item = _createElement("div", ["customization_item", type_name, "rarity_bg_" + items[i].rarity]);
+        c_item.appendChild(renderCustomizationInner("shop_item", items[i].customization_type, items[i].customization_id, items[i].amount));
+        c_item.dataset.idx = i;
+        c_item.addEventListener("click", item_on_select);
+        if (items[i].customization_id == init_item.customization_id) c_item.classList.add("selected");
+        scroll_inner.appendChild(c_item);
+        item_references.push(c_item)
+    }
+    item_list.appendChild(scroll_inner);
+    body.appendChild(item_list);
     let bottom = _createElement("div", "bottom");
-    bottom.appendChild(_createElement("div", "price", price));
-    option.appendChild(bottom);
-    if (i.steam_shop_item_id in global_coin_packs) {
-        if (global_coin_packs[i.steam_shop_item_id].extra > 0) {
-            option.appendChild(_createElement("div", "tag", localize_ext("shop_coins_extra", {
-                count: global_coin_packs[i.steam_shop_item_id].extra
-            })))
+    let price = _createElement("div", "price");
+    if (selected_item.eos_offer_id != null && selected_item.eos_offer_id in global_coin_shop_offers) {
+        price.appendChild(_createElement("div", "value", _format_number(global_coin_shop_offers[selected_item.eos_offer_id].current_price, "currency", {
+            currency_code: global_coin_shop_offers[selected_item.eos_offer_id].currency_code,
+            areCents: true
+        })))
+    } else {
+        if (selected_item.item_price == 0) {
+            price.appendChild(_createElement("div", "value", localize("free").toUpperCase()))
+        } else {
+            price.appendChild(_createElement("div", ["icon", "reborn-coin"]));
+            price.appendChild(_createElement("div", "value", _format_number(selected_item.item_price)))
         }
     }
-    option.addEventListener("mouseenter", (function() {
-        if (image !== null) image.classList.add("hover")
-    }));
-    option.addEventListener("mouseleave", (function() {
-        if (image !== null) image.classList.remove("hover")
-    }));
-    option.addEventListener("click", (function() {
-        api_request("POST", "/shop/steam/purchase", {
-            item_id: i.steam_shop_item_id,
-            item_desc: label,
-            lang: global_language_steam
-        }, (function(data) {
-            console.log("purchase result:", data)
-        }))
-    }));
-    fragment.appendChild(option);
-    return fragment
+    bottom.appendChild(price);
+    if (item_owned) {
+        let owned_cont = _createElement("div", "owned");
+        owned_cont.appendChild(_createElement("div", "label", localize("shop_item_owned")));
+        owned_cont.appendChild(_createElement("div", "icon"));
+        bottom.appendChild(owned_cont)
+    } else {
+        if (selected_item.eos_offer_id) {
+            add_purchase_button(bottom, 1, (() => engine.call("eos_checkout", selected_item.eos_offer_id)))
+        } else if (global_self.private.coins >= selected_item.item_price) {
+            add_purchase_button(bottom, selected_item.item_price, show_purchase_modal)
+        } else {
+            let get_more_btn = _createElement("div", ["big-btn", "main"], localize("shop_get_coins"));
+            _addButtonSounds(get_more_btn, 1);
+            get_more_btn.addEventListener("click", (() => {
+                open_screen("coin_shop")
+            }));
+            bottom.appendChild(get_more_btn)
+        }
+    }
+    fragment.appendChild(bottom);
+    let arrow_cont = _createElement("div", "arrow_cont");
+    let arrow_prev = _createElement("div", ["arrow", "prev"]);
+    let arrow_next = _createElement("div", ["arrow", "next"]);
+    arrow_prev.dataset.direction = "prev";
+    arrow_next.dataset.direction = "next";
+    arrow_prev.addEventListener("click", on_arrow_click.bind(this));
+    arrow_next.addEventListener("click", on_arrow_click.bind(this));
+    let page_counter = _createElement("div", "page_counter");
+    let page_cur = _createElement("div", ["num", "page_cur"]);
+    page_cur.textContent = item_idx + 1;
+    let page_separator = _createElement("div", "separator", "/");
+    let page_max = _createElement("div", ["num", "page_max"]);
+    page_max.textContent = group_items.length;
+    page_counter.appendChild(page_cur);
+    page_counter.appendChild(page_separator);
+    page_counter.appendChild(page_max);
+    arrow_cont.appendChild(arrow_prev);
+    arrow_cont.appendChild(page_counter);
+    arrow_cont.appendChild(arrow_next);
+    if (group_items.length <= 1) arrow_cont.style.visibility = "hidden";
+    fragment.appendChild(arrow_cont);
+    item_box.appendChild(fragment);
+    let sb_id = global_scrollbarTrackerId++;
+    global_scrollbarTracker[sb_id] = new Scrollbar(item_list, sb_id, true);
+    show_preview(init_item);
+
+    function add_purchase_button(target, price, callback) {
+        let label = localize("shop_purchase");
+        if (price == 0) label = localize("shop_claim");
+        let buy_btn = _createElement("div", ["big-btn", "main"], label);
+        _addButtonSounds(buy_btn, 1);
+        target.appendChild(buy_btn);
+        buy_btn.addEventListener("click", callback)
+    }
+
+    function show_preview(item) {
+        _empty(item_preview);
+        if (!(item.customization_type in global_customization_type_map)) return;
+        let ctype = new CustomizationType(global_customization_type_map[item.customization_type].name, item.customization_sub_type);
+        show_customization_preview_scene("shop_item", ctype, item.customization_id, item, item_preview)
+    }
+
+    function item_on_select(e) {
+        let c_item = e.currentTarget;
+        if (c_item.classList.contains("selected")) return;
+        _for_each_with_class_in_parent(c_item.parentElement, "selected", (function(el) {
+            el.classList.remove("selected")
+        }));
+        c_item.classList.add("selected");
+        _play_click1();
+        update_shop_item(c_item.dataset.idx);
+        _pause_music_preview()
+    }
+
+    function update_shop_item(item_idx) {
+        let item = items[item_idx];
+        item_box.style.setProperty("--item_rarity_color", "var(--rarity_" + item.rarity + ")");
+        _remove_node(customization_info);
+        customization_info = createCustomizationInfo(item);
+        header.appendChild(customization_info);
+        show_preview(item)
+    }
+
+    function on_arrow_click(e) {
+        if (e.currentTarget.dataset.direction == "next") {
+            item_idx = Number(item_idx) + 1;
+            if (!group_items[item_idx]) item_idx = 0;
+            _play_click1()
+        } else if (e.currentTarget.dataset.direction == "prev") {
+            item_idx = Number(item_idx) - 1;
+            if (item_idx < 0) item_idx = group_items.length - 1;
+            _play_click_back()
+        }
+        render_shop_item(group_items, item_idx)
+    }
+
+    function show_purchase_modal() {
+        let summary = _createElement("div", "purchase_summary");
+        let scroll_cont = _createElement("div", ["scroll-outer", "theme_settings"]);
+        summary.appendChild(scroll_cont);
+        let scroll_bar = _createElement("div", "scroll-bar");
+        scroll_bar.appendChild(_createElement("div", "scroll-thumb"));
+        scroll_cont.appendChild(scroll_bar);
+        let scroll_inner = _createElement("div", "scroll-inner");
+        scroll_cont.appendChild(scroll_inner);
+        let items = _createElement("div", "items");
+        scroll_inner.appendChild(items);
+        for (let item of item_references) {
+            let clone = item.cloneNode(true);
+            clone.removeEventListener("click", item_on_select);
+            items.appendChild(clone)
+        }
+        let sb_id = global_scrollbarTrackerId++;
+        global_scrollbarTracker[sb_id] = new Scrollbar(scroll_cont, sb_id, true);
+        let name = _createElement("div", "name", item_name);
+        summary.appendChild(name);
+        let price_clone = price.cloneNode(true);
+        summary.appendChild(price_clone);
+        let btn_cont = _createElement("div", "generic_modal_dialog_action");
+        let btn_confirm = _createElement("div", "dialog_button", localize("menu_button_confirm"));
+        let btn_cancel = _createElement("div", "dialog_button", localize("menu_button_cancel"));
+        _addButtonSounds(btn_confirm, 1);
+        _addButtonSounds(btn_cancel, 1);
+        btn_confirm.addEventListener("click", (function() {
+            lock_modal("basic_modal");
+            _empty(btn_cont);
+            let processing = _createElement("div", "processing");
+            processing.appendChild(_createSpinner());
+            processing.appendChild(_createElement("div", "text", localize("processing")));
+            btn_cont.appendChild(processing);
+            api_request("POST", `/shop/item/${selected_item["shop_item_id"]}/purchase`, {}, purchase_callback)
+        }));
+        btn_cancel.addEventListener("click", closeBasicModal);
+        btn_cont.appendChild(btn_confirm);
+        btn_cont.appendChild(btn_cancel);
+        openBasicModal(basicGenericModal(localize("shop_confirm_purchase"), summary, btn_cont));
+
+        function purchase_callback(data) {
+            unlock_modal("basic_modal");
+            if (data === null) {
+                updateBasicModalContent(basicGenericModal(localize("title_error"), localize("shop_error_generic"), localize("modal_close")));
+                return
+            }
+            if (data.success == false) {
+                updateBasicModalContent(basicGenericModal(localize("title_error"), localize("shop_error_" + data.reason), localize("modal_close")));
+                engine.call("ui_sound", "ui_window_open");
+                return
+            }
+            if (data.success == true) {
+                const content = update_after_purchase(data);
+                if (content) {
+                    updateBasicModalContent(basicGenericModal(localize("shop_purchase_success"), content, localize("modal_close")))
+                }
+                engine.call("ui_sound", "ui_shop_purchase_successful");
+                render_shop_item(group_items, item_idx);
+                render_shop(global_shop_data)
+            }
+        }
+    }
+
+    function show_purchase_gift_modal() {}
+}
+
+function update_after_purchase(data) {
+    if (data.coins) {
+        if (global_self.private.coins !== data.coins) {
+            update_wallet(data.coins);
+            queue_dialog_msg({
+                title: localize("toast_title_updated_wallet"),
+                msg: localize_ext("toast_msg_updated_wallet", {
+                    count: data.coins
+                })
+            })
+        }
+    }
+    if (data.items) {
+        add_user_customizations(data.items);
+        let sorted_items = _sort_customization_items(data.items);
+        let content = _createElement("div", "purchase_summary");
+        let scroll_cont = _createElement("div", ["scroll-outer", "theme_settings"]);
+        content.appendChild(scroll_cont);
+        let scroll_bar = _createElement("div", "scroll-bar");
+        scroll_bar.appendChild(_createElement("div", "scroll-thumb"));
+        scroll_cont.appendChild(scroll_bar);
+        let scroll_inner = _createElement("div", "scroll-inner");
+        scroll_cont.appendChild(scroll_inner);
+        let items = _createElement("div", "items");
+        scroll_inner.appendChild(items);
+        for (let item of sorted_items) {
+            let type_name = global_customization_type_map[item.customization_type].name;
+            let c_item = _createElement("div", ["customization_item", type_name, "rarity_bg_" + item.rarity]);
+            c_item.appendChild(renderCustomizationInner("shop_item", item.customization_type, item.customization_id, item.amount));
+            items.appendChild(c_item)
+        }
+        let sb_id = global_scrollbarTrackerId++;
+        global_scrollbarTracker[sb_id] = new Scrollbar(scroll_cont, sb_id, true);
+        let msg = _createElement("div", "msg", localize("shop_purchase_success_msg"));
+        content.appendChild(msg);
+        return content
+    }
+}
+
+function init_shop_item_debug_listeners() {
+    bind_event("shop_buy_success", (function() {
+        let data = {
+            success: true,
+            items: [{
+                seen: false,
+                customization_id: "av_AT1_1",
+                customization_type: 2,
+                customization_sub_type: "",
+                customization_set_id: null,
+                rarity: 0,
+                amount: 1
+            }, {
+                seen: false,
+                customization_id: "av_AT1_1",
+                customization_type: 2,
+                customization_sub_type: "",
+                customization_set_id: null,
+                rarity: 0,
+                amount: 1
+            }, {
+                seen: false,
+                customization_id: "av_AT1_1",
+                customization_type: 2,
+                customization_sub_type: "",
+                customization_set_id: null,
+                rarity: 0,
+                amount: 1
+            }, {
+                seen: false,
+                customization_id: "av_AT1_1",
+                customization_type: 2,
+                customization_sub_type: "",
+                customization_set_id: null,
+                rarity: 0,
+                amount: 1
+            }, {
+                seen: false,
+                customization_id: "av_AT1_1",
+                customization_type: 2,
+                customization_sub_type: "",
+                customization_set_id: null,
+                rarity: 0,
+                amount: 1
+            }, {
+                seen: false,
+                customization_id: "av_AT1_1",
+                customization_type: 2,
+                customization_sub_type: "",
+                customization_set_id: null,
+                rarity: 0,
+                amount: 1
+            }, {
+                seen: false,
+                customization_id: "av_AT1_1",
+                customization_type: 2,
+                customization_sub_type: "",
+                customization_set_id: null,
+                rarity: 0,
+                amount: 1
+            }, {
+                seen: false,
+                customization_id: "av_AT1_1",
+                customization_type: 2,
+                customization_sub_type: "",
+                customization_set_id: null,
+                rarity: 0,
+                amount: 1
+            }, {
+                seen: false,
+                customization_id: "av_AT1_1",
+                customization_type: 2,
+                customization_sub_type: "",
+                customization_set_id: null,
+                rarity: 0,
+                amount: 1
+            }, {
+                seen: false,
+                customization_id: "av_AT1_1",
+                customization_type: 2,
+                customization_sub_type: "",
+                customization_set_id: null,
+                rarity: 0,
+                amount: 1
+            }, {
+                seen: false,
+                customization_id: "av_AT1_1",
+                customization_type: 2,
+                customization_sub_type: "",
+                customization_set_id: null,
+                rarity: 0,
+                amount: 1
+            }, {
+                seen: false,
+                customization_id: "av_AT1_1",
+                customization_type: 2,
+                customization_sub_type: "",
+                customization_set_id: null,
+                rarity: 0,
+                amount: 1
+            }, {
+                seen: false,
+                customization_id: "av_AT1_1",
+                customization_type: 2,
+                customization_sub_type: "",
+                customization_set_id: null,
+                rarity: 0,
+                amount: 1
+            }, {
+                seen: false,
+                customization_id: "av_AT1_1",
+                customization_type: 2,
+                customization_sub_type: "",
+                customization_set_id: null,
+                rarity: 0,
+                amount: 1
+            }, {
+                seen: false,
+                customization_id: "av_AT1_1",
+                customization_type: 2,
+                customization_sub_type: "",
+                customization_set_id: null,
+                rarity: 0,
+                amount: 1
+            }, {
+                seen: false,
+                customization_id: "av_AT1_1",
+                customization_type: 2,
+                customization_sub_type: "",
+                customization_set_id: null,
+                rarity: 0,
+                amount: 1
+            }],
+            coins: 0
+        };
+        const content = update_after_purchase(data);
+        if (content) {
+            openBasicModal(basicGenericModal(localize("shop_purchase_success"), content, localize("modal_close")))
+        }
+    }))
 }

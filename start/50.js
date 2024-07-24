@@ -75,14 +75,6 @@ function initEngineVarElementHandlers() {
             customize_on_update_decals(value);
             return
         }
-        if (variable === "lobby_custom_mode") {
-            const lobby_init_mode = GAME.get_data("LOBBY_INIT_MODE");
-            const game_mode_map = GAME.get_data("game_mode_map");
-            if ((!value || !value.trim().length || !game_mode_map || !(value in game_mode_map) || !game_mode_map[value].enabled) && lobby_init_mode) {
-                update_variable("string", "lobby_custom_mode", lobby_init_mode, true);
-                value = lobby_init_mode
-            }
-        }
         if (variable == "video_mode") {
             settings_set_video_mode(parseInt(value))
         }

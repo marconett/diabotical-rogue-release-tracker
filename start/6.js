@@ -3589,6 +3589,9 @@ const TRANSLATION_en_source = {
         text: "Mode",
         engine: true
     },
+    custom_game_settings_mode_editing: {
+        text: "Mode Editing"
+    },
     custom_game_settings_map: {
         text: "Map",
         engine: true
@@ -4508,6 +4511,10 @@ const TRANSLATION_en_source = {
     },
     lobby_no_map_selected: {
         text: "No map has been selected!",
+        engine: true
+    },
+    lobby_no_mode_selected: {
+        text: "No mode has been selected!",
         engine: true
     },
     lobby_start_error_clients_in_match: {
