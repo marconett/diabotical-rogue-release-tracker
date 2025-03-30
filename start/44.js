@@ -142,11 +142,10 @@ class MenuScreen {
             let computed_opacity = computed_filter ? computed_filter[1] : 0;
             let display_set = this.screen_element.style.display;
             if (display_set == undefined || display_set == "none" || computed_styles.display == "none" || computed_opacity != 1) {
-                anim_show(this.screen_element, 200, "flex", (() => {
-                    if (typeof this.post_open_handler === "function") {
-                        this.post_open_handler()
-                    }
-                }))
+                this.screen_element.style.display = "flex";
+                if (typeof this.post_open_handler === "function") {
+                    this.post_open_handler()
+                }
             } else {
                 transition_sound = ""
             }
@@ -206,13 +205,12 @@ class MenuScreen {
                     if (params && params.anim_end_cb) {
                         this.on_close_animation_end_handlers.push(params.anim_end_cb)
                     }
-                    anim_hide(this.screen_element, 200, (() => {
-                        while (this.on_close_animation_end_handlers.length) {
-                            let cb = this.on_close_animation_end_handlers.shift();
-                            if (typeof cb === "function") cb()
-                        }
-                        if (typeof this.post_close_handler === "function") this.post_close_handler()
-                    }))
+                    this.screen_element.style.display = "none";
+                    while (this.on_close_animation_end_handlers.length) {
+                        let cb = this.on_close_animation_end_handlers.shift();
+                        if (typeof cb === "function") cb()
+                    }
+                    if (typeof this.post_close_handler === "function") this.post_close_handler()
                 }
             } else {
                 transition_sound = ""
@@ -251,7 +249,7 @@ function open_screen(screen_name, params) {
             if (global_active_screen.name in global_components_screen_map) {
                 for (let component of global_components_screen_map[global_active_screen.name]) {
                     anim_remove(component.root);
-                    anim_hide(component.root)
+                    component.root.style.display = "none"
                 }
             }
             screen_changed = true
@@ -266,16 +264,12 @@ function open_screen(screen_name, params) {
         let menu_display_set = menu.style.display;
         if (global_screens[screen_id].fullscreen) {
             if (menu_display_set != undefined && menu_display_set != "none" || menu_display_computed != "none") {
-                anim_hide(menu, 100)
-            } else {
-                menu.style.opacity = 0
-            }
+                menu.style.display = "none"
+            } else {}
         } else {
             if (menu_display_set == undefined && menu_display_set == "none" || menu_display_computed == "none") {
-                anim_show(menu, 100)
-            } else {
-                menu.style.opacity = 1
-            }
+                menu.style.display = "flex"
+            } else {}
         }
         for (let cb of global_screen_change_handlers) {
             let prev = null;
@@ -301,7 +295,7 @@ function close_screen(params) {
         global_active_screen.close(params);
         if (global_active_screen.name in global_components_screen_map) {
             for (let component of global_components_screen_map[global_active_screen.name]) {
-                anim_hide(component.root)
+                component.root.style.display = "none"
             }
         }
     }

@@ -1,0 +1,543 @@
+asset shelf_wall_batteries_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name col_col_box_corner_5_6
+        position 108.28223 11.39149 3.96594
+        rotation 0 89.99999 0
+        scale 0.30000 2.00000 2.70000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name light_9
+        position 20.00000 132.42857 -24.00000
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param color #ff71ff
+        param falloff 0.4
+        param intensity 0.8
+        param light_bake_only false
+        param radius 64
+        param type point
+    }
+    prefab_entity
+    {
+        name prop_battery_charge_statio_10
+        position -20.25342 78.66836 -8.58826
+        rotation 0 -72.89960 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model battery_charge_station_battery_01
+        param position_x -19.135742
+        param position_y 67.276863
+        param position_z -8.554199
+        param rotation_x -0.000000
+        param rotation_y -1.492256
+        param rotation_z 0.000000
+        param skip_shadows true
+        param tag shop_c
+    }
+    prefab_entity
+    {
+        name prop_battery_charge_statio_11
+        position -42.98340 78.66836 -6.79944
+        rotation 0 -85.49997 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model battery_charge_station_battery_01
+        param position_x -41.865723
+        param position_y 67.276863
+        param position_z -6.765381
+        param rotation_x -0.000000
+        param rotation_y -1.492256
+        param rotation_z 0.000000
+        param skip_shadows true
+        param tag shop_c
+    }
+    prefab_entity
+    {
+        name prop_battery_charge_statio_30
+        position -98.39990 149.27698 -10.09875
+        rotation 0 -103.49994 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model battery_charge_station_battery_01
+        param position_x -98.000000
+        param position_y 139.276978
+        param position_z -9.698730
+        param rotation_x -0.000000
+        param rotation_y -1.806415
+        param rotation_z 0.000000
+        param skip_shadows true
+        param tag shop_c
+    }
+    prefab_entity
+    {
+        name prop_battery_charge_statio_31
+        position 11.28247 48.66848 -12.43402
+        rotation 0 85.50014 0
+        scale 0.96000 0.96000 0.96000
+        param best_lod 0
+        param clip weapon
+        param color_matlib_mat_lib_plastic 565656ff
+        param force_shadows true
+        param model battery_charge_station_battery_01
+        param position_x 16.381348
+        param position_y 37.276981
+        param position_z -0.911255
+        param rotation_x -0.000000
+        param rotation_y -1.727875
+        param rotation_z 0.000000
+        param skip_shadows true
+        param tag shop_c
+    }
+    prefab_entity
+    {
+        name prop_battery_charge_statio_32
+        position -31.52271 120.66848 -9.73352
+        rotation 0 -89.99993 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model battery_charge_station_battery_01
+        param position_x -30.405029
+        param position_y 109.276978
+        param position_z -9.699463
+        param rotation_x -0.000000
+        param rotation_y -1.570795
+        param rotation_z 0.000000
+        param skip_shadows true
+        param tag shop_c
+    }
+    prefab_entity
+    {
+        name prop_battery_charge_statio_33
+        position -35.52319 48.66848 -9.73389
+        rotation 0 -124.19988 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model battery_charge_station_battery_01
+        param position_x -34.405518
+        param position_y 37.276981
+        param position_z -9.699829
+        param rotation_x -0.000000
+        param rotation_y -1.413716
+        param rotation_z 0.000000
+        param skip_shadows true
+        param tag shop_c
+    }
+    prefab_entity
+    {
+        name prop_battery_charge_statio_34
+        position -15.52441 48.66848 -9.73352
+        rotation 0 -80.99997 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 0
+        param clip weapon
+        param color_matlib_mat_lib_plastic 565656ff
+        param force_shadows true
+        param model battery_charge_station_battery_01
+        param position_x -14.406738
+        param position_y 37.276981
+        param position_z -9.699463
+        param rotation_x -0.000000
+        param rotation_y -1.413716
+        param rotation_z 0.000000
+        param skip_shadows true
+        param tag shop_c
+    }
+    prefab_entity
+    {
+        name prop_battery_charge_statio_35
+        position -83.52295 48.66848 -9.73303
+        rotation 0 -89.99993 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model battery_charge_station_battery_01
+        param position_x -82.405273
+        param position_y 37.276981
+        param position_z -9.698975
+        param rotation_x -0.000000
+        param rotation_y -1.570795
+        param rotation_z 0.000000
+        param skip_shadows true
+        param tag shop_c
+    }
+    prefab_entity
+    {
+        name prop_battery_charge_statio_36
+        position -63.52368 48.66848 -9.73511
+        rotation 0 -121.49994 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model battery_charge_station_battery_01
+        param position_x -62.406006
+        param position_y 37.276981
+        param position_z -9.701050
+        param rotation_x -0.000000
+        param rotation_y -2.120574
+        param rotation_z 0.000000
+        param skip_shadows true
+        param tag shop_c
+    }
+    prefab_entity
+    {
+        name prop_battery_charge_statio_37
+        position 74.47559 126.46853 -9.73425
+        rotation 2.69957 0 -89.99997
+        scale 1.00000 1.00000 1.00000
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model battery_charge_station_battery_01
+        param position_x 75.593262
+        param position_y 115.077026
+        param position_z -9.700195
+        param rotation_x -1.570796
+        param rotation_y 0.000000
+        param rotation_z -1.570796
+        param skip_shadows true
+        param tag shop_c
+    }
+    prefab_entity
+    {
+        name prop_battery_charge_statio_38
+        position 26.47705 48.66848 -9.73376
+        rotation 0 -89.99993 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 0
+        param clip weapon
+        param color_matlib_mat_lib_plastic 565656ff
+        param force_shadows true
+        param model battery_charge_station_battery_01
+        param position_x 27.594727
+        param position_y 37.276981
+        param position_z -9.699707
+        param rotation_x -0.000000
+        param rotation_y -1.570795
+        param rotation_z 0.000000
+        param skip_shadows true
+        param tag shop_c
+    }
+    prefab_entity
+    {
+        name prop_battery_charge_statio_39
+        position 76.47534 48.66848 -11.73328
+        rotation 0 -89.99993 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param material_2 matlib_mat_lib_metal_gold
+        param model battery_charge_station_battery_01
+        param position_x 77.593018
+        param position_y 37.276981
+        param position_z -11.699219
+        param rotation_x -0.000000
+        param rotation_y -1.570795
+        param rotation_z 0.000000
+        param skip_shadows true
+        param tag shop_c
+    }
+    prefab_entity
+    {
+        name prop_battery_charge_statio_40
+        position -11.52344 120.66848 -9.73218
+        rotation 0 -85.49997 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model battery_charge_station_battery_01
+        param position_x -10.405762
+        param position_y 109.276978
+        param position_z -9.698120
+        param rotation_x -0.000000
+        param rotation_y -1.492256
+        param rotation_z 0.000000
+        param skip_shadows true
+        param tag shop_c
+    }
+    prefab_entity
+    {
+        name prop_battery_charge_statio_41
+        position 58.47485 120.66848 -9.73389
+        rotation 0 -89.99993 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model battery_charge_station_battery_01
+        param position_x 59.592529
+        param position_y 109.276978
+        param position_z -9.699829
+        param rotation_x -0.000000
+        param rotation_y -1.570795
+        param rotation_z 0.000000
+        param skip_shadows true
+        param tag shop_c
+    }
+    prefab_entity
+    {
+        name prop_battery_charge_statio_42
+        position -99.59985 119.27699 -10.09875
+        rotation 0 -79.19980 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model battery_charge_station_battery_01
+        param position_x -99.199951
+        param position_y 109.276978
+        param position_z -9.698730
+        param rotation_x -0.000000
+        param rotation_y -1.806415
+        param rotation_z 0.000000
+        param skip_shadows true
+        param tag shop_c
+    }
+    prefab_entity
+    {
+        name prop_battery_charge_statio_43
+        position -81.52368 120.66848 -9.73499
+        rotation 0 -80.99997 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model battery_charge_station_battery_01
+        param position_x -80.406006
+        param position_y 109.276978
+        param position_z -9.700928
+        param rotation_x -0.000000
+        param rotation_y -1.413716
+        param rotation_z 0.000000
+        param skip_shadows true
+        param tag shop_c
+    }
+    prefab_entity
+    {
+        name prop_battery_charge_statio_44
+        position -31.52271 150.66849 -9.73352
+        rotation 0 -89.99993 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model battery_charge_station_battery_01
+        param position_x -30.405029
+        param position_y 139.276978
+        param position_z -9.699463
+        param rotation_x -0.000000
+        param rotation_y -1.570795
+        param rotation_z 0.000000
+        param skip_shadows true
+        param tag shop_c
+    }
+    prefab_entity
+    {
+        name prop_battery_charge_statio_45
+        position -2.31763 78.66836 -8.43402
+        rotation 0 -89.09998 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model battery_charge_station_battery_01
+        param position_x 2.796143
+        param position_y 67.276863
+        param position_z -10.280518
+        param rotation_x -0.000000
+        param rotation_y -1.492256
+        param rotation_z 0.000000
+        param skip_shadows true
+        param tag shop_c
+    }
+    prefab_entity
+    {
+        name prop_blockout_cylinder_3
+        position 11.95801 127.71853 -10.31848
+        rotation 0 85.50004 0
+        scale 0.04000 0.12133 0.04000
+        param __shadow true
+        param best_lod 3
+        param clip weapon
+        param color3_matlib_mat_lib_emissive fe17e6ff
+        param force_shadows true
+        param material_0 matlib_mat_lib_emissive
+        param model blockout_cylinder
+        param position_x 13.075684
+        param position_y 116.327026
+        param position_z -10.284424
+        param rotation_x -0.000000
+        param rotation_y 1.492257
+        param rotation_z -0.000000
+        param tag shop_c
+    }
+    prefab_entity
+    {
+        name prop_blockout_cylinder_4
+        position 18.97681 127.71853 -9.76514
+        rotation 0 85.50004 0
+        scale 0.04000 0.14000 0.04000
+        param __shadow true
+        param best_lod 0
+        param clip weapon
+        param color3_matlib_mat_lib_emissive fe17e6ff
+        param force_shadows true
+        param material_0 matlib_mat_lib_emissive
+        param model blockout_cylinder
+        param position_x 20.094482
+        param position_y 116.327026
+        param position_z -9.731079
+        param rotation_x -0.000000
+        param rotation_y 1.492257
+        param rotation_z -0.000000
+        param tag shop_c
+    }
+    prefab_entity
+    {
+        name prop_blockout_cylinder_5
+        position 26.31543 127.71853 -9.18701
+        rotation 0 85.50004 0
+        scale 0.04000 0.09333 0.04000
+        param __shadow true
+        param best_lod 0
+        param clip weapon
+        param color3_matlib_mat_lib_emissive fe17e6ff
+        param force_shadows true
+        param material_0 matlib_mat_lib_emissive
+        param model blockout_cylinder
+        param position_x 27.433105
+        param position_y 116.327026
+        param position_z -9.152954
+        param rotation_x -0.000000
+        param rotation_y 1.492257
+        param rotation_z -0.000000
+        param tag shop_c
+    }
+    prefab_entity
+    {
+        name prop_lab_equipment
+        position 20.25366 119.31850 -9.66357
+        rotation 0 -4.49995 0
+        scale 0.80000 0.93333 0.80000
+        param __shadow true
+        param best_lod 0
+        param clip weapon
+        param color3_matlib_mat_lib_emissive fe17e6ff
+        param force_shadows true
+        param material_1 override_glass
+        param model lab_equipment_03
+        param position_x 21.371338
+        param position_y 107.927002
+        param position_z -9.629517
+        param rotation_x -0.000000
+        param rotation_y -0.078539
+        param rotation_z 0.000000
+        param tag shop_c
+    }
+    prefab_entity
+    {
+        name prop_shelf_modular
+        position 0.26562 117.46839 -14.25891
+        rotation 0 0.00006 0
+        scale 1.40000 1.40000 1.00000
+        param __shadow true
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model shelf_modular_02
+        param position_x 1.383301
+        param position_y 106.076904
+        param position_z -14.224854
+        param rotation_x -0.000000
+        param rotation_y 0.000001
+        param rotation_z -0.000000
+        param tag shop_c
+    }
+    prefab_entity
+    {
+        name prop_shelf_modular_1
+        position 0.26562 87.46840 -14.25891
+        rotation 0 0.00006 0
+        scale 1.40000 1.40000 1.00000
+        param __shadow true
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model shelf_modular_02
+        param position_x 1.383301
+        param position_y 76.076897
+        param position_z -14.224854
+        param rotation_x -0.000000
+        param rotation_y 0.000001
+        param rotation_z -0.000000
+        param tag shop_c
+    }
+    prefab_entity
+    {
+        name prop_shelf_modular_3
+        position 0.26562 45.46840 -14.25891
+        rotation 0 0.00006 0
+        scale 1.40000 1.40000 1.00000
+        param __shadow true
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model shelf_modular_02
+        param position_x 1.383301
+        param position_y 34.076900
+        param position_z -14.224854
+        param rotation_x -0.000000
+        param rotation_y 0.000001
+        param rotation_z -0.000000
+        param tag shop_c
+    }
+    prefab_entity
+    {
+        name prop_shelf_modular_5
+        position 0.26562 15.46840 -14.25891
+        rotation 0 0.00006 0
+        scale 1.40000 1.40000 1.00000
+        param __shadow true
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model shelf_modular_02
+        param position_x 1.383301
+        param position_y 4.076897
+        param position_z -14.224854
+        param rotation_x -0.000000
+        param rotation_y 0.000001
+        param rotation_z -0.000000
+        param tag shop_c
+    }
+}
+
+
+
+
+
+

@@ -1,0 +1,197 @@
+asset block_4x4_fan_tall_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name decal_decal_environment_dir_28
+        position -82.03723 31.97909 -15.20001
+        rotation 0.00001 90.00001 17.99995
+        scale 201.58997 201.58998 7.72931
+        param albedo_map_enable true
+        param color 402d2a75
+        param emissive_map_enable false
+        param gloss_map_enable false
+        param material decal_mat_environment_dirt_splat_08
+        param metal_map_enable false
+        param normal_map_enable false
+        param position_x -82.037224
+        param position_y 31.979090
+        param position_z -15.200005
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name light_279
+        position -83.53723 54.67919 0
+        rotation 90.00000 0 -90.00001
+        scale 1.00000 1.00000 1.00000
+        param angle 110
+        param attenuation_exponent 1.20
+        param color s_light_neutral
+        param falloff 0.66
+        param intensity 5
+        param position_x -83.537224
+        param position_y 54.679192
+        param position_z 0.000000
+        param radius 100
+        param softness .4
+        param type diffuse_spot
+    }
+    prefab_entity
+    {
+        name pfx_env_vent_smoke_puffy1_1
+        position -46.00000 164.59999 0
+        rotation 29.71361 89.41636 -176.72498
+        scale 1.00000 1.00000 1.00000
+        param color ffffff7a
+        param delay 0
+        param destroy_on_loop false
+        param max_distance 0
+        param pfx_scale 4
+        param position_x -46.000015
+        param position_y 164.599991
+        param position_z 0.000000
+        param random_delay_max 0
+        param range_multiplier 0.8
+        param repeat_interval 0
+        param repeat_lifetime 0
+        param system env_vent_smoke_puffy1
+    }
+    prefab_entity
+    {
+        name prop_blockout_circle_7
+        position -17.68079 142.30815 1.30164
+        rotation -90.00000 0 -90.00001
+        scale 1.60000 1.00000 1.60000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model blockout_circle
+        param override_effect_0 matlib_mat_lib_rubber_dark
+        param position_x -17.680756
+        param position_y 142.308151
+        param position_z 1.301666
+    }
+    prefab_entity
+    {
+        name prop_building_blocks_var_l
+        position 4.00000 154.00000 0
+        rotation 0 0.00001 179.99999
+        scale 0.82000 0.95000 0.95000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_building_blocks_var_l
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model building_blocks_var_lg_4x4_ventilation_fan
+        param position_x 3.999985
+        param position_y 154.000000
+        param position_z 0.000000
+        param rotate_animation 1
+        param rotate_animation_angle 135
+        param rotate_animation_axis_x -1
+        param rotate_animation_axis_y 0
+        param size_w 1
+        param size_x 0.820000
+        param size_y 0.950000
+        param size_z 0.950000
+    }
+    prefab_entity
+    {
+        name prop_floorhatch_07_1
+        position -152.00000 0.11529 -100.00000
+        rotation 0 0.00001 0
+        scale 3.00000 1.00000 5.10000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param color 6f6966ff
+        param model floorhatch_07
+        param position_x -152.000031
+        param position_y 0.115290
+        param position_z -100.000008
+    }
+    prefab_entity
+    {
+        name prop_kitbash_562
+        position 0 240.00000 0
+        rotation 0 179.99999 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_kitbash_562
+        param best_lod 0
+        param clip fullclip
+        param force_shadows true
+        param model building_blocks_var_lg_4x4_ventilation_01
+        param override_effect_9 matlib_mat_lib_metal_dark
+        param position_x 0.000000
+        param position_y 240.000000
+        param position_z 0.000000
+        param rotation_y -3.141593
+        param size_w 1
+        param size_x 1.000000
+        param size_y 1.000000
+        param size_z 1.000000
+    }
+    prefab_entity
+    {
+        name prop_lg_8_tangled_01_1
+        position -306.48553 -0.67721 52.20447
+        rotation 0 18.00002 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_lg_8_tangled_01_1
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model lg_8_tangled_01
+        param position_x -306.485535
+        param position_y -0.677210
+        param position_z 52.204521
+    }
+    prefab_entity
+    {
+        name prop_rogue_light_fixture_77
+        position -68.53723 50.67919 0
+        rotation -90.00000 0 -179.99999
+        scale 0.53000 0.53000 0.26500
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_rogue_light_fixture_37
+        param best_lod 0
+        param clip noclip
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param force_shadows true
+        param model light_fixture_03
+        param position_x -68.537209
+        param position_y 50.679192
+        param position_z 0.000000
+    }
+    prefab_entity
+    {
+        name sound_amb_prop_industrial_fan_1
+        position -76.40002 133.17906 0
+        rotation 0 0.00001 0
+        scale 1.00000 1.00000 1.00000
+        param apply_audio_occlusion true
+        param capsule_end_position_x 183.791336
+        param capsule_end_position_y 291.199982
+        param capsule_end_position_z 251.199997
+        param cross_fade_max_radius 40.000000
+        param cross_fade_min_radius 0.000000
+        param min_radius 40
+        param position_x -76.400024
+        param position_y 133.179062
+        param position_z 0.000000
+        param radius 900
+        param sound_event amb_prop_industrial_fan_small
+        param type audio_event_ambient_node
+        param volume 1
+    }
+}

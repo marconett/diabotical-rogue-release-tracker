@@ -1,0 +1,103 @@
+rogue_pncr
+{
+	name_translation_key weapon_pncr
+	desc_translation_key weapon_pncr_desc
+	
+	unlimited_ammo true
+	selectable false
+	show_in_dev_console true
+
+
+	respawn_time 9
+	category 5
+	bind_group 5
+	weapon_tag pncr
+	color f2c037
+	//group 4
+	damage 70
+	bonus_consecutive_damage 5
+	max_bonus_consecutive_damage_instances 6
+	knockback 62.5
+	ground_knockback 75.5
+	//charged_knockback_self 120
+	//charged_knockback_self_radius 117
+	default_ammo_pickup_ammo 5
+	default_weapon_pickup_ammo 10
+	max_ammo 25
+	penetrating true
+	
+	icon_path images/weapon_icons/wp_hud_pncr.png
+	icon_path2 images/weapon_icons/wp_card_pncr.png
+
+    friendly_name PNCR
+    description Point N Click Rifle
+	
+	hit_radius 1.5 1
+
+	charge_animation 6
+	charge_animation_bonus true
+	
+	rate 1450
+	
+	recoil_delay_recovery 0.1
+	recoil_up 1.5
+	recoil_side 0.2
+	recoil_recovery_time 0.45
+	recoil_time 0.07
+	
+	zoomed_recoil_up 0.75
+	zoomed_recoil_side 0.1
+	zoomed_recoil_recovery_time 0.4
+	zoomed_recoil_time 0.06
+	
+	zoomed_walk_speed 175
+
+	rotate_shot_particles_by_shot_direction true
+	shot_particles weapon_pncr_beam
+	shot_particles_3p weapon_pncr_beam_3p
+	shot_particles_attached weapon_pncr_muzzle
+	impact_particles weapon_pncr_impact
+    player_impact_particles weapon_pncr_player_impact
+	player_impact_particles_player_normal false
+
+	model assets/shared/models/animations/wp_pncr/skm_pncr
+	model_scale_third_person 1 1 1 
+	model_position_third_person 0 0 0 
+	model_rotation_third_person 0 0 0 
+    model_position -0.863 -1.194 -1.100
+    model_position_centered -0.743 -1.407 -1.686
+    model_post_rotation -0.057 -0.124 -0.062
+    model_post_rotation_centered -0.079 -0.070 -0.017
+	model_scale 0.025 0.025 0.025 
+	model_scale_centered 0.05 0.05 0.05
+    fov 50.00
+	model_camera_scale 5 
+	model_camera_scale_centered 5 
+	impressive_reward true
+	model_scale_third_person 0.85
+	model_position_third_person -4 14.5 12
+		
+	parallel_knockback true
+	
+	particles_clipping_plane true
+	
+	shot_sound w_pncr_fire1_t1
+	shot_sound_t2 w_pncr_fire1_t2
+	shot_sound_t3 w_pncr_fire1_t3
+	shot_sound2 w_pncr_fire_distant
+	equip_sound w_pncr_equip
+	hit_sound fb_enemy_hit
+	critical_hit_sound fb_enemy_hit_crit
+	proximity_loop_sound w_pncr_idle_loop
+	out_of_ammo_sound w_pncr_ooa
+	impact_sound w_pncr_impact
+	
+		// weapon_sway
+	smoothing_factor 10.0
+	vertical_sway 1.0
+	horizontal_sway 1.0
+	tilt_sway 0.15
+
+	forward_sway 0.5
+	max_vertical_movement_sway 0.05
+}

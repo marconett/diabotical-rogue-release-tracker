@@ -1,0 +1,100 @@
+rogue_doublebarreled_shotgun
+{
+    name_translation_key weapon_doublebarrreled_shotgun
+	desc_translation_key weapon_doublebarrreled_shotgun_desc
+
+	
+	can_drop true
+	selectable false	
+	show_in_dev_console true
+	weapon_tag dbsho
+	
+	name_translation_key weapon_doublebarreled_shotgun
+	desc_translation_key weapon_doublebarreled_shotgun_desc
+	color 9bc44d
+	
+	
+	default_ammo 2
+	default_ammo_pickup_ammo 50
+	default_weapon_pickup_ammo 50
+	max_ammo 40
+	unlimited_ammo true
+
+	icon_path images/weapon_icons/doublebarreled_shotgun.png
+	
+	charge_animation 1
+
+	shots_per_round 20
+	spread 5.87 5.87
+	spread_radius 1
+	rate 1000
+	damage 5 5
+	max_damage_distance 200
+	min_damage_distance 800
+	min_hits 2
+	bounce 0
+	spread_ring 0 6 6 8
+	spread_ring_angular_offset 0 0 90 0
+	knockback 6.1
+	ground_knockback 7.1
+	parallel_knockback true
+	impact_particles_distance_delay 0.12
+	independent_upgrade_model true
+	
+	max_damage_distance 1000
+    min_damage_distance 3000
+	
+	hit_radius 1.7 3
+	
+	reload 2500
+	
+	group_damage true
+
+	max_damage_reward true
+	
+	detached_shot_particles false
+    shot_particles empty_system
+   	shot_particles_attached_3p muzzle_db_shotgun
+	missile_particles bullet_db_shotgun
+	missile_particles_1p bullet_db_shotgun
+	impact_particles weapon_shotgun_impact
+    player_impact_particles impact_player_db_shotgun
+
+	
+	decal decal 7 3 3.561 false false alpha 7	 
+	decal decal_glow_red 16 3 3.561 false false alpha 30
+	decal decal_glow 10 3 3.561 false false alpha 50
+	
+	model assets/shared/models/animations/wp_doubleshotgun/skm_doubleshotgun
+	
+	model_scale_third_person 1 1 1 
+	model_position_third_person 0 0 0 
+	model_rotation_third_person 0 0 0 
+    model_position -1.030 -1.467 -3.644
+    model_position_centered -0.740 -1.400 -1.700
+    model_post_rotation -0.047 -0.121 -0.062
+    model_post_rotation_centered -0.079 -0.070 -0.017
+	model_scale 0.07 0.07 0.07 
+	model_scale_centered 0.07 0.07 0.07
+    fov 45.09
+    fov_centered 50.00
+	model_camera_scale 5 
+	model_camera_scale_centered 5 
+	muzzle 2.6 -2.7 4.7
+	
+
+	shot_sound ss_fire1 ss_fire2 ss_fire3 ss_fire4
+
+
+	equip_sound weapon_double_shotgun_equip
+	out_of_ammo_sound ss_ooa
+	hit_sound fb_enemy_hit
+	critical_hit_sound	fb_enemy_hit_crit
+	
+	detached_shot_particles false
+	multi_round_particles false
+	
+	unlimited_ammo false
+
+	can_upgrade_tactical_reload true
+}

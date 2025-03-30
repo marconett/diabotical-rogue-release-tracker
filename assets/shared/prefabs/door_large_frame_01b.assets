@@ -1,0 +1,199 @@
+asset door_large_frame_01b
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name decal_decal_graphical_graph_79
+        position 157.60010 292.00000 39.60000
+        rotation 0.00001 179.99999 -90.00003
+        scale 50.00000 44.30000 5.00000
+        param albedo_map_enable true
+        param color s_decal_bright
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_graphical_graphical_box_shape_3
+        param metal_map_enable false
+        param normal_map_enable true
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_symbols_number_1
+        position 64.65820 295.53973 43.83300
+        rotation 0 -179.99999 0
+        scale 65.00000 65.00000 7.00000
+        param albedo_map_enable true
+        param color s_decal
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_symbols_number_4_d_1
+        param metal_map_enable false
+        param normal_map_enable true
+        param order -1
+        param rotation_w 0
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_symbols_number_11
+        position 112.28418 295.53955 43.02059
+        rotation 0 179.99999 0
+        scale 65.00000 65.00000 5.00000
+        param albedo_map_enable true
+        param color s_decal
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_symbols_number_0_d_1
+        param metal_map_enable false
+        param normal_map_enable true
+        param rotation_w 0
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name prop_tech_pillar_support_s_3_1_1
+        position 0 292.00000 0
+        rotation -90.00000 0 90.00001
+        scale 0.70000 0.55000 0.65000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_tech_pillar_support_s_10
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model tech_pillar_support_straight
+        param movement static
+        param no_vis_bake true
+        param seethrough_direction 9
+        param seethrough_prop false
+    }
+    prefab_entity
+    {
+        name prop_computer_module_wall_
+        position 213.60010 260.00000 27.60000
+        rotation 0 -179.99995 0
+        scale 1.23000 1.23000 1.23000
+        param __shadow true
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model computer_module_wall_02
+    }
+    prefab_entity
+    {
+        name prop_door_frame_wide_lg_1_1_1
+        position 0 0 0
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param material_4 matlib_mat_lib_metal_dark
+        param model door_frame_wide_lg_8_01
+        param movement static
+        param seethrough_direction 8
+        param seethrough_prop false
+    }
+    prefab_entity
+    {
+        name prop_door_wide_lg_8_top_2_1_1
+        position 0 0 0
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param action move 0 150 0 -1 100 0
+        param best_lod 1
+        param clip weapon
+        param color_matlib_mat_lib_plastic 996f6fff
+        param force_shadows true
+        param material_2 matlib_mat_lib_acrylic
+        param model door_wide_lg_8_top_01
+        param movement static
+        param no_vis_bake true
+    }
+    prefab_entity
+    {
+        name prop_door_wide_lg_bottom_1_1_1
+        position 0 0 0
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param action move 0 -75 0 -1 50 0
+        param best_lod 1
+        param clip weapon
+        param color_matlib_mat_lib_plastic 996f6fff
+        param force_shadows true
+        param model door_wide_lg_bottom_8_03
+        param movement static
+        param no_vis_bake true
+    }
+    prefab_entity
+    {
+        name prop_tech_pillar_support_1_1_1_1
+        position 210.00000 240.00000 0
+        rotation 0 89.99999 0
+        scale 0.70000 0.65000 0.70000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_tech_pillar_support_4
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model tech_pillar_support_90_angle
+        param seethrough_direction 9
+        param seethrough_prop false
+    }
+    prefab_entity
+    {
+        name prop_tech_pillar_support_2_1_1
+        position -210.00000 240.00000 0
+        rotation 0 -89.99999 0
+        scale 0.70000 0.65000 0.70000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_tech_pillar_support_3
+        param best_lod -1
+        param clip weapon
+        param force_shadows true
+        param model tech_pillar_support_90_angle
+        param movement static
+        param no_vis_bake true
+        param seethrough_direction 7
+        param seethrough_prop false
+    }
+    prefab_entity
+    {
+        name prop_tech_pillar_support_s_1_1_1_1
+        position -210.00000 32.40000 0
+        rotation 0 -89.99999 0
+        scale 0.70000 0.65000 0.70000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_tech_pillar_support_s_8
+        param best_lod -1
+        param clip weapon
+        param force_shadows true
+        param model tech_pillar_support_straight
+        param seethrough_direction 9
+        param seethrough_prop false
+    }
+    prefab_entity
+    {
+        name prop_tech_pillar_support_s_2_1_1_1
+        position 210.00000 32.40000 0
+        rotation 0 89.99999 0
+        scale 0.70000 0.65000 0.70000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_tech_pillar_support_s_9
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model tech_pillar_support_straight
+    }
+}

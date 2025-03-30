@@ -1,0 +1,155 @@
+asset crate_stack_simple_03a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name col_col_box_corner_18_1_8
+        position 83.86768 0 0.53040
+        rotation 0 89.99998 0
+        scale 1.03000 1.83000 1.08000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param rotation_w 0
+        param size_w 1
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_18_1_9
+        position 83.86768 0 0.53137
+        rotation 0 0.00006 0
+        scale 0.47000 0.70000 0.56000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param rotation_w 0
+        param size_w 1
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name decal_decal_graphical_graph_13
+        position 34.24902 113.20000 -7.45361
+        rotation -0.00001 165.00003 89.99995
+        scale 32.11000 32.11000 54.10929
+        param albedo_map_enable true
+        param color s_decal
+        param emissive_map_enable false
+        param gloss_map_enable false
+        param material decal_mat_graphical_graphical_square_triangle_02
+        param metal_map_enable false
+        param normal_map_enable false
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_graphical_graph_14
+        position 50.71045 113.20000 -68.88660
+        rotation -0.00000 -15.00001 -0.00002
+        scale 32.11000 32.11000 54.10929
+        param albedo_map_enable true
+        param color s_decal
+        param emissive_map_enable false
+        param gloss_map_enable false
+        param material decal_mat_graphical_graphical_square_triangle_02
+        param metal_map_enable false
+        param normal_map_enable false
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_26
+        position 18.26758 0.04266 0.93115
+        rotation 0 -4.50000 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 0
+        param color_matlib_mat_lib_plastic s_bright
+        param force_shadows true
+        param model tech_debris_sm_26
+        param no_collision true
+    }
+    prefab_entity
+    {
+        name prop_canister_stack
+        position 101.24463 33.36691 -26.51721
+        rotation 0 170.99997 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_canister_stack
+        param best_lod 0
+        param clip weapon
+        param color3_matlib_mat_lib_emissive s_emissive_main
+        param color_matlib_mat_lib_metal_painted s_bright
+        param force_shadows true
+        param model canister_stack
+    }
+    prefab_entity
+    {
+        name prop_crate_02_large_5
+        position 40.53711 0.21904 -40.25879
+        rotation 0 178.20001 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_crate_02_large_3
+        param best_lod 0
+        param clip weapon
+        param color_matlib_mat_lib_metal_painted s_accent
+        param color_matlib_mat_lib_metal_painted_details_floating s_accent
+        param force_shadows true
+        param model crate_02_large
+        param size_w 1
+    }
+    prefab_entity
+    {
+        name prop_crate_02_large_6
+        position 43.23828 79.41904 -39.51990
+        rotation 0 -104.40001 0
+        scale 0.84000 0.84000 0.84000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_crate_02_large_3
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model crate_05_large
+        param size_w 1
+    }
+    prefab_entity
+    {
+        name prop_crate_06_empty
+        position 100.68994 0.20049 -23.23328
+        rotation 0 -175.49998 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_crate_06_empty
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model crate_06_empty
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_19
+        position 100.66748 0.10476 -51.46863
+        rotation 0 170.10000 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model tech_debris_sm_19
+        param no_collision true
+    }
+}

@@ -1,0 +1,99 @@
+diabotical_machinegun
+{
+	name_translation_key weapon_machinegun
+	desc_translation_key weapon_machinegun_desc
+
+	selectable true
+	rarity rare
+	respawn_time 9
+    //unique true
+	weapon_tag dbtmac
+	color 1996D9
+    bind_group 6
+	
+	default_ammo 100
+	default_ammo_pickup_ammo 50
+	default_weapon_pickup_ammo 100
+	max_ammo 200
+	
+	rate 100
+	damage 5
+	spread 0
+	knockback 4
+	ground_knockback 4
+    charge_animation 1
+	
+	zoomed_scope 1
+	
+	hit_radius 2 1
+	
+	icon_path images/weapon_icons/wp_hud_machinegun_02.png
+	icon_path2 images/weapon_icons/wp_card_machinegun.png
+	weapon_icon_path images/weapon_icons/wp_card_machinegun_nobg.png
+	
+//	combo_rate	diabotical_machinegun 100
+	combo_rate  diabotical_supershotgun 50
+	combo_rate	diabotical_shaft 50
+	combo_rate	diabotical_rocketlauncher 50
+	combo_rate	diabotical_pncr  50
+	combo_rate	diabotical_blaster 50
+	combo_rate	diabotical_grenade_launcher 50
+	combo_rate	diabotical_void_cannon 50
+
+	loop_animation true
+
+	particles_clipping_plane true
+    shot_particles weapon_machinegun_muzzle_flash
+    shot_particles_attached weapon_machinegun_muzzle socket_muzzle 0.15
+	shot_particles_attached_3p weapon_machinegun_muzzle_3p
+	impact_particles weapon_machinegun_impact
+	player_impact_particles weapon_machinegun_player_impact
+	missile_particles weapon_machinegun_projectile
+	//missile_particles_1p weapon_revolver_projectile
+// IMPACT DECALS
+	//decal decal 10 3 3.561 false false alpha 1
+	//decal decal_glow_red 16 3 3.561 false false alpha 30
+	//decal decal_glow 10 3 3.561 false false alpha 20
+	
+	model assets/shared/models/animations/wp_machinegun/skm_machinegun
+	model_scale_third_person 1 1 1 
+	model_position_third_person 0 0 0 
+	model_rotation_third_person 0 0 0 
+	model_position -0.665985 -0.848739 -1.09217 
+	model_position_centered -0.65389 -1.22176 -1.00434 
+	model_post_rotation -0.10472 -0.10472 0 
+	model_post_rotation_centered -0.0698132 -0.0872665 -0.0523599 
+	model_scale 0.04 0.04 0.04 
+	model_scale_centered 0.04 0.04 0.04 
+	fov 55 
+	fov_centered 82 
+	model_camera_scale 8 
+	model_camera_scale_centered 3 
+	model_pivot 0 -0.22 0
+	muzzle 2.7 -2.8 14
+	particles_clipping_plane true	
+
+	// weapon_sway
+	smoothing_factor 10.0
+	vertical_sway 1.0
+	horizontal_sway 1.0
+	tilt_sway 0.15
+
+	forward_sway 0.2
+	max_vertical_movement_sway 0.15
+	
+	shot_sound w_hm_fire_burst
+	//shot_sound2 w_mac_fire_distant
+	end_sound w_hm_fire_burst_tail
+	//end_sound2 w_mac_fire_distant_release
+	// shot_sound_low_ammo mac_fire_low1 mac_fire_low2 mac_fire_low3 mac_fire_low4 mac_fire_low5
+	// low_ammo_threshold 15
+	equip_sound w_mac_equip
+	hit_sound fb_enemy_hit
+	critical_hit_sound	fb_enemy_hit_crit
+	out_of_ammo_sound w_mac_ooa
+	impact_sound w_mac_impact
+	
+	detached_shot_particles false
+	multi_round_particles false
+}

@@ -80,20 +80,6 @@ function masterserver_message_handler(type, priority, action, data) {
                 global_self.mmr = json_data.data;
                 mmr_updated();
                 break;
-            case "get-combined-list":
-                global_updating_match_list = false;
-                global_custom_list_data_ts = Date.now();
-                global_custom_list_data = json_data.data.customs;
-                global_pickup_list_data = json_data.data.pickups ? json_data.data.pickups : [];
-                global_tourney_list_data = json_data.data.tourneys ? json_data.data.tourneys : [];
-                global_party.pickup_ids = json_data.data.pickup_ids;
-                if (global_active_view === "menu") {
-                    if (global_menu_page == "play") {
-                        render_play_screen_combined_list();
-                        render_play_screen_tourney_list()
-                    }
-                }
-                break;
             case "warmup-join-error":
                 queue_dialog_msg({
                     title: localize("title_info"),
@@ -178,9 +164,6 @@ function masterserver_message_handler(type, priority, action, data) {
                     })
                 });
                 break;
-            case "pickup-update":
-                update_pickup_data(json_data.data);
-                break;
             case "get-notifications":
                 if (json_data.notifs.length) {
                     for (let n of json_data.notifs) {
@@ -254,9 +237,6 @@ function masterserver_message_handler(type, priority, action, data) {
             case "load-char-preset-success":
                 clear_profile_data_cache_id(global_self.user_id);
                 customize_preset_deselect();
-                break;
-            case "pickup-leave":
-                leave_pickup(data);
                 break;
             case "tournament-signup-success":
                 if (global_menu_page !== "tourney" && data.length) {

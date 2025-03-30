@@ -4,13 +4,13 @@ rogue_machinegun
 	desc_translation_key weapon_machinegun_desc
 	
 	required_class rogue_scout
-
+	weapon_fire_type primary
 	selectable true
 	rarity rare
 	respawn_time 9
     //unique true
 	weapon_tag mac
-	color 1996D9
+	color d876f8
     bind_group 6
 	
 	default_ammo 30
@@ -69,6 +69,7 @@ rogue_machinegun
 
 	loop_animation true
 
+	particles_clipping_plane true
     shot_particles weapon_machinegun_muzzle_flash
     shot_particles_attached weapon_machinegun_muzzle socket_muzzle 0.15
 	shot_particles_attached_3p weapon_machinegun_muzzle_3p
@@ -76,25 +77,52 @@ rogue_machinegun
 	player_impact_particles weapon_machinegun_player_impact
 	missile_particles weapon_machinegun_projectile
 	//missile_particles_1p weapon_revolver_projectile
+	//material_player_impact_particles weapon_machinegun_horde_impact_small mat_horde
+	//player_critical_impact_particle weapon_machinegun_horde_impact mat_horde
+	//material_player_impact_particles weapon_machinegun_horde_impact_small mat_bomber
+	//player_critical_impact_particle weapon_machinegun_horde_impact mat_bomber
+	//material_player_impact_particles weapon_machinegun_horde_impact_small mat_spitter
+	//player_critical_impact_particle weapon_machinegun_horde_impact mat_spitter
+	//material_player_impact_particles weapon_machinegun_horde_impact_small mat_spider
+	//player_critical_impact_particle weapon_machinegun_horde_impact mat_spider
+	//material_player_impact_particles weapon_machinegun_horde_impact_small mat_sniper
+	//player_critical_impact_particle weapon_machinegun_horde_impact mat_sniper
+	//material_player_impact_particles weapon_machinegun_horde_impact_small mat_brute
+	//player_critical_impact_particle weapon_machinegun_horde_impact mat_brute
+	//material_player_impact_particles weapon_machinegun_horde_impact_small mat_charger
+    //player_critical_impact_particle weapon_machinegun_horde_impact mat_charger
+	//material_player_impact_particles weapon_machinegun_horde_impact_small mat_spiderqueen_boss
+	//player_critical_impact_particle weapon_machinegun_horde_impact mat_spiderqueen_boss
 // IMPACT DECALS
 	//decal decal 10 3 3.561 false false alpha 1
 	//decal decal_glow_red 16 3 3.561 false false alpha 30
 	//decal decal_glow 10 3 3.561 false false alpha 20
 	
 	model assets/shared/models/animations/wp_machinegun/skm_machinegun
-	model_position 2.25 -3 0.01
-	model_scale 0.11
-	model_scale_centered 0.099
-	model_position_centered 0 -2.68 0.02
+	model_scale_third_person 1 1 1 
+	model_position_third_person 0 0 0 
+	model_rotation_third_person 0 0 0 
+    model_position -0.811 -0.849 -1.670
+    model_position_centered -0.654 -1.222 -1.004
+    model_post_rotation -0.105 -0.118 0.000
+    model_post_rotation_centered -0.070 -0.087 -0.052
+	model_scale 0.04 0.04 0.04 
+	model_scale_centered 0.04 0.04 0.04 
+    fov 55.00
+    fov_centered 82.00
+	model_camera_scale 8 
+	model_camera_scale_centered 3 
 	model_pivot 0 -0.22 0
-	model_camera_scale 0.5
-	fov 40
 	muzzle 2.7 -2.8 14
-	
-	model_scale_third_person 1.1
-	model_position_third_person 6.5 2 2
-	
 	particles_clipping_plane true	
+
+	// weapon_sway
+	smoothing_factor 8
+	vertical_sway 0.8
+	horizontal_sway 0.8
+	tilt_sway 0.1
+	forward_sway 0.5
+	max_vertical_movement_sway 0.03
 	
 	shot_sound w_mac_fire
 	shot_sound2 w_mac_fire_distant
@@ -110,8 +138,6 @@ rogue_machinegun
 	
 	detached_shot_particles false
 	multi_round_particles false
-	
-
 }
 
 rogue_machinegun augment 1
@@ -200,9 +226,9 @@ rogue_machinegun augment 7
 	name_translation_key machinegun_last_bullet_poisonous
 	desc_translation_key machinegun_last_bullet_poisonous_desc
 	rarity legendary
-	//overwrite first_shot_after_reload_poison true
+	overwrite last_bullet_hit_poison true
 	overwrite effect_damage 2.5
-	overwrite impact_effect poison
+	overwrite poison_element true
 
 	selectable true
 }

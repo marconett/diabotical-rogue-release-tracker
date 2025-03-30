@@ -26,7 +26,7 @@ class Scrollbar {
         this.scroll_origin = 0;
         this.barIsHovered = false;
         this.thumb_height = 0;
-        if (this.options && this.options.outside) {
+        if (this.options && this.options.outside && this.options.outside === true) {
             this.bar.classList.add("outside")
         }
         this.updateThumbSize();
@@ -248,9 +248,11 @@ function initialize_scrollbars(options) {
         if ("sbHideEmpty" in scrollbars[global_scrollbarTrackerId].dataset && scrollbars[global_scrollbarTrackerId].dataset.sbHideEmpty == "true") {
             hide_empty = true
         }
-        if ("sbOutside" in scrollbars[global_scrollbarTrackerId].dataset && scrollbars[global_scrollbarTrackerId].dataset.sbOutside == "true") {
-            if (!options) options = {};
+        if (!options) options = {};
+        if ("sbOutside" in scrollbars[global_scrollbarTrackerId].dataset && scrollbars[global_scrollbarTrackerId].dataset.sbOutside === "true") {
             options.outside = true
+        } else {
+            options.outside = false
         }
         global_scrollbarTracker[global_scrollbarTrackerId] = new Scrollbar(scrollbars[global_scrollbarTrackerId], global_scrollbarTrackerId, hide_empty, options)
     }
@@ -260,9 +262,11 @@ function initialize_scrollbar(el, options) {
     let sb_id = global_scrollbarTrackerId++;
     let hide_empty = false;
     if ("sbHideEmpty" in el.dataset && el.dataset.sbHideEmpty == "true") hide_empty = true;
-    if ("sbOutside" in el.dataset && el.dataset.sbOutside == "true") {
-        if (!options) options = {};
+    if (!options) options = {};
+    if ("sbOutside" in el.dataset && el.dataset.sbOutside === "true") {
         options.outside = true
+    } else {
+        options.outside = false
     }
     global_scrollbarTracker[sb_id] = new Scrollbar(el, sb_id, hide_empty, options)
 }

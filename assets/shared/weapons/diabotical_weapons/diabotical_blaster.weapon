@@ -1,0 +1,116 @@
+diabotical_blaster
+{	
+	name_translation_key weapon_blaster
+	desc_translation_key weapon_blaster_desc
+	
+
+	selectable true
+	rarity rare
+ 	respawn_time 9
+	weapon_tag dbtbl
+ 	//group 3
+	speed 2200
+	damage 20
+	//critical_damage 20
+	self_damage 8
+	category 1
+	bind_group 1
+	
+ 	rate 100
+
+    default_ammo 50
+	default_ammo_pickup_ammo 50
+	default_weapon_pickup_ammo 75
+	max_ammo 150
+	
+	splash_radius 20
+	//center_of_mass_offset 20
+	//center_of_mass_offset_self 70
+	center_of_mass_offset 0
+	center_of_mass_offset_self 0
+  	knockback 17.5
+	knockback_self 20
+  	ground_knockback 17.5
+	ground_knockback_self 20
+	
+	color 1996D9
+	icon_path images/weapon_icons/wp_hud_blaster_02.png
+	icon_path2 images/weapon_icons/wp_card_blaster.png
+	weapon_icon_path images/weapon_icons/wp_card_blaster_nobg.png
+
+	hit_radius 2.2 1
+	
+	zoomed_scope 1
+	
+	combo_rate	diabotical_machinegun 100
+	combo_rate  diabotical_supershotgun 100
+	combo_rate	diabotical_shaft 100
+	combo_rate	diabotical_rocketlauncher 100
+	combo_rate	diabotical_pncr  100
+//	combo_rate	diabotical_blaster 110
+	combo_rate	diabotical_grenade_launcher 100
+	combo_rate	diabotical_void_cannon 100
+	
+//IMPACT DECAL
+
+	//decal decal_plasma 30 3 3.561 false false alpha 5
+	//decal decal_plasma 40 3 3.561 false false alpha 5
+	//decal decal_glow_blue 25 1.75 3.561 false false alpha 40
+	//decal decal_glow_red 18 3 3.561 false false alpha 30
+
+    loop_animation true
+    upgrade_animation true
+	
+	model assets/shared/models/animations/wp_blaster/skm_blaster
+    model_position -1.04283 -1.87198 -1.54811 
+	model_position_centered -0.939035 -1.76832 -1.36128 
+	model_post_rotation -0.0802851 -0.0418879 -0.0349066 
+	model_post_rotation_centered -0.0733038 -0.0314159 -0.0349066 
+	model_scale 0.0333 0.0333 0.0333 
+	model_scale_centered 0.0333 0.0333 0.0333 
+	fov 50 
+	fov_centered 80 
+	model_camera_scale 2 
+	model_camera_scale_centered 2 
+	
+	model_scale_third_person 1
+	model_position_third_person 0
+	model_rotation_third_person 0
+	
+	detached_shot_particles false
+    shot_particles weapon_blaster_muzzle_flash
+   	shot_particles_attached weapon_blaster_muzzle_1p
+	shot_particles_attached_3p weapon_blaster_muzzle_3p
+	missile_particles weapon_blaster_projectile_1p
+	//missile_particles_1p plasma_core_28
+  	impact_particles weapon_blaster_impact
+    player_impact_particles weapon_blaster_player_impact
+	shot_particles_attached weapon_blaster_muzzle_flash socket_muzzle 1
+	
+	// weapon_sway
+	smoothing_factor 10.0
+	vertical_sway 1.0
+	horizontal_sway 1.0
+	tilt_sway 0.15
+
+	forward_sway 0.5
+	max_vertical_movement_sway 0.05
+
+	shot_sound w_bl_fire
+	shot_sound2 w_bl_fire_distant
+	end_sound w_bl_fire_release
+	// shot_sound_low_ammo bl_fire_low1
+	// low_ammo_threshold 14
+	missile_loop_sound w_bl_airbound
+	impact_sound w_bl_impact
+	equip_sound w_bl_equip
+	overheat_sound w_bl_fire_overheat
+	hit_sound fb_enemy_hit
+	critical_hit_sound fb_enemy_hit_crit
+	out_of_ammo_sound w_bl_ooa
+	
+	detached_shot_particles false
+	animation_suffix _stage2
+	
+
+}

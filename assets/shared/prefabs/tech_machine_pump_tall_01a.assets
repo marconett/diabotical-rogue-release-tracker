@@ -1,0 +1,582 @@
+asset tech_machine_pump_tall_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name col_col_box_corner_191
+        position -64.03064 239.66862 -75.00940
+        rotation -90.00000 0 -90.00000
+        scale 1.94000 1.45000 4.00000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_192
+        position 51.96938 239.66862 -55.00940
+        rotation 0 0 -89.99999
+        scale 4.00000 0.25000 0.25000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_45
+        param no_show true
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_193
+        position 51.96938 239.66847 60.19061
+        rotation 0 -90.00000 -90.00000
+        scale 4.00000 0.25000 0.25000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_45
+        param no_show true
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_194
+        position -64.03064 239.66847 60.19067
+        rotation 0 179.99999 -89.99999
+        scale 4.00000 0.25000 0.25000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_45
+        param no_show true
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_195
+        position -64.03064 239.66862 -55.00806
+        rotation -0.00001 89.99999 -90.00001
+        scale 4.00000 0.25000 0.25000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_45
+        param no_show true
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name decal_decal_graphical_graph_12
+        position -6.00940 239.04027 2.51038
+        rotation 90.00000 0 0
+        scale 100.00000 104.99986 12.00000
+        param albedo_map_enable true
+        param color s_decal_bright
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param color_leafyvines_mat_vineleafy s_foliage
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param color_matlib_mat_lib_plastic s_bright
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_graphical_graphical_corner_frame_06
+        param metal_map_enable false
+        param normal_map_enable false
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_icons_symbols_g_4
+        position -5.90942 240.35606 2.60406
+        rotation 90.00000 0 -90.00000
+        scale 34.99996 35.00000 12.00000
+        param albedo_map_enable true
+        param color s_decal_bright
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param color_leafyvines_mat_vineleafy s_foliage
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param color_matlib_mat_lib_plastic s_bright
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_icons_symbols_graphical_icon_002
+        param metal_map_enable false
+        param normal_map_enable false
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name pfx_env_ground_steam_500
+        position -42.00940 32.32918 2.51038
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param color ffffff8c
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param color_leafyvines_mat_vineleafy s_foliage
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param color_matlib_mat_lib_plastic s_bright
+        param delay 0
+        param destroy_on_loop false
+        param max_distance 0
+        param pfx_scale 0.4
+        param random_delay_max 0
+        param range_multiplier 1
+        param repeat_interval 0
+        param repeat_lifetime 0
+        param system env_ground_steam_500
+    }
+    prefab_entity
+    {
+        name pfx_env_smoke_column1
+        position -46.00940 75.61293 72.51038
+        rotation 0 0 0
+        scale 0.50000 0.50000 0.50000
+        param color ffffff96
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param color_leafyvines_mat_vineleafy s_foliage
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param color_matlib_mat_lib_plastic s_bright
+        param delay 0
+        param destroy_on_loop false
+        param max_distance 0
+        param random_delay_max 0
+        param range_multiplier 1
+        param repeat_interval 0
+        param repeat_lifetime 0
+        param system env_smoke_column1
+    }
+    prefab_entity
+    {
+        name pfx_env_smoke_column1_1
+        position -46.00940 75.61293 -67.48962
+        rotation 0 0 0
+        scale 0.50000 0.50000 0.50000
+        param color ffffff91
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param color_leafyvines_mat_vineleafy s_foliage
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param color_matlib_mat_lib_plastic s_bright
+        param delay 0
+        param destroy_on_loop false
+        param max_distance 0
+        param random_delay_max 0
+        param range_multiplier 1
+        param repeat_interval 0
+        param repeat_lifetime 0
+        param system env_smoke_column1
+    }
+    prefab_entity
+    {
+        name pfx_env_smoke_column1_2
+        position 63.99062 85.61293 2.51038
+        rotation 0 0 0
+        scale 0.50000 0.50000 0.50000
+        param color ffffff8c
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param color_leafyvines_mat_vineleafy s_foliage
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param color_matlib_mat_lib_plastic s_bright
+        param delay 0
+        param destroy_on_loop false
+        param max_distance 0
+        param random_delay_max 0
+        param range_multiplier 1
+        param repeat_interval 0
+        param repeat_lifetime 0
+        param system env_smoke_column1
+    }
+    prefab_entity
+    {
+        name prop_ceiling_panel_6x4_01
+        position -74.00940 147.32918 2.67743
+        rotation 0 0 -89.99997
+        scale 0.65000 0.65000 0.65000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param color_leafyvines_mat_vineleafy s_foliage
+        param color_matlib_mat_lib_details_edge s_bright
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param color_matlib_mat_lib_plastic s_bright
+        param force_shadows true
+        param model ceiling_panel_6x4_01
+    }
+    prefab_entity
+    {
+        name prop_hg_8_connector
+        position 14.75757 99.17339 56.31671
+        rotation -90.00000 0 0
+        scale 0.20000 0.20000 0.20000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_hg_8_connector
+        param best_lod 0
+        param color s_foliage_neutral
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param color_leafyvines_mat_vineleafy s_foliage
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param color_matlib_mat_lib_plastic s_bright
+        param force_shadows true
+        param model hg_8_connector
+        param movement float 3 -20
+    }
+    prefab_entity
+    {
+        name prop_hg_8_connector_1
+        position -26.04236 99.17339 56.31671
+        rotation -90.00000 0 0
+        scale 0.20000 0.20000 0.20000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_hg_8_connector
+        param best_lod 0
+        param color s_foliage_neutral
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param color_leafyvines_mat_vineleafy s_foliage
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param color_matlib_mat_lib_plastic s_bright
+        param force_shadows true
+        param model hg_8_connector
+        param movement float 3 20
+    }
+    prefab_entity
+    {
+        name prop_hg_8_connector_2
+        position 14.75732 99.17336 -52.08325
+        rotation -90.00000 0 0
+        scale 0.20000 0.20000 0.20000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_hg_8_connector
+        param best_lod 0
+        param color s_foliage_neutral
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param color_leafyvines_mat_vineleafy s_foliage
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param color_matlib_mat_lib_plastic s_bright
+        param force_shadows true
+        param model hg_8_connector
+        param movement float 3 20
+    }
+    prefab_entity
+    {
+        name prop_hg_8_connector_3
+        position -26.04236 99.17336 -52.08325
+        rotation -90.00000 0 0
+        scale 0.20000 0.20000 0.20000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_hg_8_connector
+        param best_lod 0
+        param color s_foliage_neutral
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param color_leafyvines_mat_vineleafy s_foliage
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param color_matlib_mat_lib_plastic s_bright
+        param force_shadows true
+        param model hg_8_connector
+        param movement float 3 -20
+    }
+    prefab_entity
+    {
+        name prop_hg_8_connector_4
+        position 47.15758 99.17348 -16.88342
+        rotation -90.00000 0 90.00001
+        scale 0.20000 0.20000 0.20000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_hg_8_connector
+        param best_lod 0
+        param color s_foliage_neutral
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param color_leafyvines_mat_vineleafy s_foliage
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param color_matlib_mat_lib_plastic s_bright
+        param force_shadows true
+        param model hg_8_connector
+        param movement float 3 -20
+    }
+    prefab_entity
+    {
+        name prop_hg_8_connector_5
+        position 47.55751 99.17348 23.11664
+        rotation -90.00000 0 90.00002
+        scale 0.20000 0.20000 0.20000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_hg_8_connector
+        param best_lod 0
+        param color s_foliage_neutral
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param color_leafyvines_mat_vineleafy s_foliage
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param color_matlib_mat_lib_plastic s_bright
+        param force_shadows true
+        param model hg_8_connector
+        param movement float 3 20
+    }
+    prefab_entity
+    {
+        name prop_kitbash_2274440
+        position 48.83812 36.60289 22.71655
+        rotation 90.00000 0 89.99998
+        scale 1.15000 1.15000 1.15000
+        param __shadow true
+        param _kitbash_connector 0
+        param _kitbash_parent prop_md_4_2
+        param best_lod 1
+        param clip noclip
+        param color s_foliage_neutral
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param color_leafyvines_mat_vineleafy s_foliage
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param color_matlib_mat_lib_plastic s_bright
+        param force_shadows true
+        param model md_90_angle
+    }
+    prefab_entity
+    {
+        name prop_kitbash_615
+        position 48.83812 36.60289 -17.28345
+        rotation -0.00000 0.00002 89.99999
+        scale 1.15000 1.15000 1.15000
+        param __shadow true
+        param _kitbash_connector 0
+        param _kitbash_parent prop_md_4_2
+        param best_lod 1
+        param clip noclip
+        param color s_foliage_neutral
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param color_leafyvines_mat_vineleafy s_foliage
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param color_matlib_mat_lib_plastic s_bright
+        param force_shadows true
+        param model md_90_angle
+    }
+    prefab_entity
+    {
+        name prop_md_4_1
+        position -8.76184 36.60289 -46.08337
+        rotation 0 89.99999 0
+        scale 1.25000 1.25000 0.75000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_3
+        param best_lod 1
+        param clip noclip
+        param color s_foliage_neutral
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param color_leafyvines_mat_vineleafy s_foliage
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param color_matlib_mat_lib_plastic s_bright
+        param force_shadows true
+        param model md_4
+    }
+    prefab_entity
+    {
+        name prop_md_4_2
+        position -8.76184 36.60289 59.91656
+        rotation 0 89.99999 0
+        scale 1.25000 1.25000 0.75000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_3
+        param best_lod 1
+        param clip noclip
+        param color s_foliage_neutral
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param color_leafyvines_mat_vineleafy s_foliage
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param color_matlib_mat_lib_plastic s_bright
+        param force_shadows true
+        param model md_4
+    }
+    prefab_entity
+    {
+        name prop_md_4_3
+        position -8.76184 12.60289 -46.08337
+        rotation 0 89.99999 0
+        scale 1.25000 1.25000 0.75000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_3
+        param best_lod 1
+        param clip noclip
+        param color s_foliage_neutral
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param color_leafyvines_mat_vineleafy s_foliage
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param color_matlib_mat_lib_plastic s_bright
+        param force_shadows true
+        param model md_4
+    }
+    prefab_entity
+    {
+        name prop_md_4_4
+        position -8.76184 12.60289 59.91656
+        rotation 0 89.99999 0
+        scale 1.25000 1.25000 0.75000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_3
+        param best_lod 1
+        param clip noclip
+        param color s_foliage_neutral
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param color_leafyvines_mat_vineleafy s_foliage
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param color_matlib_mat_lib_plastic s_bright
+        param force_shadows true
+        param model md_4
+    }
+    prefab_entity
+    {
+        name prop_md_4_5
+        position 51.23817 12.60289 3.91656
+        rotation 0 0 0
+        scale 1.25000 1.25000 0.75000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_3
+        param best_lod 1
+        param clip noclip
+        param color s_foliage_neutral
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param color_leafyvines_mat_vineleafy s_foliage
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param color_matlib_mat_lib_plastic s_bright
+        param force_shadows true
+        param model md_4
+    }
+    prefab_entity
+    {
+        name prop_rogue_vine_transition_97
+        position -6.00940 84.32918 -73.48962
+        rotation 0 -0.00003 0
+        scale 0.75000 0.75000 0.75000
+        param best_lod 1
+        param clip noclip
+        param color s_foliage_neutral
+        param color2_leafyvines_mat_vineleafy s_foliage_neutral
+        param color3_leafyvines_mat_vineleafy s_foliage_neutral
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param color_matlib_mat_lib_plastic s_bright
+        param force_shadows true
+        param model vine_leafy_transition_m
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_tech_box_tower_base
+        position -6.00940 225.52917 2.51038
+        rotation 0 0 0.00001
+        scale 0.41000 0.67529 0.41000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_tech_box_tower_base
+        param best_lod 0
+        param clip weapon
+        param color s_foliage_neutral
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param color_leafyvines_mat_vineleafy s_foliage
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param color_matlib_mat_lib_plastic s_bright
+        param force_shadows true
+        param model tech_box_tower_base
+        param override_effect_2 matlib_mat_lib_metal_shiny
+    }
+    prefab_entity
+    {
+        name prop_var_tech_box_battery_4
+        position -6.00940 76.32918 2.51038
+        rotation 0.00001 180.00000 180.00000
+        scale 0.49000 0.45000 0.49000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_var_tech_box_battery_4
+        param best_lod 1
+        param clip weapon
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param color_leafyvines_mat_vineleafy s_foliage
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param color_matlib_mat_lib_plastic s_bright
+        param force_shadows true
+        param model tech_box
+    }
+    prefab_entity
+    {
+        name prop_var_tech_box_battery_5
+        position -6.00940 66.32918 2.51038
+        rotation 0 0 0.00001
+        scale 0.50000 0.50000 0.50000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_var_tech_box_battery_5
+        param best_lod 1
+        param clip weapon
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param color_leafyvines_mat_vineleafy s_foliage
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param color_matlib_mat_lib_plastic s_bright
+        param force_shadows true
+        param model var_tech_box_battery
+        param override_effect_0 matlib_mat_lib_metal_shiny
+        param override_effect_6 matlib_mat_lib_metal_painted_details_floating
+    }
+    prefab_entity
+    {
+        name sound_amb_prop_toy
+        position -6.00940 122.32918 -3.59094
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param capsule_end_position_x 1680.000000
+        param capsule_end_position_y -160.000000
+        param capsule_end_position_z 33.898685
+        param color s_foliage_neutral
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param color_leafyvines_mat_vineleafy s_foliage
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param color_matlib_mat_lib_plastic s_bright
+        param cross_fade_max_radius 640
+        param cross_fade_min_radius 320
+        param min_radius 320
+        param radius 1000
+        param sound_event amb_prop_toya_pump
+        param type audio_event_ambient_node
+        param volume 0.7
+    }
+}
+
+
+

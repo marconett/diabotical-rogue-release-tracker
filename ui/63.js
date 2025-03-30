@@ -3,7 +3,8 @@ const GAME = new function() {
         COMMON: 9999,
         DIABOTICAL: 0,
         INVASION: 1,
-        ROGUE: 2
+        ROGUE: 2,
+        GEARSTORM: 3
     };
     this.data = {};
     const handlers = {};
@@ -88,6 +89,28 @@ const GAME = new function() {
                 menu.classList.remove("game_" + this.ids.INVASION)
             }
             _for_each_in_class("show_game_" + this.ids.INVASION, (el => {
+                el.classList.remove("game_visible");
+                el.classList.add("disabled")
+            }))
+        }
+    };
+    handlers[this.ids.GEARSTORM] = {
+        set_active: () => {
+            let menu = _id("main_menu");
+            if (menu) {
+                menu.classList.add("game_" + this.ids.GEARSTORM)
+            }
+            _for_each_in_class("show_game_" + this.ids.GEARSTORM, (el => {
+                el.classList.add("game_visible");
+                el.classList.remove("disabled")
+            }))
+        },
+        set_inactive: () => {
+            let menu = _id("main_menu");
+            if (menu) {
+                menu.classList.remove("game_" + this.ids.GEARSTORM)
+            }
+            _for_each_in_class("show_game_" + this.ids.GEARSTORM, (el => {
                 el.classList.remove("game_visible");
                 el.classList.add("disabled")
             }))

@@ -1,0 +1,63 @@
+asset overgrown_edging_05a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name prop_vine_liana_ground_lea_4
+        position 23.59999 -3.60000 40.40002
+        rotation 0 0.90000 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model vine_liana_ground_leaves_m_01
+        param wind_g 0.5
+        param wind_r 0.25
+    }
+    prefab_entity
+    {
+        name prop_generic_fern_03_2
+        position 40.39999 0 20.80005
+        rotation 0 0 -5.40000
+        scale 0.62000 0.62000 0.62000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model generic_fern_03
+        param wind_g 0.5
+        param wind_r 0.25
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_1
+        position 68.61952 2.40000 102.02527
+        rotation -0.84188 69.29764 1.21814
+        scale 1.00000 0.81000 1.00000
+        param best_lod 2
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_09
+        param skip_shadows true
+        param wind_g 0.5
+        param wind_r 0.25
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_11_5
+        position 0.53970 0 -65.81506
+        rotation 0 -91.79942 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 1
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_11
+        param skip_shadows true
+        param wind_g 0.5
+        param wind_r 0.25
+    }
+}

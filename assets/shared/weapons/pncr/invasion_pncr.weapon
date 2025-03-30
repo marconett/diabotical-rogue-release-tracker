@@ -1,0 +1,109 @@
+invasion_pncr
+{
+	selectable true
+	show_in_dev_console false
+	respawn_time 9
+	category 5
+	bind_group 5
+	weapon_tag i_pncr
+	color 1fa8b6
+	//group 4
+	damage 70
+	bonus_consecutive_damage 5
+	max_bonus_consecutive_damage_instances 6
+	knockback 62.5
+	ground_knockback 75.5
+	//charged_knockback_self 120
+	//charged_knockback_self_radius 117
+	default_ammo_pickup_ammo 5
+	default_weapon_pickup_ammo 10
+	max_ammo 25
+	penetrating true
+    
+    friendly_name PNCR
+    description Point N'Click Rifle
+	
+	icon_path images/weapon_icons/wp_hud_pncr.png
+	icon_path2 images/weapon_icons/wp_card_pncr.png
+
+	
+	hit_radius 1.5 1
+
+	charge_animation 6
+	charge_animation_bonus true
+	
+	rate 1450
+	combo_rate	machinegun 1450
+	combo_rate  super_shotgun 1450
+	combo_rate	shaft 1450
+	combo_rate	rocket_launcher 1450
+//	combo_rate	pncr 
+	combo_rate	blaster 1450
+	combo_rate	grenade_launcher 1450
+	combo_rate	void_cannon 1450
+	
+	shot_particles weapon_pncr_beam
+	shot_particles_3p weapon_pncr_beam_3p
+	shot_particles_attached weapon_pncr_muzzle
+	//pncr_muzzle_particles_3p empty_system
+	impact_particles weapon_pncr_impact
+    player_impact_particles pncr_hit_impact_particles
+	
+	pfx pncr_lightning_bolt_slot_01 slot_particle_center_01
+		pfx pncr_lightning_bolt_slot_02 slot_particle_center_02
+			pfx pncr_lightning_bolt_slot_03 slot_particle_center_03
+				pfx pncr_lightning_bolt_slot_04 slot_particle_center_04
+					pfx pncr_lightning_bolt_slot_05 slot_particle_center_05
+						pfx pncr_lightning_bolt_slot_06 slot_particle_center_06
+							pfx pncr_lightning_bolt_slot_07 slot_particle_center_07
+	//pfx pncr_battery_filament slot_particle_l_battery_01 slot_particle_r_battery_01
+	// pfx pncr_battery_filament slot_particle_l_battery_02 slot_particle_r_battery_02
+	// pfx pncr_battery_filament slot_particle_l_battery_03 slot_particle_r_battery_03
+	pfx pncr_muzzle_filament muzzle
+	
+	//decal decal 8
+	//decal decal_glow_red 16 3 3.561 false false alpha 2.5
+	//decal decal_glow_blue 24 3 3.561 false false alpha 5
+	
+	model assets/shared/weapons/pncr/pncr
+	model_scale 0.055
+	model_scale_centered 0.0495
+	model_position 2.5 -3 2.35
+	model_position_centered 0 -3.4 3.1
+	model_scale_third_person 0.9
+	model_pivot 0 0.24 0
+	model_position_third_person 0 0 0
+	model_camera_scale 0.55
+	muzzle 2.5 -3.5 6
+	fov 50
+	impressive_reward true
+	model_scale_third_person 0.85
+	model_position_third_person -4 14.5 12
+	
+	
+	
+	
+	//light 0.65 0 0 1 4187e5 100
+	//light 0.65 -1.5 1 2 4187e5 50
+	//light 0.65 -1 1 2 4187e5 25
+	//light 0.65 -1 2 2 4187e5 
+	//light 0.5 0 2 6 4187e5 2
+	// DONT USE light 0.5 -0.3 0.8 10 3192ff 5
+	//light 0.5 -1 1 0.5 4187e5 5
+	//light 0.3 -5 2 10 4187e5 25
+	// DO NOT USE light 0.7 0 2 5 3192ff 5
+	//light 0.5 0 1.5 1 4187e5 2
+	//light 0.7 0.18 -1.3 0.7 4187e5 2
+
+		
+	parallel_knockback true
+	
+	shot_sound pncr_fire1_default_t1
+	shot_sound_t2 pncr_fire1_default_t2
+	shot_sound_t3 pncr_fire1_default_t3
+	equip_sound pncr_equip
+	hit_sound hit_sound_hit1
+	proximity_loop_sound pncr_idle_loop
+	out_of_ammo_sound pncr_ooa
+	impact_sound pncr_impact_default1 pncr_impact_default2 pncr_impact_default3 pncr_impact_default4¨	
+}

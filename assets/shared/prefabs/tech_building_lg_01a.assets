@@ -1,0 +1,551 @@
+asset tech_building_lg_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name light_65
+        position -148.18896 143.77197 46.18945
+        rotation -8.53333 84.50669 -0.00000
+        scale 1.00000 1.00000 1.00000
+        param falloff 0.6
+        param radius 100
+    }
+    prefab_entity
+    {
+        name prop_beams_8x3_10
+        position 195.81104 589.77197 134.18945
+        rotation 0 89.99999 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param model beams_8x3
+    }
+    prefab_entity
+    {
+        name prop_beams_8x3_12
+        position 195.81104 229.77197 134.18945
+        rotation 0 89.99999 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param model beams_8x3
+    }
+    prefab_entity
+    {
+        name prop_beams_8x3_13
+        position -134.18896 229.77197 -195.81055
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param model beams_8x3
+    }
+    prefab_entity
+    {
+        name prop_beams_8x3_14
+        position -144.18872 229.77197 134.18945
+        rotation 0 89.99999 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param model beams_8x3
+    }
+    prefab_entity
+    {
+        name prop_beams_8x3_15
+        position 185.81104 229.77197 144.18945
+        rotation 0 -179.99999 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param model beams_8x3
+    }
+    prefab_entity
+    {
+        name prop_beams_8x3_7
+        position -134.18896 589.77197 -195.81055
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param model beams_8x3
+    }
+    prefab_entity
+    {
+        name prop_beams_8x3_8
+        position -144.18872 589.77197 134.18945
+        rotation 0 89.99999 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param model beams_8x3
+    }
+    prefab_entity
+    {
+        name prop_beams_8x3_9
+        position 185.81104 589.77197 144.18945
+        rotation 0 -179.99999 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param model beams_8x3
+    }
+    prefab_entity
+    {
+        name prop_beams_8x6_10
+        position -134.18896 349.77197 -195.81055
+        rotation 0 -0.00002 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param model beams_8x6
+    }
+    prefab_entity
+    {
+        name prop_beams_8x6_11
+        position -144.18872 349.77197 134.18945
+        rotation 0 89.99998 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param model beams_8x6
+    }
+    prefab_entity
+    {
+        name prop_beams_8x6_12
+        position 185.81104 349.77197 144.18945
+        rotation 0 179.99999 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param model beams_8x6
+    }
+    prefab_entity
+    {
+        name prop_beams_8x6_13
+        position 196.47778 349.77197 -185.14355
+        rotation 0 -89.99999 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param model beams_8x6
+    }
+    prefab_entity
+    {
+        name prop_beams_8x6_23
+        position -134.18896 -10.22802 -195.81055
+        rotation 0 -0.00002 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param model beams_8x6
+    }
+    prefab_entity
+    {
+        name prop_beams_8x6_54
+        position -144.18872 -10.22802 134.18945
+        rotation 0 89.99998 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param model beams_8x6
+    }
+    prefab_entity
+    {
+        name prop_beams_8x6_57
+        position 185.81104 -10.22802 144.18945
+        rotation 0 179.99999 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param model beams_8x6
+    }
+    prefab_entity
+    {
+        name prop_beams_8x6_72
+        position 196.47778 -10.22802 -185.14355
+        rotation 0 -89.99999 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param model beams_8x6
+    }
+    prefab_entity
+    {
+        name prop_blockout_box_corner_142
+        position -134.18896 -10.22802 -195.81055
+        rotation 0 -89.99996 0
+        scale 0.25000 3.00000 4.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param color 828282ff
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_floor_01
+        param model blockout_box_corner
+    }
+    prefab_entity
+    {
+        name prop_blockout_box_corner_144
+        position -144.18872 -10.22802 -31.81055
+        rotation 0 0.00004 0
+        scale 0.25000 3.00000 2.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_bright
+        param model blockout_box_corner
+    }
+    prefab_entity
+    {
+        name prop_blockout_box_corner_145
+        position 185.81104 -10.22802 144.18945
+        rotation 0 90.00005 0
+        scale 0.25000 3.00000 4.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param color_matlib_mat_lib_acrylic 3f3f3fff
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_floor_01
+        param model blockout_box_corner
+    }
+    prefab_entity
+    {
+        name prop_blockout_box_corner_146
+        position 196.47778 -10.22802 -185.14355
+        rotation 0 -179.99993 0
+        scale 0.25000 3.00000 4.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_floor_01
+        param model blockout_box_corner
+    }
+    prefab_entity
+    {
+        name prop_blockout_box_corner_65
+        position -134.18896 349.77197 -195.81055
+        rotation 0 -89.99996 0
+        scale 0.25000 3.00000 4.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_floor_01
+        param model blockout_box_corner
+    }
+    prefab_entity
+    {
+        name prop_blockout_box_corner_66
+        position -144.18872 349.77197 134.18945
+        rotation 0 0.00004 0
+        scale 0.25000 3.00000 4.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_floor_01
+        param model blockout_box_corner
+    }
+    prefab_entity
+    {
+        name prop_blockout_box_corner_67
+        position 185.81104 349.77197 144.18945
+        rotation 0 90.00005 0
+        scale 0.25000 3.00000 4.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_floor_01
+        param model blockout_box_corner
+    }
+    prefab_entity
+    {
+        name prop_blockout_box_corner_68
+        position 196.47778 349.77197 -185.14355
+        rotation 0 -179.99993 0
+        scale 0.25000 3.00000 4.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_floor_01
+        param model blockout_box_corner
+    }
+    prefab_entity
+    {
+        name prop_computer_module_wall__4
+        position 65.81104 81.42102 144.18945
+        rotation 0 179.99999 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 3
+        param clip weapon
+        param force_shadows true
+        param model computer_module_wall_06
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_computer_modules_pref_4
+        position -54.18896 1.77198 144.17188
+        rotation 0 179.99999 0
+        scale 2.00000 2.00000 2.00000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param model computer_modules_prefab_01
+    }
+    prefab_entity
+    {
+        name prop_door_frame_narrow_lg_3
+        position -106.75342 -13.96936 47.68848
+        rotation 0 89.99999 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 3
+        param clip weapon
+        param force_shadows true
+        param material_4 matlib_mat_lib_emissive
+        param model door_frame_narrow_lg_8_01
+    }
+    prefab_entity
+    {
+        name prop_door_narrow_lg_left_2
+        position -124.75342 -13.94653 49.68848
+        rotation 0 89.99999 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param color_matlib_mat_lib_plastic s_bright
+        param force_shadows true
+        param model door_narrow_lg_left_03
+    }
+    prefab_entity
+    {
+        name prop_door_narrow_lg_right_1
+        position -126.75342 -13.94360 47.68848
+        rotation 0 89.99999 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 3
+        param clip weapon
+        param color_matlib_mat_lib_plastic s_bright
+        param force_shadows true
+        param model door_narrow_lg_right_03
+    }
+    prefab_entity
+    {
+        name prop_tech_antenna_02
+        position -174.18896 599.77197 94.18945
+        rotation 0 -89.99999 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 3
+        param clip weapon
+        param force_shadows true
+        param model tech_antenna_02
+    }
+    prefab_entity
+    {
+        name prop_tech_antenna_03
+        position -94.18896 669.33350 -155.73828
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param model tech_antenna_03
+    }
+    prefab_entity
+    {
+        name prop_tech_box_roof
+        position 25.81104 709.77197 -25.81055
+        rotation 0 0 0
+        scale 1.45000 0.50000 1.45000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_tech_box_roof
+        param best_lod 2
+        param clip weapon
+        param color_matlib_mat_lib_metal_painted s_bright
+        param force_shadows true
+        param model tech_box_roof
+    }
+    prefab_entity
+    {
+        name prop_tech_box_roof_hatch
+        position 65.81104 763.77197 -72.69507
+        rotation 0 0 0
+        scale 1.50000 1.00000 1.25000
+        param __shadow true
+        param best_lod 0
+        param clip weapon
+        param color_matlib_mat_lib_metal_painted s_bright
+        param force_shadows true
+        param model tech_box_roof_hatch
+    }
+    prefab_entity
+    {
+        name prop_tech_box_tower_base
+        position 25.81104 739.77197 -25.81055
+        rotation 0 0 0
+        scale 1.10000 1.25000 1.10000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_tech_box_tower_base
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param model tech_box_tower_base
+    }
+    prefab_entity
+    {
+        name prop_wall_ext_4x8_17
+        position 25.81104 539.77197 -195.81055
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param model wall_ext_4x8
+    }
+    prefab_entity
+    {
+        name prop_wall_ext_4x8_18
+        position -144.18872 539.77197 -25.81055
+        rotation 0 89.99999 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param model wall_ext_4x8
+    }
+    prefab_entity
+    {
+        name prop_wall_ext_4x8_19
+        position 25.81104 539.77197 144.18945
+        rotation 0 -179.99999 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param model wall_ext_4x8
+    }
+    prefab_entity
+    {
+        name prop_wall_ext_4x8_20
+        position 196.47778 539.77197 -25.14355
+        rotation 0 -89.99998 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param model wall_ext_4x8
+    }
+    prefab_entity
+    {
+        name prop_wall_ext_4x8_61
+        position 25.81104 179.77197 -195.81055
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param model wall_ext_4x8
+    }
+    prefab_entity
+    {
+        name prop_wall_ext_4x8_64
+        position -144.18872 179.77197 -25.81055
+        rotation 0 89.99999 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param model wall_ext_4x8
+    }
+    prefab_entity
+    {
+        name prop_wall_ext_4x8_65
+        position 25.81104 179.77197 144.18945
+        rotation 0 -179.99999 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param model wall_ext_4x8
+    }
+    prefab_entity
+    {
+        name prop_wall_ext_4x8_66
+        position 196.47778 179.77197 -25.14355
+        rotation 0 -89.99998 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param model wall_ext_4x8
+    }
+    prefab_entity
+    {
+        name prop_wall_junction_antenna
+        position -184.18896 659.77197 54.18945
+        rotation 0 89.99999 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param color_matlib_mat_lib_acrylic s_bright
+        param force_shadows true
+        param model wall_junction_antenna
+    }
+}
+

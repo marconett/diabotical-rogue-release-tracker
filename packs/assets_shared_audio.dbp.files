@@ -1,7 +1,7 @@
-assets\shared\audio\music.sounds	216
+assets\shared\audio\music.sounds	237
 assets\shared\audio\music\diabotical_menu_theme_draft2.wav	28576844
 assets\shared\audio\shared_music.events	6143
-assets\shared\audio\shared_ui.sounds	9294
+assets\shared\audio\shared_ui.sounds	9532
 assets\shared\audio\ui\battlepass\ui_battlepass_upgrade.wav	1329152
 assets\shared\audio\ui\battlepass\ui_battlepass_upgrade_s3.wav	2003768
 assets\shared\audio\ui\battlepass\ui_battlepass_upgrade_s4.wav	1270484
@@ -30,6 +30,9 @@ assets\shared\audio\ui\ui_click1.wav	7234
 assets\shared\audio\ui\ui_countdown.wav	177334
 assets\shared\audio\ui\ui_ctf_captureaction.wav	1800524
 assets\shared\audio\ui\ui_ctf_enemyscore.wav	1309484
+assets\shared\audio\ui\ui_debug_tick1.wav	31418
+assets\shared\audio\ui\ui_debug_tick2.wav	132482
+assets\shared\audio\ui\ui_debug_tick_5sec.wav	1014482
 assets\shared\audio\ui\ui_dm_notification.wav	44246
 assets\shared\audio\ui\ui_drag1.wav	113546
 assets\shared\audio\ui\ui_drop1.wav	37946

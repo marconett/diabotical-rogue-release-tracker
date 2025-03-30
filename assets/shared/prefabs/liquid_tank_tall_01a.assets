@@ -1,0 +1,147 @@
+asset liquid_tank_tall_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name light
+        position 2.00000 170.00000 -2.00000
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param color s_light_accent
+        param intensity 4
+        param light_bake_only false
+        param radius 192
+        param type diffuse
+    }
+    prefab_entity
+    {
+        name col_col_cylinder
+        position 4.00000 -7.20000 0
+        rotation 0 0 0
+        scale 1.70000 3.10000 1.70000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_cylinder
+        param no_show true
+        param position_x 4.000000
+        param position_y -7.200000
+        param position_z 0.000000
+        param size_x 1.700000
+        param size_y 3.100000
+        param size_z 1.700000
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name pfx_env_pipe_bubbles_10
+        position -9.79810 127.29914 16.17004
+        rotation -0.00002 -44.99998 90.00000
+        scale 2.00000 2.00000 2.00000
+        param best_lod 2
+        param clip noclip
+        param delay 0
+        param destroy_on_loop false
+        param max_distance 0
+        param position_x -9.798096
+        param position_y 127.299141
+        param position_z 16.170044
+        param random_delay_max 0
+        param range_multiplier 1
+        param repeat_interval 0
+        param repeat_lifetime 0
+        param system env_pipe_bubbles
+    }
+    prefab_entity
+    {
+        name pfx_env_pipe_bubbles_8
+        position 8.58618 127.29914 -10.70142
+        rotation -0.00002 -44.99998 90.00000
+        scale 2.00000 2.00000 2.00000
+        param best_lod 2
+        param clip noclip
+        param delay 0
+        param destroy_on_loop false
+        param max_distance 0
+        param position_x 8.586182
+        param position_y 127.299141
+        param position_z -10.701416
+        param random_delay_max 0
+        param range_multiplier 1
+        param repeat_interval 0
+        param repeat_lifetime 0
+        param system env_pipe_bubbles
+    }
+    prefab_entity
+    {
+        name prop_cylindrical_fluid_con_6
+        position 4.00000 240.65363 0
+        rotation -0.00003 179.99990 -179.99997
+        scale 0.78000 0.77000 0.78000
+        param best_lod 0
+        param clip weapon
+        param color2_override_glass 3d2d1860
+        param color2_override_glass_jumpad e5825b00
+        param color3_override_glass_jumpad f7cc9800
+        param color_override_glass 14335752
+        param color_override_glass_jumpad ff651d00
+        param float_param3_override_glass_y 1
+        param float_param3_override_glass_z 0.5
+        param float_param4_override_glass_y 1
+        param force_shadows false
+        param model cylindrical_fluid_containers_02
+        param no_light_bake true
+        param override_effect_2 override_glass
+        param override_effect_4 matlib_mat_lib_metal_bright
+        param position_x 4.000000
+        param position_y 240.653625
+        param position_z 0.000000
+        param skip_shadows true
+        param uv_scale_x_override_glass 1
+        param uv_scale_y_override_glass 1
+    }
+    prefab_entity
+    {
+        name prop_cylindrical_tower_10
+        position 4.00000 -3.47680 0
+        rotation 0 90.00003 0
+        scale 0.50000 0.56000 0.50000
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param model cylindrical_tower
+        param override_effect_1 matlib_mat_lib_acrylic
+        param override_effect_3 matlib_mat_lib_plastic
+        param override_effect_4 matlib_mat_lib_plastic
+        param override_effect_6 matlib_mat_lib_acrylic
+        param position_x 4.000000
+        param position_y -3.476803
+        param position_z 0.000000
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name sound_amb_prop_pipe_rushing_1
+        position 0.30298 160.89154 -1.36719
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param apply_audio_occlusion true
+        param capsule_end_position_x -536.627380
+        param capsule_end_position_y 227.821136
+        param capsule_end_position_z 948.546875
+        param cross_fade_max_radius 200
+        param cross_fade_min_radius 100
+        param min_radius 80
+        param padding 0.5
+        param position_x 0.302979
+        param position_y 160.891541
+        param position_z -1.367188
+        param radius 700
+        param sound_event amb_prop_pipe_rushing_water
+        param type audio_event_ambient_node
+        param volume 0.5
+    }
+}
+
+

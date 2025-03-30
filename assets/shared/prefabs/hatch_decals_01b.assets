@@ -1,0 +1,79 @@
+asset hatch_decals_01b
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name decal_decal_graphical_graph_71
+        position -0.13336 0.40000 0.26668
+        rotation 90.00000 0 89.99998
+        scale 158.49992 149.50000 2.00000
+        param albedo_map_enable true
+        param color s_decal
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_graphical_graphical_corner_frame_03
+        param metal_map_enable false
+        param normal_map_enable false
+        param position_x -0.133362
+        param position_y 0.400000
+        param position_z 0.266678
+        param rotation_x 1.570796
+        param rotation_y 0.000000
+        param rotation_z 1.570796
+        param scale 1.0
+        param size_z 2.000000
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_graphical_graph_91
+        position -0.13336 1.60000 24.26668
+        rotation 90.00000 0 179.99997
+        scale 38.81000 38.80997 10.00000
+        param albedo_map_enable true
+        param color s_decal
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param group_member_id 2
+        param group_scale_x 0.8
+        param group_scale_y 1
+        param group_scale_z 1
+        param material decal_mat_icons_symbols_graphical_electricity_icon
+        param metal_map_enable false
+        param normal_map_enable false
+        param position_x -0.133362
+        param position_y 1.600000
+        param position_z 24.266678
+        param rotation_x 1.570796
+        param rotation_y 0.000000
+        param rotation_z 0.000000
+        param scale 1.0
+        param size_z 9.999999
+        param v3 true
+    }
+    prefab_entity
+    {
+        name prop_floorhatch_04_3
+        position -59.73334 0.07749 -79.73333
+        rotation 0 0 0
+        scale 3.00000 1.00000 4.00000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param color 7f7f7fff
+        param color2 7c7c7cff
+        param color2_rogue_environment_industrial_props_floorhatches_ind_floorhatch_07_center s_neutral
+        param color_rogue_environment_industrial_props_floorhatches_ind_floorhatch_07_center s_neutral
+        param model floorhatch_08
+        param no_decals false
+        param position_x -59.733337
+        param position_y 0.077490
+        param position_z -79.733330
+        param rotation_x -0.000000
+        param rotation_y 0.000000
+        param rotation_z 0.000000
+    }
+}
+
+

@@ -1,170 +1,639 @@
-blue
-{
-	category night
-	skybox skybox_night3
-	envmap 
-	light_sun_color 0 0 1 1 
-	light_ambient_color 0 0 1 1 
-	light_fog_color 0 0 0 0 
-	shadow_color 0 0 0 1 
-	light_sun_rotation 58.5 22.5 0 
-	skybox_rotation 0
-	light_sun_intensity 1
-	light_ambient_intensity 1
-	light_fog_intensity 0
-	weather 
-}
-
 default
 {
 	category all
-	skybox default_skybox
-	envmap 
-	light_sun_color 0.56 0.66 0.73 1 
-	light_ambient_color 0.37 0.4 0.44 1 
-	light_fog_color 0.4 0.73 1 1 
-	shadow_color 0 0 0 1 
-	light_sun_rotation 58.5 22.5 0 
-	skybox_rotation 0
-	light_sun_intensity 4
-	light_ambient_intensity 0
-	light_fog_intensity 0.69
-	weather 
-}
+	skybox true_blue01a_dome.png
+	envmap overgrown_day_01a_cm
+	gi_intensity 1.2
 
-desert_day_01a
-{
-	category all
-	skybox desert_day_01a_dome
-	envmap tropical_day_01a_cm
-	light_sun_color 0.882353 0.776471 0.647059 1 
-	light_ambient_color 0.4 0.4 0.4 1 
-	light_fog_color 0.866667 0.8 0.65098 1 
-	shadow_color 0 0 0 1 
-	light_sun_rotation 44 260 400 
-	skybox_rotation 0
-	light_sun_intensity 2.8
-	light_ambient_intensity 0
-	light_fog_intensity 0.35
-	weather 
-}
+	global
+	{
+		lut assets/shared/textures/lut/lut_default.png
+		lut_opacity 1
+		ambient_occlusion_power 1
+		ambient_occlusion_radius 0.8
+		skybox_rotation 0
+		horizon_shade 0
+		horizon_shade_distance 142000
+		color horizon_shade 1 1 1 1 
+		color shadow 1 1 1 1 
+		color s_accent3 0.278431 0.639216 1 1 
+		color horizon_shade 1 1 1 1 
+		color s_accent1 1 0.639216 0.278431 1 
+		color s_accent2 0.8 0.8 0.8 1 
+	}
 
-green
-{
-	category dusk
-	skybox default_skybox
-	envmap 
-	light_sun_color 0 1 0 1 
-	light_ambient_color 0 1 0 1 
-	light_fog_color 0 0 0 0 
-	shadow_color 0 0 0 1 
-	light_sun_rotation 58.5 22.5 0 
-	skybox_rotation 0
-	light_sun_intensity 1
-	light_ambient_intensity 1
-	light_fog_intensity 0
-	weather 
-}
 
-light_blue
-{
-	category night
-	skybox evening_meadow
-	envmap 
-	light_sun_color 0.4 0.4 1 1 
-	light_ambient_color 0.4 0.4 1 1 
-	light_fog_color 0 0 0 0 
-	shadow_color 0 0 0 1 
-	light_sun_rotation 58.5 22.5 0 
-	skybox_rotation 0
-	light_sun_intensity 1
-	light_ambient_intensity 1
-	light_fog_intensity 0
-	weather 
+	light_fog
+	{
+		enabled true
+		color 0.54902 0.811765 0.886275 1 
+		intensity 0.85
+		radius 12000
+		margin 0
+		max_opacity 0.95
+	}
+
+
+	light_fog_vertical
+	{
+		enabled true
+		color 0.54902 0.811765 0.886275 1 
+		intensity 0
+		radius 1500
+		height 600
+		max_opacity 0.25
+	}
+
+
+	sun_light
+	{
+		enabled true
+		color 0.929412 0.729412 0.482353 1 
+		intensity 2.2
+		rotation 51.8964 -135.99 88.314 
+		lens_flare
+		{
+			texture 1
+			scale 0.3
+			intensity_ease_end 0.4
+			scale_ease_end 1
+			scale_distance 0.725
+			cull_distance 1000
+			offset 12 9
+			color 0.772549 0.458824 0.145098 0.137255 
+			visibility_scale 0
+		}
+		light_shaft
+		{
+			enabledd true
+			offset 12 9
+			radius 0.01
+			smooth 0.03
+			blur_amount 1
+			blur_samples 30
+			color 0.309804 0.262745 0.243137 1 
+		}
+	}
+
+
+	light_ambient
+	{
+		enabled true
+		color 0.858824 0.843137 0.792157 1 
+		intensity 0.5
+	}
+
+
+	light_ambient_shadow
+	{
+		enabled true
+		color 0.239216 0.235294 0.231373 0.478431 
+		intensity 1
+	}
+
+
+	skylight
+	{
+		color 1 1 1 1 
+	}
+
+	cloud_data
+	{
+		density 1.000000
+		noise_strength 0.300000
+		noise_speed_multiplier 1.000000
+		gradient_speed_min 0.040000
+		gradient_speed_max 0.100000
+		speed_min -0.010000 -0.050000
+		speed_max -0.200000 0.050000
+		scale_min 0.240000 0.250000
+		scale_max 0.380000 0.600000
+		color light 0.788235 0.909804 0.945098 0.847059 
+		color dark 0.431373 0.717647 0.862745 1 
+		texture 
+		position_min 0.000000 0.000000
+		position_max 0.000000 0.000000
+	}
 }
 
 overgrown_day_01a
 {
-	category all
-	skybox overgrown_day_01a_dome
+	category day
+	skybox overgrown_day_02a_dome.png
 	envmap overgrown_day_01a_cm
-	light_sun_color 0.882353 0.776471 0.647059 1 
-	light_ambient_color 0.4 0.4 0.4 1 
-	light_fog_color 0.588235 0.913725 0.819608 1 
-	shadow_color 0 0 0 1 
-	light_sun_rotation 42 -15 400 
-	skybox_rotation 0
-	light_sun_intensity 2.8
-	light_ambient_intensity 0
-	light_fog_intensity 0.66
-	weather 
+	gi_intensity 1.5
+
+	global
+	{
+		lut assets/shared/textures/lut/lut_default.png
+		lut_opacity 1
+		ambient_occlusion_power 2
+		ambient_occlusion_radius 1.2
+		skybox_rotation -40
+		horizon_shade 0
+		horizon_shade_distance 9000
+		color horizon_shade 1 0.878431 0.796078 1 
+		color shadow 0 0 0 1 
+		color s_tarp_blue 0.329412 0.419608 0.643137 1 
+		color s_crystal_color 0.741176 0.113725 0.690196 1 
+		color s_orange 1 0.639216 0.278431 1 
+		color s_decal_dark 0.290196 0.266667 0.466667 0.8 
+		color s_decal_bright 0.776471 0.8 0.819608 0.909804 
+		color s_l_cold01 0.776471 0.8 0.819608 0.909804 
+		color s_pipe_decal 1 1 1 1 
+		color s_tarp_red 0.984314 0.203922 0.203922 1 
+		color s_tarp_yellow 1 0.639216 0.278431 1 
+		color s_text_sign 0.258824 0.258824 0.258824 0.627451 
+		color s_yellow_sub 1 0.639216 0.278431 1 
+	}
+
+
+	light_fog
+	{
+		enabled true
+		color 0.54902 0.811765 0.886275 1 
+		intensity 1.25
+		radius 21500
+		margin 0
+		max_opacity 1
+	}
+
+
+	light_fog_vertical
+	{
+		enabled true
+		color 0.4 0.73 1 1 
+		intensity 0.85
+		radius 2500
+		height 1400
+		max_opacity 1
+	}
+
+
+	sun_light
+	{
+		enabled true
+		color 0.929412 0.729412 0.482353 1 
+		intensity 2.4
+		rotation 76.957 125.012 10.9661 
+		lens_flare
+		{
+			texture 1
+			scale 0.4
+			intensity_ease_end 0.3
+			scale_ease_end 0.9
+			scale_distance 0.825
+			cull_distance 1000
+			offset 2.5 -10
+			color 0.772549 0.458824 0.145098 0.137255 
+			visibility_scale 0.1
+		}
+		light_shaft
+		{
+			enabledd true
+			offset 2.5 -10
+			radius 0.02
+			smooth 0.05
+			blur_amount 1
+			blur_samples 30
+			color 0.278431 0.227451 0.176471 0.137255 
+		}
+	}
+
+
+	light_ambient
+	{
+		enabled true
+		color 0.858824 0.843137 0.792157 1 
+		intensity 0.5
+	}
+
+
+	light_ambient_shadow
+	{
+		enabled true
+		color 0.266667 0.235294 0.207843 0.478431 
+		intensity 1
+	}
+
+
+	skylight
+	{
+		color 1 1 1 1
+	}
+
+	cloud_data
+	{
+		density 0.000000
+		noise_strength 0.000000
+		noise_speed_multiplier 0.000000
+		gradient_speed_min 0.000000
+		gradient_speed_max 0.000000
+		speed_min 0.000000 0.000000
+		speed_max 0.000000 0.000000
+		scale_min 0.000000 0.000000
+		scale_max 0.000000 0.000000
+		color light 1 1 1 1 
+		color dark 1 1 1 1 
+		texture 
+		position_min 0.000000 0.000000
+		position_max 0.000000 0.000000
+	}
 }
 
 overgrown_night_01a
 {
-	category all
-	skybox overgrown_night_01a_dome
-	envmap default_envmap
-	light_sun_color 0.647059 0.729412 0.882353 1 
-	light_ambient_color 0.4 0.4 0.4 1 
-	light_fog_color 0.392157 0.447059 0.819608 1 
-	shadow_color 0 0 0 1 
-	light_sun_rotation 40 -90 200 
-	skybox_rotation 0
-	light_sun_intensity 2
-	light_ambient_intensity 0
-	light_fog_intensity 0.15
-	weather 
+	category night
+	skybox assets/shared/textures/skies/surv_night_01a_dome.png.dds
+	envmap overgrown_day_01a_cm
+	gi_intensity 5
+
+	global
+	{
+		lut assets/shared/textures/lut/lut_default.png
+		lut_opacity 1
+		ambient_occlusion_power 1.5
+		ambient_occlusion_radius 1.9
+		skybox_rotation 158.589
+		horizon_shade 0
+		horizon_shade_distance 13000
+		color horizon_shade 0.576471 0.866667 0.941176 1 
+		color shadow 0 0 0 1 
+		color horizon_shade 0.576471 0.866667 0.941176 1 
+		color s_blue_detail 0 0.239216 0.439216 1 
+		color s_canopy 0.301961 0.678431 0.678431 1 
+		color s_canopy2 0.341176 0.643137 0.643137 1 
+		color s_cliff_bottom 0.486275 0.341176 0.270588 1 
+		color s_canopy3 0.6 0.290196 0.235294 1 
+		color s_cliff_base 0.670588 0.470588 0.364706 1 
+		color s_cliff_edge 0.654902 0.345098 0.2 1 
+		color s_crystal_high 0.768627 0.690196 0.984314 1 
+		color s_tarp_red 0.788235 0.32549 0.564706 1 
+		color s_crystal_low 0.74902 0.356863 0.356863 1 
+		color s_crystal_mid 0.486275 0.333333 0.670588 1 
+		color s_decal_bright 1 1 1 0.639216 
+		color s_night_blue_pfx 0.254902 0.305882 0.360784 0.698039 
+		color s_decal_dark 0.290196 0.266667 0.466667 0.8 
+		color s_decal_yellow 0.737255 0.517647 0 0.847059 
+		color s_foliage 0.294118 0.65098 0.72549 1 
+		color s_gray_panel 0.498039 0.498039 0.498039 1 
+		color s_l_cold01 0.6 0.780392 0.835294 1 
+		color s_night_blue 0.207843 0.239216 0.309804 1 
+		color s_orange 0.921569 0.458824 0.12549 1 
+		color s_orange_dark 0.670588 0.329412 0.0627451 0.858824 
+		color s_panels_white 0.792157 0.858824 0.886275 1 
+		color s_red_detail 0.745098 0.0509804 0.0509804 1 
+		color s_tarp_yellow 0.960784 0.52549 0.290196 1 
+		color s_terrain_foliage 0.282353 0.713725 0.635294 1 
+		color s_yellow_sub 0.729412 0.470588 0.227451 1 
+	}
+
+
+	light_fog
+	{
+		enabled true
+		color 0.176471 0.243137 0.301961 1 
+		intensity 0.6
+		radius 2500
+		margin 0.01
+		max_opacity 1
+	}
+
+
+	light_fog_vertical
+	{
+		enabled true
+		color 0.176471 0.243137 0.301961 1 
+		intensity 0.65
+		radius 1900
+		height 1400
+		max_opacity 1
+	}
+
+
+	sun_light
+	{
+		enabled true
+		color 0.505882 0.572549 0.627451 1 
+		intensity 1.25
+		rotation 57 55 -7.5 
+		lens_flare
+		{
+			texture 1
+			scale 0.25
+			intensity_ease_end 0.2
+			scale_ease_end 0.5
+			scale_distance 0.725
+			cull_distance 1000
+			offset -25 33.5
+			color 0.215686 0.321569 0.419608 0.227451 
+			visibility_scale 0.01
+		}
+		light_shaft
+		{
+			enabledd true
+			offset -25 33.5
+			radius 0.04
+			smooth 0.05
+			blur_amount 1
+			blur_samples 30
+			color 0.235294 0.196078 0.262745 1 
+		}
+	}
+
+
+	light_ambient
+	{
+		enabled true
+		color 0.356863 0.356863 0.356863 1 
+		intensity 1
+	}
+
+
+	light_ambient_shadow
+	{
+		enabled true
+		color 0.054902 0.054902 0.0627451 0.478431 
+		intensity 1
+	}
+
+
+	skylight
+	{
+		color 1 1 1 1 
+	}
+
+	cloud_data
+	{
+		density 0.000000
+		noise_strength 0.000000
+		noise_speed_multiplier 0.000000
+		gradient_speed_min 0.000000
+		gradient_speed_max 0.000000
+		speed_min 0.000000 0.000000
+		speed_max 0.000000 0.000000
+		scale_min 0.000000 0.000000
+		scale_max 0.000000 0.000000
+		color light 1 1 1 1 
+		color dark 1 1 1 1 
+		texture 
+		position_min 0.000000 0.000000
+		position_max 0.000000 0.000000
+	}
 }
 
-purple
+template_islands
 {
 	category day
-	skybox desert_envmap
-	envmap 
-	light_sun_color 1 0 1 1 
-	light_ambient_color 1 0 1 1 
-	light_fog_color 0 0 0 0 
-	shadow_color 0 0 0 1 
-	light_sun_rotation 58.5 22.5 0 
-	skybox_rotation 0
-	light_sun_intensity 1
-	light_ambient_intensity 1
-	light_fog_intensity 0
-	weather 
-}
+	skybox true_blue01a_dome.png
+	envmap overgrown_day_01a_cm
+	gi_intensity 1.2
 
-red
-{
-	category dawn
-	skybox skybox_dawn
-	envmap 
-	light_sun_color 1 0 0 1 
-	light_ambient_color 1 0 0 1 
-	light_fog_color 0 0 0 0 
-	shadow_color 0 0 0 1 
-	light_sun_rotation 58.5 22.5 0 
-	skybox_rotation 0
-	light_sun_intensity 1
-	light_ambient_intensity 1
-	light_fog_intensity 0
-	weather 
+	global
+	{
+		lut assets/shared/textures/lut/lut_default.png
+		lut_opacity 1
+		ambient_occlusion_power 1
+		ambient_occlusion_radius 0.8
+		skybox_rotation 0
+		horizon_shade 0
+		horizon_shade_distance 142000
+		color horizon_shade 1 1 1 1 
+		color shadow 1 1 1 1 
+		color s_accent3 0.278431 0.639216 1 1 
+		color horizon_shade 1 1 1 1 
+		color s_accent1 1 0.639216 0.278431 1 
+		color s_accent2 0.8 0.8 0.8 1 
+	}
+
+
+	light_fog
+	{
+		enabled true
+		color 0.54902 0.811765 0.886275 1 
+		intensity 0.85
+		radius 12000
+		margin 0
+		max_opacity 0.95
+	}
+
+
+	light_fog_vertical
+	{
+		enabled true
+		color 0.54902 0.811765 0.886275 1 
+		intensity 0
+		radius 1500
+		height 600
+		max_opacity 0.25
+	}
+
+
+	sun_light
+	{
+		enabled true
+		color 0.929412 0.729412 0.482353 1 
+		intensity 2.2
+		rotation 51.8964 -135.99 88.314 
+		lens_flare
+		{
+			texture 1
+			scale 0.3
+			intensity_ease_end 0.4
+			scale_ease_end 1
+			scale_distance 0.725
+			cull_distance 1000
+			offset 12 9
+			color 0.772549 0.458824 0.145098 0.137255 
+			visibility_scale 0
+		}
+		light_shaft
+		{
+			enabledd true
+			offset 12 9
+			radius 0.01
+			smooth 0.03
+			blur_amount 1
+			blur_samples 30
+			color 0.309804 0.262745 0.243137 1 
+		}
+	}
+
+
+	light_ambient
+	{
+		enabled true
+		color 0.858824 0.843137 0.792157 1 
+		intensity 0.5
+	}
+
+
+	light_ambient_shadow
+	{
+		enabled true
+		color 0.239216 0.235294 0.231373 0.478431 
+		intensity 1
+	}
+
+
+	skylight
+	{
+		color 1 1 1 1 
+	}
+
+	cloud_data
+	{
+		density 1.000000
+		noise_strength 0.300000
+		noise_speed_multiplier 1.000000
+		gradient_speed_min 0.040000
+		gradient_speed_max 0.100000
+		speed_min -0.010000 -0.050000
+		speed_max -0.200000 0.050000
+		scale_min 0.240000 0.250000
+		scale_max 0.380000 0.600000
+		color light 0.788235 0.909804 0.945098 0.847059 
+		color dark 0.431373 0.717647 0.862745 1 
+		texture 
+		position_min 0.000000 0.000000
+		position_max 0.000000 0.000000
+	}
 }
 
 tropical_day_01a
 {
-	category all
-	skybox tropical_day_01a_dome
-	envmap tropical_day_01a_cm
-	light_sun_color 0.952941 0.788235 0.584314 1 
-	light_ambient_color 0.4 0.4 0.4 1 
-	light_fog_color 0.584314 0.839216 0.94902 1 
-	shadow_color 0 0 0 1 
-	light_sun_rotation 60 215 0 
-	skybox_rotation 0
-	light_sun_intensity 3.1
-	light_ambient_intensity 0
-	light_fog_intensity 0.4
-	weather 
+	category day
+	skybox true_blue01a_dome.png
+	envmap 
+	gi_intensity 2
+
+	global
+	{
+		lut assets/shared/textures/lut/lut_default.png
+		lut_opacity 1
+		ambient_occlusion_power 1
+		ambient_occlusion_radius 0.8
+		skybox_rotation 0
+		horizon_shade 0
+		horizon_shade_distance 142000
+		color horizon_shade 1 1 1 1 
+		color shadow 1 1 1 1 
+		color horizon_shade 1 1 1 1 
+		color s_barrels 0.247059 0.372549 0.584314 0.709804 
+		color s_red_decal 1 0.294118 0.341176 0.709804 
+		color s_cliff_base 0.564706 0.564706 0.490196 1 
+		color s_sea_shallow 0.396078 1 1 1 
+		color s_cliff_edge 0.462745 0.411765 0.313725 1 
+		color s_boxglow 0.137255 0.156863 0.156863 1 
+		color s_consols 0.737255 0.227451 0.0588235 1 
+		color s_canopy_hue 0.282353 0.709804 0.709804 1 
+		color s_cliff_bottom 0.368627 0.352941 0.290196 1 
+		color s_wip_color 0.996078 0.443137 0.321569 0.819608 
+		color s_decal_stock 1 0.376471 0.227451 0.568627 
+		color s_grass_olive 0.439216 0.6 0 1 
+		color s_training 0.776471 0.776471 0.278431 0.658824 
+		color s_hatch_edge 0.568627 0.568627 0.568627 1 
+		color s_neutral 0.654902 0.584314 0.541176 1 
+		color s_sand 0.87451 0.572549 0.419608 1 
+		color s_rock_moss 0.0196078 0.376471 0.0196078 1 
+		color s_tarp 0.25098 0.490196 0.584314 0.709804 
+		color s_tarp_2 0.933333 0.564706 0.262745 1 
+		color s_vineshue 0.262745 0.729412 0.729412 1 
+		color s_white 0.933333 0.933333 0.933333 0.933333 
+		color s_yellow_sub 1 0.8 0.2 0.94902 
+	}
+
+
+	light_fog
+	{
+		enabled true
+		color 0.615686 0.921569 1 1 
+		intensity 0.8
+		radius 17000
+		margin 0.08
+		max_opacity 1
+	}
+
+
+	light_fog_vertical
+	{
+		enabled true
+		color 0.615686 0.921569 1 1 
+		intensity 0.255
+		radius 768
+		height 400
+		max_opacity 1
+	}
+
+
+	sun_light
+	{
+		enabled true
+		color 0.807843 0.752941 0.686275 1 
+		intensity 2.2
+		rotation 51.8964 -135.99 88.314 
+		lens_flare
+		{
+			texture 1
+			scale 0.3
+			intensity_ease_end 0.4
+			scale_ease_end 1
+			scale_distance 0.725
+			cull_distance 1000
+			offset 11.9482 9.10957
+			color 0.772549 0.458824 0.145098 0.137255 
+			visibility_scale 0.1
+		}
+		light_shaft
+		{
+			enabledd true
+			offset 12 9
+			radius 0.02
+			smooth 0.05
+			blur_amount 1
+			blur_samples 36
+			color 0.486275 0.282353 0.188235 1 
+		}
+	}
+
+
+	light_ambient
+	{
+		enabled true
+		color 0.858824 0.843137 0.792157 1 
+		intensity 0.5
+	}
+
+
+	light_ambient_shadow
+	{
+		enabled true
+		color 0.341176 0.368627 0.388235 1 
+		intensity 1
+	}
+
+
+	skylight
+	{
+		color 1 1 1 1 
+	}
+
+	cloud_data
+	{
+		density 6.000000
+		noise_strength 0.300000
+		noise_speed_multiplier 1.000000
+		gradient_speed_min 0.010000
+		gradient_speed_max 0.060000
+		speed_min -0.150000 0.080000
+		speed_max -0.350000 -0.100000
+		scale_min 0.190000 0.270000
+		scale_max 0.280000 0.290000
+		color light 0.788235 0.909804 0.945098 0.847059 
+		color dark 0.431373 0.717647 0.862745 1 
+		texture 
+		position_min 0.000000 0.000000
+		position_max 0.000000 0.000000
+	}
 }
 

@@ -1,0 +1,11 @@
+visnum
+{
+  {
+    map !depth
+    material_id 250
+    vertex_shader navnum.vs.cso 111 NGCT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader visnum.ps.cso
+  }
+}

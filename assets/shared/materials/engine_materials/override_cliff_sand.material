@@ -1,0 +1,20 @@
+override_cliff_sand
+{
+  {
+    map models/environment/nature/minerals/mineral_rocks_combined/shaders/mat_atlas_atlas_rocks_combined_d.png
+    map models/environment/nature/minerals/mineral_rocks_combined/shaders/mat_atlas_atlas_rocks_combined_n.png
+    map models/environment/nature/minerals/mineral_rocks_combined/shaders/mat_atlas_atlas_rocks_combined_s.png
+    map models/rogue/environment/desert/landscape/sand_smooth_01_d.png
+    map models/rogue/environment/desert/sand/shaders/sand_smooth_01_n.png
+    map models/rogue/environment/desert/sand/shaders/sand_smooth_01_s.png
+    map models/environment/nature/minerals/mineral_rocks_combined/shaders/mat_atlas_atlas_rocks_combined_c.png
+    map swatches/black.png
+    material_id 61
+    vertex_shader tilestaticcolor.vs.cso 111 NGCT
+    vertex_shader_param camera
+    pixel_shader tilecolorblend_mask.ps.cso
+    pixel_shader_param accent1 #d47443ff
+    pixel_shader_param accent2 #ff4747ff
+    pixel_shader_param accent3 #fc9968ff
+  }
+}

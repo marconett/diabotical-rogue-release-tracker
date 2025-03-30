@@ -1,0 +1,143 @@
+asset jumpad_up_short_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name jp_target_2
+        position -0.11798 319.82089 -4.57104
+        rotation 0 -89.99998 0
+        scale 1.00000 1.00000 1.00000
+        param position_x -0.117981
+        param position_y 319.820892
+        param position_z -4.571045
+        param rotation_x -0.000000
+        param rotation_y -1.570796
+        param rotation_z 0.000000
+    }
+    prefab_entity
+    {
+        name jumppad_2
+        position -0.11792 -0.17908 -46.57108
+        rotation 0 -89.99998 0
+        scale 95.00000 16.58880 80.00000
+        param position_x -0.117920
+        param position_y -0.179081
+        param position_z -46.571075
+        param rotation_x -0.000000
+        param rotation_y -1.570796
+        param rotation_z 0.000000
+        param target jp_exit_5
+    }
+    prefab_entity
+    {
+        name light
+        position -0.49225 41.67452 -46.57382
+        rotation 0 -179.99999 0
+        scale 1.00000 1.00000 1.00000
+        param bake_light_only true
+        param color s_light_accent
+        param intensity 4
+        param position_x -0.492249
+        param position_y 41.674519
+        param position_z -46.573822
+        param radius 250
+        param rotation_x -0.000000
+        param rotation_y 3.141593
+        param rotation_z 0.000000
+        param type diffuse
+        param visibility_function sin
+        param visibility_function_min .8
+    }
+    prefab_entity
+    {
+        name pfx_env_jumppad_arrow1_3
+        position -0.11798 9.82092 -4.57104
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param delay 0
+        param destroy_on_loop false
+        param max_distance 0
+        param position_x -0.117981
+        param position_y 9.820919
+        param position_z -4.571045
+        param random_delay_max 0
+        param range_multiplier 1
+        param repeat_interval 0
+        param repeat_lifetime 0
+        param rotation_x -0.000000
+        param rotation_y -0.000000
+        param rotation_z 0.000000
+        param system env_jumppad_arrow1
+    }
+    prefab_entity
+    {
+        name pfx_jumppad_loop_3
+        position -0.11792 5.82092 -45.37100
+        rotation 0 0 0
+        scale 1.20000 1.20000 1.20000
+        param delay 0
+        param destroy_on_loop false
+        param infinite_range false
+        param max_distance 0
+        param pfx_scale 1.2
+        param position_x -0.117920
+        param position_y 5.820919
+        param position_z -45.371002
+        param random_delay_max 0
+        param range_multiplier 1
+        param repeat_interval 0
+        param repeat_lifetime 0
+        param rotation_x -0.000000
+        param rotation_y -0.000000
+        param rotation_z 0.000000
+        param scale 1
+        param system jumppad_loop_blue
+    }
+    prefab_entity
+    {
+        name prop_jump_pad_3
+        position -0.11792 -0.17908 -48.57101
+        rotation 0 0 0
+        scale 1.20000 1.20000 1.20000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param color2_override_glass_jumpad 5b89e51e
+        param color3_override_glass_jumpad f7ce99ad
+        param color_override_glass_jumpad 1e70feea
+        param force_shadows true
+        param model jump_pad_01
+        param override_effect_3 override_glass_jumpad
+        param position_x -0.117920
+        param position_y -0.179081
+        param position_z -48.571014
+        param rotation_x -0.000000
+        param rotation_y -0.000000
+        param rotation_z 0.000000
+    }
+    prefab_entity
+    {
+        name sound_amb_prop_jumppa_3
+        position 1.08197 15.22091 -47.37100
+        rotation 0 -89.99998 0
+        scale 1.00000 1.00000 1.00000
+        param apply_audio_occlusion false
+        param capsule_end_position_x -482.799988
+        param capsule_end_position_y 415.399994
+        param capsule_end_position_z 2158.800049
+        param cross_fade_max_radius 400
+        param cross_fade_min_radius 0.000000
+        param min_radius 40.000000
+        param position_x 1.081970
+        param position_y 15.220909
+        param position_z -47.371002
+        param radius 640
+        param rotation_x -0.000000
+        param rotation_y -1.570796
+        param rotation_z 0.000000
+        param sound_event amb_prop_jumppad_loop
+        param type audio_event_ambient_node
+        param volume 0.5
+    }
+}

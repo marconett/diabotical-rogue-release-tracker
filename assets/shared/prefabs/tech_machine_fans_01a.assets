@@ -1,0 +1,217 @@
+asset tech_machine_fans_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name decal_decal_graphical_graph_7
+        position -26.61792 232.20763 40.81500
+        rotation -0.00006 -179.99995 -0.00008
+        scale 55.00000 55.00000 15.00000
+        param albedo_map_enable true
+        param color s_decal
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_graphical_graphical_corner_frame_01
+        param metal_map_enable false
+        param normal_map_enable true
+        param position_x 32.814880
+        param position_y 232.207626
+        param position_z 26.618469
+        param rotation_w 0
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_graphical_graph_8
+        position 16.10620 144.44037 65.95123
+        rotation -0.00006 -179.99993 -0.00008
+        scale 303.99994 30.00000 15.00000
+        param albedo_map_enable true
+        param color s_decal
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_graphical_graphical_slanted_striped_1
+        param metal_map_enable false
+        param normal_map_enable true
+        param position_x 57.951111
+        param position_y 144.440369
+        param position_z -16.105652
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_icons_symbols_g
+        position -26.61804 235.20763 43.74030
+        rotation -0.00006 -179.99993 -0.00008
+        scale 30.00000 30.00000 20.00000
+        param albedo_map_enable true
+        param color s_decal
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_icons_symbols_graphical_electricity_icon
+        param metal_map_enable false
+        param normal_map_enable true
+        param position_x 35.740173
+        param position_y 235.207626
+        param position_z 26.618591
+        param rotation_w 0
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name pfx_env_vent_smoke_puffy2_2
+        position -58.80969 300.47714 -15.74408
+        rotation 0.00001 -134.99989 -0.00002
+        scale 2.30000 2.30000 2.30000
+        param position_x -23.744202
+        param position_y 300.477142
+        param position_z 58.810303
+        param rotation_w 0
+        param system env_vent_smoke_puffy2
+        param time_scale 0.25
+    }
+    prefab_entity
+    {
+        name pfx_env_vent_smoke_puffy2_3
+        position 52.91418 300.47702 -14.32947
+        rotation 0.00001 -134.99989 -0.00002
+        scale 2.30000 2.30000 2.30000
+        param position_x -22.329651
+        param position_y 300.477020
+        param position_z -52.913574
+        param rotation_w 0
+        param system env_vent_smoke_puffy2
+        param time_scale 0.25
+    }
+    prefab_entity
+    {
+        name prop_cable_grouped_bend_4m_5
+        position 84.84131 176.52440 41.63312
+        rotation 0.00002 -89.99999 89.99999
+        scale 0.50000 0.50000 0.50000
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_dark
+        param model cable_grouped_bend_4m_01
+        param position_x 33.632996
+        param position_y 176.524399
+        param position_z -84.840759
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_kitbash_3
+        position 15.10681 187.03099 22.88898
+        rotation 0.00000 -179.99993 179.99993
+        scale 1.04000 0.80000 1.15000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_kitbash_8
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param material_5 matlib_mat_lib_metal_bright
+        param model wall_ext_8x8
+        param position_x 14.888855
+        param position_y 187.030991
+        param position_z -15.106262
+    }
+    prefab_entity
+    {
+        name prop_kitbash_4
+        position 15.10791 -126.96894 -34.71106
+        rotation 0.00001 0.00004 0.00003
+        scale 1.05000 1.03000 1.15000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_kitbash_8
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param model wall_ext_8x8
+        param position_x -42.711243
+        param position_y -126.968941
+        param position_z -15.107300
+    }
+    prefab_entity
+    {
+        name prop_rogue_fan_propeller
+        position -57.96008 246.07738 -12.63300
+        rotation 0.00002 -135.00000 -0.00002
+        scale 1.25000 1.25000 1.25000
+        param __shadow true
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model rogue_fan_propeller_01
+        param position_x -20.633118
+        param position_y 246.077377
+        param position_z 57.960693
+        param rotate_animation 1
+        param rotate_animation_angle 800
+    }
+    prefab_entity
+    {
+        name prop_rogue_fan_propeller_1
+        position 53.76294 246.07689 -12.34955
+        rotation 0.00002 -135.00000 -0.00002
+        scale 1.25000 1.25000 1.25000
+        param __shadow true
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model rogue_fan_propeller_01
+        param position_x -20.349670
+        param position_y 246.076889
+        param position_z -53.762451
+        param rotate_animation 1
+        param rotate_animation_angle 800
+    }
+    prefab_entity
+    {
+        name prop_vent_struc
+        position -58.54077 176.37201 -12.63300
+        rotation -0.00003 90.00003 0.00001
+        scale 0.75000 0.75000 0.70000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param color_matlib_mat_lib_metal_painted b9cfd9ff
+        param color_matlib_mat_lib_metal_painted_details_floating b9cfd9ff
+        param color_matlib_mat_lib_plastic 999999ff
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_painted
+        param material_1 matlib_mat_lib_metal_bright
+        param model vent_struc_02
+        param position_x -20.633118
+        param position_y 176.372009
+        param position_z 58.541382
+    }
+    prefab_entity
+    {
+        name sound_amb_bed_int_roomtone_indus
+        position -9.28955 320.47726 -16.62494
+        rotation 0.00002 -134.99991 -0.00002
+        scale 1.00000 1.00000 1.00000
+        param apply_audio_occlusion true
+        param capsule_end_position_x -75.413971
+        param capsule_end_position_y 485.892792
+        param capsule_end_position_z -599.677490
+        param cross_fade_max_radius 600
+        param cross_fade_min_radius 300
+        param min_radius 600
+        param position_x -24.625061
+        param position_y 320.477264
+        param position_z 9.290161
+        param radius 1200
+        param sound_event amb_bed_int_roomtone_industrial03
+        param type audio_event_ambient_node
+        param volume 10
+    }
+}
+

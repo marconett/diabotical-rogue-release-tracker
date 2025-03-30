@@ -1,0 +1,189 @@
+asset tech_antenna_ground_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name pfx_env_white_lightning2_1
+        position 11.65356 326.05493 -6.60680
+        rotation 0.01381 -65.34738 -4.48610
+        scale 0.12000 0.66000 0.12000
+        param color 3a4a54b7
+        param position_x 5.960987
+        param position_y 327.652313
+        param position_z -7.006042
+        param system env_white_lightning2
+        param tag ext
+        param time_scale 1
+    }
+    prefab_entity
+    {
+        name prop_tech_antenna_1
+        position 9.30908 111.47394 -16.64644
+        rotation -0.35529 -179.65905 0.57038
+        scale 0.85000 0.85000 0.85000
+        param __shadow true
+        param best_lod 1
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_dark
+        param model tech_antenna_01
+        param position_x 3.616383
+        param position_y 113.071304
+        param position_z -17.045685
+        param rotation_x -0.006201
+        param rotation_y -3.135642
+        param rotation_z 0.009955
+        param tag ext
+    }
+    prefab_entity
+    {
+        name prop_tech_battery_1
+        position -22.37964 9.32444 7.61197
+        rotation 0.57038 90.34398 0.35523
+        scale 0.85000 0.85000 0.85000
+        param __shadow true
+        param best_lod 0
+        param color3_matlib_mat_lib_emissive 71cafdff
+        param force_shadows true
+        param model tech_battery_01
+        param position_x -28.072153
+        param position_y 10.921796
+        param position_z 7.212708
+        param rotation_x 0.009955
+        param rotation_y 1.576801
+        param rotation_z 0.006200
+        param tag ext
+    }
+    prefab_entity
+    {
+        name prop_tech_battery_2
+        position 7.99365 8.52275 4.54117
+        rotation 0.57038 90.34438 0.35523
+        scale 0.85000 0.85000 0.85000
+        param __shadow true
+        param best_lod 0
+        param force_shadows true
+        param model tech_battery_02
+        param position_x 2.300907
+        param position_y 10.120107
+        param position_z 4.141907
+        param rotation_x 0.009955
+        param rotation_y 1.576807
+        param rotation_z 0.006200
+        param tag ext
+    }
+    prefab_entity
+    {
+        name prop_tech_box_tower_platfo_1
+        position -5.05688 -3.25193 -1.29788
+        rotation 0.57038 90.34489 0.35529
+        scale 0.21000 0.25000 0.25000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_tech_box_tower_platfo_1
+        param best_lod 0
+        param force_shadows true
+        param model tech_box_tower_platform
+        param position_x -10.749416
+        param position_y -1.654566
+        param position_z -1.697113
+        param rotation_x 0.009955
+        param rotation_y 1.576816
+        param rotation_z 0.006201
+        param tag ext
+    }
+    prefab_entity
+    {
+        name prop_tech_crane_attachment_3
+        position -36.71973 10.98010 -1.43018
+        rotation 83.70088 113.79569 23.51118
+        scale 0.58500 0.58500 0.58500
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model tech_crane_attachment_01
+        param position_x -42.412270
+        param position_y 12.577464
+        param position_z -1.829437
+        param tag ext
+    }
+    prefab_entity
+    {
+        name prop_tech_crane_attachment_4
+        position 28.54150 11.18010 -0.98889
+        rotation 83.66364 -109.47212 -19.92594
+        scale 0.58500 0.58500 0.58500
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model tech_crane_attachment_01
+        param position_x 22.848873
+        param position_y 12.777465
+        param position_z -1.388153
+        param rotation_x 1.474880
+        param rotation_y -1.965054
+        param rotation_z -0.402462
+        param tag ext
+    }
+    prefab_entity
+    {
+        name prop_tech_crane_attachment_5
+        position 7.20386 11.67471 -11.75142
+        rotation 83.61128 -21.03885 -21.62829
+        scale 0.58500 0.58500 0.58500
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model tech_crane_attachment_01
+        param position_x 1.511196
+        param position_y 13.272069
+        param position_z -12.150665
+        param rotation_x 1.414399
+        param rotation_y -0.259354
+        param rotation_z -0.268696
+        param tag ext
+    }
+    prefab_entity
+    {
+        name prop_tech_crane_attachment_6
+        position 7.40503 11.58677 21.20364
+        rotation 82.93378 -160.12860 19.76539
+        scale 0.58500 0.58500 0.58500
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model tech_crane_attachment_01
+        param position_x 1.712322
+        param position_y 13.184131
+        param position_z 20.804382
+        param rotation_x 1.402395
+        param rotation_y -2.889462
+        param rotation_z 0.249290
+        param tag ext
+    }
+    prefab_entity
+    {
+        name sound_amb_prop_sparks
+        position -7.94995 90.45419 5.36481
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param capsule_end_position_x 0.924065
+        param capsule_end_position_y 90.826103
+        param capsule_end_position_z -406.820862
+        param cross_fade_max_radius 1000
+        param cross_fade_min_radius 300.000000
+        param min_radius 300.000000
+        param position_x -13.642544
+        param position_y 92.051552
+        param position_z 4.965546
+        param radius 2000
+        param sound_event amb_prop_sparks_scifi
+        param type audio_event_ambient_node
+        param volume 0.1
+    }
+}
+

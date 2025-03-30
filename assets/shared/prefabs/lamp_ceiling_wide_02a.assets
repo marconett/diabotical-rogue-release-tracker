@@ -1,0 +1,85 @@
+asset lamp_ceiling_wide_02a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name light_68
+        position 0.57874 32.11163 -3.15591
+        rotation 90.00000 0 -90.00000
+        scale 1.00000 1.00000 1.00000
+        param angle 130
+        param color s_light_main
+        param falloff .5
+        param gobo_texture gd_gobo_rectangle_lamp01.png
+        param intensity 4
+        param radius 640
+        param rotation_w 0
+        param type diffuse_spot
+        param volumetric_scattering 0.00
+    }
+    prefab_entity
+    {
+        name light_69
+        position -0.14587 -79.39813 0.87094
+        rotation 0 0.00001 -0.00005
+        scale 1.00000 1.00000 1.00000
+        param color s_light_main
+        param falloff 0.33
+        param intensity 5
+        param light_bake_only true
+        param radius 250
+        param rotation_w 0
+        param type point
+    }
+    prefab_entity
+    {
+        name pfx_env_light_fogbeam2_2
+        position -0.14343 -51.21246 10.70737
+        rotation 0 0.00001 -0.00005
+        scale 0.75000 1.00000 0.50000
+        param delay 0
+        param destroy_on_loop false
+        param intensity 4
+        param max_distance 0
+        param random_delay_max 0
+        param range_multiplier 1
+        param repeat_interval 0
+        param repeat_lifetime 0
+        param system env_light_fogbeam2
+    }
+    prefab_entity
+    {
+        name pfx_env_light_fogbeam2_3
+        position -0.14343 -51.21268 -9.29337
+        rotation 0 0.00001 -0.00005
+        scale 0.75000 1.00000 0.50000
+        param delay 0
+        param destroy_on_loop false
+        param intensity 4
+        param max_distance 0
+        param random_delay_max 0
+        param range_multiplier 1
+        param repeat_interval 0
+        param repeat_lifetime 0
+        param system env_light_fogbeam2
+    }
+    prefab_entity
+    {
+        name prop_lamp_oval_1
+        position -0.14587 -0.76547 0.87094
+        rotation 0 0.00001 -0.00005
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param color3_matlib_mat_lib_emissive s_emissive_main
+        param force_shadows true
+        param intensity 4
+        param model lamp_oval_02
+    }
+}
+
+
+
+

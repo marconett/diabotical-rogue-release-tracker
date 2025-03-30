@@ -1,0 +1,14 @@
+navout
+{
+  {
+    map swatches/black.png
+    map swatches/black.png
+    map swatches/black.png
+    material_id 250
+    vertex_shader navout.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader navout.ps.cso
+	depth unchanged
+  }
+}

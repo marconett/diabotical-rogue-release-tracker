@@ -20,7 +20,7 @@ rogue_heavymachinegun
 	unlimited_ammo false
 	reload 2000
 	
-	color 1996D9
+	color 42b2ce
 	
 	icon_path images/weapon_icons/wp_hud_heavymachinegun_02.png
 	icon_path2 images/weapon_icons/wp_card_heavymachinegun.png
@@ -81,6 +81,7 @@ rogue_heavymachinegun
 
 	loop_animation true
     
+	particles_clipping_plane true
 	detached_shot_particles false
     //shot_particles weapon_heavy_machinegun_muzzle_flash
 	shot_particles_attached weapon_heavy_machinegun_muzzle
@@ -96,26 +97,29 @@ rogue_heavymachinegun
 	//decal decal_glow 10 3 3.561 false false alpha 20
 	
 
-	/////	fps model position - heavymachinegun  /////////////////////////////////////
-	//model assets/shared/weapons/heavymachinegun/heavymachinegun //Old model
 	model assets/shared/models/animations/wp_heavy_machinegun/skm_heavy_machinegun
-	model_position 0.3 -1 1.2
-	model_scale 0.06
-	model_post_rotation -1.8 1.5 0.0080
-	fov 52
+	model_scale_third_person 1
+	model_position_third_person 0 
+	model_rotation_third_person 0
+	model_position -1.13 -1.44 -2.38 
+	model_position_centered -0.586152 -1.32326 -2.0953 
+	model_post_rotation -0.0349066 -0.0785398 -0.0174533 
+	model_post_rotation_centered -0.0349066 -0.0523599 -0.0174533 
+	model_scale 0.04  
+	model_scale_centered 0.04 
+	fov 35 
+	fov_centered 35 
+	model_camera_scale 2.4 
+	model_camera_scale_centered 2.4 
     model_pivot -0.2 0 0
-	
 
-	/////	ADS model position - heavymachinegun  /////////////////////////////////////
-
-	model_position_centered 0.4914 -2.57188 7.47569
-	model_scale_centered 0.0637542
-	model_camera_scale 3.5
-	model_post_rotation_centered -2.21 1.5 -0.050
-	
-/////	Third person model position - heavymachinegun /////////////////////////////////////
-	//MOVED TO .ani FILE 
-	
+	// weapon_sway
+	smoothing_factor 8
+	vertical_sway 0.75
+	horizontal_sway 0.75
+	tilt_sway 0.085
+	forward_sway 0.5
+	max_vertical_movement_sway 0.01
 	
 	// close
 	burst_sound w_hm_fire_burst

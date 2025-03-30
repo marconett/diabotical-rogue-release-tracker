@@ -1,0 +1,16 @@
+override_barrel_painted
+{
+  {
+    map materials/matlib/shaders/mat_metal_painted/mat_metal_painted_d.png
+    map materials/matlib/shaders/master_base_textures/normals_faint_scratches_n.png
+    map materials/matlib/shaders/mat_metal_painted/mat_metal_painted_s.png
+    map swatches/black.png
+    map swatches/red.png
+    material_id 176
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+    pixel_shader_param accent1 #8e2c2c
+  }
+}

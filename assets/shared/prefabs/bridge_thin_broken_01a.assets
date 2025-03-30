@@ -1,0 +1,775 @@
+asset bridge_thin_broken_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name col_col_box_corner_133_1
+        position -455.20764 0.37355 -179.85767
+        rotation -0.00001 -90.00001 -90.00001
+        scale 0.30000 4.00000 4.20000
+        param best_lod 0
+        param clip fullclip
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param position_x -473.607666
+        param position_y -3.626450
+        param position_z -113.457764
+        param size_w 1
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_245_1
+        position -133.21759 -0.02644 -181.51440
+        rotation -0.00001 -90.00001 -90.00002
+        scale 0.30000 2.45000 3.50000
+        param best_lod 0
+        param clip fullclip
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param position_x -151.617615
+        param position_y -4.026443
+        param position_z -115.114502
+        param size_w 1
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_38_1
+        position 144.79242 0.37355 -179.85767
+        rotation -0.00001 -89.99999 -89.99999
+        scale 0.30000 4.00000 2.80000
+        param best_lod 0
+        param clip fullclip
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param position_x 126.392395
+        param position_y -3.626450
+        param position_z -113.457764
+        param size_w 1
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name decal_decal_environment_des_1
+        position -372.03723 -2.20731 5.06958
+        rotation 90.00000 0 87.69993
+        scale 249.39980 195.96622 7.90792
+        param albedo_map_enable false
+        param color ffffff99
+        param emissive_map_enable false
+        param gloss_map_enable false
+        param material decal_mat_environment_destruction_metal_dent_l_03
+        param metal_map_enable false
+        param normal_map_enable true
+        param position_x -390.437256
+        param position_y -6.207302
+        param position_z 71.469482
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_environment_des_12_1
+        position -204.03717 -2.20731 -102.93042
+        rotation 90.00000 0 87.69991
+        scale 315.37955 247.80980 10.00000
+        param albedo_map_enable false
+        param color ffffff99
+        param emissive_map_enable false
+        param gloss_map_enable false
+        param material decal_mat_environment_destruction_metal_dent_l_03
+        param metal_map_enable false
+        param normal_map_enable true
+        param position_x -222.437195
+        param position_y -6.207302
+        param position_z -36.530518
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_environment_dir_1_1
+        position 6.28259 4.38582 -90.41309
+        rotation 90.00000 0 -158.39995
+        scale 126.70000 133.73871 42.23327
+        param albedo_map_enable true
+        param color 372e2e72
+        param debug_draw false
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_environment_dirt_worked_01
+        param metal_map_enable false
+        param normal_map_enable false
+        param order 2
+        param position_x -12.117432
+        param position_y 0.385818
+        param position_z -24.013184
+        param rotation_x 1.570796
+        param rotation_y 0.000000
+        param rotation_z 2.733186
+        param scale 1.0
+        param size_x 126.699997
+        param size_y 133.738846
+        param size_z 42.233315
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_environment_dir_2
+        position -24.97711 2.20496 -69.15356
+        rotation 90.00000 0 156.60000
+        scale 126.70000 133.73874 42.23328
+        param albedo_map_enable true
+        param color 372e2e72
+        param debug_draw false
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_environment_dirt_worked_01
+        param metal_map_enable false
+        param normal_map_enable false
+        param order 2
+        param position_x -43.377136
+        param position_y -1.795044
+        param position_z -2.753662
+        param rotation_x 1.570796
+        param rotation_y 0.000000
+        param rotation_z 2.733186
+        param scale 1.0
+        param size_x 126.699997
+        param size_y 133.738846
+        param size_z 42.233315
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_environment_dir_93_1
+        position 353.00369 -5.30065 37.97119
+        rotation 90.00000 0 -134.99996
+        scale 288.00000 303.99994 95.99991
+        param albedo_map_enable true
+        param color 5e5e5e60
+        param debug_draw false
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_environment_dirt_worked_01
+        param metal_map_enable false
+        param normal_map_enable false
+        param order 1
+        param position_x 334.603699
+        param position_y -9.300648
+        param position_z 104.371094
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_environment_dir_94_1
+        position 171.96283 21.79269 -134.93042
+        rotation 90.00000 0 -113.39991
+        scale 233.14989 246.10272 77.71658
+        param albedo_map_enable true
+        param color 444444e0
+        param debug_draw false
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_environment_dirt_worked_01
+        param metal_map_enable false
+        param normal_map_enable false
+        param order 2
+        param position_x 153.562805
+        param position_y 17.792694
+        param position_z -68.530518
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_environment_gra_32_1
+        position -282.10535 -6.39843 -37.06787
+        rotation 90.00000 0 80.09989
+        scale 305.95990 278.97586 20.00000
+        param albedo_map_enable true
+        param color 696d6e28
+        param debug_draw false
+        param debug_proj false
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_environment_dirt_worked_02
+        param metal_map_enable false
+        param normal_map_enable false
+        param order 1
+        param position_x -300.505371
+        param position_y -10.398426
+        param position_z 29.332031
+        param rotation_w 0
+        param scale 1.0
+        param tag broken
+        param v3 true
+    }
+    prefab_entity
+    {
+        name prop_beams_1x6_169_1
+        position 385.32040 -15.92524 -166.79956
+        rotation 88.67234 -118.67190 -28.68246
+        scale 1.10000 0.90000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param model beams_1x6
+        param position_x 366.920410
+        param position_y -19.925240
+        param position_z -100.399658
+        param seethrough_direction 9
+        param seethrough_prop true
+    }
+    prefab_entity
+    {
+        name prop_beams_1x6_24_1
+        position -242.58386 -13.37261 -171.31250
+        rotation 89.30931 -157.49641 -67.50025
+        scale 1.10000 1.76000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param model beams_1x3
+        param position_x -260.983887
+        param position_y -17.372608
+        param position_z -104.912598
+        param size_x 1.100000
+        param size_y 1.760000
+        param size_z 1.000000
+    }
+    prefab_entity
+    {
+        name prop_beams_1x6_278_1
+        position 229.44165 -16.81880 -108.57935
+        rotation 88.67499 -118.67341 -27.78277
+        scale 0.70000 1.00000 0.60000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param model beams_1x6
+        param position_x 211.041626
+        param position_y -20.818798
+        param position_z -42.179443
+        param seethrough_direction 9
+        param seethrough_prop true
+        param size_w 1
+    }
+    prefab_entity
+    {
+        name prop_beams_1x6_279_1
+        position -82.06439 -29.59081 -113.59106
+        rotation 82.50081 -95.59875 -4.74270
+        scale 0.70000 0.61000 0.60000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param model beams_1x6
+        param position_x -100.464417
+        param position_y -33.590809
+        param position_z -47.191162
+        param seethrough_direction 9
+        param seethrough_prop true
+        param size_w 1
+    }
+    prefab_entity
+    {
+        name prop_beams_1x6_280_1
+        position -35.54523 -29.14634 -52.55811
+        rotation 85.81072 126.20942 -134.16294
+        scale 0.47000 0.73000 0.43000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param model beams_1x6
+        param position_x -53.945251
+        param position_y -33.146339
+        param position_z 13.841797
+        param seethrough_direction 9
+        param seethrough_prop true
+        param size_w 1
+    }
+    prefab_entity
+    {
+        name prop_beams_1x6_281_1
+        position 188.66290 -13.01416 -19.47070
+        rotation 87.06588 89.02034 -173.98326
+        scale 0.47000 0.73000 0.43000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param model beams_1x6
+        param position_x 170.262878
+        param position_y -17.014160
+        param position_z 46.929199
+        param seethrough_direction 9
+        param seethrough_prop true
+        param size_w 1
+    }
+    prefab_entity
+    {
+        name prop_beams_1x6_29_1
+        position -128.54840 -13.25161 130.69995
+        rotation 89.31215 -157.49808 -67.50345
+        scale 1.10000 1.36000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param model beams_1x6
+        param position_x -146.948425
+        param position_y -17.251610
+        param position_z 197.099854
+        param size_x 1.100000
+        param size_y 1.360000
+        param size_z 1.000000
+    }
+    prefab_entity
+    {
+        name prop_beams_1x6_5_1
+        position 211.91248 -10.25756 133.87036
+        rotation 89.09908 0.00119 -89.99934
+        scale 1.10000 1.30000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param model beams_1x3
+        param position_x 193.512451
+        param position_y -14.257561
+        param position_z 200.270264
+        param rotation_x 1.555080
+        param rotation_y 0.801117
+        param rotation_z -1.570789
+        param seethrough_direction 9
+        param seethrough_prop true
+        param size_x 1.100000
+        param size_y 2.140000
+        param size_z 1.000000
+    }
+    prefab_entity
+    {
+        name prop_beams_1x6_80_1
+        position 111.96283 -13.78454 -170.92285
+        rotation 89.09995 0.90098 -90.00043
+        scale 1.10000 2.14000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param model beams_1x3
+        param position_x 93.562805
+        param position_y -17.784538
+        param position_z -104.522949
+        param rotation_x 1.555080
+        param rotation_y 0.801117
+        param rotation_z -1.570789
+        param seethrough_direction 9
+        param seethrough_prop true
+        param size_x 1.100000
+        param size_y 2.140000
+        param size_z 1.000000
+    }
+    prefab_entity
+    {
+        name prop_blockout_box_corner_102_1
+        position 274.07242 -2.59017 60.60449
+        rotation -90.00000 0 -90.00000
+        scale 1.00000 1.12000 0.25000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_dents_01
+        param model blockout_box_corner
+        param position_x 255.672424
+        param position_y -6.590168
+        param position_z 127.004395
+        param seethrough_direction 9
+        param seethrough_prop true
+        param size_x 1.000000
+        param size_y 1.120000
+        param size_z 0.250000
+        param uv_scale_x 0.5
+        param uv_scale_y 0.541501
+    }
+    prefab_entity
+    {
+        name prop_blockout_box_corner_123_1
+        position -294.08167 -2.59020 -19.67334
+        rotation -90.00000 0 -89.99502
+        scale 2.00000 0.37000 0.25000
+        param __shadow true
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_dents_01
+        param model blockout_box_corner
+        param position_x -312.481689
+        param position_y -6.590199
+        param position_z 46.726562
+        param uv_offset_x 0
+        param uv_offset_y 0
+        param uv_scale_y 0.25
+    }
+    prefab_entity
+    {
+        name prop_blockout_box_corner_129_1
+        position -454.09045 -2.59020 -179.64551
+        rotation -90.00000 0 -89.99495
+        scale 4.00000 2.00000 0.25000
+        param __shadow true
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_dents_01
+        param model blockout_box_corner
+        param position_x -472.490479
+        param position_y -6.590199
+        param position_z -113.245605
+        param uv_offset_y 0.96
+        param uv_scale_x 2
+        param uv_scale_y 1
+    }
+    prefab_entity
+    {
+        name prop_blockout_box_corner_21_1
+        position 314.07278 -2.59021 -19.39551
+        rotation -90.00000 0 90.00001
+        scale 2.00000 2.50000 0.25000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_dents_01
+        param model blockout_box_corner
+        param position_x 295.672791
+        param position_y -6.590206
+        param position_z 47.004395
+        param seethrough_direction 9
+        param seethrough_prop true
+        param uv_scale_x 1
+        param uv_scale_y 1.25
+    }
+    prefab_entity
+    {
+        name prop_building_blocks_trim_100_1
+        position 295.02365 -4.04264 -82.17944
+        rotation -0.00001 90.00001 0.00001
+        scale 1.00000 1.00000 0.60000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_building_blocks_trim_6
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param model building_blocks_trim_x8
+        param position_x 276.623657
+        param position_y -8.042637
+        param position_z -15.779541
+        param seethrough_direction 9
+        param seethrough_prop true
+        param uv_scale_y 1.25
+    }
+    prefab_entity
+    {
+        name prop_building_blocks_trim_101_1
+        position 290.62332 -4.44255 -282.17920
+        rotation 0.89999 89.99999 0.00001
+        scale 1.00000 1.00000 0.50000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_building_blocks_trim_6
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param model building_blocks_trim_x8
+        param position_x 272.223328
+        param position_y -8.442547
+        param position_z -215.779297
+        param seethrough_direction 9
+        param seethrough_prop true
+        param uv_scale_y 1.25
+    }
+    prefab_entity
+    {
+        name prop_building_blocks_trim_157_1
+        position 26.05939 11.30778 24.99878
+        rotation -3.25071 112.81886 173.76685
+        scale 1.00000 1.00000 0.55000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_building_blocks_trim_6
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model building_blocks_trim_x8
+        param position_x 7.659363
+        param position_y 7.307777
+        param position_z 91.398682
+        param seethrough_direction 9
+        param seethrough_prop true
+        param uv_scale_y 1.25
+    }
+    prefab_entity
+    {
+        name prop_floor_broken_4x4_012_1_1
+        position 58.45123 -1.88420 -74.93359
+        rotation 0 179.99997 0
+        scale 1.05000 1.05000 1.00000
+        param __shadow true
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model floor_broken_4x4_012
+        param position_x 40.051208
+        param position_y -5.884197
+        param position_z -8.533691
+        param seethrough_direction 9
+        param seethrough_prop true
+    }
+    prefab_entity
+    {
+        name prop_floor_broken_4x4_012_2_1
+        position -119.45093 -7.08421 -75.15161
+        rotation 0 71.99997 0
+        scale 1.05000 1.05000 1.00000
+        param __shadow true
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model floor_broken_4x4_012
+        param position_x -137.850952
+        param position_y -11.084209
+        param position_z -8.751709
+        param seethrough_direction 9
+        param seethrough_prop true
+    }
+    prefab_entity
+    {
+        name prop_floor_broken_4x4_106_1
+        position 394.07529 -2.59021 -99.39307
+        rotation 0 -89.99998 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_dents_01
+        param model floor_broken_4x4_010
+        param position_x 375.675293
+        param position_y -6.590206
+        param position_z -32.993164
+        param seethrough_direction 9
+        param seethrough_prop true
+        param size_w 1
+    }
+    prefab_entity
+    {
+        name prop_floor_broken_4x4_125_1
+        position 194.07568 -2.59021 60.60718
+        rotation 0 89.99999 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param material_1 matlib_mat_lib_metal_dents_01
+        param model floor_broken_4x4_02
+        param position_x 175.675659
+        param position_y -6.590206
+        param position_z 127.007080
+        param seethrough_direction 9
+        param seethrough_prop true
+        param size_w 1
+    }
+    prefab_entity
+    {
+        name prop_floor_broken_4x4_131_1
+        position 213.64276 0.23040 -25.02856
+        rotation 1.79999 90.00001 0.00001
+        scale 1.25000 1.25000 1.25000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_shiny
+        param model floor_broken_4x4_010
+        param position_x 195.242737
+        param position_y -3.769600
+        param position_z 41.371338
+        param seethrough_direction 9
+        param seethrough_prop true
+        param size_w 1
+        param uv_scale_x 1.25
+        param uv_scale_y 1.25
+    }
+    prefab_entity
+    {
+        name prop_floor_broken_4x4_132_1
+        position 389.34979 -9.63793 -25.42822
+        rotation -0.00001 -89.99998 -179.99999
+        scale 1.25000 1.25000 1.25000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_shiny
+        param model floor_broken_4x4_010
+        param position_x 370.949799
+        param position_y -13.637928
+        param position_z 40.971680
+        param seethrough_direction 9
+        param seethrough_prop true
+        param size_w 1
+        param uv_scale_x 1.25
+        param uv_scale_y 1.25
+    }
+    prefab_entity
+    {
+        name prop_floor_broken_4x4_235_1
+        position -20.75183 -3.66929 -62.68140
+        rotation 6.22307 -157.53615 176.73020
+        scale 1.00000 1.00000 0.75000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_shiny
+        param model floor_broken_4x4_010
+        param position_x -39.151855
+        param position_y -7.669289
+        param position_z 3.718506
+        param seethrough_direction 9
+        param seethrough_prop true
+        param size_w 1
+    }
+    prefab_entity
+    {
+        name prop_floor_broken_4x4_238_1
+        position -58.30585 -12.00293 -113.39355
+        rotation -6.70441 67.76532 177.89076
+        scale 0.85000 0.75000 0.75000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_dents_01
+        param model floor_broken_4x4_010
+        param position_x -76.705872
+        param position_y -16.002930
+        param position_z -46.993652
+        param seethrough_direction 9
+        param seethrough_prop true
+        param size_w 1
+    }
+    prefab_entity
+    {
+        name prop_floor_broken_4x4_47_1
+        position -184.47382 -6.18615 60.48267
+        rotation -2.70000 0.00350 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param material_1 matlib_mat_lib_metal_dents_01
+        param model floor_broken_4x4_03
+        param position_x -202.873840
+        param position_y -10.186146
+        param position_z 126.882568
+        param size_w 1
+    }
+    prefab_entity
+    {
+        name prop_floor_broken_4x4_48_1
+        position -214.48456 -3.90251 -99.67383
+        rotation -0.26357 -89.99350 -0.63639
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param material_1 matlib_mat_lib_metal_dents_01
+        param model floor_broken_4x4_01
+        param position_x -232.884583
+        param position_y -7.902508
+        param position_z -33.273926
+        param size_w 1
+    }
+    prefab_entity
+    {
+        name prop_floor_broken_4x4_51_1
+        position -356.03723 -8.21468 -18.96362
+        rotation 0.90000 -90.00001 180.00000
+        scale 1.25000 1.25000 1.25000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_shiny
+        param model floor_broken_4x4_010
+        param position_x -374.437256
+        param position_y -12.214680
+        param position_z 47.436279
+        param size_w 1
+    }
+    prefab_entity
+    {
+        name prop_floor_broken_4x4_8_1
+        position 34.07544 -2.59021 -99.39282
+        rotation 0 89.99999 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param material_1 matlib_mat_lib_metal_dents_01
+        param model floor_broken_4x4_07
+        param position_x 15.675415
+        param position_y -6.590206
+        param position_z -32.992920
+        param seethrough_direction 9
+        param seethrough_prop true
+        param size_w 1
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_05_13_1
+        position 92.02161 -0.01416 -48.22974
+        rotation 4.62205 25.40073 -173.55428
+        scale 1.14000 0.72795 1.16747
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_bright
+        param model tech_debris_sm_05
+        param no_collision true
+        param position_x 73.621582
+        param position_y -4.014160
+        param position_z 18.170166
+        param seethrough_direction 9
+        param seethrough_prop true
+        param uv_scale_x_matlib_mat_lib_metal_bright 1.5
+        param uv_scale_x_matlib_mat_lib_metal_floor_01 1.5
+        param uv_scale_y_matlib_mat_lib_metal_bright 1.5
+    }
+}
+
+
+
+
+

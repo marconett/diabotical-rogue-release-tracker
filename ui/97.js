@@ -1,477 +1,839 @@
-global_components["map_selection_modal"] = new MenuComponent("map_selection_modal", _id("map_choice_modal_screen"), (function() {
-    map_selection_modal.init()
-}));
-const map_selection_modal = {
-    state: {
-        open: false,
-        type: null,
-        mode: null,
-        categories: ["official", "community"],
-        active_category: "official",
-        official: [],
-        community: [],
-        selected: null,
-        selected_el: null,
-        order_by: undefined,
-        last_api_options: {},
-        infiniteScroll: {
-            community_page: 0,
-            requesting: false,
-            last_page_reached: false
+GAME.set_initial_data(GAME.ids.GEARSTORM, {
+    GAME_NAME: "Storm",
+    GAME_LOGO: "/html/images/game_selection/game_logo_storm.png",
+    GAME_NAME_FULL: "Diabotical Storm",
+    GAME_TYPE_DESC: "",
+    API_PATH: "/api/v0/3/",
+    HUB_MODE: "rogue_survival_iso",
+    HUB_MAP: "iso_hub",
+    EDIT_MODE: "rogue_edit",
+    location_selection_type: 3,
+    lobby_location_selection_type: 1,
+    online_screens: ["achievements", "coin_shop", "create", "custom", "friends_blocked_panel", "friends_panel", "locker", "play_rogue", "shop_item", "shop_screen"],
+    item_name_map: {},
+    item_pickups_in_scoreboard: [""],
+    weapons_priority_default: ["rl", "shaft", "ss", "bl", "pncr", "vc", "cb", "mac", "melee"],
+    weapon_sound_packs: {
+        0: [],
+        1: [],
+        2: []
+    },
+    CUSTOM_FFA_MODES: [],
+    CUSTOM_MULTI_TEAM_MODES: [],
+    CUSTOM_SOLO_MODES: [],
+    CUSTOM_ROUND_BASED_MODES: [],
+    CUSTOM_TIMELIMIT_ONLY_MODES: [],
+    CUSTOM_RACE_MODES: [],
+    CUSTOM_SPECIAL_COOP_MODES: ["rogue_survival", "rogue_survival_iso"],
+    CUSTOM_TUTORIAL_MODES: [],
+    CUSTOM_ROUND_LIMITS: [1, 2, 3, 4, 5, 6, 7, 8],
+    CUSTOM_CAPTURE_LIMITS: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 20, 0],
+    CUSTOM_MODE_DEFAULTS: {
+        rogue_survival: {
+            score_limit: 1
         },
-        confirm_cb: null,
-        last_map_idx_clicked: null,
-        MAX_NUMBER_SELECTIONS: 9
-    },
-    el: {
-        modal: null,
-        generic_modal_dialog: null,
-        available: null,
-        selected: null,
-        available_scroll_outer: null,
-        selected_scroll_outer: null,
-        available_list: null,
-        selected_list: null,
-        category: null,
-        vote_buttons: null,
-        create_vote_button: null,
-        map_choice_mode_select: null,
-        map_choice_filter_input: null,
-        map_choice_sort: null
-    },
-    resetInfiniteScroll: function() {
-        this.state.infiniteScroll.last_page_reached = false;
-        this.state.infiniteScroll.requesting = false;
-        this.state.infiniteScroll.community_page = 0
-    },
-    init: function() {
-        this.el.modal = _id("map_choice_modal_screen");
-        this.el.generic_modal_dialog = this.el.modal.querySelector(".generic_modal_dialog");
-        this.el.available = _id("map_selection_modal_available");
-        this.el.selected = _id("map_selection_modal_selected");
-        this.el.available_scroll_outer = this.el.available.querySelector(".scroll-outer.content");
-        this.el.selected_scroll_outer = this.el.selected.querySelector(".scroll-outer.content");
-        this.el.available_list = this.el.available.querySelector(".scroll-inner.list");
-        this.el.selected_list = this.el.selected.querySelector(".scroll-inner.list");
-        this.el.category = this.el.available.querySelector(".menu .center");
-        this.el.vote_buttons = _id("map_vote_buttons");
-        this.el.create_vote_button = _id("create_vote_button");
-        this.el.map_choice_mode_select = _id("maps_choice_mode_select");
-        this.el.map_choice_filter_input = _id("map_choice_filter_input");
-        this.el.map_choice_sort = _id("map_choice_sort");
-        GAME.add_activate_callback((game_id => {
-            create_game_mode_select(this.el.map_choice_mode_select, ((opt, field) => {
-                this.on_mode_select_changed(field.dataset.value)
-            }))
-        }));
-        ui_setup_select(this.el.map_choice_sort, ((opt, field) => {
-            this.el.map_choice_filter_input.value = "";
-            this.update_map_choices({
-                category: this.state.active_category,
-                order: field.dataset.value
-            })
-        }));
-        global_input_debouncers["map_choice_filter_input"] = new InputDebouncer((() => {
-            this.update_map_choices({
-                category: this.state.active_category,
-                search: this.el.map_choice_filter_input.value.trim(),
-                order: this.el.map_choice_sort.dataset.value
-            })
-        }));
-        this.render_category();
-        Navigation.generate_nav({
-            name: "map_selection_modal",
-            nav_root: this.el.category,
-            nav_class: "indicator",
-            selection_required: true,
-            hover_sound: "",
-            action_sound: "",
-            mouse_hover: "none",
-            mouse_click: "none",
-            action_cb_type: null,
-            action_cb: null,
-            select_cb: el => {
-                this.set_category(el)
-            }
-        });
-        let nav_back = this.el.available.querySelector(".menu .nav_info.back.kbm_element");
-        let nav_forward = this.el.available.querySelector(".menu .nav_info.forward.kbm_element");
-        nav_back.addEventListener("click", (() => {
-            Navigation.prev("map_selection_modal")
-        }));
-        nav_forward.addEventListener("click", (() => {
-            Navigation.next("map_selection_modal")
-        }));
-        this.el.available_list.addEventListener("scroll", (event => {
-            if (this.state.active_category !== "community") return;
-            const threshold = 150;
-            const containerHeight = event.target.getBoundingClientRect().height;
-            const windowBottom = event.target.scrollTop + containerHeight;
-            if (!this.state.infiniteScroll.requesting && !this.state.infiniteScroll.last_page_reached && windowBottom > event.target.scrollHeight - threshold) {
-                this.state.infiniteScroll.community_page++;
-                this.update_map_choices_page(this.state.type, this.state.mode)
-            }
-        }));
-        on_close_modal_screen.push((modal_id => {
-            if (modal_id === "map_choice_modal_screen" && this.state.open) {
-                this.close()
-            }
-        }))
-    },
-    _reset_state: function() {
-        this.state.type = null;
-        this.state.mode = null;
-        this.state.official.length = 0;
-        this.state.community.length = 0;
-        this.state.selected = null;
-        this.state.selected_el = null;
-        this.state.order_by = undefined;
-        this.state.last_api_options = {};
-        this.state.confirm_cb = null;
-        _empty(this.el.selected_list);
-        this.el.create_vote_button.classList.add("disabled")
-    },
-    on_mode_select_changed: function(mode) {
-        this.state.mode = mode;
-        this.update_map_choices({
-            category: this.state.active_category,
-            order: this.el.map_choice_sort.dataset.value
-        })
-    },
-    open: function(type, mode, selected, cb) {
-        if (!["vote", "single_select", "multi_select"].includes(type)) return;
-        engine.call("get_map_choices");
-        this.state.open = true;
-        this.state.last_map_idx_clicked = null;
-        this._reset_state();
-        this.state.type = type;
-        this.state.mode = mode;
-        if (typeof cb === "function") this.state.confirm_cb = cb;
-        this.el.map_choice_mode_select.dataset.value = mode;
-        update_select(this.el.map_choice_mode_select);
-        if (type === "vote") {
-            this.el.selected_scroll_outer.classList.remove("multi_select");
-            this.el.selected_list.classList.add("single");
-            this.el.vote_buttons.style.display = "flex";
-            this.state.selected = null
-        } else if (type === "single_select") {
-            this.el.selected_scroll_outer.classList.remove("multi_select");
-            this.el.selected_list.classList.add("single");
-            this.el.vote_buttons.style.display = "none";
-            this.state.selected = null
-        } else if (type === "multi_select") {
-            this.el.selected_scroll_outer.classList.add("multi_select");
-            this.el.selected_list.classList.remove("single");
-            this.el.vote_buttons.style.display = "none";
-            this.state.selected = []
-        }
-        if (selected) {
-            if (typeof selected === "string") {
-                this.state.selected = selected
-            } else if (typeof selected === "object" && type === "multi_select") {
-                this.state.selected.length = 0;
-                for (let m of selected) {
-                    this.state.selected.push(m)
-                }
-            }
-            this.render_map_selection()
-        }
-        if (this.el.map_choice_filter_input.value) this.el.map_choice_filter_input.value = "";
-        this.update_map_choices({
-            category: this.state.active_category,
-            order: this.el.map_choice_sort.dataset.value
-        });
-        Navigation.set_override_active("modal", {
-            lb_rb: "map_selection_modal"
-        });
-        open_modal_screen("map_choice_modal_screen")
-    },
-    close: function() {
-        if (this.state.type === "multi_select" && typeof this.state.confirm_cb === "function") {
-            this.state.confirm_cb(this.state.selected)
-        }
-        if (this.state.type === "single_select" && typeof this.state.confirm_cb === "function" && this.state.selected !== null) {
-            this.state.confirm_cb(this.state.selected)
-        }
-        this.state.open = false;
-        Navigation.set_override_inactive("modal");
-        close_modal_screen_by_selector("map_choice_modal_screen")
-    },
-    confirm_selection: function() {
-        if (this.state.selected === null) return;
-        if (this.el.create_vote_button.classList.contains("disabled")) return;
-        this.close();
-        _play_click1();
-        if (this.state.confirm_cb !== null) this.state.confirm_cb(this.state.selected)
-    },
-    render_category: function() {
-        _empty(this.el.category);
-        let name_el = _createElement("div", "category_name", this.get_category_name());
-        let indicators_el = _createElement("div", "category_indicators");
-        for (let i = 0; i < this.state.categories.length; i++) {
-            let indicator_el = _createElement("div", "indicator");
-            indicator_el.dataset.category = this.state.categories[i];
-            indicators_el.appendChild(indicator_el)
-        }
-        this.el.category.appendChild(name_el);
-        this.el.category.appendChild(indicators_el)
-    },
-    set_category: function(el) {
-        if (this.state.categories.indexOf(el.dataset.category) === -1) return;
-        this.state.active_category = el.dataset.category;
-        let name = this.el.category.querySelector(".category_name");
-        if (name) name.textContent = this.get_category_name();
-        if (this.state.active_category === "official") {
-            this.el.map_choice_filter_input.parentElement.style.display = "none";
-            this.el.map_choice_sort.parentElement.style.display = "none"
-        } else {
-            this.el.map_choice_filter_input.parentElement.style.display = "flex";
-            this.el.map_choice_sort.parentElement.style.display = "flex"
-        }
-        this.resetInfiniteScroll();
-        this.update_map_choices({
-            category: this.state.active_category,
-            order: this.el.map_choice_sort.dataset.value
-        })
-    },
-    get_category_name: function() {
-        if (this.state.active_category === "community") return "Community Maps";
-        return "Official Maps"
-    },
-    render_map_choices: function(category) {
-        let maps = this.state[category];
-        let fragment = new DocumentFragment;
-        for (let m of maps) {
-            if (!m.author && typeof MAP_AUTHORS === "object" && m.map in MAP_AUTHORS) {
-                m.author = MAP_AUTHORS[m.map]
-            }
-            const is_community = category === "community" ? 1 : 0;
-            let map = _createElement("div", "map");
-            if (is_community && !m.reviewed) {
-                const review_warn = _createElement("span", ["map_under_review"]);
-                review_warn.textContent = localize("map_under_review");
-                map.appendChild(review_warn)
-            }
-            map.style.backgroundImage = `url("map-thumbnail://${m.map}")`;
-            const MAX_7_DAYS = 8 * 24 * 60 * 60 * 1e3;
-            if (m.updated_at != undefined && Date.now() - m.updated_at.getTime() < MAX_7_DAYS) {
-                const $updated_at = _createElement("div", "update_at");
-                $updated_at.textContent = `${moment(m.updated_at).fromNow()} (v${m.revision})`;
-                map.appendChild($updated_at)
-            }
-            map_info = _createElement("div", "map_info");
-            map_info.appendChild(_createElement("div", "name", m.name));
-            let extra_info = _createElement("div", "extra");
-            if (m.rate != undefined) {
-                const rating = _createElement("div", ["map_rating"]);
-                for (let i = 0; i < MAX_MAP_RATE; i++) {
-                    let star = _createElement("div", ["star"]);
-                    if (i < m.rate) {
-                        star.classList.add("active")
-                    }
-                    rating.appendChild(star)
-                }
-                extra_info.appendChild(rating)
-            }
-            if (m.author) {
-                const map_author = _createElement("div", "author", m.author);
-                map_author.dataset.userId = m.user_id;
-                extra_info.appendChild(map_author)
-            }
-            map_info.appendChild(extra_info);
-            map.appendChild(map_info);
-            map.addEventListener("click", (() => {
-                this.state.last_map_idx_clicked = null;
-                if (this.state.type === "multi_select") {
-                    const selection = [m.map, m.name, is_community];
-                    let existing_index = -1;
-                    for (let i = 0; i < this.state.selected.length; i++) {
-                        if (this.state.selected[i][0] === m.map) {
-                            existing_index = i;
-                            break
-                        }
-                    }
-                    if (existing_index >= 0) {
-                        this.state.selected.splice(existing_index, 1);
-                        this.state.selected.unshift(selection);
-                        this.render_map_selection()
-                    } else if (this.state.selected.length < this.state.MAX_NUMBER_SELECTIONS) {
-                        this.state.selected.push(selection);
-                        this.render_map_selection()
-                    }
-                } else if (this.state.type === "single_select") {
-                    this.state.selected = [m.map, m.name, is_community];
-                    this.close()
-                } else if (this.state.type === "vote") {
-                    _play_cb_check();
-                    this.state.selected = [m.map, m.name, is_community];
-                    this.render_map_selection();
-                    this.el.create_vote_button.classList.remove("disabled")
-                }
-            }));
-            fragment.appendChild(map)
-        }
-        _empty(this.el.available_list);
-        this.el.available_list.appendChild(fragment);
-        resetScrollbar(this.el.available_scroll_outer);
-        refreshScrollbar(this.el.available_scroll_outer)
-    },
-    update_map_choices: function(options) {
-        const MIN_INITIAL_MAPS = 35;
-        const category = options.category || "official";
-        if (category === "community") {
-            const community_maps_enabled = GAME.get_data("COMMUNITY_MAPS");
-            if (!community_maps_enabled) return;
-            _empty(this.el.available_list);
-            this.el.available_list.appendChild(_createSpinner());
-            options = {...this.state.last_api_options, ...options, mode: this.state.mode
-            };
-            this.resetInfiniteScroll();
-            this.state.last_api_options = options;
-            const order = options && options.order && options.order.length ? `&order=${options.order}` : ``;
-            const search = options && options.search && options.search.length ? `&search=${encodeURI(options.search)}` : ``;
-            const page = `&page=${this.state.infiniteScroll.community_page}`;
-            this.state.infiniteScroll.requesting = true;
-            api_request("GET", `/content/maps?mode=${this.state.mode}${order}${search}${page}`, {}, (maps => {
-                if (this.state.active_category !== "community") return;
-                _empty(this.el.available_list);
-                if (maps) {
-                    this.state[category] = maps.map((map => ({
-                        map: map.map_id,
-                        name: map.reviewed ? map.name : map.random_name.replace("_", " "),
-                        author: map.author,
-                        user_id: map.user_id,
-                        reviewed: map.reviewed,
-                        rate: map.rate,
-                        votes: map.votes,
-                        revision: map.revision,
-                        updated_at: new Date(map.update_ts),
-                        has_thumbnail: map.has_thumbnail
-                    })))
-                } else {
-                    this.state[category] = []
-                }
-                this.render_map_choices("community");
-                if (this.state[category].length < MIN_INITIAL_MAPS && maps && maps.length !== 0) {
-                    this.state.infiniteScroll.community_page++;
-                    this.update_map_choices_page()
-                }
-                this.state.infiniteScroll.requesting = false
-            }))
-        } else if (category === "official") {
-            this.state.official.length = 0;
-            if (global_game_mode_map_lists.hasOwnProperty(this.state.mode)) {
-                if (global_game_mode_map_lists[this.state.mode].length) {
-                    for (let m of global_game_mode_map_lists[this.state.mode]) {
-                        this.state.official.push(m)
-                    }
-                }
-                this.render_map_choices("official")
-            } else {
-                api_request("GET", `/mode_maps?mode_name=${this.state.mode}`, {}, (mode => {
-                    if (mode) {
-                        set_global_map_list_from_api(mode.mode_name, mode.maps);
-                        if (this.state.mode === mode.mode_name) {
-                            this.update_map_choices({
-                                category: this.state.active_category,
-                                order: this.el.map_choice_sort.dataset.value
-                            })
-                        }
-                    }
-                }))
-            }
+        rogue_survival_iso: {
+            score_limit: 1
         }
     },
-    update_map_choices_page: function() {
-        const community_maps_enabled = GAME.get_data("COMMUNITY_MAPS");
-        if (!community_maps_enabled) return;
-        const options = {...this.state.last_api_options
-        };
-        const category = "community";
-        const order = options && options.order && options.order.length ? `&order=${options.order}` : ``;
-        const search = options && options.search && options.search.length ? `&search=${encodeURI(options.search)}` : ``;
-        const page = `&page=${this.state.infiniteScroll.community_page}`;
-        this.state.infiniteScroll.requesting = true;
-        api_request("GET", `/content/maps?mode=${this.state.mode}${order}${search}${page}`, {}, (maps => {
-            if (this.state.active_category !== "community") return;
-            const newMaps = maps.map((map => ({
-                map: map.map_id,
-                name: map.reviewed ? map.name : map.random_name.replace("_", " "),
-                author: map.author,
-                user_id: map.user_id,
-                reviewed: map.reviewed,
-                rate: map.rate,
-                votes: map.votes,
-                revision: map.revision,
-                updated_at: new Date(map.update_ts),
-                has_thumbnail: map.has_thumbnail
-            })));
-            this.state.infiniteScroll.last_page_reached = newMaps.length === 0;
-            this.state[category].push(...newMaps);
-            this.render_map_choices("community");
-            refreshScrollbar(this.el.available_scroll_outer);
-            this.state.infiniteScroll.requesting = false
-        }))
+    game_mode_map: {
+        rogue_survival: {
+            mode: "rogue_survival",
+            name: "Survival",
+            i18n: "game_mode_survival",
+            desc_i18n: "game_mode_2_desc_survival",
+            announce: "",
+            enabled: true,
+            image: "",
+            icon: ""
+        },
+        rogue_survival_iso: {
+            mode: "rogue_survival_iso",
+            name: "Survival Isometric",
+            i18n: "game_mode_survival_iso",
+            desc_i18n: "game_mode_2_desc_survival_iso",
+            announce: "",
+            enabled: true,
+            image: "",
+            icon: ""
+        }
     },
-    render_map_selection: function() {
-        _empty(this.el.selected_list);
-        if (!this.state.selected) return;
-        let maps = [];
-        if (this.state.type === "multi_select") {
-            if (this.state.selected.length === 0) this.state.last_map_idx_clicked = null;
-            maps = this.state.selected
-        } else {
-            maps = [this.state.selected]
+    CUSTOM_MODE_DEFINITIONS: {},
+    physics_map: {
+        0: {
+            i18n: "custom_settings_physics_diabotical"
         }
-        let idx = 0;
-        for (const map of maps) {
-            const [map_id, map_name, is_community] = map;
-            const map_idx = idx;
-            let $map = _createElement("div", "map");
-            $map.style.backgroundImage = `url("map-thumbnail://${map_id}")`;
-            if (map_idx === 0) $map.classList.add("big");
-            $map_info = _createElement("div", "map_info");
-            $map_info.appendChild(_createElement("div", "name", _format_map_name(map_id, map_name)));
-            let $map_actions = _createElement("div", "map_actions");
-            let $map_action_pushtotop = _createElement("div", ["action", "push"]);
-            let $map_action_remove = _createElement("div", ["action", "remove"]);
-            if (map_idx > 0) $map_actions.appendChild($map_action_pushtotop);
-            else $map_action_remove.classList.add("wide");
-            $map_actions.appendChild($map_action_remove);
-            $map.appendChild($map_info);
-            $map.appendChild($map_actions);
-            if (this.state.last_map_idx_clicked !== null && this.state.last_map_idx_clicked === map_idx) {
-                $map_actions.style.display = "flex"
-            }
-            $map_action_pushtotop.addEventListener("click", (() => {
-                this.state.last_map_idx_clicked = map_idx;
-                if (map_idx >= 0) {
-                    this.state.selected.splice(map_idx, 1);
-                    this.state.selected.unshift(map)
-                }
-                this.render_map_selection()
-            }));
-            $map_action_remove.addEventListener("click", (() => {
-                this.state.last_map_idx_clicked = map_idx;
-                if (this.state.type === "multi_select") {
-                    this.state.selected = this.state.selected.filter((([s_id]) => s_id !== map_id))
-                } else {
-                    this.state.selected = null;
-                    this.el.create_vote_button.classList.add("disabled")
-                }
-                this.render_map_selection()
-            }));
-            $map.addEventListener("mouseenter", (() => {
-                $map_actions.style.display = "flex"
-            }));
-            $map.addEventListener("mouseleave", (() => {
-                $map_actions.style.display = "none";
-                this.state.last_map_idx_clicked = null
-            }));
-            this.el.selected_list.appendChild($map);
-            idx++
+    },
+    battlepass_data: {},
+    competitive_data: {},
+    customization_sub_types: {
+        0: [],
+        1: [],
+        2: [],
+        3: ["pu"],
+        4: [],
+        5: [],
+        6: ["melee", "mac", "bl", "ss", "rl", "shaft", "cb", "pncr", "gl", "w9", "mg", "vc"],
+        7: ["melee", "mac", "bl", "ss", "rl", "shaft", "cb", "pncr", "gl", "w9", "mg", "vc"],
+        8: [],
+        9: ["l", "r"],
+        10: [],
+        11: [],
+        12: [],
+        13: [],
+        14: [],
+        15: [],
+        16: [],
+        21: [],
+        22: []
+    },
+    customization_multi_sub_types: [7, 9],
+    customization_array_types: {},
+    default_customizations: {
+        3: {
+            pu: "mu_pu_devilish"
+        },
+        5: "sp_play_nice"
+    },
+    LOBBY_INIT_MODE: "rogue_survival_iso",
+    LOBBY_SETTINGS_LIST: {
+        private: ["bool", true, true],
+        name: ["string", "", ""],
+        mode: ["string", "", ""],
+        mode_name: ["string", "", ""],
+        mode_editing: ["int", 0, 0],
+        ai_mode_prompt: ["string", "", ""],
+        datacenter: ["string", "", ""],
+        map_list: ["custom", [],
+            []
+        ],
+        time_limit: ["int", 0, 0],
+        score_limit: ["int", 0, 0],
+        team_count: ["int", 2, 2],
+        team_size: ["int", 3, 3],
+        allow_map_voting: ["int", 1, 1],
+        continuous: ["int", 0, 0],
+        auto_balance: ["int", 0, 0],
+        team_switching: ["int", 0, 0],
+        warmup_time: ["int", -1, -1],
+        min_players: ["int", 1, 1],
+        max_clients: ["int", 100, 100],
+        ready_percentage: ["float", 1, 1],
+        commands: ["custom", [],
+            []
+        ]
+    },
+    LOBBY_SETTINGS_OPTION_LIST: ["allow_map_voting", "mode_editing", "ai_mode_prompt"],
+    LOBBY_CLIENT_VAR_MAP: {
+        lobby_visibility: {
+            name: "private",
+            cb_type: "select",
+            type: "real"
+        },
+        lobby_custom_map: {
+            name: "map_list",
+            cb_type: "custom",
+            type: "json"
+        },
+        lobby_custom_mode: {
+            name: "mode",
+            cb_type: "custom",
+            type: "json"
+        },
+        lobby_custom_teams: {
+            name: "team_count",
+            cb_type: "select",
+            type: "real"
+        },
+        lobby_custom_team_size: {
+            name: "team_size",
+            cb_type: "select",
+            type: "real"
+        },
+        lobby_custom_duration: {
+            name: "time_limit",
+            cb_type: "select",
+            type: "real"
+        },
+        lobby_custom_score_limit: {
+            name: "score_limit",
+            cb_type: "select",
+            type: "real"
+        },
+        lobby_custom_datacenter: {
+            name: "datacenter",
+            cb_type: "select",
+            type: "string"
+        },
+        lobby_custom_continuous: {
+            name: "continuous",
+            cb_type: "select",
+            type: "real"
+        },
+        lobby_custom_warmup_time: {
+            name: "warmup_time",
+            cb_type: "select",
+            type: "real"
+        },
+        lobby_custom_team_switching: {
+            name: "team_switching",
+            cb_type: "select",
+            type: "real"
+        },
+        lobby_custom_min_players: {
+            name: "min_players",
+            cb_type: "select",
+            type: "real"
+        },
+        lobby_custom_max_clients: {
+            name: "max_clients",
+            cb_type: "select",
+            type: "real"
+        },
+        lobby_custom_ready_percentage: {
+            name: "ready_percentage",
+            cb_type: "select",
+            type: "real"
+        },
+        lobby_custom_allow_map_voting: {
+            name: "allow_map_voting",
+            cb_type: "select",
+            type: "real"
+        },
+        lobby_custom_commands: {
+            name: "commands",
+            cb_type: "custom",
+            type: "json"
         }
-        resetScrollbar(this.el.selected_scroll_outer);
-        refreshScrollbar(this.el.selected_scroll_outer)
-    }
-};
+    },
+    COMMUNITY_MAPS: true,
+    COMMUNITY_MODES: true,
+    customization_group_map: {
+        eggbot: {
+            i18n: "class_rogue_eggbot",
+            categories: [{
+                id: "c_eggbot",
+                type: "suit",
+                i18n: "customization_type_suit"
+            }, {
+                id: "w_smg_eggbot",
+                type: "weapon",
+                color_id: "100",
+                i18n: "weapon_submachinegun"
+            }, {
+                id: "w_egun_eggbot",
+                type: "weapon",
+                color_id: "105",
+                i18n: "weapon_egun"
+            }, {
+                id: "w_cb_eggbot",
+                type: "weapon",
+                color_id: "6",
+                i18n: "weapon_crossbow"
+            }]
+        },
+        scout: {
+            i18n: "class_rogue_scout",
+            categories: [{
+                id: "c_weesuit",
+                type: "suit",
+                i18n: "customization_type_suit"
+            }, {
+                id: "w_mac_scout",
+                type: "weapon",
+                color_id: "1",
+                i18n: "weapon_machinegun"
+            }, {
+                id: "w_rev_scout",
+                type: "weapon",
+                color_id: "107",
+                i18n: "weapon_revolver"
+            }, {
+                id: "w_hsniper_scout",
+                type: "weapon",
+                color_id: "62",
+                i18n: "weapon_heavysniper"
+            }]
+        },
+        chunk: {
+            i18n: "class_rogue_chunk",
+            categories: [{
+                id: "c_chunk",
+                type: "suit",
+                i18n: "customization_type_suit"
+            }, {
+                id: "w_hmg_chunk",
+                type: "weapon",
+                color_id: "106",
+                i18n: "weapon_heavymachinegun"
+            }, {
+                id: "w_shaft_chunk",
+                type: "weapon",
+                color_id: "5",
+                i18n: "weapon_shaft"
+            }, {
+                id: "w_rl_chunk",
+                type: "weapon",
+                color_id: "4",
+                i18n: "weapon_rocketlauncher"
+            }]
+        },
+        bigbot: {
+            i18n: "class_rogue_bigbot",
+            categories: [{
+                id: "c_bigbot",
+                type: "suit",
+                i18n: "customization_type_suit"
+            }, {
+                id: "w_ss_bigbot",
+                type: "weapon",
+                color_id: "3",
+                i18n: "weapon_supershotgun"
+            }, {
+                id: "w_bl_bigbot",
+                type: "weapon",
+                color_id: "2",
+                i18n: "weapon_blaster"
+            }, {
+                id: "w_gl_bigbot",
+                type: "weapon",
+                color_id: "8",
+                i18n: "weapon_grenadelauncher"
+            }]
+        }
+    },
+    customization_category_map: {
+        c_eggbot: [new CustomizationType("suit", "eggbot")],
+        c_weesuit: [new CustomizationType("suit", "scout")],
+        c_chunk: [new CustomizationType("suit", "chunk")],
+        c_bigbot: [new CustomizationType("suit", "bigbot")],
+        w_cb_eggbot: [new CustomizationType("weapon", "cb", "eggbot")],
+        w_smg_eggbot: [new CustomizationType("weapon", "smg", "eggbot")],
+        w_egun_eggbot: [new CustomizationType("weapon", "egun", "eggbot")],
+        w_mac_scout: [new CustomizationType("weapon", "mac", "scout")],
+        w_hsniper_scout: [new CustomizationType("weapon", "hsniper", "scout")],
+        w_rev_scout: [new CustomizationType("weapon", "rev", "scout")],
+        w_hmg_chunk: [new CustomizationType("weapon", "hmg", "chunk")],
+        w_shaft_chunk: [new CustomizationType("weapon", "shaft", "chunk")],
+        w_rl_chunk: [new CustomizationType("weapon", "rl", "chunk")],
+        w_ss_bigbot: [new CustomizationType("weapon", "ss", "bigbot")],
+        w_bl_bigbot: [new CustomizationType("weapon", "bl", "bigbot")],
+        w_gl_bigbot: [new CustomizationType("weapon", "gl", "bigbot")]
+    },
+    flat_bg_scene_screens: ["coin_shop", "notification", "battlepass", "shop", "shop_item", "player_profile", "locker"],
+    map_names: {
+        wellspring: "Wellspring",
+        furnace: "Furnace",
+        toya: "Toya",
+        titan: "Titan",
+        cassini: "Cassini",
+        arcol: "Arcol",
+        sentinel: "Sentinel",
+        relay: "Relay"
+    },
+    default_weapon_skin_images: {
+        cb: "/html/images/weapon_icons/wp_card_crossbow_nobg.png.dds",
+        smg: "/html/images/weapon_icons/wp_card_submachinegun_nobg.png.dds",
+        mac: "/html/images/weapon_icons/wp_card_machinegun_nobg.png.dds",
+        egun: "/html/images/weapon_icons/wp_card_egun_nobg.png.dds",
+        hsniper: "/html/images/weapon_icons/wp_card_heavysniper_nobg.png.dds",
+        ss: "/html/images/weapon_icons/wp_card_shotgun_nobg.png.dds",
+        rev: "/html/images/weapon_icons/wp_card_revolver_nobg.png.dds",
+        hmg: "/html/images/weapon_icons/wp_card_heavymachinegun_nobg.png.dds",
+        shaft: "/html/images/weapon_icons/wp_card_shaft_nobg.png.dds",
+        bl: "/html/images/weapon_icons/wp_card_blaster_nobg.png.dds",
+        rl: "/html/images/weapon_icons/wp_card_rocketlauncher_nobg.png.dds"
+    },
+    locker_preview_scale: {
+        suit: {
+            7: .9
+        },
+        weapon: {
+            mac: .85,
+            smg: .85,
+            egun: .7,
+            rev: .85
+        }
+    },
+    customizations: {
+        6: {
+            bl: [{
+                customization_id: "rog_we_bl_excavator",
+                customization_type: 6,
+                customization_sub_type: "bl",
+                customization_set_id: null,
+                rarity: 0,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_bl_juno",
+                customization_type: 6,
+                customization_sub_type: "bl",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_bl_stinger",
+                customization_type: 6,
+                customization_sub_type: "bl",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_bl_vintage",
+                customization_type: 6,
+                customization_sub_type: "bl",
+                customization_set_id: null,
+                rarity: 3,
+                seen: true,
+                amount: 1
+            }],
+            cb: [{
+                customization_id: "rog_we_cb_excavator",
+                customization_type: 6,
+                customization_sub_type: "cb",
+                customization_set_id: null,
+                rarity: 0,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_cb_juno",
+                customization_type: 6,
+                customization_sub_type: "cb",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_cb_stinger",
+                customization_type: 6,
+                customization_sub_type: "cb",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_cb_vintage",
+                customization_type: 6,
+                customization_sub_type: "cb",
+                customization_set_id: null,
+                rarity: 3,
+                seen: true,
+                amount: 1
+            }],
+            egun: [{
+                customization_id: "rog_we_egun_excavator",
+                customization_type: 6,
+                customization_sub_type: "egun",
+                customization_set_id: null,
+                rarity: 0,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_egun_juno",
+                customization_type: 6,
+                customization_sub_type: "egun",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_egun_stinger",
+                customization_type: 6,
+                customization_sub_type: "egun",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_egun_vaporwave",
+                customization_type: 6,
+                customization_sub_type: "egun",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_egun_vintage",
+                customization_type: 6,
+                customization_sub_type: "egun",
+                customization_set_id: null,
+                rarity: 3,
+                seen: true,
+                amount: 1
+            }],
+            hmg: [{
+                customization_id: "rog_we_hmg_excavator",
+                customization_type: 6,
+                customization_sub_type: "hmg",
+                customization_set_id: null,
+                rarity: 0,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_hmg_juno",
+                customization_type: 6,
+                customization_sub_type: "hmg",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_hmg_marine",
+                customization_type: 6,
+                customization_sub_type: "hmg",
+                customization_set_id: null,
+                rarity: 0,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_hmg_stinger",
+                customization_type: 6,
+                customization_sub_type: "hmg",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_hmg_vaporwave",
+                customization_type: 6,
+                customization_sub_type: "hmg",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_hmg_vintage",
+                customization_type: 6,
+                customization_sub_type: "hmg",
+                customization_set_id: null,
+                rarity: 3,
+                seen: true,
+                amount: 1
+            }],
+            hsniper: [{
+                customization_id: "rog_we_hsniper_excavator",
+                customization_type: 6,
+                customization_sub_type: "hsniper",
+                customization_set_id: null,
+                rarity: 0,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_hsniper_juno",
+                customization_type: 6,
+                customization_sub_type: "hsniper",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_hsniper_stinger",
+                customization_type: 6,
+                customization_sub_type: "hsniper",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_hsniper_vintage",
+                customization_type: 6,
+                customization_sub_type: "hsniper",
+                customization_set_id: null,
+                rarity: 3,
+                seen: true,
+                amount: 1
+            }],
+            mac: [{
+                customization_id: "rog_we_mac_excavator",
+                customization_type: 6,
+                customization_sub_type: "mac",
+                customization_set_id: null,
+                rarity: 0,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_mac_juno",
+                customization_type: 6,
+                customization_sub_type: "mac",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_mac_marine",
+                customization_type: 6,
+                customization_sub_type: "mac",
+                customization_set_id: null,
+                rarity: 0,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_mac_stinger",
+                customization_type: 6,
+                customization_sub_type: "mac",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_mac_vaporwave",
+                customization_type: 6,
+                customization_sub_type: "mac",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_mac_vintage",
+                customization_type: 6,
+                customization_sub_type: "mac",
+                customization_set_id: null,
+                rarity: 3,
+                seen: true,
+                amount: 1
+            }],
+            rev: [{
+                customization_id: "rog_we_rev_aes",
+                customization_type: 6,
+                customization_sub_type: "rev",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_rev_excavator",
+                customization_type: 6,
+                customization_sub_type: "rev",
+                customization_set_id: null,
+                rarity: 0,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_rev_gullwing",
+                customization_type: 6,
+                customization_sub_type: "rev",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_rev_juno",
+                customization_type: 6,
+                customization_sub_type: "rev",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_rev_marine",
+                customization_type: 6,
+                customization_sub_type: "rev",
+                customization_set_id: null,
+                rarity: 0,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_rev_penthouse",
+                customization_type: 6,
+                customization_sub_type: "rev",
+                customization_set_id: null,
+                rarity: 3,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_rev_stinger",
+                customization_type: 6,
+                customization_sub_type: "rev",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_rev_vaporwave",
+                customization_type: 6,
+                customization_sub_type: "rev",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_rev_vintage",
+                customization_type: 6,
+                customization_sub_type: "rev",
+                customization_set_id: null,
+                rarity: 3,
+                seen: true,
+                amount: 1
+            }],
+            rl: [{
+                customization_id: "rog_we_rl_excavator",
+                customization_type: 6,
+                customization_sub_type: "rl",
+                customization_set_id: null,
+                rarity: 0,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_rl_juno",
+                customization_type: 6,
+                customization_sub_type: "rl",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_rl_stinger",
+                customization_type: 6,
+                customization_sub_type: "rl",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_rl_vintage",
+                customization_type: 6,
+                customization_sub_type: "rl",
+                customization_set_id: null,
+                rarity: 3,
+                seen: true,
+                amount: 1
+            }],
+            shaft: [{
+                customization_id: "rog_we_shaft_excavator",
+                customization_type: 6,
+                customization_sub_type: "shaft",
+                customization_set_id: null,
+                rarity: 0,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_shaft_juno",
+                customization_type: 6,
+                customization_sub_type: "shaft",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_shaft_stinger",
+                customization_type: 6,
+                customization_sub_type: "shaft",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_shaft_vintage",
+                customization_type: 6,
+                customization_sub_type: "shaft",
+                customization_set_id: null,
+                rarity: 3,
+                seen: true,
+                amount: 1
+            }],
+            smg: [{
+                customization_id: "rog_we_smg_excavator",
+                customization_type: 6,
+                customization_sub_type: "smg",
+                customization_set_id: null,
+                rarity: 0,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_smg_juno",
+                customization_type: 6,
+                customization_sub_type: "smg",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_smg_stinger",
+                customization_type: 6,
+                customization_sub_type: "smg",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_smg_vintage",
+                customization_type: 6,
+                customization_sub_type: "smg",
+                customization_set_id: null,
+                rarity: 3,
+                seen: true,
+                amount: 1
+            }],
+            ss: [{
+                customization_id: "rog_we_ss_excavator",
+                customization_type: 6,
+                customization_sub_type: "ss",
+                customization_set_id: null,
+                rarity: 0,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_ss_juno",
+                customization_type: 6,
+                customization_sub_type: "ss",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_ss_stinger",
+                customization_type: 6,
+                customization_sub_type: "ss",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_ss_vintage",
+                customization_type: 6,
+                customization_sub_type: "ss",
+                customization_set_id: null,
+                rarity: 3,
+                seen: true,
+                amount: 1
+            }],
+            gl: [{
+                customization_id: "rog_we_gl_excavator",
+                customization_type: 6,
+                customization_sub_type: "gl",
+                customization_set_id: null,
+                rarity: 0,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_gl_juno",
+                customization_type: 6,
+                customization_sub_type: "gl",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_gl_stinger",
+                customization_type: 6,
+                customization_sub_type: "gl",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_gl_vintage",
+                customization_type: 6,
+                customization_sub_type: "gl",
+                customization_set_id: null,
+                rarity: 3,
+                seen: true,
+                amount: 1
+            }]
+        }
+    },
+    sniper_zoom_indexes: [64]
+});

@@ -1287,20 +1287,23 @@ function set_store_avatar(is_self, icon_cont, client_user_id, client_source) {
     if (typeof client_source !== "undefined" && client_source in CLIENT_SOURCE) {
         source_id = client_source
     }
+    let icon = _createElement("div", ["avatar_icon"]);
+    let inner = _createElement("div", "inner");
     if (source_id === "1") {
-        icon_cont.appendChild(_createElement("div", ["avatar_icon", "epic"]))
+        icon.classList.add("epic")
     } else if (source_id === "2") {
-        let icon = _createElement("div", ["avatar_icon", "steam"]);
+        icon.classList.add("steam");
         if (is_self || Friends.is_friend(client_user_id)) {
-            icon.style.backgroundImage = "url(steam-avatar://" + client_user_id + ")";
+            inner.style.backgroundImage = "url(steam-avatar://" + client_user_id + ")";
             icon.classList.add("user")
         }
-        icon_cont.appendChild(icon)
     } else if (source_id === "3") {
-        icon_cont.appendChild(_createElement("div", ["avatar_icon", "xbox"]))
+        icon.classList.add("xbox")
     } else {
-        icon_cont.appendChild(_createElement("div", ["avatar_icon", "master"]))
+        icon.classList.add("master")
     }
+    icon.appendChild(inner);
+    icon_cont.appendChild(icon)
 }
 
 function update_connection_status_indicator(root, position, status, offline_reason) {

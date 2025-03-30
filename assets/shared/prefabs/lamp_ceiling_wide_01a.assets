@@ -1,0 +1,94 @@
+asset lamp_ceiling_wide_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name light_42
+        position 0.46643 -60.05032 0.19189
+        rotation 90.00000 0 179.99999
+        scale 1.00000 1.00000 0.98000
+        param angle 145
+        param attenuation_exponent 2.2
+        param color s_light_main
+        param falloff .33
+        param gobo_texture gd_gobo_rectangle_lamp05.png
+        param intensity 3
+        param light_bake_only true
+        param max_opacity 1
+        param position_x 0.466431
+        param position_y -60.050323
+        param position_z 0.191895
+        param radius 500
+        param rotation_x 1.570796
+        param rotation_y 0.000000
+        param rotation_z -3.141593
+        param softness .8
+        param type point
+    }
+    prefab_entity
+    {
+        name light_46
+        position -7.13428 -28.09161 0.19189
+        rotation 9.16091 0 0
+        scale 1.00000 1.00000 1.00000
+        param angle 150
+        param attenuation_exponent 3
+        param color s_light_main
+        param gobo_texture None
+        param intensity 4.5
+        param position_x -7.134277
+        param position_y -28.091610
+        param position_z 0.191895
+        param radius 250
+        param rotation_x 0.159888
+        param rotation_y -0.000000
+        param rotation_z -0.000000
+        param softness .2
+        param type diffuse_spot
+    }
+    prefab_entity
+    {
+        name light_47
+        position 6.60229 -28.76978 0.19189
+        rotation 5.00977 179.99999 0
+        scale 1.00000 1.00000 1.00000
+        param angle 150
+        param attenuation_exponent 3
+        param color s_light_main
+        param gobo_texture None
+        param intensity 4.5
+        param position_x 6.602295
+        param position_y -28.769779
+        param position_z 0.191895
+        param radius 250
+        param rotation_x 0.087437
+        param rotation_y -3.141593
+        param rotation_z -0.000000
+        param softness .2
+        param type diffuse_spot
+    }
+    prefab_entity
+    {
+        name prop_props_production_wall_1
+        position 0.06567 19.86926 -0.57568
+        rotation 0 -179.99999 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_props_production_wall_132
+        param best_lod 0
+        param clip noclip
+        param color3_matlib_mat_lib_emissive s_emissive_main
+        param force_shadows true
+        param model light_fixture_05
+        param position_x 0.065674
+        param position_y 19.869259
+        param position_z -0.575684
+        param rotation_x 0.000000
+        param rotation_y 3.141593
+        param rotation_z -0.000000
+    }
+}
+
+

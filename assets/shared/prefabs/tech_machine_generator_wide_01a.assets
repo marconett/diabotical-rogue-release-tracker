@@ -1,0 +1,297 @@
+asset tech_machine_generator_wide_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name col_col_box_corner_296
+        position -85.54492 187.55122 -59.32242
+        rotation -90.00000 0 -90.00001
+        scale 1.46000 2.15000 3.00000
+        param best_lod 0
+        param clip fullclip
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_297
+        position 86.45508 187.55122 -31.32236
+        rotation 0.00001 -0.00000 -89.99999
+        scale 3.00000 0.35000 0.35000
+        param best_lod 0
+        param clip fullclip
+        param force_shadows false
+        param model col_45
+        param no_show true
+        param size_w 1
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_298
+        position 86.45508 187.55122 29.47757
+        rotation -0.00002 -90.00001 -89.99999
+        scale 3.00000 0.35000 0.35000
+        param best_lod 0
+        param clip fullclip
+        param force_shadows false
+        param model col_45
+        param no_show true
+        param size_w 1
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_299
+        position 114.45508 187.55122 -31.32242
+        rotation -90.00000 0 -179.99999
+        scale 0.35000 0.76000 3.00000
+        param best_lod 0
+        param clip fullclip
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_300
+        position -85.54492 187.55122 -31.32236
+        rotation -0.00001 90.00001 -90.00001
+        scale 3.00000 0.35000 0.35000
+        param best_lod 0
+        param clip fullclip
+        param force_shadows false
+        param model col_45
+        param no_show true
+        param size_w 1
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_301
+        position -85.54492 187.55122 29.47760
+        rotation -0.00001 179.99999 -89.99999
+        scale 3.00000 0.35000 0.35000
+        param best_lod 0
+        param clip fullclip
+        param force_shadows false
+        param model col_45
+        param no_show true
+        param size_w 1
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_302
+        position -113.54492 187.55122 29.47766
+        rotation -90.00000 0 -0.00002
+        scale 0.35000 0.76000 3.00000
+        param best_lod 0
+        param clip fullclip
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name light_3
+        position -50.68982 148.55667 74.93698
+        rotation 0 -89.99999 0
+        scale 1.00000 1.00000 1.00000
+        param color s_light_dark
+        param intensity 5
+        param light_bake_only true
+        param position_x 44.799927
+        param position_y 148.556671
+        param position_z 56.909485
+        param radius 64
+        param type point
+    }
+    prefab_entity
+    {
+        name light_5
+        position -50.68982 107.75666 75.73700
+        rotation 0 -89.99999 0
+        scale 1.00000 1.00000 1.00000
+        param color s_light_dark
+        param intensity 5
+        param light_bake_only true
+        param position_x 45.599976
+        param position_y 107.756660
+        param position_z 56.909485
+        param radius 64
+        param type point
+    }
+    prefab_entity
+    {
+        name light_7
+        position -60.68982 23.35667 -67.46286
+        rotation 0 -89.99999 0
+        scale 1.00000 1.00000 1.00000
+        param color s_light_neutral
+        param intensity 5
+        param light_bake_only true
+        param radius 110
+        param type point
+    }
+    prefab_entity
+    {
+        name light_8
+        position 62.91016 164.55667 -69.86288
+        rotation 0 -89.99999 0
+        scale 1.00000 1.00000 1.00000
+        param color s_light_neutral
+        param intensity 5
+        param light_bake_only true
+        param radius 128
+        param type point
+    }
+    prefab_entity
+    {
+        name prop_connector_02
+        position 69.24341 147.87543 71.91116
+        rotation 0.00003 90.00001 90.00001
+        scale 2.76610 2.76610 3.58959
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_connector_02
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model connector_02
+        param position_x 41.774055
+        param position_y 147.875427
+        param position_z -63.023743
+    }
+    prefab_entity
+    {
+        name prop_connector_03
+        position -42.26147 143.40956 54.50247
+        rotation -90.00000 0 -179.99999
+        scale 1.30914 1.30914 1.30914
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_connector_03
+        param best_lod 0
+        param clip noclip
+        param color3_matlib_mat_lib_emissive s_emissive_dark
+        param force_shadows true
+        param model connector_03
+        param position_x 24.365364
+        param position_y 143.409561
+        param position_z 48.481110
+    }
+    prefab_entity
+    {
+        name prop_connector
+        position -42.26135 101.51702 54.50253
+        rotation -90.00000 0 -179.99999
+        scale 1.30914 1.30914 1.30914
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_connector
+        param best_lod 0
+        param clip noclip
+        param color3_matlib_mat_lib_emissive s_emissive_dark
+        param force_shadows true
+        param model connector_03
+        param position_x 24.365479
+        param position_y 101.517021
+        param position_z 48.480988
+    }
+    prefab_entity
+    {
+        name prop_generator_station_01
+        position 0.26477 -2.71397 0.54199
+        rotation 0 0.00004 0
+        scale 1.08000 1.07688 1.07688
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param color_matlib_mat_lib_metal_painted s_bright
+        param force_shadows true
+        param model generator_station_01
+        param override_effect_4 matlib_mat_lib_metal_bright
+        param position_x -29.595093
+        param position_y -2.713969
+        param position_z 5.954803
+    }
+    prefab_entity
+    {
+        name prop_generator_station_tur_1
+        position 49.84290 67.16066 -1.87524
+        rotation 0 -89.99999 0
+        scale 1.14000 1.14000 1.14000
+        param __shadow true
+        param best_lod 0
+        param force_shadows true
+        param model generator_station_turbine_01
+        param position_x -32.012329
+        param position_y 67.160660
+        param position_z -43.623322
+        param rotate_animation 1
+        param rotate_animation_angle 100
+    }
+    prefab_entity
+    {
+        name prop_generator_station_tur
+        position -50.15698 67.16066 -1.87531
+        rotation 0 -89.99999 0
+        scale 1.14000 1.14000 1.14000
+        param __shadow true
+        param best_lod 0
+        param force_shadows true
+        param model generator_station_turbine_01
+        param position_x -32.012329
+        param position_y 67.160660
+        param position_z 56.376648
+        param rotate_animation 1
+        param rotate_animation_angle 100
+    }
+    prefab_entity
+    {
+        name prop_lg_8_straight
+        position 68.82092 -110.40165 58.02832
+        rotation 0.00001 90.00001 90.00003
+        scale 0.80238 0.80238 0.80238
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_lg_8_straight
+        param best_lod 0
+        param clip noclip
+        param color_matlib_mat_lib_plastic s_bright
+        param force_shadows true
+        param model lg_8_straight_01
+        param position_x 27.891243
+        param position_y -110.401649
+        param position_z -62.601349
+    }
+    prefab_entity
+    {
+        name sound_amb_prop_su
+        position -3.73523 75.59233 5.36115
+        rotation 0 -89.99999 0
+        scale 1.00000 1.00000 1.00000
+        param apply_audio_occlusion false
+        param capsule_end_position_x 1217.679321
+        param capsule_end_position_y 373.619446
+        param capsule_end_position_z 387.392151
+        param cross_fade_max_radius 200
+        param cross_fade_min_radius 0
+        param min_radius 40
+        param position_x -24.775879
+        param position_y 75.592331
+        param position_z 9.954803
+        param radius 600
+        param sound_event amb_prop_suit_pod
+        param type audio_event_ambient_node
+        param volume 0.2
+    }
+}
+

@@ -8,6 +8,11 @@ game rogue_wipeout
 	map titan
 	map wellspring
 
+	class chunk
+	class eggbot
+	class scout
+	class bigbot
+
 	setting game_wipeout 1
 	setting game_truce_time 7
 	setting game_enable_items 0
@@ -45,6 +50,7 @@ game rogue_wipeout
 	
 	setting game_lifesteal_amount_when_last_alive 0
 	setting game_wipe_out_mode 2
+	setting game_allow_pickup_orbs 1
 	
 	setting game_self_damage 1	
 	setting game_friendly_fire 0
@@ -193,6 +199,11 @@ game rogue_wipeout
 game rogue_teamdeathmatch
 {
 	map sentinel
+
+	class chunk
+	class eggbot
+	class scout
+	class bigbot
 
 	setting game_teamdeathmatch 1
 	setting game_truce_time 5
@@ -372,6 +383,15 @@ game rogue_teamdeathmatch
 
 game rogue_edit
 {
+	class chunk
+	class eggbot
+	class scout
+	class bigbot
+
+	setting phy_fly 1
+	setting editor_play 0
+	setting editor_camera_locked 1
+
 	setting game_edit 1
 	setting game_enable_items 1
 	setting game_self_damage 0
@@ -500,10 +520,10 @@ game rogue_edit
 	setting game_player_col_radius_ver_top 60
 	
 	setting game_model 0
-	setting game_player_hitbox_height 1
-	setting game_player_hitbox_width 1
+	setting game_player_hitbox_height 105
+	setting game_player_hitbox_width 50
 	
-	setting game_unlimited_ammo	1
+	setting game_unlimited_ammo	0
 	setting game_enable_roguelike 0
 	
 	weapon rogue_rocketlauncher 1
@@ -522,7 +542,12 @@ game rogue_edit
 
 game rogue_hub
 {
-	setting game_hub 1
+	class chunk
+	class eggbot
+	class scout
+	class bigbot
+
+	setting game_rogue_hub 1
 	setting game_countdown 0	
 	setting game_warmup_time 0	
 	setting game_waiting_for_players_time 0
@@ -676,14 +701,14 @@ game rogue_hub
 	weapon rogue_rocketlauncher 1
 	weapon rogue_shaft 1
 	weapon rogue_machinegun 1
-	weapon rogue_blaster 1
-	weapon rogue_supershotgun 1
-	weapon rogue_grenadelauncher 1
 	weapon rogue_submachinegun 1
 	weapon rogue_heavysniper 1
 	weapon rogue_egun 1
 	weapon rogue_heavymachinegun 1
 	weapon rogue_revolver 1
 	weapon rogue_crossbow 1
+	weapon rogue_blaster 1
+	weapon rogue_supershotgun 1
+	weapon rogue_grenadelauncher 1
 }
 

@@ -6,6 +6,7 @@ rogue_crossbow
 	selectable true
 	rarity legendary
 	required_class rogue_eggbot
+	weapon_fire_type primary
 	
 	respawn_time 9
 	//weapon_tag bl
@@ -35,7 +36,7 @@ rogue_crossbow
 
 	category 5
 	bind_group 5
-	color EBBA45
+	color ffa55a
 		
 	icon_path images/weapon_icons/wp_hud_crossbow_02.png
 	icon_path2 images/weapon_icons/wp_card_crossbow.png
@@ -72,11 +73,14 @@ rogue_crossbow
 	shot_particles empty_system
    	shot_particles_attached weapon_crossbow_muzzle
 	shot_particles_attached_3p weapon_crossbow_muzzle_3p
+	missile_particles weapon_crossbow_projectile
+	missile_particles_1p weapon_crossbow_projectile
+	impact_particles weapon_crossbow_impact_v2
+	
   	//missile_particles bl_bullet
 	//missile_particles crossbow_projectile
   	//impact_particles crossbow_impact
 	//missile_trail_particles crossbow_bolt_dynamic_trail
-	impact_particles weapon_crossbow_impact_v2
 	pfx weapon_cb_connections_l socket_arm_01_l 0.03
 	pfx weapon_cb_connections_r socket_arm_01_r 0.03
 	shot_particles_attached weapon_cb_wing_l socket_arm_02_l 0.1
@@ -84,12 +88,18 @@ rogue_crossbow
 	shot_particles_attached weapon_cb_arrow_socket socket_arrow 0.1
 	shot_particles_attached weapon_cb_wind_jet socket_capacitor_l 0.13
 	player_impact_particles weapon_crossbow_player_impact
+	player_impact_particles_player_normal false
 	pfx weapon_cb_display socket_display 0.03
 	shot_particles_attached cb_vents_l socket_went_l 0.03
 	shot_particles_attached cb_vents_r socket_went_r 0.03
-	//TEMP
-	missile_particles weapon_crossbow_projectile
-	missile_particles_1p weapon_crossbow_projectile
+
+	// weapon_sway
+	smoothing_factor 8.0
+	vertical_sway 0.75
+	horizontal_sway 0.75
+	tilt_sway 0.075
+	forward_sway 0.3
+	max_vertical_movement_sway 0.03
 
 //IMPACT DECAL
 
@@ -102,23 +112,20 @@ rogue_crossbow
   	
 	muzzle_offset 0 0 0
 	
-	//model assets/shared/weapons/crossbow/crossbow
 	model assets/shared/models/animations/wp_crossbow/skm_crossbow
-	model_scale 0.0625
-	model_scale_centered 0.05625
-	model_position_centered 0 -4 3
-	//model_position 2.5 -2.8 7
-	//model_rotation 169 -8.5  -8
-	//model_position 2.5 -3.22 3.52
-	
-	//Centered: model_position 0 -3.22 2.5
-	model_position 2.5 -3.22 2.5
-
-	model_camera_scale 0.6
-	muzzle 0 0 0
-	fov 40
-	model_scale_third_person 1
-	model_position_third_person 3 2 12
+	model_scale_third_person 1 1 1 
+	model_position_third_person 0 3 -5 
+	model_rotation_third_person -0.0349066 0 0 
+    model_position -0.674 -1.625 -3.155
+    model_position_centered -0.670 -1.574 -1.953
+    model_post_rotation -0.062 -0.063 -0.035
+    model_post_rotation_centered -0.017 -0.035 -0.035
+	model_scale 0.06 0.06 0.06 
+	model_scale_centered 0.06 0.06 0.06 
+    fov 40.00
+    fov_centered 63.00
+	model_camera_scale 1.5 
+	model_camera_scale_centered 1.5 
 	
 	shot_sound w_cb_fire
 	shot_sound2	w_cb_fire_distant
@@ -229,6 +236,8 @@ rogue_crossbow augment 8
 	overwrite shot_particles_attached cb_artifact_wind_jet socket_capacitor_l 0.13
 	overwrite shot_particles_attached cb_vents_l_artifact socket_went_l 0.03
 	overwrite shot_particles_attached cb_vents_r_artifact socket_went_r 0.03
+	overwrite burst_sound w_cb_fire
+	overwrite burst_distance_sound w_cb_fire_distant
 	locked_in_battlepass true
 
 	selectable true

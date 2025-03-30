@@ -81,36 +81,6 @@ const page_game_selection = {
         if (this.data.transition_active) return;
         if (this.data.active_game_id === game_id) return;
         if (!this.data.game_ids.includes(game_id)) return;
-        let direction = this.get_transition_direction(game_id);
-        let prev_el = this.html.page.querySelector(".video");
-        let animation_end_handler = () => {
-            let prev_video = prev_el.querySelector("video");
-            if (prev_video) prev_video.pause();
-            this.html.video_inner.removeChild(prev_el);
-            this.html.video_inner.classList.remove(direction);
-            this.data.transition_active = false;
-            this.html.video_inner.removeEventListener("animationend", animation_end_handler);
-            this.play_active_video()
-        };
-        if (direction === "left") {
-            this.html.video_inner.appendChild(this.create_background_video(game_id))
-        } else {
-            this.html.video_inner.insertBefore(this.create_background_video(game_id), prev_el)
-        }
-        this.data.transition_active = true;
-        this.html.video_inner.addEventListener("animationend", animation_end_handler);
-        this.html.video_inner.classList.add(direction);
-        let anims = this.html.video_inner.getAnimations();
-        if (!anims.length) {
-            this.html.video_inner.removeChild(prev_el);
-            this.html.video_inner.classList.remove(direction);
-            this.data.transition_active = false
-        }
-        if (this.data.selectable_game_ids.includes(game_id)) {
-            this.html.overlay_play.classList.remove("locked")
-        } else {
-            this.html.overlay_play.classList.add("locked")
-        }
         this.data.active_game_id = game_id;
         this.set_active_game_info(game_id);
         if (!ui_only) {

@@ -1,0 +1,294 @@
+asset teleport_pad_floor_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name actiontrigger_portal_1
+        position -1.81543 34.36931 -0.31345
+        rotation 0 -90.90017 0
+        scale 104.74995 130.96065 104.49997
+        param activation_count 0
+        param can_be_legendary true
+        param capture_time 2
+        param collision_type 1
+        param decay_rate 0
+        param event_0 9
+        param event_0_function 2
+        param event_0_normal_vec_x 0
+        param event_0_normal_vec_y 0
+        param event_0_normal_vec_z 1
+        param event_0_source env_cylinder_energy
+        param event_0_target teleportspawnpfx
+        param event_1_reset_progress true
+        param event_1_state true
+        param event_1_target actiontrigger_10
+        param event_2_open_menu 8
+        param group_type 5
+        param hover_text MAP
+        param objective_type 0
+        param position_x -1.815430
+        param position_y 34.369308
+        param position_z -0.313446
+        param rotation_x -0.000000
+        param rotation_y -1.586508
+        param rotation_z 0.000000
+        param start_active false
+        param volume_type 2
+    }
+    prefab_entity
+    {
+        name decal_decal_graphical_graph_67
+        position -40.89587 2.34142 39.63663
+        rotation 90.00000 0 89.10009
+        scale 40.75997 40.75999 40.75998
+        param albedo_map_enable true
+        param color s_decal_bright
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_graphical_graphical_corner_05
+        param metal_map_enable false
+        param normal_map_enable false
+        param position_x -40.895874
+        param position_y 2.341422
+        param position_z 38.436630
+        param rotation_x 1.570796
+        param rotation_y 0.000000
+        param rotation_z 1.555089
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_graphical_graph_68
+        position -41.66992 2.34233 -38.71591
+        rotation 90.00000 0 -179.99973
+        scale 40.75999 40.75998 40.75998
+        param albedo_map_enable true
+        param color s_decal_bright
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_graphical_graphical_corner_05
+        param metal_map_enable false
+        param normal_map_enable false
+        param position_x -41.669922
+        param position_y 2.342331
+        param position_z -39.915924
+        param rotation_x 1.570796
+        param rotation_y 0.000000
+        param rotation_z -3.141588
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_graphical_graph_70
+        position 41.67773 2.34236 -39.04440
+        rotation 90.00000 0 -90.89993
+        scale 40.75998 40.76000 40.75998
+        param albedo_map_enable true
+        param color s_decal_bright
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_graphical_graphical_corner_05
+        param metal_map_enable false
+        param normal_map_enable false
+        param position_x 41.677734
+        param position_y 2.342360
+        param position_z -40.244415
+        param rotation_x 1.570796
+        param rotation_y 0.000000
+        param rotation_z -1.586503
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_graphical_graph_71
+        position 41.67688 2.34130 39.33600
+        rotation 90.00000 0 0.00006
+        scale 40.76000 40.75998 40.75998
+        param albedo_map_enable true
+        param color s_decal_bright
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_graphical_graphical_corner_05
+        param metal_map_enable false
+        param normal_map_enable false
+        param position_x 41.676880
+        param position_y 2.341301
+        param position_z 38.136002
+        param rotation_x 1.570796
+        param rotation_y 0.000000
+        param rotation_z 0.000001
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_symbols_angle_1
+        position 0.00232 9.02492 54.03510
+        rotation 90.00000 0 -0.00011
+        scale 44.75000 17.60000 18.56000
+        param albedo_map_enable true
+        param color s_decal_bright
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_symbols_angle_3_short_stripe
+        param metal_map_enable false
+        param normal_map_enable true
+        param position_x 0.002319
+        param position_y 9.024920
+        param position_z 52.835098
+        param rotation_x 1.570796
+        param rotation_y 0.000000
+        param rotation_z -0.000002
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_symbols_angle_3
+        position 0.00195 8.62493 -54.36374
+        rotation 90.00000 0 -0.00011
+        scale 44.75000 15.88000 18.56000
+        param albedo_map_enable true
+        param color s_decal_bright
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_symbols_angle_3_short_stripe
+        param metal_map_enable false
+        param normal_map_enable true
+        param position_x 0.001953
+        param position_y 8.624930
+        param position_z -54.363739
+        param rotation_x 1.570796
+        param rotation_y 0.000000
+        param rotation_z -0.000002
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name light_38
+        position -2.60681 34.11632 0
+        rotation 0 -174.60018 0
+        scale 1.00000 1.00000 1.00000
+        param color 7e3ec7ff
+        param falloff 0.4
+        param intensity 3
+        param light_bake_only false
+        param max_opacity 1
+        param position_x -2.606812
+        param position_y 34.116322
+        param position_z 3.721985
+        param radius 400
+        param rotation_x -0.000000
+        param rotation_y -3.047348
+        param rotation_z 0.000000
+        param type diffuse
+    }
+    prefab_entity
+    {
+        name pfx_env_light_fogbeam3_1
+        position -0.06702 -0.78059 0.00623
+        rotation -0.00000 5.40007 -179.99999
+        scale 4.00000 2.00000 4.00000
+        param color 50d9f144
+        param delay 0
+        param destroy_on_loop false
+        param max_distance 0
+        param position_x -0.067017
+        param position_y -0.780589
+        param position_z 0.006226
+        param random_delay_max 0
+        param range_multiplier 1
+        param repeat_interval 0
+        param repeat_lifetime 0
+        param rotation_x -0.000000
+        param rotation_y 0.094249
+        param rotation_z 3.141593
+        param system env_light_fogbeam3
+    }
+    prefab_entity
+    {
+        name pfx_env_teleport_out_1
+        position -0.06702 4.01940 0.00623
+        rotation 0 -174.60018 0
+        scale 1.14000 1.14000 1.14000
+        param color ffffff1e
+        param position_x -0.067017
+        param position_y 4.019400
+        param position_z 0.006226
+        param rotation_x -0.000000
+        param rotation_y -3.047348
+        param rotation_z 0.000000
+        param system env_teleport_out
+    }
+    prefab_entity
+    {
+        name prop_floorhatch_7
+        position 80.36353 0.01949 80.00000
+        rotation 0 179.99967 0
+        scale 4.00000 1.00000 4.00000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param color s_hatch_edge
+        param color_rogue_environment_industrial_props_floorhatches_ind_floorhatch_07_center 7f7f7fff
+        param model floorhatch_07
+        param position_x 80.363525
+        param position_y 0.019492
+        param position_z 78.848862
+        param rotation_x -0.000000
+        param rotation_y 3.141587
+        param rotation_z -0.000000
+    }
+    prefab_entity
+    {
+        name prop_teleport_pad_out
+        position 0 -0.78059 0
+        rotation 0 179.10001 0
+        scale 0.96000 0.65455 0.96000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param color3_matlib_mat_lib_emissive 752eeeff
+        param force_shadows true
+        param group_member_id 26
+        param model teleporter
+        param no_decals true
+        param override_effect_5 matlib_mat_lib_emissive
+        param override_effect_6 matlib_mat_lib_emissive
+        param position_x -0.067017
+        param position_y -0.780589
+        param position_z 0.006226
+        param rotation_x -0.000000
+        param rotation_y 3.125885
+        param rotation_z 0.000000
+    }
+    prefab_entity
+    {
+        name sound_amb_int_electr
+        position -1.48022 23.95137 1.03384
+        rotation 0 -174.60007 0
+        scale 1.00000 1.00000 1.00000
+        param capsule_end_position_x 1152.989990
+        param capsule_end_position_y 255.199997
+        param capsule_end_position_z 125.971001
+        param cross_fade_max_radius 300
+        param cross_fade_min_radius 300.000000
+        param min_radius 150
+        param position_x -1.480225
+        param position_y 23.951368
+        param position_z 1.033844
+        param radius 600
+        param rotation_x -0.000000
+        param rotation_y -3.047346
+        param rotation_z 0.000000
+        param sound_event amb_int_electronics7
+        param type audio_event_ambient_node
+        param volume 1
+    }
+}
+

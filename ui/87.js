@@ -76,7 +76,11 @@ function rangeSlider(el, updateVar, callback, onFineChangeCallback) {
         if (e.button === 0) {
             bgContRect = bg_cont.getBoundingClientRect();
             mouse_down_open_input = true;
-            mouse_down = true
+            mouse_down = true;
+            let valueChanged = updateSlider(e);
+            if (valueChanged && typeof onFineChangeCallback == "function") {
+                onFineChangeCallback(el.dataset.variable, Number(el.dataset.value))
+            }
         } else if (e.button === 2) {
             e.stopPropagation();
             this.show_input()
@@ -320,6 +324,7 @@ function rangeSlider(el, updateVar, callback, onFineChangeCallback) {
         }
     };
     this.show_input = () => {
+        return;
         input.classList.add("active");
         req_anim_frame((() => {
             if (document.activeElement !== input) {
@@ -328,6 +333,7 @@ function rangeSlider(el, updateVar, callback, onFineChangeCallback) {
         }))
     };
     this.hide_input = () => {
+        return;
         input.classList.remove("active")
     };
     return this

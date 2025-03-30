@@ -1,0 +1,315 @@
+asset computer_wall_wire_lg_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name light_136
+        position 48.78186 365.16455 -28.98853
+        rotation 90.00000 0 113.12162
+        scale 1.00000 1.00000 1.00000
+        param clip noclip
+        param falloff 0.33
+        param intensity 0.86
+        param length 64
+        param light_bake_only false
+        param position_x -2.818115
+        param position_y 365.164551
+        param position_z -22.988525
+        param radius 128
+        param rotation_x 1.570796
+        param rotation_y 0.000000
+        param rotation_z 1.974345
+        param tag broken
+        param type point
+    }
+    prefab_entity
+    {
+        name prop_cable_grouped_bend_4m_10_1
+        position 237.07874 247.30424 -11.23389
+        rotation -0.00000 -89.99995 89.99999
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param force_shadows true
+        param model cable_grouped_bend_4m_01
+        param position_x 185.478760
+        param position_y 247.304245
+        param position_z -5.233887
+        param rotation_x 0.000000
+        param rotation_y -1.570795
+        param rotation_z 1.570796
+        param seethrough_direction 4
+        param seethrough_prop true
+    }
+    prefab_entity
+    {
+        name prop_cable_grouped_bend_4m_4_1_1
+        position -74.92065 411.30438 -11.23352
+        rotation 90.00000 0 -179.99990
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param force_shadows true
+        param model cable_grouped_bend_4m_01
+        param position_x -126.520752
+        param position_y 411.304382
+        param position_z -5.233521
+        param rotation_x 1.570796
+        param rotation_y 0.000000
+        param rotation_z -3.141591
+        param seethrough_direction 4
+        param seethrough_prop true
+    }
+    prefab_entity
+    {
+        name prop_cable_grouped_straigh_6_1_1
+        position -182.91992 28.16473 -11.23279
+        rotation 0 -89.99994 90.00003
+        scale 0.70000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param force_shadows true
+        param model cable_grouped_straight_8m_01
+        param position_x -234.520020
+        param position_y 28.164732
+        param position_z -5.232788
+        param rotation_x -0.000000
+        param rotation_y -1.570795
+        param rotation_z 1.570797
+        param seethrough_direction 4
+        param seethrough_prop true
+    }
+    prefab_entity
+    {
+        name prop_cable_grouped_straigh_7_1
+        position 237.08008 11.64468 -11.23303
+        rotation -0.00000 -89.99995 89.99999
+        scale 0.70000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param force_shadows true
+        param model cable_grouped_straight_8m_01
+        param position_x 185.480103
+        param position_y 11.644682
+        param position_z -5.233032
+        param rotation_x 0.000000
+        param rotation_y -1.570795
+        param rotation_z 1.570796
+        param seethrough_direction 4
+        param seethrough_prop true
+    }
+    prefab_entity
+    {
+        name prop_cable_plug_36_1_1
+        position 114.67969 348.50470 -18.83240
+        rotation 0 90.00003 89.99999
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 3
+        param clip noclip
+        param force_shadows true
+        param model cable_plug_02
+        param position_x 63.079712
+        param position_y 348.504700
+        param position_z -12.832397
+        param rotation_x -0.000000
+        param rotation_y 1.570797
+        param rotation_z 1.570796
+        param seethrough_direction 4
+        param seethrough_prop true
+    }
+    prefab_entity
+    {
+        name prop_cable_plug_39_1_1
+        position -75.32056 348.50470 -18.83252
+        rotation 0 90.00003 89.99999
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model cable_plug_02
+        param position_x -126.920654
+        param position_y 348.504700
+        param position_z -12.832520
+        param rotation_x -0.000000
+        param rotation_y 1.570797
+        param rotation_z 1.570796
+        param seethrough_direction 4
+        param seethrough_prop true
+    }
+    prefab_entity
+    {
+        name prop_cable_plug_40_1_1
+        position -75.32031 348.50470 -2.43213
+        rotation 0 -89.99994 90.00003
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param force_shadows true
+        param model cable_plug_02
+        param position_x -126.920410
+        param position_y 348.504700
+        param position_z 3.567871
+        param rotation_x -0.000000
+        param rotation_y -1.570795
+        param rotation_z 1.570797
+        param seethrough_direction 4
+        param seethrough_prop true
+    }
+    prefab_entity
+    {
+        name prop_cable_plug_43_1_1
+        position 174.68604 232.50468 -18.83350
+        rotation 90.00000 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model cable_plug_02
+        param position_x 123.086060
+        param position_y 232.504684
+        param position_z -12.833496
+        param rotation_x 1.570796
+        param rotation_y 0.000000
+        param rotation_z 0.000000
+        param seethrough_direction 4
+        param seethrough_prop true
+    }
+    prefab_entity
+    {
+        name prop_cable_plug_44_1_1
+        position 174.68518 232.50322 -2.43323
+        rotation -90.00000 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model cable_plug_02
+        param position_x 123.085205
+        param position_y 232.503220
+        param position_z 3.566772
+        param rotation_x -1.570796
+        param rotation_y 0.000000
+        param rotation_z -0.000000
+        param seethrough_direction 4
+        param seethrough_prop true
+    }
+    prefab_entity
+    {
+        name prop_computer_module_wall_14_1_1
+        position 138.20520 349.20367 5.56116
+        rotation -0.00006 0.00006 0
+        scale 1.23000 1.23000 1.23000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model computer_module_wall_02
+        param position_x 86.605225
+        param position_y 349.203674
+        param position_z 11.561157
+        param rotation_x -0.000001
+        param rotation_y 0.000001
+        param rotation_z -0.000000
+        param seethrough_direction 4
+        param seethrough_prop true
+    }
+    prefab_entity
+    {
+        name prop_computer_modules_pref_26_1_1
+        position 18.82251 419.04950 -15.41736
+        rotation 0 0 -179.99996
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model computer_modules_prefab_02
+        param position_x -32.777588
+        param position_y 419.049500
+        param position_z -9.417358
+        param rotation_x 0.000000
+        param rotation_y -0.000000
+        param rotation_z -3.141592
+        param seethrough_direction 4
+        param seethrough_prop true
+    }
+    prefab_entity
+    {
+        name prop_holo_crate_01_1
+        position 205.39966 -7.63715 -22.04260
+        rotation 0 -89.99993 0
+        scale 0.90000 1.20000 1.20000
+        param __shadow true
+        param best_lod 1
+        param force_shadows true
+        param material_1 matlib_mat_lib_metal_dark
+        param material_2 matlib_mat_lib_metal_bright
+        param material_3 matlib_mat_lib_metal_dark
+        param material_4 matlib_mat_lib_metal_bright
+        param model holo_crate_01
+        param position_x 153.799683
+        param position_y -7.637147
+        param position_z -16.042603
+        param rotation_x 0.000000
+        param rotation_y -1.570795
+        param rotation_z -0.000000
+    }
+    prefab_entity
+    {
+        name prop_holo_crate_1_1
+        position -212.20020 -7.63715 -22.04272
+        rotation 0 -89.99993 0
+        scale 0.90000 1.20000 1.20000
+        param __shadow true
+        param best_lod 1
+        param force_shadows true
+        param material_1 matlib_mat_lib_metal_dark
+        param material_2 matlib_mat_lib_metal_bright
+        param material_3 matlib_mat_lib_metal_dark
+        param material_4 matlib_mat_lib_metal_bright
+        param model holo_crate_01
+        param position_x -263.800293
+        param position_y -7.637147
+        param position_z -16.042725
+        param rotation_x 0.000000
+        param rotation_y -1.570795
+        param rotation_z -0.000000
+    }
+    prefab_entity
+    {
+        name sound_amb_int_electr_5
+        position 50.38196 387.36450 -24.98889
+        rotation 0 90.00003 0
+        scale 1.00000 1.00000 1.00000
+        param capsule_end_position_x -290.083679
+        param capsule_end_position_y 447.601044
+        param capsule_end_position_z -1174.049072
+        param cross_fade_max_radius 1500.000000
+        param cross_fade_min_radius 300.000000
+        param min_radius 300.000000
+        param position_x -1.218018
+        param position_y 387.364502
+        param position_z -18.988892
+        param radius 3000.000000
+        param rotation_x -0.000000
+        param rotation_y 1.570797
+        param rotation_z 0.000000
+        param sound_event amb_int_electronics2
+        param type audio_event_ambient_node
+        param volume 0.3
+    }
+}
+
+
+
+

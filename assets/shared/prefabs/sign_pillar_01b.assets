@@ -1,0 +1,150 @@
+asset sign_pillar_01b
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name light_3
+        position -0.36353 203.86177 -63.47717
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param clip false
+        param clip_min_y -0.589843
+        param color f09d04ff
+        param intensity 4
+        param position_x -0.363525
+        param position_y 203.861771
+        param position_z -63.477173
+        param radius 256
+        param type point
+    }
+    prefab_entity
+    {
+        name pfx_env_holo_symbol15
+        position -0.35950 235.86134 -63.47437
+        rotation -0.00000 89.99999 0.00015
+        scale 1.80000 1.80000 1.80000
+        param color f09d04ff
+        param position_x -0.359497
+        param position_y 235.861343
+        param position_z -63.474365
+        param system env_holo_symbol3
+    }
+    prefab_entity
+    {
+        name pfx_env_holo_symbol15_2
+        position -0.35950 203.86134 -63.47449
+        rotation -0.00000 89.99999 0.00015
+        scale 1.80000 1.80000 1.80000
+        param color f09d04ff
+        param position_x -0.359497
+        param position_y 203.861343
+        param position_z -63.474487
+        param system env_holo_symbol16
+    }
+    prefab_entity
+    {
+        name pfx_env_light_fogbeam3_3
+        position -0.18433 265.48367 -61.79663
+        rotation 0 0 0
+        scale 2.00000 2.40000 3.63000
+        param color f09d04ff
+        param position_x -0.184326
+        param position_y 265.483673
+        param position_z -61.796631
+        param rotation_w 0
+        param system env_light_fogbeam3
+    }
+    prefab_entity
+    {
+        name prop_blockout_cylinder_cen_14
+        position 0.24048 251.01634 -42.25452
+        rotation -0.00001 -89.99999 90.00001
+        scale 0.02899 0.50725 0.03000
+        param __shadow true
+        param best_lod 0
+        param color3_matlib_mat_lib_emissive fbab22ff
+        param force_shadows true
+        param material_0 matlib_mat_lib_emissive
+        param model blockout_cylinder
+        param position_x 0.240479
+        param position_y 251.016342
+        param position_z -42.254517
+        param uv_scale_y_matlib_mat_lib_metal_dark 2
+    }
+    prefab_entity
+    {
+        name prop_lamp_01_base_2
+        position 0.24658 276.42480 -6.01709
+        rotation 0.00001 -90.00003 -179.99999
+        scale 0.22000 0.24000 0.16000
+        param __shadow true
+        param best_lod 0
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_bright
+        param model lamp_01_base
+        param position_x 0.246582
+        param position_y 276.424805
+        param position_z -6.017090
+    }
+    prefab_entity
+    {
+        name prop_light_fixture
+        position 0.24658 236.42479 2.78296
+        rotation 90.00000 0 -179.99999
+        scale 1.20000 0.94588 1.55294
+        param __shadow true
+        param best_lod 0
+        param color3_matlib_mat_lib_emissive s_emissive_main
+        param force_shadows true
+        param material_1 matlib_mat_lib_metal_bright
+        param model light_fixture_06
+        param position_x 0.246582
+        param position_y 236.424789
+        param position_z 2.782959
+    }
+    prefab_entity
+    {
+        name prop_light_fixture_12
+        position 0.24658 260.82480 -89.21716
+        rotation 0.00001 -0.00001 180.00000
+        scale 0.85000 0.69000 1.10000
+        param __shadow true
+        param best_lod 0
+        param color3_matlib_mat_lib_emissive s_emissive_main
+        param force_shadows true
+        param model light_fixture_06
+        param position_x 0.246582
+        param position_y 260.824799
+        param position_z -89.217163
+    }
+    prefab_entity
+    {
+        name prop_panel_beam_01
+        position 0.04053 117.01634 -3.85449
+        rotation 90.00000 0 -0.00005
+        scale 1.55000 1.55000 2.25000
+        param __shadow true
+        param best_lod 0
+        param force_shadows true
+        param model panel_beam_01
+        param position_x 0.040527
+        param position_y 117.016342
+        param position_z -3.854492
+    }
+    prefab_entity
+    {
+        name prop_tech_crane_head_01
+        position 0.24658 269.22476 -89.21716
+        rotation 0 0 -0.00003
+        scale 0.32000 0.32000 0.32000
+        param __shadow true
+        param best_lod 0
+        param force_shadows true
+        param model tech_crane_head_01
+        param position_x 0.246582
+        param position_y 269.224762
+        param position_z -89.217163
+    }
+}
+

@@ -1,0 +1,183 @@
+asset crate_stack_wall_debris_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name col_col_box_corner_5
+        position -112.90833 0 0.71164
+        rotation 0 -0.00001 0
+        scale 1.05000 1.02000 1.06000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_crate_02_large
+        position -71.70813 0.29120 -42.48828
+        rotation 0 -89.99999 0
+        scale 1.00000 1.00000 1.00000
+        param _kitbash_connector -1
+        param _kitbash_parent prop_crate_02_large
+        param best_lod 0
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param force_shadows true
+        param model crate_02_large
+    }
+    prefab_entity
+    {
+        name prop_crate_1
+        position -5.70825 0 -30.15042
+        rotation 0 -105.29995 0
+        scale 1.00000 1.00000 1.00000
+        param _kitbash_connector -1
+        param _kitbash_parent prop_crate_01
+        param best_lod 0
+        param clip fullclip
+        param force_shadows true
+        param model crate_01
+        param position_x -30.862122
+        param position_y 0.000000
+        param position_z 5.599945
+        param rotation_x -0.000000
+        param rotation_y -0.267035
+        param rotation_z 0.000000
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_rogue_tarp_wall_160x8
+        position -41.68896 0 -82.48825
+        rotation 0 1.79991 0
+        scale 0.50000 0.70000 0.70000
+        param _kitbash_connector -1
+        param _kitbash_parent prop_rogue_tarp_wall_160x8
+        param best_lod 0
+        param clip noclip
+        param color_matlib_mat_lib_tarp_fabric s_accent
+        param color_matlib_mat_lib_tarp_fabric_details s_accent
+        param force_shadows true
+        param model rogue_tarp_wall_160x80
+        param position_x -83.200012
+        param position_y 0.000000
+        param position_z 41.580734
+        param rotation_x -0.000000
+        param rotation_y 1.602211
+        param rotation_z 0.000000
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_rogue_var_barrel_01_d
+        position -113.38965 0 -103.56567
+        rotation 0 53.99997 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_rogue_var_barrel_01_d
+        param best_lod 1
+        param clip fullclip
+        param color_matlib_mat_lib_details_floating s_bright
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_plates s_bright
+        param force_shadows true
+        param model rogue_var_barrel_01_dented
+        param position_x -104.277344
+        param position_y 0.000000
+        param position_z 113.281364
+        param rotation_x -0.000000
+        param rotation_y 2.513274
+        param rotation_z 0.000000
+    }
+    prefab_entity
+    {
+        name prop_rogue_var_barrel_03_o
+        position 91.89172 0 -15.68832
+        rotation 0 53.99997 0
+        scale 1.00000 1.00000 1.00000
+        param _kitbash_connector -1
+        param _kitbash_parent prop_rogue_var_barrel_03_o
+        param best_lod 1
+        param clip fullclip
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param force_shadows true
+        param model rogue_var_barrel_03_open
+        param position_x -16.399994
+        param position_y 0.000000
+        param position_z -92.000061
+        param rotation_x -0.000000
+        param rotation_y 2.513274
+        param rotation_z 0.000000
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_pile_sm_0_12
+        position 3.62012 0 -74.43808
+        rotation 0 94.50006 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model tech_debris_pile_sm_02
+        param no_collision true
+        param position_x -75.149796
+        param position_y 0.000000
+        param position_z -3.728378
+        param rotation_x -0.000000
+        param rotation_y -3.063052
+        param rotation_z 0.000000
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_pile_sm_0_6
+        position 65.10999 0 -99.48929
+        rotation 0 138.59986 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model tech_debris_pile_sm_01
+        param no_collision true
+        param position_x -100.200928
+        param position_y 0.000000
+        param position_z -65.218292
+        param rotation_x -0.000000
+        param rotation_y -2.293365
+        param rotation_z 0.000000
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_var_crate_03_tarp_3
+        position 47.89172 0 -28.48831
+        rotation 0 -155.69998 0
+        scale 1.00000 1.00000 1.00000
+        param _kitbash_connector -1
+        param _kitbash_parent prop_var_crate_03_tarp
+        param best_lod 2
+        param clip fullclip
+        param color_matlib_mat_lib_tarp_fabric s_neutral
+        param color_matlib_mat_lib_tarp_fabric_details s_neutral
+        param force_shadows true
+        param model var_crate_03_tarp
+        param override_effect_5 matlib_mat_lib_metal_bright
+        param position_x -29.200012
+        param position_y 0.000000
+        param position_z -48.000061
+        param rotation_x -0.000000
+        param rotation_y -1.146681
+        param rotation_z 0.000000
+        param size_x 1.000000
+        param size_y 1.000000
+        param size_z 1.000000
+        param skip_shadows true
+    }
+}

@@ -1,672 +1,263 @@
-let global_shop_raw_data = null;
-let global_shop_is_rendered = false;
-let global_shop_ts_updated = undefined;
-let global_shop_id = 0;
-let global_shop_data = {
-    special: {},
-    limited: {},
-    normal: {}
-};
-let global_shop_update_version = -1;
-let global_shop_update_new_version = -1;
-let global_shop_is_loading = false;
-new MenuScreen({
-    game_id: GAME.ids.COMMON,
-    name: "shop",
-    screen_element: _id("shop_screen"),
-    button_element: null,
-    fullscreen: false,
-    init: () => {
-        bind_event("set_shop_offers", (function(data) {
-            try {
-                const dataOffers = JSON.parse(data);
-                handle_coin_offers_update(dataOffers.offers);
-                global_shop_is_rendered = false
-            } catch (e) {
-                console.log("set_coin_offers: Error parsing JSON. err=" + e)
-            }
-        }));
-        bind_event("menu_enabled", (function(enabled) {
-            if (enabled) {
-                if (global_menu_page == "shop") {
-                    shop_set_animation_state(true)
-                }
-            } else {
-                shop_set_animation_state(false)
-            }
-        }));
-        init_screen_shop();
-        on_update_wallet.push((() => {
-            let shop_indicator = _id("shop_screen").querySelector(".shop_currency_info .value");
-            if (shop_indicator) shop_indicator.textContent = _format_number(global_self.private.coins)
-        }))
-    },
-    open_handler: params => {
-        set_blur(false);
-        historyPushState({
-            page: "shop"
-        });
-        let all = document.querySelectorAll(".new_shop");
-        for (let i = 0; i < all.length; i++) {
-            all[i].style.display = "none"
-        }
-        engine.call("set_string_variable", "shop_update_version", `${global_shop_update_version}`);
-        load_shop();
-        shop_set_animation_state(true)
-    },
-    close_handler: () => {
-        shop_set_animation_state(false)
-    }
-});
-
-function init_screen_shop() {
-    engine.call("initialize_custom_component_value", "shop_update_version")
-}
-
-function load_shop_data(cb) {
-    if (global_shop_is_loading) {
-        if (typeof cb == "function") cb(false);
-        return
-    }
-    global_shop_is_loading = true;
-    api_request("GET", "/shop", {}, (function(data) {
-        global_shop_raw_data = data;
-        global_shop_is_loading = false;
-        if (data.shop_id != global_shop_id) {
-            global_shop_ts_updated = new Date;
-            global_shop_id = data.shop_id
-        }
-        if (typeof cb == "function") cb(true)
-    }))
-}
-let global_shop_is_waiting = false;
-
-function load_shop() {
-    let cont = _id("shop_screen").querySelector(".shop_group_container");
-    let fetch_shop = false;
-    if (global_shop_raw_data === null) {
-        fetch_shop = true
-    }
-    if (global_shop_is_rendered) {
-        let now = new Date;
-        const assumed_shop_id = `${now.getUTCFullYear()}`.padStart(2, "0") + `${now.getUTCMonth()}`.padStart(2, "0") + `${now.getUTCDate()}`.padStart(2, "0");
-        if (now.getUTCHours() < global_shop_ts_updated.getUTCHours() && assumed_shop_id != global_shop_id) {
-            fetch_shop = true;
-            global_shop_is_rendered = false
-        }
-    }
-    if (global_shop_is_loading) {
-        setTimeout(load_shop, 100);
-        if (!global_shop_is_waiting) {
-            _empty(cont);
-            cont.appendChild(_createSpinner())
-        }
-        global_shop_is_waiting = true;
-        return
-    }
-    global_shop_is_waiting = false;
-    if (fetch_shop) {
-        load_shop_data(load_shop)
-    } else {
-        if (!global_shop_is_rendered) {
-            prepare_shop(global_shop_raw_data)
-        }
-    }
-}
-
-function prepare_shop(data) {
-    global_shop_data = {
-        special: {},
-        limited: {},
-        normal: {},
-        battlepass: {}
+global_components["draft"] = new MenuComponent("draft", _id("draft_screen"), (function() {
+    draft_page.init()
+}));
+const draft_page = new function() {
+    let state = {
+        is_visible: false,
+        cancel_timeout: null,
+        queued: null,
+        countdown_interval: null,
+        show_backbutton_timeout: null,
+        data: null
     };
-    for (let i of data.customizations.concat(data.packs)) {
-        if (!(i.item_category in global_shop_data)) {
-            console.log("WARNING - Missing shop item category");
-            continue
-        }
-        if (i.eos_offer_id != null) {
-            if (!(i.eos_offer_id in global_coin_shop_offers)) continue
-        }
-        let type = "notfeatured";
-        if (i.item_featured) type = "featured";
-        if (!(type in global_shop_data[i.item_category])) global_shop_data[i.item_category][type] = {};
-        let date = new Date(i.ts_end);
-        if (global_shop_data[i.item_category][type].ts_end) {
-            if (global_shop_data[i.item_category][type].ts_end > date) global_shop_data[i.item_category][type].ts_end = date
-        } else {
-            global_shop_data[i.item_category][type].ts_end = date
-        }
-        if (!(i.item_group in global_shop_data[i.item_category][type])) {
-            global_shop_data[i.item_category][type][i.item_group] = [i]
-        } else {
-            global_shop_data[i.item_category][type][i.item_group].push(i)
-        }
-    }
-    render_shop(global_shop_data);
-    global_shop_is_rendered = true;
-    req_anim_frame((() => {
-        if (global_scrollboosters["shop"]) global_scrollboosters["shop"].updateMetrics()
-    }))
-}
-let global_shop_scrolling = false;
-
-function render_shop(data) {
-    for (let timer of global_shop_timers) {
-        timer.stopCountdown()
-    }
-    global_shop_timers = [];
-    let cont = _id("shop_screen").querySelector(".shop_group_container");
-    _empty(cont);
-    if (Object.keys(data.limited).length) cont.appendChild(render_shop_category("limited", data["limited"]));
-    if (Object.keys(data.special).length) cont.appendChild(render_shop_category("special", data["special"]));
-    if (Object.keys(data.normal).length) cont.appendChild(render_shop_category("normal", data["normal"]));
-    if (Object.keys(data.battlepass).length) cont.appendChild(render_shop_category("battlepass", data["battlepass"]));
-    if (!global_scrollbooster_bars["shop"]) global_scrollbooster_bars["shop"] = new ScrollBoosterBar(cont.parentElement);
-    if (!global_scrollboosters["shop"]) global_scrollboosters["shop"] = new ScrollBooster({
-        viewport: cont.parentElement,
-        content: cont,
-        pointerMode: "mouse",
-        friction: .05,
-        bounceForce: .2,
-        direction: "horizontal",
-        scrollMode: "transform",
-        emulateScroll: true,
-        onScrollBegin: function() {
-            global_shop_scrolling = true
-        },
-        onScrollEnd: function() {
-            global_shop_scrolling = false
-        },
-        onScroll: function(x, y, viewport, content) {
-            global_scrollbooster_bars["shop"].updateThumb(x, y, viewport, content)
-        }
-    });
-    global_scrollbooster_bars["shop"].onScroll = function(pos_x, pos_y) {
-        global_scrollboosters["shop"].setPosition({
-            x: pos_x,
-            y: pos_y
-        })
-    }
-}
-let global_shop_timers = [];
-
-function render_shop_category(category, data) {
-    let fragment = new DocumentFragment;
-    let title = "";
-    if (category == "special") title = localize("shop_group_title_special");
-    if (category == "limited") title = localize("shop_group_title_packs");
-    if (category == "battlepass") title = localize("shop_group_title_battlepass");
-    let shop_group = _createElement("div", "shop_group");
-    let header_rendered = false;
-    let outer_container = undefined;
-    for (let type of["featured", "notfeatured"]) {
-        if (!(type in data)) continue;
-        if (category == "normal") {
-            if (type == "featured") title = localize("shop_group_title_featured_items");
-            if (type == "notfeatured") title = localize("shop_group_title_todays_items");
-            shop_group = _createElement("div", "shop_group");
-            shop_group.appendChild(render_shop_category_header(category, title, data[type].ts_end));
-            outer_container = _createElement("div", "outer_container")
-        } else {
-            if (!header_rendered) {
-                shop_group.appendChild(render_shop_category_header(category, title, data[type].ts_end));
-                header_rendered = true
+    let countdown_time_start = 10;
+    let countdown = countdown_time_start;
+    let html = {
+        root: null,
+        maps: null,
+        mode_icon: null,
+        mode_name: null,
+        backbtn: null,
+        countdown: null
+    };
+    this.init = () => {
+        html.root = _id("draft_screen");
+        html.maps = html.root.querySelector(".map_list_container");
+        html.mode_icon = html.root.querySelector(".mode_info .icon");
+        html.mode_name = html.root.querySelector(".mode_info .mode_name");
+        html.backbtn = html.root.querySelector(".buttons .close");
+        html.countdown = html.root.querySelector(".countdown_cont .value");
+        bind_event("starting_game", (() => {
+            setTimeout((() => {
+                state.data = null;
+                if (state.is_visible) {
+                    this.close(false)
+                }
+            }), 1e3)
+        }));
+        bind_event("show_draft", (() => {
+            if (state.data) {
+                open(state.data);
+                show_draft(true, false)
             }
-            if (outer_container == undefined) {
-                outer_container = _createElement("div", "outer_container")
+        }));
+        mm_event_handlers.push((data => {
+            state.data = data;
+            setup(data)
+        }));
+        mm_match_cancelled_handlers.push((() => {
+            clear_timers();
+            this.close(false)
+        }));
+        global_ms.addPermanentResponseHandler("no-servers-available", (() => {
+            this.close(false)
+        }));
+        global_ms.addPermanentResponseHandler("vote-counts", (json_data => {
+            if (state.is_visible) {
+                update_vote_counts(json_data)
             }
+        }));
+        bind_event("messagebox", (function(msg_key) {
+            if (msg_key == "message_no_servers_avail") {
+                this.close(false)
+            }
+        }))
+    };
+
+    function setup(data) {
+        html.mode_icon.style.display = "none";
+        html.mode_name.style.display = "none";
+        const mode_data = GAME.get_data("game_mode_map", data.mode);
+        _empty(html.maps);
+        if (data.vote == "map" && data.vote_options && data.vote_options.length) {
+            html.maps.appendChild(create_map_list(data.vote_options, data.vote_option_details))
         }
-        for (let group_idx in data[type]) {
-            if (data[type][group_idx] && data[type][group_idx].length) data[type][group_idx].sort((function(a, b) {
-                return b.item_price - a.item_price
+        if (data.vote === "map") {
+            let icon = "";
+            let title = "";
+            if (mode_data) {
+                icon = "url(" + mode_data.icon + "?s=6)";
+                if (data.team_count > 2 && data.team_size == 1) title = localize(mode_data.i18n);
+                else title = localize(mode_data.i18n) + " " + getVS(data.team_count, data.team_size)
+            } else if (data.mode_name) {
+                title = data.mode_name + " " + getVS(data.team_count, data.team_size)
+            }
+            html.mode_name.textContent = title;
+            html.mode_icon.style.display = "flex";
+            html.mode_name.style.display = "flex"
+        }
+        set_countdown(countdown_time_start)
+    }
+
+    function create_map_list(valid_maps, map_details) {
+        let map_list = _createElement("div", "map_list");
+        if (valid_maps.length <= 3) {
+            map_list.style.setProperty("--map_row_count", "" + 3)
+        } else if (valid_maps.length == 4) {
+            map_list.style.setProperty("--map_row_count", "" + 2)
+        } else if (valid_maps.length > 4) {
+            map_list.style.setProperty("--map_row_count", "" + 3)
+        }
+        for (let map of valid_maps) {
+            let map_name = _format_map_name(map);
+            let team_size_max = 0;
+            if (map_details && map_details.hasOwnProperty(map)) {
+                if (map_details[map].hasOwnProperty("name") && map_details[map].name) {
+                    map_name = map_details[map].name
+                }
+                if (map_details[map].hasOwnProperty("team_size_max") && map_details[map].team_size_max > 0) {
+                    team_size_max = map_details[map].team_size_max
+                }
+            }
+            let map_cont = _createElement("div", ["vote_option_cont", "hidden"]);
+            let map_div = _createElement("div", ["map", "vote_option"]);
+            map_div.dataset.option = map;
+            let image_div = _createElement("div", "image");
+            image_div.style.backgroundImage = 'url("map-thumbnail://' + map + '")';
+            map_div.appendChild(image_div);
+            let info_div = _createElement("div", "info");
+            let vote_count_div = _createElement("div", "vote_count");
+            vote_count_div.appendChild(_createElement("div", "checkmark"));
+            vote_count_div.appendChild(_createElement("div", "count", 0));
+            info_div.appendChild(vote_count_div);
+            info_div.appendChild(_createElement("div", "name", map_name));
+            if (team_size_max) {
+                let vs_div = _createElement("div", "vs", getVS(2, team_size_max));
+                info_div.appendChild(vs_div)
+            }
+            let selection = _createElement("div", "selection");
+            let circle = _createElement("div", "circle");
+            selection.appendChild(circle);
+            info_div.appendChild(selection);
+            map_div.appendChild(info_div);
+            map_div.classList.add("enabled");
+            map_div.addEventListener("click", (function() {
+                _play_click1();
+                let prev = map_list.querySelector(".selected");
+                if (prev) prev.classList.remove("selected");
+                circle.classList.add("selected");
+                send_string(CLIENT_COMMAND_SELECT_MAP, map)
+            }));
+            map_div.addEventListener("mouseenter", (() => {
+                _play_hover2()
+            }));
+            map_div.addEventListener("animationend", (e => {
+                if (e.animationName === "vote_option_rotate_in") {
+                    map_div.classList.remove("rotate_in")
+                }
+            }));
+            map_cont.appendChild(map_div);
+            map_list.appendChild(map_cont)
+        }
+        return map_list
+    }
+
+    function update_vote_counts(data) {
+        if (!state.is_visible) return;
+        _for_each_with_class_in_parent(html.maps, "vote_option", (opt_el => {
+            let vote_cont = _get_first_with_class_in_parent(opt_el, "count");
+            if (!vote_cont) return;
+            vote_cont.textContent = 0;
+            if (opt_el.dataset.option in data.votes && data.votes[opt_el.dataset.option] > 0) {
+                vote_cont.textContent = data.votes[opt_el.dataset.option]
+            }
+        }))
+    }
+
+    function clear_timers() {
+        if (state.cancel_timeout != null) {
+            clearTimeout(state.cancel_timeout);
+            state.cancel_timeout = null
+        }
+        if (state.queued !== null) {
+            clearTimeout(state.queued);
+            state.queued = null
+        }
+        if (state.countdown_interval !== null) {
+            clearInterval(state.countdown_interval);
+            state.countdown_interval = null
+        }
+    }
+    this.close = instant => {
+        console.log("close draft screen");
+        state.is_visible = false;
+        html.backbtn.style.display = "none";
+        clear_timers();
+        show_draft(false, instant)
+    };
+
+    function open(data) {
+        state.is_visible = true;
+        if (state.show_backbutton_timeout !== null) {
+            clearTimeout(state.show_backbutton_timeout);
+            state.show_backbutton_timeout = null
+        }
+        if (state.countdown_interval !== null) {
+            clearInterval(state.countdown_interval);
+            state.countdown_interval = null
+        }
+        html.backbtn.style.display = "none";
+        engine.call("ui_sound", "ui_transition_mapvote");
+        let delay = 0;
+        let elements = html.maps.querySelectorAll(".vote_option_cont");
+        for (let i = 0; i < elements.length; i++) {
+            setTimeout((() => {
+                elements[i].classList.remove("hidden");
+                elements[i].firstElementChild.classList.add("rotate_in")
+            }), delay);
+            delay += 80
+        }
+        if (state.queued !== null) clearTimeout(state.queued);
+        const mode_data = GAME.get_data("game_mode_map", data.mode);
+        countdown = countdown_time_start;
+        state.queued = setTimeout((() => {
+            if (data.vote == "map") {
+                if (mode_data && mode_data.announce.length) {
+                    engine.call("ui_sound_queue", mode_data.announce)
+                }
+                engine.call("ui_sound_queue", "announcer_common_menu_mapvote")
+            }
+            set_countdown(countdown);
+            countdown--;
+            state.countdown_interval = setInterval((() => {
+                if (countdown < 0) {
+                    clearInterval(state.countdown_interval);
+                    state.show_backbutton_timeout = setTimeout((() => {
+                        anim_show(html.backbtn);
+                        state.show_backbutton_timeout = null
+                    }), 5e3);
+                    return
+                }
+                engine.call("ui_sound", "ui_match_found_tick");
+                set_countdown(countdown);
+                countdown--
+            }), 1e3)
+        }), 200);
+        global_ingame_fallback = "draft_screen"
+    }
+
+    function set_countdown(countdown) {
+        html.countdown.textContent = _format_number(countdown, "custom", {
+            format: "00"
+        });
+        html.countdown.classList.remove("anim");
+        if (state.countdown_interval) {
+            window.requestAnimationFrame((() => {
+                html.countdown.classList.add("anim")
             }))
         }
-        let container = _createElement("div", "container");
-        outer_container.appendChild(container);
-        if (type == "notfeatured") {
-            container.classList.add("two_rows");
-            let item_count = 0;
-            for (let group_idx in data[type]) {
-                if (group_idx == "0") {
-                    item_count += data[type][group_idx].length
-                } else if (Number.isInteger(group_idx)) {
-                    item_count += 1
-                }
-            }
-            if (item_count == 0) continue;
-            let max_per_row = Math.ceil(item_count / 2);
-            let row1 = _createElement("div", "row");
-            let row2 = _createElement("div", "row");
-            let counter = 0;
-            for (let group_idx in data[type]) {
-                if (isNaN(group_idx)) continue;
-                if (group_idx === "0") {
-                    for (item of data[type][group_idx]) {
-                        if (counter < max_per_row) {
-                            row1.appendChild(new ShopGroup([item], "shop").container)
-                        } else {
-                            row2.appendChild(new ShopGroup([item], "shop").container)
-                        }
-                        counter++
-                    }
-                } else {
-                    if (counter < max_per_row) {
-                        row1.appendChild(new ShopGroup(data[type][group_idx], "shop").container)
-                    } else {
-                        row2.appendChild(new ShopGroup(data[type][group_idx], "shop").container)
-                    }
-                    counter++
-                }
-            }
-            container.appendChild(row1);
-            container.appendChild(row2)
-        } else if (type == "featured") {
-            for (let group_idx in data[type]) {
-                if (isNaN(group_idx)) continue;
-                if (group_idx === "0") {
-                    for (item of data[type][group_idx]) {
-                        container.appendChild(new ShopGroup([item], "shop").container)
-                    }
-                } else {
-                    container.appendChild(new ShopGroup(data[type][group_idx], "shop").container)
-                }
-            }
-        }
-        shop_group.appendChild(outer_container);
-        if (category == "normal") {
-            fragment.appendChild(shop_group)
-        }
     }
-    if (category != "normal") {
-        fragment.appendChild(shop_group)
-    }
-    return fragment
-}
 
-function render_shop_category_header(category, title, ts_end) {
-    let header = _createElement("div", "header");
-    header.appendChild(_createElement("div", "title", title));
-    if (category == "normal" || category == "special") {
-        let time_left = _createElement("div", "time_left");
-        time_left.appendChild(_createElement("div", "clock"));
-        let time = _createElement("div", "time");
-        time_left.appendChild(time);
-        global_shop_timers.push(new CountdownTimer(ts_end, time));
-        header.appendChild(time_left)
-    }
-    return header
-}
-
-function shop_set_animation_state(running) {
-    _for_each_with_class_in_parent(_id("shop_screen"), "progress_bar", (function(el) {
-        if (running) {
-            el.classList.remove("paused")
+    function show_draft(visible, instant) {
+        console.log("show_draft", visible);
+        if (visible) {
+            close_menu();
+            open_ingame_screen(html.root.id, instant, true)
         } else {
-            el.classList.add("paused")
-        }
-    }))
-}
-
-function is_shop_item_owned(item) {
-    let item_owned = false;
-    if (item.item_type == "b" || item.item_type == "B") {
-        if (item.battlepass_id in global_battlepass_map && global_battlepass_map[item.battlepass_id].battlepass.owned === true) item_owned = true
-    } else if (item.item_type == "c") {
-        if (item.customization_id in global_customization_data_map) item_owned = true
-    } else if (item.item_type == "p") {
-        if (item.customization_pack_name) {
-            let all_found = true;
-            for (let c of item.customizations) {
-                if (global_customization_type_map[c.customization_type].name == "currency") continue;
-                if (!(c.customization_id in global_customization_data_map)) {
-                    all_found = false;
-                    break
-                }
+            if (global_ingame_fallback === "draft_screen") {
+                global_ingame_fallback = null
             }
-            if (all_found) item_owned = true
-        } else {
-            if (item.customizations && item.customizations.length) {
-                let items = _sort_customization_items(item.customizations);
-                let main_item = items[0];
-                if (main_item.customization_id in global_customization_data_map) item_owned = true
-            }
+            close_ingame_screen(instant, html.root.id)
         }
     }
-    return item_owned
-}
-class ShopGroup {
-    constructor(data, screen) {
-        this.data = data;
-        this.screen = screen;
-        this.bg = undefined;
-        this.bg_cont = undefined;
-        this.bg_cont_outer = undefined;
-        this.name = undefined;
-        this.price_cont = undefined;
-        this.price = undefined;
-        this.progress_bar = undefined;
-        this.current_idx = 0;
-        this.renderItemContainer(this.current_idx);
-        this.renderItem(this.current_idx);
-        if (this.data.length > 1) {
-            this.progress_bar.addEventListener("animationend", (() => {
-                this.progress_bar.classList.remove("running");
-                this.fadeOutCurrentItem()
-            }));
-            this.bg.addEventListener("animationend", (() => {
-                if (this.bg.classList.contains("fadeout")) {
-                    this.current_idx++;
-                    if (!this.data[this.current_idx]) this.current_idx = 0;
-                    this.renderItem(this.current_idx);
-                    this.bg.classList.remove("fadeout");
-                    this.bg.classList.add("fadein")
-                } else if (this.bg.classList.contains("fadein")) {
-                    this.bg.classList.remove("fadein");
-                    this.startRotation()
-                }
-            }));
-            this.startRotation()
-        }
-    }
-    startRotation() {
-        setTimeout((() => {
-            this.progress_bar.classList.add("running")
-        }))
-    }
-    fadeOutCurrentItem() {
-        this.bg.classList.add("fadeout")
-    }
-    renderItemContainer(idx) {
-        this.container = _createElement("div", "item_cont");
-        if (this.screen == "coin_shop") this.container.classList.add("coin_shop");
-        if (this.data[idx].item_featured) this.container.classList.add("big");
-        let shine_cont = _createElement("div", "shine_cont");
-        this.container.appendChild(shine_cont);
-        let shine = _createElement("div", "shine");
-        shine_cont.appendChild(shine);
-        this.item_container = _createElement("div", "item");
-        this.bg_cont_outer = _createElement("div", "bg_cont_outer");
-        this.bg_cont = _createElement("div", "bg_cont");
-        this.bg = _createElement("div", "bg");
-        this.bg_cont.appendChild(this.bg);
-        this.bg_cont_outer.appendChild(this.bg_cont);
-        this.item_container.appendChild(this.bg_cont_outer);
-        this.type = _createElement("div", "type");
-        this.item_container.appendChild(this.type);
-        this.tag = _createElement("div", "tag");
-        this.item_container.appendChild(this.tag);
-        this.icon = _createElement("div", "item_icon");
-        this.item_container.appendChild(this.icon);
-        this.bottom = _createElement("div", "bottom");
-        this.name = _createElement("div", "name");
-        this.bottom.appendChild(this.name);
-        this.extra = _createElement("div", "extra");
-        this.bottom.appendChild(this.extra);
-        this.price_cont = _createElement("div", "price_cont");
-        this.price_coin_icon = _createElement("div", ["icon", "reborn-coin"]);
-        this.price_cont.appendChild(this.price_coin_icon);
-        this.price = _createElement("div", "price");
-        this.price_cont.appendChild(this.price);
-        this.bottom.appendChild(this.price_cont);
-        this.owned_cont = _createElement("div", "owned");
-        this.owned_cont.appendChild(_createElement("div", "label", localize("shop_item_owned")));
-        this.owned_cont.appendChild(_createElement("div", "icon"));
-        this.owned_cont.style.display = "none";
-        this.bottom.appendChild(this.owned_cont);
-        this.item_container.appendChild(this.bottom);
-        if (this.data.length > 1) {
-            let counter_cont = _createElement("div", "counter_cont");
-            let counter_top = _createElement("div", "top");
-            this.counter = _createElement("div", "counter");
-            counter_top.appendChild(this.counter);
-            counter_top.appendChild(_createElement("div", "separator", "/"));
-            counter_top.appendChild(_createElement("div", "total", this.data.length));
-            counter_cont.appendChild(counter_top);
-            let progress_cont = _createElement("div", "progress_cont");
-            this.progress_bar = _createElement("div", "progress_bar");
-            progress_cont.appendChild(this.progress_bar);
-            counter_cont.appendChild(progress_cont);
-            this.item_container.appendChild(counter_cont)
-        }
-        this.container.appendChild(this.item_container);
-        this.container.addEventListener("mouseenter", this.on_mouseenter.bind(this));
-        this.container.addEventListener("mouseleave", this.on_mouseleave.bind(this));
-        this.container.addEventListener("click", this.on_click.bind(this))
-    }
-    on_mouseenter(e) {
-        this.bg_cont.classList.add("hover");
-        _play_mouseover4()
-    }
-    on_mouseleave(e) {
-        this.bg_cont.classList.remove("hover")
-    }
-    on_click(e) {
-        _play_click1();
-        if (this.data[this.current_idx].item_type == "b" || this.data[this.current_idx].item_type == "B") {
-            if (this.data[this.current_idx].battlepass_id in global_battlepass_map && global_battlepass_map[this.data[this.current_idx].battlepass_id].battlepass.owned === false) {
-                open_screen("battlepass_upgrade", {
-                    battlepass_id: this.data[this.current_idx].battlepass_id
-                })
-            } else {
-                open_screen("battlepass", {
-                    battlepass_id: this.data[this.current_idx].battlepass_id
-                })
-            }
-        } else {
-            open_screen("shop_item", {
-                item_group_data: this.data,
-                item_index: this.current_idx
-            })
-        }
-    }
-    renderItem(idx) {
-        _empty(this.bg);
-        _empty(this.icon);
-        let item_owned = is_shop_item_owned(this.data[idx]);
-        this.container.classList.remove("battlepass");
-        if (this.data[idx].item_type == "b" || this.data[idx].item_type == "B") {
-            let bp_icon = _createElement("div", "bp_level_icon");
-            bp_icon.style.backgroundImage = "url(" + _bp_icon(this.data[idx].battlepass_id, true) + ")";
-            this.icon.appendChild(bp_icon);
-            this.container.style.setProperty("--item_rarity_color", "var(--rarity_4)");
-            if (this.data[idx].item_type == "b") this.name.textContent = localize("shop_battlepass");
-            if (this.data[idx].item_type == "B") this.name.textContent = localize("shop_battlepass_bundle");
-            const bp_data = GAME.get_data("battlepass_data", this.data[idx].battlepass_id);
-            if (bp_data) {
-                this.type.textContent = localize_ext("season_n", {
-                    number: bp_data.season_nr
-                })
-            }
-            this.container.classList.add("battlepass");
-            this.bg.appendChild(renderShopBattlePassInner(this.data[idx].battlepass_id))
-        } else if (this.data[idx].item_type == "c") {
-            this.container.style.setProperty("--item_rarity_color", "var(--rarity_" + this.data[idx].rarity + ")");
-            this.name.textContent = localize("customization_" + this.data[idx].customization_id);
-            this.type.textContent = localize(global_customization_type_map[this.data[idx].customization_type].i18n);
-            let id = this.data[idx].customization_id;
-            if (this.data[idx].shop_image) id = "shop_" + id;
-            this.bg.appendChild(renderCustomizationInner("shop", this.data[idx].customization_type, id, 1))
-        } else if (this.data[idx].item_type == "p") {
-            let items = _sort_customization_items(this.data[idx].customizations);
-            let main_item = items[0];
-            if (this.data[idx].customization_pack_color) {
-                this.container.style.setProperty("--item_rarity_color", _format_color(this.data[idx].customization_pack_color))
-            } else {
-                this.container.style.setProperty("--item_rarity_color", "var(--rarity_" + main_item.rarity + ")")
-            }
-            if (this.data[idx].customization_pack_name) {
-                this.name.textContent = localize("customization_pack_" + this.data[idx].customization_pack_name);
-                this.type.textContent = localize("customization_pack");
-                this.bg.appendChild(renderCustomizationPackInner(this.data[idx].customization_pack_id))
-            } else {
-                this.name.textContent = localize("customization_" + main_item.customization_id);
-                this.type.textContent = localize(global_customization_type_map[main_item.customization_type].i18n);
-                this.bg.appendChild(renderCustomizationInner("shop", main_item.customization_type, main_item.customization_id, 1))
-            }
-            let coins = 0;
-            for (let c of this.data[idx].customizations) {
-                if (global_customization_type_map[c.customization_type].name != "currency") continue;
-                coins += c.amount
-            }
-            if (coins > 0) {
-                this.extra.textContent = localize_ext("shop_pack_coins", {
-                    count: coins
-                })
-            }
-        }
-        if (this.data[idx].item_tag && this.data[idx].item_tag.length) {
-            this.tag.textContent = localize(this.data[idx].item_tag);
-            this.tag.style.display = "flex"
-        } else {
-            this.tag.style.display = "none"
-        }
-        if (item_owned) {
-            this.price_cont.style.display = "none";
-            this.owned_cont.style.display = "flex"
-        } else {
-            this.price_cont.style.display = "flex";
-            this.owned_cont.style.display = "none"
-        }
-        if (this.data[idx].eos_offer_id != null && this.data[idx].eos_offer_id in global_coin_shop_offers) {
-            this.price.textContent = _format_number(global_coin_shop_offers[this.data[idx].eos_offer_id].current_price, "currency", {
-                currency_code: global_coin_shop_offers[this.data[idx].eos_offer_id].currency_code,
-                areCents: true
-            });
-            this.price_coin_icon.style.display = "none";
-            this.container.classList.add("fiat");
-            this.type.style.display = "none"
-        } else {
-            if (this.data[idx].item_price == 0) {
-                this.price.textContent = localize("free").toUpperCase();
-                this.price_coin_icon.style.display = "none"
-            } else {
-                this.price.textContent = _format_number(this.data[idx].item_price);
-                this.price_coin_icon.style.display = "flex"
-            }
-            this.container.classList.remove("fiat");
-            this.type.style.display = "flex"
-        }
-        if (this.data.length > 1) {
-            this.counter.textContent = idx + 1
-        }
-    }
-}
-class CountdownTimer {
-    constructor(date_string, element) {
-        this.end = new Date(date_string);
-        this.element = element;
-        this.interval = undefined;
-        if (this.element) this.startCountdown()
-    }
-    startCountdown() {
-        this.updateTime();
-        this.interval = setInterval((() => {
-            if (new Date >= this.end) {
-                this.stopCountdown();
-                return
-            }
-            this.updateTime()
-        }), 1e3)
-    }
-    stopCountdown() {
-        clearInterval(this.interval);
-        this.interval = null;
-        if (this.element) this.element.textContent = "";
-        this.element = null
-    }
-    updateTime() {
-        if (this.element) this.element.textContent = _time_until((this.end - new Date) / 1e3)
-    }
-}
-
-function shop_redeem_gift_key() {
-    let cont = _createElement("div", "redeem_item_cont");
-    let text = _createElement("div", "text", localize("shop_redeem_gift_key_text"));
-    cont.appendChild(text);
-    let input = _createElement("input", "redeem_item_input");
-    cont.appendChild(input);
-    let error = _createElement("div", "error");
-    error.style.display = "none";
-    cont.appendChild(error);
-    let btn_cont = _createElement("div", "generic_modal_dialog_action");
-    let btn_redeem = _createElement("div", "dialog_button", localize("menu_button_redeem"));
-    let btn_cancel = _createElement("div", "dialog_button", localize("menu_button_cancel"));
-    _addButtonSounds(btn_redeem, 1);
-    _addButtonSounds(btn_cancel, 1);
-    btn_redeem.addEventListener("click", (function() {
-        lock_modal("basic_modal");
-        error.style.display = "none";
-        error.textContent = "";
-        btn_cont.removeChild(btn_redeem);
-        btn_cont.removeChild(btn_cancel);
-        let processing = _createElement("div", "processing");
-        processing.appendChild(_createSpinner());
-        processing.appendChild(_createElement("div", "text", localize("processing")));
-        btn_cont.appendChild(processing);
-        if (input.value.trim().length == 0) {
-            shop_redeem_gift_key_callback({
-                success: false,
-                reason: "invalid_gift_key"
-            });
-            return
-        }
-        api_request("POST", `/shop/gift/redeem`, {
-            code: input.value.trim()
-        }, shop_redeem_gift_key_callback)
-    }));
-    btn_cancel.addEventListener("click", closeBasicModal);
-    btn_cont.appendChild(btn_redeem);
-    btn_cont.appendChild(btn_cancel);
-    openBasicModal(basicGenericModal(localize("shop_redeem_gift_key"), cont, btn_cont));
-    input.focus();
-
-    function shop_redeem_gift_key_callback(data) {
-        unlock_modal("basic_modal");
-        if (data.success == false) {
-            error.textContent = localize("shop_error_" + data.reason);
-            error.style.display = "block";
-            _empty(btn_cont);
-            btn_cont.appendChild(btn_redeem);
-            btn_cont.appendChild(btn_cancel)
-        }
-        if (data.success == true) {
-            closeBasicModal();
-            if (data.coins) {
-                update_wallet(data.coins)
-            }
-            if (data.item_type == SHOP_ITEM_TYPE.BATTLEPASS_BASIC || data.item_type == SHOP_ITEM_TYPE.BATTLEPASS_BUNDLE) {
-                global_user_battlepass.battlepass.owned = true;
-                global_user_battlepass.battlepass.level = data.level;
-                global_user_battlepass.battlepass.xp = data.xp;
-                global_user_battlepass.battlepass.seen = true;
-                global_user_battlepass.progression = data.progression
-            }
-            trigger_battlepass_update_handlers();
-            if (data.notifs.length) {
-                for (let n of data.notifs) {
-                    global_notifs.addNotification(n);
-                    if (n.items && n.items.length) {
-                        add_user_customizations(n.items)
-                    }
-                }
-                queue_show_notification()
-            }
-        }
-    }
-}
-
-function set_shop_update_version(value) {
-    let all = document.querySelectorAll(".new_shop");
-    if (value > global_shop_update_version) {
-        global_shop_update_version = value;
-        for (let i = 0; i < all.length; i++) {
-            all[i].style.display = "flex"
-        }
-    } else {
-        for (let i = 0; i < all.length; i++) {
-            all[i].style.display = "none"
-        }
-    }
-}
+};

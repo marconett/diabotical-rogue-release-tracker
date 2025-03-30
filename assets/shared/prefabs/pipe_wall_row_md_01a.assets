@@ -1,0 +1,589 @@
+asset pipe_wall_row_md_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name col_col_box_corner_14
+        position 59.60010 0.13793 -52.00000
+        rotation 0 -179.99999 0
+        scale 1.37000 2.50000 1.00000
+        param best_lod 0
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_15
+        position -2.00000 200.13792 -52.00000
+        rotation 0 -179.99999 0
+        scale 0.60000 1.74000 1.00000
+        param best_lod 0
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_cable_bend_8m_04
+        position 3.29834 150.23003 -9.85312
+        rotation -90.00000 0 0
+        scale 0.65000 0.59000 0.59000
+        param __shadow true
+        param best_lod 0
+        param force_shadows true
+        param model cable_bend_8m_04
+    }
+    prefab_entity
+    {
+        name prop_connector_03_1
+        position 14.48535 188.34106 -24.98227
+        rotation 90.00000 0 179.99997
+        scale 0.68000 0.68000 0.68000
+        param __shadow true
+        param best_lod 0
+        param force_shadows true
+        param model connector_03
+        param size_w 1
+    }
+    prefab_entity
+    {
+        name prop_connector_03_2
+        position 14.48535 163.54106 -24.98227
+        rotation 90.00000 0 179.99997
+        scale 0.68000 0.68000 0.68000
+        param __shadow true
+        param best_lod 0
+        param force_shadows true
+        param model connector_03
+        param size_w 1
+    }
+    prefab_entity
+    {
+        name prop_connector_1
+        position 14.34229 186.57495 -6.85278
+        rotation -90.00000 0 0
+        scale 1.51951 2.32504 1.72099
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_connector_2
+        param best_lod 0
+        param force_shadows true
+        param model connector_01
+    }
+    prefab_entity
+    {
+        name prop_connector_2
+        position 14.34229 161.77495 -6.85278
+        rotation -90.00000 0 0
+        scale 1.51951 2.32504 1.72099
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_connector_2
+        param best_lod 0
+        param force_shadows true
+        param model connector_01
+    }
+    prefab_entity
+    {
+        name prop_md_4_1
+        position -40.70166 75.31007 -41.51456
+        rotation -90.00000 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_1
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model md_4
+        param override_effect_3 matlib_mat_lib_metal_dark_details_floating
+    }
+    prefab_entity
+    {
+        name prop_md_4_13
+        position -12.70166 328.11005 11.28543
+        rotation 0 0 -89.99999
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_4
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model md_4_end
+    }
+    prefab_entity
+    {
+        name prop_md_4_14
+        position 14.89844 124.91005 11.28543
+        rotation 0 0 -89.99999
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_4
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model md_4_end
+    }
+    prefab_entity
+    {
+        name prop_md_4_16
+        position 14.89844 32.11006 -41.51456
+        rotation -90.00000 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_1
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model md_4
+        param override_effect_3 matlib_mat_lib_metal_dark_details_floating
+    }
+    prefab_entity
+    {
+        name prop_md_4_17
+        position 14.89844 117.31004 -41.51456
+        rotation -90.00000 0 -90.00001
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_3
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model md_8_45_small_turn
+    }
+    prefab_entity
+    {
+        name prop_md_4_18
+        position 14.89844 124.91005 -33.91455
+        rotation -44.99998 0.00001 -90.00001
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_4
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model md_8_45_small_turn
+    }
+    prefab_entity
+    {
+        name prop_md_4_19
+        position 46.09839 186.34883 28.03067
+        rotation 0 0 -89.99999
+        scale 1.27000 1.27000 1.27000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_4
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model md_4_end
+    }
+    prefab_entity
+    {
+        name prop_md_4_2
+        position -40.70166 235.31006 -41.51456
+        rotation -90.00000 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_1
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model md_4
+        param override_effect_3 matlib_mat_lib_metal_dark_details_floating
+    }
+    prefab_entity
+    {
+        name prop_md_4_21
+        position 46.09839 68.49287 -39.02542
+        rotation -90.00000 0 0
+        scale 1.27000 1.27000 1.27000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_1
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model md_4
+        param override_effect_3 matlib_mat_lib_metal_dark_details_floating
+    }
+    prefab_entity
+    {
+        name prop_md_4_22
+        position 46.09839 176.69685 -39.02542
+        rotation -90.00000 0 -90.00001
+        scale 1.27000 1.27000 1.27000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_3
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model md_8_45_small_turn
+    }
+    prefab_entity
+    {
+        name prop_md_4_23
+        position 46.09839 186.34883 -29.37341
+        rotation -44.99995 -0.00001 -89.99995
+        scale 1.27000 1.27000 1.27000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_4
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model md_8_45_small_turn
+    }
+    prefab_entity
+    {
+        name prop_md_4_3
+        position -40.70166 320.51004 -41.51456
+        rotation -90.00000 0 -90.00001
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_3
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model md_8_45_small_turn
+    }
+    prefab_entity
+    {
+        name prop_md_4_4
+        position -40.70166 328.11005 -33.91455
+        rotation -44.99998 0.00001 -90.00001
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_4
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model md_8_45_small_turn
+    }
+    prefab_entity
+    {
+        name prop_md_4_5
+        position -40.70166 328.11005 11.28543
+        rotation 0 0 -89.99999
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_4
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model md_4_end
+    }
+    prefab_entity
+    {
+        name prop_md_4_6
+        position -12.70166 75.31007 -41.51456
+        rotation -90.00000 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_1
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model md_4
+        param override_effect_3 matlib_mat_lib_metal_dark_details_floating
+    }
+    prefab_entity
+    {
+        name prop_md_4_7
+        position -12.70166 235.31006 -41.51456
+        rotation -90.00000 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_1
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model md_4
+        param override_effect_3 matlib_mat_lib_metal_dark_details_floating
+    }
+    prefab_entity
+    {
+        name prop_md_4_8
+        position -12.70166 320.51004 -41.51456
+        rotation -90.00000 0 -90.00001
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_3
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model md_8_45_small_turn
+    }
+    prefab_entity
+    {
+        name prop_md_4_9
+        position -12.70166 328.11005 -33.91455
+        rotation -44.99998 0.00001 -90.00001
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_4
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model md_8_45_small_turn
+    }
+    prefab_entity
+    {
+        name prop_md_4_connector
+        position -40.70166 -0.68994 -41.51456
+        rotation -90.00000 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_connector
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model md_4_connector
+    }
+    prefab_entity
+    {
+        name prop_md_4_connector_1
+        position -40.70166 328.11005 -1.51456
+        rotation -0.00002 180.00000 89.99999
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_connector
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model md_4_connector
+    }
+    prefab_entity
+    {
+        name prop_md_4_connector_3
+        position -12.70166 -0.68994 -41.51456
+        rotation -90.00000 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_connector
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model md_4_connector
+    }
+    prefab_entity
+    {
+        name prop_md_4_connector_4
+        position -12.70166 328.11005 -1.51456
+        rotation -0.00002 180.00000 89.99999
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_connector
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model md_4_connector
+    }
+    prefab_entity
+    {
+        name prop_md_4_connector_5
+        position 14.89844 -0.68994 -41.51456
+        rotation -90.00000 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_connector
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model md_4_connector
+    }
+    prefab_entity
+    {
+        name prop_md_4_connector_6
+        position 14.89844 124.91005 -1.51456
+        rotation -0.00002 180.00000 89.99999
+        scale 0.94000 0.94000 0.94000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_connector
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model md_4_connector
+    }
+    prefab_entity
+    {
+        name prop_md_4_connector_7
+        position 46.09839 -4.48995 -39.02542
+        rotation -90.00000 0 0
+        scale 1.27000 1.27000 1.27000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_connector
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model md_4_connector
+    }
+    prefab_entity
+    {
+        name prop_md_4_connector_8
+        position 46.09839 186.34883 1.68542
+        rotation -0.00002 180.00000 89.99999
+        scale 1.27000 1.27000 1.27000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_connector
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model md_4_connector
+    }
+    prefab_entity
+    {
+        name prop_md_4_wall_attachment
+        position -40.70166 171.31006 -41.51456
+        rotation -90.00000 0 89.99999
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_wall_attachment
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model md_4_wall_attachment
+    }
+    prefab_entity
+    {
+        name prop_md_4_wall_attachment_1
+        position -40.70166 51.31007 -41.51456
+        rotation -90.00000 0 89.99999
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_wall_attachment
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model md_4_wall_attachment
+    }
+    prefab_entity
+    {
+        name prop_md_4_wall_attachment_10
+        position 46.09839 52.51005 -39.02542
+        rotation -90.00000 0 89.99999
+        scale 1.27000 1.27000 1.27000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_wall_attachment
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model md_4_wall_attachment
+    }
+    prefab_entity
+    {
+        name prop_md_4_wall_attachment_12
+        position 46.09839 136.31006 -39.02542
+        rotation -90.00000 0 89.99999
+        scale 1.27000 1.27000 1.27000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_wall_attachment
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model md_4_wall_attachment
+    }
+    prefab_entity
+    {
+        name prop_md_4_wall_attachment_3
+        position -40.70166 279.31006 -41.51456
+        rotation -90.00000 0 89.99999
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_wall_attachment
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model md_4_wall_attachment
+    }
+    prefab_entity
+    {
+        name prop_md_4_wall_attachment_4
+        position -12.70166 171.31006 -41.51456
+        rotation -90.00000 0 89.99999
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_wall_attachment
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model md_4_wall_attachment
+    }
+    prefab_entity
+    {
+        name prop_md_4_wall_attachment_5
+        position -12.70166 51.31007 -41.51456
+        rotation -90.00000 0 89.99999
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_wall_attachment
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model md_4_wall_attachment
+    }
+    prefab_entity
+    {
+        name prop_md_4_wall_attachment_6
+        position -12.70166 279.31006 -41.51456
+        rotation -90.00000 0 89.99999
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_wall_attachment
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model md_4_wall_attachment
+    }
+    prefab_entity
+    {
+        name prop_md_4_wall_attachment_9
+        position 14.89844 76.11006 -41.51456
+        rotation -90.00000 0 89.99999
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_wall_attachment
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model md_4_wall_attachment
+    }
+}
+
+
+

@@ -1,0 +1,169 @@
+asset tech_machine_junction_tall_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name light_105
+        position 3.12244 225.44768 127.20032
+        rotation 9.00010 2.69981 0.00006
+        scale 1.00000 1.00000 1.00000
+        param angle 75.3073
+        param color s_light_main
+        param falloff 0.25
+        param intensity 3
+        param light_bake_only false
+        param radius 285.842
+        param rotation_w 0
+        param softness 0.1
+        param tag hallway
+        param type diffuse
+    }
+    prefab_entity
+    {
+        name light_125
+        position 7.76233 175.04768 -89.53912
+        rotation 9.00008 -172.80008 0.00006
+        scale 1.00000 1.00000 1.00000
+        param angle 75.3073
+        param color s_light_main
+        param falloff 0.25
+        param intensity 3
+        param light_bake_only false
+        param radius 192
+        param rotation_w 0
+        param softness 0.1
+        param tag hallway
+        param type point
+    }
+    prefab_entity
+    {
+        name light_34
+        position 6.85620 211.64983 -125.32440
+        rotation 0.00009 -67.49996 -0.00007
+        scale 1.00000 1.00000 1.00000
+        param color s_light_main
+        param falloff 0.25
+        param intensity 2
+        param light_bake_only true
+        param radius 535.675
+        param rotation_w 0
+        param tag hallway
+        param type diffuse
+    }
+    prefab_entity
+    {
+        name light_35
+        position -9.43896 175.04768 86.33215
+        rotation 9.00010 2.69981 0.00006
+        scale 1.00000 1.00000 1.00000
+        param angle 75.3073
+        param color s_light_main
+        param falloff 0.25
+        param intensity 3
+        param light_bake_only false
+        param radius 192
+        param rotation_w 0
+        param softness 0.1
+        param tag hallway
+        param type point
+    }
+    prefab_entity
+    {
+        name prop_blockout_box_corner_242
+        position -13.77063 152.72629 84.43219
+        rotation 90.00000 0 -89.99995
+        scale 0.25000 0.42000 1.50000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param color 808080
+        param color3_matlib_mat_lib_emissive s_emissive_main
+        param force_shadows true
+        param material_0 matlib_mat_lib_emissive
+        param model blockout_box_corner
+        param uv_scale_x 2.95
+        param uv_scale_y 3.5
+    }
+    prefab_entity
+    {
+        name prop_blockout_box_corner_34
+        position -13.77014 152.32637 -66.36652
+        rotation 90.00000 0 -89.99995
+        scale 0.25000 0.42000 1.50000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param color 808080
+        param color3_matlib_mat_lib_emissive s_emissive_main
+        param force_shadows true
+        param material_0 matlib_mat_lib_emissive
+        param model blockout_box_corner
+        param uv_scale_x 2.95
+        param uv_scale_y 3.5
+    }
+    prefab_entity
+    {
+        name prop_cylindrical_tower_1
+        position 2.08765 -2.20998 -1.67133
+        rotation -0.00002 44.99996 0.00009
+        scale 0.75000 0.75000 0.75000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param model cylindrical_tower
+    }
+    prefab_entity
+    {
+        name prop_cylindrical_wall_junc
+        position 2.31372 198.79004 -1.70093
+        rotation -0.00008 89.99988 0.00005
+        scale 1.15000 1.05000 1.15000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param color_matlib_mat_lib_metal_panels_01 s_bright
+        param force_shadows true
+        param material_3 matlib_mat_lib_metal_panels_01
+        param model cylindrical_wall_junction_02b
+        param uv_offset_x_matlib_mat_lib_metal_panels_01 0.5
+        param uv_offset_y_matlib_mat_lib_metal_panels_01 0.65
+        param uv_scale_y_matlib_mat_lib_metal_panels_01 0.8
+    }
+    prefab_entity
+    {
+        name prop_cylindrical_wall_junc_1
+        position 2.31543 198.79008 -1.71231
+        rotation 0.00008 -89.99997 -0.00005
+        scale 1.15000 1.05000 1.15000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param color_matlib_mat_lib_metal_panels_01 s_bright
+        param force_shadows true
+        param material_3 matlib_mat_lib_metal_panels_01
+        param model cylindrical_wall_junction_02b
+        param uv_offset_x_matlib_mat_lib_metal_panels_01 0.5
+        param uv_offset_y_matlib_mat_lib_metal_panels_01 0.65
+        param uv_scale_y_matlib_mat_lib_metal_panels_01 0.8
+    }
+    prefab_entity
+    {
+        name sound_amb_prop_electr
+        position 12.52307 192.38435 -11.65018
+        rotation 0 -99.00002 0
+        scale 1.00000 1.00000 1.00000
+        param capsule_end_position_x 3536.988525
+        param capsule_end_position_y 79.136673
+        param capsule_end_position_z -578.763916
+        param cross_fade_max_radius 1500.000000
+        param cross_fade_min_radius 300.000000
+        param min_radius 300.000000
+        param radius 3000.000000
+        param sound_event amb_prop_electronics2
+        param type audio_event_ambient_node
+        param volume 0.25
+    }
+}
+

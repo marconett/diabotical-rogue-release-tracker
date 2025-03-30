@@ -1,0 +1,245 @@
+asset hatch_decals_md_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name decal_decal_environment_dir_101
+        position 5.75427 0.46307 107.21802
+        rotation 90.00000 0 -72.99986
+        scale 418.77985 523.14984 152.07631
+        param albedo_map_enable true
+        param color 5221213a
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_environment_dirt_splat_02
+        param metal_map_enable false
+        param normal_map_enable false
+        param position_x 4.554321
+        param position_y 0.463070
+        param position_z 96.817993
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_environment_dir_23
+        position -111.48450 -3.68816 -59.07263
+        rotation 90.00000 0 134.99989
+        scale 212.50000 212.49998 16.00000
+        param albedo_map_enable true
+        param color 45344654
+        param debug_draw false
+        param debug_proj false
+        param emissive_map_enable false
+        param gloss_map_enable false
+        param material decal_mat_environment_dirt_worked_02
+        param metal_map_enable false
+        param normal_map_enable false
+        param order 2
+        param position_x -112.684448
+        param position_y -3.688160
+        param position_z -69.472656
+        param scale 1.0
+        param tag hallway
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_generic_sand_di_3
+        position -3.16382 1.53902 74.59631
+        rotation 90.00000 0 -179.59986
+        scale 340.92993 86.39996 149.99989
+        param albedo_map_enable true
+        param color 7e5c3e54
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_generic_sand_dirt2
+        param metal_map_enable false
+        param normal_map_enable false
+        param position_x -4.363770
+        param position_y 1.539020
+        param position_z 64.196289
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_graphical_graph_176
+        position -7.51221 2.73113 -11.87732
+        rotation 90.00000 0 179.99995
+        scale 89.99998 89.99996 6.00000
+        param albedo_map_enable true
+        param clip fullclip
+        param color s_decal
+        param emissive_map_enable false
+        param gloss_map_enable false
+        param group_member_id 1
+        param group_scale_x 1
+        param group_scale_y 1.125
+        param group_scale_z 1
+        param material decal_mat_graphical_graphical_triangle_02
+        param metal_map_enable false
+        param normal_map_enable false
+        param position_x -8.712158
+        param position_y 2.731130
+        param position_z -22.277344
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_graphical_graph_178
+        position -67.91406 -0.96907 -94.61133
+        rotation 90.00000 0 -0.00002
+        scale 109.99996 29.99998 6.00000
+        param albedo_map_enable true
+        param clip fullclip
+        param color s_decal
+        param emissive_map_enable false
+        param gloss_map_enable false
+        param material decal_mat_graphical_graphical_slanted_striped_1
+        param metal_map_enable false
+        param normal_map_enable false
+        param position_x -69.114014
+        param position_y -0.969070
+        param position_z -105.011353
+        param scale 1.0
+    }
+    prefab_entity
+    {
+        name decal_decal_graphical_graph_4
+        position 51.33569 -0.96907 -94.61133
+        rotation 90.00000 0 -0.00002
+        scale 109.99996 29.99998 6.00000
+        param albedo_map_enable true
+        param clip fullclip
+        param color s_decal
+        param emissive_map_enable false
+        param gloss_map_enable false
+        param material decal_mat_graphical_graphical_slanted_striped_1
+        param metal_map_enable false
+        param normal_map_enable false
+        param position_x 50.135742
+        param position_y -0.969070
+        param position_z -105.011353
+        param scale 1.0
+    }
+    prefab_entity
+    {
+        name decal_decal_icons_symbols_g_15
+        position -7.51562 0.63844 -18.21143
+        rotation 90.00000 0 179.99999
+        scale 30.00000 29.99998 63.99994
+        param albedo_map_enable true
+        param clip fullclip
+        param color s_decal_bright
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_icons_symbols_graphical_icon_002
+        param metal_map_enable false
+        param normal_map_enable false
+        param position_x -8.715576
+        param position_y 0.638440
+        param position_z -28.611450
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name prop_building_blocks_trim
+        position -6.29358 -2.46831 285.45056
+        rotation -0.00001 -89.99998 -0.00000
+        scale 1.00000 1.00000 0.97000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_building_blocks_trim_94
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model building_blocks_trim_x8
+        param position_x -7.493530
+        param position_y -2.468310
+        param position_z 275.050537
+        param uv_scale_x_matlib_mat_lib_metal_dark 2
+        param uv_scale_y_matlib_mat_lib_metal_dark 2
+    }
+    prefab_entity
+    {
+        name prop_building_blocks_trim_94
+        position -6.29358 -2.46831 42.92346
+        rotation -0.00001 -89.99998 -0.00000
+        scale 1.00000 1.00000 0.97000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_building_blocks_trim_94
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model building_blocks_trim_x8
+        param position_x -7.493530
+        param position_y -2.468310
+        param position_z 32.523438
+        param uv_scale_x_matlib_mat_lib_metal_dark 2
+        param uv_scale_y_matlib_mat_lib_metal_dark 2
+    }
+    prefab_entity
+    {
+        name prop_building_blocks_trim_95
+        position -1.90039 -2.46886 4.25061
+        rotation 0 0.00002 -0.00001
+        scale 1.00000 1.00000 0.78500
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_building_blocks_trim_95
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model building_blocks_trim_x8
+        param position_x -3.100342
+        param position_y -2.468860
+        param position_z -6.149414
+        param uv_scale_x_matlib_mat_lib_metal_dark 2
+    }
+    prefab_entity
+    {
+        name prop_building_blocks_trim_96
+        position 309.29700 -2.46889 4.25061
+        rotation 0 0.00002 -0.00001
+        scale 1.00000 1.00000 0.78500
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_building_blocks_trim_96
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model building_blocks_trim_x8
+        param position_x 308.097046
+        param position_y -2.468890
+        param position_z -6.149414
+        param uv_scale_x_matlib_mat_lib_metal_dark 2
+    }
+    prefab_entity
+    {
+        name prop_floorhatch_16
+        position 172.09021 -18.67103 -115.50549
+        rotation -0.00001 -90.00003 0
+        scale 6.28000 1.00000 9.00000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param color 9a8a83ff
+        param color2_rogueenvironmentindustrialpropsfloorhatchesind_floorhatch_05_center a0a0a0ff
+        param color_rogueenvironmentindustrialpropsfloorhatchesind_floorhatch_05_center 919191ff
+        param model floorhatch_01
+        param position_x 170.890259
+        param position_y -18.671030
+        param position_z -125.905518
+        param size_x 6.279999
+        param size_y 1.000000
+        param size_z 8.999998
+    }
+}
+
+
+

@@ -38,6 +38,7 @@ function close_ingame_screen(instant, screen_id) {
     if (!global_ingame_menu) return;
     if (global_ingame_menu === global_ingame_fallback) return;
     if (screen_id && global_ingame_menu != screen_id) return;
+    console.log("close_ingame_screen", instant, screen_id);
     let el = _id(global_ingame_menu);
     if (!el) return;
     if (instant) {
@@ -136,7 +137,15 @@ function init_ingame() {
         global_client_in_game = bool;
         close_menu(true, true);
         if (game_mode === GAME.get_data("HUB_MODE")) {
-            IN_HUB = true;
+            if (GAME.active === GAME.ids.GEARSTORM) {
+                if (map_name === GAME.get_data("HUB_MAP")) {
+                    IN_HUB = true
+                } else {
+                    IN_HUB = false
+                }
+            } else {
+                IN_HUB = true
+            }
             IN_EDITING = false
         } else if (game_mode === GAME.get_data("EDIT_MODE")) {
             IN_HUB = false;

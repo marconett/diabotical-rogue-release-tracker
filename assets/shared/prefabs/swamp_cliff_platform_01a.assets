@@ -1,0 +1,238 @@
+asset swamp_cliff_platform_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name decal_decal_environment_mus_53
+        position -174.82031 35.35411 309.60278
+        rotation 90.00000 0 -72.00010
+        scale 481.74960 449.60992 39.99998
+        param albedo_map_enable true
+        param color ffbf7f3a
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_environment_mush_01
+        param metal_map_enable false
+        param normal_map_enable false
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_environment_mus_54
+        position 188.41040 48.13350 105.11255
+        rotation 90.00000 0 -171.00016
+        scale 481.74985 507.68973 49.99994
+        param albedo_map_enable true
+        param color ffbf7f3a
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_environment_mush_01
+        param metal_map_enable false
+        param normal_map_enable true
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_environment_mus_56
+        position -27.28662 54.75664 -197.68726
+        rotation 90.00000 0 67.49996
+        scale 919.65918 612.63983 46.06311
+        param albedo_map_enable true
+        param color 845e5077
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_environment_mush_01
+        param metal_map_enable false
+        param normal_map_enable false
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_generic_sand_di_14
+        position 66.63916 57.95411 -177.89624
+        rotation 90.00000 0 -134.99970
+        scale 597.24945 379.39981 29.99997
+        param albedo_map_enable true
+        param color 9f7463af
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_generic_sand_dirt_variation
+        param metal_map_enable false
+        param normal_map_enable false
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name prop_rogue_jungle_cliff_01
+        position 8.13867 -7.96162 -65.48291
+        rotation 1.28771 -5.25825 3.02645
+        scale 0.53000 0.77941 0.62353
+        param __shadow true
+        param best_lod 1
+        param clip fullclip
+        param color2_atlas_rocks_combined_mat_atlas_atlas_rocks_combined s_cliff_edge
+        param color3_atlas_rocks_combined_mat_atlas_atlas_rocks_combined s_cliff_base
+        param color_atlas_rocks_combined_mat_atlas_atlas_rocks_combined s_cliff_bottom
+        param force_shadows true
+        param model rogue_jungle_cliff_01_plateau
+        param size_w 1
+        param tag ext
+        param uv_detail_scale 0
+        param uv_offset_x_atlas_rocks_combined_mat_atlas_atlas_rocks_combined 0.00
+        param uv_offset_y_atlas_rocks_combined_mat_atlas_atlas_rocks_combined 0.00
+        param uv_rotation_atlas_rocks_combined_mat_atlas_atlas_rocks_combined 0.00
+        param uv_scale_x_atlas_rocks_combined_mat_atlas_atlas_rocks_combined 1.00
+        param uv_scale_y_atlas_rocks_combined_mat_atlas_atlas_rocks_combined 1.00
+        param vertex_coloring_function off
+        param vertex_coloring_param1 0
+        param vertex_coloring_param2 0
+    }
+    prefab_entity
+    {
+        name prop_rogue_jungle_cliff_6
+        position 75.41748 7.75411 170.46118
+        rotation 0.74068 -24.05925 6.22516
+        scale 0.32000 0.47059 0.37647
+        param __shadow true
+        param best_lod 1
+        param clip fullclip
+        param color2_atlas_rocks_combined_mat_atlas_atlas_rocks_combined s_cliff_edge
+        param color3_atlas_rocks_combined_mat_atlas_atlas_rocks_combined s_cliff_base
+        param color_atlas_rocks_combined_mat_atlas_atlas_rocks_combined s_cliff_bottom
+        param force_shadows true
+        param model rogue_jungle_cliff_01_plateau
+        param size_w 1
+        param tag ext
+        param uv_detail_scale 0
+        param uv_offset_x_atlas_rocks_combined_mat_atlas_atlas_rocks_combined 0.00
+        param uv_offset_y_atlas_rocks_combined_mat_atlas_atlas_rocks_combined 0.00
+        param uv_rotation_atlas_rocks_combined_mat_atlas_atlas_rocks_combined 0.00
+        param uv_scale_x_atlas_rocks_combined_mat_atlas_atlas_rocks_combined 1.00
+        param uv_scale_y_atlas_rocks_combined_mat_atlas_atlas_rocks_combined 1.00
+        param vertex_coloring_function off
+        param vertex_coloring_param1 0
+        param vertex_coloring_param2 0
+    }
+    prefab_entity
+    {
+        name prop_rogue_jungle_cliff_7
+        position -125.79736 6.13335 206.07349
+        rotation 0.12086 -80.77863 3.59718
+        scale 0.32000 0.47059 0.37647
+        param __shadow true
+        param best_lod 1
+        param clip fullclip
+        param color2_atlas_rocks_combined_mat_atlas_atlas_rocks_combined s_cliff_edge
+        param color3_atlas_rocks_combined_mat_atlas_atlas_rocks_combined s_cliff_base
+        param color_atlas_rocks_combined_mat_atlas_atlas_rocks_combined s_cliff_bottom
+        param force_shadows true
+        param model rogue_jungle_cliff_01_plateau
+        param size_w 1
+        param tag ext
+        param uv_detail_scale 0
+        param uv_offset_x_atlas_rocks_combined_mat_atlas_atlas_rocks_combined 0.00
+        param uv_offset_y_atlas_rocks_combined_mat_atlas_atlas_rocks_combined 0.00
+        param uv_rotation_atlas_rocks_combined_mat_atlas_atlas_rocks_combined 0.00
+        param uv_scale_x_atlas_rocks_combined_mat_atlas_atlas_rocks_combined 1.00
+        param uv_scale_y_atlas_rocks_combined_mat_atlas_atlas_rocks_combined 1.00
+        param vertex_coloring_function off
+        param vertex_coloring_param1 0
+        param vertex_coloring_param2 0
+    }
+    prefab_entity
+    {
+        name prop_small_rock_debris_m_10
+        position 79.49268 63.73467 -145.89478
+        rotation 0 22.50006 0
+        scale 1.15000 0.57500 1.15000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param color1 1F2931
+        param color2_smallrock_debris_mat_smallrockdebris a47154ff
+        param color3_smallrock_debris_mat_smallrockdebris b37c64ff
+        param color_smallrock_debris_mat_smallrockdebris 775343ff
+        param force_shadows true
+        param model small_rock_debris_m
+    }
+    prefab_entity
+    {
+        name prop_small_rock_debris_m_11
+        position 158.72217 63.73467 12.28540
+        rotation 0 -17.99994 0
+        scale 1.15000 0.57500 1.15000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param color1 1F2931
+        param color2_smallrock_debris_mat_smallrockdebris a47154ff
+        param color3_smallrock_debris_mat_smallrockdebris b37c64ff
+        param color_smallrock_debris_mat_smallrockdebris 775343ff
+        param force_shadows true
+        param model small_rock_debris_m
+    }
+    prefab_entity
+    {
+        name prop_vine_5_moderate
+        position 187.20874 -0.66670 137.03564
+        rotation 67.35001 -110.66401 -17.57122
+        scale 0.75000 0.78750 0.75000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param color 38acacff
+        param detail_texture_normal_fallof 0
+        param detail_texture_normal_scale_x 0
+        param detail_texture_normal_scale_y 0
+        param force_shadows true
+        param model vine_5_moderate
+        param rotation_w 0
+        param tag ext
+        param vertex_coloring_function off
+    }
+    prefab_entity
+    {
+        name prop_vine_5_moderate_99
+        position 79.05518 51.53276 -216.05249
+        rotation 80.99293 -33.10799 -30.92308
+        scale 0.50000 0.52500 0.50000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param color 38acacff
+        param color2_large_vines_mat_vines 3ab0b0ff
+        param color3_large_vines_mat_vines 3ab0b0ff
+        param color_large_vines_mat_vines 3ab0b0ff
+        param detail_texture_normal_fallof 0
+        param detail_texture_normal_scale_x 0
+        param detail_texture_normal_scale_y 0
+        param force_shadows true
+        param model vine_5_moderate
+        param rotation_w 0
+        param tag ext
+        param vertex_coloring_function off
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_10_3
+        position 151.40869 53.17974 -38.77808
+        rotation 0.31179 95.38335 -0.62558
+        scale 1.30000 1.16000 1.30000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param color_leafyvines_mat_vineleafy e7760dff
+        param force_shadows true
+        param model vine_leafy_10
+        param rotation_w 0
+        param tag ext
+    }
+}
+
+
+

@@ -1,0 +1,118 @@
+asset jumpad_up_tall_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name jumppad_1
+        position 1.00818 7.83994 -45.97516
+        rotation 0 -90.00003 0
+        scale 59.99999 20.00000 59.99999
+        param position_x 1.008148
+        param position_y 7.839940
+        param position_z -45.975159
+        param rotation_x -0.000000
+        param rotation_y -1.570797
+        param rotation_z 0.000000
+        param target jp_target_3
+    }
+    prefab_entity
+    {
+        name light_4
+        position 1.11011 88.03708 -53.10175
+        rotation 0 -134.99994 0
+        scale 1.00000 1.00000 1.00000
+        param color 178dd1ff
+        param falloff 0.4
+        param intensity 4
+        param light_bake_only false
+        param position_x 1.110077
+        param position_y 88.037079
+        param position_z -53.101746
+        param radius 400
+        param rotation_x -0.000000
+        param rotation_y -2.356194
+        param rotation_z 0.000000
+        param type diffuse
+        param visibility_function sin
+        param visibility_function_min .9
+        param visibility_function_speed 1
+    }
+    prefab_entity
+    {
+        name pfx_env_jumppad_arrow1_long
+        position 0.23431 3.67580 -4.00070
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param delay 0
+        param destroy_on_loop false
+        param max_distance 0
+        param position_x 0.234344
+        param position_y 3.675801
+        param position_z -4.000702
+        param random_delay_max 0
+        param range_multiplier 1
+        param repeat_interval 0
+        param repeat_lifetime 0
+        param rotation_x -0.000000
+        param rotation_y -0.000000
+        param rotation_z 0.000000
+        param system env_jumppad_arrow1_long
+    }
+    prefab_entity
+    {
+        name pfx_jumppad_loop_4
+        position 1.03418 8.66872 -47.60071
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param delay 0
+        param destroy_on_loop false
+        param infinite_range false
+        param max_distance 0
+        param pfx_scale 1.2
+        param position_x 1.034210
+        param position_y 8.668721
+        param position_z -47.600708
+        param random_delay_max 0
+        param range_multiplier 1
+        param repeat_interval 0
+        param repeat_lifetime 0
+        param rotation_x -0.000000
+        param rotation_y -0.000000
+        param rotation_z 0.000000
+        param scale 1
+        param system jumppad_loop_high_blue
+    }
+    prefab_entity
+    {
+        name prop_jump_pad_2
+        position 0.25403 -0.21475 -49.18091
+        rotation 0 0 0
+        scale 1.20000 1.20000 1.20000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model jump_pad_01
+        param override_effect_3 override_glass_jumpad
+        param position_x 0.253998
+        param position_y -0.214748
+        param position_z -49.180908
+        param rotation_x -0.000000
+        param rotation_y -0.000000
+        param rotation_z 0.000000
+    }
+    prefab_entity
+    {
+        name target_1
+        position -1.53400 547.61981 -27.92978
+        rotation 0 -90.00003 0
+        scale 1.00000 1.00000 1.00000
+        param position_x -1.533966
+        param position_y 547.619812
+        param position_z -27.929779
+        param rotation_x -0.000000
+        param rotation_y -1.570797
+        param rotation_z 0.000000
+    }
+}

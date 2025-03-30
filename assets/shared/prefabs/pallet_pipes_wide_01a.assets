@@ -1,0 +1,234 @@
+asset pallet_pipes_wide_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name col_col_box_corner
+        position 88.98340 2.99456 56.33142
+        rotation 0 92.69995 0
+        scale 0.75000 0.64000 2.20000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param position_x 88.983398
+        param position_y 2.994560
+        param position_z 56.331421
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_1
+        position 86.15707 2.99456 -3.60196
+        rotation 0 92.69995 0
+        scale 0.43000 0.47000 1.63000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param position_x 86.157074
+        param position_y 2.994560
+        param position_z -3.601959
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_md_4
+        position -2.85608 26.90411 10.99890
+        rotation 0.28933 -87.27551 -48.03186
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4
+        param best_lod 0
+        param clip weapon
+        param color3 s_tarp
+        param color_matlib_mat_lib_acrylic s_canopy_hue
+        param force_shadows true
+        param model md_4
+        param override_effect_1 matlib_mat_lib_acrylic
+        param override_effect_4 matlib_mat_lib_metal_dark
+        param position_x -2.856079
+        param position_y 26.904110
+        param position_z 10.998901
+        param rotation_x 0.005050
+        param rotation_y -1.507537
+        param rotation_z -0.838314
+    }
+    prefab_entity
+    {
+        name prop_md_4_10
+        position 0.90747 25.94142 30.55429
+        rotation 0.28933 -87.27551 -48.03186
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_10
+        param best_lod 0
+        param clip weapon
+        param color3 s_tarp
+        param color_matlib_mat_lib_acrylic s_canopy_hue
+        param force_shadows true
+        param model md_4
+        param override_effect_1 matlib_mat_lib_acrylic
+        param override_effect_4 matlib_mat_lib_metal_dark
+        param position_x 0.907471
+        param position_y 25.941420
+        param position_z 30.554291
+        param rotation_x 0.005050
+        param rotation_y -1.507537
+        param rotation_z -0.838314
+    }
+    prefab_entity
+    {
+        name prop_md_4_11
+        position 0.78125 44.30557 19.96567
+        rotation 0.28933 -87.27551 -48.03186
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_11
+        param best_lod 0
+        param clip weapon
+        param color3 s_tarp
+        param color_matlib_mat_lib_acrylic s_canopy_hue
+        param force_shadows true
+        param model md_4
+        param override_effect_1 matlib_mat_lib_acrylic
+        param override_effect_4 matlib_mat_lib_metal_dark
+        param position_x 0.781250
+        param position_y 44.305573
+        param position_z 19.965668
+        param rotation_x 0.005050
+        param rotation_y -1.507537
+        param rotation_z -0.838314
+    }
+    prefab_entity
+    {
+        name prop_md_4_12
+        position 1.73285 26.10558 50.38434
+        rotation 0.28929 -87.27551 43.76813
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_12
+        param best_lod 0
+        param clip weapon
+        param color3 s_tarp
+        param color_matlib_mat_lib_acrylic s_canopy_hue
+        param force_shadows true
+        param model md_4
+        param override_effect_1 matlib_mat_lib_acrylic
+        param override_effect_4 matlib_mat_lib_metal_dark
+        param position_x 1.732849
+        param position_y 26.105579
+        param position_z 50.384338
+        param rotation_x 0.005049
+        param rotation_y -1.507537
+        param rotation_z 0.763898
+    }
+    prefab_entity
+    {
+        name prop_md_4_extension_2
+        position -1.87299 43.50558 40.32648
+        rotation 0.28929 -87.27546 118.46774
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_extension_2
+        param best_lod 0
+        param clip weapon
+        param color3 s_tarp
+        param color_matlib_mat_lib_acrylic s_canopy_hue
+        param force_shadows true
+        param model md_4_extension
+        param override_effect_1 matlib_mat_lib_acrylic
+        param override_effect_4 matlib_mat_lib_metal_dark
+        param position_x -1.872986
+        param position_y 43.505581
+        param position_z 40.326477
+        param rotation_x 0.005049
+        param rotation_y -1.507536
+        param rotation_z 2.067652
+    }
+    prefab_entity
+    {
+        name prop_pallet
+        position -0.24048 0.48355 0.44562
+        rotation 0 89.99999 0
+        scale 0.75000 1.00000 1.00000
+        param _kitbash_connector -1
+        param _kitbash_parent prop_pallet
+        param best_lod 0
+        param clip fullclip
+        param force_shadows true
+        param model pallet
+        param position_x -0.240479
+        param position_y 0.483549
+        param position_z 0.445618
+    }
+    prefab_entity
+    {
+        name prop_rogue_canister_stack_1
+        position -21.17419 15.19629 -14.86655
+        rotation -2.68580 94.50559 -0.28241
+        scale 1.12000 1.12000 1.12000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_rogue_canister_stack_1
+        param best_lod 0
+        param clip weapon
+        param color3_matlib_mat_lib_emissive s_emissive_dark
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param force_shadows true
+        param model canister_stack
+        param position_x -21.174194
+        param position_y 15.196290
+        param position_z -14.866547
+    }
+    prefab_entity
+    {
+        name prop_rogue_canister_stack_2
+        position 19.51373 15.80641 -18.32385
+        rotation 0 91.79991 0
+        scale 1.12000 1.12000 1.12000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_rogue_canister_stack_2
+        param best_lod 0
+        param clip weapon
+        param color3_matlib_mat_lib_emissive s_emissive_dark
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param force_shadows true
+        param model canister_stack
+        param position_x 19.513733
+        param position_y 15.806410
+        param position_z -18.323853
+    }
+    prefab_entity
+    {
+        name prop_rogue_canister_stack_3
+        position 61.26831 15.76238 -18.21439
+        rotation -0.90000 90.89990 0.00000
+        scale 1.12000 1.12000 1.12000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_rogue_canister_stack_3
+        param best_lod 0
+        param clip weapon
+        param color3_matlib_mat_lib_emissive s_emissive_dark
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param force_shadows true
+        param model canister_stack
+        param position_x 61.268311
+        param position_y 15.762381
+        param position_z -18.214386
+    }
+}
+

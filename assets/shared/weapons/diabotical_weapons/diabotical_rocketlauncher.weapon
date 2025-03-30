@@ -1,0 +1,116 @@
+diabotical_rocketlauncher
+{
+	name_translation_key weapon_diabotical_rocketlauncher
+	desc_translation_key weapon_diabotical_rocketlauncher_desc
+	
+	selectable true
+	rarity legendary
+	
+	respawn_time 9
+	weapon_tag dbtrl
+ 	//group 3
+	speed 1000
+ 	rate 800
+  	damage 100
+	min_splash_damage 5
+	splash_damage 94
+	self_damage 47
+	//self_damage has been half of splash damage
+	splash_hemisphere_offset 20
+    splash_hemisphere_offset_damage_multiplier 0.30
+	
+	default_ammo 5
+	default_ammo_pickup_ammo 5
+	default_weapon_pickup_ammo 10
+	max_ammo 25
+	
+	//Why gravity 1? Ask Viktor.
+	gravity 0
+	//target_indicator true
+	category 3
+	bind_group 3
+	
+	hit_radius 1 1
+    
+	color EBBA45
+	icon_path images/weapon_icons/wp_hud_rocketlauncher_02.png
+	icon_path2 images/weapon_icons/wp_card_rocketlauncher.png
+	weapon_icon_path images/weapon_icons/wp_card_rocketlauncher_nobg.png
+	
+    friendly_name Rocket Launcher
+    description A rocket launcher.
+	
+	charge_animation 6
+	
+  	splash_radius 150
+	knockback 100
+	knockback_self 113
+	ground_knockback 80
+	ground_knockback_self 113
+	center_of_mass_offset 0
+	center_of_mass_offset_self 0
+	
+	zoomed_scope 1
+		
+	combo_rate	diabotical_machinegun 750
+	combo_rate  diabotical_supershotgun 750
+	combo_rate	diabotical_shaft 750
+	combo_rate	diabotical_rocketlauncher_secondary 875
+	combo_rate	diabotical_pncr 750
+	combo_rate	diabotical_blaster 750
+	combo_rate	diabotical_grenade_launcher 750
+	combo_rate	diabotical_void_cannon 750	
+	
+	shot_particles empty_system
+   	shot_particles_attached weapon_rocket_muzzle_1p
+	shot_particles_attached_3p weapon_rocket_muzzle_3p 
+  	missile_particles weapon_rocket_projectile
+  	impact_particles weapon_rocket_impact
+  	shot_particles_attached weapon_rocket_muzzle_flash socket_muzzle 1
+	//IMPACT DECALS
+
+	//decal decal_explosion 340 3 3.561 false false alpha 5
+	//decal decal_plasma 100 3 3.561 false false alpha 3
+	//decal decal_plasma 320 4 3.561 false false alpha 3
+	//decal decal_glow_explosion 140 2 3.561 false false alpha 25
+	//decal decal_glow 35 3 3.561 false false alpha 20
+
+	model assets/shared/models/animations/wp_rocket_launcher/skm_rocket_launcher
+	model_scale_third_person 1
+	model_position_third_person 0
+	model_rotation_third_person 0
+	model_position -1.5281 -1.98725 -3.02462 
+	model_position_centered -1.36563 -2.13 -1.43242 
+	model_post_rotation -0.0523599 -0.122173 -0.10472 
+	model_post_rotation_centered -0.0558505 -0.0750492 -0.113446 
+	model_scale 0.04757
+	model_scale_centered 0.04757
+	fov 45 
+	fov_centered 70 
+	model_camera_scale 2 
+	model_camera_scale_centered 2  
+
+	// weapon_sway
+	smoothing_factor 8.0
+	vertical_sway 1.0
+	horizontal_sway 1.0
+	tilt_sway 0.15
+
+	forward_sway 0.2
+	max_vertical_movement_sway 0.05
+	
+	shot_sound w_rl_fire
+	shot_sound2 w_rl_fire_distant
+	// shot_sound_low_ammo rl_fire_low1 rl_fire_low2 rl_fire_low3 rl_fire_low4 rl_fire_low5
+	// low_ammo_threshold 4
+	missile_loop_sound w_rl_airbound
+	impact_sound w_rl_impact
+	impact_sound2 w_rl_impact_distant
+	equip_sound w_rl_equip
+	hit_sound fb_enemy_hit
+	critical_hit_sound fb_enemy_hit_crit
+	out_of_ammo_sound w_rl_ooa
+	
+	detached_shot_particles false
+}
+

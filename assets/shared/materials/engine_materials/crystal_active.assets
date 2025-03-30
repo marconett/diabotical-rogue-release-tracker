@@ -1,0 +1,8 @@
+asset crystal_active
+{
+  type material
+  listed true
+  tags NONE
+  material override_crystal_active
+  mat_override true
+}

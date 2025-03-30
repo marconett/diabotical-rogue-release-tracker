@@ -19,7 +19,7 @@ rogue_egun
 	
 	unlimited_ammo true
 	
-	color A35EBA
+	color b26eec
 
 	mouse_take_over_recoil true
 	recoil_delay_recovery 0.09
@@ -61,7 +61,7 @@ rogue_egun
 	base_combo_rate 200
 	
 	gravity_delay_by_distance 1000
-	gravity 500
+	gravity 0
 	
 	hit_radius 1 1
 	zoomed_walk_speed 200
@@ -76,6 +76,7 @@ rogue_egun
 	shot_particles_attached weapon_egun_muzzle_flash socket_muzzle 1
 	impact_particles weapon_egun_impact
     player_impact_particles weapon_egun_impact
+	pfx weapon_egun_barrel socket_muzzle_egun 1
 	
 // IMPACT DECALS
 	decal decal 8
@@ -84,26 +85,32 @@ rogue_egun
 	
 	loop_animation true
 
-	/////	fps model position - fps_egun /////////////////////////////////////
-	
-	//model assets/shared/weapons/egun/egun
 	model assets/shared/models/animations/wp_egun/skm_egun
-	model_position 0.379076 -0.4 0.9
-	model_scale 0.02
-    model_post_rotation -2 -1.4 0
-	fov 47
-	model_pivot 0 0 0
-
-	/////	ADS model position - egun /////////////////////////////////////
-
-	model_position_centered 0.379076 -0.208433 1.48947
-	model_scale_centered 0.0136441
-	model_camera_scale 2.8				//for clipping
+	model_scale_third_person 1 1 1 
+	model_position_third_person 0 0 0 
+	model_rotation_third_person 0 0 0 
+	model_position -0.980064 -1.48387 -3.49621 
+	model_position_centered -0.484449 -1.22067 -2.48874 
+	model_post_rotation -0.191986 -0.122173 -0.0349066 
+	model_post_rotation_centered -0.122173 -0.0523599 -0.0349066 
+	model_scale 0.04 0.04 0.04 
+	model_scale_centered 0.04 0.04 0.04 
+	fov 50 
+	fov_centered 80 
+	model_camera_scale 2 
+	model_camera_scale_centered 1
 	muzzle 2.7 -2.8 14
-
 
 /////	Third person model position - egun /////////////////////////////////////
 	//MOVED TO .ani FILE
+
+	// weapon_sway
+	smoothing_factor 8
+	vertical_sway 0.9
+	horizontal_sway 0.9
+	tilt_sway 0.1
+	forward_sway 0.5
+	max_vertical_movement_sway 0.03
     
 	
 	//close

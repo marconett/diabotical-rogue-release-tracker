@@ -1,0 +1,92 @@
+asset sign_holo_globe_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name light_55
+        position -0.66479 4.08348 -100.00000
+        rotation -0.00004 135.00009 0.00000
+        scale 2.00000 2.00000 2.00000
+        param angle 110
+        param attenuation_exponent 1.20
+        param color ff65beff
+        param color3 4f99ffff
+        param color3_matlib_mat_lib_emissive ff0d05ff
+        param color_matlib_mat_lib_emissive ff2e00ff
+        param falloff 0.33
+        param intensity 3
+        param light_bake_only true
+        param radius 180
+        param rotation_w 0
+        param softness .4
+        param type point
+    }
+    prefab_entity
+    {
+        name pfx_base_glow_8
+        position -0.66650 12.83885 -88.91614
+        rotation -0.00003 -135.00000 -0.00007
+        scale 1.00000 1.00000 1.00000
+        param color 0083ffff
+        param delay 0
+        param destroy_on_loop false
+        param max_distance 0
+        param random_delay_max 0
+        param range_multiplier 1
+        param repeat_interval 0
+        param repeat_lifetime 0
+        param rotation_w 0
+        param size_w 1
+        param system base_glow
+        param tag reception
+        param time_scale .3
+    }
+    prefab_entity
+    {
+        name pfx_env_holo_symbol7_1
+        position 0.16821 -12.16113 -106.81970
+        rotation 0.00007 -0.00002 0.00003
+        scale 1.00000 1.00000 1.00000
+        param color ff0083ff
+        param size_w 1
+        param system env_holo_symbol7
+    }
+    prefab_entity
+    {
+        name pfx_env_no_connection
+        position 0.16821 12.83887 -106.81970
+        rotation 0.00006 22.49998 0.00006
+        scale 0.48000 0.48000 0.48000
+        param system env_no_connection
+    }
+    prefab_entity
+    {
+        name pfx_scan_weeble_impact4
+        position 0.16821 4.83887 -106.81970
+        rotation 0.00007 -45.00003 -0.00003
+        scale 0.48000 0.48000 0.48000
+        param range_multiplier 2
+        param repeat_interval 0
+        param system scan_weeble_impact4
+        param time_scale .5
+    }
+    prefab_entity
+    {
+        name prop_lg_8_wall_attachment_2
+        position 0.82788 1.56091 -101.71228
+        rotation 0.00002 -89.99998 179.99988
+        scale 1.50000 1.60000 1.25000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_lg_8_wall_attachment
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model lg_8_wall_attachment
+        param tag tp_out_2
+    }
+}
+
+
+

@@ -1,0 +1,50 @@
+asset lamp_street_wall_lg_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name light_209
+        position -0.05493 23.39998 -52.67764
+        rotation 72.00005 179.99999 -179.99944
+        scale 1.00000 1.00000 1.00000
+        param angle 130
+        param attenuation_exponent 1.20
+        param color s_light_main
+        param falloff 0.5
+        param gobo_texture gd_gobo_rectangle_lamp02.png
+        param intensity 5
+        param position_x -0.054932
+        param position_y 26.599976
+        param position_z -52.677643
+        param radius 600
+        param rotation_x 1.256638
+        param rotation_y -3.141593
+        param rotation_z -3.141583
+        param softness .35
+        param type spot
+    }
+    prefab_entity
+    {
+        name prop_rogue_lamp_02_head_03_1
+        position -0.05493 -8.20000 1.32217
+        rotation 0 0 0
+        scale 0.50000 0.50000 0.50000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_rogue_lamp_02_head_03_1
+        param best_lod 0
+        param clip noclip
+        param color3_matlib_mat_lib_emissive s_emissive_main
+        param force_shadows true
+        param model lamp_02_head_03
+        param override_effect_1 matlib_mat_lib_metal_dark
+        param position_x -0.054932
+        param position_y -5.000000
+        param position_z 1.322174
+        param rotation_x -0.000000
+        param rotation_y -0.000000
+        param rotation_z 0.000000
+    }
+}
+

@@ -1,0 +1,120 @@
+asset overgrown_edging_corner_01c
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name prop_vine_leafy_2
+        position 72.12784 -1.60000 -9.99878
+        rotation 0 139.49893 0
+        scale 0.79000 0.94800 0.79000
+        param best_lod 2
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_08
+        param skip_shadows true
+        param wind_g 0.5
+        param wind_r 0.25
+    }
+    prefab_entity
+    {
+        name prop_flower_blooming_vine
+        position 48.75946 -1.00000 -25.54077
+        rotation 0 64.80042 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param color2_bloomingvine_flower_mat_bloomingvine_flower e02100ff
+        param color_bloomingvine_flower_mat_bloomingvine_flower ea5600ff
+        param force_shadows true
+        param model flower_blooming_vine_tall_m_01
+        param skip_shadows false
+    }
+    prefab_entity
+    {
+        name prop_flower_blooming_vine_2
+        position -1.32889 -0.20000 -41.60034
+        rotation 0 127.80036 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 2
+        param clip noclip
+        param color2_bloomingvine_flower_mat_bloomingvine_flower e02100ff
+        param color_bloomingvine_flower_mat_bloomingvine_flower ea5600ff
+        param force_shadows true
+        param model flower_blooming_vine_short_s_01
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_flower_blooming_vine__6
+        position 29.64484 2.34491 -33.40942
+        rotation 0 62.09998 0
+        scale 0.79000 0.79000 0.79000
+        param best_lod 1
+        param clip noclip
+        param color2_bloomingvine_flower_mat_bloomingvine_flower s_flower_neutral
+        param color_bloomingvine_flower_mat_bloomingvine_flower s_flower_neutral
+        param force_shadows true
+        param model flower_blooming_vine_tall_l_01
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_flower_lily_04
+        position 15.72781 3.49966 -18.49121
+        rotation 1.80000 -23.40001 -0.00000
+        scale 0.80000 0.80920 0.80920
+        param __shadow true
+        param alpha_shadows false
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model flower_sun_dahlia_l_01
+        param skip_shadows false
+    }
+    prefab_entity
+    {
+        name prop_flower_sun_dahlia_m_0
+        position 19.75580 0.13062 -56.21191
+        rotation 0 15.30047 0
+        scale 0.86000 0.86000 0.86000
+        param best_lod 1
+        param clip noclip
+        param color_sundahlia_mat_sun_dahlia 3fbfbfff
+        param force_shadows true
+        param model flower_sun_dahlia_s_01
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_07_8
+        position 6.28503 1.00000 -82.43921
+        rotation -0.38320 -80.10136 0.81436
+        scale 0.80000 0.92800 0.80000
+        param best_lod 2
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_07
+        param skip_shadows true
+        param wind_g 0.5
+        param wind_r 0.25
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_07_9
+        position -3.84781 2.00000 -16.75293
+        rotation 3.29520 7.21398 0.32598
+        scale 1.00000 0.69000 1.00000
+        param best_lod 3
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_07
+        param skip_shadows true
+        param wind_g 0.5
+        param wind_r 0.25
+    }
+}

@@ -1,296 +1,233 @@
-global_components["mode_selection_modal"] = new MenuComponent("mode_selection_modal", _id("mode_selection_modal_screen"), (function() {
-    mode_selection_modal.init()
+global_components["region_select"] = new MenuComponent("region_select", _id("region_select_modal_screen"), (function() {
+    region_select_modal.init()
 }));
-const mode_selection_modal = {
-    state: {
-        open: false,
-        type: null,
-        mode: null,
-        categories: ["official"],
-        active_category: "official",
-        official: [],
-        community: [],
-        selected: null,
-        selected_el: null,
-        order_by: undefined,
-        last_api_options: {},
-        infiniteScroll: {
-            page: 0,
-            requesting: false,
-            last_page_reached: false
-        },
-        mode_data: {},
-        confirm_cb: null,
-        last_mode_idx_clicked: null,
-        MAX_NUMBER_SELECTIONS: 1
-    },
-    el: {
-        modal: null,
-        generic_modal_dialog: null,
-        available: null,
-        selected: null,
-        available_scroll_outer: null,
-        available_list: null,
-        selected_mode: null,
-        category: null,
-        mode_choice_filter_input: null,
-        mode_choice_sort: null
-    },
-    resetInfiniteScroll: function() {
-        this.state.infiniteScroll.last_page_reached = false;
-        this.state.infiniteScroll.requesting = false;
-        this.state.infiniteScroll.page = 0
-    },
-    init: function() {
-        this.el.modal = _id("mode_choice_modal_screen");
-        this.el.generic_modal_dialog = this.el.modal.querySelector(".generic_modal_dialog");
-        this.el.available = _id("mode_selection_modal_available");
-        this.el.selected = _id("mode_selection_modal_selected");
-        this.el.available_scroll_outer = this.el.available.querySelector(".scroll-outer.content");
-        this.el.available_list = this.el.available.querySelector(".scroll-inner.list");
-        this.el.selected_mode = this.el.selected.querySelector(".selected_mode");
-        this.el.category = this.el.available.querySelector(".menu .center");
-        this.el.mode_choice_filter_input = _id("mode_choice_filter_input");
-        this.el.mode_choice_sort = _id("mode_choice_sort");
-        ui_setup_select(this.el.mode_choice_sort, ((opt, field) => {
-            this.el.mode_choice_filter_input.value = "";
-            this.update_mode_choices({
-                category: this.state.active_category,
-                order: field.dataset.value
-            })
-        }));
-        global_input_debouncers["mode_choice_filter_input"] = new InputDebouncer((() => {
-            this.update_mode_choices({
-                category: this.state.active_category,
-                search: this.el.mode_choice_filter_input.value.trim(),
-                order: this.el.mode_choice_sort.dataset.value
-            })
-        }));
-        this.render_category();
-        Navigation.generate_nav({
-            name: "mode_selection_modal",
-            nav_root: this.el.category,
-            nav_class: "indicator",
-            selection_required: true,
-            hover_sound: "",
-            action_sound: "",
-            mouse_hover: "none",
-            mouse_click: "none",
-            action_cb_type: null,
-            action_cb: null,
-            select_cb: el => {
-                this.set_category(el)
-            }
-        });
-        this.el.available_list.addEventListener("scroll", (event => {
-            if (this.state.active_category !== "community") return;
-            const threshold = 150;
-            const containerHeight = event.target.getBoundingClientRect().height;
-            const windowBottom = event.target.scrollTop + containerHeight;
-            if (!this.state.infiniteScroll.requesting && !this.state.infiniteScroll.last_page_reached && windowBottom > event.target.scrollHeight - threshold) {
-                this.state.infiniteScroll.page++;
-                this.update_mode_choices_page()
+const region_select_modal = new function() {
+    let region_ids = [];
+    let html = {
+        root: null,
+        list: null,
+        count: null,
+        refresh: null
+    };
+    this.init = () => {
+        html.root = _id("region_select_modal_screen");
+        html.list = html.root.querySelector(".list");
+        Servers.on_location_ping_update_state_handlers.push((active => {
+            if (active) {
+                html.refresh.classList.add("active")
+            } else {
+                html.refresh.classList.remove("active")
             }
         }));
-        on_close_modal_screen.push((modal_id => {
-            if (modal_id === "mode_choice_modal_screen" && this.state.open) {
+        Servers.on_locations_init_handlers.push((() => {
+            render_server_locations()
+        }));
+        Servers.on_location_ping_update_handlers.push((() => {
+            update_pings()
+        }));
+        Servers.on_set_locations_handlers.push((() => {
+            update_checkboxes()
+        }));
+        Servers.on_set_regions_handlers.push((() => {
+            update_checkboxes()
+        }));
+        Servers.on_expand_search_update_handlers.push((bool => {}));
+        on_press_esc_handlers.push((() => {
+            if (!global_menu_page) {
                 this.close()
             }
         }))
-    },
-    _reset_state: function() {
-        this.state.type = null;
-        this.state.mode = null;
-        this.state.official.length = 0;
-        this.state.community.length = 0;
-        this.state.selected = null;
-        this.state.selected_el = null;
-        this.state.order_by = undefined;
-        this.state.last_api_options = {};
-        this.state.confirm_cb = null;
-        _empty(this.el.selected_mode)
-    },
-    open: function(selected, cb) {
-        this.state.open = true;
-        this.state.last_mode_idx_clicked = null;
-        this._reset_state();
-        if (typeof cb === "function") this.state.confirm_cb = cb;
-        if (selected) {
-            this.state.selected = [selected, ""];
-            this.render_mode_selection()
-        }
-        if (this.el.mode_choice_filter_input.value) this.el.mode_choice_filter_input.value = "";
-        Navigation.set_override_active("modal", {
-            lb_rb: "mode_selection_modal"
-        });
-        open_modal_screen("mode_choice_modal_screen")
-    },
-    close: function() {
-        this.state.open = false;
-        Navigation.set_override_inactive("modal");
-        close_modal_screen_by_selector("mode_choice_modal_screen")
-    },
-    confirm_selection: function() {
-        if (this.state.selected === null) return;
-        this.close();
-        _play_click1();
-        if (this.state.confirm_cb !== null) this.state.confirm_cb(this.state.selected)
-    },
-    render_category: function() {
-        _empty(this.el.category);
-        let name_el = _createElement("div", "category_name", this.get_category_name());
-        let indicators_el = _createElement("div", "category_indicators");
-        for (let i = 0; i < this.state.categories.length; i++) {
-            let indicator_el = _createElement("div", "indicator");
-            indicator_el.dataset.category = this.state.categories[i];
-            indicators_el.appendChild(indicator_el)
-        }
-        this.el.category.appendChild(name_el);
-        this.el.category.appendChild(indicators_el)
-    },
-    set_category: function(el) {
-        if (this.state.categories.indexOf(el.dataset.category) === -1) return;
-        this.state.active_category = el.dataset.category;
-        let name = this.el.category.querySelector(".category_name");
-        if (name) name.textContent = this.get_category_name();
-        this.resetInfiniteScroll();
-        this.update_mode_choices({
-            category: this.state.active_category,
-            order: this.el.mode_choice_sort.dataset.value
-        })
-    },
-    get_category_name: function() {
-        return "Official Modes"
-    },
-    render_mode_choices: function(category) {
-        let modes = this.state[category];
-        let fragment = new DocumentFragment;
-        for (let m of modes) {
-            let mode = _createElement("div", "mode");
-            let name = m.name;
-            if (category === "official") {
-                let game_mode_map = GAME.get_data("game_mode_map");
-                if (game_mode_map && m.mode_name in game_mode_map) {
-                    name = localize(game_mode_map[m.mode_name].i18n)
-                }
-            }
-            let name_el = _createElement("div", "name");
-            mode.appendChild(name_el);
-            name_el.appendChild(_createElement("div", "mode_name_readable", name));
-            name_el.appendChild(_createElement("div", "mode_name", "(" + m.mode_name + ")"));
-            const mode_author = _createElement("div", "author", "");
-            mode.appendChild(mode_author);
-            if (m.user_name) {
-                mode_author.textContent = m.user_name;
-                mode_author.dataset.userId = m.user_id
-            }
-            const MAX_7_DAYS = 8 * 24 * 60 * 60 * 1e3;
-            let update_ts = new Date(m.update_ts);
-            if (m.update_ts != undefined && Date.now() - update_ts.getTime() < MAX_7_DAYS) {
-                const $updated_at = _createElement("div", "update_at");
-                $updated_at.textContent = `${moment(update_ts).fromNow()}`;
-                mode.appendChild($updated_at)
-            }
-            mode.addEventListener("click", (() => {
-                this.state.last_mode_idx_clicked = null;
-                _play_cb_check();
-                this.state.selected = [m.mode_name, name];
-                this.render_mode_selection()
-            }));
-            fragment.appendChild(mode)
-        }
-        _empty(this.el.available_list);
-        this.el.available_list.appendChild(fragment);
-        resetScrollbar(this.el.available_scroll_outer);
-        refreshScrollbar(this.el.available_scroll_outer)
-    },
-    update_mode_choices: function(options) {
-        if (!options.category) {
-            options.category = "official"
-        }
-        _empty(this.el.available_list);
-        this.el.available_list.appendChild(_createSpinner());
-        options = {...this.state.last_api_options, ...options
-        };
-        this.resetInfiniteScroll();
-        this.state.last_api_options = options;
-        const order = options && options.order && options.order.length ? `&order=${options.order}` : ``;
-        const search = options && options.search && options.search.length ? `&search=${encodeURI(options.search)}` : ``;
-        const limit_own = options && options.limit_own ? `&limit_own=true` : ``;
-        const page = `&page=${this.state.infiniteScroll.page}`;
-        this.state.infiniteScroll.requesting = true;
-        api_request("GET", `/modes?category=${options.category}${order}${search}${page}${limit_own}`, {}, (modes => {
-            if (this.state.active_category !== options.category) return;
-            _empty(this.el.available_list);
-            if (modes) {
-                this.state[options.category] = modes
-            } else {
-                this.state[options.category] = []
-            }
-            this.render_mode_choices(options.category);
-            this.state.infiniteScroll.requesting = false
-        }))
-    },
-    update_mode_choices_page: function() {
-        const options = {...this.state.last_api_options
-        };
-        const order = options && options.order && options.order.length ? `&order=${options.order}` : ``;
-        const search = options && options.search && options.search.length ? `&search=${encodeURI(options.search)}` : ``;
-        const limit_own = options && options.limit_own ? `&limit_own=true` : ``;
-        const page = `&page=${this.state.infiniteScroll.page}`;
-        this.state.infiniteScroll.requesting = true;
-        api_request("GET", `/modes?category=${options.category}${order}${search}${page}${limit_own}`, {}, (modes => {
-            if (this.state.active_category !== options.category) return;
-            this.state.infiniteScroll.last_page_reached = modes.length === 0;
-            this.state[options.category].push(...modes);
-            this.render_mode_choices(options.category);
-            refreshScrollbar(this.el.available_scroll_outer);
-            this.state.infiniteScroll.requesting = false
-        }))
-    },
-    render_mode_selection: function() {
-        if (!this.state.selected) {
-            _empty(this.el.selected_mode);
-            return
-        }
-        if (this.state.selected[0] in this.state.mode_data) {
-            _empty(this.el.selected_mode);
-            let mode_data = this.state.mode_data[this.state.selected[0]];
-            let name = mode_data.name;
-            let game_mode_map = GAME.get_data("game_mode_map");
-            if (game_mode_map && mode_data.mode_name in game_mode_map) {
-                name = localize(game_mode_map[mode_data.mode_name].i18n)
-            }
-            let name_el = _createElement("div", "name");
-            name_el.appendChild(_createElement("div", "mode_name_readable", name));
-            name_el.appendChild(_createElement("div", "mode_name", "(" + mode_data.mode_name + ")"));
-            this.el.selected_mode.appendChild(name_el);
-            let desc_el = _createElement("div", "desc");
-            this.el.selected_mode.appendChild(desc_el);
-            let desc = "";
-            if (mode_data.description) {
-                desc = mode_data.description
-            } else if (mode_data.official && game_mode_map && mode_data.mode_name in game_mode_map) {
-                desc = localize(game_mode_map[mode_data.mode_name].desc_i18n);
-                if (desc === game_mode_map[mode_data.mode_name].desc_i18n) desc = ""
-            }
-            if (desc) {
-                desc_el.textContent = desc
-            } else {
-                desc_el.textContent = "No description available"
-            }
-            if (mode_data.data && typeof mode_data.data === "object" && Object.keys(mode_data.data).length) {
-                let data_el = _createElement("div", "data");
-                data_el.textContent = JSON.stringify(mode_data.data, null, "\t");
-                this.el.selected_mode.appendChild(data_el)
+    };
+
+    function render_server_locations() {
+        _empty(html.list);
+        let selection_type = GAME.get_data("location_selection_type");
+        let count_row = _createElement("div", "row");
+        let count_row_count = _createElement("div", "count");
+        let refresh = _createElement("div", "refresh");
+        count_row.appendChild(count_row_count);
+        count_row.appendChild(refresh);
+        html.list.appendChild(count_row);
+        refresh.addEventListener("click", (() => {
+            Servers.ping_locations()
+        }));
+        html.count = count_row_count;
+        html.refresh = refresh;
+        region_ids = [];
+        if (selection_type === 2) {
+            for (let region_id in global_region_map) {
+                if (global_region_map[region_id].parent_region_id) continue;
+                if (!(region_id in Servers.regions)) continue;
+                region_ids.push(region_id)
             }
         } else {
-            api_request("GET", `/mode?mode_name=${this.state.selected[0]}`, {}, (mode => {
-                if (this.state.selected[0] !== mode.mode_name) return;
-                set_global_map_list_from_api(mode.mode_name, mode.maps);
-                this.state.mode_data[mode.mode_name] = mode;
-                this.render_mode_selection()
+            let regions_with_children = {};
+            for (let region_id in global_region_map) {
+                if (global_region_map[region_id].parent_region_id) {
+                    regions_with_children[global_region_map[region_id].parent_region_id] = true
+                }
+            }
+            for (let region_id in global_region_map) {
+                if (region_id in regions_with_children) continue;
+                if (!(region_id in Servers.regions)) continue;
+                region_ids.push(region_id)
+            }
+        }
+        region_ids.sort();
+        if (selection_type === 2 || selection_type === 3) {
+            for (let region_id of region_ids) {
+                let region = _createElement("div", "row");
+                region.dataset.id = global_region_map[region_id].id;
+                let checkbox = _createElement("div", "checkbox");
+                region.appendChild(checkbox);
+                region.appendChild(_createElement("div", "name", global_region_map[region_id].i18n ? localize(global_region_map[region_id].i18n) : global_region_map[region_id].name));
+                region.appendChild(_createElement("div", "icon"));
+                region.appendChild(_createElement("div", "ping", 999));
+                html.list.appendChild(region);
+                region.addEventListener("click", (() => {
+                    if (!bool_am_i_leader) return;
+                    if (checkbox.classList.contains("checkbox_enabled")) {
+                        _play_cb_uncheck();
+                        Servers.remove_from_region_selection(global_region_map[region_id].id)
+                    } else {
+                        _play_cb_check();
+                        Servers.add_to_region_selection(global_region_map[region_id].id)
+                    }
+                    update_checkboxes()
+                }));
+                region.addEventListener("mouseenter", (() => {
+                    checkbox.classList.add("hover")
+                }));
+                region.addEventListener("mouseleave", (() => {
+                    checkbox.classList.remove("hover")
+                }))
+            }
+        } else if (selection_type === 1) {
+            for (let region_id of region_ids) {
+                for (let ds of Servers.regions[region_id]) {
+                    let ds_data = null;
+                    if (ds in global_datacenter_map) ds_data = global_datacenter_map[ds];
+                    let option_name = (global_region_map[region_id].i18n ? localize(global_region_map[region_id].i18n) : global_region_map[region_id].name) + "/" + (ds_data ? localize(ds_data.i18n) : localize("datacenter_" + ds));
+                    let datacenter = _createElement("div", "row");
+                    datacenter.dataset.id = location_id;
+                    let checkbox = _createElement("div", "checkbox");
+                    region.appendChild(checkbox);
+                    region.appendChild(_createElement("div", "name", option_name));
+                    region.appendChild(_createElement("div", "icon"));
+                    region.appendChild(_createElement("div", "ping", 999));
+                    html.list.appendChild(datacenter);
+                    datacenter.addEventListener("click", (() => {
+                        if (!bool_am_i_leader) return;
+                        if (checkbox.classList.contains("checkbox_enabled")) {
+                            _play_cb_uncheck();
+                            Servers.remove_from_location_selection(location_id)
+                        } else {
+                            _play_cb_check();
+                            Servers.add_to_location_selection(location_id)
+                        }
+                        update_checkboxes()
+                    }));
+                    datacenter.addEventListener("mouseenter", (() => {
+                        checkbox.classList.add("hover")
+                    }));
+                    datacenter.addEventListener("mouseleave", (() => {
+                        checkbox.classList.remove("hover")
+                    }))
+                }
+            }
+        }
+        update_checkboxes()
+    }
+
+    function update_checkboxes() {
+        let selection_type = GAME.get_data("location_selection_type");
+        let checked = 0;
+        let total = 0;
+        if (selection_type === 1) {
+            _for_each_with_selector_in_parent(html.root, ".row", (function(row) {
+                let cb = row.querySelector(".checkbox");
+                if (!cb) return;
+                if (Servers.selected_locations.has(row.dataset.id)) {
+                    cb.classList.add("checkbox_enabled");
+                    checked++
+                } else {
+                    cb.classList.remove("checkbox_enabled")
+                }
+                total++
             }))
+        } else {
+            _for_each_with_selector_in_parent(html.root, ".row", (function(row) {
+                let cb = row.querySelector(".checkbox");
+                if (!cb) return;
+                if (Servers.selected_regions.has(row.dataset.id)) {
+                    cb.classList.add("checkbox_enabled");
+                    checked++
+                } else {
+                    cb.classList.remove("checkbox_enabled")
+                }
+                total++
+            }))
+        }
+        if (html.count) {
+            html.count.textContent = "(" + checked + "/" + total + ")"
+        }
+    }
+
+    function update_pings() {
+        let region_pings = {};
+        for (let region_id of region_ids) {
+            if (!(region_id in global_region_map)) continue;
+            let max = null;
+            let min = null;
+            for (let location_id of Servers.regions[region_id]) {
+                if (location_id in Servers.locations && Servers.locations[location_id].ping !== -1) {
+                    if (max === null || Servers.locations[location_id].ping > max) max = Servers.locations[location_id].ping;
+                    if (min === null || Servers.locations[location_id].ping < min) min = Servers.locations[location_id].ping
+                }
+            }
+            region_pings[global_region_map[region_id].id] = {};
+            if (max !== null) region_pings[global_region_map[region_id].id].max = Math.floor(max * 1e3);
+            if (min !== null) region_pings[global_region_map[region_id].id].min = Math.floor(min * 1e3)
+        }
+        _for_each_with_selector_in_parent(html.root, ".row", (function(el) {
+            let ping_val = -1;
+            let ping = "N/A";
+            if (el.dataset.id in Servers.locations) {
+                ping_val = Number(Servers.locations[el.dataset.id].ping);
+                if (ping_val == -1) {
+                    ping = "N/A"
+                } else {
+                    ping_val = Math.floor(ping_val * 1e3);
+                    ping = ping_val
+                }
+            } else if (el.dataset.id in region_pings && "min" in region_pings[el.dataset.id]) {
+                ping_val = region_pings[el.dataset.id].min;
+                ping = ping_val
+            }
+            let ping_el = el.querySelector(".ping");
+            if (ping_el) {
+                ping_el.textContent = ping
+            }
+            let icon_el = el.querySelector(".icon");
+            if (icon_el) {
+                if (ping_val == -1) {
+                    icon_el.classList.add("red")
+                } else if (ping_val < 45) {
+                    icon_el.classList.add("green")
+                } else if (ping_val < 90) {
+                    icon_el.classList.add("yellow")
+                } else if (ping_val < 130) {
+                    icon_el.classList.add("orange")
+                } else {
+                    icon_el.classList.add("red")
+                }
+            }
+        }))
+    }
+    this.close = () => {
+        close_modal_screen(null, html.root.id);
+        if (!global_menu_page) {
+            close_menu(true, false)
         }
     }
 };

@@ -1,0 +1,208 @@
+asset crane_beam_single_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name prop_tech_crane_end_01
+        position 737.85986 774.74402 0.00049
+        rotation 0 -90.00001 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 0
+        param force_shadows true
+        param model tech_crane_end_01
+    }
+    prefab_entity
+    {
+        name prop_cable_straight_4m
+        position 507.86035 504.51901 2.16943
+        rotation 0.90000 -0.00000 -89.99999
+        scale 2.50000 0.75000 0.75000
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_dark
+        param model cable_straight_4m_01
+        param position_x 507.860352
+        param position_y 504.519012
+        param position_z 2.169434
+        param skip_shadows true
+        param uv_scale_x_matlib_mat_lib_rubber_dark 4
+    }
+    prefab_entity
+    {
+        name prop_cable_straight_4m_7
+        position 545.34180 505.69473 2.20166
+        rotation 0.90001 0.00001 -90.00003
+        scale 2.50000 0.75000 0.75000
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_dark
+        param model cable_straight_4m_01
+        param position_x 545.341797
+        param position_y 505.694733
+        param position_z 2.201660
+        param skip_shadows true
+        param uv_scale_x_matlib_mat_lib_rubber_dark 4
+    }
+    prefab_entity
+    {
+        name prop_tech_crane_attachment
+        position 526.25000 732.51868 1.08740
+        rotation 0 89.99998 0
+        scale 1.50000 1.50000 1.50000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param float_animation 0
+        param float_animation_distance_speed 3
+        param float_animation_distance_x 0
+        param float_animation_distance_y 0
+        param float_animation_distance_z 9
+        param force_shadows true
+        param model tech_crane_attachment_01
+        param position_x 526.250000
+        param position_y 732.518677
+        param position_z 1.087402
+    }
+    prefab_entity
+    {
+        name prop_tech_crane_beam_1
+        position 431.85693 774.87000 0.33936
+        rotation 0 -89.99999 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param color_matlib_mat_lib_acrylic c5b13eff
+        param color_matlib_mat_lib_metal_bright ffffffff
+        param force_shadows true
+        param model tech_crane_beam_01
+        param position_x 431.856934
+        param position_y 774.869995
+        param position_z 0.339355
+        param size_w 1
+    }
+    prefab_entity
+    {
+        name prop_tech_crane_beam_27
+        position 271.85693 774.87000 0.33936
+        rotation 0 -89.99999 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param color_matlib_mat_lib_acrylic c5b13eff
+        param color_matlib_mat_lib_metal_bright ffffffff
+        param force_shadows true
+        param model tech_crane_beam_01
+        param position_x 271.856934
+        param position_y 774.869995
+        param position_z 0.339355
+        param size_w 1
+    }
+    prefab_entity
+    {
+        name prop_tech_crane_beam_3
+        position 591.85693 774.87000 0.33936
+        rotation 0 -89.99999 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param color_matlib_mat_lib_acrylic c5b13eff
+        param color_matlib_mat_lib_details_edge ffffffff
+        param color_matlib_mat_lib_metal_bright ffffffff
+        param force_shadows true
+        param model tech_crane_beam_01
+        param position_x 591.856934
+        param position_y 774.869995
+        param position_z 0.339355
+        param size_w 1
+    }
+    prefab_entity
+    {
+        name prop_tech_crane_head_4
+        position 271.85693 774.87000 0.33984
+        rotation 0 -90.00003 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param model tech_crane_head_01
+        param position_x 271.856934
+        param position_y 774.869995
+        param position_z 0.339844
+    }
+    prefab_entity
+    {
+        name prop_tech_crane_hook
+        position 527.87354 138.53273 -2.52197
+        rotation 0 89.99998 0
+        scale 1.50000 1.50000 1.50000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param float_animation 0
+        param float_animation_distance_speed 3
+        param float_animation_distance_x 0
+        param float_animation_distance_y 0
+        param float_animation_distance_z 9
+        param force_shadows true
+        param model tech_crane_hook_01
+        param position_x 527.873535
+        param position_y 138.532730
+        param position_z -2.521973
+    }
+    prefab_entity
+    {
+        name prop_tech_crane_stand_beam_13
+        position -0.25098 639.96814 0.33984
+        rotation 0 -90.00003 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param model tech_crane_stand_beam_01
+        param position_x -0.250977
+        param position_y 639.968140
+        param position_z 0.339844
+    }
+    prefab_entity
+    {
+        name prop_tech_crane_stand_beam_17
+        position -0.25098 319.96817 0.33984
+        rotation 0 -90.00003 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param model tech_crane_stand_beam_01
+        param position_x -0.250977
+        param position_y 319.968170
+        param position_z 0.339844
+    }
+    prefab_entity
+    {
+        name prop_tech_crane_stand_beam_18
+        position -0.25098 -0.03184 0.33984
+        rotation 0 -90.00003 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param model tech_crane_stand_beam_01
+        param position_x -0.250977
+        param position_y -0.031841
+        param position_z 0.339844
+    }
+}
+
+
+

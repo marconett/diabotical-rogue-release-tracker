@@ -64,6 +64,11 @@ function initEngineVarElementHandlers() {
                     element.dataset.enabled = value ? "true" : "false";
                     update_checkbox(element)
                 }
+            }));
+            _for_each_in_class("toggle", (function(element) {
+                if (element.dataset.variable == variable) {
+                    set_toggle(element, value, true)
+                }
             }))
         }
         global_variable.handleResponse("checkbox", variable, value)

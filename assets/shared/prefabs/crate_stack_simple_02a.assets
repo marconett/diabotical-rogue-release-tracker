@@ -1,0 +1,144 @@
+asset crate_stack_simple_02a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name col_col_box_corner_18_1_5
+        position 41.59998 0 40.80005
+        rotation 0 89.99999 0
+        scale 1.58000 0.52000 1.04000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param rotation_w 0
+        param size_w 1
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_18_1_6
+        position 41.59998 42.00000 40.80005
+        rotation 0 89.99999 0
+        scale 1.03000 0.52000 1.04000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param rotation_w 0
+        param size_w 1
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_var_crate_03_tarp
+        position -21.59998 0 -64.00000
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param _kitbash_connector -1
+        param _kitbash_parent prop_var_crate_03_tarp
+        param best_lod 0
+        param clip weapon
+        param color_matlib_mat_lib_tarp_fabric s_accent
+        param color_matlib_mat_lib_tarp_fabric_details s_accent
+        param force_shadows true
+        param model var_crate_03_tarp
+    }
+    prefab_entity
+    {
+        name prop_battery_box_01
+        position -50.00000 17.80000 -4.00000
+        rotation 0 0 -103.49942
+        scale 0.62000 0.38456 0.62000
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param model battery_box_01
+    }
+    prefab_entity
+    {
+        name prop_canister_01_1
+        position -48.00000 6.00000 -28.00000
+        rotation -90.00000 0 2.70000
+        scale 1.00000 1.00000 1.00000
+        param _kitbash_connector -1
+        param _kitbash_parent prop_canister_01_1
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param model canister_01
+    }
+    prefab_entity
+    {
+        name prop_crate_02_large
+        position 0 0 0
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param _kitbash_connector -1
+        param _kitbash_parent prop_crate_02_large
+        param best_lod 0
+        param clip weapon
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param force_shadows true
+        param model crate_02_large
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_02
+        position -22.00000 80.05400 20.79993
+        rotation 0 41.40001 0
+        scale 1.64000 1.64000 1.64000
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model tech_debris_sm_02
+        param no_collision true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_04
+        position -11.19556 53.99075 -43.14117
+        rotation 1.32521 -81.54213 72.87400
+        scale 0.74000 0.74000 0.74000
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model tech_debris_sm_04
+        param no_collision true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_16
+        position 33.59998 80.40000 7.19995
+        rotation 0 -94.49939 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 0
+        param clip noclip
+        param color_matlib_mat_lib_plastic a8a8a8ff
+        param force_shadows true
+        param model tech_debris_sm_16
+        param no_collision true
+    }
+    prefab_entity
+    {
+        name prop_var_crate_02_tarp
+        position 21.20007 0 -64.00000
+        rotation 0 -88.19985 0
+        scale 1.00000 1.00000 1.00000
+        param _kitbash_connector -1
+        param _kitbash_parent prop_var_crate_02_tarp
+        param best_lod 1
+        param clip weapon
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param color_matlib_mat_lib_tarp_fabric s_neutral
+        param color_matlib_mat_lib_tarp_fabric_details s_neutral
+        param force_shadows true
+        param model var_crate_02_tarp
+    }
+}
+

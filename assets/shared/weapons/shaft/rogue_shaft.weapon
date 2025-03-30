@@ -10,7 +10,7 @@ rogue_shaft
 	
 	respawn_time 9
 	weapon_tag shaft
-	color A35EBA
+	color 599cf5
 	category 4
 	bind_group 4
 	
@@ -65,6 +65,7 @@ rogue_shaft
 //tracking_particles shaft_beam_particles
     tracking_particles shaft_beam_blue
     //pfx shaft_filament muzzle
+	player_impact_particles weapon_shaft_player_impact
 	
 	//decal decal 8
 	//decal decal_glow_red 16 false false alpha 2.5
@@ -79,23 +80,33 @@ rogue_shaft
 	
 	loop_animation true
 	
-	//model assets/shared/weapons/shaft/shaft //Old model
 	model assets/shared/models/animations/wp_shaft/skm_shaft
-	model_scale 0.060
-	model_scale_centered 0.054
-	//model_position_centered 0 -2.5 3.5
-	model_position_centered 0 -4 5
-	model_position 2.5 -3 3.6
-	model_camera_scale 0.7
-	model_scale_third_person 0.9
-	model_position_third_person -3.5 3.5 6
-
+	model_scale_third_person 1 1 1 
+	model_position_third_person 0 0 0 
+	model_rotation_third_person 0 0 0 
+    model_position -2.379 -2.354 -7.302
+    model_position_centered -1.598 -2.235 -2.850
+    model_post_rotation -0.219 -0.277 -0.035
+    model_post_rotation_centered -0.175 -0.209 -0.017
+	model_scale 0.0714 0.0714 0.0714 
+	model_scale_centered 0.0714 0.0714 0.0714 
+    fov 34.41
+    fov_centered 70.00
+	model_camera_scale 2 
+	model_camera_scale_centered 2 
 	muzzle 10.0 -11 41.0
-	fov 45
 	
 	parallel_knockback true
 	
 	particles_clipping_plane true
+
+	// weapon_sway
+	smoothing_factor 10.0
+	vertical_sway 0.8
+	horizontal_sway 0.8
+	tilt_sway 0.1
+	forward_sway 0.5
+	max_vertical_movement_sway 0.02
 	
 	loop_sound w_shaft_loop
 	start_sound w_shaft_ini
@@ -180,15 +191,5 @@ rogue_shaft augment 5
 	selectable true
 }
 
-rogue_shaft augment 6
-{
-	name shaft_siphon_armor
-	name_translation_key shaft_siphon_armor
-	desc_translation_key shaft_siphon_armor_desc
-	rarity legendary
-	armor_break_upgrade 1
-	overshield_on_armor_break_amount 15
-	locked_in_battlepass true
 
-	selectable true
-}
+

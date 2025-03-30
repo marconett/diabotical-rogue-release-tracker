@@ -1,0 +1,48 @@
+asset lamp_ceiling_round_sm_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name light_3
+        position 0 16.86566 0
+        rotation 90.00000 0 0
+        scale 1.00000 1.00000 1.00000
+        param angle 100
+        param color s_light_main
+        param falloff .5
+        param gobo_texture gd_gobo_round_lamp02.png
+        param intensity 6
+        param radius 400
+        param type spot
+    }
+    prefab_entity
+    {
+        name light_5
+        position 0 -91.86667 0
+        rotation 90.00000 0 0
+        scale 1.00000 1.00000 1.00000
+        param angle 100
+        param color s_light_main
+        param intensity 2
+        param light_bake_only true
+        param radius 300
+        param type diffuse
+    }
+    prefab_entity
+    {
+        name prop_lamp_circular_01
+        position 0 -0.26666 0
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param color3_matlib_mat_lib_emissive s_emissive_main
+        param force_shadows true
+        param model lamp_circular_01
+    }
+}
+
+
+

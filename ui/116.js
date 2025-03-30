@@ -1,51 +1,74 @@
 {
+    const button_timeouts = [];
     new MenuScreen({
-        game_id: GAME.ids.ROGUE,
-        name: "ingame_panel",
-        screen_element: _id("ingame_panel"),
+        game_id: GAME.ids.INVASION,
+        name: "main_panel",
+        screen_element: _id("main_panel"),
         sound_open: "ui_panel_right_in",
         init: () => {
-            ingame_panel.init()
+            main_panel.init()
         },
         open_handler: () => {
             set_blur(false);
             Navigation.set_active({
                 lb_rb: null,
-                up_down: "ingame_panel",
+                up_down: "main_panel",
                 left_right: null
             });
-            ingame_panel.set_fully_open(false);
-            ingame_panel.on_open()
+            main_panel.set_fully_open(false);
+            main_panel.on_open();
+            if (!historyFirstEntry("main_panel")) {
+                historyPushState({
+                    page: "main_panel"
+                })
+            }
         },
         post_open_handler: () => {
-            ingame_panel.set_fully_open(true)
+            let delay = 0;
+            let elements = _id("main_panel").querySelectorAll(".main_button");
+            for (let i = 0; i < elements.length; i++) {
+                button_timeouts.push(setTimeout((() => {
+                    elements[i].classList.remove("hidden");
+                    engine.call("ui_sound", "ui_locker_item_counter")
+                }), delay));
+                delay += 40
+            }
+            main_panel.set_fully_open(true)
         },
         close_handler: () => {
-            ingame_panel.set_fully_open(false);
+            for (let timeout of button_timeouts) {
+                clearTimeout(timeout)
+            }
+            button_timeouts.length = 0;
+            let elements = _id("main_panel").querySelectorAll(".main_button");
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].classList.add("hidden")
+            }
+            main_panel.set_fully_open(false);
             Navigation.reset_active()
         },
         post_close_handler: () => {
-            ingame_panel.set_fully_open(false)
+            main_panel.set_fully_open(false)
         }
     })
 }
-const ingame_panel = new function() {
+const main_panel = new function() {
     let is_fully_open = false;
     this.set_fully_open = bool => {
         is_fully_open = bool
     };
-    let html = {
-        root: null,
-        screen_actions: null,
-        vote: null
-    };
+    let root = null;
+    let friends_new_count = null;
+    let screen_actions = null;
+    let social_button = null;
     this.init = () => {
-        html.root = _id("ingame_panel");
-        html.screen_actions = html.root.querySelector(".screen_actions");
-        html.vote = html.root.querySelector(".main_button.vote");
+        root = _id("main_panel");
+        friends_new_count = root.querySelector(".new_c.friends");
+        screen_actions = root.querySelector(".screen_actions");
+        social_button = root.querySelector(".main_button.social");
         Navigation.generate_nav({
-            name: "ingame_panel",
-            nav_root: html.root,
+            name: "main_panel",
+            nav_root: root,
             nav_class: "main_button",
             mouse_click: "action",
             hover_sound: "ui_hover1",
@@ -57,163 +80,87 @@ const ingame_panel = new function() {
                 }
             }
         });
-        html.root.addEventListener("click", (e => {
+        Friends.add_update_friend_requests_listener((function(list) {
+            update_friends_invite_count()
+        }));
+        Friends.add_friend_request_listener((function(friend_update) {
+            update_friends_invite_count()
+        }));
+        Friends.add_remove_friend_request_listener((function(user_id) {
+            update_friends_invite_count()
+        }));
+        Friends.add_update_invites_listener((function(list) {
+            update_friends_invite_count()
+        }));
+        Friends.add_remove_invite_listener((function(invite) {
+            update_friends_invite_count()
+        }));
+        Friends.add_invite_listener((function(invite) {
+            update_friends_invite_count()
+        }));
+
+        function update_friends_invite_count() {
+            let count = Friends.state.invites.length + Friends.state.requests.length;
+            friends_new_count.textContent = count;
+            if (count) {
+                friends_new_count.classList.add("visible")
+            } else {
+                friends_new_count.classList.remove("visible")
+            }
+        }
+        root.addEventListener("click", (e => {
             e.stopPropagation()
         }));
         _id("main_menu").addEventListener("click", (e => {
-            if (global_menu_page === "ingame_panel" && is_fully_open) {
-                let root_rect = html.root.getBoundingClientRect();
+            if (global_menu_page === "main_panel" && is_fully_open) {
+                let root_rect = root.getBoundingClientRect();
                 if (e.clientX < root_rect.x) {
                     historyBack()
                 }
             }
         }));
-        on_match_manifest_handlers.push((() => {
-            update_vote()
-        }));
-        on_in_game_handlers.push(((in_game, map_name, game_mode) => {
-            update_vote()
+        bind_event("set_connection_status", ((position, status, offline_reason) => {
+            if (update_connection_status_indicator(root, position, status, offline_reason)) {
+                social_button.classList.remove("disabled")
+            } else {
+                social_button.classList.add("disabled")
+            }
         }))
     };
     this.on_open = () => {
-        Navigation.render_actions([global_action_buttons.back], html.screen_actions)
+        Navigation.render_actions([global_action_buttons.back], screen_actions)
     };
 
-    function update_vote() {
-        let show_vote_button = false;
-        if (!IN_HUB) {
-            if (current_match.allow_map_voting) {
-                show_vote_button = true
-            }
-        }
-        if (show_vote_button) {
-            html.vote.classList.remove("disabled");
-            html.vote.classList.remove("inactive")
-        } else {
-            html.vote.classList.add("disabled");
-            html.vote.classList.add("inactive")
-        }
-    }
-
     function button_pressed(button) {
-        if (button === "main_panel") {
-            if (GAME.active === GAME.ids.ROGUE) {
-                open_screen("main_panel_rogue")
-            } else {
-                open_screen("main_panel")
-            }
-        } else if (button === "settings") {
+        if (button === "settings") {
             open_screen("settings_panel")
-        } else if (button === "vote") {
-            create_map_vote()
-        } else if (button === "join") {
-            ingame_menu_join_match()
-        } else if (button === "join_spec") {
-            ingame_menu_spectate()
-        } else if (button === "join_team_0") {
-            ingame_menu_join_team(0)
-        } else if (button === "join_team_1") {
-            ingame_menu_join_team(1)
-        }
-    }
-
-    function ingame_menu_spectate() {
-        engine.call("join_team", SPECTATING_TEAM);
-        close_menu()
-    }
-
-    function ingame_menu_join_team(team_id) {
-        let player_count = undefined;
-        team_id = Number(team_id);
-        if (menu_game_data.own_team_id == team_id) {
-            close_menu();
-            return
-        }
-        if (team_id != SPECTATING_TEAM) {
-            for (let i = 0; i < menu_game_data.teams.length; i++) {
-                if (menu_game_data.teams[i].team_id == team_id) {
-                    if ("players" in menu_game_data.teams[i]) {
-                        player_count = menu_game_data.teams[i].players.length
-                    } else {
-                        player_count = 0
-                    }
-                    break
+        } else if (button === "social") {
+            open_screen("friends_panel")
+        } else if (button === "quit") {
+            let text = "";
+            modal_panel.open("Leave Game", text, [{
+                title: "Game Launcher",
+                callback: () => {
+                    GAME.set_inactive()
                 }
-            }
-            if (player_count != undefined && player_count >= menu_game_data.team_size) {
-                queue_dialog_msg({
-                    title: localize("title_info"),
-                    msg: localize("message_team_already_full")
-                });
-                return
-            }
-        }
-        if (menu_game_data.spectator) {
-            let allowed_team_ids = [];
-            let lowest_player_count = 100;
-            for (let i = 0; i < menu_game_data.teams.length; i++) {
-                if (menu_game_data.teams[i].players) {
-                    if (menu_game_data.teams[i].players.length < lowest_player_count) lowest_player_count = menu_game_data.teams[i].players.length
-                } else {
-                    lowest_player_count = 0;
-                    break
+            }, {
+                title: "Quit to Desktop",
+                callback: () => {
+                    engine.call("quit")
                 }
+            }])
+        } else if (button === "locker") {
+            open_screen("locker")
+        } else if (button === "lobby") {
+            if (!Lobby.in_lobby()) {
+                Lobby.create()
+            } else {
+                open_screen("custom")
             }
-            for (let i = 0; i < menu_game_data.teams.length; i++) {
-                if (!menu_game_data.teams[i].players || menu_game_data.teams[i].players.length == lowest_player_count) {
-                    allowed_team_ids.push(menu_game_data.teams[i].team_id)
-                }
-            }
-            if (!allowed_team_ids.includes(team_id)) {
-                queue_dialog_msg({
-                    title: localize("title_info"),
-                    msg: localize("message_team_join_uneven")
-                });
-                return
-            }
-        } else {
-            let prev_team_count = menu_game_data.own_team.players.length;
-            let next_team_count = player_count;
-            let diff_before = Math.abs(next_team_count - prev_team_count);
-            prev_team_count--;
-            next_team_count++;
-            let diff_after = Math.abs(next_team_count - prev_team_count);
-            if (diff_after > diff_before) {
-                queue_dialog_msg({
-                    title: localize("title_info"),
-                    msg: localize("message_team_join_uneven")
-                });
-                return
-            }
+        } else if (button === "ingame") {
+            open_screen("ingame")
+        } else if (button === "resume") {
+            close_menu()
         }
-        engine.call("join_team", team_id);
-        close_menu()
-    }
-
-    function ingame_menu_join_match() {
-        let team_id = get_fairest_team_id(menu_game_data);
-        if (team_id === SPECTATING_TEAM) {
-            queue_dialog_msg({
-                title: localize("title_info"),
-                msg: localize("message_team_already_full")
-            });
-            return
-        }
-        engine.call("join_team", team_id);
-        close_menu()
-    }
-
-    function create_map_vote() {
-        const mode = current_match.mode ? current_match.mode : "";
-        map_selection_modal.open("vote", mode, null, start_map_vote)
-    }
-
-    function start_map_vote(selected) {
-        let map_json = JSON.stringify({
-            map: selected[0],
-            name: selected[1],
-            community_map: selected[2]
-        });
-        send_string(CLIENT_COMMAND_START_MAP_VOTE, map_json)
     }
 };

@@ -19,7 +19,7 @@ rogue_revolver
 	unlimited_ammo false
 	reload 1400
 	
-	color A35EBA
+	color fcb343
 	icon_path images/weapon_icons/wp_hud_revolver_02.png
 	icon_path2 images/weapon_icons/wp_card_revolver.png
 	weapon_icon_path images/weapon_icons/wp_card_revolver_nobg.png
@@ -86,25 +86,28 @@ rogue_revolver
 	
 	//model assets/shared/weapons/revolver/revolver //Old model
 	model assets/shared/models/animations/wp_revolver/skm_revolver
-	model_position 2 -1.7 4.2
-	model_scale 0.12
-	model_post_rotation -2.5 1 0.07	
-   	model_pivot 0 0 0
-	fov 48
+	model_scale_third_person 1 
+	model_position_third_person 0
+	model_rotation_third_person 0
+	model_position -0.598556 -0.944655 -1.84743 
+	model_position_centered -0.539819 -0.843027 -2.13049 
+	model_post_rotation -0.0610865 -0.00872665 -0.0174533 
+	model_post_rotation_centered -0.0567232 -0.015708 -0.0174533 
+	model_scale 0.04
+	model_scale_centered 0.04
+	fov 55 
+	fov_centered 75 
+	model_camera_scale 2 
+	model_camera_scale_centered 2 			
 	muzzle 2.7 -2.8 14
 
-	
-	/////	ADS model position - revolver /////////////////////////////////////
-
-	model_position_centered 1.37144 -1.36169 4.74551
-	model_scale_centered 0.1
-	model_post_rotation_centered -2.5 1 0.07	
-	
-	
-	/////	Third person model position - revolver /////////////////////////////////////
-	//MOVED TO .ani FILE	
-
-	
+	// weapon_sway
+	smoothing_factor 8.0
+	vertical_sway 0.8
+	horizontal_sway 0.8
+	tilt_sway 0.1
+	forward_sway 0.2
+	max_vertical_movement_sway 0.03
 	
 	//close
 	shot_sound w_rev_fire

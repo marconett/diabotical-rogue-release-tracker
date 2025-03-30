@@ -1,0 +1,260 @@
+asset liquid_tank_tall_01b
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name col_col_cylinder_6
+        position 0.00004 -7.20000 -0.00012
+        rotation 0 -45.00000 0
+        scale 1.70000 4.10000 1.70000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_cylinder
+        param no_show true
+        param position_x 4.000000
+        param position_y -7.200000
+        param position_z 0.000000
+        param size_x 1.700000
+        param size_y 3.100000
+        param size_z 1.700000
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name light_90
+        position 0.00001 167.09831 -13.98706
+        rotation 49.36154 -93.88327 -0.00002
+        scale 1.00000 1.00000 1.00000
+        param color s_sea_shallow
+        param falloff 0.75
+        param intensity 6
+        param light_bake_only false
+        param position_x -0.000002
+        param position_y 167.098312
+        param position_z -13.986938
+        param radius 80
+        param type diffuse
+    }
+    prefab_entity
+    {
+        name light_91
+        position 0.00001 209.48651 -43.61035
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param color 32cc33ff
+        param falloff .33
+        param intensity 12
+        param position_x -0.000002
+        param position_y 209.486511
+        param position_z -43.610291
+        param radius 3
+    }
+    prefab_entity
+    {
+        name light_98
+        position 0.00001 207.08658 -42.01001
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param color ed4d1a
+        param falloff .33
+        param intensity 12
+        param position_x -0.000002
+        param position_y 207.086578
+        param position_z -42.009949
+        param radius 3
+        param visibility_function ascending_saw
+        param visibility_function_min .25
+        param visibility_function_speed 2
+    }
+    prefab_entity
+    {
+        name pfx_env_pipe_bubbles_4
+        position 0.00001 126.54298 -22.91699
+        rotation -0.00000 -0.00000 89.99999
+        scale 2.00000 2.00000 2.00000
+        param delay 0
+        param destroy_on_loop false
+        param max_distance 0
+        param position_x -0.000002
+        param position_y 126.542976
+        param position_z -22.916870
+        param random_delay_max 0
+        param range_multiplier 1
+        param repeat_interval 0
+        param repeat_lifetime 0
+        param system env_pipe_bubbles
+    }
+    prefab_entity
+    {
+        name pfx_env_pipe_bubbles_5
+        position 0.00001 126.54298 -28.91699
+        rotation -0.00000 -0.00000 89.99999
+        scale 2.00000 2.00000 2.00000
+        param delay 0
+        param destroy_on_loop false
+        param max_distance 0
+        param position_x -0.000002
+        param position_y 126.542976
+        param position_z -28.916870
+        param random_delay_max 0
+        param range_multiplier 1
+        param repeat_interval 0
+        param repeat_lifetime 0
+        param system env_pipe_bubbles
+    }
+    prefab_entity
+    {
+        name pfx_env_pipe_bubbles_6
+        position -0.00002 126.54298 9.08301
+        rotation -0.00000 -0.00000 89.99999
+        scale 2.00000 2.00000 2.00000
+        param delay 0
+        param destroy_on_loop false
+        param max_distance 0
+        param position_x -0.000002
+        param position_y 126.542976
+        param position_z 9.083145
+        param random_delay_max 0
+        param range_multiplier 1
+        param repeat_interval 0
+        param repeat_lifetime 0
+        param system env_pipe_bubbles
+    }
+    prefab_entity
+    {
+        name prop_cylindrical_fluid_con_4
+        position -0.00002 239.18437 -2.36194
+        rotation -0.00009 -135.00005 -179.99995
+        scale 0.78000 0.77000 0.78000
+        param __shadow true
+        param best_lod 2
+        param clip weapon
+        param color2_override_glass_jumpad e5825b00
+        param color3_override_glass_jumpad f7cc9800
+        param color_override_glass 005eb700
+        param color_override_glass_jumpad ff651d00
+        param force_shadows true
+        param material_4 matlib_mat_lib_metal_bright
+        param model cylindrical_fluid_containers_02
+        param position_x -0.000002
+        param position_y 239.184372
+        param position_z -2.361755
+    }
+    prefab_entity
+    {
+        name prop_cylindrical_tower_1
+        position 0.00001 -1.34612 -2.03345
+        rotation 0 45.00000 0
+        scale 0.50000 0.56000 0.50000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param color_matlib_mat_lib_acrylic s_base_color_1
+        param force_shadows true
+        param material_1 matlib_mat_lib_acrylic
+        param material_3 matlib_mat_lib_acrylic
+        param material_4 matlib_mat_lib_plastic
+        param material_6 matlib_mat_lib_acrylic
+        param model cylindrical_tower
+        param position_x -0.000002
+        param position_y -1.346123
+        param position_z -2.033386
+    }
+    prefab_entity
+    {
+        name prop_cylindrical_wall_junc_15
+        position 0.00001 174.78441 -0.09961
+        rotation -0.00003 134.99994 0.00007
+        scale 0.80000 0.80000 0.80000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param material_1 matlib_mat_lib_plastic
+        param material_3 matlib_mat_lib_acrylic
+        param model cylindrical_wall_junction_02b
+        param position_x -0.000002
+        param position_y 174.784409
+        param position_z -0.099426
+    }
+    prefab_entity
+    {
+        name prop_cylindrical_wall_junc_4
+        position -0.00002 280.05396 -0.09924
+        rotation 0.00000 -44.99999 179.99995
+        scale 0.80000 0.50000 0.80000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param material_1 matlib_mat_lib_plastic
+        param material_3 matlib_mat_lib_acrylic
+        param model cylindrical_wall_junction_02b
+        param position_x -0.000002
+        param position_y 280.053955
+        param position_z -0.099060
+    }
+    prefab_entity
+    {
+        name prop_cylindrical_wall_junc_5
+        position 0.00004 280.05402 -0.05811
+        rotation -0.00003 134.99994 -179.99995
+        scale 0.80000 0.50000 0.80000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param material_1 matlib_mat_lib_plastic
+        param material_3 matlib_mat_lib_acrylic
+        param model cylindrical_wall_junction_02b
+        param position_x -0.000002
+        param position_y 280.054016
+        param position_z -0.058044
+    }
+    prefab_entity
+    {
+        name sound_amb_prop_pipe_rushing_8
+        position 0.00001 143.18457 -11.54407
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param apply_audio_occlusion true
+        param capsule_end_position_x -161.383102
+        param capsule_end_position_y 4.897973
+        param capsule_end_position_z -1338.290771
+        param cross_fade_max_radius 40.000000
+        param cross_fade_min_radius 0.000000
+        param min_radius 40.000000
+        param position_x -0.000002
+        param position_y 143.184570
+        param position_z -11.543945
+        param radius 800.000000
+        param sound_event amb_prop_pipe_rushing_water
+        param type audio_event_ambient_node
+        param volume 0.5
+    }
+    prefab_entity
+    {
+        name sound_amb_prop_sparks_g_5
+        position 0.00001 271.18457 -18.24658
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param apply_audio_occlusion true
+        param capsule_end_position_x -272.555878
+        param capsule_end_position_y 307.025269
+        param capsule_end_position_z 184.830414
+        param cross_fade_max_radius 40
+        param cross_fade_min_radius 0
+        param min_radius 40
+        param position_x -0.000002
+        param position_y 271.184570
+        param position_z -18.246460
+        param radius 400
+        param sound_event amb_prop_sparks_generic
+        param type audio_event_ambient_node
+        param volume 0.3
+    }
+}
+
+

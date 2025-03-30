@@ -1,0 +1,221 @@
+asset overgrown_stump_02a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name col_col_cylinder_3
+        position -35.60010 -28.93099 3.59998
+        rotation 0 0 0
+        scale 1.35000 2.57344 1.35000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_cylinder
+        param no_show true
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_cylinder_5
+        position -0.39990 4.60000 -19.19995
+        rotation 0 0 0
+        scale 1.01250 0.86250 1.01250
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_cylinder
+        param no_show true
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_vine_stump_02_3
+        position 14.64307 12.79918 10.00012
+        rotation 1.26303 117.87348 -2.38655
+        scale 1.25000 1.25000 1.25000
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model vine_stump_01
+        param uv_detail_scale 1
+        param vertex_coloring_function per_pixel_slope
+        param vertex_coloring_param1 0.2
+        param vertex_coloring_param2 2
+    }
+    prefab_entity
+    {
+        name prop_var_blooming_vine_m_c_2
+        position -38.47461 6.48004 -75.64917
+        rotation -3.43816 -16.43387 9.06663
+        scale 1.00000 1.00000 1.00000
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model var_blooming_vine_m_curved
+    }
+    prefab_entity
+    {
+        name prop_var_blooming_vine_s_a_2
+        position 41.60010 2.80000 -64.79993
+        rotation 1.65192 40.51035 0.71506
+        scale 1.00000 1.00000 1.00000
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model var_blooming_vine_s_angled
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_06_1_3
+        position -64.79980 19.00000 37.20007
+        rotation -4.44627 132.32889 -0.62042
+        scale 1.03000 1.03000 1.26690
+        param best_lod 1
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_06
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_07_3_3
+        position -50.39990 5.20000 -45.59998
+        rotation 4.12973 -173.06561 -6.47448
+        scale 1.12000 1.12000 1.12000
+        param best_lod 1
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_07
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_round_4_3
+        position 8.06006 -1.15942 -47.48425
+        rotation -4.35835 -14.44268 1.12127
+        scale 1.70000 1.70000 1.70000
+        param best_lod 1
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_round
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_round_8_2
+        position -0.46582 1.51692 9.17651
+        rotation 6.42883 10.11865 0.86880
+        scale 1.51000 1.42000 1.51000
+        param best_lod 1
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_round
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_transition_10_2
+        position 0.80029 73.40000 -37.59998
+        rotation -15.39044 -29.67029 -11.69834
+        scale 0.88000 0.88000 0.88000
+        param best_lod 1
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_transition_s
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_transition_11_2
+        position -64.00000 154.00000 51.59998
+        rotation -8.37028 128.01271 -10.76639
+        scale 0.84000 0.84000 0.63724
+        param best_lod 1
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_transition_s
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_transition_13_1
+        position -50.75293 167.58206 47.84302
+        rotation 59.18312 -3.90664 44.48244
+        scale 0.84000 0.84000 0.93000
+        param best_lod 1
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_transition_s
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_transition_8_3
+        position -37.44873 161.51399 3.23645
+        rotation 8.90364 -23.61175 4.31402
+        scale 0.85000 0.85000 0.85000
+        param best_lod 1
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_transition_s
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_transition_9_3
+        position -26.69531 170.07375 82.42004
+        rotation -1.43950 -169.03416 -6.06470
+        scale 0.74000 0.74000 0.74000
+        param best_lod 1
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_transition_s
+    }
+    prefab_entity
+    {
+        name prop_vine_liana_angled_lea_1
+        position 1.01855 0.92632 17.18030
+        rotation -2.70000 -153.89957 0.00000
+        scale 0.67000 0.67000 0.67000
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model vine_liana_angled_leaves_m_01
+    }
+    prefab_entity
+    {
+        name prop_vine_liana_ground_lea_1
+        position 12.04688 -0.09199 -56.93860
+        rotation -0.54037 112.50332 -0.71975
+        scale 0.99000 0.79430 0.99000
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model vine_liana_ground_leaves_s_02
+    }
+    prefab_entity
+    {
+        name prop_vine_liana_ground_lea_2_2
+        position -3.19971 41.00000 -42.79993
+        rotation 71.43222 -179.60093 18.30469
+        scale 1.00000 1.00000 1.00000
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model vine_liana_ground_leaves_s_01
+    }
+    prefab_entity
+    {
+        name prop_vine_liana_ground_lea_4_2
+        position -35.60010 55.00000 20.00000
+        rotation 66.71920 115.90324 136.38200
+        scale 0.91000 0.73011 0.85129
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model vine_liana_ground_leaves_s_02
+    }
+}
+

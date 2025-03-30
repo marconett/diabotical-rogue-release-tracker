@@ -1,0 +1,87 @@
+asset crate_stack_simple_04a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name col_col_box_corner_18_1_7
+        position -7.99988 0 1.19971
+        rotation 0 0 0
+        scale 1.11000 0.51000 0.53000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param rotation_w 0
+        param size_w 1
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_var_crate_02_tarp_2
+        position 60.40002 0 -20.00000
+        rotation 0 90.00001 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_var_crate_02_tarp_2
+        param best_lod 0
+        param clip weapon
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_accent_dark
+        param color_matlib_mat_lib_tarp_fabric s_accent_dark
+        param color_matlib_mat_lib_tarp_fabric_details s_accent_dark
+        param force_shadows true
+        param model var_crate_02_tarp
+    }
+    prefab_entity
+    {
+        name prop_canister_02
+        position 0 6.00000 -50.52515
+        rotation -90.00000 0 -98.99997
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_canister_02
+        param best_lod 0
+        param clip weapon
+        param color3_matlib_mat_lib_emissive s_emissive_main
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param force_shadows true
+        param model canister_02
+    }
+    prefab_entity
+    {
+        name prop_crate_06_lid
+        position -0.12500 19.20985 -20.00586
+        rotation 0 -2.70000 81.00001
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_crate_06_lid
+        param best_lod 0
+        param clip weapon
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param force_shadows true
+        param model crate_06_lid
+    }
+    prefab_entity
+    {
+        name prop_crate_06_open
+        position 20.00000 0 -20.00000
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_crate_06_open
+        param best_lod 0
+        param clip weapon
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param force_shadows true
+        param model crate_06_open
+    }
+}

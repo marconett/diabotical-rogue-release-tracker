@@ -1,0 +1,331 @@
+asset crystal_active_wall_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name actiontrigger_crystal_1
+        position 50.10226 -8.42110 4.15903
+        rotation 0 -40.50009 0
+        scale 1.00000 1.00000 1.00000
+        param capture_time 50
+        param event_0 1
+        param event_0_reset_progress true
+        param event_0_state true
+        param event_0_target actiontrigger_boss
+        param event_1 9
+        param event_1_function 5
+        param event_2 8
+        param event_2_target prop_mineral_dark_crystal__2
+        param event_3 8
+        param event_3_reset_progress true
+        param event_3_state true
+        param event_3_target prop_mineral_dark_crystal_98
+        param event_4 8
+        param event_4_target prop_mineral_dark_crystal_9
+        param event_5 8
+        param event_5_reset_progress true
+        param event_5_state true
+        param event_5_target prop_mineral_dark_crystal_107
+        param event_6 15
+        param event_6_modify_type 1
+        param event_6_target light_59
+        param event_7 8
+        param event_7_target prop_mineral_dark_crystal_8
+        param event_8 8
+        param event_8_reset_progress true
+        param event_8_state true
+        param event_8_target prop_mineral_dark_crystal_111
+        param group_type 1
+        param hide_combat_num false
+        param objective_type 2
+        param shoot_target prop_blockout_cylinder_cen_1
+        param start_active true
+    }
+    prefab_entity
+    {
+        name crystalspawn
+        position 33.70227 -13.02109 1.81985
+        rotation 0 -4.50010 0
+        scale 1.00000 1.00000 1.00000
+    }
+    prefab_entity
+    {
+        name light_59
+        position 38.10226 -12.42109 -2.18218
+        rotation 90.00000 0 -49.49987
+        scale 1.00000 1.00000 1.00000
+        param angle 120
+        param color 734790ff
+        param falloff 0.33
+        param intensity 4
+        param light_bake_only false
+        param radius 200
+        param rotation_w 0
+        param type diffuse
+        param visibility_function_min .75
+    }
+    prefab_entity
+    {
+        name pfx_env_beam_decal1
+        position -11.52002 -28.42109 -2.54684
+        rotation 74.25456 -65.00031 -136.25758
+        scale 0.17000 0.17000 0.17000
+        param clip noclip
+        param color b5b5b53d
+        param system env_beam_decal1
+        param tag crystals
+    }
+    prefab_entity
+    {
+        name pfx_env_crystal_spawn_2
+        position 8.88373 -28.82108 1.85316
+        rotation 74.25433 -47.00008 -136.25737
+        scale 0.23000 0.23000 0.23000
+        param clip noclip
+        param color ffffff3a
+        param system env_crystal_spawn_1
+        param tag crystals
+        param time_scale .3
+    }
+    prefab_entity
+    {
+        name pfx_env_sinister_purple1_4
+        position 2.50226 -35.22108 5.45316
+        rotation 74.25466 -65.00053 -136.25713
+        scale 0.89000 0.89000 0.89000
+        param clip noclip
+        param color ffffffad
+        param size_w 1
+        param system env_sinister_purple1
+        param tag crystals
+    }
+    prefab_entity
+    {
+        name prop_mineral_dark_crystal
+        position -4.69769 -72.62109 -10.54684
+        rotation 63.00911 -3.24360 -90.39358
+        scale 0.77000 0.86240 0.77000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param color1 E0D3FF
+        param force_shadows true
+        param model mineral_dark_crystal_sparse_m_02
+        param tag crystals
+        param vertex_coloring_function off
+    }
+    prefab_entity
+    {
+        name prop_mineral_dark_crystal_107
+        position -16.84875 7.48035 -7.41950
+        rotation -39.03675 -55.88679 -14.21700
+        scale 0.69000 0.69000 0.69000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param color1 E0D3FF
+        param force_shadows true
+        param model mineral_dark_crystal_m_01
+        param movement static
+        param tag crystals
+        param vertex_coloring_function off
+    }
+    prefab_entity
+    {
+        name prop_mineral_dark_crystal_111
+        position -0.94867 6.17739 -3.16842
+        rotation -33.24097 8.79447 -94.65203
+        scale 1.05000 1.05000 1.05000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param color1 E0D3FF
+        param color_override_crystal_active 389d9dff
+        param force_shadows true
+        param model mineral_dark_crystal_s_02
+        param movement static
+        param no_show true
+        param tag crystals
+        param vertex_coloring_function off
+    }
+    prefab_entity
+    {
+        name prop_mineral_dark_crystal_17
+        position -18.42255 68.81551 4.86628
+        rotation 24.28059 5.90523 -8.45712
+        scale 0.67000 0.67000 0.67000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param color1 E0D3FF
+        param force_shadows true
+        param model mineral_dark_crystal_m_01
+        param tag crystals
+        param vertex_coloring_function off
+    }
+    prefab_entity
+    {
+        name prop_mineral_dark_crystal_18
+        position -4.69769 117.00265 -9.34684
+        rotation -13.44915 -1.51297 -87.15068
+        scale 1.00000 1.12000 1.00000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param color1 E0D3FF
+        param force_shadows true
+        param model mineral_dark_crystal_sparse_m_02
+        param tag crystals
+        param vertex_coloring_function off
+    }
+    prefab_entity
+    {
+        name prop_mineral_dark_crystal_19
+        position -9.47858 -64.22108 -4.94684
+        rotation 81.67270 -30.00475 -130.30926
+        scale 0.53000 0.53000 0.53000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param color1 E0D3FF
+        param color2_dark_crystals_mat_darkcrystal 4b2f6dff
+        param color3_dark_crystals_mat_darkcrystal dbcdfdff
+        param color_dark_crystals_mat_darkcrystal dbcdfdff
+        param color_override_crystal_active 914835ff
+        param force_shadows true
+        param model mineral_dark_crystal_cluster_m_01
+        param override_effect_0 override_crystal_active
+        param tag crystals
+        param vertex_coloring_function off
+    }
+    prefab_entity
+    {
+        name prop_mineral_dark_crystal_5
+        position -4.29773 7.17890 -4.45501
+        rotation -6.30545 179.62606 92.53696
+        scale 1.11000 1.11000 1.11000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param color1 E0D3FF
+        param force_shadows true
+        param model mineral_dark_crystal_sparse_m_01
+        param tag crystals
+        param vertex_coloring_function off
+    }
+    prefab_entity
+    {
+        name prop_mineral_dark_crystal_6
+        position -9.49771 -34.42109 9.05316
+        rotation 5.29929 175.14206 94.54858
+        scale 1.06000 1.06000 1.06000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param color1 E0D3FF
+        param force_shadows true
+        param model mineral_dark_crystal_sparse_m_01
+        param tag crystals
+        param vertex_coloring_function off
+    }
+    prefab_entity
+    {
+        name prop_mineral_dark_crystal_7
+        position -6.69772 27.97892 -7.34684
+        rotation 41.24591 -3.94939 -94.69457
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param color1 E0D3FF
+        param force_shadows true
+        param model mineral_dark_crystal_sparse_m_02
+        param tag crystals
+        param vertex_coloring_function off
+    }
+    prefab_entity
+    {
+        name prop_mineral_dark_crystal_8
+        position 1.34341 3.97582 -1.65508
+        rotation -23.16158 14.77385 -90.85499
+        scale 1.05000 1.05000 1.05000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param color1 E0D3FF
+        param color_override_crystal_active 389d9dff
+        param force_shadows true
+        param model mineral_dark_crystal_s_02
+        param movement static
+        param override_effect_0 override_crystal_active
+        param tag crystals
+        param vertex_coloring_function off
+    }
+    prefab_entity
+    {
+        name prop_mineral_dark_crystal_9
+        position -16.84875 7.48057 -7.41950
+        rotation -39.03661 -55.88689 -14.21695
+        scale 0.74000 0.74000 0.74000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param color1 E0D3FF
+        param color_override_crystal_active 399797ff
+        param force_shadows true
+        param model mineral_dark_crystal_m_01
+        param movement static
+        param override_effect_0 override_crystal_active
+        param tag crystals
+        param vertex_coloring_function off
+    }
+    prefab_entity
+    {
+        name prop_mineral_dark_crystal_98
+        position -10.69772 -40.53963 13.45316
+        rotation -64.20663 -107.76995 19.72569
+        scale 0.88000 0.88000 0.88000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param color1 E0D3FF
+        param force_shadows true
+        param model mineral_dark_crystal_cluster_m_01_broken
+        param movement static
+        param no_show true
+        param tag crystals
+        param vertex_coloring_function off
+    }
+    prefab_entity
+    {
+        name prop_mineral_dark_crystal__2
+        position -10.88501 -40.53963 14.52296
+        rotation -65.42068 -108.45190 20.45032
+        scale 0.88000 0.88000 0.88000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param color1 E0D3FF
+        param force_shadows true
+        param model mineral_dark_crystal_cluster_m_01
+        param movement static
+        param override_effect_0 override_crystal_active
+        param tag crystals
+        param vertex_coloring_function off
+    }
+    prefab_entity
+    {
+        name prop_mineral_dark_crystal__20
+        position -9.09772 132.57889 5.85316
+        rotation -22.19237 -2.10498 -90.55508
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param color1 E0D3FF
+        param force_shadows true
+        param model mineral_dark_crystal_line_s_01
+        param vertex_coloring_function off
+    }
+}

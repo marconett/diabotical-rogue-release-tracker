@@ -1,0 +1,8 @@
+asset barrel_painted
+{
+  type material
+  listed true
+  tags barrel exploding gameplay
+  material override_barrel_painted
+  mat_override true
+}

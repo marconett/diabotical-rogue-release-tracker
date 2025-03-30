@@ -1,0 +1,18 @@
+override_crystal_active
+{
+  {
+    map models/environment/nature/minerals/mineral_dark_crystal/shaders/dark_crystals_active_d.png
+    map models/environment/nature/minerals/mineral_dark_crystal/shaders/dark_crystals_retake_n.png
+    map models/environment/nature/minerals/mineral_dark_crystal/shaders/dark_crystals_active_s.png
+    map swatches/black.png
+    map swatches/red.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGCT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader mask_hsl_shift.ps.cso
+    pixel_shader_param accent1 #3fbfbfff
+    pixel_shader_param accent2 #3fbfbfff
+    pixel_shader_param accent3 #3fbfbfff
+  }
+}

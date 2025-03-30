@@ -96,13 +96,25 @@ class Nav {
                 }))
             }
             if (this.is_active && this.index && this.index === idx) {
-                element.classList.add("active_selection");
+                this.set_active_selection(element, true);
                 if (this.select_cb && typeof this.select_cb === "function") {
                     this.select_cb(element)
                 }
             }
             idx++
         }))
+    }
+    set_active_selection(element, set_active, level) {
+        if (set_active) {
+            element.classList.add("active_selection")
+        } else {
+            element.classList.remove("active_selection")
+        }
+        if (element.children && !level) {
+            for (let child of element.children) {
+                this.set_active_selection(child, set_active, 1)
+            }
+        }
     }
     set_active(bool) {
         this.is_active = bool;
@@ -161,7 +173,7 @@ class Nav {
     }
     reset_selection() {
         if (this.index !== null && this.index in this.elements) {
-            this.elements[this.index].classList.remove("active_selection");
+            this.set_active_selection(this.elements[this.index], false);
             if (this.deselect_cb && typeof this.deselect_cb === "function") {
                 this.deselect_cb(this.elements[this.index])
             }
@@ -192,14 +204,14 @@ class Nav {
         if (new_index < 0) return;
         if (!(new_index in this.elements)) return;
         if (this.index in this.elements) {
-            this.elements[this.index].classList.remove("active_selection");
+            this.set_active_selection(this.elements[this.index], false);
             if (this.deselect_cb && typeof this.deselect_cb === "function") {
                 this.deselect_cb(this.elements[this.index])
             }
         }
         this.last_index = new_index;
         this.index = new_index;
-        this.elements[this.index].classList.add("active_selection");
+        this.set_active_selection(this.elements[this.index], true);
         if (this.select_cb && typeof this.select_cb === "function") {
             this.select_cb(this.elements[this.index])
         }

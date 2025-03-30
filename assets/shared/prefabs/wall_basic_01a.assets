@@ -1,0 +1,85 @@
+asset wall_basic_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name decal_decal_graphical_graph_4
+        position -157.59973 346.73010 64.29565
+        rotation 0.00003 180.00000 180.00000
+        scale 284.00000 96.00000 39.00000
+        param albedo_map_enable true
+        param color s_decal_dark
+        param emissive_map_enable false
+        param gloss_map_enable false
+        param material decal_mat_graphical_graphical_large_horizontal_stripe_01
+        param metal_map_enable false
+        param normal_map_enable false
+        param scale 1.0
+        param tag spawn
+        param v3 true
+    }
+    prefab_entity
+    {
+        name prop_beams_1x6_1
+        position 0.00146 10.76809 48.50122
+        rotation -90.00000 0 89.99999
+        scale 1.10000 1.33000 1.25000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param model beams_1x6
+        param uv_scale_x 1.65
+        param uv_scale_y 1.25
+    }
+    prefab_entity
+    {
+        name prop_cable_wall_straight
+        position -129.19849 285.39542 43.61450
+        rotation -0.00016 89.99996 0.00011
+        scale 1.00000 1.00000 0.50000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param color_matlib_mat_lib_plastic 7b3131ff
+        param force_shadows true
+        param material_0 matlib_mat_lib_rubber_dark
+        param model cable_wall_straight_16m_01
+        param size_w 1
+    }
+    prefab_entity
+    {
+        name prop_tech_wall_pipe_holder
+        position -157.20337 408.98026 -0.33179
+        rotation 44.99999 180.00000 -179.99999
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 3
+        param clip weapon
+        param color_matlib_mat_lib_acrylic s_pipe_colored
+        param color_matlib_mat_lib_plastic s_decal_yellow
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_dark
+        param material_2 matlib_mat_lib_plastic
+        param model tech_wall_pipe_holder_closed_01
+    }
+    prefab_entity
+    {
+        name prop_wall_ext_8x8
+        position -159.99976 20.12610 -0.08032
+        rotation 0 180.00000 0
+        scale 1.00000 0.86000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param material_5 matlib_mat_lib_metal_bright
+        param model wall_ext_8x8
+        param seethrough_prop false
+    }
+}
+
+
+
+

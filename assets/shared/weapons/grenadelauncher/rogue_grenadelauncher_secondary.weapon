@@ -17,7 +17,6 @@ rogue_grenadelauncher_secondary
 	splash_hemisphere_offset 20
 	splash_hemisphere_offset_damage_multiplier 0.3
 
-	
 	duration 4000
 	default_ammo 4
 	max_ammo 4
@@ -41,6 +40,7 @@ rogue_grenadelauncher_secondary
 	center_of_mass_offset 4
 	center_of_mass_offset_self 0
 
+	can_detonate_mid_air true
 	manual_detonation true
 	explode_delay_after_last_impact 4
 	//attach true
@@ -60,6 +60,8 @@ rogue_grenadelauncher_secondary
 	
 	equip_time 500
 	base_combo_rate 600
+	
+	missile_particles_1p_offset -0.5 1 0
 	
 	shot_particles weapon_grenade_launcher_muzzle_flash
    	shot_particles_attached weapon_grenade_launcher_muzzle
@@ -130,4 +132,16 @@ rogue_grenadelauncher_secondary augment 7
 	selectable true
 	preadd splash_radius 20
 	max_stacks 1
+}
+
+rogue_grenadelauncher_secondary augment 9
+{
+	name grenadelauncher_detonate_stickies_mid_air
+	name_translation_key grenadelauncher_detonate_stickies_mid_air
+	desc_translation_key grenadelauncher_detonate_stickies_mid_air_desc
+	rarity legendary
+
+	overwrite can_detonate_mid_air true
+
+	selectable true
 }

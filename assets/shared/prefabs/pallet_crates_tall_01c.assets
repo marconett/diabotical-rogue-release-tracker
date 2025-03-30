@@ -1,0 +1,195 @@
+asset pallet_crates_tall_01c
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name col_col_box_corner_18_1_1
+        position 61.75793 -0.47272 60.67538
+        rotation 0 89.99999 0
+        scale 1.58000 1.05000 1.54000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param rotation_w 0
+        param size_w 1
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_18_1_2
+        position 61.75793 83.52725 60.67538
+        rotation 0 89.99999 0
+        scale 1.58000 0.74000 0.79000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param rotation_w 0
+        param size_w 1
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_18_1_3
+        position -1.44202 83.52725 -5.72461
+        rotation 0 89.99999 0
+        scale 0.75000 0.74000 0.75000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param rotation_w 0
+        param size_w 1
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_18_1_4
+        position -0.43115 83.52725 43.79282
+        rotation 0 49.49999 0
+        scale 0.59000 0.23000 0.97000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param rotation_w 0
+        param size_w 1
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_canister_01
+        position -0.76587 91.20847 22.01117
+        rotation -90.00000 0 62.99998
+        scale 1.25000 1.25000 1.25000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_canister_01
+        param best_lod 1
+        param clip fullclip
+        param color_matlib_mat_lib_metal_painted s_panels_white
+        param force_shadows true
+        param material_5 matlib_mat_lib_lamp
+        param model canister_01
+        param position_x -0.765869
+        param position_y 91.208466
+        param position_z 22.011169
+        param rotation_x -1.570796
+        param rotation_y 0.000000
+        param rotation_z 1.099557
+    }
+    prefab_entity
+    {
+        name prop_pallet_3
+        position 0.23621 -1.52875 -2.11664
+        rotation 0 0 0
+        scale 0.76000 1.50000 0.77000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_pallet_3
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param model pallet
+        param position_x 0.236206
+        param position_y -1.528761
+        param position_z -2.116638
+        param rotation_x -0.000000
+        param rotation_y 0.000000
+        param rotation_z -0.000000
+    }
+    prefab_entity
+    {
+        name prop_var_crate_04_tarp
+        position 33.34521 22.58011 -35.61041
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_var_crate_04_tarp
+        param best_lod 1
+        param clip weapon
+        param color_matlib_mat_lib_tarp_fabric s_accent
+        param color_matlib_mat_lib_tarp_fabric_details s_accent
+        param force_shadows true
+        param model var_crate_04_tarp
+        param position_x 33.345215
+        param position_y 22.580080
+        param position_z -35.610413
+        param rotation_x -0.000000
+        param rotation_y 0.000000
+        param rotation_z -0.000000
+    }
+    prefab_entity
+    {
+        name prop_var_crate_04_tarp_1
+        position -30.65491 22.58011 -35.61041
+        rotation 0 89.99998 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_var_crate_04_tarp
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param model crate_04
+        param position_x -30.654907
+        param position_y 22.580080
+        param position_z -35.610382
+        param rotation_x -0.000000
+        param rotation_y 1.570796
+        param rotation_z -0.000000
+    }
+    prefab_entity
+    {
+        name prop_var_crate_04_tarp_2
+        position 31.34521 22.58011 26.38959
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_var_crate_04_tarp
+        param best_lod 1
+        param clip weapon
+        param color_matlib_mat_lib_metal_painted s_panels_white
+        param force_shadows true
+        param model crate_04
+        param position_x 31.345215
+        param position_y 22.580080
+        param position_z 26.389587
+        param rotation_x -0.000000
+        param rotation_y 0.000000
+        param rotation_z -0.000000
+    }
+    prefab_entity
+    {
+        name prop_var_crate_04_tarp_3
+        position -30.65479 22.58011 26.38968
+        rotation 0 0 0
+        scale 1.50000 1.50000 1.50000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_var_crate_04_tarp
+        param best_lod 1
+        param clip weapon
+        param color_matlib_mat_lib_tarp_fabric s_accent_dark
+        param color_matlib_mat_lib_tarp_fabric_details s_accent_dark
+        param force_shadows true
+        param model var_crate_01_tarp
+        param position_x -30.654785
+        param position_y 22.580080
+        param position_z 26.389679
+        param rotation_x -0.000000
+        param rotation_y 0.000000
+        param rotation_z -0.000000
+    }
+}
+
+
+

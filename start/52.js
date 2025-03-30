@@ -7,7 +7,7 @@ function reveal_ui(initial) {
     if (!i18n_initialized || !game_selection_video_loaded) return;
     document.body.style.display = "flex";
     console.log("show game selection screen", performance.now());
-    anim_show(_id("game_selection_screen"));
+    _id("game_selection_screen").style.display = "flex";
     global_screens["9999_game_selection"].open();
     global_menu_page = "game_selection";
     engine.call("set_menu_fullscreen", true);
@@ -146,6 +146,16 @@ window.addEventListener("load", (function() {
     }
     engine.call("start_view_initialized")
 }));
+GAME.set_initial_data(GAME.ids.GEARSTORM, {
+    GAME_NAME: "Storm",
+    GAME_LOGO: "/html/images/game_selection/game_logo_storm.png",
+    GAME_NAME_FULL: "Diabotical Storm",
+    API_PATH: "/api/v0/3/",
+    game_selection_videos: {
+        start: "/html/images/game_selection/game_2_start.webm",
+        loop: "/html/images/game_selection/game_2_loop.webm"
+    }
+});
 GAME.set_initial_data(GAME.ids.ROGUE, {
     GAME_NAME: "Rogue",
     GAME_LOGO: "/html/images/game_selection/game_logo_rogue.png",

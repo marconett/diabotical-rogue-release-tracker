@@ -1,0 +1,17 @@
+mat_wire_net
+{
+  {
+    map materials/matlib/shaders/mat_wire_net/wire_net_wire_net_d.png
+    map materials/matlib/shaders/mat_wire_net/wire_net_wire_net_n.png
+    map materials/matlib/shaders/mat_wire_net/wire_net_wire_net_s.png
+    map swatches/black.png
+    map materials/matlib/shaders/mat_wire_net/wire_net_wire_net_c.png
+    material_id 61
+    vertex_shader tilestatic.vs.cso 111 NGT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    pixel_shader tilemask.ps.cso
+    pixel_shader_param accent1 #FFFFFF
+  }
+}
+

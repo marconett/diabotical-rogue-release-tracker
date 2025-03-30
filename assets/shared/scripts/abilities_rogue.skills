@@ -1,15 +1,22 @@
+category active
+
 skill 20000
 {
 	name Melee
 	show_in_dev_console true
+	category passive //triggered by weapon
 	
 	name_translation_key skill_melee
     desc_translation_key skill_melee_desc
 	
-	weapon arena_sword
-	
+	weapon melee
+
+	prevent_cooldown_on_initial_fire true
+	knockback 500
+	radius 150
+	damage 60
 	use_anim_duration 0.4
-	cooldown 0.5
+	cooldown 0.4
 }
 
 skill 20001
@@ -26,7 +33,7 @@ skill 20001
 	
 	weapon healingweeble
 	required_class rogue_scout
-	category ultimate
+	category gadget
 
 	max_charges 1
 	grant_charges_on_death true
@@ -78,7 +85,7 @@ skill 20002
 	rarity epic
 	selectable true
 	required_class rogue_scout
-	
+	category active
 	hud_icon images/skill_icons/Arena_Ability_Icon_Smoke_Grenade.png
 
 	name_translation_key skill_smoke_weeble
@@ -189,7 +196,7 @@ skill 20003
 	selectable false
 	show_in_dev_console false
 	rarity epic
-	
+	category active
 	hud_icon images/skill_icons/Rogue_Ability_Icon_Translocator.png
 	
 	name_translation_key skill_implosive_weeble
@@ -241,7 +248,7 @@ skill 20004
 	selectable false
 	show_in_dev_console false
 	rarity epic
-	
+	category active
 	hud_icon images/skill_icons/Rogue_Ability_Icon_Translocator.png
 	
 	name_translation_key skill_slowfield_weeble
@@ -296,7 +303,7 @@ skill 20005
 	name Explosive_Weeble
 	selectable true
 	rarity epic
-	
+	category active
 	required_class rogue_scout
 
 	hud_icon images/skill_icons/Arena_Ability_Icon_Explosion_Grenade.png
@@ -310,12 +317,7 @@ skill 20005
 
 	use_anim_duration 0.4
 	
-	cooldown 12
-
-	//damage 50
-	//radius 200
-	//knockback 200
-	//self_knockback 100 //currently  not used
+	cooldown 10
 }
 
 skill 20005 augment 1
@@ -503,7 +505,7 @@ skill 20007
 	selectable false
 	required_class rogue_chunk
 	rarity epic
-	
+	category active
     duration 1.5
     cooldown 10
     small_cooldown 0
@@ -533,7 +535,7 @@ skill 20008
     desc_translation_key skill_dash_desc
 	
     hud_icon images/skill_icons/Rogue_Ability_Icon_Dash.png  	
-
+	category movement
 	selectable false
 	show_in_dev_console false
 	rarity epic
@@ -546,8 +548,6 @@ skill 20008
 	dash_speed 2750
 	dash_multi_directional true
 }
-
-
 
 skill 20008 augment 1
 {
@@ -595,7 +595,7 @@ skill 20009
 	rarity epic
 	required_class rogue_eggbot
 
-	
+	category active
 	pfx1 heal_hand_start 	//START
 	pfx2 heal_hand_loop 	//LOOP ORB
 	pfx3 heal_hand_beam_loop	//LOOP BEAM
@@ -724,7 +724,7 @@ skill 20010
     desc_translation_key skill_deployable_medpack_desc
 	
     hud_icon images/skill_icons/Arena_Ability_Icon_Deployable_Medpack.png  	
-	
+	category active
 	selectable false
 	show_in_dev_console false
 	rarity rare
@@ -795,6 +795,7 @@ skill 20011 augment 2
 	name_translation_key skill_lowers_cooldown
     desc_translation_key skill_lowers_cooldown_desc
 	max_stacks 2
+	rarity common
 
 	selectable true
 }
@@ -848,7 +849,7 @@ skill 20012
 	hud_icon images/skill_icons/Rogue_Ability_Icon_Charge.png
 	
 	prevent_cooldown_on_initial_fire true
-
+	category movement
 	cooldown 12
 	duration 2
 	
@@ -892,7 +893,7 @@ skill 20013
 	selectable false
 	show_in_dev_console false
 	hud_icon images/skill_icons/Arena_Ability_Icon_Power_Jump.png
-
+	category movement
 	name_translation_key skill_powerjump
 	desc_translation_key skill_powerjump_desc
 	selectable false
@@ -927,7 +928,7 @@ skill 20014
 	hud_icon images/skill_icons/Arena_Ability_Icon_Heal_Aura.png
 
 	required_class rogue_eggbot
-
+	category active
 	cooldown 25
 	duration 8 //bost mode duration
 	radius 350
@@ -1044,7 +1045,7 @@ skill 20015
     hud_icon2 images/skill_icons/Rogue_Ability_Icon_Orbs_2_PLACEHOLDER.png
 
     weapon nexus_bomb
-
+	category active
     required_class rogue_eggbot
 
     pfx1 heal_bomb_impact
@@ -1155,7 +1156,7 @@ skill 20016
 	hud_icon2 images/skill_icons/Arena_Ability_Icon_Overload_Orb_02.png
 	hud_icon3 images/skill_icons/Arena_Ability_Icon_Overload_Orb_03.png
 	weapon overload_orb
-
+	category active
 	prevent_cooldown_on_initial_fire true
 
 	cooldown 12
@@ -1226,6 +1227,7 @@ skill 20016 augment 5
     desc_translation_key skill_overload_a5_desc
 	overwrite damage_over_time 1
 	overwrite power 0.05 //how much of the base damage is applied per tick
+	overwrite fire_duration 5.05
 	rarity epic
 
 	selectable true
@@ -1269,6 +1271,7 @@ skill 20017
 	cooldown 25
 	radius 700
 	duration 5
+	category active
 }
 
 skill 20017 augment 1
@@ -1313,7 +1316,7 @@ skill 20018
 	selectable true
 	required_class rogue_scout
 	rarity epic
-
+	category active
 	weapon scanner_grenade
 
 	use_anim_duration 0.4
@@ -1407,7 +1410,7 @@ skill 20019
 	show_in_dev_console false
 	required_class rogue_chunk
 	rarity epic
-
+	category active
 	cooldown 30
 
 	radius 200
@@ -1474,7 +1477,7 @@ skill 20020
 	desc_translation_key skill_implosive_pull_desc
 	hud_icon images/skill_icons/Arena_Ability_Icon_Implosion_Orb.png
 	rarity epic
-
+	category active
 	weapon implosion_orb
 	selectable false 
 	show_in_dev_console false
@@ -1540,7 +1543,7 @@ skill 20021
 	selectable false
 	rarity epic
 
-	category ultimate
+	category gadget
 
 	color 73D3FF
 
@@ -1570,7 +1573,7 @@ skill 20022
 	selectable false
 	rarity epic
 
-	category ultimate
+	category gadget
 	prevent_cooldown_on_initial_fire true
 	max_charges 1
 	// lock_on_use true
@@ -1596,7 +1599,7 @@ skill 20023
 	required_class rogue_chunk
 
 	selectable true
-
+	category active
 	hud_icon images/skill_icons/Arena_Ability_Icon_Beam.png
 
 	weapon beam
@@ -1735,7 +1738,7 @@ skill 20024
 	prevent_cooldown_on_initial_fire false
 
 	cooldown 25
-
+	category active
 	selectable true
 
 	rocket_count 6
@@ -1877,27 +1880,6 @@ skill 20024 augment 9
 	selectable true
 }
 
-skill 20025
-{
-	name_translation_key skill_surge_reset
-	desc_translation_key skill_surge_reset_desc
-	required_class chunk
-	selectable false
-	cooldown 10
-	cost 300
-}
-
-skill 20026
-{
-	name_translation_key skill_surge_defensive_mode
-	desc_translation_key skill_surge_defensive_mode_des
-	required_class eggbot
-	selectable false
-	cooldown 10
-	duration 5
-	cost 300
-}
-
 skill 40000
 {	
 	name movement_sprint 
@@ -1922,7 +1904,7 @@ skill 40001
 	hud_icon4 images/skill_icons/Arena_Ability_Icon_Bolt_Artifact.png
 
 	prevent_cooldown_on_initial_fire true
-	show_in_dev_console false
+	show_in_dev_console true
 	selectable false
 	category movement
 	required_class rogue_eggbot
@@ -2008,7 +1990,7 @@ skill 20027
     required_class rogue_bigbot
 
 	hud_icon images/skill_icons/Arena_Ability_Icon_Shield_Throw.png
-
+	category active
     weapon throwing_shield
     selectable true
     cooldown 10
@@ -2078,9 +2060,9 @@ skill 20028
 	prevent_cooldown_on_initial_fire true
 	selectable true
 	cooldown 12
-
-	damage 300 //shield health
-	movement_speed_boost 0.75 //movement modifier
+	category active
+	damage 150 //shield health
+	movement_speed_boost -25 //movement modifier
 
 	homing_module_enabled false
 	artifact_enabled false
@@ -2156,7 +2138,7 @@ skill 20029
 	charge_steering_speed 0.5
 	charge_steering_acceleration 2
 	charge_knockback_power 2000
-
+	category active
 	duration 5
 
 	artifact_enabled false
@@ -2233,7 +2215,7 @@ skill 20030
 	selectable false
 
 	grant_charges_on_death true
-
+	category gadget
 	max_charges 3
 
 	cooldown 2
@@ -2253,12 +2235,17 @@ skill 40003
 	hud_icon2 images/skill_icons/Arena_Ability_Icon_Grow.png
 
 	prevent_cooldown_on_initial_fire true
+	required_class rogue_bigbot
+	category movement
 
 	selectable false
 	show_in_dev_console false
 	cooldown 2.0
 
-	damage 5.0 // HOVER FUEL
+	value1 10 // HOVER FUEL
+	value2 10 // FUEL RECHARGE RATE
+	value3 15 // FUEL SPEND RATE / SECOND
+	value4 1500 // JETPACK UPWARDS FORCE
 
 	artifact_enabled false
 	homing_module_enabled false
@@ -2293,6 +2280,7 @@ skill 40003 augment 3
 	name_translation_key movement_transmutation_a3
 	desc_translation_key movement_transmutation_a3_desc
 	selectable true
+	rarity common
 
 	overwrite piercing_damage_increase true 
 }
@@ -2306,3 +2294,4 @@ skill 40003 augment 3
 
 // 	preadd damage 2.5
 // }
+

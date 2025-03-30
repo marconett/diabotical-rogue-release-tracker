@@ -86,30 +86,32 @@ rogue_submachinegun
 	//decal decal 10 3 3.561 false false alpha 1
 	//decal decal_glow_red 16 3 3.561 false false alpha 30
 	//decal decal_glow 10 3 3.561 false false alpha 20
-	
 
-    
-/////	fps model position - fps_submachinegun /////////////////////////////////////
-	
-	//model assets/shared/weapons/submachinegun/submachinegun //Old model
-	model assets/shared/models/animations/wp_submachinegun/skm_submachinegun
-	model_scale 0.2
-	model_scale_centered 0.0495
-	model_position 1.2 -3 2.2
-	model_position_centered 0 -3.4 3.1
-	model_scale_third_person 0.9
+	model assets/shared/models/animations/wp_submachinegun/skm_submachinegun	
+	model_scale_third_person 1 1 1 
+	model_position_third_person 0 0 0 
+	model_rotation_third_person 0 0 0 
+	model_position -0.532244 -1.46033 -2.13911 
+	model_position_centered -0.519342 -0.987994 -2.01873 
+	model_post_rotation -0.0523599 -0.0523599 -0.0174533 
+	model_post_rotation_centered -0.0349066 -0.0523599 0 
+	model_scale 0.04 0.04 0.04 
+	model_scale_centered 0.04 0.04 0.04 
+	fov 45 
+	fov_centered 65 
+	model_camera_scale 3 
+	model_camera_scale_centered 2.5 
 	model_pivot 0 0.24 0
-	model_position_third_person 0 0 0
-	model_camera_scale 0.55
 	muzzle 2.5 -1.5 8
-	fov 50
-   	
-/////	ADS model position - submachinegun /////////////////////////////////////
-	
-	model_position_centered 1.33286 -0.920046 5.13452
-	model_scale_centered 0.0331852
-    model_camera_scale 3
-	
+
+	// weapon_sway
+	smoothing_factor 8.0
+	vertical_sway 1.0
+	horizontal_sway 1.0
+	tilt_sway 0.2
+	forward_sway 0.2
+	max_vertical_movement_sway 0.04
+
 	//close
 	shot_sound w_smg_fire
 	//first_shot_sound w_smg_fire_first

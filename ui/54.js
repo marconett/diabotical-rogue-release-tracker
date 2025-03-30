@@ -29,7 +29,7 @@ function apiHandler() {
         getToken() {
             return this.token
         }
-        get(target, params, callback) {
+        get(target, params, callback, err_callback, timeout = 0) {
             if (target.startsWith("/")) {
                 target = target.substr(1)
             }
@@ -42,6 +42,7 @@ function apiHandler() {
                 }
             }
             let xhr = new XMLHttpRequest;
+            xhr.timeout = timeout;
             xhr.open("GET", path);
             if (this.auth_required) {
                 xhr.setRequestHeader("Authorization", "Bearer " + this.token)
@@ -64,14 +65,17 @@ function apiHandler() {
                         callback(200, data)
                     }
                 }
-            }
+            };
+            xhr.onerror = err_callback;
+            xhr.ontimeout = err_callback
         }
-        post(target, params, callback) {
+        post(target, params, callback, err_callback, timeout = 0) {
             if (target.startsWith("/")) {
                 target = target.substr(1)
             }
             let path = this.api_url + target;
             let xhr = new XMLHttpRequest;
+            xhr.timeout = timeout;
             xhr.open("POST", path);
             if (this.auth_required) {
                 xhr.setRequestHeader("Authorization", "Bearer " + this.token)
@@ -96,7 +100,9 @@ function apiHandler() {
                 }
             };
             if (params) xhr.send(JSON.stringify(params));
-            else xhr.send()
+            else xhr.send();
+            xhr.onerror = err_callback;
+            xhr.ontimeout = err_callback
         }
     }
     if (!this._apiHandler) {
@@ -105,22 +111,22 @@ function apiHandler() {
     return this._apiHandler
 }
 
-function api_request(type, target, params, callback) {
+function api_request(type, target, params, callback, err_callback, timeout = 0) {
     let now = performance.now();
     let token_age = (now - apiHandler().token_time) / 1e3;
     if (apiHandler().auth_required && (token_age > 828e5 || apiHandler().token === undefined)) {
         send_string(CLIENT_COMMAND_GET_API_TOKEN, "", "apitoken", (function(token) {
             apiHandler().updateToken(token);
-            send_api_request(type, target, params, callback)
+            send_api_request(type, target, params, callback, undefined, err_callback, timeout)
         }))
     } else {
-        send_api_request(type, target, params, callback)
+        send_api_request(type, target, params, callback, undefined, err_callback, timeout)
     }
 }
 
-function send_api_request(type, target, params, callback, secondtry) {
-    if (type == "GET") apiHandler().get(target, params, api_request_callback);
-    if (type == "POST") apiHandler().post(target, params, api_request_callback);
+function send_api_request(type, target, params, callback, secondtry, err_callback, timeout) {
+    if (type == "GET") apiHandler().get(target, params, api_request_callback, err_callback, timeout);
+    if (type == "POST") apiHandler().post(target, params, api_request_callback, err_callback, timeout);
 
     function api_request_callback(status, data) {
         if (status == 200) {

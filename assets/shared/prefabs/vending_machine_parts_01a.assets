@@ -1,0 +1,247 @@
+asset vending_machine_parts_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name light_77
+        position -30.97412 88.33863 -16.31183
+        rotation 0 90.89995 0
+        scale 1.00000 1.00000 1.00000
+        param angle 120
+        param best_lod 0
+        param color s_light_accent
+        param falloff 0.45
+        param gobo_texture gd_gobo_grates02.png
+        param intensity 8
+        param length 50
+        param radius 50
+        param rotation_w 0
+        param softness .25
+        param type capsule
+    }
+    prefab_entity
+    {
+        name pfx_env_light_fogbeam1_11
+        position -1.44238 76.60663 -30.70081
+        rotation 0 0.90016 0
+        scale 0.90000 0.47000 0.97000
+        param best_lod 0
+        param delay 0
+        param destroy_on_loop false
+        param max_distance 0
+        param random_delay_max 0
+        param range_multiplier 1
+        param repeat_interval 0
+        param repeat_lifetime 0
+        param size_w 1
+        param system env_light_fogbeam1
+    }
+    prefab_entity
+    {
+        name pfx_env_light_fogbeam1_8
+        position 0.59058 53.45557 -12.85205
+        rotation 0 -8.09987 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 0
+        param color a9d3ce28
+        param delay 0
+        param destroy_on_loop false
+        param max_distance 0
+        param random_delay_max 0
+        param range_multiplier 1
+        param repeat_interval 0
+        param repeat_lifetime 0
+        param system env_light_fogbeam1
+    }
+    prefab_entity
+    {
+        name prop_battery_charge_statio_25
+        position -32.64722 37.89838 -16.58337
+        rotation 0 99.89998 0
+        scale 0.87000 0.87000 0.87000
+        param __shadow true
+        param best_lod 3
+        param clip noclip
+        param force_shadows true
+        param model battery_charge_station_battery_01
+    }
+    prefab_entity
+    {
+        name prop_battery_charge_statio_26
+        position -17.70508 37.89838 -14.72473
+        rotation 0 -120.60007 0
+        scale 0.87000 0.87000 0.87000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param force_shadows true
+        param model battery_charge_station_battery_01
+    }
+    prefab_entity
+    {
+        name prop_battery_charge_statio_27
+        position -1.57361 37.89838 -13.47339
+        rotation 0 -92.69999 0
+        scale 0.87000 0.87000 0.87000
+        param __shadow true
+        param best_lod 3
+        param clip noclip
+        param force_shadows true
+        param model battery_charge_station_battery_01
+    }
+    prefab_entity
+    {
+        name prop_connector_01_10
+        position 22.75403 83.03141 -6.67059
+        rotation 0 180.00000 0
+        scale 0.71000 0.71000 0.71000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_connector_01_10
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model connector_01
+    }
+    prefab_entity
+    {
+        name prop_connector_01_8
+        position -34.04590 83.03141 -6.67065
+        rotation 0 180.00000 0
+        scale 0.71000 0.71000 0.71000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_connector_01_8
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model connector_01
+    }
+    prefab_entity
+    {
+        name prop_connector_01_9
+        position -19.24597 83.03141 -6.67065
+        rotation 0 180.00000 0
+        scale 0.71000 0.71000 0.71000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_connector_01_9
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model connector_01
+    }
+    prefab_entity
+    {
+        name prop_connector_02
+        position 17.08386 66.23138 -15.91760
+        rotation 0 9.90001 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_connector_02
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model connector_02
+    }
+    prefab_entity
+    {
+        name prop_connector_1
+        position 18.59692 66.23138 -7.24866
+        rotation 0 9.90001 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_connector_1
+        param best_lod 1
+        param force_shadows true
+        param model connector_02
+    }
+    prefab_entity
+    {
+        name prop_connector_2
+        position 4.92432 66.23138 -6.48657
+        rotation 0 9.90001 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_connector_2
+        param best_lod 2
+        param clip noclip
+        param force_shadows true
+        param model connector_02
+    }
+    prefab_entity
+    {
+        name prop_fridge_2
+        position 0.12561 -0.73654 -0.05127
+        rotation 0 0.00001 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 0
+        param clip fullclip
+        param color2_override_glass_fade 00000026
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param color_matlib_mat_lib_plastic s_bright
+        param color_override_glass_fade 14335752
+        param float_param3_override_glass_fade_w 0.5
+        param force_shadows true
+        param model fridge_02
+        param override_effect_4 override_glass_fade
+    }
+    prefab_entity
+    {
+        name prop_rogue_barricade_small_9
+        position 0.17419 96.95511 -1.88818
+        rotation 0 -179.09997 0
+        scale 1.15000 0.50000 0.75000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model barricade_small_lights
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_03_3
+        position -35.78784 60.23139 -10.34442
+        rotation 0 99.89998 0
+        scale 1.80000 1.80000 1.80000
+        param best_lod 2
+        param clip noclip
+        param force_shadows true
+        param model tech_debris_sm_03
+        param no_collision true
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_03_4
+        position -35.78784 63.83140 -10.34442
+        rotation 0 111.59998 0
+        scale 1.80000 1.80000 1.80000
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model tech_debris_sm_03
+        param no_collision true
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_19_2
+        position 36.15979 60.63441 -6.65955
+        rotation 0 92.69999 0
+        scale 0.80000 0.80000 0.80000
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model tech_debris_sm_19
+        param no_collision true
+        param skip_shadows true
+    }
+}
+
+

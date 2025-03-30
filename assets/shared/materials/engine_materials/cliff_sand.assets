@@ -1,0 +1,8 @@
+asset cliff_sand
+{
+  type material
+  listed true
+  tags rocks cliffs sand desert
+  material override_cliff_sand
+  mat_override true
+}

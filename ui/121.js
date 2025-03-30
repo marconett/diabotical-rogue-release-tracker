@@ -1,770 +1,556 @@
 new MenuScreen({
-    game_id: GAME.ids.ROGUE,
-    name: "play_rogue",
-    screen_element: _id("play_screen_rogue"),
-    button_element: null,
-    fullscreen: false,
+    game_id: GAME.ids.COMMON,
+    name: "settings_panel",
+    screen_element: _id("settings_panel"),
+    sound_open: "ui_panel_right_in",
     init: () => {
-        page_play_rogue.init()
+        settings_panel.init()
     },
-    open_handler: params => {
+    open_handler: () => {
         historyPushState({
-            page: "play_rogue"
+            page: "settings_panel"
         });
-        set_blur(true);
-        page_play_rogue.on_open(params)
+        set_blur(false);
+        settings_panel.on_open()
     },
+    post_open_handler: () => {},
     close_handler: () => {
-        set_blur(false)
-    }
+        settings_panel.on_close();
+        Navigation.reset_active()
+    },
+    post_close_handler: () => {}
 });
-const page_play_rogue = new function() {
+const settings_panel = new function() {
     let html = {
         root: null,
-        sub_screen_menu: null,
+        breadcrumbs: null,
+        explanation: null,
+        scroll: null,
         screen_actions: null,
-        matchmaking: null,
-        custom_games: null,
-        cards: null,
-        search_btn: null,
-        queue_circles: {},
-        custom_scroll: null,
-        custom_list: null,
-        custom_match: null
+        active_bind_element: null,
+        twitch_name: null,
+        twitch_link: null,
+        twitch_unlink: null
     };
-    let custom = {
-        list: [],
-        list_ts: 0,
-        list_requesting: false,
-        list_requesting_page: 0,
-        list_requesting_ts: 0,
-        list_page: 0,
-        list_max_reached: false,
-        list_updating: false,
-        selected_el: null,
-        selected: null
-    };
-    let selected_mode_count = 0;
-    let expired_sessions = {};
-    let tab_map = {
-        current_tab: "play_screen_rogue_matchmaking_tab",
-        current_scroll: null,
-        cb: function(el, tab, previous_el, previous_tab, optional_params) {},
-        play_screen_rogue_matchmaking_tab: {
-            content: "play_screen_rogue_matchmaking",
-            short: "matchmaking",
-            scroll: null,
-            nav: null,
-            cb: () => {
-                render_screen_actions("matchmaking");
-                request_queue_stats();
-                update_queue_stats()
-            }
-        },
-        play_screen_rogue_custom_games_tab: {
-            content: "play_screen_rogue_custom_games",
-            short: "custom",
-            scroll: null,
-            nav: null,
-            cb: () => {
-                if (custom.list_ts < Date.now() - 5e3 && !(custom.list_requesting && custom.list_requesting_page === 0)) {
-                    refresh_custom_list()
-                } else {
-                    render_custom_list()
-                }
-                render_screen_actions("custom")
-            }
-        }
-    };
-
-    function tab_selected(element, action) {
-        set_tab(tab_map, element)
-    }
     this.init = () => {
-        html.root = _id("play_screen_rogue");
-        html.sub_screen_menu = html.root.querySelector(".sub_screen_menu");
-        html.screen_actions = _get_first_with_class_in_parent(html.root, "screen_actions");
-        html.matchmaking = _id("play_screen_rogue_matchmaking");
-        html.custom_games = _id("play_screen_rogue_custom_games");
-        html.cards = _get_first_with_class_in_parent(html.matchmaking, "cards");
-        html.search_btn = html.matchmaking.querySelector(".controls .start");
-        html.custom_scroll = html.custom_games.querySelector(".matchlist .scroll-outer");
-        html.custom_list = html.custom_games.querySelector(".matchlist .scroll-inner");
-        html.custom_match = html.custom_games.querySelector(".match");
-        let first_sub_menu_option = html.root.querySelector(".sub_screen_menu_option");
-        Navigation.generate_nav({
-            name: "play_screen_rogue_menu",
-            nav_root: html.sub_screen_menu,
-            nav_class: "sub_screen_menu_option",
-            hover_sound: "ui_hover2",
-            action_sound: "ui_click1",
-            mouse_hover: "none",
-            mouse_click: "action",
-            action_cb_type: "immediate",
-            selection_required: true,
-            action_cb: tab_selected
-        });
-        Navigation.select_element("play_screen_rogue_menu", first_sub_menu_option);
-        mode_update_handlers.push(((modes, queues) => {
-            if (GAME.active !== GAME.ids.ROGUE) return;
-            this.render_cards();
-            this.update_mm_search_btn()
-        }));
-        global_on_ms_disconnected.push((() => {
-            if (GAME.active !== GAME.ids.ROGUE) return;
-            if (global_menu_page === "play_rogue") {
-                historyBack()
+        html.root = _id("settings_panel");
+        html.breadcrumbs = _id("settings_breadcrumbs");
+        html.explanation = _id("settings_panel_explanation");
+        html.scroll = _id("settings_panel_scroll");
+        html.screen_actions = html.root.querySelector(".screen_actions");
+        html.twitch_name = html.root.querySelector(".twitch_name");
+        html.twitch_link = html.root.querySelector(".settings_connections_twitch_link");
+        html.twitch_unlink = html.root.querySelector(".settings_connections_twitch_unlink");
+        on_load_user_info_handlers.push((user => {
+            let twitch_profile = null;
+            if (user.hasOwnProperty("social_profiles")) {
+                twitch_profile = user.social_profiles.find((c => c.type === "twitch"))
             }
-        }));
-        party_status_handlers.push(((party_changed, party, removed) => {
-            if (GAME.active !== GAME.ids.ROGUE) return;
-            this.update_valid_mm_modes();
-            this.update_selected_mm_modes()
-        }));
-        party_mode_update_handlers.push((party => {
-            if (GAME.active !== GAME.ids.ROGUE) return;
-            this.update_valid_mm_modes();
-            this.update_selected_mm_modes()
-        }));
-        mm_queue_event_handlers.push((msg => {
-            if (GAME.active !== GAME.ids.ROGUE) return
-        }));
-        mm_queue_event_handlers.push((() => {
-            this.update_mm_search_btn()
-        }));
-        mm_event_handlers.push((data => {}));
-        party_leader_update_handlers.push(((leader_status_changed, bool_am_i_leader) => {
-            if (bool_am_i_leader) {
-                if (html.search_btn) html.search_btn.classList.remove("hidden")
+            if (twitch_profile) {
+                html.twitch_name.textContent = twitch_profile.display_name;
+                html.twitch_link.style.display = "none";
+                html.twitch_unlink.style.display = "flex"
             } else {
-                if (html.search_btn) html.search_btn.classList.add("hidden")
+                html.twitch_name.textContent = "";
+                html.twitch_link.style.display = "flex";
+                html.twitch_unlink.style.display = "none"
             }
         }));
-        global_ms.addPermanentResponseHandler("custom-list", (data => {
-            if (custom.list_requesting_page === 0 && data.page !== 0) return;
-            custom.list_requesting = false;
-            custom.list_ts = Date.now();
-            custom.list_updating = true;
-            let list = unflattenData(data.list);
-            if (data.page === 0) {
-                custom.list = list
-            } else {
-                custom.list.push(...list)
+        GAME.add_activate_callback((game_id => {
+            _for_each_with_class_in_parent(html.root, "range-slider", (function(el) {
+                let variable = el.dataset.variable ? el.dataset.variable : null;
+                if (variable != null) {
+                    global_range_slider_map[variable] = new rangeSlider(el, true)
+                }
+            }));
+            _for_each_with_class_in_parent(html.root, "range-slider", (function(el) {
+                var variable = el.dataset.variable;
+                if (variable) {
+                    engine.call("initialize_range_value", variable)
+                }
+            }));
+            _for_each_with_class_in_parent(html.root, "color-picker-new", (function(el) {
+                var current_variable = el.dataset.variable;
+                if (current_variable && current_variable.length) {
+                    engine.call("initialize_color_value", current_variable)
+                }
+            }))
+        }));
+        _for_each_with_class_in_parent(html.root, "toggle", (function(toggle) {
+            let current_value = false;
+            if ("value" in toggle.dataset) current_value = toggle.dataset.value === "1" ? true : false;
+            setup_toggle(toggle, current_value, ((toggle, bool) => {
+                update_variable("bool", toggle.dataset.variable, bool);
+                updateSettingsExplanation(toggle.closest(".setting_row"), html.explanation)
+            }));
+            if (toggle.dataset.variable) {
+                initialize_variable("checkbox", toggle.dataset.variable)
             }
-            if (!data.list.length) {
-                custom.list_max_reached = true;
+        }));
+        let controls_root_element = _id("settings_panel_tab_content_controls");
+        bind_event("set_binding_list", (function(mode, command, code, game_id) {
+            if (typeof game_id === "undefined") return;
+            game_id = parseInt(game_id);
+            if (game_id !== GAME.ids.INVASION && game_id !== GAME.ids.ROGUE && game_id !== GAME.ids.GEARSTORM) return;
+            set_binding_list(game_id, controls_root_element, mode, command, code)
+        }));
+        bind_event("set_display_mode_options", (function(json_string) {
+            let modes = [];
+            try {
+                modes = JSON.parse(json_string)
+            } catch (e) {
+                console.log("ERROR parsing display mode json list", e.message);
                 return
             }
-            if (data.page !== 0) {
-                render_custom_list_page(list)
+            let select = html.root.querySelector(".video_mode_select");
+            if (select) {
+                for (let mode of modes) {
+                    let option = _createElement("div", "", localize("display_mode_" + mode.name));
+                    option.dataset.value = mode.id;
+                    select.appendChild(option)
+                }
+                ui_setup_select(select, (function(opt, field) {
+                    engine.call("set_string_variable", field.dataset.variable, opt.dataset.value);
+                    updateSettingsExplanation(select.closest(".setting_row"), html.explanation)
+                }))
+            }
+        }));
+        let auto_detect_video_mode_option_added = false;
+        let setup_video_resolution_timeout = null;
+        bind_event("add_video_mode", (function(video_mode, video_mode_caption, selected) {
+            let element = html.root.querySelector(".video_resolution_select");
+            if (element) {
+                if (!auto_detect_video_mode_option_added) {
+                    auto_detect_video_mode_option_added = true;
+                    element.appendChild(auto_detect_video_mode_option())
+                }
+                let option = _createElement("div", "", video_mode_caption);
+                option.dataset.value = video_mode;
+                if (selected) option.dataset.selected = 1;
+                element.appendChild(option);
+                if (setup_video_resolution_timeout !== null) clearTimeout(setup_video_resolution_timeout);
+                setup_video_resolution_timeout = setTimeout((() => {
+                    ui_setup_select(element, (function(opt, field) {
+                        engine.call("set_string_variable", field.dataset.variable, opt.dataset.value);
+                        updateSettingsExplanation(element.closest(".setting_row"), html.explanation)
+                    }));
+                    setup_video_resolution_timeout = null
+                }))
+            }
+        }));
+        bind_event("set_screen_aspect_ratio", (function(numerator, denominator) {
+            let element = html.root.querySelector(".aspect_ratio_info");
+            if (element) {
+                let fragment = new DocumentFragment;
+                fragment.appendChild(_createElement("span", "info"));
+                fragment.appendChild(_createElement("span", "text", localize_ext("settings_video_screen_aspect_ratio", {
+                    ratio: numerator + ":" + denominator
+                })));
+                _empty(element);
+                element.appendChild(fragment)
+            }
+        }));
+        on_video_mode_change.push(((display_mode, using_video_resolution) => {
+            _for_each_with_class_in_parent(html.root, "setting_video_resolution", (el => {
+                if (using_video_resolution) {
+                    el.style.display = "flex";
+                    el.classList.remove("disabled")
+                } else {
+                    el.style.display = "none";
+                    el.classList.add("disabled")
+                }
+            }));
+            refreshScrollbar(_id(tab_map.current_scroll))
+        }));
+        bind_event("set_audio_device_options", (function(json_string) {
+            let devices = [];
+            try {
+                devices = JSON.parse(json_string)
+            } catch (e) {
+                console.log("ERROR parsing audio device json list", e.message)
+            }
+            let select = html.root.querySelector(".sound_device_select");
+            if (select) {
+                let option = _createElement("div", "", localize("default"));
+                option.dataset.value = "";
+                select.appendChild(option);
+                for (let device of devices) {
+                    let option = _createElement("div", "", device.name);
+                    option.dataset.value = device.id;
+                    select.appendChild(option)
+                }
+                ui_setup_select(select, (function(opt, field) {
+                    engine.call("set_string_variable", field.dataset.variable, opt.dataset.value);
+                    updateSettingsExplanation(select.closest(".setting_row"), html.explanation)
+                }))
+            }
+        }));
+        _for_each_with_class_in_parent(html.root, "select-field", (function(select_field) {
+            ui_setup_select(select_field, (function(opt, field) {
+                engine.call("set_string_variable", field.dataset.variable, opt.dataset.value);
+                updateSettingsExplanation(select_field.closest(".setting_row"), html.explanation)
+            }))
+        }));
+        bind_event("set_team_colors", (json => {
+            let colors = null;
+            try {
+                colors = JSON.parse(json)
+            } catch (e) {
+                console.error("Error parsing team colors json", e)
+            }
+            set_team_colors(colors)
+        }));
+        let color_lists = html.root.querySelectorAll(".color_list");
+        let own_colors = null;
+        let enemy_colors = null;
+        for (let color_list of color_lists) {
+            let variable = color_list.dataset.variable;
+            if (!variable) continue;
+            if (variable === "game_team1_color_override") own_colors = color_list;
+            if (variable === "game_team2_color_override") enemy_colors = color_list
+        }
+        global_variable.addPermanentResponseHandler("color", "game_team1_color_override", (value => {
+            if (!own_colors) return;
+            let colors = own_colors.querySelectorAll(".color");
+            for (let color of colors) {
+                if (color.dataset.color === value) {
+                    color.classList.add("selected")
+                } else {
+                    color.classList.remove("selected")
+                }
+            }
+        }));
+        global_variable.addPermanentResponseHandler("color", "game_team2_color_override", (value => {
+            if (!enemy_colors) return;
+            let colors = enemy_colors.querySelectorAll(".color");
+            for (let color of colors) {
+                if (color.dataset.color === value) {
+                    color.classList.add("selected")
+                } else {
+                    color.classList.remove("selected")
+                }
+            }
+        }));
+        engine.call("initialize_color_value", "game_team1_color_override");
+        engine.call("initialize_color_value", "game_team2_color_override");
+        Navigation.generate_nav({
+            name: "settings_panel_tabs",
+            nav_root: _id("settings_panel").querySelector(".tabs"),
+            nav_class: "tab",
+            mouse_hover: "none",
+            mouse_click: "action",
+            hover_sound: "ui_hover2",
+            action_sound: "ui_click1",
+            selection_required: true,
+            action_cb_type: "immediate",
+            action_cb: (element, action) => {
+                settings_panel.open_tab(element)
+            }
+        });
+        Navigation.generate_nav({
+            name: "settings_panel_main",
+            nav_root: _id("settings_panel_tab_content_main"),
+            nav_class: "setting_row",
+            nav_scroll: html.scroll,
+            hover_sound: "ui_hover2",
+            action_cb_type: "input",
+            action_cb: setting_action,
+            select_cb: select_action,
+            deselect_cb: deselect_action
+        });
+        Navigation.generate_nav({
+            name: "settings_panel_controls",
+            nav_root: _id("settings_panel_tab_content_controls"),
+            nav_class: "controls_row",
+            nav_scroll: html.scroll,
+            mouse_click: "action",
+            hover_sound: "ui_hover2",
+            action_cb_type: "input",
+            action_cb: setting_action,
+            select_cb: select_action,
+            deselect_cb: deselect_action
+        });
+        Navigation.generate_nav({
+            name: "settings_panel_video",
+            nav_root: _id("settings_panel_tab_content_video"),
+            nav_class: "setting_row",
+            nav_scroll: html.scroll,
+            hover_sound: "ui_hover2",
+            action_cb_type: "input",
+            action_cb: setting_action,
+            select_cb: select_action,
+            deselect_cb: deselect_action
+        });
+        Navigation.generate_nav({
+            name: "settings_panel_audio",
+            nav_root: _id("settings_panel_tab_content_audio"),
+            nav_class: "setting_row",
+            nav_scroll: html.scroll,
+            hover_sound: "ui_hover2",
+            action_cb_type: "input",
+            action_cb: setting_action,
+            select_cb: select_action,
+            deselect_cb: deselect_action
+        });
+        let max_fps_toggle = html.root.querySelector(".video_max_fps_toggle");
+        let lobby_max_fps_toggle = html.root.querySelector(".video_lobby_max_fps_toggle");
+        ui_setup_select(max_fps_toggle, ((opt, field) => {
+            if (Number(opt.dataset.value)) {
+                update_variable("real", "video_max_fps", 250)
             } else {
-                render_custom_list()
-            }
-            setTimeout((() => {
-                custom.list_updating = false
-            }), 250)
-        }));
-        global_ms.addPermanentResponseHandler("info-msg", (data => {
-            if (custom.selected && (data === "custom_session_expired" || data === "custom_match_expired")) {
-                for (let session_id in expired_sessions) {
-                    if (Date.now() - expired_sessions[session_id] > 120 * 1e3) {
-                        delete expired_sessions[session_id]
-                    }
-                }
-                expired_sessions[custom.selected.session_id] = Date.now();
-                if (custom.selected_el && custom.selected_el.parentNode) {
-                    custom.selected_el.parentNode.removeChild(custom.selected_el);
-                    custom.selected_el = null
-                }
-                unselect_custom_match()
+                update_variable("real", "video_max_fps", 0)
             }
         }));
-        on_queue_stats_update.push((stats => {
-            update_queue_stats()
+        ui_setup_select(lobby_max_fps_toggle, ((opt, field) => {
+            if (Number(opt.dataset.value)) {
+                update_variable("real", "video_lobby_max_fps", 250)
+            } else {
+                update_variable("real", "video_lobby_max_fps", 0)
+            }
         }));
-        html.custom_list.addEventListener("scroll", (event => {
-            const threshold = 150;
-            const containerHeight = event.target.getBoundingClientRect().height;
-            const windowBottom = event.target.scrollTop + containerHeight;
-            if (!custom.list_requesting && !custom.list_max_reached && !custom.list_updating && windowBottom > event.target.scrollHeight - threshold) {
-                get_next_custom_list_page()
+        global_variable.addPermanentResponseHandler("range", "video_max_fps", (value => {
+            max_fps_toggle.dataset.value = value === 0 ? 0 : 1;
+            update_select(max_fps_toggle);
+            if (value) {
+                html.root.querySelector(".setting_row.video_max_fps").classList.remove("disabled")
+            } else {
+                html.root.querySelector(".setting_row.video_max_fps").classList.add("disabled")
+            }
+        }));
+        global_variable.addPermanentResponseHandler("range", "video_lobby_max_fps", (value => {
+            lobby_max_fps_toggle.dataset.value = value === 0 ? 0 : 1;
+            update_select(lobby_max_fps_toggle);
+            if (value) {
+                html.root.querySelector(".setting_row.video_lobby_max_fps").classList.remove("disabled")
+            } else {
+                html.root.querySelector(".setting_row.video_lobby_max_fps").classList.add("disabled")
+            }
+        }));
+        engine.call("initialize_range_value", "video_max_fps");
+        engine.call("initialize_range_value", "video_lobby_max_fps");
+        on_capture_bind_finished.push((() => {
+            Navigation.unlock_nav("settings_panel_controls");
+            if (html.active_bind_element) {
+                html.active_bind_element.classList.remove("active")
             }
         }))
     };
-    this.on_open = params => {
-        unselect_custom_match();
-        if (params && "page" in params) {
-            if (params.page === "matchmaking") {
-                Navigation.select_element("play_screen_rogue_menu", _id("play_screen_rogue_matchmaking_tab"))
-            } else if (params.page === "custom") {
-                Navigation.select_element("play_screen_rogue_menu", _id("play_screen_rogue_custom_games_tab"))
-            }
+    const reset_action = {
+        text: "Reset all",
+        kbm_bind: "",
+        controller_bind: "X",
+        callback: () => {
+            settings_reset("controls")
         }
-        Navigation.set_active({
-            lb_rb: "play_screen_rogue_menu"
-        });
-        let selection_type = GAME.get_data("location_selection_type");
-        if (selection_type === 1 && Servers.selected_locations.size === 0 || selection_type > 1 && Servers.selected_regions.size === 0) {
-            open_modal_screen("region_select_modal_screen", null, 1e3)
-        }
-        if (tab_map.current_tab === "play_screen_rogue_custom_games_tab") {
-            if (custom.list_ts < Date.now() - 5e3 && !custom.list_requesting) {
-                refresh_custom_list()
-            } else {
-                render_custom_list()
-            }
-        }
-        render_screen_actions(tab_map[tab_map.current_tab].short);
-        request_queue_stats()
     };
-
-    function update_queue_stats() {
-        let counts = html.cards.querySelectorAll(".card .count .value");
-        for (let c of counts) {
-            let total_playing = 0;
-            if (queue_stats) {
-                let key = null;
-                if (c.dataset.mode_key && c.dataset.mode_key in queue_stats) {
-                    key = c.dataset.mode_key
-                } else if (c.dataset.type === "warmup") {
-                    key = "warmup"
-                }
-                if (key) {
-                    for (let region in queue_stats[key]) {
-                        if (region === "total") {
-                            total_playing = 0;
-                            if ("s" in queue_stats[key]["total"]) total_playing += queue_stats[key]["total"].s;
-                            if ("p" in queue_stats[key]["total"]) total_playing += queue_stats[key]["total"].p;
-                            break
-                        }
-                        if (key === "warmup") {
-                            if (Servers.selected_regions.has(region)) {
-                                if ("p" in queue_stats[key][region]) total_playing += queue_stats[key][region].p
-                            }
-                        } else {
-                            if (Servers.selected_regions.has(region)) {
-                                let region_total = 0;
-                                if ("s" in queue_stats[key][region]) region_total += queue_stats[key][region].s;
-                                if ("p" in queue_stats[key][region]) region_total += queue_stats[key][region].p;
-                                if (region_total > total_playing) total_playing = region_total
-                            }
-                        }
-                    }
-                }
+    let tab_map = {
+        current_tab: "settings_panel_tab_main",
+        current_scroll: "settings_panel_scroll",
+        cb: function(el, tab, previous_el, previous_tab, optional_params) {
+            html.breadcrumbs.textContent = localize("settings") + " / " + localize(this[tab.id].breadcrumb);
+            _for_each_with_class_in_parent(_id("settings_panel"), "sliding", (function(el) {
+                options_carousel_set_text_position(el)
+            }))
+        },
+        settings_panel_tab_main: {
+            content: "settings_panel_tab_content_main",
+            scroll: "settings_panel_scroll",
+            nav: "settings_panel_main",
+            breadcrumb: "settings_general",
+            cb: () => {
+                Navigation.render_actions([global_action_buttons.back], html.screen_actions);
+                Navigation.set_active({
+                    up_down: "settings_panel_main"
+                })
             }
-            console.log("update_queue_stats", c.dataset.type, c.dataset.mode_key, total_playing);
-            c.textContent = total_playing;
-            if (total_playing) {
-                c.parentElement.classList.add("visible")
-            } else {
-                c.parentElement.classList.remove("visible")
+        },
+        settings_panel_tab_controls: {
+            content: "settings_panel_tab_content_controls",
+            scroll: "settings_panel_scroll",
+            nav: "settings_panel_controls",
+            breadcrumb: "settings_tab_controls",
+            cb: () => {
+                Navigation.render_actions([reset_action, global_action_buttons.back], html.screen_actions);
+                Navigation.set_active({
+                    up_down: "settings_panel_controls"
+                })
             }
-        }
-    }
-
-    function render_screen_actions(tab) {
-        let actions = [global_action_buttons.back];
-        if (tab === "matchmaking") {
-            actions.unshift({
-                i18n: "datacenters",
-                kbm_bind: "D",
-                controller_bind: "B",
-                callback: () => {
-                    open_modal_screen("region_select_modal_screen")
-                }
-            })
-        }
-        if (page_game_report) {
-            let last_match = page_game_report.get_last_match();
-            if (last_match) {
-                actions.unshift({
-                    i18n: "last_match",
-                    kbm_bind: "M",
-                    controller_bind: "X",
-                    callback: () => {
-                        if (!page_game_report.is_active()) {
-                            page_game_report.load_last_match()
-                        }
-                        trigger_show_game_report(true);
-                        close_menu()
-                    }
+        },
+        settings_panel_tab_video: {
+            content: "settings_panel_tab_content_video",
+            scroll: "settings_panel_scroll",
+            nav: "settings_panel_video",
+            breadcrumb: "settings_tab_video",
+            cb: () => {
+                Navigation.render_actions([global_action_buttons.back], html.screen_actions);
+                Navigation.set_active({
+                    up_down: "settings_panel_video"
+                })
+            }
+        },
+        settings_panel_tab_audio: {
+            content: "settings_panel_tab_content_audio",
+            scroll: "settings_panel_scroll",
+            nav: "settings_panel_audio",
+            breadcrumb: "settings_tab_audio",
+            cb: () => {
+                Navigation.render_actions([global_action_buttons.back], html.screen_actions);
+                Navigation.set_active({
+                    up_down: "settings_panel_audio"
                 })
             }
         }
-        if (tab === "custom") {
-            actions.unshift({
-                i18n: "menu_button_refresh",
-                kbm_bind: "R",
-                controller_bind: "",
-                callback: () => {
-                    refresh_custom_list()
-                }
-            });
-            actions.unshift({
-                i18n: "customlist_create_lobby",
-                kbm_bind: "C",
-                controller_bind: "Y",
-                callback: () => {
-                    if (!Lobby.in_lobby()) {
-                        Lobby.create()
-                    } else {
-                        open_screen("custom")
-                    }
-                }
-            });
-            actions.unshift({
-                i18n: "customlist_join_with_key",
-                kbm_bind: "J",
-                controller_bind: "",
-                callback: () => {
-                    lobby_join_with_key()
-                }
-            })
-        }
-        Navigation.render_actions(actions, html.screen_actions)
-    }
-    this.render_cards = () => {
-        html.queue_circles = {};
-        _empty(html.cards);
-        let mode_map = GAME.get_data("game_mode_map");
-        let card_modes = [];
-        for (let queue of global_active_queues) {
-            if (!(queue.mode_key in global_mode_definitions)) continue;
-            let md = global_mode_definitions[queue.mode_key];
-            if (!(md.mode_name in mode_map)) continue;
-            let enabled = true;
-            if (!md.enabled) enabled = false;
-            if (!mode_map[md.mode_name].enabled) enabled = false;
-            card_modes.push({
-                type: "queue",
-                mode_key: md.mode_key,
-                enabled: enabled,
-                i18n: mode_map[md.mode_name].i18n,
-                desc_i18n: mode_map[md.mode_name].desc_i18n,
-                vs: getVS(md.team_count, md.team_size),
-                mode_name: md.mode_name
-            })
-        }
-        if ("warmup" in mode_map) {
-            card_modes.push({
-                type: "warmup",
-                mode_key: "",
-                enabled: true,
-                i18n: mode_map["warmup"].i18n,
-                desc_i18n: mode_map["warmup"].desc_i18n,
-                vs: getVS(2, 16),
-                mode_name: "warmup"
-            })
-        }
-        let idx = 0;
-        for (let card_mode of card_modes) {
-            let locked = false;
-            if (!card_mode.enabled) locked = true;
-            let card = _createElement("div", ["card"]);
-            if (card_modes.length <= 2) {
-                card.classList.add("big")
-            } else if (idx === 0) {
-                card.classList.add("big")
-            }
-            card.dataset.mode_key = card_mode.mode_key;
-            let image = _createElement("div", "image");
-            card.appendChild(image);
-            let info = _createElement("div", "info");
-            let title = _createElement("div", "title");
-            if (locked) {
-                title.appendChild(_createElement("div", "mode", localize("locked")))
-            } else {
-                title.appendChild(_createElement("div", "mode", localize(card_mode.i18n)))
-            }
-            let desc = _createElement("div", "desc", localize(card_mode.desc_i18n));
-            info.appendChild(title);
-            info.appendChild(desc);
-            if (card_mode.type === "warmup" || card_mode.mode_key in global_mode_definitions && global_mode_definitions[card_mode.mode_key].mode_name === "rogue_wipeout") {
-                let vs = _createElement("div", "vs");
-                vs.appendChild(_createElement("div", "icon"));
-                vs.appendChild(_createElement("div", "text", card_mode.vs));
-                info.appendChild(vs)
-            }
-            if (card_mode.mode_name in mode_map && mode_map[card_mode.mode_name].rules && mode_map[card_mode.mode_name].rules.length) {
-                let rules_button = _createElement("div", "rules_button");
-                rules_button.appendChild(_createElement("div", "icon"));
-                rules_button.appendChild(_createElement("div", "text", localize("rules")));
-                info.appendChild(rules_button);
-                rules_button.addEventListener("click", (e => {
-                    e.stopPropagation();
-                    let mode_name = localize(card_mode.i18n);
-                    if (card_mode.mode_name in mode_map) mode_name = localize(mode_map[card_mode.mode_name].i18n);
-                    let rules_title = localize_ext("mode_rules", {
-                        mode_name: mode_name
-                    });
-                    let rules_div = _createElement("div", "mode_rules");
-                    for (let i = 0; i < mode_map[card_mode.mode_name].rules.length; i++) {
-                        let row = _createElement("div", "row");
-                        row.appendChild(_createElement("div", "icon", i + 1));
-                        row.appendChild(_createElement("div", "text", localize(mode_map[card_mode.mode_name].rules[i])));
-                        rules_div.appendChild(row);
-                        if (i === mode_map[card_mode.mode_name].rules.length - 1) {
-                            row.classList.add("last")
-                        }
-                    }
-                    updateBasicModalContent(basicGenericModal(rules_title, rules_div, localize("modal_close")));
-                    open_modal_screen("basic_modal")
-                }))
-            }
-            card.appendChild(info);
-            let count = _createElement("div", "count");
-            count.appendChild(_createElement("div", "icon"));
-            let value = _createElement("div", "value");
-            value.dataset.type = card_mode.type;
-            value.dataset.mode_key = card_mode.mode_key;
-            count.appendChild(value);
-            card.appendChild(count);
-            if (card_mode.type === "queue") {
-                let selection = _createElement("div", "selection");
-                let circle = _createElement("div", "circle");
-                card.classList.add("queue");
-                if (locked) circle.classList.add("locked");
-                else card.classList.add("enabled");
-                if (global_party.modes.includes(card_mode.mode_key)) {
-                    circle.classList.add("selected")
-                }
-                selection.appendChild(circle);
-                info.appendChild(selection);
-                if (card_mode.mode_key in global_mode_definitions && global_mode_definitions[card_mode.mode_key].mode_name in mode_map) {
-                    if (mode_map[global_mode_definitions[card_mode.mode_key].mode_name].image.length) {
-                        image.style.backgroundImage = "url(" + mode_map[global_mode_definitions[card_mode.mode_key].mode_name].image + ")"
-                    }
-                }
-                html.queue_circles[card_mode.mode_key] = circle;
-                card.addEventListener("click", (() => {
-                    if (global_mm_searching) return;
-                    if (!card.classList.contains("enabled")) return;
-                    if (!bool_am_i_leader) return;
-                    if (circle.classList.contains("selected")) {
-                        circle.classList.remove("selected")
-                    } else {
-                        circle.classList.add("selected")
-                    }
-                    this.send_selected_mm_modes()
-                }))
-            } else if (card_mode.type === "warmup") {
-                let overlay = _createElement("div", "overlay");
-                let text = _createElement("div", "text", localize("warmup_queue_info"));
-                let btn = _createElement("div", "btn-style-2", localize("menu_warmup"));
-                overlay.appendChild(text);
-                overlay.appendChild(btn);
-                card.appendChild(overlay);
-                if ("warmup" in mode_map) {
-                    if (mode_map["warmup"].image.length) {
-                        image.style.backgroundImage = "url(" + mode_map["warmup"].image + ")"
-                    }
-                }
-                card.addEventListener("mouseenter", (() => {
-                    overlay.classList.add("visible")
-                }));
-                card.addEventListener("mouseleave", (() => {
-                    overlay.classList.remove("visible")
-                }));
-                btn.addEventListener("click", (() => {
-                    this.join_warmup()
-                }))
-            }
-            card.addEventListener("mouseenter", (() => {
-                if (!card.classList.contains("enabled")) return;
-                _play_hover2()
-            }));
-            card.addEventListener("click", (() => {
-                if (!card.classList.contains("enabled")) return;
-                _play_click1()
-            }));
-            html.cards.appendChild(card);
-            idx++
-        }
-        this.send_selected_mm_modes()
     };
-    this.update_valid_mm_modes = () => {
-        let mode_map = GAME.get_data("game_mode_map");
-        for (let mode_key in html.queue_circles) {
-            let enabled = true;
-            if (!(mode_key in global_mode_definitions) || !global_mode_definitions[mode_key].enabled || !(global_mode_definitions[mode_key].mode_name in mode_map) || !mode_map[global_mode_definitions[mode_key].mode_name].enabled) {
-                enabled = false
-            }
-            if (!global_party["valid-modes"].includes(mode_key)) enabled = false;
-            let card = html.queue_circles[mode_key].closest(".card");
-            if (enabled) {
-                card.classList.add("enabled");
-                html.queue_circles[mode_key].classList.remove("locked")
-            } else {
-                card.classList.remove("enabled");
-                html.queue_circles[mode_key].classList.add("locked")
-            }
-        }
+    this.on_open = () => {
+        Navigation.set_active({
+            lb_rb: "settings_panel_tabs",
+            up_down: tab_map[tab_map.current_tab].nav,
+            left_right: null
+        });
+        Navigation.reset("lb_rb");
+        refreshScrollbar(_id(tab_map.current_scroll));
+        _for_each_with_class_in_parent(_id("settings_panel"), "sliding", (function(el) {
+            options_carousel_set_text_position(el)
+        }))
     };
-    this.update_selected_mm_modes = () => {
-        let count = 0;
-        for (let mode_key in html.queue_circles) {
-            if (global_party.modes.includes(mode_key)) {
-                html.queue_circles[mode_key].classList.add("selected");
-                count++
-            } else {
-                html.queue_circles[mode_key].classList.remove("selected")
-            }
-        }
-        selected_mode_count = count;
-        this.update_mm_search_btn()
-    };
-    this.update_mm_search_btn = () => {
-        if (html.search_btn) {
-            let label = html.search_btn.querySelector(".label");
-            if (global_mm_searching) {
-                html.search_btn.classList.remove("disabled");
-                label.textContent = localize("menu_cancel_search")
-            } else {
-                if (selected_mode_count == 0) {
-                    html.search_btn.classList.add("disabled");
-                    label.textContent = localize("menu_select_mode")
-                } else {
-                    html.search_btn.classList.remove("disabled");
-                    label.textContent = localize("menu_find_match")
-                }
-            }
-        }
-    };
-    this.send_selected_mm_modes = () => {
-        let modes = [];
-        for (let mode_key in html.queue_circles) {
-            if (html.queue_circles[mode_key].classList.contains("selected")) {
-                modes.push(mode_key)
-            }
-        }
-        queue_mode_update_id++;
-        send_json_data({
-            action: "party-set-modes",
-            modes: modes,
-            update_id: queue_mode_update_id
-        })
-    };
-    this.join_warmup = () => {
-        engine.call("reset_inactivity_timer");
-        send_string(CLIENT_COMMAND_JOIN_WARMUP, "s")
-    };
-    this.toggle_search = () => {
-        if (!bool_am_i_leader) return;
-        mm_toggle_queue()
-    };
-
-    function render_custom_list_match(fragment, m) {
-        let ping_str = "N/A";
-        if (global_datacenter_map.hasOwnProperty(m.location) && Servers.locations.hasOwnProperty(m.location)) {
-            if (Servers.locations[m.location].ping !== -1) {
-                ping_str = Math.floor(Number(Servers.locations[m.location].ping) * 1e3)
-            }
-        }
-        let mode_name = "";
-        const mode_data = GAME.get_data("game_mode_map", m.mode);
-        if (mode_data) mode_name = localize(mode_data.i18n);
-        else mode_name = m.mode;
-        if (m.team_count === 2) {
-            mode_name += " " + m.team_size + "v" + m.team_size
-        }
-        let match = _createElement("div", "custom_match");
-        match.appendChild(_createElement("div", "name", m.name));
-        match.appendChild(_createElement("div", "mode", mode_name));
-        match.appendChild(_createElement("div", "map", _format_map_name(m.map, m.map_name)));
-        match.appendChild(_createElement("div", "players", m.client_count + "/" + m.max_clients));
-        match.appendChild(_createElement("div", "ping", ping_str));
-        fragment.appendChild(match);
-        match.addEventListener("click", (() => {
-            if (match.classList.contains("selected")) {
-                unselect_custom_match()
-            } else {
-                select_custom_match(match, m)
-            }
+    this.on_close = () => {
+        _for_each_with_class_in_parent(_id("settings_panel"), "scrolling_animation", (function(el) {
+            el.classList.remove("scrolling_animation")
         }));
-        if (custom.selected && custom.selected.session_id === m.session_id) {
-            select_custom_match(match, m)
-        }
-    }
+        html.explanation.style.display = "none"
+    };
+    this.open_tab = pressed_tab => {
+        set_tab(tab_map, pressed_tab)
+    };
 
-    function render_custom_list() {
-        _empty(html.custom_list);
-        let fragment = new DocumentFragment;
-        for (let m of custom.list) {
-            if (m.session_id in expired_sessions) continue;
-            render_custom_list_match(fragment, m)
+    function select_action(element) {
+        if (updateSettingsExplanation(element, html.explanation)) {
+            html.explanation.style.display = "flex"
+        } else {
+            html.explanation.style.display = "none"
         }
-        html.custom_list.appendChild(fragment);
-        refreshScrollbar(html.custom_scroll);
-        resetScrollbar(html.custom_scroll)
-    }
-
-    function render_custom_list_page(list) {
-        let fragment = new DocumentFragment;
-        for (let m of list) {
-            if (m.session_id in expired_sessions) continue;
-            render_custom_list_match(fragment, m)
+        let action_buttons = [global_action_buttons.back];
+        if (tab_map.current_tab === "settings_panel_tab_controls") {
+            action_buttons.unshift(reset_action)
         }
-        html.custom_list.appendChild(fragment);
-        refreshScrollbar(html.custom_scroll)
-    }
-
-    function refresh_custom_list() {
-        if (custom.list_requesting && Date.now() - custom.list_requesting_ts < 5e3) {
-            return
-        }
-        lock_custom_list();
-        custom.list_page = 0;
-        custom.list_requesting = true;
-        custom.list_requesting_page = custom.list_page;
-        custom.list_requesting_ts = Date.now();
-        custom.list_max_reached = false;
-        send_string(CLIENT_COMMAND_GET_CUSTOM_LIST, custom.list_page)
-    }
-
-    function get_next_custom_list_page() {
-        custom.list_page++;
-        custom.list_requesting = true;
-        custom.list_requesting_page = custom.list_page;
-        custom.list_requesting_ts = Date.now();
-        send_string(CLIENT_COMMAND_GET_CUSTOM_LIST, custom.list_page)
-    }
-
-    function select_custom_match(list_element, m) {
-        if (custom.selected_el) {
-            custom.selected_el.classList.remove("selected")
-        }
-        custom.selected_el = list_element;
-        custom.selected_el.classList.add("selected");
-        custom.selected = m;
-        let fragment = new DocumentFragment;
-        let image = _createElement("div", "image");
-        image.style.backgroundImage = `url("map-thumbnail://${m.map}")`;
-        fragment.appendChild(image);
-        let icon = _createElement("div", "icon");
-        icon.appendChild(_createElement("div", "inner"));
-        image.appendChild(icon); {
-            let region_i18n = "";
-            if (m.location in Servers.locations && Servers.locations[m.location].region in global_region_map) {
-                region_i18n = global_region_map[Servers.locations[m.location].region].i18n
-            }
-            let datarow = _createElement("div", "data_row");
-            let data_left = _createElement("div", ["data", "left"]);
-            data_left.appendChild(_createElement("div", "name", localize("customlist_table_head_name")));
-            data_left.appendChild(_createElement("div", "value", m.name));
-            datarow.appendChild(data_left);
-            let data_right = _createElement("div", ["data", "right"]);
-            data_right.appendChild(_createElement("div", "name", localize("customlist_table_head_region")));
-            data_right.appendChild(_createElement("div", "value", localize(region_i18n)));
-            datarow.appendChild(data_right);
-            fragment.appendChild(datarow)
-        } {
-            let state = "";
-            if (m.state == 0 || m.state == 1) {
-                state = localize("game_state_warmup")
-            } else if (m.state == 2 || m.state == 3 || m.state == 4) {
-                let match_time = _seconds_to_digital(m.match_time);
-                if (m.start_ts) {
-                    match_time = _seconds_to_digital(Math.floor((Date.now() - m.start_ts) / 1e3))
+        if (element.classList.contains("controls_row")) {
+            action_buttons.unshift({
+                text: "Delete",
+                controller_bind: "Y",
+                kbm_bind: "DEL",
+                callback: () => {
+                    setting_action(element, "delete")
                 }
-                state = localize("game_state_live") + " - " + match_time
-            }
-            let datarow = _createElement("div", "data_row");
-            let data_left = _createElement("div", ["data", "left"]);
-            data_left.appendChild(_createElement("div", "name", localize("game_state")));
-            data_left.appendChild(_createElement("div", "value", state));
-            datarow.appendChild(data_left);
-            let data_right = _createElement("div", ["data", "right"]);
-            data_right.appendChild(_createElement("div", "name", localize("customlist_table_head_players")));
-            data_right.appendChild(_createElement("div", "value", m.client_count + "/" + m.max_clients));
-            datarow.appendChild(data_right);
-            fragment.appendChild(datarow)
+            })
         }
-        let players_scroll = _createElement("div", ["scroll-outer", "theme_rogue_white"]);
-        players_scroll.dataset.sbHideEmpty = true;
-        players_scroll.dataset.sbOutside = true;
-        let players_scroll_bar = _createElement("div", "scroll-bar");
-        players_scroll_bar.appendChild(_createElement("div", "scroll-bar-track"));
-        players_scroll_bar.appendChild(_createElement("div", "scroll-thumb"));
-        players_scroll.appendChild(players_scroll_bar);
-        let players_scroll_inner = _createElement("div", "scroll-inner");
-        players_scroll.appendChild(players_scroll_inner);
-        fragment.appendChild(players_scroll);
-        initialize_scrollbar(players_scroll);
-        if (m.team_count === 2) {
-            let teams = _createElement("div", "teams");
-            let team_left = _createElement("div", ["team", "left"]);
-            let team_right = _createElement("div", ["team", "right"]);
-            team_left.appendChild(_createElement("div", "name", localize_ext("team_with_idx", {
-                value: 1
-            })));
-            team_right.appendChild(_createElement("div", "name", localize_ext("team_with_idx", {
-                value: 2
-            })));
-            for (let c of m.clients) {
-                if (c[1] !== 0) continue;
-                team_left.appendChild(_createElement("div", "player", c[0]))
+        Navigation.render_actions(action_buttons, html.screen_actions)
+    }
+
+    function deselect_action(element) {
+        html.explanation.style.display = "none";
+        let action_buttons = [global_action_buttons.back];
+        if (tab_map.current_tab === "settings_panel_tab_controls") {
+            action_buttons.unshift(reset_action)
+        }
+        Navigation.render_actions(action_buttons, html.screen_actions)
+    }
+
+    function setting_action(element, action) {
+        if (element.classList.contains("controls_row")) {
+            let value_element = element.querySelector(".controls_value");
+            if (!value_element) return;
+            let bind_element = value_element.firstElementChild;
+            let command = value_element.dataset["dbBinding"];
+            let mode = value_element.dataset["dbBindingMode"];
+            if (action === "enter") {
+                capture_bind(value_element, command, mode);
+                if (bind_element) {
+                    html.active_bind_element = bind_element;
+                    html.active_bind_element.classList.add("active")
+                }
+                Navigation.lock_nav("settings_panel_controls")
+            } else if (action === "delete") {
+                delete_bindings(command, mode)
             }
-            for (let c of m.clients) {
-                if (c[1] !== 1) continue;
-                team_right.appendChild(_createElement("div", "player", c[0]))
-            }
-            teams.appendChild(team_left);
-            teams.appendChild(team_right);
-            players_scroll_inner.appendChild(teams)
-        } else {}
-        let buttons = _createElement("div", "buttons");
-        fragment.appendChild(buttons);
-        if (bool_am_i_leader) {
-            let join_btn = _createElement("div", ["btn-style-2", "gold", "join"], localize("join"));
-            buttons.appendChild(join_btn);
-            join_btn.addEventListener("click", (() => {
-                let require_pw = false;
-                if ("password" in m && m.password) require_pw = true;
-                if (require_pw) {
-                    let cont = _createElement("div", "custom_password_prompt");
-                    let input = _createElement("input", "custom_password_prompt_input");
-                    input.setAttribute("type", "password");
-                    cont.appendChild(input);
-                    input.focus();
-                    input.addEventListener("keydown", (function(e) {
-                        if (e.keyCode == 13) {
-                            e.preventDefault();
-                            join_custom_session(m.session_id, input.value);
-                            close_modal_screen_by_selector("generic_modal")
+        } else if (element.classList.contains("setting_row")) {
+            let ctrl = element.querySelector(".ctrl");
+            if (ctrl && ctrl.firstElementChild) {
+                let setting = ctrl.firstElementChild;
+                if (setting.classList.contains("range-slider")) {
+                    if (setting.dataset.variable in global_range_slider_map) {
+                        if (action === "next") {
+                            global_range_slider_map[setting.dataset.variable].increase()
+                        } else if (action === "prev") {
+                            global_range_slider_map[setting.dataset.variable].decrease()
+                        } else if (action === "enter") {
+                            global_range_slider_map[setting.dataset.variable].show_input()
                         }
-                    }));
-                    genericModal(localize("custom_game_settings_password"), cont, localize("menu_button_cancel"), null, localize("menu_button_join"), (function() {
-                        join_custom_session(m.session_id, input.value)
-                    }))
-                } else {
-                    join_custom_session(m.session_id, null)
+                    }
+                } else if (setting.classList.contains("checkbox_component")) {
+                    toggle_checkbox(setting)
+                } else if (setting.classList.contains("setting_select")) {
+                    if (setting.firstElementChild && setting.firstElementChild.classList.contains("select-field")) {
+                        if (setting.firstElementChild.classList.contains("dropdown")) {
+                            setting.firstElementChild.dispatchEvent(new Event("click"))
+                        } else {
+                            select_change_value(setting.firstElementChild, action);
+                            updateSettingsExplanation(element, html.explanation)
+                        }
+                    }
+                } else if (setting.classList.contains("setting-btn")) {
+                    if (typeof setting.onclick === "function") {
+                        setting.onclick.apply(setting)
+                    } else if (typeof setting.callback === "function") {
+                        setting.callback()
+                    }
+                } else if (setting.classList.contains("color_list")) {
+                    let colors = setting.querySelectorAll(".color");
+                    let selected = null;
+                    for (let i = 0; i < colors.length; i++) {
+                        if (colors[i].classList.contains("selected")) {
+                            selected = i;
+                            break
+                        }
+                    }
+                    if (selected === null) {
+                        colors[0].dispatchEvent(new Event("click"));
+                        return
+                    }
+                    if (action === "next") {
+                        if (selected === colors.length - 1) return;
+                        colors[selected + 1].dispatchEvent(new Event("click"))
+                    } else if (action === "prev") {
+                        if (selected === 0) return;
+                        colors[selected - 1].dispatchEvent(new Event("click"))
+                    } else if (action === "enter") {
+                        if (selected === colors.length - 1) return;
+                        colors[selected + 1].dispatchEvent(new Event("click"))
+                    }
                 }
-            }))
-        }
-        _empty(html.custom_match);
-        html.custom_match.appendChild(fragment);
-        html.custom_match.classList.add("active")
-    }
-
-    function unselect_custom_match() {
-        if (custom.selected_el) {
-            custom.selected_el.classList.remove("selected")
-        }
-        custom.selected_el = null;
-        custom.selected = null;
-        _empty(html.custom_match);
-        html.custom_match.classList.remove("active")
-    }
-
-    function lock_custom_list() {
-        for (let match = html.custom_list.firstElementChild; match; match = match.nextElementSibling) {
-            match.classList.add("locked")
+            }
         }
     }
 
-    function join_custom_session(session_id, password) {
-        if (!bool_am_i_leader) return;
-        if (!session_id || session_id == -1) return;
-        send_string(CLIENT_COMMAND_PARTY_JOIN_SESSION, session_id + " " + password)
+    function set_team_colors(colors) {
+        if (!Array.isArray(colors)) return;
+        let color_lists = html.root.querySelectorAll(".color_list");
+        for (let list of color_lists) {
+            let variable = list.dataset.variable;
+            let selected = "";
+            if (variable in global_variable_value_store) selected = global_variable_value_store[variable];
+            _empty(list);
+            for (let c of colors) {
+                let color = _createElement("div", "color");
+                color.dataset.color = c;
+                color.style.backgroundColor = c;
+                if (c === selected) {
+                    color.classList.add("selected")
+                }
+                color.addEventListener("click", (() => {
+                    update_variable("string", variable, color.dataset.color)
+                }));
+                list.appendChild(color)
+            }
+        }
     }
 };

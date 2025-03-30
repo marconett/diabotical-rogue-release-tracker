@@ -1,0 +1,90 @@
+asset lamp_ceiling_wide_03a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name light_115
+        position 0.21559 21.50989 -0.70724
+        rotation 90.00000 0 -90.00001
+        scale 1.00000 1.00000 1.00000
+        param angle 150
+        param attenuation_exponent 1
+        param color s_light_main
+        param falloff .8
+        param gobo_texture gd_gobo_rectangle_lamp04.png
+        param intensity 7
+        param max_opacity 1
+        param position_x -0.511246
+        param position_y 21.815262
+        param position_z 1.424316
+        param radius 370
+        param softness .4
+        param type diffuse_spot
+    }
+    prefab_entity
+    {
+        name light_259
+        position -0.07187 -68.52965 2.33661
+        rotation 90.00000 0 0
+        scale 1.17358 1.00000 1.00000
+        param angle 180
+        param attenuation_exponent 1
+        param color s_light_main
+        param falloff .33
+        param gobo_texture gd_gobo_rectangle_lamp02.png
+        param intensity 6
+        param light_bake_only true
+        param max_opacity 1
+        param position_x -0.798706
+        param position_y -68.224274
+        param position_z 0.575623
+        param radius 250
+        param rotation_x 1.570796
+        param rotation_y 0.000000
+        param rotation_z 0.000000
+        param softness .4
+        param type point
+    }
+    prefab_entity
+    {
+        name prop_kb_fences_tech_lamp
+        position -96.07188 -5.29010 -0.81470
+        rotation 0 179.99999 89.99997
+        scale 0.75000 0.60000 0.75000
+        param _kitbash_connector -1
+        param _kitbash_parent prop_kb_fences_tech_lamp_1
+        param best_lod 1
+        param clip noclip
+        param color3 s_l_cool01
+        param color3_matlib_mat_lib_emissive s_emissive_main
+        param color3_matlib_mat_lib_metal_copper e2a820ff
+        param color3_matlib_mat_lib_metal_dark s_emissive_main
+        param force_shadows true
+        param model kb_fences_tech_lamp_01
+        param position_x -120.798706
+        param position_y -4.984726
+        param position_z -2.575684
+        param rotation_x -0.000000
+        param rotation_y -3.141593
+        param rotation_z 1.570796
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_kb_fences_tech_lamp_38
+        position 95.92814 -5.29012 -0.81470
+        rotation 0 0 89.99999
+        scale 0.75000 0.60000 0.75000
+        param _kitbash_connector -1
+        param _kitbash_parent prop_kb_fences_tech_lamp_38_1
+        param best_lod 1
+        param clip noclip
+        param color3_matlib_mat_lib_emissive s_emissive_main
+        param force_shadows true
+        param model kb_fences_tech_lamp_01
+        param skip_shadows true
+    }
+}
+
+

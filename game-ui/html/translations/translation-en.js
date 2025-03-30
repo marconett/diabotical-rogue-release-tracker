@@ -843,7 +843,15 @@ const TRANSLATION_en_source =
         "engine": true
     },
     "ingame_message_fight": {
-        "text": "Fight!",
+        "text": "Fight",
+        "engine": true
+    },
+    "ingame_message_match_start_soon": {
+        "text": "The match is about to start",
+        "engine": true
+    },
+    "ingame_message_round_start_soon": {
+        "text": "The round is about to start",
         "engine": true
     },
     "ingame_message_round": {
@@ -1394,6 +1402,12 @@ const TRANSLATION_en_source =
     "matchmaking": {
         "text": "Matchmaking"
     },
+    "matchmaking_add": {
+        "text": "Add"
+    },
+    "matchmaking_added": {
+        "text": "Added"
+    },
     "custom_matches": {
         "text": "Custom Matches"
     },
@@ -1558,6 +1572,12 @@ const TRANSLATION_en_source =
     },
     "settings_controls_move_right": {
         "text": "Move Right"
+    },
+    "settings_controls_move_up": {
+        "text": "Move Up"
+    },
+    "settings_controls_move_down": {
+        "text": "Move Down"
     },
     "settings_controls_drop": {
         "text": "Drop weapon"
@@ -2743,6 +2763,9 @@ const TRANSLATION_en_source =
     "settings_capture_windows_key": {
         "text": "Capture windows key"
     },
+    "setting_confine_cursor_during_gameplay": {
+        "text": "Confine cursor to window during gameplay"
+    },
     "settings_global_console_shortcut": {
         "text": "Global console shortcut"
     },
@@ -3418,6 +3441,9 @@ const TRANSLATION_en_source =
     "all_modes": {
         "text": "All Modes"
     },
+    "selected_mode": {
+        "text": "Selected Mode"
+    },
     "modes": {
         "text": "Modes"
     },
@@ -3557,6 +3583,9 @@ const TRANSLATION_en_source =
     },
     "menu_find_match": {
         "text": "Find Match"
+    },
+    "menu_find_match_x_modes": {
+        "text": "Find Match ({count} {count, plural, one {mode} other {modes}})"
     },
     "menu_cancel_search": {
         "text": "Cancel Search"
@@ -3885,6 +3914,9 @@ const TRANSLATION_en_source =
     "teamswitching_enabled": {
         "text": "Enabled"
     },
+    "custom_lobby": {
+        "text": "Custom Lobby"
+    },
     "custom_lobby_settings": {
         "text": "Custom Lobby Settings"
     },
@@ -3959,6 +3991,12 @@ const TRANSLATION_en_source =
     },
     "customlist_table_head_mode": {
         "text": "Mode"
+    },
+    "customlist_table_head_format": {
+        "text": "Format"
+    },
+    "customlist_table_head_status": {
+        "text": "Status"
     },
     "customlist_table_head_mods": {
         "text": "Mods"
@@ -4220,6 +4258,9 @@ const TRANSLATION_en_source =
     "invites": {
         "text": "Invites"
     },
+    "recent": {
+        "text": "Recent"
+    },
     "unavailable_while_offline": {
         "text": "Unavailable while offline."
     },
@@ -4290,25 +4331,35 @@ const TRANSLATION_en_source =
         "text": "Backspace"
     },
     "weapon": {
-        "text": "Weapon"
+        "text": "Weapon",
+        "engine": true
     },
     "passive": {
-        "text": "Passive"
+        "text": "Passive",
+        "engine": true
     },
     "ability": {
-        "text": "Ability"
+        "text": "Ability",
+        "engine": true
     },
     "gadget": {
         "text": "Gadget"
     },
+    "upgrade": {
+        "text": "Upgrade",
+        "engine": true
+    },
     "health": {
-        "text": "Health"
+        "text": "Health",
+        "engine": true
     },
     "armor": {
-        "text": "Armor"
+        "text": "Armor",
+        "engine": true
     },
     "speed": {
-        "text": "Speed"
+        "text": "Speed",
+        "engine": true
     },
     "quit_title": {
         "text": "Confirm Quit"
@@ -4502,6 +4553,36 @@ const TRANSLATION_en_source =
         "text": "Unable to join with the current party, not enough space.",
         "engine": true
     },
+    "pickup_error_party_size": {
+        "text": "The current party exceeds the pickup party size limit."
+    },
+    "pickup_join_error_not_exists": {
+        "text": "The selected pickup does not exist anymore."
+    },
+    "pickup_join_error_pickup_limit_reached": {
+        "text": "Simultaneous pickup limit reached, unable to join any more pickups."
+    },
+    "pickup_error_pickup_limit_reached": {
+        "text": "Simultaneous pickup join limit reached."
+    },
+    "pickup_create_error_party_in_match": {
+        "text": "Unable to create a pickup while party members are in a public match."
+    },
+    "pickup_join_error_party_in_match": {
+        "text": "Unable to join pickup while party members are in a public match."
+    },
+    "pickup_join_error": {
+        "text": "An error occurred while trying to join the pickup. Please try again or if it persists, restart the game."
+    },
+    "pickup_create_error": {
+        "text": "An error occurred while trying to create the pickup. Please try again or if it persists, restart the game."
+    },
+    "pickup_max_party_size": {
+        "text": "Max. Allowed Party Size"
+    },
+    "pickup_desc": {
+        "text": "{count} more {count, plural, one {player} other {players}} required for the pickup match to start."
+    },
     "lobby_permission_error_not_host": {
         "text": "Only the host has the permissions to do this",
         "engine": true
@@ -4642,11 +4723,15 @@ const TRANSLATION_en_source =
     "modal_leave_lobby_and_party_text": {
         "text": "Leaving the lobby will also make you leave the party"
     },
+    "menu_button_select": {
+        "text": "Select"
+    },
     "menu_button_open": {
         "text": "Open"
     },
     "menu_button_back": {
-        "text": "Back"
+        "text": "Back",
+        "engine": true
     },
     "menu_button_save": {
         "text": "Save"
@@ -5311,6 +5396,9 @@ const TRANSLATION_en_source =
     "map_under_review": {
         "text": "Name pending moderation. Temporary name shown."
     },
+    "pending_review": {
+        "text": "Pending moderation."
+    },
     "map_never_edited": {
         "text": "Never edited"
     },
@@ -5343,6 +5431,12 @@ const TRANSLATION_en_source =
     },
     "map_filter_mode_author": {
         "text": "Author"
+    },
+    "author": {
+        "text": "Author"
+    },
+    "your_list": {
+        "text": "Your List"
     },
     "map_users_title": {
         "text": "Update users"
@@ -6148,7 +6242,7 @@ const TRANSLATION_en_source =
         "engine": true
     },
     "skill_mini_rocket_desc": {
-        "text": "Sends out a swam of rockets at your target location.",
+        "text": "Sends out a swarm of rockets at your target location.",
         "engine": true
     },
     "skill_mini_rocket_a9": {
@@ -6652,7 +6746,7 @@ const TRANSLATION_en_source =
         "engine": true
     },
     "passive_movement_speed_when_not_hit_desc": {
-        "text": "Gain a movement speed boost after 3 seconds of not taking damage. Otherwise, you move slightly slower.",
+        "text": "Gain a movement speed boost after 1 second of not taking damage. Otherwise, you move slightly slower.",
         "engine": true
     },
     "passive_mark_for_deletion": {
@@ -6799,6 +6893,12 @@ const TRANSLATION_en_source =
     },
     "early_access_msg": {
         "text": "Welcome to Diabotical Rogue Early Access. Hopefully it doesn't break! We'd super appreciate bug reports & feedback. Hopefully you enjoy the game and we look forward to updating the game based off your feedback. :)"
+    },
+    "demo": {
+        "text": "Demo"
+    },
+    "demo_msg": {
+        "text": "This is an early demo build, playable alone or in 2 player online co-op (recommended). Have fun!"
     },
     "legendary_reward_claimed": {
         "text": "The Legendary reward was claimed!",
@@ -7512,6 +7612,32 @@ const TRANSLATION_en_source =
     },
     "announcement_begins_in_seconds": {
         "text": "Begins in {seconds} {seconds, plural, one {second} other {seconds}}!",
+        "engine": true
+    },
+    "unnamed_mode": {
+        "text": "Unnamed Mode"
+    },
+    "filter_own": {
+        "text": "Filter own"
+    },
+    "public": {
+        "text": "Public"
+    },
+    "developer_only": {
+        "text": "Developer only"
+    },
+    "hidden_blocked": {
+        "text": "Hidden/Blocked"
+    },
+    "mod_weapon_bindings": {
+        "text": "Mod Weapon Bindings"
+    },
+    "mod_weapon_machinegun": {
+        "text": "Machine Gun",
+        "engine": true
+    },
+    "mod_weapon_supershotgun": {
+        "text": "Super Shotgun",
         "engine": true
     }
 };

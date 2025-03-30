@@ -1,166 +1,161 @@
-{
-    const button_timeouts = [];
-    new MenuScreen({
-        game_id: GAME.ids.INVASION,
-        name: "main_panel",
-        screen_element: _id("main_panel"),
-        sound_open: "ui_panel_right_in",
-        init: () => {
-            main_panel.init()
-        },
-        open_handler: () => {
-            set_blur(false);
-            Navigation.set_active({
-                lb_rb: null,
-                up_down: "main_panel",
-                left_right: null
-            });
-            main_panel.set_fully_open(false);
-            main_panel.on_open();
-            if (!historyFirstEntry("main_panel")) {
-                historyPushState({
-                    page: "main_panel"
-                })
-            }
-        },
-        post_open_handler: () => {
-            let delay = 0;
-            let elements = _id("main_panel").querySelectorAll(".main_button");
-            for (let i = 0; i < elements.length; i++) {
-                button_timeouts.push(setTimeout((() => {
-                    elements[i].classList.remove("hidden");
-                    engine.call("ui_sound", "ui_locker_item_counter")
-                }), delay));
-                delay += 40
-            }
-            main_panel.set_fully_open(true)
-        },
-        close_handler: () => {
-            for (let timeout of button_timeouts) {
-                clearTimeout(timeout)
-            }
-            button_timeouts.length = 0;
-            let elements = _id("main_panel").querySelectorAll(".main_button");
-            for (let i = 0; i < elements.length; i++) {
-                elements[i].classList.add("hidden")
-            }
-            main_panel.set_fully_open(false);
-            Navigation.reset_active()
-        },
-        post_close_handler: () => {
-            main_panel.set_fully_open(false)
-        }
-    })
-}
-const main_panel = new function() {
-    let is_fully_open = false;
-    this.set_fully_open = bool => {
-        is_fully_open = bool
+const page_session_select = new function() {
+    let online_sessions_enabled = true;
+    let online_connection_state = 0;
+    let online_connection_failed = false;
+    let online_sessions = [];
+    let offline_sessions = [];
+    let offline_session_available = false;
+    let html = {
+        main: null,
+        offline_list: null,
+        online_list: null,
+        connection_state: null
     };
-    let root = null;
-    let friends_new_count = null;
-    let screen_actions = null;
-    let social_button = null;
     this.init = () => {
-        root = _id("main_panel");
-        friends_new_count = root.querySelector(".new_c.friends");
-        screen_actions = root.querySelector(".screen_actions");
-        social_button = root.querySelector(".main_button.social");
-        Navigation.generate_nav({
-            name: "main_panel",
-            nav_root: root,
-            nav_class: "main_button",
-            mouse_click: "action",
-            hover_sound: "ui_hover1",
-            action_sound: "ui_click1",
-            action_cb_type: "input",
-            action_cb: (element, action) => {
-                if (element.dataset.button) {
-                    button_pressed(element.dataset.button)
+        html.main = _id("session_select");
+        html.offline_list = html.main.querySelector(".offline_sessions .list");
+        html.online_list = html.main.querySelector(".online_sessions .list");
+        html.connection_state = html.main.querySelector(".online_sessions .connection_state");
+        html.online_list.classList.remove("visible");
+        html.connection_state.classList.add("visible");
+        bind_event("set_masterserver_connection_state", ((connected, game_id) => {
+            ms_connection_state(connected, game_id)
+        }));
+        bind_event("masterserver_connection_initiated", (() => {
+            online_connection_state = 0;
+            online_connection_failed = false;
+            html.connection_state.textContent = "Connecting...";
+            html.online_list.classList.remove("visible");
+            html.connection_state.classList.add("visible")
+        }));
+        bind_event("masterserver_connection_failed", (() => {
+            console.log("masterserver_connection_failed");
+            html.connection_state.textContent = "Connection failed.";
+            online_connection_failed = true
+        }));
+        bind_event("set_queue_position", (position => {
+            set_queue_position(position)
+        }));
+        bind_event("set_offline_party_session", (available => {
+            offline_session_available = available ? true : false;
+            render_sessions(PartySession.SESSION_TYPE.offline)
+        }));
+        global_ms.addPermanentResponseHandler("party-session-gone", (data => {
+            for (let i = online_sessions.length - 1; i >= 0; i--) {
+                if (online_sessions[i].party_session_id === data.party_session_id) {
+                    online_sessions.splice(i, 1)
                 }
             }
-        });
-        Friends.add_update_friend_requests_listener((function(list) {
-            update_friends_invite_count()
-        }));
-        Friends.add_friend_request_listener((function(friend_update) {
-            update_friends_invite_count()
-        }));
-        Friends.add_remove_friend_request_listener((function(user_id) {
-            update_friends_invite_count()
-        }));
-        Friends.add_update_invites_listener((function(list) {
-            update_friends_invite_count()
-        }));
-        Friends.add_remove_invite_listener((function(invite) {
-            update_friends_invite_count()
-        }));
-        Friends.add_invite_listener((function(invite) {
-            update_friends_invite_count()
-        }));
-
-        function update_friends_invite_count() {
-            let count = Friends.state.invites.length + Friends.state.requests.length;
-            friends_new_count.textContent = count;
-            if (count) {
-                friends_new_count.classList.add("visible")
-            } else {
-                friends_new_count.classList.remove("visible")
-            }
-        }
-        root.addEventListener("click", (e => {
-            e.stopPropagation()
-        }));
-        _id("main_menu").addEventListener("click", (e => {
-            if (global_menu_page === "main_panel" && is_fully_open) {
-                let root_rect = root.getBoundingClientRect();
-                if (e.clientX < root_rect.x) {
-                    historyBack()
-                }
-            }
-        }));
-        bind_event("set_connection_status", ((position, status, offline_reason) => {
-            if (update_connection_status_indicator(root, position, status, offline_reason)) {
-                social_button.classList.remove("disabled")
-            } else {
-                social_button.classList.add("disabled")
-            }
+            render_sessions(PartySession.SESSION_TYPE.online, online_sessions)
         }))
     };
-    this.on_open = () => {
-        Navigation.render_actions([global_action_buttons.back], screen_actions)
+
+    function close_session_select() {
+        close_menu()
+    }
+    this.close = () => {
+        close_session_select()
     };
 
-    function button_pressed(button) {
-        if (button === "settings") {
-            open_screen("settings_panel")
-        } else if (button === "social") {
-            open_screen("friends_panel")
-        } else if (button === "quit") {
-            let text = "";
-            modal_panel.open("Leave Game", text, [{
-                title: "Game Launcher",
-                callback: () => {
-                    GAME.set_inactive()
-                }
-            }, {
-                title: "Quit to Desktop",
-                callback: () => {
-                    engine.call("quit")
-                }
-            }])
-        } else if (button === "locker") {
-            open_screen("locker")
-        } else if (button === "lobby") {
-            if (!Lobby.in_lobby()) {
-                Lobby.create()
-            } else {
-                open_screen("custom")
-            }
-        } else if (button === "ingame") {
-            open_screen("ingame")
-        } else if (button === "resume") {
-            close_menu()
+    function render_sessions(type, sessions) {
+        let container = null;
+        let new_btn_text = "";
+        if (type === PartySession.SESSION_TYPE.online) {
+            container = html.online_list;
+            new_btn_text = "Start new online run"
+        } else if (type === PartySession.SESSION_TYPE.offline) {
+            container = html.offline_list;
+            new_btn_text = "Start new offline run"
         }
+        if (!sessions) sessions = [];
+        _empty(container);
+        let new_session_el = _createElement("div", "new_session");
+        let new_session_btn = _createElement("div", ["db-btn", "startnew"], new_btn_text);
+        new_session_el.appendChild(new_session_btn);
+        container.appendChild(new_session_el);
+        if (!online_sessions_enabled && type === PartySession.SESSION_TYPE.online) {
+            new_session_btn.classList.add("disabled")
+        } else {
+            new_session_btn.addEventListener("click", (() => {
+                PartySession.new_session(type);
+                close_session_select()
+            }))
+        }
+        if (type === PartySession.SESSION_TYPE.offline && offline_session_available) {
+            let load_session_el = _createElement("div", "load_session");
+            let load_session_btn = _createElement("div", ["db-btn", "loadoffline"], "Continue offline run");
+            load_session_el.appendChild(load_session_btn);
+            container.appendChild(load_session_el);
+            load_session_btn.addEventListener("click", (() => {
+                PartySession.load_session(type, "offline", {});
+                close_session_select()
+            }))
+        }
+        for (let s of sessions) {
+            let session_el = _createElement("div", "session");
+            let title = _createElement("div", "title", "Session: " + s.party_session_id);
+            session_el.appendChild(title);
+            let abandon_button = _createElement("div", "db-btn", "Abandon");
+            session_el.appendChild(abandon_button);
+            abandon_button.addEventListener("click", (e => {
+                e.stopPropagation();
+                genericModal(localize("abandon_run"), localize("abandon_run_text"), localize("cancel"), null, localize("menu_button_confirm"), (() => {
+                    send_json_data({
+                        action: "party-abandon-session",
+                        party_session_id: s.party_session_id
+                    })
+                }))
+            }));
+            let load_button = _createElement("div", "db-btn", "Load");
+            session_el.appendChild(load_button);
+            load_button.addEventListener("click", (e => {
+                e.stopPropagation();
+                console.log("session data click", _dump(s));
+                PartySession.load_session(type, s.party_session_id, s);
+                close_session_select()
+            }));
+            container.appendChild(session_el)
+        }
+        if (type === PartySession.SESSION_TYPE.online) {
+            html.online_list.classList.add("visible");
+            html.connection_state.classList.remove("visible")
+        }
+    }
+
+    function load_online_sessions() {
+        api_request("GET", "/party_sessions", {
+            active: true
+        }, (data => {
+            console.log("=== load sessions data:", _dump(data));
+            if (data && data.party_sessions) {
+                online_sessions = data.party_sessions
+            } else {
+                online_sessions = [];
+                console.log("ERROR loading party sessions", _dump(data))
+            }
+            render_sessions(PartySession.SESSION_TYPE.online, online_sessions)
+        }))
+    }
+    this.load_offline_sessions = () => {
+        render_sessions(PartySession.SESSION_TYPE.offline, offline_sessions)
+    };
+
+    function ms_connection_state(connected, game_id) {
+        if (connected && game_id === GAME.active) {
+            if (online_connection_state === 0) {
+                html.connection_state.textContent = "Retrieving list of runs...";
+                online_connection_state = 1;
+                add_on_get_api_token_handler(false, (() => {
+                    load_online_sessions()
+                }))
+            }
+        } else {
+            online_connection_state = 0
+        }
+    }
+
+    function set_queue_position(position) {
+        if (online_connection_state !== 0) return;
+        html.connection_state.textContent = "Connecting... position in queue: " + position
     }
 };

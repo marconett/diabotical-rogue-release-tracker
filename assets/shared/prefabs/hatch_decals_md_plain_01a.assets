@@ -1,0 +1,216 @@
+asset hatch_decals_md_plain_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name decal_decal_environment_dir_1
+        position 62.12622 2.34523 -51.74561
+        rotation 90.00000 0 -84.59966
+        scale 191.07994 191.08005 191.07999
+        param albedo_map_enable true
+        param color 19131326
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_environment_dirt_splat_07
+        param metal_map_enable false
+        param normal_map_enable true
+        param position_x 62.126221
+        param position_y 2.345230
+        param position_z -51.745605
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_generic_splatte_1
+        position -45.99719 2.38696 36.66516
+        rotation 90.00000 0 -91.79978
+        scale 223.99991 236.17999 182.52991
+        param albedo_map_enable true
+        param color 57323521
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_environment_grass_splat_01
+        param metal_map_enable false
+        param normal_map_enable false
+        param position_x -45.997192
+        param position_y 2.386960
+        param position_z 36.665161
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_graphical_graph_7_1
+        position 90.04346 -2.52398 -1.79004
+        rotation 90.00000 0 90.00001
+        scale 232.74976 121.79996 10.00000
+        param albedo_map_enable true
+        param clip fullclip
+        param color 5b2f143a
+        param emissive_map_enable false
+        param gloss_map_enable false
+        param material decal_mat_paint_top_02
+        param metal_map_enable false
+        param normal_map_enable false
+        param position_x 90.043457
+        param position_y -2.523980
+        param position_z -1.790039
+        param scale 1.0
+    }
+    prefab_entity
+    {
+        name decal_decal_graphical_graph_8_1
+        position -91.95654 -2.52398 -1.79028
+        rotation 90.00000 0 -89.99994
+        scale 232.74979 121.79997 10.00000
+        param albedo_map_enable true
+        param clip fullclip
+        param color 5b2f143a
+        param emissive_map_enable false
+        param gloss_map_enable false
+        param material decal_mat_paint_top_02
+        param metal_map_enable false
+        param normal_map_enable false
+        param position_x -91.956543
+        param position_y -2.523980
+        param position_z -1.790283
+        param scale 1.0
+    }
+    prefab_entity
+    {
+        name prop_building_blocks_trim_2
+        position -0.65002 -1.22322 279.66028
+        rotation -0.00001 -89.99998 -0.00000
+        scale 1.00000 1.00000 0.97000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_building_blocks_trim_94
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model building_blocks_trim_x8
+        param position_x -0.650024
+        param position_y -1.223220
+        param position_z 279.660278
+        param uv_scale_x_matlib_mat_lib_metal_dark 2
+        param uv_scale_y_matlib_mat_lib_metal_dark 2
+    }
+    prefab_entity
+    {
+        name prop_building_blocks_trim_94_2
+        position -0.65002 -1.22322 37.13318
+        rotation -0.00001 -89.99998 -0.00000
+        scale 1.00000 1.00000 0.97000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_building_blocks_trim_94
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model building_blocks_trim_x8
+        param position_x -0.650024
+        param position_y -1.223220
+        param position_z 37.133179
+        param uv_scale_x_matlib_mat_lib_metal_dark 2
+        param uv_scale_y_matlib_mat_lib_metal_dark 2
+    }
+    prefab_entity
+    {
+        name prop_building_blocks_trim_95_2
+        position 3.74304 -1.22377 -1.53967
+        rotation 0 0.00002 -0.00001
+        scale 1.00000 1.00000 0.78500
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_building_blocks_trim_95
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model building_blocks_trim_x8
+        param position_x 3.743042
+        param position_y -1.223770
+        param position_z -1.539673
+        param uv_scale_x_matlib_mat_lib_metal_dark 2
+    }
+    prefab_entity
+    {
+        name prop_building_blocks_trim_96_2
+        position 314.94043 -1.22380 -1.53967
+        rotation 0 0.00002 -0.00001
+        scale 1.00000 1.00000 0.78500
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_building_blocks_trim_96
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model building_blocks_trim_x8
+        param position_x 314.940430
+        param position_y -1.223800
+        param position_z -1.539673
+        param uv_scale_x_matlib_mat_lib_metal_dark 2
+    }
+    prefab_entity
+    {
+        name prop_floorhatch_16_2
+        position 176.53369 1.77406 -141.69580
+        rotation -0.00001 -90.00003 0
+        scale 7.25000 1.00000 2.60000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param color 9a8a83ff
+        param color2_rogueenvironmentindustrialpropsfloorhatchesind_floorhatch_05_center a0a0a0ff
+        param color_rogueenvironmentindustrialpropsfloorhatchesind_floorhatch_05_center 919191ff
+        param model floorhatch_02
+        param position_x 176.533691
+        param position_y 1.774060
+        param position_z -141.695801
+        param size_x 6.279999
+        param size_y 1.000000
+        param size_z 8.999998
+    }
+    prefab_entity
+    {
+        name prop_floorhatch_1_1
+        position 99.33374 1.66162 -121.66150
+        rotation -0.00001 -90.00003 0
+        scale 5.92000 1.00000 5.16000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param color 9a8a83ff
+        param color2_rogueenvironmentindustrialpropsfloorhatchesind_floorhatch_05_center a0a0a0ff
+        param color_rogueenvironmentindustrialpropsfloorhatchesind_floorhatch_05_center 919191ff
+        param model floorhatch_08
+        param position_x 99.333740
+        param position_y 1.661620
+        param position_z -121.661499
+        param size_x 6.279999
+        param size_y 1.000000
+        param size_z 8.999998
+    }
+    prefab_entity
+    {
+        name prop_floorhatch_2
+        position -57.46619 1.77407 -141.69580
+        rotation -0.00001 -90.00003 0
+        scale 7.25000 1.00000 2.70000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param color 9a8a83ff
+        param color2_rogueenvironmentindustrialpropsfloorhatchesind_floorhatch_05_center a0a0a0ff
+        param color_rogueenvironmentindustrialpropsfloorhatchesind_floorhatch_05_center 919191ff
+        param model floorhatch_02
+        param position_x -57.466187
+        param position_y 1.774070
+        param position_z -141.695801
+        param size_x 6.279999
+        param size_y 1.000000
+        param size_z 8.999998
+    }
+}
+

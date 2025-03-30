@@ -1,0 +1,367 @@
+asset overgrown_cliff_02a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name col_col_box_corner_16_1
+        position -33.99707 324.50452 77.31561
+        rotation -90.00000 0 -90.00002
+        scale 0.50000 0.82223 5.86665
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_17_1
+        position -89.99707 324.50452 -86.23950
+        rotation 0.00001 90.00001 -90.00002
+        scale 5.86665 0.60000 0.27777
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_45
+        param no_show true
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_18_1
+        position 9.55859 324.50452 -86.23950
+        rotation -90.00000 0 89.99999
+        scale 0.60000 1.24443 5.86665
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_412_1
+        position 9.55859 324.50452 -4.46198
+        rotation -0.00001 -0.00002 -89.99999
+        scale 5.86665 1.61110 1.62222
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_45
+        param no_show true
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_414_1
+        position 11.33545 324.50452 77.31561
+        rotation -90.00000 0 89.99999
+        scale 2.04444 1.54444 5.86665
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_738_1
+        position 9.55859 324.50452 -4.46198
+        rotation -90.00000 0 -90.00001
+        scale 1.19999 1.61110 5.86665
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_739_1
+        position 31.78027 324.50452 91.53778
+        rotation 0.00001 -90.00003 -90.00003
+        scale 5.86665 0.32223 1.33333
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_45
+        param no_show true
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_740_1
+        position -33.99707 324.50452 77.31561
+        rotation -0.00001 179.99993 -89.99999
+        scale 5.86665 0.97778 0.50000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_45
+        param no_show true
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_bushling_02_3
+        position 35.20996 -15.40909 -99.47040
+        rotation -9.90000 -1.80009 -0.00000
+        scale 1.05600 1.01138 1.05600
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model bushling_02
+    }
+    prefab_entity
+    {
+        name prop_generic_fern_flat_01_3
+        position 111.81543 -1.42674 74.32013
+        rotation 0 -144.89997 0
+        scale 1.08533 1.08533 1.08533
+        param best_lod 2
+        param clip noclip
+        param force_shadows true
+        param model generic_fern_flat_01
+    }
+    prefab_entity
+    {
+        name prop_generic_fern_flat_02_1_3
+        position 27.80273 5.26378 104.29974
+        rotation 1.79977 -170.99808 0.05661
+        scale 1.10000 1.08533 0.99268
+        param best_lod 2
+        param clip noclip
+        param force_shadows true
+        param model generic_fern_flat_02
+    }
+    prefab_entity
+    {
+        name prop_rogue_jungle_rock_cur_199_3
+        position 3.53076 -165.30206 -6.77747
+        rotation -0.01414 3.60000 -0.89989
+        scale 0.58667 0.73333 0.73333
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param color2_atlas_rocks_combined_mat_atlas_atlas_rocks_combined s_cliff_edge
+        param color3_atlas_rocks_combined_mat_atlas_atlas_rocks_combined s_cliff_base
+        param color_atlas_rocks_combined_mat_atlas_atlas_rocks_combined s_cliff_bottom
+        param detail_texture_normal_fallof 0
+        param detail_texture_normal_scale_x 0
+        param detail_texture_normal_scale_y 0
+        param force_shadows true
+        param model rogue_jungle_rock_massive_03
+        param uv_detail_scale 5
+        param vertex_coloring_function per_pixel_slope
+        param vertex_coloring_param1 0.1
+        param vertex_coloring_param2 3
+    }
+    prefab_entity
+    {
+        name prop_rogue_vine_transition_1_3
+        position 117.17285 323.02676 7.41638
+        rotation -0.67509 -90.89632 -0.59521
+        scale 0.95333 0.84870 0.95333
+        param best_lod 1
+        param clip noclip
+        param color2_leafyvines_mat_leafyvines 02ed0aff
+        param color3_leafyvines_mat_leafyvines 2da814ff
+        param color_leafyvines_mat_leafyvines d7fa28ff
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_transition_s
+        param no_decals true
+        param rotation_w 0
+        param size_w 1
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_rogue_vine_transition_2_3
+        position -95.80078 324.82840 10.41833
+        rotation 0.61608 94.50329 -1.14390
+        scale 0.83600 0.74800 0.89466
+        param best_lod 1
+        param clip noclip
+        param color2_leafyvines_mat_leafyvines 02ed0aff
+        param color3_leafyvines_mat_leafyvines 2da814ff
+        param color_leafyvines_mat_leafyvines d7fa28ff
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_transition_m
+        param no_decals true
+        param rotation_w 0
+        param size_w 1
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_rogue_vine_transition_312_3
+        position -5.85693 326.03003 -3.84406
+        rotation 0 166.49986 0
+        scale 1.21733 0.96496 1.21733
+        param best_lod 1
+        param clip noclip
+        param color2_leafyvines_mat_leafyvines 02ed0aff
+        param color3_leafyvines_mat_leafyvines 2da814ff
+        param color_leafyvines_mat_leafyvines d7fa28ff
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_10
+        param no_decals true
+        param rotation_w 0
+        param size_w 1
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_rogue_vine_transition_3_3
+        position -17.00293 322.51004 -96.53705
+        rotation 5.11824 4.57015 0.84804
+        scale 0.83600 0.74424 0.83600
+        param best_lod 1
+        param clip noclip
+        param color2_leafyvines_mat_leafyvines 02ed0aff
+        param color3_leafyvines_mat_leafyvines 2da814ff
+        param color_leafyvines_mat_leafyvines d7fa28ff
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_transition_s
+        param no_decals true
+        param rotation_w 0
+        param size_w 1
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_rogue_vine_transition_4_3
+        position 11.15674 324.27005 89.31555
+        rotation -0.55792 178.17810 4.56201
+        scale 0.92222 0.82223 0.92222
+        param best_lod 1
+        param clip noclip
+        param color2_leafyvines_mat_leafyvines 02ed0aff
+        param color3_leafyvines_mat_leafyvines 2da814ff
+        param color_leafyvines_mat_leafyvines d7fa28ff
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_transition_m
+        param no_decals true
+        param rotation_w 0
+        param size_w 1
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_rogue_vine_transition_7
+        position 65.02246 324.29745 -55.46295
+        rotation 0.04239 -39.60037 -0.89900
+        scale 0.95333 0.84870 0.95333
+        param best_lod 1
+        param clip noclip
+        param color2_leafyvines_mat_leafyvines 02ed0aff
+        param color3_leafyvines_mat_leafyvines 2da814ff
+        param color_leafyvines_mat_leafyvines d7fa28ff
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_transition_m
+        param no_decals true
+        param rotation_w 0
+        param size_w 1
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_rogue_vines_11_11_3
+        position 86.83691 1.01755 24.31592
+        rotation 0 -53.99973 0
+        scale 1.46666 1.23200 1.46666
+        param best_lod 1
+        param clip noclip
+        param color2_leafyvines_mat_vineleafy 3fbfbfff
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_10
+        param rotation_w 0
+        param size_w 1
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_rogue_vines_11_3
+        position -31.08301 5.12419 60.68915
+        rotation 2.69989 0.01415 0.90056
+        scale 1.46666 1.24666 1.46666
+        param best_lod 1
+        param clip noclip
+        param color2_leafyvines_mat_vineleafy 3fbfbfff
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_10
+        param rotation_w 0
+        param size_w 1
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_sharp_rock_01_14_3
+        position -18.17627 -10.12914 -111.79047
+        rotation -0.28177 -68.56348 -23.21784
+        scale 0.88000 1.35746 0.93866
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param color s_cliff_bottom
+        param color2 s_cliff_edge
+        param color2_sharp_rocks_mat_rocks a75833ff
+        param color3 s_cliff_base
+        param color3_sharp_rocks_mat_rocks 7f5642ff
+        param color_sharp_rocks_mat_rocks 7c5745ff
+        param detail_texture_normal_fallof 0
+        param detail_texture_normal_scale_x 0
+        param detail_texture_normal_scale_y 0
+        param force_shadows true
+        param model sharp_rock_01
+        param uv_detail_scale 0
+        param vertex_coloring_function off
+        param vertex_coloring_param1 0
+        param vertex_coloring_param2 0
+    }
+    prefab_entity
+    {
+        name prop_small_rock_debris_s_26_3
+        position -78.60205 -4.26247 -114.13702
+        rotation -5.40000 -57.59995 -0.00000
+        scale 2.12666 2.12666 2.12666
+        param best_lod 2
+        param clip noclip
+        param color1 1F2931
+        param color2_smallrock_debris_mat_smallrockdebris s_cliff_edge
+        param color3_smallrock_debris_mat_smallrockdebris s_cliff_base
+        param color_smallrock_debris_mat_smallrockdebris s_cliff_bottom
+        param force_shadows true
+        param model small_rock_debris_s
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_small_rock_debris_s_3_3
+        position -124.94922 -3.67581 -24.37732
+        rotation -3.34475 -2.56638 -1.75613
+        scale 1.74533 2.59599 1.90666
+        param best_lod 2
+        param clip noclip
+        param color1 1F2931
+        param color2_smallrock_debris_mat_smallrockdebris s_cliff_edge
+        param color3_smallrock_debris_mat_smallrockdebris s_cliff_base
+        param color_smallrock_debris_mat_smallrockdebris s_cliff_bottom
+        param force_shadows true
+        param model small_rock_debris_s
+        param skip_shadows true
+    }
+}

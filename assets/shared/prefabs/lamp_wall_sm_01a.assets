@@ -1,0 +1,36 @@
+asset lamp_wall_sm_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name light_276
+        position -0.17822 0.09933 9.01843
+        rotation 13.50000 180.00000 -179.99989
+        scale 1.00000 1.00000 1.00000
+        param angle 110
+        param attenuation_exponent 1.20
+        param color s_light_neutral
+        param falloff 0.66
+        param gobo_texture gd_gobo_square_soft.png
+        param intensity 8
+        param radius 120
+        param softness .4
+        param type spot
+    }
+    prefab_entity
+    {
+        name prop_rogue_light_fixture_74
+        position 0.17822 -0.09934 0.58154
+        rotation 0 0 89.99999
+        scale 0.75000 0.75000 0.40000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_rogue_light_fixture_37
+        param best_lod 0
+        param clip noclip
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param force_shadows true
+        param model light_fixture_03
+    }
+}

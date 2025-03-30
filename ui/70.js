@@ -27,6 +27,7 @@ const Lobby = {
         id: null
     },
     settings: {},
+    settings_options: [],
     client_var_map: {},
     client_var_reverse_map: {},
     add_host_change_listener: function(listener) {
@@ -112,11 +113,22 @@ const Lobby = {
             const default_settings = GAME.get_data("LOBBY_SETTINGS_LIST");
             if (default_settings) {
                 Lobby.settings = default_settings
+            } else {
+                Lobby.settings = {}
             }
             const client_var_map = GAME.get_data("LOBBY_CLIENT_VAR_MAP");
             if (client_var_map) {
                 Lobby.client_var_map = client_var_map
+            } else {
+                Lobby.client_var_map = {}
             }
+            const settings_options = GAME.get_data("LOBBY_SETTINGS_OPTION_LIST");
+            if (settings_options) {
+                Lobby.settings_options = settings_options
+            } else {
+                Lobby.settings_options = []
+            }
+            Lobby.client_var_reverse_map = {};
             for (let variable in client_var_map) {
                 Lobby.client_var_reverse_map[client_var_map[variable].name] = variable
             }
@@ -343,15 +355,29 @@ const Lobby = {
             if (changed) {
                 this.settings[setting][1] = data.data.settings[setting];
                 if (setting === "team_count") changed_team_count = true;
-                if (setting === "mode") changed_mode = true;
-                this._exec_on_setting_updated(setting, data.data.settings[setting]);
-                if (this.state.host) {
-                    if (setting in this.client_var_reverse_map) {
-                        if (setting === "mode") {
-                            this.store_setting(this.client_var_reverse_map[setting], [this.settings["mode"][1], this.settings["mode_name"][1]], "json", true)
-                        } else {
-                            this.store_setting(this.client_var_reverse_map[setting], this.settings[setting][1], this.client_var_map[this.client_var_reverse_map[setting]].type, true)
+                if (setting === "mode") {
+                    changed_mode = true
+                } else {
+                    this._exec_on_setting_updated(setting, data.data.settings[setting]);
+                    if (this.state.host) {
+                        if (setting in this.client_var_reverse_map) {
+                            if (setting === "mode") {
+                                this.store_setting(this.client_var_reverse_map[setting], [this.settings["mode"][1], this.settings["mode_name"][1]], "json", true)
+                            } else {
+                                this.store_setting(this.client_var_reverse_map[setting], this.settings[setting][1], this.client_var_map[this.client_var_reverse_map[setting]].type, true)
+                            }
                         }
+                    }
+                }
+            }
+        }
+        if (changed_mode) {
+            let setting = "mode";
+            this._exec_on_setting_updated(setting, data.data.settings[setting]);
+            if (this.state.host) {
+                if (setting in this.client_var_reverse_map) {
+                    if (setting === "mode") {
+                        this.store_setting(this.client_var_reverse_map[setting], [this.settings["mode"][1], this.settings["mode_name"][1]], "json", true)
                     }
                 }
             }
@@ -361,7 +387,15 @@ const Lobby = {
                 if (!(setting in this.settings)) continue;
                 if (this.settings[setting][1] != data.data.settings.options[setting] || init || lobby_changed) {
                     this.settings[setting][1] = data.data.settings.options[setting];
-                    this._exec_on_setting_updated(setting, data.data.settings.options[setting])
+                    this._exec_on_setting_updated(setting, this.settings[setting][1])
+                }
+            }
+            for (let setting of this.settings_options) {
+                if (!(setting in data.data.settings.options)) {
+                    if (setting in this.settings) {
+                        this.settings[setting][1] = this.settings[setting][2];
+                        this._exec_on_setting_updated(setting, this.settings[setting][1])
+                    }
                 }
             }
         }
@@ -526,14 +560,14 @@ const Lobby = {
             let new_map = null;
             if (!this.settings.map_list[1].length) {
                 if (global_game_mode_map_lists[this.settings.mode[1]].length) {
-                    new_map = [global_game_mode_map_lists[this.settings.mode[1]][0].map, global_game_mode_map_lists[this.settings.mode[1]][0].name, global_game_mode_map_lists[this.settings.mode[1]][0].official];
+                    new_map = [global_game_mode_map_lists[this.settings.mode[1]][0].map, global_game_mode_map_lists[this.settings.mode[1]][0].name, global_game_mode_map_lists[this.settings.mode[1]][0].community_map];
                     map_changed = true
                 }
             } else {
                 let found = false;
                 for (let map of global_game_mode_map_lists[this.settings.mode[1]]) {
                     if (!new_map) {
-                        new_map = [map.map, map.name, map.official]
+                        new_map = [map.map, map.name, map.community_map]
                     }
                     if (map.map === this.settings.map_list[1][0][0]) {
                         found = true;
@@ -549,9 +583,9 @@ const Lobby = {
                 }
             }
         } else if (this.settings.mode[1]) {
-            api_request("GET", `/mode?mode_name=${this.settings.mode[1]}`, {}, (mode => {
-                if (this.settings.mode[1] !== mode.mode_name) return;
-                set_global_map_list_from_api(mode.mode_name, mode.maps);
+            api_request("GET", `/mode?mode_id=${this.settings.mode[1]}`, {}, (mode => {
+                if (this.settings.mode[1] !== mode.mode_id) return;
+                set_global_map_list_from_api(mode.mode_id, mode.maps);
                 this.set_map_to_mode_default()
             }))
         }
@@ -597,7 +631,7 @@ const Lobby = {
     },
     reset_settings_default: function() {
         if (!this.am_host()) return;
-        const reset_settings = ["instagib", "hook", "instaswitch", "lifesteal", "allow_queue", "allow_map_voting", "record_replay", "continuous", "auto_balance", "team_switching", "physics", "warmup_time", "min_players", "max_clients", "netcode", "max_ping", "ready_percentage", "commands", "mode_editing"];
+        const reset_settings = ["instagib", "hook", "instaswitch", "lifesteal", "allow_queue", "allow_map_voting", "record_replay", "continuous", "auto_balance", "team_switching", "physics", "warmup_time", "min_players", "max_clients", "netcode", "max_ping", "ready_percentage", "commands", "mode_editing", "ai_mode_prompt"];
         for (let setting of reset_settings) {
             if (!(setting in this.settings)) continue;
             this.settings[setting][1] = this.settings[setting][2];
@@ -810,6 +844,13 @@ const Lobby = {
     },
     am_host: function() {
         return this.state.host
+    },
+    set_ai_mode: function(mode, settings) {
+        send_json_data({
+            action: "lobby-set-ai-mode",
+            ai_mode_prompt: mode,
+            ai_mode_settings: settings
+        })
     }
 };
 

@@ -1,0 +1,207 @@
+asset teleport_base_round_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name decal_decal_icons_symbols_g_9_1
+        position 0.81030 66.67377 -6.30505
+        rotation 90.00000 0 0
+        scale 128.00000 127.99992 79.99996
+        param albedo_map_enable true
+        param color s_decal_bright
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_icons_symbols_graphical_icon_002
+        param metal_map_enable false
+        param normal_map_enable false
+        param scale 1.0
+        param tag spawn
+        param v3 true
+    }
+    prefab_entity
+    {
+        name light_31_1
+        position -0.93945 467.17438 -34.20605
+        rotation 90.00000 0 90.00001
+        scale 1.00000 1.00000 1.00000
+        param angle 90
+        param color s_light_main
+        param falloff 0.6
+        param gobo_texture gd_gobo_round_lamp02.png
+        param intensity 4
+        param radius 600
+        param rotation_w 0
+        param softness 0.1
+        param tag spawn
+        param type spot
+    }
+    prefab_entity
+    {
+        name pfx_env_dust_shaft_2_1
+        position -2.52905 269.37125 -44.74304
+        rotation 0 -135.00000 0
+        scale 2.00000 2.00000 2.00000
+        param color s_light_main
+        param rotation_w 0
+        param system env_dust_shaft
+        param tag spawn
+    }
+    prefab_entity
+    {
+        name prefab_teleport_base_round_01a
+        position 0.10718 -9.95454 -0.80786
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+    }
+    prefab_entity
+    {
+        name prop_blockout_box_corner_165_1
+        position -0.95825 187.93535 -4.11841
+        rotation 0.00002 -45.00000 179.99969
+        scale 7.00000 3.00000 7.00000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_bright
+        param model blockout_cylinder_hollow_thick_90
+        param seethrough_prop false
+        param size_w 1
+        param tag temp
+        param uv_scale_x 4.5
+        param uv_scale_y 4.5
+    }
+    prefab_entity
+    {
+        name prop_blockout_box_corner_166_1
+        position -0.95825 187.93535 -4.11841
+        rotation 0.00030 44.99999 -179.99997
+        scale 7.00000 3.00000 7.00000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_bright
+        param model blockout_cylinder_hollow_thick_90
+        param seethrough_prop false
+        param size_w 1
+        param tag temp
+        param uv_scale_x 4.5
+        param uv_scale_y 4.5
+    }
+    prefab_entity
+    {
+        name prop_computer_module_wall__7_1
+        position 0.67090 72.30524 62.21912
+        rotation 31.50006 0.00000 -0.00001
+        scale 0.75000 0.75000 0.75000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param model computer_module_wall_05_variant_a
+    }
+    prefab_entity
+    {
+        name prop_elevator_platform_cic_1
+        position -0.96021 40.33527 -4.11401
+        rotation 0.00003 -45.00002 -0.00003
+        scale 0.51000 0.75000 0.51000
+        param __shadow true
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model elevator_platform_cicular_frame_01
+    }
+    prefab_entity
+    {
+        name prop_holo_table_1_1
+        position 0.85547 -69.23626 -6.46216
+        rotation 0 -89.99996 -0.00004
+        scale 3.00000 3.00000 3.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_holo_table_1
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model holo_table_04
+    }
+    prefab_entity
+    {
+        name prop_holo_table_2
+        position 0.85547 -69.23626 -6.46216
+        rotation 0.00005 -0.00002 0.00001
+        scale 3.00000 3.00000 3.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_holo_table
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model holo_table_04
+    }
+    prefab_entity
+    {
+        name prop_holo_table_25_1
+        position 0.85693 60.36362 -6.46277
+        rotation 0.00001 179.99995 0
+        scale 3.00000 3.00000 3.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_holo_table_25
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param model holo_table_04
+        param seethrough_prop false
+    }
+    prefab_entity
+    {
+        name prop_holo_table_26_1
+        position 0.85596 60.36362 -6.46179
+        rotation -0.00001 90.00008 0.00000
+        scale 3.00000 3.00000 3.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_holo_table_26_1
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param model holo_table_04
+        param seethrough_prop false
+    }
+    prefab_entity
+    {
+        name prop_teleporter_1
+        position 0.85864 41.56428 -6.46814
+        rotation -0.00004 -179.99995 0
+        scale 2.50000 2.50000 2.50000
+        param __shadow true
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param material_2 matlib_mat_lib_lamp
+        param model teleporter
+    }
+    prefab_entity
+    {
+        name sound_amb_int_electronic_1
+        position 0.47510 94.40495 68.51038
+        rotation 0 -135.00000 0
+        scale 1.00000 1.00000 1.00000
+        param capsule_end_position_x 5965.903320
+        param capsule_end_position_y -298.771667
+        param capsule_end_position_z -1469.965576
+        param cross_fade_max_radius 1500.000000
+        param cross_fade_min_radius 300.000000
+        param min_radius 300.000000
+        param radius 3000.000000
+        param sound_event amb_int_electronics3_iso
+        param type audio_event_ambient_node
+        param volume 0.3
+    }
+}
+
+

@@ -1,0 +1,8 @@
+asset cliff_swamp
+{
+  type material
+  listed true
+  tags rocks cliffs sand swamp
+  material override_cliff_swamp
+  mat_override true
+}

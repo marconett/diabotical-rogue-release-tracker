@@ -1,225 +1,886 @@
-global_components["region_select"] = new MenuComponent("region_select", _id("region_select_modal_screen"), (function() {
-    region_select_modal.init()
-}));
-const region_select_modal = new function() {
-    let region_ids = [];
-    let html = {
-        root: null,
-        list: null,
-        count: null,
-        refresh: null
-    };
-    this.init = () => {
-        html.root = _id("region_select_modal_screen");
-        html.list = html.root.querySelector(".list");
-        Servers.on_location_ping_update_state_handlers.push((active => {
-            if (active) {
-                html.refresh.classList.add("active")
-            } else {
-                html.refresh.classList.remove("active")
-            }
-        }));
-        Servers.on_locations_init_handlers.push((() => {
-            render_server_locations()
-        }));
-        Servers.on_location_ping_update_handlers.push((() => {
-            update_pings()
-        }));
-        Servers.on_set_locations_handlers.push((() => {
-            update_checkboxes()
-        }));
-        Servers.on_set_regions_handlers.push((() => {
-            update_checkboxes()
-        }));
-        Servers.on_expand_search_update_handlers.push((bool => {}))
-    };
-
-    function render_server_locations() {
-        _empty(html.list);
-        let selection_type = GAME.get_data("location_selection_type");
-        let count_row = _createElement("div", "row");
-        let count_row_count = _createElement("div", "count");
-        let refresh = _createElement("div", "refresh");
-        count_row.appendChild(count_row_count);
-        count_row.appendChild(refresh);
-        html.list.appendChild(count_row);
-        refresh.addEventListener("click", (() => {
-            Servers.ping_locations()
-        }));
-        html.count = count_row_count;
-        html.refresh = refresh;
-        region_ids = [];
-        if (selection_type === 2) {
-            for (let region_id in global_region_map) {
-                if (global_region_map[region_id].parent_region_id) continue;
-                if (!(region_id in Servers.regions)) continue;
-                region_ids.push(region_id)
-            }
-        } else {
-            let regions_with_children = {};
-            for (let region_id in global_region_map) {
-                if (global_region_map[region_id].parent_region_id) {
-                    regions_with_children[global_region_map[region_id].parent_region_id] = true
-                }
-            }
-            for (let region_id in global_region_map) {
-                if (region_id in regions_with_children) continue;
-                if (!(region_id in Servers.regions)) continue;
-                region_ids.push(region_id)
-            }
+GAME.set_initial_data(GAME.ids.ROGUE, {
+    GAME_NAME: "Rogue",
+    GAME_LOGO: "/html/images/game_selection/game_logo_rogue.png",
+    GAME_NAME_FULL: "Diabotical Rogue",
+    GAME_TYPE_DESC: "Multi Player Rogue-like FPS",
+    API_PATH: "/api/v0/2/",
+    HUB_MODE: "rogue_hub",
+    HUB_MAP: "a_hub",
+    EDIT_MODE: "rogue_edit",
+    location_selection_type: 3,
+    lobby_location_selection_type: 1,
+    online_screens: ["achievements", "coin_shop", "create", "custom", "friends_blocked_panel", "friends_panel", "locker", "play_rogue", "shop_item", "shop_screen"],
+    item_name_map: {},
+    item_pickups_in_scoreboard: [""],
+    weapons_priority_default: ["rl", "shaft", "ss", "bl", "pncr", "vc", "cb", "mac", "melee"],
+    weapon_sound_packs: {
+        0: [],
+        1: [],
+        2: []
+    },
+    CUSTOM_FFA_MODES: ["ffa"],
+    CUSTOM_MULTI_TEAM_MODES: [],
+    CUSTOM_SOLO_MODES: ["duel", "ffa"],
+    CUSTOM_ROUND_BASED_MODES: ["rogue_wipeout", "rogue_attack_defense"],
+    CUSTOM_TIMELIMIT_ONLY_MODES: ["duel", "race"],
+    CUSTOM_RACE_MODES: ["race"],
+    CUSTOM_TUTORIAL_MODES: ["tutorial"],
+    CUSTOM_ROUND_LIMITS: [1, 2, 3, 4, 5, 6, 7, 8],
+    CUSTOM_CAPTURE_LIMITS: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 20, 0],
+    CUSTOM_MODE_DEFAULTS: {
+        rogue_teamdeathmatch: {
+            time_limit: 720,
+            score_limit: 200
+        },
+        rogue_wipeout: {
+            score_limit: 4
         }
-        region_ids.sort();
-        if (selection_type === 2 || selection_type === 3) {
-            for (let region_id of region_ids) {
-                let region = _createElement("div", "row");
-                region.dataset.id = global_region_map[region_id].id;
-                let checkbox = _createElement("div", "checkbox");
-                region.appendChild(checkbox);
-                region.appendChild(_createElement("div", "name", global_region_map[region_id].i18n ? localize(global_region_map[region_id].i18n) : global_region_map[region_id].name));
-                region.appendChild(_createElement("div", "icon"));
-                region.appendChild(_createElement("div", "ping", 999));
-                html.list.appendChild(region);
-                region.addEventListener("click", (() => {
-                    if (!bool_am_i_leader) return;
-                    if (checkbox.classList.contains("checkbox_enabled")) {
-                        _play_cb_uncheck();
-                        Servers.remove_from_region_selection(global_region_map[region_id].id)
-                    } else {
-                        _play_cb_check();
-                        Servers.add_to_region_selection(global_region_map[region_id].id)
-                    }
-                    update_checkboxes()
-                }));
-                region.addEventListener("mouseenter", (() => {
-                    checkbox.classList.add("hover")
-                }));
-                region.addEventListener("mouseleave", (() => {
-                    checkbox.classList.remove("hover")
-                }))
-            }
-        } else if (selection_type === 1) {
-            for (let region_id of region_ids) {
-                for (let ds of Servers.regions[region_id]) {
-                    let ds_data = null;
-                    if (ds in global_datacenter_map) ds_data = global_datacenter_map[ds];
-                    let option_name = (global_region_map[region_id].i18n ? localize(global_region_map[region_id].i18n) : global_region_map[region_id].name) + "/" + (ds_data ? localize(ds_data.i18n) : localize("datacenter_" + ds));
-                    let datacenter = _createElement("div", "row");
-                    datacenter.dataset.id = location_id;
-                    let checkbox = _createElement("div", "checkbox");
-                    region.appendChild(checkbox);
-                    region.appendChild(_createElement("div", "name", option_name));
-                    region.appendChild(_createElement("div", "icon"));
-                    region.appendChild(_createElement("div", "ping", 999));
-                    html.list.appendChild(datacenter);
-                    datacenter.addEventListener("click", (() => {
-                        if (!bool_am_i_leader) return;
-                        if (checkbox.classList.contains("checkbox_enabled")) {
-                            _play_cb_uncheck();
-                            Servers.remove_from_location_selection(location_id)
-                        } else {
-                            _play_cb_check();
-                            Servers.add_to_location_selection(location_id)
-                        }
-                        update_checkboxes()
-                    }));
-                    datacenter.addEventListener("mouseenter", (() => {
-                        checkbox.classList.add("hover")
-                    }));
-                    datacenter.addEventListener("mouseleave", (() => {
-                        checkbox.classList.remove("hover")
-                    }))
-                }
-            }
+    },
+    game_mode_map: {
+        rogue_wipeout: {
+            mode: "rogue_wipeout",
+            name: "Wipeout",
+            i18n: "game_mode_wipeout",
+            desc_i18n: "game_mode_2_desc_wipeout",
+            announce: "announcer_common_gamemode_wipeout",
+            enabled: true,
+            image: "/html/images/gamemodes/wipeout_big.jpg",
+            icon: "",
+            rules: ["game_mode_2_rules_wipeout_1", "game_mode_2_rules_wipeout_2", "game_mode_2_rules_wipeout_3", "game_mode_2_rules_wipeout_4"]
+        },
+        rogue_siege: {
+            mode: "rogue_siege",
+            name: "Siege",
+            i18n: "game_mode_siege",
+            desc_i18n: "game_mode_2_desc_siege",
+            announce: "announcer_common_gamemode_siege",
+            enabled: false,
+            image: "/html/images/gamemodes/siege.png",
+            icon: ""
+        },
+        rogue_teamdeathmatch: {
+            mode: "rogue_teamdeathmatch",
+            name: "Team Death Match",
+            i18n: "game_mode_tdm",
+            desc_i18n: "game_mode_desc_tdm",
+            announce: "announcer_common_gamemode_domination",
+            enabled: false,
+            image: "/html/images/gamemodes/tdm.png",
+            icon: ""
+        },
+        rogue_domination: {
+            mode: "rogue_domination",
+            name: "Domination",
+            i18n: "game_mode_domination",
+            desc_i18n: "game_mode_2_desc_domination",
+            announce: "announcer_common_gamemode_domination",
+            enabled: false,
+            image: "/html/images/gamemodes/domination.png",
+            icon: ""
+        },
+        rogue_attack_defense: {
+            mode: "rogue_attack_defense",
+            name: "Attack Defense",
+            i18n: "game_mode_attack_defense",
+            desc_i18n: "game_mode_2_desc_attack_defense",
+            announce: "announcer_common_gamemode_attack_defense",
+            enabled: false,
+            image: "/html/images/gamemodes/attack_defense.png",
+            icon: ""
+        },
+        warmup: {
+            mode: "warmup",
+            name: "Warmup",
+            i18n: "game_mode_warmup",
+            desc_i18n: "game_mode_desc_warmup",
+            announce: "announcer_common_gamemode_warmup",
+            enabled: false,
+            image: "/html/images/gamemodes/warmup.png",
+            icon: ""
         }
-        update_checkboxes()
-    }
-
-    function update_checkboxes() {
-        let selection_type = GAME.get_data("location_selection_type");
-        let checked = 0;
-        let total = 0;
-        if (selection_type === 1) {
-            _for_each_with_selector_in_parent(html.root, ".row", (function(row) {
-                let cb = row.querySelector(".checkbox");
-                if (!cb) return;
-                if (Servers.selected_locations.has(row.dataset.id)) {
-                    cb.classList.add("checkbox_enabled");
-                    checked++
-                } else {
-                    cb.classList.remove("checkbox_enabled")
-                }
-                total++
-            }))
-        } else {
-            _for_each_with_selector_in_parent(html.root, ".row", (function(row) {
-                let cb = row.querySelector(".checkbox");
-                if (!cb) return;
-                if (Servers.selected_regions.has(row.dataset.id)) {
-                    cb.classList.add("checkbox_enabled");
-                    checked++
-                } else {
-                    cb.classList.remove("checkbox_enabled")
-                }
-                total++
-            }))
+    },
+    CUSTOM_MODE_DEFINITIONS: {},
+    physics_map: {
+        0: {
+            i18n: "custom_settings_physics_diabotical"
+        },
+        1: {
+            i18n: "custom_settings_physics_race"
+        },
+        2: {
+            i18n: "custom_settings_physics_vintage"
         }
-        if (html.count) {
-            html.count.textContent = "(" + checked + "/" + total + ")"
+    },
+    battlepass_data: {},
+    competitive_data: {},
+    customization_sub_types: {
+        0: [],
+        1: [],
+        2: [],
+        3: ["pu"],
+        4: [],
+        5: [],
+        6: ["melee", "mac", "bl", "ss", "rl", "shaft", "cb", "pncr", "gl", "w9", "mg", "vc"],
+        7: ["melee", "mac", "bl", "ss", "rl", "shaft", "cb", "pncr", "gl", "w9", "mg", "vc"],
+        8: [],
+        9: ["l", "r"],
+        10: [],
+        11: [],
+        12: [],
+        13: [],
+        14: [],
+        15: [],
+        16: [],
+        21: [],
+        22: []
+    },
+    customization_multi_sub_types: [7, 9],
+    customization_array_types: {},
+    default_customizations: {
+        3: {
+            pu: "mu_pu_devilish"
+        },
+        5: "sp_play_nice"
+    },
+    LOBBY_INIT_MODE: "rogue_wipeout",
+    LOBBY_SETTINGS_LIST: {
+        private: ["bool", true, true],
+        name: ["string", "", ""],
+        mode: ["string", "", ""],
+        mode_name: ["string", "", ""],
+        mode_editing: ["int", 0, 0],
+        ai_mode_prompt: ["string", "", ""],
+        datacenter: ["string", "", ""],
+        map_list: ["custom", [],
+            []
+        ],
+        time_limit: ["int", 0, 0],
+        score_limit: ["int", 0, 0],
+        team_count: ["int", 2, 2],
+        team_size: ["int", 3, 3],
+        allow_map_voting: ["int", 1, 1],
+        continuous: ["int", 0, 0],
+        auto_balance: ["int", 0, 0],
+        team_switching: ["int", 0, 0],
+        warmup_time: ["int", -1, -1],
+        min_players: ["int", 1, 1],
+        max_clients: ["int", 100, 100],
+        ready_percentage: ["float", 1, 1],
+        commands: ["custom", [],
+            []
+        ]
+    },
+    LOBBY_SETTINGS_OPTION_LIST: ["allow_map_voting", "mode_editing", "ai_mode_prompt"],
+    LOBBY_CLIENT_VAR_MAP: {
+        lobby_visibility: {
+            name: "private",
+            cb_type: "select",
+            type: "real"
+        },
+        lobby_custom_map: {
+            name: "map_list",
+            cb_type: "custom",
+            type: "json"
+        },
+        lobby_custom_mode: {
+            name: "mode",
+            cb_type: "custom",
+            type: "json"
+        },
+        lobby_custom_teams: {
+            name: "team_count",
+            cb_type: "select",
+            type: "real"
+        },
+        lobby_custom_team_size: {
+            name: "team_size",
+            cb_type: "select",
+            type: "real"
+        },
+        lobby_custom_duration: {
+            name: "time_limit",
+            cb_type: "select",
+            type: "real"
+        },
+        lobby_custom_score_limit: {
+            name: "score_limit",
+            cb_type: "select",
+            type: "real"
+        },
+        lobby_custom_datacenter: {
+            name: "datacenter",
+            cb_type: "select",
+            type: "string"
+        },
+        lobby_custom_continuous: {
+            name: "continuous",
+            cb_type: "select",
+            type: "real"
+        },
+        lobby_custom_warmup_time: {
+            name: "warmup_time",
+            cb_type: "select",
+            type: "real"
+        },
+        lobby_custom_team_switching: {
+            name: "team_switching",
+            cb_type: "select",
+            type: "real"
+        },
+        lobby_custom_min_players: {
+            name: "min_players",
+            cb_type: "select",
+            type: "real"
+        },
+        lobby_custom_max_clients: {
+            name: "max_clients",
+            cb_type: "select",
+            type: "real"
+        },
+        lobby_custom_ready_percentage: {
+            name: "ready_percentage",
+            cb_type: "select",
+            type: "real"
+        },
+        lobby_custom_allow_map_voting: {
+            name: "allow_map_voting",
+            cb_type: "select",
+            type: "real"
+        },
+        lobby_custom_commands: {
+            name: "commands",
+            cb_type: "custom",
+            type: "json"
         }
-    }
-
-    function update_pings() {
-        let region_pings = {};
-        for (let region_id of region_ids) {
-            if (!(region_id in global_region_map)) continue;
-            let max = null;
-            let min = null;
-            for (let location_id of Servers.regions[region_id]) {
-                if (location_id in Servers.locations && Servers.locations[location_id].ping !== -1) {
-                    if (max === null || Servers.locations[location_id].ping > max) max = Servers.locations[location_id].ping;
-                    if (min === null || Servers.locations[location_id].ping < min) min = Servers.locations[location_id].ping
-                }
-            }
-            region_pings[global_region_map[region_id].id] = {};
-            if (max !== null) region_pings[global_region_map[region_id].id].max = Math.floor(max * 1e3);
-            if (min !== null) region_pings[global_region_map[region_id].id].min = Math.floor(min * 1e3)
+    },
+    COMMUNITY_MAPS: true,
+    COMMUNITY_MODES: true,
+    customization_group_map: {
+        eggbot: {
+            i18n: "class_rogue_eggbot",
+            categories: [{
+                id: "c_eggbot",
+                type: "suit",
+                i18n: "customization_type_suit"
+            }, {
+                id: "w_smg_eggbot",
+                type: "weapon",
+                color_id: "100",
+                i18n: "weapon_submachinegun"
+            }, {
+                id: "w_egun_eggbot",
+                type: "weapon",
+                color_id: "105",
+                i18n: "weapon_egun"
+            }, {
+                id: "w_cb_eggbot",
+                type: "weapon",
+                color_id: "6",
+                i18n: "weapon_crossbow"
+            }]
+        },
+        scout: {
+            i18n: "class_rogue_scout",
+            categories: [{
+                id: "c_weesuit",
+                type: "suit",
+                i18n: "customization_type_suit"
+            }, {
+                id: "w_mac_scout",
+                type: "weapon",
+                color_id: "1",
+                i18n: "weapon_machinegun"
+            }, {
+                id: "w_rev_scout",
+                type: "weapon",
+                color_id: "107",
+                i18n: "weapon_revolver"
+            }, {
+                id: "w_hsniper_scout",
+                type: "weapon",
+                color_id: "62",
+                i18n: "weapon_heavysniper"
+            }]
+        },
+        chunk: {
+            i18n: "class_rogue_chunk",
+            categories: [{
+                id: "c_chunk",
+                type: "suit",
+                i18n: "customization_type_suit"
+            }, {
+                id: "w_hmg_chunk",
+                type: "weapon",
+                color_id: "106",
+                i18n: "weapon_heavymachinegun"
+            }, {
+                id: "w_shaft_chunk",
+                type: "weapon",
+                color_id: "5",
+                i18n: "weapon_shaft"
+            }, {
+                id: "w_rl_chunk",
+                type: "weapon",
+                color_id: "4",
+                i18n: "weapon_rocketlauncher"
+            }]
+        },
+        bigbot: {
+            i18n: "class_rogue_bigbot",
+            categories: [{
+                id: "c_bigbot",
+                type: "suit",
+                i18n: "customization_type_suit"
+            }, {
+                id: "w_ss_bigbot",
+                type: "weapon",
+                color_id: "3",
+                i18n: "weapon_supershotgun"
+            }, {
+                id: "w_bl_bigbot",
+                type: "weapon",
+                color_id: "2",
+                i18n: "weapon_blaster"
+            }, {
+                id: "w_gl_bigbot",
+                type: "weapon",
+                color_id: "8",
+                i18n: "weapon_grenadelauncher"
+            }]
         }
-        _for_each_with_selector_in_parent(html.root, ".row", (function(el) {
-            let ping_val = -1;
-            let ping = "N/A";
-            if (el.dataset.id in Servers.locations) {
-                ping_val = Number(Servers.locations[el.dataset.id].ping);
-                if (ping_val == -1) {
-                    ping = "N/A"
-                } else {
-                    ping_val = Math.floor(ping_val * 1e3);
-                    ping = ping_val
-                }
-            } else if (el.dataset.id in region_pings && "min" in region_pings[el.dataset.id]) {
-                ping_val = region_pings[el.dataset.id].min;
-                ping = ping_val
-            }
-            let ping_el = el.querySelector(".ping");
-            if (ping_el) {
-                ping_el.textContent = ping
-            }
-            let icon_el = el.querySelector(".icon");
-            if (icon_el) {
-                if (ping_val == -1) {
-                    icon_el.classList.add("red")
-                } else if (ping_val < 45) {
-                    icon_el.classList.add("green")
-                } else if (ping_val < 90) {
-                    icon_el.classList.add("yellow")
-                } else if (ping_val < 130) {
-                    icon_el.classList.add("orange")
-                } else {
-                    icon_el.classList.add("red")
-                }
-            }
-        }))
-    }
-    this.close = () => {
-        close_modal_screen(null, html.root.id)
-    }
-};
+    },
+    customization_category_map: {
+        c_eggbot: [new CustomizationType("suit", "eggbot")],
+        c_weesuit: [new CustomizationType("suit", "scout")],
+        c_chunk: [new CustomizationType("suit", "chunk")],
+        c_bigbot: [new CustomizationType("suit", "bigbot")],
+        w_cb_eggbot: [new CustomizationType("weapon", "cb", "eggbot")],
+        w_smg_eggbot: [new CustomizationType("weapon", "smg", "eggbot")],
+        w_egun_eggbot: [new CustomizationType("weapon", "egun", "eggbot")],
+        w_mac_scout: [new CustomizationType("weapon", "mac", "scout")],
+        w_hsniper_scout: [new CustomizationType("weapon", "hsniper", "scout")],
+        w_rev_scout: [new CustomizationType("weapon", "rev", "scout")],
+        w_hmg_chunk: [new CustomizationType("weapon", "hmg", "chunk")],
+        w_shaft_chunk: [new CustomizationType("weapon", "shaft", "chunk")],
+        w_rl_chunk: [new CustomizationType("weapon", "rl", "chunk")],
+        w_ss_bigbot: [new CustomizationType("weapon", "ss", "bigbot")],
+        w_bl_bigbot: [new CustomizationType("weapon", "bl", "bigbot")],
+        w_gl_bigbot: [new CustomizationType("weapon", "gl", "bigbot")]
+    },
+    flat_bg_scene_screens: ["coin_shop", "notification", "battlepass", "shop", "shop_item", "player_profile", "locker"],
+    map_names: {
+        wellspring: "Wellspring",
+        furnace: "Furnace",
+        toya: "Toya",
+        titan: "Titan",
+        cassini: "Cassini",
+        arcol: "Arcol",
+        sentinel: "Sentinel",
+        relay: "Relay"
+    },
+    default_weapon_skin_images: {
+        cb: "/html/images/weapon_icons/wp_card_crossbow_nobg.png.dds",
+        smg: "/html/images/weapon_icons/wp_card_submachinegun_nobg.png.dds",
+        mac: "/html/images/weapon_icons/wp_card_machinegun_nobg.png.dds",
+        egun: "/html/images/weapon_icons/wp_card_egun_nobg.png.dds",
+        hsniper: "/html/images/weapon_icons/wp_card_heavysniper_nobg.png.dds",
+        ss: "/html/images/weapon_icons/wp_card_shotgun_nobg.png.dds",
+        rev: "/html/images/weapon_icons/wp_card_revolver_nobg.png.dds",
+        hmg: "/html/images/weapon_icons/wp_card_heavymachinegun_nobg.png.dds",
+        shaft: "/html/images/weapon_icons/wp_card_shaft_nobg.png.dds",
+        bl: "/html/images/weapon_icons/wp_card_blaster_nobg.png.dds",
+        rl: "/html/images/weapon_icons/wp_card_rocketlauncher_nobg.png.dds"
+    },
+    locker_preview_scale: {
+        suit: {
+            7: .9
+        },
+        weapon: {
+            mac: .85,
+            smg: .85,
+            egun: .7,
+            rev: .85
+        }
+    },
+    customizations: {
+        6: {
+            bl: [{
+                customization_id: "rog_we_bl_excavator",
+                customization_type: 6,
+                customization_sub_type: "bl",
+                customization_set_id: null,
+                rarity: 0,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_bl_juno",
+                customization_type: 6,
+                customization_sub_type: "bl",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_bl_stinger",
+                customization_type: 6,
+                customization_sub_type: "bl",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_bl_vintage",
+                customization_type: 6,
+                customization_sub_type: "bl",
+                customization_set_id: null,
+                rarity: 3,
+                seen: true,
+                amount: 1
+            }],
+            cb: [{
+                customization_id: "rog_we_cb_excavator",
+                customization_type: 6,
+                customization_sub_type: "cb",
+                customization_set_id: null,
+                rarity: 0,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_cb_juno",
+                customization_type: 6,
+                customization_sub_type: "cb",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_cb_stinger",
+                customization_type: 6,
+                customization_sub_type: "cb",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_cb_vintage",
+                customization_type: 6,
+                customization_sub_type: "cb",
+                customization_set_id: null,
+                rarity: 3,
+                seen: true,
+                amount: 1
+            }],
+            egun: [{
+                customization_id: "rog_we_egun_excavator",
+                customization_type: 6,
+                customization_sub_type: "egun",
+                customization_set_id: null,
+                rarity: 0,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_egun_juno",
+                customization_type: 6,
+                customization_sub_type: "egun",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_egun_stinger",
+                customization_type: 6,
+                customization_sub_type: "egun",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_egun_vaporwave",
+                customization_type: 6,
+                customization_sub_type: "egun",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_egun_vintage",
+                customization_type: 6,
+                customization_sub_type: "egun",
+                customization_set_id: null,
+                rarity: 3,
+                seen: true,
+                amount: 1
+            }],
+            hmg: [{
+                customization_id: "rog_we_hmg_excavator",
+                customization_type: 6,
+                customization_sub_type: "hmg",
+                customization_set_id: null,
+                rarity: 0,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_hmg_juno",
+                customization_type: 6,
+                customization_sub_type: "hmg",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_hmg_marine",
+                customization_type: 6,
+                customization_sub_type: "hmg",
+                customization_set_id: null,
+                rarity: 0,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_hmg_stinger",
+                customization_type: 6,
+                customization_sub_type: "hmg",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_hmg_vaporwave",
+                customization_type: 6,
+                customization_sub_type: "hmg",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_hmg_vintage",
+                customization_type: 6,
+                customization_sub_type: "hmg",
+                customization_set_id: null,
+                rarity: 3,
+                seen: true,
+                amount: 1
+            }],
+            hsniper: [{
+                customization_id: "rog_we_hsniper_excavator",
+                customization_type: 6,
+                customization_sub_type: "hsniper",
+                customization_set_id: null,
+                rarity: 0,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_hsniper_juno",
+                customization_type: 6,
+                customization_sub_type: "hsniper",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_hsniper_stinger",
+                customization_type: 6,
+                customization_sub_type: "hsniper",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_hsniper_vintage",
+                customization_type: 6,
+                customization_sub_type: "hsniper",
+                customization_set_id: null,
+                rarity: 3,
+                seen: true,
+                amount: 1
+            }],
+            mac: [{
+                customization_id: "rog_we_mac_excavator",
+                customization_type: 6,
+                customization_sub_type: "mac",
+                customization_set_id: null,
+                rarity: 0,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_mac_juno",
+                customization_type: 6,
+                customization_sub_type: "mac",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_mac_marine",
+                customization_type: 6,
+                customization_sub_type: "mac",
+                customization_set_id: null,
+                rarity: 0,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_mac_stinger",
+                customization_type: 6,
+                customization_sub_type: "mac",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_mac_vaporwave",
+                customization_type: 6,
+                customization_sub_type: "mac",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_mac_vintage",
+                customization_type: 6,
+                customization_sub_type: "mac",
+                customization_set_id: null,
+                rarity: 3,
+                seen: true,
+                amount: 1
+            }],
+            rev: [{
+                customization_id: "rog_we_rev_aes",
+                customization_type: 6,
+                customization_sub_type: "rev",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_rev_excavator",
+                customization_type: 6,
+                customization_sub_type: "rev",
+                customization_set_id: null,
+                rarity: 0,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_rev_gullwing",
+                customization_type: 6,
+                customization_sub_type: "rev",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_rev_juno",
+                customization_type: 6,
+                customization_sub_type: "rev",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_rev_marine",
+                customization_type: 6,
+                customization_sub_type: "rev",
+                customization_set_id: null,
+                rarity: 0,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_rev_penthouse",
+                customization_type: 6,
+                customization_sub_type: "rev",
+                customization_set_id: null,
+                rarity: 3,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_rev_stinger",
+                customization_type: 6,
+                customization_sub_type: "rev",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_rev_vaporwave",
+                customization_type: 6,
+                customization_sub_type: "rev",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_rev_vintage",
+                customization_type: 6,
+                customization_sub_type: "rev",
+                customization_set_id: null,
+                rarity: 3,
+                seen: true,
+                amount: 1
+            }],
+            rl: [{
+                customization_id: "rog_we_rl_excavator",
+                customization_type: 6,
+                customization_sub_type: "rl",
+                customization_set_id: null,
+                rarity: 0,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_rl_juno",
+                customization_type: 6,
+                customization_sub_type: "rl",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_rl_stinger",
+                customization_type: 6,
+                customization_sub_type: "rl",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_rl_vintage",
+                customization_type: 6,
+                customization_sub_type: "rl",
+                customization_set_id: null,
+                rarity: 3,
+                seen: true,
+                amount: 1
+            }],
+            shaft: [{
+                customization_id: "rog_we_shaft_excavator",
+                customization_type: 6,
+                customization_sub_type: "shaft",
+                customization_set_id: null,
+                rarity: 0,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_shaft_juno",
+                customization_type: 6,
+                customization_sub_type: "shaft",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_shaft_stinger",
+                customization_type: 6,
+                customization_sub_type: "shaft",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_shaft_vintage",
+                customization_type: 6,
+                customization_sub_type: "shaft",
+                customization_set_id: null,
+                rarity: 3,
+                seen: true,
+                amount: 1
+            }],
+            smg: [{
+                customization_id: "rog_we_smg_excavator",
+                customization_type: 6,
+                customization_sub_type: "smg",
+                customization_set_id: null,
+                rarity: 0,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_smg_juno",
+                customization_type: 6,
+                customization_sub_type: "smg",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_smg_stinger",
+                customization_type: 6,
+                customization_sub_type: "smg",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_smg_vintage",
+                customization_type: 6,
+                customization_sub_type: "smg",
+                customization_set_id: null,
+                rarity: 3,
+                seen: true,
+                amount: 1
+            }],
+            ss: [{
+                customization_id: "rog_we_ss_excavator",
+                customization_type: 6,
+                customization_sub_type: "ss",
+                customization_set_id: null,
+                rarity: 0,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_ss_juno",
+                customization_type: 6,
+                customization_sub_type: "ss",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_ss_stinger",
+                customization_type: 6,
+                customization_sub_type: "ss",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_ss_vintage",
+                customization_type: 6,
+                customization_sub_type: "ss",
+                customization_set_id: null,
+                rarity: 3,
+                seen: true,
+                amount: 1
+            }],
+            gl: [{
+                customization_id: "rog_we_gl_excavator",
+                customization_type: 6,
+                customization_sub_type: "gl",
+                customization_set_id: null,
+                rarity: 0,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_gl_juno",
+                customization_type: 6,
+                customization_sub_type: "gl",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_gl_stinger",
+                customization_type: 6,
+                customization_sub_type: "gl",
+                customization_set_id: null,
+                rarity: 2,
+                seen: true,
+                amount: 1
+            }, {
+                customization_id: "rog_we_gl_vintage",
+                customization_type: 6,
+                customization_sub_type: "gl",
+                customization_set_id: null,
+                rarity: 3,
+                seen: true,
+                amount: 1
+            }]
+        }
+    },
+    sniper_zoom_indexes: [64]
+});

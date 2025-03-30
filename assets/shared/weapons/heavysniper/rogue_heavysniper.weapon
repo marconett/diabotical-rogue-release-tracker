@@ -22,7 +22,7 @@ rogue_heavysniper
 	hide_crosshair true
 	hide_crosshair_zoomed true
 	
-	color EBBA45
+	color ec86df
 	
 	icon_path images/weapon_icons/wp_hud_heavysniper_02.png
 	icon_path2 images/weapon_icons/wp_card_heavysniper.png
@@ -50,7 +50,6 @@ rogue_heavysniper
 	recoil_recovery_time 0.6
 	recoil_time 0.1
 	
-	zoom_speed 150
 	zoomed_walk_speed 175
 	zoomed_crouch_speed 150
 	
@@ -75,6 +74,7 @@ rogue_heavysniper
 	
 	hit_radius 1 1
 	
+	particles_clipping_plane true
 	detached_shot_particles false
     //shot_particles weapon_heavysniper_muzzle_flash
 	shot_particles_attached weapon_heavysniper_muzzle
@@ -91,23 +91,41 @@ rogue_heavysniper
 	decal decal_glow 10 3 3.561 false false alpha 20
 	
 
-	//model assets/shared/weapons/heavysniper/heavysniper //Old model
 	model assets/shared/models/animations/wp_heavy_sniper/skm_heavy_sniper
-	/////	fps model position - fps_heavy_sniper /////////////////////////////////////
-	
-	model_position 0.379076 -0.208433 1.48947
-	model_scale 0.05
-    model_post_rotation -2 -1.4 0
-	fov 47
-	model_pivot 0 0 0
-
-	/////	ADS model position - pistol /////////////////////////////////////
-
-	model_position_centered 0.379076 -0.208433 1.48947
-	model_scale_centered 0.0136441
-	//for clipping
-	model_camera_scale 2.8				
+	model_scale_third_person 1 1 1 
+	model_position_third_person 0 0 0 
+	model_rotation_third_person 0 0 0 
+	model_scale_back_left_attachment 1 1 1 
+	model_position_back_left_attachment 0 0 0 
+	model_rotation_back_left_attachment 0 0 0 
+	model_scale_back_right_attachment 1 1 1 
+	model_position_back_right_attachment 0 0 0 
+	model_rotation_back_right_attachment 0 0 0 
+	model_scale_hip_left_attachment 1 1 1 
+	model_position_hip_left_attachment 0 0 0 
+	model_rotation_hip_left_attachment 0 0 0 
+	model_scale_hip_right_attachment 1 1 1 
+	model_position_hip_right_attachment 0 0 0 
+	model_rotation_hip_right_attachment 0 0 0 
+	model_position -0.738824 -1.41286 -1.19236 
+	model_position_centered -0.81882 -1.35924 -1.34294 
+	model_post_rotation -0.0523599 -0.0174533 -0.0174533 
+	model_post_rotation_centered -0.261799 -0.0349066 0.20944 
+	model_scale 0.05 0.05 0.05 
+	model_scale_centered 0.05 0.05 0.05 
+	fov 65 
+	fov_centered 60 
+	model_camera_scale 3.5 
+	model_camera_scale_centered 8			
 	muzzle 2.7 -2.8 14
+
+	// weapon_sway
+	smoothing_factor 9
+	vertical_sway 0.9
+	horizontal_sway 0.9
+	tilt_sway 0.1
+	forward_sway 0.5
+	max_vertical_movement_sway 0.05
 	
 	//close
 	shot_sound w_hs_unscoped_fire
@@ -158,7 +176,8 @@ rogue_heavysniper augment 1
 // 	name_translation_key heavysniper_scope_and_draw
 // 	desc_translation_key heavysniper_scope_and_draw_desc
 // 	rarity common
-// 	preadd zoom_speed -50
+// 	preadd zoom_speed_1p -50
+// 	preadd zoom_speed_3p -50
 // 	preadd equip_time -50
 // 	max_stacks 2
 // }

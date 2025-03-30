@@ -1,0 +1,81 @@
+asset sign_holo_arrow_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name light_150
+        position -0.43799 -4.14264 -55.36676
+        rotation -0.85321 -1.23314 0.85331
+        scale 1.00000 1.00000 1.00000
+        param color ff7a65ff
+        param falloff 0.5
+        param intensity 1
+        param light_bake_only false
+        param position_x 37.617920
+        param position_y -2.160027
+        param position_z 38.523499
+        param radius 96
+    }
+    prefab_entity
+    {
+        name pfx_env_holo_symbol22
+        position -0.15967 -24.30414 -114.67395
+        rotation -0.80892 90.00564 87.92224
+        scale 1.25000 1.25000 1.50000
+        param color f6ff5bff
+        param position_x 80.044434
+        param position_y -20.160034
+        param position_z 80.949585
+        param rotation_w 0
+        param system env_holo_symbol22
+    }
+    prefab_entity
+    {
+        name pfx_env_holo_symbol6_2
+        position -0.46680 -2.14413 -55.43835
+        rotation -0.80892 90.00570 -2.07776
+        scale 1.00000 1.00000 0.75000
+        param color ff4747ff
+        param position_x 37.617920
+        param position_y -0.160027
+        param position_z 38.523499
+        param rotation_w 0
+        param system env_holo_symbol6
+    }
+    prefab_entity
+    {
+        name pfx_env_holo_symbol6_3
+        position -3.97949 19.83942 -77.05151
+        rotation 0.80894 -89.99437 -177.92223
+        scale 1.25000 1.25000 1.00000
+        param color s_accent
+        param position_x 54.588867
+        param position_y 22.640015
+        param position_z 50.968628
+        param rotation_w 0
+        param system env_holo_symbol6
+    }
+    prefab_entity
+    {
+        name prop_md_4_wall_attachment
+        position -0.46680 -2.14413 -55.43835
+        rotation -0.80892 90.00568 -2.07776
+        scale 1.50000 1.50000 1.50000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_md_4_wall_attachment
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model md_4_wall_attachment
+        param position_x 37.617920
+        param position_y -0.160027
+        param position_z 38.523499
+    }
+}
+
+
+
+
+

@@ -1,2053 +1,2105 @@
-var global_weapon_data = {
-    sword: {
-        weapon_tag: "melee",
-        bind_group: "9",
-        color: "888888",
-        damage: "50",
-        knockback: "250",
-        ground_knockback: "250",
-        rate: "700",
-        speed: "0",
-        unlimited_ammo: "true",
-        distance: "38",
-        hit_radius: "25",
-        allow_during_bolt: "true",
-        melee_reward: "true",
-        shot_particles: "railtest",
-        impact_particles: "rail_impact",
-        equip_particles_attached: "sword_equip",
-        melee_animation: "true",
-        model: "weapon_sword",
-        model_position: "6.2 -7 8.7",
-        model_scale: "0.10 0.10 0.10",
-        model_camera_scale: "0.3",
-        model_rotation: "175 -4 0",
-        muzzle: "4.5 -6 20",
-        fov: "59",
-        shot_sound: "m_fire1 m_fire2 m_fire3 m_fire4 m_fire5",
-        impact_sound: "m_impact1 m_impact2 m_impact3 m_impact4 m_impact5",
-        hit_sound: "testhit1",
-        equip_sound: "m_equip"
-    },
-    blaster: {
-        respawn_time: "9",
-        weapon_tag: "bl",
-        color: "7c62d1",
-        speed: "2200",
-        rate: "100",
-        damage: "20",
-        self_damage: "8",
-        default_ammo_pickup_ammo: "50",
-        default_weapon_pickup_ammo: "75",
-        max_ammo: "150",
-        category: "1",
-        bind_group: "1",
-        splash_radius: "20",
-        center_of_mass_offset: "0",
-        center_of_mass_offset_self: "0",
-        knockback: "17.5",
-        knockback_self: "20",
-        ground_knockback: "17.5",
-        ground_knockback_self: "20",
-        hit_radius: "2.2 1",
-        combo_rate: ["machinegun 100", " super_shotgun 100", "shaft 100", "rocket_launcher 100", "pncr  100", "grenade_launcher 100", "void_cannon 100"],
-        decal: ["decal_plasma 30 3 3.561 false false alpha 5", "decal_glow_blue 25 1.75 3.561 false false alpha 40"],
-        loop_animation: "true",
-        upgrade_animation: "true",
-        muzzle_offset: "0 -5 0",
-        model: "weaponbl",
-        model_scale: "0.06",
-        model_scale_centered: "0.054",
-        model_position: "2.5 -3.35 3.55",
-        model_position_centered: "0 -3.15 3.7",
-        model_camera_scale: "0.6",
-        muzzle: "0 0 0",
-        fov: "30",
-        model_scale_third_person: "1.1",
-        model_position_third_person: "5 -11 12",
-        detached_shot_particles: ["false", "false"],
-        shot_particles: "empty_system",
-        shot_particles_attached: "plasma_muzzle_tier_1",
-        missile_particles: "plasma_bullet_tier_1",
-        missile_particles_1p: "plasma_bullet_tier_1_1p",
-        impact_particles: "plasma_impact_tier_1",
-        shot_sound: "bl_fire1 bl_fire2 bl_fire3 bl_fire4 bl_fire5",
-        end_sound: "bl_fire_release1 bl_fire_release2 bl_fire_release3 bl_fire_release4 bl_fire_release5",
-        missile_loop_sound: "bl_airbound",
-        impact_sound: "bl_impact1 bl_impact2 bl_impact3 bl_impact4",
-        equip_sound: "bl_equip",
-        hit_sound: "hit_sound_hit1",
-        out_of_ammo_sound: "bl_ooa",
-        animation_suffix: "_stage2"
-    },
-    super_shotgun: {
-        respawn_time: "9",
-        weapon_tag: "ss",
-        color: "9bc44d",
-        default_ammo_pickup_ammo: "10",
-        default_weapon_pickup_ammo: "15",
-        max_ammo: "40",
-        charge_animation: "1",
-        shots_per_round: "20",
-        spread: "4.4 4.4",
-        spread_radius: "1",
-        rate: "1000",
-        damage: "5 5",
-        max_damage_distance: "200",
-        min_damage_distance: "800",
-        min_hits: "2",
-        bounce: "0",
-        spread_ring: "0 6 6",
-        knockback: "6.1",
-        ground_knockback: "7.1",
-        parallel_knockback: "true",
-        impact_particles_distance_delay: "0.12",
-        independent_upgrade_model: "true",
-        hit_radius: "1.7 3",
-        category: "2",
-        bind_group: "2",
-        group_damage: "true",
-        max_damage_reward: "true",
-        combo_rate: ["machinegun 850", " super_shotgun_secondary 1000", "shaft 850", "rocket_launcher 850", "pncr 850", "blaster 850", "grenade_launcher 850", "void_cannon 850"],
-        shot_particles: "empty_system",
-        shot_particles_attached: "sg_tier_2_muzzle",
-        missile_particles: "sg_projectile",
-        impact_particles: "sg_impact_v2",
-        decal: ["decal 7 3 3.561 false false alpha 7", "decal_glow_red 16 3 3.561 false false alpha 30", "decal_glow 10 3 3.561 false false alpha 50"],
-        model: "weaponss",
-        model_position: "2.5 -3 3.1",
-        model_camera_scale: "0.5",
-        model_scale: "0.075",
-        model_scale_centered: "0.0675",
-        model_position_centered: "0 -2.9 3.4",
-        muzzle: "2.6 -2.7 4.7",
-        fov: "40",
-        model_scale_third_person: "1",
-        model_position_third_person: "-3.2 0 6",
-        shot_sound: "ss_fire1 ss_fire2 ss_fire3 ss_fire4",
-        equip_sound: "ss_equip",
-        out_of_ammo_sound: "ss_ooa",
-        hit_sound: "hit_sound_hit1",
-        detached_shot_particles: "false",
-        multi_round_particles: "false",
-        unlimited_ammo: "false"
-    },
-    shaft: {
-        respawn_time: "9",
-        weapon_tag: "shaft",
-        color: "cdb200",
-        rate: "50",
-        damage: "6 6",
-        min_damage_distance: "674",
-        max_damage_distance: "675",
-        category: "4",
-        bind_group: "4",
-        hit_radius: "2.5 1.1",
-        knockback: "10.4",
-        ground_knockback: "13.5",
-        distance: "768",
-        default_ammo_pickup_ammo: "50",
-        default_weapon_pickup_ammo: "100",
-        max_ammo: "150",
-        min_ammo_gain: "10",
-        speed: "0",
-        orb: "true",
-        orb_lag: "0.00",
-        friendly_name: "Shaft",
-        description: "Powerful medium-range sustained-damage weapon.",
-        combo_rate: ["machinegun 100", " super_shotgun 100", "rocket_launcher 100", "pncr 100", "blaster 100", "grenade_launcher 100", "void_cannon 100"],
-        missile_particles: "vc_bullet",
-        impact_particles: "shaft_impact",
-        tracking_particles: "shaft_beam_particles",
-        pfx: "shaft_filament muzzle",
-        decal: ["decal_shaft_connector 2 5 3.561 true false max", "decal_shaft 2 5 3.561 true true max"],
-        model: "weaponshaft",
-        loop_animation: "true",
-        model_scale: "0.060",
-        model_scale_centered: "0.054",
-        model_position_centered: "0 -4 5",
-        model_position: "2.5 -3 3.6",
-        model_camera_scale: "0.7",
-        model_scale_third_person: "0.9",
-        model_position_third_person: "-3.5 3.5 6",
-        muzzle: "10.0 -11 41.0",
-        fov: "45",
-        parallel_knockback: "true",
-        loop_sound: "shaft_loop1 shaft_loop2 shaft_loop3 shaft_loop4",
-        start_sound: "shaft_ini1 shaft_ini2 shaft_ini3 shaft_ini4",
-        end_sound: "shaft_release1 shaft_release2 shaft_release3 shaft_release4",
-        equip_sound: "shaft_equip",
-        hit_sound: "hit_sound_hit1",
-        proximity_loop_sound: "shaft_idle_loop",
-        out_of_ammo_sound: "shaft_ooa",
-        impact_sound: "shaft_impact1 shaft_impact2 shaft_impact3 shaft_impact4 shaft_impact5 shaft_impact6 shaft_impact7 shaft_impact8",
-        detached_shot_particles: "false"
-    },
-    rocket_launcher: {
-        respawn_time: "9",
-        weapon_tag: "rl",
-        color: "df1f2d",
-        speed: "1000",
-        rate: "800",
-        damage: "100",
-        min_splash_damage: "5",
-        splash_damage: "94",
-        self_damage: "47",
-        splash_hemisphere_offset: "20",
-        splash_hemisphere_offset_damage_multiplier: "0.30",
-        default_ammo_pickup_ammo: "5",
-        default_weapon_pickup_ammo: "10",
-        max_ammo: "25",
-        category: "3",
-        bind_group: "3",
-        hit_radius: "2 1",
-        friendly_name: "Rocket Launcher",
-        description: "A rocket launcher.",
-        charge_animation: "6",
-        splash_radius: "122",
-        knockback: "100",
-        knockback_self: "113",
-        ground_knockback: "80",
-        ground_knockback_self: "113",
-        center_of_mass_offset: "0",
-        center_of_mass_offset_self: "0",
-        combo_rate: ["machinegun 750", " super_shotgun 750", "shaft 750", "rocket_launcher_secondary 800", "pncr 750", "blaster 750", "grenade_launcher 750", "void_cannon 750"],
-        shot_particles: "empty_system",
-        shot_particles_attached: "rl_muzzle_v2",
-        missile_particles: "rl_bullet",
-        impact_particles: "rl_impact_v2",
-        decal: ["decal_explosion 340 3 3.561 false false alpha 5", "decal_plasma 320 4 3.561 false false alpha 3", "decal_glow_explosion 140 2 3.561 false false alpha 25"],
-        model: "weaponrl",
-        model_scale: "0.07",
-        model_scale_centered: "0.063",
-        model_position: "2.5 -3 3.28",
-        model_position_centered: "0 -4.1 5",
-        model_camera_scale: "0.5",
-        muzzle: "0 0 0",
-        muzzle_offset: "0 0 0",
-        fov: "40",
-        model_scale_third_person: "1",
-        model_position_third_person: "0 4.5 4",
-        shot_sound: "rl_fire1 rl_fire2 rl_fire3 rl_fire4 rl_fire5",
-        missile_loop_sound: "rl_airbound",
-        impact_sound: "rl_impact1 rl_impact2 rl_impact3 rl_impact4",
-        equip_sound: "rl_equip",
-        hit_sound: "hit_sound_hit1",
-        hit_sound_min_pitch: "0.75",
-        out_of_ammo_sound: "rl_ooa",
-        detached_shot_particles: "false"
-    },
-    crossbow: {
-        respawn_time: "9",
-        weapon_tag: "cb",
-        color: "1d89cc",
-        speed: "5236.3636363636363636363636363636",
-        rate: "1000",
-        penetrating: "true",
-        damage: "70 90",
-        max_damage_distance: "1250",
-        min_damage_distance: "500",
-        gravity: "400",
-        gravity_pitch_offset: "0",
-        default_ammo_pickup_ammo: "10",
-        default_weapon_pickup_ammo: "15",
-        max_ammo: "25",
-        category: "5",
-        bind_group: "5",
-        no_self_damage: "1",
-        center_of_mass_offset: "4",
-        center_of_mass_offset_self: "20",
-        knockback: "25",
-        ground_knockback: "25",
-        hit_radius: "3 2",
-        friendly_name: "Void Cannon",
-        description: "Pew pew pew",
-        combo_rate: ["machinegun 800", " super_shotgun 800", "shaft 800", "rocket_launcher 800", "pncr  800", "blaster 800", "grenade_launcher 800", "void_cannon 800"],
-        shot_particles: "empty_system",
-        shot_particles_attached: "crossbow_muzzle",
-        missile_particles: "crossbow_projectile",
-        impact_particles: "crossbow_impact",
-        missile_trail_particles: "crossbow_bolt_dynamic_trail",
-        decal: ["decal_plasma 30 3 3.561 false false alpha 5", "decal_glow_blue 30 3 3.561 false false alpha 5", "decal_glow_blue 15 3 3.561 false false alpha 5"],
-        muzzle_offset: "0 0 0",
-        model: "weaponcb",
-        model_scale: "0.0625",
-        model_scale_centered: "0.05625",
-        model_position_centered: "0 -4 3",
-        model_position: "2.5 -3.22 2.5",
-        model_camera_scale: "0.6",
-        muzzle: "0 0 0",
-        fov: "40",
-        model_scale_third_person: "1",
-        model_position_third_person: "3 2 12",
-        shot_sound: "cb_fire1 cb_fire2 cb_fire3 cb_fire4 cb_fire5",
-        missile_loop_sound: "cb_airbound",
-        impact_sound: "cb_impact1 cb_impact2 cb_impact3 cb_impact4 cb_impact5",
-        equip_sound: "cb_equip",
-        hit_sound: "hit_sound_hit1",
-        out_of_ammo_sound: "cb_ooa",
-        detached_shot_particles: "false"
-    },
-    pncr: {
-        respawn_time: "9",
-        category: "5",
-        bind_group: "5",
-        weapon_tag: "pncr",
-        color: "1fa8b6",
-        damage: "70",
-        bonus_consecutive_damage: "5",
-        max_bonus_consecutive_damage_instances: "6",
-        knockback: "62.5",
-        ground_knockback: "75.5",
-        default_ammo_pickup_ammo: "5",
-        default_weapon_pickup_ammo: "10",
-        max_ammo: "25",
-        penetrating: "true",
-        friendly_name: "PNCR",
-        description: "Point N'Click Rifle",
-        hit_radius: "1.5 1",
-        charge_animation: "6",
-        charge_animation_bonus: "true",
-        rate: "1450",
-        combo_rate: ["machinegun 1450", " super_shotgun 1450", "shaft 1450", "rocket_launcher 1450", "blaster 1450", "grenade_launcher 1450", "void_cannon 1450"],
-        shot_particles: "pncr_projectile_particles",
-        shot_particles_attached: "pncr_muzzle_particles",
-        impact_particles: "pncr_impact_particles",
-        pfx: ["pncr_lightning_bolt_slot_01 slot_particle_center_01", "pncr_lightning_bolt_slot_02 slot_particle_center_02", "pncr_lightning_bolt_slot_03 slot_particle_center_03", "pncr_lightning_bolt_slot_04 slot_particle_center_04", "pncr_lightning_bolt_slot_05 slot_particle_center_05", "pncr_lightning_bolt_slot_06 slot_particle_center_06", "pncr_lightning_bolt_slot_07 slot_particle_center_07", "pncr_muzzle_filament muzzle"],
-        decal: ["decal 8", "decal_glow_red 16 3 3.561 false false alpha 2.5", "decal_glow_blue 24 3 3.561 false false alpha 5"],
-        model: "weaponpncr",
-        model_scale: "0.055",
-        model_scale_centered: "0.0495",
-        model_position: "2.5 -3 2.35",
-        model_position_centered: "0 -3.4 3.1",
-        model_scale_third_person: ["0.9", "0.85"],
-        model_pivot: "0 0.24 0",
-        model_position_third_person: ["0 0 0", "-4 14.5 12"],
-        model_camera_scale: "0.55",
-        muzzle: "2.5 -3.5 6",
-        fov: "50",
-        impressive_reward: "true",
-        parallel_knockback: "true",
-        shot_sound: "pncr_fire1_default_t1",
-        shot_sound_t2: "pncr_fire1_default_t2",
-        shot_sound_t3: "pncr_fire1_default_t3",
-        equip_sound: "pncr_equip",
-        hit_sound: "hit_sound_hit1",
-        proximity_loop_sound: "pncr_idle_loop",
-        out_of_ammo_sound: "pncr_ooa",
-        impact_sound: "pncr_impact_default1 pncr_impact_default2 pncr_impact_default3 pncr_impact_default4"
-    },
-    machinegun: {
-        respawn_time: "9",
-        weapon_tag: "mac",
-        default_ammo: "100",
-        default_ammo_pickup_ammo: "50",
-        default_weapon_pickup_ammo: "100",
-        max_ammo: "200",
-        color: "cc791d",
-        bind_group: "6",
-        rate: "100",
-        damage: "5",
-        spread: "0",
-        knockback: "4",
-        ground_knockback: "4",
-        charge_animation: "1",
-        hit_radius: "2 1",
-        combo_rate: [" super_shotgun 50", "shaft 50", "rocket_launcher 50", "pncr  50", "blaster 50", "grenade_launcher 50", "void_cannon 50"],
-        loop_animation: "true",
-        shot_particles: "empty_system",
-        shot_particles_attached: "machinegun_muzzle",
-        impact_particles: "machinegun_impact",
-        decal: ["decal 10 3 3.561 false false alpha 1", "decal_glow_red 16 3 3.561 false false alpha 30", "decal_glow 10 3 3.561 false false alpha 20"],
-        model: "weaponmac",
-        model_position: "2.25 -3 0.01",
-        model_scale: "0.11",
-        model_scale_centered: "0.099",
-        model_position_centered: "0 -2.68 0.02",
-        model_pivot: "0 -0.22 0",
-        model_camera_scale: "0.5",
-        fov: "40",
-        muzzle: "2.7 -2.8 14",
-        model_scale_third_person: "1.1",
-        model_position_third_person: "6.5 2 2",
-        shot_sound: "mac_fire1 mac_fire2 mac_fire3 mac_fire4 mac_fire5",
-        end_sound: "mac_fire_release1 mac_fire_release2 mac_fire_release3 mac_fire_release4",
-        equip_sound: "mac_equip",
-        hit_sound: "hit_sound_hit1",
-        out_of_ammo_sound: "mac_ooa",
-        impact_sound: "mg_impact_default1 mg_impact_default2 mg_impact_default3 mg_impact_default4 mg_impact_default1 mg_impact_default5 mg_impact_default6 mg_impact_default7 mg_impact_default8 mg_impact_default9 mg_impact_default10",
-        detached_shot_particles: "false",
-        multi_round_particles: "false"
-    },
-    grenade_launcher: {
-        respawn_time: "9",
-        weapon_tag: "gl",
-        color: "9d3329",
-        speed: "1000",
-        rate: "800",
-        damage: "100",
-        splash_damage: "90",
-        self_damage: "45",
-        bounce: "24",
-        duration: "3000",
-        splash_hemisphere_offset: "20",
-        default_ammo_pickup_ammo: "5",
-        default_weapon_pickup_ammo: "10",
-        max_ammo: "25",
-        target_indicator: "true",
-        bind_group: "7",
-        hit_radius: "2 1",
-        gravity: "450",
-        gravity_pitch_offset: "0.1",
-        bounce_friction: "0.73",
-        splash_radius: "120",
-        knockback: "160",
-        knockback_self: "160",
-        ground_knockback: "160",
-        ground_knockback_self: "160",
-        center_of_mass_offset: "4",
-        center_of_mass_offset_self: "0",
-        combo_rate: ["machinegun 875", " super_shotgun 875", "shaft 875", "pncr 875", "blaster 875", "grenade_launcher 875", "void_cannon 875"],
-        shot_particles: "empty_system",
-        shot_particles_attached: "gl_muzzle",
-        missile_particles: "gl_bullet",
-        impact_particles: "gl_impact_v2",
-        missile_trail_particles: "gl_bullet_dynamic_trail",
-        decal: ["decal_explosion 100 3 3.561 false false alpha 10", "decal_plasma 100 3 3.561 false false alpha 3", "decal_plasma 175 3 3.561 false false alpha 3", "decal_glow_red 60 3 3.561 false false alpha 25", "decal_glow 35 3 3.561 false false alpha 20"],
-        model_camera_scale: ["0.5", "0.6"],
-        model: "weapongl",
-        model_scale: "0.1",
-        model_scale_centered: "0.09",
-        model_position: "2.5 -3.15 3.15",
-        model_position_centered: "0 -3.1 3.35",
-        model_pivot: "0 -0.4 0",
-        muzzle: "0 0 0",
-        fov: "40",
-        model_scale_third_person: "1.1",
-        model_position_third_person: "7 -4 28",
-        shot_sound: "gl_fire1 gl_fire2 gl_fire3 gl_fire4",
-        impact_sound: "gl_impact1 gl_impact2 gl_impact3 gl_impact4",
-        bounce_sound: "gl_bounce1 gl_bounce2 gl_bounce3 gl_bounce4 gl_bounce5",
-        equip_sound: "gl_equip",
-        single_missile_sound: "gl_airbound1 gl_airbound2 gl_airbound3 gl_airbound4",
-        hit_sound: "hit_sound_hit1",
-        hit_sound_min_pitch: "0.75",
-        out_of_ammo_sound: "gl_ooa",
-        detached_shot_particles: "false",
-        team_colored_trail: "true"
-    },
-    super_shotgun_secondary: {
-        respawn_time: "9",
-        weapon_tag: "sss",
-        color: "9bc44d",
-        default_ammo_pickup_ammo: "10",
-        default_weapon_pickup_ammo: "15",
-        max_ammo: "40",
-        charge_animation: "1",
-        shots_per_round: "5",
-        spread_ring: "1 4",
-        spread: "0.01",
-        spread_radius: "40",
-        bursts: "2 0.25",
-        rate: "1000",
-        damage: "10",
-        speed: "2618.18182",
-        splash_damage: "0",
-        min_hits: "0",
-        bounce: "2",
-        knockback: "6.1",
-        ground_knockback: "7.1",
-        parallel_knockback: "true",
-        impact_particles_distance_delay: "0.12",
-        independent_upgrade_model: "true",
-        gravity: "-100000",
-        gravity_pitch_offset: "0",
-        duration: "-10000",
-        hit_radius: "1.7 3",
-        group_damage: "true",
-        max_damage_reward: "true",
-        combo_rate: ["machinegun 850", " super_shotgun 1000", "shaft 850", "rocket_launcher 850", "pncr 850", "blaster 850", "grenade_launcher 850", "void_cannon 850"],
-        shot_particles: "empty_system",
-        shot_particles_attached: "sss_tier_2_muzzle",
-        missile_particles: "ss_secondary_projectile",
-        impact_particles: "ss_secondary_impact",
-        missile_trail_particles: "empty_system",
-        decal: ["decal 7 3 3.561 false false alpha 7", "decal_glow_red 16 3 3.561 false false alpha 30", "decal_glow 10 3 3.561 false false alpha 50"],
-        model: "weaponss",
-        model_position: "2.5 -3 3.1",
-        model_camera_scale: "0.5",
-        model_scale: "0.075",
-        model_scale_centered: "0.0675",
-        model_position_centered: "-0.15 -2.9 3.4",
-        muzzle: "2.6 -2.7 4.7",
-        fov: "40",
-        model_scale_third_person: "1",
-        model_position_third_person: "-3.2 0 6",
-        shot_sound: "ss_fire1 ss_fire2 ss_fire3 ss_fire4",
-        equip_sound: "ss_equip",
-        out_of_ammo_sound: "ss_ooa",
-        hit_sound: "hit_sound_hit1",
-        detached_shot_particles: "false",
-        multi_round_particles: "false",
-        unlimited_ammo: "false"
-    },
-    rocket_launcher_secondary: {
-        respawn_time: "9",
-        weapon_tag: "rls",
-        color: "9d3329",
-        speed: "1000",
-        rate: "800",
-        damage: "100",
-        splash_damage: "90",
-        ammo_cost: "2",
-        bounce: "24",
-        duration: "3000",
-        splash_hemisphere_offset: "20",
-        default_ammo_pickup_ammo: "5",
-        default_weapon_pickup_ammo: "10",
-        max_ammo: "25",
-        target_indicator: "true",
-        hit_radius: "2 1",
-        gravity: "450",
-        gravity_pitch_offset: "0.1",
-        bounce_friction: "0.73",
-        splash_radius: "120",
-        knockback: "160",
-        knockback_self: "160",
-        ground_knockback: "160",
-        ground_knockback_self: "160",
-        center_of_mass_offset: "4",
-        center_of_mass_offset_self: "0",
-        combo_rate: ["machinegun 750", " super_shotgun 750", "shaft 750", "rocket_launcher 800", "pncr 750", "blaster 750", "grenade_launcher 750", "void_cannon 750"],
-        shot_particles: "empty_system",
-        shot_particles_attached: "gl_muzzle",
-        missile_particles: "gl_bullet",
-        impact_particles: "gl_impact_v2",
-        missile_trail_particles: "gl_bullet_dynamic_trail",
-        decal: ["decal_explosion 100 3 3.561 false false alpha 10", "decal_plasma 100 3 3.561 false false alpha 3", "decal_plasma 175 3 3.561 false false alpha 3", "decal_glow_red 60 3 3.561 false false alpha 25", "decal_glow 35 3 3.561 false false alpha 20"],
-        model_camera_scale: ["0.5", "0.6"],
-        model: "weaponrl",
-        model_scale: "0.1",
-        model_scale_centered: "0.09",
-        model_position: "2.5 -3.15 3.15",
-        model_position_centered: "0 -3.1 3.35",
-        model_pivot: "0 -0.4 0",
-        muzzle: "0 0 0",
-        fov: "40",
-        model_scale_third_person: "1.1",
-        model_position_third_person: "7 -4 28",
-        shot_sound: "gl_fire1 gl_fire2 gl_fire3 gl_fire4",
-        impact_sound: "gl_impact1 gl_impact2 gl_impact3 gl_impact4",
-        bounce_sound: "gl_bounce1 gl_bounce2 gl_bounce3 gl_bounce4 gl_bounce5",
-        equip_sound: "gl_equip",
-        single_missile_sound: "gl_airbound1 gl_airbound2 gl_airbound3 gl_airbound4",
-        hit_sound: "hit_sound_hit1",
-        hit_sound_min_pitch: "0.75",
-        out_of_ammo_sound: "gl_ooa",
-        detached_shot_particles: "false",
-        team_colored_trail: "true"
-    },
-    void_cannon: {
-        respawn_time: "9",
-        bind_group: "7",
-        weapon_tag: "vc",
-        color: "ff99aa",
-        damage: "30",
-        knockback: "82.5",
-        ground_knockback: "95.5",
-        default_ammo: "25",
-        default_ammo_pickup_ammo: "10",
-        default_weapon_pickup_ammo: "25",
-        max_ammo: "40",
-        bonus_consecutive_damage: "2",
-        max_bonus_consecutive_damage_instances: "10",
-        friendly_name: "Void Cannon",
-        description: "Void Cannon",
-        hit_radius: "1.5 1",
-        rate: "650",
-        combo_rate: ["machinegun 600", " super_shotgun 600", "shaft 600", "rocket_launcher 600", "pncr 600", "blaster 600", "grenade_launcher 600", "void_cannon_secondary 600"],
-        shot_particles: "vc_projectile_particles",
-        shot_particles_attached: "vc_muzzle_particles",
-        shot_sound: ["vc_fire1", "vc_fire_default1 vc_fire_default2 vc_fire_default3 vc_fire_default4 vc_fire_default5"],
-        end_sound: "vc_fire_release",
-        missile_loop_sound: "vc_airbound",
-        impact_sound: ["vc_impact1", "pncr_impact_default1 pncr_impact_default2 pncr_impact_default3 pncr_impact_default4"],
-        equip_sound: ["vc_equip", "w9_equip"],
-        hit_sound: ["hit_sound_hit1", "hit_sound_hit1"],
-        out_of_ammo_sound: ["vc_ooa", "w9_ooa"],
-        decal: ["decal 8", "decal_glow_red 16 3 3.561 false false alpha 2.5", "decal_glow_blue 24 3 3.561 false false alpha 5"],
-        model: "weaponvc",
-        model_scale: "0.07",
-        model_scale_centered: "0.0495",
-        model_position: "2.5 -3.8 2.35",
-        model_position_centered: "0 -3.4 2.87",
-        model_scale_third_person: ["0.9", "0.85"],
-        model_pivot: "0 0.24 0",
-        model_position_third_person: ["0 0 0", "-4 14.5 12"],
-        model_camera_scale: "0.55",
-        muzzle: "2.5 -3.5 6",
-        fov: "50",
-        parallel_knockback: "true",
-        can_destroy: "2"
-    },
-    void_cannon_secondary: {
-        respawn_time: "9",
-        weapon_tag: "vcs",
-        color: "ff99aa",
-        speed: "750",
-        rate: "500",
-        damage: "30",
-        player_hit_only: "true",
-        splash_damage: "125",
-        splash_radius: "175",
-        default_ammo_pickup_ammo: "10",
-        default_weapon_pickup_ammo: "25",
-        max_ammo: "40",
-        ammo_cost: "2",
-        center_of_mass_offset: "4",
-        center_of_mass_offset_self: "20",
-        knockback: "100",
-        ground_knockback: "100",
-        knockback_self: "100",
-        ground_knockback_self: "100",
-        hit_radius: "4.4 2",
-        friendly_name: "Void Cannon",
-        description: "Pew pew pew",
-        model: "weaponvc",
-        combo_rate: ["machinegun 400", " super_shotgun 400", "shaft 400", "rocket_launcher 400", "pncr 400", "blaster 400", "grenade_launcher 400", "void_cannon 500"],
-        decal: ["decal_plasma 30 3 3.561 false false alpha 5", "decal_glow_blue 25 1.75 3.561 false false alpha 40"],
-        shot_particles: "empty_system",
-        shot_particles_attached: "w9_muzzle",
-        missile_particles: "w9_bullet",
-        impact_particles: "w9_impact_v2",
-        shot_sound: "vc_fire_secondary1 vc_fire_secondary2 vc_fire_secondary3 vc_fire_secondary4 vc_fire_secondary5",
-        missile_loop_sound: "w9_airbound",
-        impact_sound: "vc_projectile_explosion1 vc_projectile_explosion2 vc_projectile_explosion3 vc_projectile_explosion4",
-        equip_sound: "w9_equip",
-        out_of_ammo_sound: "w9_ooa",
-        activation_sound: "w9_projectile_activation",
-        hit_sound: "hit_sound_hit1",
-        hit_sound_min_pitch: "0.75",
-        detached_shot_particles: "false",
-        can_be_destroyed: "2"
-    },
-    healing_weeball: {
-        bind_group: "8",
-        color: "67da80",
-        weapon_tag: "hw",
-        sort: "100",
-        unlimited_ammo: "false",
-        speed: "1100",
-        rate: "1000",
-        damage: "0",
-        splash_radius: "260",
-        default_ammo_pickup_ammo: "1",
-        default_weapon_pickup_ammo: "1",
-        throwable: "true",
-        throw_animation: "true",
-        healing: "true",
-        center_of_mass_offset: "20",
-        gravity_pitch_offset: "0.05",
-        combo_rate: ["machinegun 50", "shelly\t50", " shelly_spreader 50", "defacer 50", "rocket_launcher 50", "pncr  50", "void_cannon 50", "grenade_launcher 50"],
-        gravity: "200",
-        shot_particles: "empty_system",
-        shot_particles_attached: "empty",
-        missile_particles: "gl_bullet_v2_green_heal",
-        missile_trail_particles: "weeb_dynamic_trail_green_heal",
-        model: "weaponhw",
-        model_position: "0.93727 -5.30881 3.85738",
-        model_position_third_person: "10 -60 -35",
-        model_scale: "0.1",
-        model_rotation: "186 10 -4",
-        model_camera_scale: "0.8",
-        muzzle: "0 0 0",
-        fov: "55",
-        muzzle_offset: "0 0 0",
-        shot_sound: "weeble_hw_fire1 weeble_hw_fire2 weeble_hw_fire3 weeble_hw_fire4 weeble_hw_fire5",
-        impact_sound: "hw_impact1",
-        equip_sound: "hw_equip",
-        out_of_ammo_sound: "gl_ooa",
-        hit_sound: "hit_sound_hit1",
-        hit_sound_min_pitch: "0.75",
-        single_missile_sound: "weeble_airbound_short1 weeble_airbound_short2 weeble_airbound_short3 weeble_airbound_short4 weeble_airbound_short5 weeble_airbound_short6 weeble_airbound_short7",
-        detached_shot_particles: "false"
-    },
-    implosive_weeball: {
-        pfx: "implode_weeble_filament slot_pfx_eye",
-        color: "be2f83",
-        weapon_tag: "iw",
-        unlimited_ammo: "false",
-        speed: "1100",
-        rate: "1000",
-        throw_animation: "true",
-        damage: "5",
-        no_self_damage: "1",
-        min_splash_damage: "5",
-        team_damage: "0",
-        splash_team_damage: "0",
-        knockback: "-250",
-        ground_knockback: "-300",
-        knockback_self: "-200",
-        ground_knockback_self: "-200",
-        splash_radius: "280",
-        default_ammo_pickup_ammo: "1",
-        default_weapon_pickup_ammo: "1",
-        center_of_mass_offset: "20",
-        throwable: "true",
-        combo_rate: ["machinegun 50", "shelly\t50", " shelly_spreader 50", "defacer 50", "rocket_launcher 50", "pncr  50", "void_cannon 50", "grenade_launcher 1000"],
-        gravity_pitch_offset: "0.05",
-        gravity: "200",
-        shot_particles: "empty_system",
-        shot_particles_attached: "empty",
-        missile_particles: "gl_bullet_v2_purple",
-        impact_particles: "implode_impact",
-        missile_trail_particles: "weeb_dynamic_trail_purple",
-        decal: ["decal_plasma 100 3 3.561 false 3", "decal_plasma 175 3 3.561 false 3", "decal_plasma 300 3 3.561 false 3", "decal_glow_red 60 3 3.561 false 25", "decal_glow 35 3 3.561 false 20"],
-        model: "weaponiw",
-        model_position: "1.93727 -5.30881 3.85738",
-        model_position_third_person: "10 -60 -35",
-        model_scale: "0.1",
-        model_rotation: "186 10 -4",
-        model_camera_scale: "0.5",
-        muzzle: "0 0 0",
-        fov: "55",
-        muzzle_offset: "0 0 0",
-        shot_sound: "weeble_iw_fire1 weeble_iw_fire2 weeble_iw_fire3 weeble_iw_fire4 weeble_iw_fire5",
-        impact_sound: "iw_impact1",
-        equip_sound: "iw_equip",
-        out_of_ammo_sound: "gl_ooa",
-        hit_sound: "hit_sound_hit1",
-        hit_sound_min_pitch: "0.75",
-        single_missile_sound: "weeble_airbound1 weeble_airbound2 weeble_airbound3 weeble_airbound4 weeble_airbound5 weeble_airbound6 weeble_airbound7",
-        repeat: "1",
-        repeat_delay: "1",
-        detached_shot_particles: "false"
-    },
-    slowfield_weeball: {
-        color: "28cdcd",
-        weapon_tag: "sw",
-        unlimited_ammo: "false",
-        speed: "1100",
-        rate: "1000",
-        damage: "5",
-        no_self_damage: "1",
-        min_splash_damage: "5",
-        team_damage: "0",
-        splash_team_damage: "0",
-        splash_radius: "260",
-        default_ammo_pickup_ammo: "1",
-        default_weapon_pickup_ammo: "1",
-        throwable: "true",
-        throw_animation: "true",
-        center_of_mass_offset: "20",
-        gravity_pitch_offset: "0.05",
-        combo_rate: ["machinegun 50", "shelly\t50", " shelly_spreader 50", "defacer 50", "rocket_launcher 50", "pncr  50", "void_cannon 50", "grenade_launcher 1000"],
-        gravity: "200",
-        slowfield: "true",
-        slowfield_radius: "220",
-        slowfield_duration: "5",
-        shot_particles: "empty_system",
-        shot_particles_attached: "empty",
-        missile_particles: "gl_bullet_v2_blue",
-        impact_particles: "slow_weeble_impact",
-        missile_trail_particles: "weeb_dynamic_trail_blue",
-        model: "weaponsw",
-        model_position: "1.93727 -5.30881 3.85738",
-        model_position_third_person: "10 -60 -35",
-        model_scale: "0.1",
-        model_rotation: "186 10 -4",
-        model_camera_scale: "0.5",
-        muzzle: "0 0 0",
-        fov: "55",
-        muzzle_offset: "0 0 0",
-        shot_sound: "weeble_sw_fire1 weeble_sw_fire2 weeble_sw_fire3 weeble_sw_fire4 weeble_sw_fire5",
-        impact_sound: "sw_impact1",
-        equip_sound: "sw_equip",
-        out_of_ammo_sound: "gl_ooa",
-        hit_sound: "hit_sound_hit1",
-        hit_sound_min_pitch: "0.75",
-        single_missile_sound: "weeble_airbound1 weeble_airbound2 weeble_airbound3 weeble_airbound4 weeble_airbound5 weeble_airbound6 weeble_airbound7",
-        detached_shot_particles: "false"
-    },
-    explosive_weeball: {
-        pfx: "bomb_weeble_fuse_filament slot_particle_fuse",
-        color: "b4513b",
-        weapon_tag: "bw",
-        unlimited_ammo: "false",
-        speed: "1100",
-        rate: "1000",
-        damage: "5",
-        no_self_damage: "1",
-        min_splash_damage: "5",
-        team_damage: "0",
-        splash_team_damage: "0",
-        knockback: "250",
-        ground_knockback: "250",
-        knockback_self: "200",
-        ground_knockback_self: "200",
-        splash_radius: "240",
-        default_ammo_pickup_ammo: "1",
-        default_weapon_pickup_ammo: "1",
-        throw_animation: "true",
-        center_of_mass_offset: "20",
-        center_of_mass_offset_self: "0",
-        throwable: "true",
-        combo_rate: ["machinegun 50", "shelly\t50", " shelly_spreader 50", "defacer 50", "rocket_launcher 50", "pncr  50", "void_cannon 50", "grenade_launcher 50"],
-        gravity_pitch_offset: "0.05",
-        gravity: "200",
-        shot_particles: "empty_system",
-        shot_particles_attached: "empty",
-        missile_particles: "gl_bullet_v2",
-        impact_particles: "bomb_weeble_explosion",
-        missile_trail_particles: "gl_bullet_dynamic_trail",
-        decal: ["decal_plasma 100 3 3.561 false 3", "decal_plasma 175 3 3.561 false 3", "decal_plasma 300 3 3.561 false 3", "decal_glow_red 60 3 3.561 false 25", "decal_glow 35 3 3.561 false 20"],
-        model: "weaponbw",
-        model_position_third_person: "10 -60 -35",
-        model_position: "1.93727 -5.30881 3.85738",
-        model_scale: "0.1",
-        model_rotation: "186 10 -4",
-        model_camera_scale: "0.5",
-        muzzle: "0 0 0",
-        fov: "55",
-        muzzle_offset: "0 0 0",
-        shot_sound: "weeble_bw_fire1 weeble_bw_fire2 weeble_bw_fire3 weeble_bw_fire4 weeble_bw_fire5",
-        impact_sound: "bw_impact1 bw_impact2 bw_impact3 bw_impact4 bw_impact5",
-        equip_sound: "bw_equip",
-        out_of_ammo_sound: "gl_ooa",
-        hit_sound: "hit_sound_hit1",
-        hit_sound_min_pitch: "0.75",
-        single_missile_sound: "weeble_airbound1 weeble_airbound2 weeble_airbound3 weeble_airbound4 weeble_airbound5 weeble_airbound6 weeble_airbound7",
-        detached_shot_particles: "false"
-    },
-    smoke_weeball: {
-        color: "5a811e",
-        weapon_tag: "smw",
-        unlimited_ammo: "false",
-        speed: "1100",
-        rate: "1000",
-        damage: "5",
-        no_self_damage: "1",
-        min_splash_damage: "5",
-        team_damage: "0",
-        splash_team_damage: "0",
-        splash_radius: "260",
-        default_ammo_pickup_ammo: "1",
-        default_weapon_pickup_ammo: "1",
-        throwable: "true",
-        throw_animation: "true",
-        center_of_mass_offset: "20",
-        gravity_pitch_offset: "0.05",
-        combo_rate: ["machinegun 50", "shelly\t50", " shelly_spreader 50", "defacer 50", "rocket_launcher 50", "pncr  50", "void_cannon 50", "grenade_launcher 50"],
-        gravity: "200",
-        shot_particles: "empty_system",
-        shot_particles_attached: "empty",
-        missile_particles: "gl_bullet_v2_green",
-        impact_particles: "smoke_weeble_impact",
-        missile_trail_particles: "weeb_dynamic_trail_green",
-        model: "weaponsmw",
-        model_position: "1.93727 -5.30881 3.85738",
-        model_position_third_person: "10 -60 -35",
-        model_scale: "0.1",
-        model_rotation: "186 10 -4",
-        model_camera_scale: "0.5",
-        muzzle: "0 0 0",
-        fov: "55",
-        muzzle_offset: "0 0 0",
-        shot_sound: "weeble_smw_fire1 weeble_smw_fire2 weeble_smw_fire3 weeble_smw_fire4 weeble_smw_fire5",
-        impact_sound: "smw_impact1 smw_impact2 smw_impact3 smw_impact4",
-        equip_sound: "smw_equip",
-        out_of_ammo_sound: "gl_ooa",
-        hit_sound: "hit_sound_hit1",
-        hit_sound_min_pitch: "0.75",
-        single_missile_sound: "weeble_airbound1 weeble_airbound2 weeble_airbound3 weeble_airbound4 weeble_airbound5 weeble_airbound6 weeble_airbound7",
-        detached_shot_particles: "false"
-    },
-    knock_weeball: {
-        pfx: "bomb_weeble_fuse_filament slot_particle_fuse",
-        color: "b4513b",
-        weapon_tag: "kw",
-        unlimited_ammo: "false",
-        speed: "1100",
-        rate: "800",
-        damage: "0",
-        knockback: "175",
-        knockback_self: "140",
-        ground_knockback: "175",
-        ground_knockback_self: "140",
-        splash_radius: "240",
-        default_ammo_pickup_ammo: "1",
-        default_weapon_pickup_ammo: "1",
-        throw_animation: "true",
-        center_of_mass_offset: "20",
-        center_of_mass_offset_self: "0",
-        throwable: "true",
-        combo_rate: ["machinegun 50", "shelly\t50", " shelly_spreader 50", "defacer 50", "rocket_launcher 50", "pncr  50", "void_cannon 50", "grenade_launcher 50"],
-        gravity_pitch_offset: "0.05",
-        gravity: "200",
-        shot_particles: "empty_system",
-        shot_particles_attached: "empty",
-        missile_particles: "gl_bullet_v2",
-        impact_particles: "bomb_weeble_explosion",
-        missile_trail_particles: "gl_bullet_dynamic_trail",
-        decal: ["decal_plasma 100 3 3.561 false 3", "decal_plasma 175 3 3.561 false 3", "decal_plasma 300 3 3.561 false 3", "decal_glow_red 60 3 3.561 false 25", "decal_glow 35 3 3.561 false 20"],
-        model: "weaponbw",
-        model_position_third_person: "10 -60 -35",
-        model_position: "1.93727 -5.30881 3.85738",
-        model_scale: "0.1",
-        model_rotation: "186 10 -4",
-        model_camera_scale: "0.5",
-        muzzle: "0 0 0",
-        fov: "55",
-        muzzle_offset: "0 0 0",
-        shot_sound: "weeble_bw_fire1 weeble_bw_fire2 weeble_bw_fire3 weeble_bw_fire4 weeble_bw_fire5",
-        impact_sound: "bw_impact1 bw_impact2 bw_impact3 bw_impact4 bw_impact5",
-        equip_sound: "bw_equip",
-        out_of_ammo_sound: "gl_ooa",
-        hit_sound: "hit_sound_hit1",
-        hit_sound_min_pitch: "0.75",
-        single_missile_sound: "weeble_airbound1 weeble_airbound2 weeble_airbound3 weeble_airbound4 weeble_airbound5 weeble_airbound6 weeble_airbound7",
-        detached_shot_particles: "false"
-    },
-    survival_amplifier_weeball: {
-        color: "ffd500",
-        weapon_tag: "saw",
-        unlimited_ammo: "false",
-        speed: "1100",
-        rate: "1000",
-        damage: "5",
-        no_self_damage: "1",
-        min_splash_damage: "5",
-        team_damage: "0",
-        splash_team_damage: "0",
-        splash_radius: "260",
-        default_ammo_pickup_ammo: "1",
-        default_weapon_pickup_ammo: "1",
-        throwable: "true",
-        throw_animation: "true",
-        center_of_mass_offset: "20",
-        gravity_pitch_offset: "0.05",
-        combo_rate: ["machinegun 50", "shelly\t50", " shelly_spreader 50", "defacer 50", "rocket_launcher 50", "pncr  50", "void_cannon 50", "grenade_launcher 50"],
-        gravity: "200",
-        amplifier_area: "true",
-        amplifier_area_radius: "120",
-        amplifier_area_duration: "10",
-        shot_particles: "empty_system",
-        shot_particles_attached: "empty",
-        missile_particles: "gl_bullet_v2_green",
-        impact_particles: "survival_amplifier_weeble_explosion",
-        missile_trail_particles: "weeb_dynamic_trail_green",
-        model: "weaponsaw",
-        model_position: "1.93727 -5.30881 3.85738",
-        model_position_third_person: "10 -60 -35",
-        model_scale: "0.1",
-        model_rotation: "186 10 -4",
-        model_camera_scale: "0.5",
-        muzzle: "0 0 0",
-        fov: "55",
-        muzzle_offset: "0 0 0",
-        shot_sound: "weeble_sw_fire1 weeble_sw_fire2 weeble_sw_fire3 weeble_sw_fire4 weeble_sw_fire5",
-        impact_sound: "sw_impact_alpha_20_impactlayer",
-        equip_sound: "sw_equip",
-        out_of_ammo_sound: "gl_ooa",
-        hit_sound: "hit_sound_hit1",
-        hit_sound_min_pitch: "0.75",
-        single_missile_sound: "weeble_airbound1 weeble_airbound2 weeble_airbound3 weeble_airbound4 weeble_airbound5 weeble_airbound6 weeble_airbound7",
-        detached_shot_particles: "false"
-    },
-    survival_vulnerability_weeball: {
-        color: "ee0000",
-        weapon_tag: "svw",
-        unlimited_ammo: "false",
-        speed: "1100",
-        rate: "1000",
-        damage: "5",
-        no_self_damage: "1",
-        min_splash_damage: "5",
-        team_damage: "0",
-        splash_team_damage: "0",
-        splash_radius: "260",
-        default_ammo_pickup_ammo: "1",
-        default_weapon_pickup_ammo: "1",
-        throwable: "true",
-        throw_animation: "true",
-        center_of_mass_offset: "20",
-        gravity_pitch_offset: "0.05",
-        combo_rate: ["machinegun 50", "shelly\t50", " shelly_spreader 50", "defacer 50", "rocket_launcher 50", "pncr  50", "void_cannon 50", "grenade_launcher 50"],
-        gravity: "200",
-        vulnerability_area: "true",
-        vulnerability_area_radius: "240",
-        vulnerability_area_duration: "10",
-        shot_particles: "empty_system",
-        shot_particles_attached: "empty",
-        missile_particles: "gl_bullet_v2",
-        impact_particles: "survival_vulnerability_weeble_explosion",
-        missile_trail_particles: "gl_bullet_dynamic_trail",
-        model: "weaponsvw",
-        model_position: "1.93727 -5.30881 3.85738",
-        model_position_third_person: "10 -60 -35",
-        model_scale: "0.1",
-        model_rotation: "186 10 -4",
-        model_camera_scale: "0.5",
-        muzzle: "0 0 0",
-        fov: "55",
-        muzzle_offset: "0 0 0",
-        shot_sound: "weeble_sw_fire1 weeble_sw_fire2 weeble_sw_fire3 weeble_sw_fire4 weeble_sw_fire5",
-        impact_sound: "sw_impact_alpha_20_impactlayer",
-        equip_sound: "sw_equip",
-        out_of_ammo_sound: "gl_ooa",
-        hit_sound: "hit_sound_hit1",
-        hit_sound_min_pitch: "0.75",
-        single_missile_sound: "weeble_airbound1 weeble_airbound2 weeble_airbound3 weeble_airbound4 weeble_airbound5 weeble_airbound6 weeble_airbound7",
-        detached_shot_particles: "false"
-    },
-    survival_heal_weeball: {
-        color: "67da80",
-        weapon_tag: "shw",
-        unlimited_ammo: "false",
-        speed: "1100",
-        rate: "1000",
-        damage: "0",
-        no_self_damage: "1",
-        min_splash_damage: "0",
-        team_damage: "0",
-        splash_team_damage: "0",
-        splash_radius: "260",
-        default_ammo_pickup_ammo: "1",
-        default_weapon_pickup_ammo: "1",
-        throwable: "true",
-        throw_animation: "true",
-        center_of_mass_offset: "20",
-        gravity_pitch_offset: "0.05",
-        combo_rate: ["machinegun 50", "shelly\t50", " shelly_spreader 50", "defacer 50", "rocket_launcher 50", "pncr  50", "void_cannon 50", "grenade_launcher 50"],
-        gravity: "200",
-        heal_bomb: "true",
-        heal_bomb_radius: "120",
-        shot_particles: "empty_system",
-        shot_particles_attached: "empty",
-        missile_particles: "gl_bullet_v2_green_heal",
-        impact_particles: "survival_heal_weeble_explosion",
-        missile_trail_particles: "weeb_dynamic_trail_green_heal",
-        model: "weaponshw",
-        model_position: "1.93727 -5.30881 3.85738",
-        model_position_third_person: "10 -60 -35",
-        model_scale: "0.1",
-        model_rotation: "186 10 -4",
-        model_camera_scale: "0.5",
-        muzzle: "0 0 0",
-        fov: "55",
-        muzzle_offset: "0 0 0",
-        shot_sound: "weeble_hw_fire1 weeble_hw_fire2 weeble_hw_fire3 weeble_hw_fire4 weeble_hw_fire5",
-        impact_sound: "hw_impact_bravo_20_impactlayer",
-        equip_sound: "hw_equip",
-        out_of_ammo_sound: "gl_ooa",
-        hit_sound: "hit_sound_hit1",
-        hit_sound_min_pitch: "0.75",
-        single_missile_sound: "weeble_airbound_short1 weeble_airbound_short2 weeble_airbound_short3 weeble_airbound_short4 weeble_airbound_short5 weeble_airbound_short6 weeble_airbound_short7",
-        detached_shot_particles: "false"
+var currentCrosshairCreatorWeaponIndex = -1;
+var currentCrosshairCreatorZoomWeaponIndex = -1;
+var canvasCrosshairSize = Math.ceil(.1 * window.innerHeight) * 2;
+document.documentElement.style.setProperty("--crosshair-canvas-size", "" + canvasCrosshairSize);
+document.documentElement.style.setProperty("--crosshair-copy-buttons", "" + (canvasCrosshairSize - 4));
+const crosshairLayers = ["layer1", "layer2", "layer3"];
+const crosshairLayerTypes = ["none", "cross", "dot", "circle", "pointer"];
+const savedCrosshairStrings = [];
+
+function initialize_saved_crosshair_engine_variables() {
+    let max_saved_crosshairs = 10;
+    for (let i = 0; i < max_saved_crosshairs; i++) {
+        engine.call("initialize_custom_component_value", "hud_saved_crosshair_definition:" + i)
     }
-};
-var global_gamemode_data = {
-    default: {
-        game_ctf: "0",
-        game_macguffin: "0",
-        game_race: "0",
-        game_flagrun: "0",
-        game_ghosthunt: "0",
-        game_extinction: "0",
-        game_survival: "0",
-        game_wipeout: "0",
-        game_ffa: "0",
-        game_ft: "0",
-        game_ftc: "0",
-        game_practice: "0",
-        game_tutorial: "0",
-        game_enable_items: "1",
-        game_enable_drop: "0",
-        game_initial_item_time: "0",
-        game_truce_time: "0",
-        game_team_mode: "0",
-        game_aim_mode: "0",
-        game_draft_time: "0",
-        game_rounds: "1",
-        game_tide_bonus: "0",
-        game_confirmation_frag: "0",
-        game_time_limit: "0",
-        game_score_limit: "0",
-        game_respawn_time_type: "0",
-        game_maximum_respawn_time_ms: "5000",
-        game_minimum_respawn_time_ms: "1500",
-        game_respawn_time_increment_per_death_ms: "0",
-        game_allow_concede: "0",
-        game_wipeout_spawn_protection_s: "1",
-        game_hp: "125",
-        game_stable_hp: "100",
-        game_ghost_limit_hp: "100",
-        game_max_hp: "200",
-        game_armor: "0",
-        game_stable_armor: "100",
-        game_max_armor: "200",
-        game_high_armor: "175",
-        game_medium_armor: "150",
-        game_unlimited_ammo: "0",
-        game_powerup_health: "25",
-        game_powerup_armor: "25",
-        game_drop_powerup_on_death: "1",
-        game_powerup_first_spawn_time: "60",
-        game_powerup_time_cycle: "0",
-        game_powerup_time_between_spawns: "120",
-        game_self_damage: "1",
-        game_wipe_out_mode: "0",
-        game_wipe_out_timer_mode: "0",
-        game_friendly_fire: "1",
-        game_weapon_respawn_time: "0",
-        game_equip_time_ms: "-1",
-        game_switch_time_ms: "-1",
-        game_weapons_cap_ammo: "0",
-        game_overtime: "120",
-        game_overtime_score_limit: "0",
-        game_overtime_score_threshold: "0",
-        game_mercy_limit: "0",
-        game_allow_team_sound_override: "0",
-        game_spawn_random_chance: "0",
-        game_spawn_farthest_chance: "0",
-        game_spawn_farthest_foe_chance: "1",
-        game_spawn_farthest_threshold: "3",
-        game_spawn_safety_radius: "0",
-        game_full_charge: "0",
-        game_warmup_time: "90",
-        game_gain_score_on_kill: "1",
-        game_countdown: "5",
-        game_round_countdown: "5",
-        game_double_damage_invulnerability: "0",
-        game_freeze_time: ["0", "0"],
-        game_freeze_save_time: ["0", "0"],
-        game_classes: "0",
-        game_pve: "0",
-        game_camera_offset: "0",
-        game_camera_hor_offset: "0",
-        game_player_col_radius_hor: "15",
-        game_player_col_radius_ver_bottom: "24",
-        game_model: "0",
-        game_player_hitbox_height: "57",
-        game_lifesteal: "0",
-        game_life_count: "0",
-        game_lifesteal_amount_when_last_alive: "0",
-        game_inventory_slots: "0",
-        game_deposit_coins: "0",
-        game_freeze_save_radius: "0",
-        game_allow_implosive_weeball: "1",
-        game_allow_slowfield_weeball: "1",
-        game_allow_explosive_weeball: "1",
-        game_allow_smoke_weeball: "1",
-        game_allow_knock_weeball: "0",
-        game_give_weeball_on_spawn: "0",
-        game_enable_weeballs: "0",
-        game_unlimited_weeballs: "0",
-        game_hud_show_team_alive_count: "0",
-        game_hud_duel: "0",
-        game_weapon_mode: '""',
-        phy_kinetic_accel: "0",
-        phy_wall_jumping: "0",
-        phy_jump_speedup: "0",
-        phy_sprint_max: "30",
-        phy_sprint_rate: "0",
-        phy_vertical_smoothing_factor: "0.965",
-        phy_strafe_cycles: "1",
-        phy_scale: "1",
-        phy_ramp_impulse_up: "150",
-        phy_target_tickrate: "125",
-        phy_gravity: "800",
-        phy_jump_impulse: "275",
-        phy_lateral_speed_multiplier: "1.0",
-        phy_back_speed_multiplier: "1.0",
-        phy_max_ground_speed: "0",
-        phy_max_hor_speed: "0",
-        phy_crouch_speed: "210",
-        phy_speed: "320",
-        phy_accel_ground: "10",
-        phy_deceleration_ground: "100",
-        phy_surface_friction: "6",
-        phy_air_speed: "320",
-        phy_accel_air: "1",
-        phy_air_speed_anisotropy: "1",
-        phy_accel_air_anisotropy: "1",
-        phy_auto_jump: "1",
-        phy_strafe_jumping: "1",
-        phy_double_jump: "0",
-        phy_double_jump_impulse: "400",
-        phy_decel: "0.3",
-        phy_air_steering_torque: "0",
-        phy_air_steering_torque_anisotropy: "0",
-        phy_air_steering_dottenuation: "1",
-        phy_air_steering_bonus: "0",
-        phy_bolt_type: "1",
-        phy_bolt_cooldown: "3",
-        phy_bolt_cooldown_recovery: "0",
-        phy_bolt_minimum_ground_time: "0.0697941",
-        phy_bolt_base_speed: "482",
-        phy_bolt_extra_speed: "0.1",
-        phy_bolt_extra_accel: "0",
-        phy_bolt_extra_accel_time: "0",
-        phy_bolt_pitch: "22.5",
-        phy_bolt_kinetic_energy: "51200",
-        phy_bolt_ascent_impulse: "200",
-        phy_bolt_activation_time: "0",
-        phy_slide: "0",
-        phy_slide_accel: "10",
-        phy_slide_friction: "0.5",
-        phy_slide_duration_eigenvalue: "2",
-        phy_slide_duration_max: "2",
-        phy_slide_duration_gamma: "1",
-        phy_multi_jump: "0",
-        phy_multi_jump_time: "0.4",
-        phy_step_up: "0",
-        phy_ramp_rel_impulse_up: "0",
-        phy_ramp_up_speed: "0",
-        phy_ramp_down_speed: "0",
-        phy_strafe_mode: "1",
-        phy_triple_jump: "0",
-        phy_hook: "0",
-        net_server_hitscan: "1",
-        net_max_backwards_reconciliation_ping: "0.12"
-    },
-    tutorial: {
-        game_tutorial: "1",
-        game_gain_score_on_kill: "0",
-        game_countdown: "0",
-        game_self_damage: "0",
-        game_unlimited_ammo: "1",
-        phy_fly: "0",
-        map: ["tut_tutorial", "tut_practice", "tut_example", "tut_example_logic"]
-    },
-    edit: {
-        game_enable_items: "1",
-        game_self_damage: "0",
-        game_friendly_fire: "0",
-        game_warmup_time: "0",
-        game_draft_time: "0",
-        game_countdown: "0",
-        game_time_limit: "0",
-        game_score_limit: "0",
-        game_gain_score_on_kill: "0",
-        weapon: ["sword 999", "machinegun 999", "blaster 999 true", "super_shotgun 999", "rocket_launcher 999", "shaft 999", "pncr 999", "void_cannon 999", "healing_weeball 999", "smoke_weeball 999", "implosive_weeball 999", "slowfield_weeball 999", "explosive_weeball 999"]
-    },
-    practice: {
-        game_practice: "1",
-        game_warmup_time: "0",
-        game_gain_score_on_kill: "0",
-        game_draft_time: "0",
-        game_countdown: "0",
-        game_time_limit: "0",
-        game_weapon_respawn_time: "2",
-        game_hp: "125",
-        game_stable_hp: "100",
-        phy_fly: "0",
-        map: "practice",
-        weapon: ["sword 999", "machinegun 999", "blaster 999 true", "super_shotgun 999", "rocket_launcher 999", "shaft 999", "pncr 999", "void_cannon 999", "healing_weeball 999", "smoke_weeball 999", "implosive_weeball 999", "slowfield_weeball 999", "explosive_weeball 999"]
-    },
-    aim_pncr_flickshots: {
-        game_aim_mode: "1",
-        game_initial_item_time: "0",
-        game_truce_time: "0",
-        game_hp: "1",
-        game_time_limit: "60",
-        game_spawn_random_chance: "1",
-        game_maximum_respawn_time_ms: "0",
-        game_minimum_respawn_time_ms: "0",
-        game_bot_respawn_time_ms: "1450",
-        game_unlimited_ammo: "1",
-        phy_fly: "0",
-        map: "aim1_obstacles",
-        weapon: "pncr 999"
-    },
-    aim_mac_flickshots: {
-        game_aim_mode: "1",
-        game_initial_item_time: "0",
-        game_truce_time: "0",
-        game_hp: "1",
-        game_time_limit: "60",
-        game_spawn_random_chance: "1",
-        game_maximum_respawn_time_ms: "0",
-        game_minimum_respawn_time_ms: "0",
-        game_bot_respawn_time_ms: "50",
-        game_unlimited_ammo: "1",
-        phy_fly: "0",
-        map: "aim1_obstacles",
-        weapon: "machinegun 999"
-    },
-    aim_shaft_close: {
-        game_aim_mode: "1",
-        game_initial_item_time: "0",
-        game_truce_time: "0",
-        game_hp: "300",
-        game_time_limit: "60",
-        game_spawn_random_chance: "1",
-        game_maximum_respawn_time_ms: "0",
-        game_minimum_respawn_time_ms: "0",
-        game_bot_respawn_time_ms: "0",
-        game_bot_dodge_desired_distance: "80",
-        game_unlimited_ammo: "1",
-        phy_fly: "0",
-        map: "aim_shaft",
-        weapon: "shaft 999"
-    },
-    aim_shaft_mid: {
-        game_aim_mode: "1",
-        game_initial_item_time: "0",
-        game_truce_time: "0",
-        game_hp: "300",
-        game_time_limit: "60",
-        game_spawn_random_chance: "1",
-        game_maximum_respawn_time_ms: "0",
-        game_minimum_respawn_time_ms: "0",
-        game_bot_respawn_time_ms: "0",
-        game_bot_dodge_desired_distance: "180",
-        game_unlimited_ammo: "1",
-        phy_fly: "0",
-        map: "aim_shaft",
-        weapon: "shaft 999"
-    },
-    aim_shaft_far: {
-        game_aim_mode: "1",
-        game_initial_item_time: "0",
-        game_truce_time: "0",
-        game_hp: "300",
-        game_time_limit: "60",
-        game_spawn_random_chance: "1",
-        game_maximum_respawn_time_ms: "0",
-        game_minimum_respawn_time_ms: "0",
-        game_bot_respawn_time_ms: "0",
-        game_bot_dodge_desired_distance: "280",
-        game_unlimited_ammo: "1",
-        phy_fly: "0",
-        map: "aim_shaft",
-        weapon: "shaft 999"
-    },
-    warmup: {
-        game_ffa: "1",
-        game_team_mode: "1",
-        game_friendly_fire: "0",
-        game_weapon_respawn_time: "2",
-        game_hp: "150",
-        game_stable_hp: "150",
-        game_ghost_limit_hp: ["125", "125"],
-        game_max_hp: "200",
-        game_armor: "100",
-        game_stable_armor: "100",
-        game_max_armor: "200",
-        game_time_limit: "480",
-        game_score_limit: "0",
-        game_powerup_first_spawn_time: "999999",
-        game_powerup_time_between_spawns: "240",
-        game_powerup_time_cycle: "1",
-        map: ["b_alchemy", "b_crystal_cove", "b_frozen_decay", "b_furnace", "b_huracan", "b_hurt_locker", "b_icefall", "b_marina", "b_oxide", "b_refinery", "ba_rekiem", "ft_starport", "b_sunken", "b_toya_fortress", "b_wellspring"],
-        weapon: ["sword 999", "machinegun 100", "blaster 250 true", "super_shotgun 50", "rocket_launcher 50", "shaft 250", "pncr 50", "void_cannon 50"]
-    },
-    brawl: {
-        game_ffa: "1",
-        game_team_mode: "1",
-        game_friendly_fire: "0",
-        game_weapon_respawn_time: "2",
-        game_hp: "125",
-        game_stable_hp: "100",
-        game_ghost_limit_hp: ["125", "125"],
-        game_max_hp: "200",
-        game_armor: "100",
-        game_stable_armor: "100",
-        game_max_armor: "200",
-        game_time_limit: "480",
-        game_score_limit: "0",
-        game_powerup_first_spawn_time: "60",
-        game_powerup_time_between_spawns: "240",
-        game_powerup_time_cycle: "1",
-        map: ["b_alchemy", "b_ancient", "b_crystal_cove", "b_frozen_decay", "b_furnace", "ba_hangar", "b_huracan", "b_hurt_locker", "b_icefall", "b_marina", "b_oxide", "b_refinery", "ba_rekiem", "b_sunken", "ft_starport", "b_toya_fortress", "b_wellspring", "mod_miniguffin_christmas"],
-        weapon: ["sword 999", "machinegun 100", "blaster 250 true", "super_shotgun 50", "rocket_launcher 50", "shaft 250", "pncr 50", "void_cannon 50"]
-    },
-    duel: {
-        game_initial_item_time: "0",
-        game_truce_time: "0",
-        game_tide_bonus: "30",
-        game_confirmation_frag: "1",
-        game_time_limit: "720",
-        game_weapon_respawn_time: "5",
-        game_mercy_limit: "15",
-        game_gain_score_on_kill: "0",
-        game_hud_duel: "1",
-        game_allow_concede: "1",
-        map: ["duel_amberfall", "duela_axiom", "duel_bioplant", "duela_cathedra", "duela_darkness", "duel_f1sks_house", "duel_frontier", "duel_frostrush", "duela_machine", "duel_kasbah", "duel_monolith", "duel_outpost_dunia", "duel_overgrowth", "duela_pavilion_x", "duel_perilous", "duela_prism", "duel_raya", "duela_restless", "duela_sanctum", "duel_skybreak", "duel_viki"],
-        weapon: ["sword 999", "machinegun 100"]
-    },
-    duelc: {
-        game_initial_item_time: "0",
-        game_truce_time: "0",
-        game_time_limit: "600",
-        game_weapon_respawn_time: "5",
-        game_mercy_limit: "20",
-        game_gain_score_on_kill: "0",
-        game_hud_duel: "1",
-        game_allow_concede: "1",
-        map: ["duel_amberfall", "duela_axiom", "duel_bioplant", "duela_cathedra", "duela_darkness", "duel_f1sks_house", "duel_frontier", "duel_frostrush", "duela_machine", "duel_kasbah", "duel_monolith", "duel_outpost_dunia", "duel_overgrowth", "duela_pavilion_x", "duel_perilous", "duel_raya", "duela_restless", "duela_sanctum", "duel_skybreak", "duel_viki"],
-        weapon: ["sword 999", "machinegun 100"]
-    },
-    ca: {
-        map: ["a_barrows_gate", "a_bazaar", "a_heikam", "a_junktion"],
-        game_truce_time: "7",
-        game_enable_items: "0",
-        game_team_mode: "1",
-        game_rounds: "10",
-        game_score_limit: "3",
-        game_life_count: "2",
-        game_hp: "200",
-        game_stable_hp: "200",
-        game_ghost_limit_hp: "200",
-        game_max_hp: "200",
-        game_armor: "100",
-        game_stable_armor: "100",
-        game_max_armor: "100",
-        game_self_damage: "0",
-        game_wipe_out_mode: "1",
-        game_friendly_fire: "0",
-        game_enable_weeballs: "1",
-        game_give_weeball_on_spawn: "2",
-        game_unlimited_weeballs: "1",
-        game_allow_smoke_weeball: "0",
-        game_hud_show_team_alive_count: "1",
-        weapon: ["sword 999", "machinegun 100", "blaster 250 true", "super_shotgun 50", "rocket_launcher 50", "shaft 250", "pncr 50", "void_cannon 50"]
-    },
-    cac: {
-        map: ["wo_ancient", "woa_arcol", "woa_caliburn", "woa_coyote", "wo_crystal_cove", "woa_dynamo", "wo_furnace", "woa_gloria", "woa_habibi", "woa_morpheus", "woa_prod", "wo_refinery", "woa_rekiem", "wo_sunken", "wo_toya_fortress", "wo_wellspring"],
-        game_truce_time: "7",
-        game_enable_items: "0",
-        game_team_mode: "1",
-        game_rounds: "10",
-        game_score_limit: "8",
-        game_life_count: "0",
-        game_hp: "200",
-        game_stable_hp: "200",
-        game_ghost_limit_hp: "200",
-        game_max_hp: "200",
-        game_armor: "200",
-        game_stable_armor: "200",
-        game_max_armor: "200",
-        game_self_damage: "0",
-        game_wipe_out_mode: "1",
-        game_friendly_fire: "0",
-        game_enable_weeballs: "1",
-        game_give_weeball_on_spawn: "2",
-        game_unlimited_weeballs: "1",
-        game_hud_show_team_alive_count: "1",
-        weapon: ["sword 999", "machinegun 100", "blaster 250 true", "super_shotgun 50", "rocket_launcher 50", "shaft 250", "pncr 50", "void_cannon 50"]
-    },
-    rocket_arena: {
-        map: ["a_barrows_gate", "a_bazaar", "a_heikam", "a_junktion", "a_enclosure", "a_misty_bay"],
-        game_truce_time: "7",
-        game_enable_items: "0",
-        game_team_mode: "1",
-        game_rounds: "10",
-        game_score_limit: "4",
-        game_life_count: "2",
-        game_hp: "200",
-        game_stable_hp: "200",
-        game_ghost_limit_hp: "200",
-        game_max_hp: "200",
-        game_armor: "100",
-        game_stable_armor: "100",
-        game_max_armor: "100",
-        game_self_damage: "0",
-        game_wipe_out_mode: "1",
-        game_lifesteal: "0",
-        game_friendly_fire: "0",
-        game_enable_weeballs: "1",
-        game_give_weeball_on_spawn: "2",
-        game_unlimited_weeballs: "1",
-        game_allow_smoke_weeball: "0",
-        weapon: ["sword 999", "rocket_launcher 999"]
-    },
-    shaft_arena: {
-        map: ["sa_gravels_of_wisdom", "sa_mausoleum_of_despair", "sa_the_exploration_of_a_cold_heart"],
-        game_truce_time: "7",
-        game_enable_items: "0",
-        game_team_mode: "1",
-        game_rounds: "10",
-        game_score_limit: "10",
-        game_life_count: "1",
-        game_hp: "200",
-        game_stable_hp: "200",
-        game_ghost_limit_hp: "200",
-        game_max_hp: "200",
-        game_armor: "100",
-        game_stable_armor: "100",
-        game_max_armor: "100",
-        game_self_damage: "0",
-        game_wipe_out_mode: "1",
-        game_lifesteal: "0.5",
-        game_friendly_fire: "0",
-        game_enable_weeballs: "0",
-        weapon: ["sword 999", "shaft 999"]
-    },
-    wipeout: {
-        map: ["wo_ancient", "woa_arcol", "woa_caliburn", "woa_coyote", "wo_crystal_cove", "woa_dynamo", "wo_furnace", "woa_gloria", "woa_habibi", "woa_morpheus", "woa_prod", "wo_refinery", "woa_rekiem", "wo_sunken", "wo_toya_fortress", "wo_wellspring"],
-        game_wipeout: "1",
-        game_truce_time: "7",
-        game_enable_items: "0",
-        game_team_mode: "1",
-        game_rounds: "10",
-        game_score_limit: "3",
-        game_wipeout_spawn_protection_s: "1",
-        game_respawn_time_type: "2",
-        game_respawn_time_increment_per_death_ms: "20000",
-        game_minimum_respawn_time_ms: "5000",
-        game_maximum_respawn_time_ms: "80000",
-        game_hp: "200",
-        game_stable_hp: "200",
-        game_ghost_limit_hp: "200",
-        game_max_hp: "200",
-        game_armor: "100",
-        game_stable_armor: "100",
-        game_max_armor: "100",
-        game_lifesteal_amount_when_last_alive: "0.5",
-        game_self_damage: "0",
-        game_wipe_out_mode: "2",
-        game_friendly_fire: "0",
-        game_enable_weeballs: "1",
-        game_give_weeball_on_spawn: "1",
-        game_unlimited_weeballs: "1",
-        game_hud_show_team_alive_count: "1",
-        weapon: ["sword 999", "machinegun 100", "blaster 150 true", "super_shotgun 50", "rocket_launcher 50", "shaft 200", "pncr 50", "void_cannon 50", "healing_weeball 1"]
-    },
-    ffa: {
-        game_ffa: "1",
-        game_team_mode: "1",
-        game_friendly_fire: "0",
-        game_weapon_respawn_time: "2",
-        game_hp: "125",
-        game_stable_hp: "100",
-        game_armor: "0",
-        game_stable_armor: "100",
-        game_ghost_limit_hp: "125",
-        game_time_limit: "480",
-        game_score_limit: "0",
-        game_powerup_first_spawn_time: "60",
-        game_powerup_time_between_spawns: "240",
-        game_powerup_time_cycle: "1",
-        map: ["b_alchemy", "b_ancient", "b_crystal_cove", "b_frozen_decay", "b_furnace", "b_huracan", "b_hurt_locker", "b_icefall", "b_marina", "b_oxide", "b_refinery", "ba_rekiem", "b_sunken", "ft_starport", "b_toya_fortress", "b_wellspring"],
-        weapon: ["sword 999", "machinegun 100"]
-    },
-    ctf: {
-        game_ctf: "1",
-        game_team_mode: "1",
-        game_gain_score_on_kill: "0",
-        game_friendly_fire: "0",
-        game_weapon_respawn_time: "2",
-        game_score_limit: "5",
-        game_time_limit: "960",
-        game_self_damage: "1",
-        game_mercy_limit: "8",
-        game_respawn_time_type: "4",
-        game_powerup_health: "0",
-        game_powerup_armor: "0",
-        map: ["ctf_cathedral", "ctf_dojo", "ctf_seismic_fault", "ctf_quarry", "ctf_waterworks", "ctf_cliffside_canyons", "ctf_qunai_peaks", "ctf_titans_crossing"],
-        game_unlimited_weeballs: "1",
-        weapon: ["sword 999", "machinegun 100"]
-    },
-    macguffin: {
-        game_macguffin: "1",
-        game_team_mode: "1",
-        game_gain_score_on_kill: "0",
-        game_weapon_respawn_time: "2",
-        game_friendly_fire: "0",
-        game_score_limit: "2",
-        game_spawn_farthest_threshold: "4",
-        game_round_countdown: "12",
-        game_maximum_respawn_time_ms: "2500",
-        game_minimum_respawn_time_ms: "2500",
-        map: ["mg_ancient", "mg_factory", "mg_marina", "mga_mediterranean_market", "mg_sunken"],
-        weapon: ["sword 999", "machinegun 100"]
-    },
-    ghosthunt: {
-        game_ghosthunt: "1",
-        game_team_mode: "1",
-        game_friendly_fire: "0",
-        game_hp: "100",
-        game_stable_hp: "100",
-        game_full_charge: "1",
-        game_enable_items: "1",
-        game_self_damage: "0",
-        game_time_limit: "360",
-        game_score_limit: "0",
-        game_overtime: "60",
-        map: ["ig_apollo", "ig_coastline", "ig_egg-plant", "ig_malkas_tomb", "ig_stronghold", "ig_terminal", "ig_treehouse"],
-        game_enable_weeballs: "1",
-        game_give_weeball_on_spawn: "1",
-        game_unlimited_weeballs: "1",
-        game_allow_implosive_weeball: "0",
-        game_allow_slowfield_weeball: "0",
-        game_allow_explosive_weeball: "0",
-        game_allow_smoke_weeball: "0",
-        game_allow_knock_weeball: "1",
-        weapon: ["sword 999", "crossbow 999"]
-    },
-    instagib_duel: {
-        game_time_limit: "240",
-        game_score_limit: "25",
-        game_full_charge: "1",
-        game_enable_items: "0",
-        game_overtime: "60",
-        game_team_mode: "1",
-        game_friendly_fire: "0",
-        game_hp: "100",
-        map: ["iga_grainyard", "iga_strife", "iga_temple"],
-        game_enable_weeballs: "1",
-        game_give_weeball_on_spawn: "1",
-        game_unlimited_weeballs: "1",
-        game_allow_implosive_weeball: "0",
-        game_allow_slowfield_weeball: "0",
-        game_allow_explosive_weeball: "0",
-        game_allow_smoke_weeball: "0",
-        game_allow_knock_weeball: "0",
-        weapon: ["sword 999", "pncr 999"]
-    },
-    coinrun: {
-        game_team_mode: "1",
-        game_friendly_fire: "0",
-        game_hp: "100",
-        game_stable_hp: "100",
-        game_full_charge: "1",
-        game_enable_items: "1",
-        game_self_damage: "0",
-        game_time_limit: "360",
-        game_score_limit: "0",
-        game_overtime: "60",
-        game_deposit_coins: "1",
-        map: ["gr_cliffside_canyons", "gr_qunai_peaks", "gr_titans_crossing", "ba_hangar"],
-        game_enable_weeballs: "1",
-        game_give_weeball_on_spawn: "1",
-        game_unlimited_weeballs: "1",
-        game_allow_implosive_weeball: "0",
-        game_allow_slowfield_weeball: "0",
-        game_allow_explosive_weeball: "0",
-        game_allow_smoke_weeball: "0",
-        game_allow_knock_weeball: "1",
-        weapon: ["sword 999", "crossbow 999"]
-    },
-    tdm: {
-        game_team_mode: "1",
-        game_friendly_fire: "0",
-        game_weapon_respawn_time: "10",
-        game_hp: "125",
-        game_time_limit: "600",
-        game_mercy_limit: "35",
-        game_powerup_health: "0",
-        game_powerup_armor: "0",
-        map: ["tdm_alchemy", "tdm_frozen_decay", "tdm_huracan", "tdm_icefall", "tdm_oxide", "tdm_sunken", "ft_hurt_locker", "tdm_perilous", "duel_kasbah", "tdma_myshell", "tdma_wreckage"],
-        weapon: ["sword 999", "machinegun 100"]
-    },
-    tdmc: {
-        game_team_mode: "1",
-        game_friendly_fire: "1",
-        game_weapon_respawn_time: "30",
-        game_hp: "125",
-        game_time_limit: "900",
-        game_mercy_limit: "35",
-        game_enable_drop: "1",
-        game_powerup_health: "0",
-        game_powerup_armor: "0",
-        game_drop_powerup_on_death: "0",
-        map: ["tdm_alchemy", "tdm_frozen_decay", "tdm_huracan", "tdm_icefall", "tdm_oxide", "tdm_sunken", "ft_hurt_locker", "tdm_perilous", "duel_kasbah", "tdma_myshell", "tdma_wreckage"],
-        weapon: ["sword 999", "machinegun 100"]
-    },
-    extinction: {
-        game_extinction: "1",
-        game_gain_score_on_kill: "0",
-        game_friendly_fire: "0",
-        game_team_mode: "1",
-        game_hp: "125",
-        game_score_limit: "4",
-        game_life_count: "3",
-        game_weapon_respawn_time: "5",
-        game_round_countdown: "12",
-        game_respawn_time_type: "5",
-        game_powerup_health: "0",
-        game_powerup_armor: "0",
-        game_powerup_first_spawn_time: "60",
-        map: ["tdm_alchemy_wip", "tdm_frozen_decay", "tdm_huracan", "tdm_icefall", "tdm_oxide", "tdm_sunken", "ft_hurt_locker"],
-        weapon: ["sword 999", "machinegun 100"]
-    },
-    race: {
-        game_race: "1",
-        game_hp: "100",
-        game_friendly_fire: "0",
-        game_gain_score_on_kill: "0",
-        game_warmup_time: "0",
-        game_countdown: "0",
-        game_time_limit: "0",
-        game_score_limit: "0",
-        game_self_damage: "0",
-        game_weapon_respawn_time: "1",
-        game_unlimited_ammo: "1",
-        game_allow_team_sound_override: "1",
-        game_allow_disabling_ping: "1",
-        map: ["tta_arctis", "tta_arqa", "tt_boost", "tta_brut", "tt_cave_run", "tta_error_fields", "tt_foundry", "tt_frostrun", "tta_hven", "tta_lava", "tta_lickety_split", "tta_mystic_br", "tt_oasis", "tt_roosh", "tt_rwc", "tt_temple_escape", "tta_three_headed_monkey", "tt_toxic", "tt_ukiyo", "tta_villa", "tta_windy_cave", "tt_zen", "tt_ctf_cathedral", "tt_ctf_dojo", "tt_ctf_seismic_fault", "tt_ctf_quarry", "tt_ctf_waterworks", "tt_gr_cliffside_canyons", "tt_gr_qunai_peaks", "tt_gr_titans_crossing"],
-        weapon: "sword 999"
-    },
-    ft: {
-        map: ["b_alchemy", "b_ancient", "b_crystal_cove", "b_frozen_decay", "b_furnace", "b_huracan", "b_hurt_locker", "b_icefall", "b_marina", "b_oxide", "b_refinery", "ba_rekiem", "ft_starport", "b_sunken", "b_toya_fortress", "b_wellspring"],
-        game_ft: "1",
-        game_truce_time: "0",
-        game_enable_items: "1",
-        game_team_mode: "1",
-        game_score_limit: "5",
-        game_gain_score_on_kill: "0",
-        game_hp: "125",
-        game_stable_hp: "100",
-        game_ghost_limit_hp: "100",
-        game_max_hp: "200",
-        game_armor: "75",
-        game_stable_armor: "100",
-        game_max_armor: "200",
-        game_self_damage: "0",
-        game_freeze_time: "10000000",
-        game_freeze_save_time: "3",
-        game_freeze_save_radius: "150",
-        game_weapons_cap_ammo: "1",
-        game_powerup_first_spawn_time: "60",
-        game_powerup_time_between_spawns: "240",
-        game_powerup_time_cycle: "1",
-        game_friendly_fire: "0",
-        weapon: ["sword 999", "machinegun 50", "blaster 75 true", "super_shotgun 15", "rocket_launcher 10", "shaft 50", "pncr 5", "void_cannon 15"]
-    },
-    ftc: {
-        map: ["b_alchemy", "b_ancient", "b_crystal_cove", "b_frozen_decay", "b_furnace", "b_huracan", "b_hurt_locker", "b_icefall", "b_marina", "b_oxide", "b_refinery", "ba_rekiem", "ft_starport", "b_sunken", "b_toya_fortress", "b_wellspring"],
-        game_ftc: "1",
-        game_truce_time: "0",
-        game_enable_items: "1",
-        game_team_mode: "1",
-        game_score_limit: "5",
-        game_gain_score_on_kill: "0",
-        game_hp: "125",
-        game_stable_hp: "100",
-        game_ghost_limit_hp: "100",
-        game_max_hp: "200",
-        game_armor: "75",
-        game_stable_armor: "100",
-        game_max_armor: "200",
-        game_self_damage: "0",
-        game_freeze_time: "10000000",
-        game_freeze_save_time: "3",
-        game_freeze_save_radius: "150",
-        game_weapons_cap_ammo: "1",
-        game_powerup_first_spawn_time: "180",
-        game_powerup_time_between_spawns: "240",
-        game_powerup_time_cycle: "1",
-        game_friendly_fire: "0",
-        weapon: ["sword 999", "machinegun 50", "blaster 75 true", "super_shotgun 15", "rocket_launcher 10", "shaft 50", "pncr 5", "void_cannon 15"]
-    },
-    survival: {
-        map: ["su_halloween_2020", "sua_star_station", "su_strife", "su_tropic"],
-        game_survival: "1",
-        game_pve: "1",
-        game_gain_score_on_kill: "0",
-        game_truce_time: "0",
-        game_countdown: "3",
-        game_round_countdown: "15",
-        game_enable_items: "1",
-        game_team_mode: "1",
-        game_score_limit: "1",
-        game_wipe_out_mode: "2",
-        game_spawn_random_chance: "0.5",
-        game_spawn_farthest_chance: "0",
-        game_spawn_farthest_foe_chance: "0.5",
-        game_spawn_farthest_threshold: "3",
-        game_respawn_time_type: "7",
-        game_respawn_time_increment_per_death_ms: "2000",
-        game_minimum_respawn_time_ms: "2000",
-        game_maximum_respawn_time_ms: "80000",
-        game_hp: "125",
-        game_stable_hp: "100",
-        game_ghost_limit_hp: "100",
-        game_max_hp: "200",
-        game_armor: "75",
-        game_stable_armor: "100",
-        game_max_armor: "200",
-        game_friendly_fire: "0",
-        game_unlimited_weeballs: "1",
-        weapon: ["sword 999", "blaster 100 true", "super_shotgun 15"]
-    },
-    skill0: {
-        name: "Vampire",
-        description: "Temporarily grants lifesteal.",
-        icon: "skill_vampire.png",
-        hud_icon: "skill_hud_vampire.png",
-        tag: "vampire",
-        duration: "4.0",
-        cooldown: "12",
-        small_cooldown: "0",
-        cost: "30",
-        category: "2",
-        charges: "10"
-    },
-    skill1: {
-        name: "Bolt",
-        description: "Allows you to thrust yourself in any direction.",
-        icon: "skill_haste.png",
-        hud_icon: "skill_hud_haste.png",
-        tag: "bolt",
-        duration: "0",
-        cooldown: "0",
-        small_cooldown: "0",
-        cost: "30",
-        category: "2",
-        charges: "10"
-    },
-    skill2: {
-        name: "Heal",
-        description: "Regenerates yourself and your allies around you.",
-        icon: "skill_heal.png",
-        hud_icon: "skill_hud_heal.png",
-        tag: "heal",
-        duration: "5",
-        cooldown: "60",
-        small_cooldown: "0",
-        cost: "30",
-        category: "0",
-        charges: "10"
-    },
-    skill3: {
-        name: "Hook",
-        description: "Hookitty hooky hook.",
-        icon: "skill_hook.png",
-        hud_icon: "skill_hud_hook.png",
-        tag: "hook",
-        duration: "0",
-        cooldown: "14",
-        small_cooldown: "0",
-        cost: "50",
-        category: "1",
-        charges: "10"
-    },
-    skill4: {
-        name: "Powerjump",
-        description: "Allows you to thrust yourself upwards.",
-        icon: "skill_bolt.png",
-        hud_icon: "skill_hud_bolt.png",
-        tag: "powerjump",
-        duration: "0",
-        cooldown: "0",
-        small_cooldown: "0",
-        cost: "50",
-        category: "1",
-        charges: "10"
-    },
-    skill5: {
-        name: "Throw MacGuffin",
-        description: "Throws the MacGuffin",
-        icon: "skill_bolt.png",
-        hud_icon: "skill_hud_bolt.png",
-        tag: "throw_macguffin",
-        duration: "0",
-        cooldown: "0",
-        small_cooldown: "0",
-        cost: "50",
-        category: "1",
-        charges: "1"
-    },
-    skill6: {
-        name: "Drop Flag",
-        description: "Drops the flag",
-        icon: "skill_bolt.png",
-        hud_icon: "skill_hud_bolt.png",
-        tag: "drop_flag",
-        duration: "0",
-        cooldown: "0",
-        small_cooldown: "0",
-        cost: "50",
-        category: "1",
-        charges: "1"
-    },
-    skill7: {
-        name: "Claim weeball",
-        description: "Claims your weeball",
-        icon: "skill_bolt.png",
-        hud_icon: "skill_hud_bolt.png",
-        tag: "claim_weeball",
-        duration: "0",
-        cooldown: "0",
-        small_cooldown: "0",
-        cost: "50",
-        category: "1",
-        charges: "1"
-    },
-    skill8: {
-        name: "Slow",
-        description: "Slow",
-        icon: "skill_bolt.png",
-        hud_icon: "skill_hud_bolt.png",
-        tag: "claim_weeball",
-        duration: "3",
-        cooldown: "10",
-        small_cooldown: "0",
-        cost: "50",
-        category: "1",
-        charges: "1"
-    },
-    skill9: {
-        name: "Scan",
-        description: "Scan",
-        icon: "skill_bolt.png",
-        hud_icon: "skill_hud_bolt.png",
-        tag: "claim_weeball",
-        duration: "3",
-        cooldown: "10",
-        small_cooldown: "0",
-        cost: "50",
-        category: "1",
-        charges: "1"
-    },
-    skill10: {
-        name: "Knock weeball",
-        description: "Knock weeball",
-        icon: "skill_bolt.png",
-        hud_icon: "skill_hud_bolt.png",
-        tag: "knock_weeball",
-        duration: "0",
-        cooldown: "45",
-        small_cooldown: "0",
-        cost: "50",
-        category: "1",
-        charges: "1"
-    },
-    skill11: {
-        name: "Slow weeball",
-        description: "Slow weeball",
-        icon: "skill_bolt.png",
-        hud_icon: "skill_hud_bolt.png",
-        tag: "slow_weeball",
-        duration: "0",
-        cooldown: "60",
-        small_cooldown: "0",
-        cost: "50",
-        category: "1",
-        charges: "1"
-    },
-    skill12: {
-        name: "Smoke weeball",
-        description: "Smoke weeball",
-        icon: "skill_bolt.png",
-        hud_icon: "skill_hud_bolt.png",
-        tag: "smoke_weeball",
-        duration: "0",
-        cooldown: "30",
-        small_cooldown: "0",
-        cost: "50",
-        category: "1",
-        charges: "1"
-    },
-    skill13: {
-        name: "Implosive weeball",
-        description: "Implosive weeball",
-        icon: "skill_bolt.png",
-        hud_icon: "skill_hud_bolt.png",
-        tag: "implosive_weeball",
-        duration: "0",
-        cooldown: "45",
-        small_cooldown: "0",
-        cost: "50",
-        category: "1",
-        charges: "1"
-    },
-    skill14: {
-        name: "Explosive weeball",
-        description: "Explosive weeball",
-        icon: "skill_bolt.png",
-        hud_icon: "skill_hud_bolt.png",
-        tag: "explosive_weeball",
-        duration: "0",
-        cooldown: "45",
-        small_cooldown: "0",
-        cost: "50",
-        category: "1",
-        charges: "1"
-    },
-    skill15: {
-        name: "Knock weeball",
-        description: "Knock weeball",
-        icon: "skill_bolt.png",
-        hud_icon: "skill_hud_bolt.png",
-        tag: "instagib_knock_weeball",
-        duration: "0",
-        cooldown: "1",
-        small_cooldown: "0",
-        cost: "50",
-        category: "1",
-        charges: "1"
-    },
-    skill16: {
-        name: "Survival Amplifier weeball",
-        description: "Survival Amplifier weeball",
-        icon: "skill_bolt.png",
-        hud_icon: "skill_hud_bolt.png",
-        tag: "survival_amplifier_weeball",
-        duration: "0",
-        cooldown: "30",
-        small_cooldown: "0",
-        cost: "50",
-        category: "1",
-        charges: "1"
-    },
-    skill17: {
-        name: "Survival Vulnerability weeball",
-        description: "Survival Vulnerability weeball",
-        icon: "skill_bolt.png",
-        hud_icon: "skill_hud_bolt.png",
-        tag: "survival_vulnerability_weeball",
-        duration: "0",
-        cooldown: "30",
-        small_cooldown: "0",
-        cost: "50",
-        category: "1",
-        charges: "1"
-    },
-    skill18: {
-        name: "Survival Heal weeball",
-        description: "Survival Heal weeball",
-        icon: "skill_bolt.png",
-        hud_icon: "skill_hud_bolt.png",
-        tag: "survival_heal_weeball",
-        duration: "0",
-        cooldown: "30",
-        small_cooldown: "0",
-        cost: "50",
-        category: "1",
-        charges: "1"
-    },
-    pncr: {
-        weapon: ["sword 999", "pncr 10"]
-    },
-    crossbow: {
-        weapon: ["sword 999", "crossbow 15"]
-    },
-    melee: {
-        weapon: "sword 999"
-    },
-    machinegun: {
-        weapon: ["machinegun 100", "sword 999"]
-    },
-    blaster: {
-        weapon: ["blaster 75 true", "sword 999"]
-    },
-    rocket_launcher: {
-        weapon: ["rocket_launcher 10", "sword 999"]
-    },
-    super_shotgun: {
-        weapon: ["super_shotgun 15", "sword 999"]
-    },
-    shaft: {
-        weapon: ["shaft 100", "sword 999"]
-    },
-    grenade_launcher: {
-        weapon: ["grenade_launcher 5", "sword 999"]
-    },
-    void_cannon: {
-        weapon: ["void_cannon 25", "sword 999"]
+}
+
+function set_saved_crosshairs_from_engine(idx, value) {
+    savedCrosshairStrings[idx] = value
+}
+
+function cleanSavedCrosshairArray() {
+    let spliceEmpty = false;
+    for (i = savedCrosshairStrings.length - 1; i >= 0; i--) {
+        if (savedCrosshairStrings[i] != "{}") {
+            spliceEmpty = true
+        }
+        if (spliceEmpty && savedCrosshairStrings[i] == "{}") {
+            savedCrosshairStrings.splice(i, 1);
+            savedCrosshairStrings.push("{}")
+        }
     }
-};
+    for (i = 0; i < savedCrosshairStrings.length; i++) {
+        let skip_callback = i === savedCrosshairStrings.length - 1 ? false : true;
+        update_variable("string", "hud_saved_crosshair_definition:" + i, savedCrosshairStrings[i], skip_callback)
+    }
+}
+
+function get_crosshair_draw_list(crosshair_string, hit_mode, draw_id) {
+    let crosshair_definition = cleanCrosshairDefinition(generateFullCrosshairDefinition(crosshair_string));
+    if (hit_mode) {
+        var crosshair_draw_list = drawCrosshair(crosshair_definition, "logicalHit")
+    } else {
+        var crosshair_draw_list = drawCrosshair(crosshair_definition, "logicalDefault")
+    }
+    engine.call("get_crosshair_draw_list_return", crosshair_draw_list, draw_id)
+}
+const global_crosshair_creators = {};
+class CrosshairCreator {
+    canvasCrosshairPreviewMap = {};
+    ctxCrosshairPreviewMap = {};
+    zoom = false;
+    crosshair_definition = {};
+    engine_variable = "";
+    eventListenersInitialized = false;
+    constructor(game_id, container, extra_preview_container) {
+        this.game_id = game_id, this.container = container;
+        this.extra_preview_container = extra_preview_container;
+        this.createCanvasCrosshairPreviewMaps();
+        this.initializeCanvasCrosshairPresets();
+        initialize_saved_crosshair_engine_variables();
+        this.initialize_saved_crosshairs();
+        let layers = this.container.querySelectorAll(".canvas_crosshair_layer");
+        for (let i = 0; i < layers.length; i++) {
+            layers[i].addEventListener("click", (() => {
+                if (layers[i].nextSibling.style.display === "none") {
+                    layers[i].nextSibling.style.display = "block";
+                    layers[i].style.backgroundImage = "url(/html/images/icons/fa/caret-down.svg)"
+                } else {
+                    layers[i].nextSibling.style.display = "none";
+                    layers[i].style.backgroundImage = "url(/html/images/icons/fa/caret-right.svg)"
+                }
+                refreshScrollbar(this.container.querySelector(".crosshair_scroll"))
+            }))
+        }
+    }
+    initialize(zoom, crosshair_definition, engine_variable, layer_display) {
+        this.zoom = zoom;
+        this.crosshair_definition = crosshair_definition;
+        this.engine_variable = engine_variable;
+        cleanCrosshairDefinition(this.crosshair_definition);
+        this.initializeCrosshairPasteInput();
+        var editorContainer = this.container.querySelector(".settings_screen_crosshair_subsection_container");
+        editorContainer.style.display = "block";
+        for (let layer of crosshairLayers) {
+            let el = this.container.querySelector(".canvas_cross_" + layer + "_setting");
+            _empty(el);
+            if (!crosshairLayerTypes.includes(this.crosshair_definition[layer].type)) {
+                this.crosshair_definition[layer].type = "none"
+            }
+            for (let type of crosshairLayerTypes) {
+                let opt = _createElement("div");
+                opt.dataset.value = type;
+                opt.textContent = localize("settings_crosshair_layer_type_" + type);
+                if (opt.dataset.value == this.crosshair_definition[layer].type) {
+                    opt.dataset.selected = 1
+                }
+                el.appendChild(opt)
+            }
+            this.setLayerType(layer, this.crosshair_definition[layer].type, layer_display);
+            ui_setup_select(el, ((opt, field) => {
+                this.crosshair_definition[layer].type = field.dataset.value;
+                this.setLayerType(layer, this.crosshair_definition[layer].type, "block");
+                this.removeCrosshairScaleWarning();
+                this.updateCrosshairPreview(this.crosshair_definition);
+                updateEngineCrosshairDefinition(this.engine_variable, this.crosshair_definition)
+            }))
+        }
+        this.updateCrosshairPreview(this.crosshair_definition);
+        if (!this.eventListenersInitialized) {
+            let copy_button = this.container.querySelector(".crosshair_canvas_copy_button");
+            copy_button.addEventListener("click", (() => {
+                this.copyCrosshairDefinition()
+            }));
+            let paste_button = this.container.querySelector(".crosshair_canvas_paste_button");
+            paste_button.addEventListener("click", (() => {
+                this.openCrosshairPasteInput()
+            }));
+            let close_button = this.container.querySelector(".close_button");
+            if (close_button) {
+                close_button.addEventListener("click", (() => {
+                    this.closeCrosshairEditorScreen()
+                }))
+            }
+            let scale_yes_button = this.container.querySelector(".scale_yes");
+            scale_yes_button.addEventListener("click", (() => {
+                this.scaleCrosshairToRes()
+            }));
+            let scale_no_button = this.container.querySelector(".scale_no");
+            scale_no_button.addEventListener("click", (() => {
+                this.removeCrosshairScaleWarning()
+            }));
+            this.eventListenersInitialized = true
+        }
+        let scaleWarning = this.container.querySelector(".crosshair_canvas_preview_scale_warning");
+        if (this.crosshair_definition.designVh == window.innerHeight) {
+            scaleWarning.style.display = "none"
+        } else {
+            scaleWarning.style.display = "block"
+        }
+    }
+    setLayerType(layer, type, display) {
+        var el = this.container.querySelector(".canvas_cross_" + layer + "_options");
+        var header = this.container.querySelector(".canvas_cross_" + layer + "_header");
+        var template_id = "canvas_crosshair_" + type + "_template";
+        var viewScale = window.innerHeight / 1080;
+
+        function scaleToRes(val) {
+            return Math.ceil(parseInt(val) * viewScale)
+        }
+        var data = {
+            layer: layer,
+            zoom: ""
+        };
+        var helpers = {
+            scale: scaleToRes,
+            localize: localize
+        };
+        if (type == "none") {
+            display = "none"
+        }
+        el.style.display = display;
+        header.style.backgroundImage = display == "none" ? "url(/html/images/icons/fa/caret-right.svg)" : "url(/html/images/icons/fa/caret-down.svg)";
+        var template = window.jsrender.templates(_id(template_id).textContent);
+        _html(el, template.render(data, helpers));
+        if (layer === "layer3") {
+            el.appendChild(_createElement("div", "canvas-crosshair-layer-close"))
+        }
+        this.reinitializeCrosshairOptions(el, layer, type);
+        refreshScrollbar(this.container.querySelector(".crosshair_scroll"))
+    }
+    createCanvasCrosshairPreviewMaps() {
+        const canvasCrosshairPreviewSize = Math.ceil(.1 * window.innerHeight) * 3;
+        this.canvasCrosshairPreviewMap = {};
+        this.ctxCrosshairPreviewMap = {};
+        for (let type of["default", "hit", "menu"]) {
+            this.canvasCrosshairPreviewMap[type] = document.createElement("canvas");
+            this.canvasCrosshairPreviewMap[type].width = canvasCrosshairPreviewSize;
+            this.canvasCrosshairPreviewMap[type].height = canvasCrosshairPreviewSize;
+            this.ctxCrosshairPreviewMap[type] = this.canvasCrosshairPreviewMap[type].getContext("2d");
+            if (type == "menu") {
+                if (this.extra_preview_container) {
+                    var new_div = _createElement("div", "crosshair");
+                    new_div.appendChild(this.canvasCrosshairPreviewMap[type]);
+                    let crosshairMenuPreviewContainer = this.extra_preview_container.querySelector(".preview_crosshairs_content");
+                    _empty(crosshairMenuPreviewContainer);
+                    crosshairMenuPreviewContainer.appendChild(new_div)
+                }
+            } else {
+                this.ctxCrosshairPreviewMap[type].translate(canvasCrosshairPreviewSize / 2, canvasCrosshairPreviewSize / 2);
+                const hit_suffix = type == "hit" ? "_hit" : "";
+                let canvasCrosshairPreviewContainer = this.container.querySelector(".crosshair_canvas" + hit_suffix + "_preview");
+                canvasCrosshairPreviewContainer.appendChild(this.canvasCrosshairPreviewMap[type])
+            }
+        }
+    }
+    initializeCanvasCrosshairPresets() {
+        let preset_canvas_crosshair_definitions = [{
+            layer1: {
+                type: "cross",
+                crTop: 1,
+                crRig: 1,
+                crBot: 1,
+                crLef: 1,
+                crHCE: 0,
+                crCol: "FFFFFF",
+                crOCo: "000000",
+                crHCo: "FF0000",
+                crLen: 8,
+                crThi: 2,
+                crGap: 4,
+                crRot: 0,
+                crOTh: 1,
+                crOSt: "persistent"
+            },
+            layer2: {
+                type: "none"
+            },
+            layer3: {
+                type: "none"
+            },
+            designVh: "1080"
+        }, {
+            layer1: {
+                type: "cross",
+                crTop: 1,
+                crRig: 1,
+                crBot: 1,
+                crLef: 1,
+                crHCE: 0,
+                crCol: "000000",
+                crOCo: "000000",
+                crHCo: "FF0000",
+                crLen: 40,
+                crThi: 2,
+                crGap: 0,
+                crRot: 0,
+                crOTh: 0,
+                crOSt: "persistent"
+            },
+            layer2: {
+                type: "none"
+            },
+            layer3: {
+                type: "none"
+            },
+            designVh: "1440"
+        }, {
+            layer1: {
+                type: "cross",
+                crTop: 1,
+                crRig: 1,
+                crBot: 1,
+                crLef: 1,
+                crHCE: 0,
+                crCol: "FFFFFF",
+                crOCo: "000000",
+                crHCo: "FF0000",
+                crLen: "10",
+                crThi: 2,
+                crGap: "0",
+                crRot: "0",
+                crOTh: 2,
+                crOSt: "persistent"
+            },
+            layer2: {
+                type: "none"
+            },
+            layer3: {
+                type: "none"
+            },
+            designVh: "1080"
+        }, {
+            layer1: {
+                type: "cross",
+                crTop: 1,
+                crRig: 1,
+                crBot: 1,
+                crLef: 1,
+                crHCE: 0,
+                crCol: "FFFFFF",
+                crOCo: "000000",
+                crHCo: "FF0000",
+                crLen: "3",
+                crThi: "10",
+                crGap: "8",
+                crRot: "0",
+                crOTh: 1,
+                crOSt: "persistent"
+            },
+            layer2: {
+                type: "none"
+            },
+            layer3: {
+                type: "none"
+            },
+            designVh: "1080"
+        }, {
+            layer1: {
+                type: "dot",
+                dHCE: 0,
+                dCol: "FFFFFF",
+                dOCo: "000000",
+                dHCo: "FF0000",
+                dThi: 3,
+                dOTh: 2,
+                dTyp: "round",
+                dOSt: "persistent"
+            },
+            layer2: {
+                type: "none"
+            },
+            layer3: {
+                type: "none"
+            },
+            designVh: "1080"
+        }, {
+            layer1: {
+                type: "cross",
+                crTop: 1,
+                crRig: 1,
+                crBot: 1,
+                crLef: 1,
+                crHCE: 0,
+                crCol: "FFFFFF",
+                crOCo: "000000",
+                crHCo: "FF0000",
+                crLen: 10,
+                crThi: 2,
+                crGap: 4,
+                crRot: 0,
+                crOTh: 1,
+                crOSt: "adaptive"
+            },
+            layer2: {
+                type: "circle",
+                ciHCE: 0,
+                ciCol: "FFFFFF",
+                ciOCo: "000000",
+                ciHCo: "FF0000",
+                ciSeg: "1",
+                ciRad: "7",
+                ciThi: 2,
+                ciGap: 0,
+                ciRot: 0,
+                ciOTh: "1",
+                ciOSt: "persistent"
+            },
+            layer3: {
+                type: "none"
+            },
+            designVh: "1080"
+        }, {
+            layer1: {
+                type: "cross",
+                crTop: 1,
+                crRig: 1,
+                crBot: 1,
+                crLef: 1,
+                crHCE: 0,
+                crCol: "FFFFFF",
+                crOCo: "000000",
+                crHCo: "FF0000",
+                crLen: 8,
+                crThi: 2,
+                crGap: 6,
+                crRot: 0,
+                crOTh: 1,
+                crOSt: "adaptive"
+            },
+            layer2: {
+                type: "dot",
+                dHCE: 0,
+                dCol: "FFFFFF",
+                dOCo: "000000",
+                dHCo: "FF0000",
+                dThi: 2,
+                dOTh: 1,
+                dTyp: "square",
+                dOSt: "persistent"
+            },
+            layer3: {
+                type: "none"
+            },
+            designVh: "1080"
+        }, {
+            layer1: {
+                type: "cross",
+                crTop: "1",
+                crRig: "0",
+                crBot: "1",
+                crLef: "0",
+                crHCE: "0",
+                crCol: "FFFFFF",
+                crOCo: "000000",
+                crHCo: "FF0000",
+                crLen: "8",
+                crThi: "2",
+                crGap: "0",
+                crRot: "0",
+                crOTh: "1",
+                crOSt: "adaptive"
+            },
+            layer2: {
+                type: "cross",
+                crTop: "0",
+                crRig: "1",
+                crBot: "0",
+                crLef: "1",
+                crHCE: "0",
+                crCol: "FFFFFF",
+                crOCo: "000000",
+                crHCo: "FF0000",
+                crLen: "12",
+                crThi: "2",
+                crGap: "0",
+                crRot: "0",
+                crOTh: "1",
+                crOSt: "persistent"
+            },
+            layer3: {
+                type: "none"
+            },
+            designVh: "1080"
+        }, {
+            layer1: {
+                type: "cross",
+                crTop: "1",
+                crRig: "1",
+                crBot: "1",
+                crLef: "1",
+                crHCE: "0",
+                crCol: "FFFFFF",
+                crOCo: "000000",
+                crHCo: "FF0000",
+                crLen: "8",
+                crThi: "4",
+                crGap: "6",
+                crRot: "45",
+                crOTh: "1",
+                crOSt: "persistent"
+            },
+            layer2: {
+                type: "none"
+            },
+            layer3: {
+                type: "none"
+            },
+            designVh: "1080"
+        }, {
+            layer1: {
+                type: "circle",
+                ciHCE: "0",
+                ciCol: "FFFFFF",
+                ciOCo: "000000",
+                ciHCo: "FF0000",
+                ciSeg: "4",
+                ciRad: "10",
+                ciThi: "2",
+                ciGap: "30",
+                ciRot: "0",
+                ciOTh: "1",
+                ciOSt: "persistent"
+            },
+            layer2: {
+                type: "none"
+            },
+            layer3: {
+                type: "none"
+            },
+            designVh: "1080"
+        }, {
+            layer1: {
+                type: "cross",
+                crTop: "0",
+                crRig: "1",
+                crBot: "0",
+                crLef: "1",
+                crHCE: "0",
+                crCol: "FFFFFF",
+                crOCo: "000000",
+                crHCo: "FF0000",
+                crLen: 14,
+                crThi: 2,
+                crGap: 8,
+                crRot: 0,
+                crOTh: 1,
+                crOSt: "adaptive"
+            },
+            layer2: {
+                type: "circle",
+                ciHCE: "0",
+                ciCol: "FFFFFF",
+                ciOCo: "000000",
+                ciHCo: "FF0000",
+                ciSeg: "2",
+                ciRad: 8,
+                ciThi: 2,
+                ciGap: "30",
+                ciRot: 0,
+                ciOTh: "1",
+                ciOSt: "persistent"
+            },
+            layer3: {
+                type: "dot",
+                dHCE: "0",
+                dCol: "FFFFFF",
+                dOCo: "000000",
+                dHCo: "FF0000",
+                dThi: 2,
+                dOTh: 1,
+                dTyp: "square",
+                dOSt: "persistent"
+            },
+            designVh: "1080"
+        }, {
+            layer1: {
+                type: "cross",
+                crTop: 1,
+                crRig: 1,
+                crBot: 1,
+                crLef: 1,
+                crHCE: 0,
+                crCol: "FFFFFF",
+                crOCo: "000000",
+                crHCo: "FF0000",
+                crLen: 5,
+                crThi: 2,
+                crGap: 0,
+                crRot: 0,
+                crOTh: 1,
+                crOSt: "persistent"
+            },
+            layer2: {
+                type: "circle",
+                ciHCE: "0",
+                ciCol: "FFFFFF",
+                ciOCo: "000000",
+                ciHCo: "FF0000",
+                ciSeg: "1",
+                ciRad: "18",
+                ciThi: "2",
+                ciGap: "0",
+                ciRot: "0",
+                ciOTh: "1",
+                ciOSt: "persistent"
+            },
+            layer3: {
+                type: "none"
+            },
+            designVh: "1080"
+        }, {
+            layer1: {
+                type: "circle",
+                ciHCE: "0",
+                ciCol: "FFFFFF",
+                ciOCo: "000000",
+                ciHCo: "FF0000",
+                ciSeg: "3",
+                ciRad: 18,
+                ciThi: 2,
+                ciGap: "25",
+                ciRot: 0,
+                ciOTh: "1",
+                ciOSt: "persistent"
+            },
+            layer2: {
+                type: "dot",
+                dHCE: "0",
+                dCol: "FFFFFF",
+                dOCo: "000000",
+                dHCo: "FF0000",
+                dThi: 2,
+                dOTh: "1",
+                dTyp: "round",
+                dOSt: "persistent"
+            },
+            layer3: {
+                type: "none"
+            },
+            designVh: "1080"
+        }, {
+            layer1: {
+                type: "pointer",
+                poTL: "0",
+                poTR: "0",
+                poBR: "1",
+                poBL: "0",
+                poHCE: "0",
+                poCol: "FFFFFF",
+                poOCo: "000000",
+                poHCo: "FF0000",
+                poLen: "12",
+                poThi: "2",
+                poGap: "0",
+                poRot: "45",
+                poOTh: "1",
+                poOSt: "persistent"
+            },
+            layer2: {
+                type: "none"
+            },
+            layer3: {
+                type: "none"
+            },
+            designVh: "1080"
+        }, {
+            layer1: {
+                type: "pointer",
+                poTL: "1",
+                poTR: "1",
+                poBR: "1",
+                poBL: "1",
+                poHCE: "0",
+                poCol: "FFFFFF",
+                poOCo: "000000",
+                poHCo: "FF0000",
+                poLen: "8",
+                poThi: "2",
+                poGap: "1",
+                poRot: "0",
+                poOTh: "1",
+                poOSt: "persistent"
+            },
+            layer2: {
+                type: "none"
+            },
+            layer3: {
+                type: "none"
+            },
+            designVh: "1080"
+        }, {
+            layer1: {
+                type: "cross",
+                crTop: 1,
+                crRig: 1,
+                crBot: 1,
+                crLef: 1,
+                crHCE: 0,
+                crCol: "FFFFFF",
+                crOCo: "000000",
+                crHCo: "FF0000",
+                crLen: "2",
+                crThi: "12",
+                crGap: "11",
+                crRot: "45",
+                crOTh: "1",
+                crOSt: "persistent"
+            },
+            layer2: {
+                type: "pointer",
+                poTL: "1",
+                poTR: "1",
+                poBR: "1",
+                poBL: "1",
+                poHCE: "0",
+                poCol: "FFFFFF",
+                poOCo: "000000",
+                poHCo: "FF0000",
+                poLen: "3",
+                poThi: "3",
+                poGap: "1",
+                poRot: "0",
+                poOTh: "1",
+                poOSt: "persistent"
+            },
+            layer3: {
+                type: "none"
+            },
+            designVh: "1080"
+        }, {
+            layer1: {
+                type: "pointer",
+                poTL: "0",
+                poTR: "0",
+                poBR: "1",
+                poBL: "0",
+                poHCE: "0",
+                poCol: "FFFFFF",
+                poOCo: "000000",
+                poHCo: "FF0000",
+                poLen: "12",
+                poThi: "2",
+                poGap: "0",
+                poRot: "0",
+                poOTh: "1",
+                poOSt: "adaptive"
+            },
+            layer2: {
+                type: "cross",
+                crTop: "0",
+                crRig: "1",
+                crBot: "0",
+                crLef: "0",
+                crHCE: "0",
+                crCol: "FFFFFF",
+                crOCo: "000000",
+                crHCo: "FF0000",
+                crLen: "16",
+                crThi: "2",
+                crGap: "3",
+                crRot: "45",
+                crOTh: "1",
+                crOSt: "persistent"
+            },
+            layer3: {
+                type: "none"
+            },
+            designVh: "1080"
+        }, {
+            layer1: {
+                type: "cross",
+                crTop: "0",
+                crRig: "1",
+                crBot: "0",
+                crLef: "1",
+                crHCE: "0",
+                crCol: "FFFFFF",
+                crOCo: "000000",
+                crHCo: "FF0000",
+                crLen: "16",
+                crThi: "2",
+                crGap: "2",
+                crRot: "0",
+                crOTh: "1",
+                crOSt: "persistent"
+            },
+            layer2: {
+                type: "cross",
+                crTop: "0",
+                crRig: "0",
+                crBot: "1",
+                crLef: "0",
+                crHCE: "0",
+                crCol: "FFFFFF",
+                crOCo: "000000",
+                crHCo: "FF0000",
+                crLen: "2",
+                crThi: "18",
+                crGap: "12",
+                crRot: "0",
+                crOTh: "1",
+                crOSt: "persistent"
+            },
+            layer3: {
+                type: "cross",
+                crTop: "0",
+                crRig: "0",
+                crBot: "1",
+                crLef: "0",
+                crHCE: "0",
+                crCol: "FFFFFF",
+                crOCo: "000000",
+                crHCo: "FF0000",
+                crLen: "2",
+                crThi: "6",
+                crGap: "24",
+                crRot: "0",
+                crOTh: "1",
+                crOSt: "persistent"
+            },
+            designVh: "1080"
+        }, {
+            layer1: {
+                type: "cross",
+                crTop: 1,
+                crRig: 1,
+                crBot: 1,
+                crLef: 1,
+                crHCE: 0,
+                crCol: "FFFFFF",
+                crOCo: "000000",
+                crHCo: "FF0000",
+                crLen: "4",
+                crThi: "24",
+                crGap: "8",
+                crRot: 0,
+                crOTh: "2",
+                crOSt: "persistent"
+            },
+            layer2: {
+                type: "none"
+            },
+            layer3: {
+                type: "none"
+            },
+            designVh: "1080"
+        }, {
+            layer1: {
+                type: "circle",
+                ciHCE: "0",
+                ciCol: "FFFFFF",
+                ciOCo: "000000",
+                ciHCo: "FF0000",
+                ciSeg: "1",
+                ciRad: "13",
+                ciThi: "8",
+                ciGap: "0",
+                ciRot: "0",
+                ciOTh: "0",
+                ciOSt: "persistent"
+            },
+            layer2: {
+                type: "circle",
+                ciHCE: "0",
+                ciCol: "01B7ED",
+                ciOCo: "000000",
+                ciHCo: "FF0000",
+                ciSeg: "1",
+                ciRad: "5",
+                ciThi: "5",
+                ciGap: "50",
+                ciRot: "0",
+                ciOTh: "0",
+                ciOSt: "persistent"
+            },
+            layer3: {
+                type: "none"
+            },
+            designVh: "1080"
+        }, {
+            layer1: {
+                type: "cross",
+                crTop: 1,
+                crRig: 0,
+                crBot: 0,
+                crLef: 1,
+                crHCE: "1",
+                crCol: "FFC600",
+                crOCo: "000000",
+                crHCo: "FF0000",
+                crLen: 14,
+                crThi: 4,
+                crGap: 8,
+                crRot: 45,
+                crOTh: 3,
+                crOSt: "persistent"
+            },
+            layer2: {
+                type: "circle",
+                ciHCE: "0",
+                ciCol: "000000",
+                ciOCo: "000000",
+                ciHCo: "FF0000",
+                ciSeg: "1",
+                ciRad: "10",
+                ciThi: "3",
+                ciGap: "75",
+                ciRot: "0",
+                ciOTh: "0",
+                ciOSt: "persistent"
+            },
+            layer3: {
+                type: "dot",
+                dHCE: "0",
+                dCol: "00A5FF88",
+                dOCo: "000000",
+                dHCo: "FF0000",
+                dThi: 18,
+                dOTh: 3,
+                dTyp: "round",
+                dOSt: "persistent"
+            },
+            designVh: "1080"
+        }];
+        const preset_container = this.container.querySelector(".crosshair_default_preset_container");
+        _empty(preset_container);
+        for (let definition of preset_canvas_crosshair_definitions) {
+            scaleCrosshairDefinition(definition);
+            let new_div = _createElement("div", "crosshair-preset");
+            let optionCanvas = document.createElement("canvas");
+            let optionCanvasSize = Math.ceil(.05 * window.innerHeight);
+            optionCanvas.width = optionCanvasSize;
+            optionCanvas.height = optionCanvasSize;
+            let ctx = optionCanvas.getContext("2d");
+            ctx.translate(optionCanvasSize / 2, optionCanvasSize / 2);
+            drawCrosshair(definition, ctx);
+            new_div.appendChild(optionCanvas);
+            preset_container.appendChild(new_div);
+            new_div.addEventListener("click", (() => {
+                this.load_preset_canvas_crosshair(definition)
+            }))
+        }
+    }
+    load_preset_canvas_crosshair(preset_crosshair_definition) {
+        var crosshair_definition = JSON.parse(JSON.stringify(preset_crosshair_definition));
+        this.initialize(this.zoom, crosshair_definition, this.engine_variable, "block");
+        updateEngineCrosshairDefinition(this.engine_variable, crosshair_definition)
+    }
+    initializeCrosshairPasteInput() {
+        let editorContainer = this.container.querySelector(".settings_screen_crosshair_subsection_container");
+        let inputContainer = this.container.querySelector(".canvas_crosshair_paste_input_container");
+        _empty(inputContainer);
+        let inputPasteTemplate = window.jsrender.templates(_id("canvas_crosshair_paste_input_template").textContent);
+        _html(inputContainer, inputPasteTemplate.render({}, {
+            localize: localize
+        }));
+        inputContainer.style.display = "none";
+        let confirmButton = inputContainer.querySelector(".crosshair_paste_input_confirm");
+        let cancelButton = inputContainer.querySelector(".crosshair_paste_input_cancel");
+        let input = inputContainer.querySelector(".crosshair_paste_input");
+        input.dataset.valid = "false";
+        let inputValue;
+        let new_crosshair_definition;
+        let inputPasteWarning = inputContainer.querySelector(".crosshair_paste_input_warning");
+        inputPasteWarning.style.display = "none";
+        input.addEventListener("input", (e => {
+            e.target.value = e.target.value.trimStart();
+            inputValue = e.target.value;
+            if (_isValidJSON(inputValue)) {
+                let fullInputDefinition = generateFullCrosshairDefinition(inputValue);
+                if (isValidCrosshairDefinition(fullInputDefinition)) {
+                    new_crosshair_definition = fullInputDefinition;
+                    this.updateCrosshairPreview(new_crosshair_definition);
+                    input.dataset.valid = "true";
+                    inputPasteWarning.style.display = "none"
+                } else {
+                    this.updateCrosshairPreview(this.crosshair_definition);
+                    input.dataset.valid = "false";
+                    inputPasteWarning.style.display = "block"
+                }
+            } else {
+                this.updateCrosshairPreview(this.crosshair_definition);
+                input.dataset.valid = "false";
+                inputPasteWarning.style.display = "block"
+            }
+        }));
+        input.addEventListener("dblclick", (function() {
+            this.setSelectionRange(0, this.value.length)
+        }));
+        confirmButton.addEventListener("click", (() => {
+            if (input.dataset.valid == "true") {
+                this.initialize(this.zoom, new_crosshair_definition, this.engine_variable, "none");
+                updateEngineCrosshairDefinition(this.engine_variable, new_crosshair_definition)
+            }
+        }));
+        cancelButton.addEventListener("click", (() => {
+            inputContainer.style.display = "none";
+            editorContainer.style.display = "block";
+            this.updateCrosshairPreview(this.crosshair_definition);
+            input.dataset.valid = "false";
+            input.value = "";
+            inputPasteWarning.style.display = "none"
+        }))
+    }
+    updateCrosshairPreview(crosshair_definition) {
+        drawCrosshair(crosshair_definition, "", this.ctxCrosshairPreviewMap.default, this.ctxCrosshairPreviewMap.hit);
+        if (this.engine_variable.endsWith(":0")) {
+            this.ctxCrosshairPreviewMap.menu.clearRect(0, 0, this.ctxCrosshairPreviewMap.menu.canvas.width, this.ctxCrosshairPreviewMap.menu.canvas.height);
+            this.ctxCrosshairPreviewMap.menu.beginPath();
+            this.ctxCrosshairPreviewMap.menu.drawImage(this.canvasCrosshairPreviewMap.default, 0, 0)
+        }
+    }
+    initialize_saved_crosshairs() {
+        const saved_container = this.container.querySelector(".crosshair_saved_preset_container");
+        _empty(saved_container);
+        for (let i = 0; i < savedCrosshairStrings.length; i++) {
+            if (savedCrosshairStrings[i] === "{}") {
+                continue
+            }
+            let current_crosshair_definition = generateFullCrosshairDefinition(savedCrosshairStrings[i]);
+            if (current_crosshair_definition && Object.keys(current_crosshair_definition).length === 0 && current_crosshair_definition.constructor === Object) {
+                continue
+            }
+            if (current_crosshair_definition) {
+                cleanCrosshairDefinition(current_crosshair_definition);
+                scaleCrosshairDefinition(current_crosshair_definition);
+                let new_div = _createElement("div", "crosshair-preset");
+                let optionCanvas = document.createElement("canvas");
+                let optionCanvasSize = Math.ceil(.05 * window.innerHeight);
+                optionCanvas.width = optionCanvasSize;
+                optionCanvas.height = optionCanvasSize;
+                let ctx = optionCanvas.getContext("2d");
+                ctx.translate(optionCanvasSize / 2, optionCanvasSize / 2);
+                drawCrosshair(current_crosshair_definition, ctx);
+                new_div.appendChild(optionCanvas);
+                let delete_button = _createElement("div", "delete-button", "X");
+                new_div.appendChild(delete_button);
+                saved_container.appendChild(new_div);
+                new_div.addEventListener("click", (() => {
+                    this.load_preset_canvas_crosshair(current_crosshair_definition)
+                }));
+                delete_button.addEventListener("click", (event => {
+                    this.deleteSavedCrosshair(i);
+                    event.stopPropagation()
+                }));
+                delete_button.addEventListener("mouseover", (function(event) {
+                    event.stopPropagation()
+                }));
+                delete_button.addEventListener("mouseout", (function() {}))
+            }
+        }
+        if (saved_container.childElementCount < savedCrosshairStrings.length) {
+            let save_button = _createElement("div", ["crosshair-preset", "save-button", "i18n"], localize("menu_button_save"));
+            save_button.dataset.i18n = "menu_button_save";
+            save_button.addEventListener("click", (() => {
+                this.saveCurrentCrosshair()
+            }));
+            saved_container.appendChild(save_button)
+        }
+    }
+    reinitializeCrosshairOptions(parent, layer, type) {
+        var layer_definition = {};
+        layer_definition.type = type;
+        _for_each_with_class_in_parent(parent, "checkbox", (el => {
+            var val = el.dataset.default;
+            if (this.crosshair_definition.hasOwnProperty(layer)) {
+                if (this.crosshair_definition[layer].hasOwnProperty(el.dataset.key)) {
+                    val = this.crosshair_definition[layer][el.dataset.key];
+                    let validCheckbox = val == 0 || val == 1;
+                    if (!validCheckbox) {
+                        val = el.dataset.default
+                    }
+                }
+            }
+            el.dataset.enabled = val;
+            this.updateCrosshairCheckbox(el);
+            layer_definition[el.dataset.key] = val;
+            let parent = el.closest(".crosshair_setting");
+            if (parent) {
+                parent.addEventListener("click", (e => {
+                    e.stopPropagation();
+                    _toggle_checkbox_from_parent(el, true);
+                    this.updateCrosshairDefinitionValue(layer, el.dataset.key, el.dataset.enabled, this.crosshair_definition);
+                    this.updateCrosshairPreview(this.crosshair_definition);
+                    updateEngineCrosshairDefinition(this.engine_variable, this.crosshair_definition)
+                }))
+            }
+            el.addEventListener("click", (e => {
+                e.stopPropagation();
+                if (el.classList.contains("disabled")) return;
+                if (el.dataset.enabled == 1) {
+                    el.dataset.enabled = 0;
+                    el.classList.remove("checkbox_enabled");
+                    el.firstElementChild.classList.remove("inner_checkbox_enabled");
+                    engine.call("ui_sound", "ui_uncheck_box")
+                } else {
+                    el.dataset.enabled = 1;
+                    el.classList.add("checkbox_enabled");
+                    el.firstElementChild.classList.add("inner_checkbox_enabled");
+                    engine.call("ui_sound", "ui_check_box")
+                }
+                this.updateCrosshairDefinitionValue(layer, el.dataset.key, el.dataset.enabled, this.crosshair_definition);
+                this.updateCrosshairPreview(this.crosshair_definition);
+                updateEngineCrosshairDefinition(this.engine_variable, this.crosshair_definition)
+            }))
+        }));
+        _for_each_with_class_in_parent(parent, "jscolor", (el => {
+            var val = el.dataset.default;
+            if (this.crosshair_definition.hasOwnProperty(layer)) {
+                if (this.crosshair_definition[layer].hasOwnProperty(el.dataset.key)) {
+                    val = this.crosshair_definition[layer][el.dataset.key];
+                    if (typeof val != "string") {
+                        val = el.dataset.default
+                    }
+                }
+            }
+            var opts = {
+                value: val
+            };
+            var picker = new jscolor(el, opts, null, true);
+            picker.onFineChange = () => {
+                this.updateCrosshairDefinitionValue(layer, el.dataset.key, el.value, this.crosshair_definition);
+                this.updateCrosshairPreview(this.crosshair_definition)
+            };
+            el.onchange = () => {
+                this.updateCrosshairDefinitionValue(layer, el.dataset.key, el.value, this.crosshair_definition);
+                updateEngineCrosshairDefinition(this.engine_variable, this.crosshair_definition)
+            };
+            el.addEventListener("keydown", (function(e) {
+                e.stopPropagation()
+            }));
+            layer_definition[el.dataset.key] = el.value
+        }));
+        _for_each_with_class_in_parent(parent, "range-slider", (el => {
+            var val = el.dataset.default;
+            if (this.crosshair_definition.hasOwnProperty(layer)) {
+                if (this.crosshair_definition[layer].hasOwnProperty(el.dataset.key)) {
+                    val = parseInt(this.crosshair_definition[layer][el.dataset.key]);
+                    if (isNaN(val)) {
+                        val = el.dataset.default
+                    }
+                    if (val > parseInt(el.dataset.max) * Math.ceil(this.crosshair_definition.designVh / window.innerHeight)) {
+                        val = parseInt(el.dataset.max) * Math.ceil(this.crosshair_definition.designVh / window.innerHeight)
+                    }
+                    if (val < parseInt(el.dataset.min)) {
+                        val = parseInt(el.dataset.min)
+                    }
+                }
+            }
+            layer_definition[el.dataset.key] = val;
+            var slider = new rangeSlider(el, false, (() => {
+                var inputValue = parseInt(el.dataset.value);
+                if (inputValue > parseInt(el.dataset.max)) {
+                    slider.setValue(el.dataset.max)
+                }
+                if (inputValue < parseInt(el.dataset.min)) {
+                    slider.setValue(el.dataset.min)
+                }
+                this.updateCrosshairDefinitionValue(layer, el.dataset.key, el.dataset.value, this.crosshair_definition);
+                this.updateCrosshairPreview(this.crosshair_definition);
+                updateEngineCrosshairDefinition(this.engine_variable, this.crosshair_definition);
+                this.crosshairCreatorWarning(el.dataset.key, layer, this.crosshair_definition)
+            }), (() => {
+                this.updateCrosshairDefinitionValue(layer, el.dataset.key, el.dataset.value, this.crosshair_definition);
+                this.updateCrosshairPreview(this.crosshair_definition);
+                this.crosshairCreatorWarning(el.dataset.key, layer, this.crosshair_definition)
+            }));
+            slider.setValue(val)
+        }));
+        _for_each_with_class_in_parent(parent, "select-field", (el => {
+            _empty(el);
+            var val = el.dataset.default;
+            if (this.crosshair_definition.hasOwnProperty(layer)) {
+                if (this.crosshair_definition[layer].hasOwnProperty(el.dataset.key)) {
+                    val = this.crosshair_definition[layer][el.dataset.key];
+                    let validSelect = el.dataset.opts.split(",").map((function(o) {
+                        return o.toLowerCase()
+                    })).includes(val);
+                    if (!validSelect) {
+                        val = el.dataset.default
+                    }
+                }
+            }
+            layer_definition[el.dataset.key] = val;
+            el.dataset.opts.split(",").forEach((function(type) {
+                let opt = _createElement("div");
+                opt.dataset.value = type.toLowerCase();
+                opt.textContent = localize("settings_crosshair_option_" + type.toLowerCase());
+                if (opt.dataset.value == val) {
+                    opt.dataset.selected = 1
+                }
+                el.appendChild(opt)
+            }));
+            ui_setup_select(el, ((opt, field) => {
+                this.updateCrosshairDefinitionValue(layer, el.dataset.key, field.dataset.value, this.crosshair_definition);
+                this.updateCrosshairPreview(this.crosshair_definition);
+                updateEngineCrosshairDefinition(this.engine_variable, this.crosshair_definition);
+                this.crosshairCreatorWarning(el.dataset.key, layer, this.crosshair_definition)
+            }))
+        }));
+        _for_each_with_class_in_parent(parent, "tooltip2", (function(el) {
+            add_tooltip2_listeners(el)
+        }));
+        this.crosshair_definition[layer] = layer_definition;
+        _for_each_with_class_in_parent(parent, "range-slider", (el => {
+            this.crosshairCreatorWarning(el.dataset.key, layer, this.crosshair_definition)
+        }))
+    }
+    updateCrosshairCheckbox(el) {
+        if (el.dataset.enabled == 0) {
+            el.classList.remove("checkbox_enabled");
+            el.firstElementChild.classList.remove("inner_checkbox_enabled")
+        } else {
+            el.classList.add("checkbox_enabled");
+            el.firstElementChild.classList.add("inner_checkbox_enabled")
+        }
+    }
+    updateCrosshairDefinitionValue(layer, key, value, crosshair_definition) {
+        crosshair_definition[layer][key] = value;
+        this.removeCrosshairScaleWarning()
+    }
+    crosshairCreatorWarning(key, layer, crosshair_definition) {
+        if (key == "crThi" || key == "crRot") {
+            let warningEl = this.container.querySelector(".canvas_crosshair_" + layer + "_cross_thickness_warning");
+            if (crosshair_definition[layer].crThi % 2 == 1 && crosshair_definition[layer].crRot == 0) {
+                warningEl.style.display = "block"
+            } else {
+                warningEl.style.display = "none"
+            }
+        } else if (key == "dTyp" || key == "dThi" || key == "dRot") {
+            let warningEl = this.container.querySelector(".canvas_crosshair_" + layer + "_dot_thickness_warning");
+            if (crosshair_definition[layer].dThi % 2 == 1 && crosshair_definition[layer].dTyp == "square" && crosshair_definition[layer].dRot == 0) {
+                warningEl.style.display = "block"
+            } else {
+                warningEl.style.display = "none"
+            }
+        } else if (key == "ciSeg" || key == "ciGap") {
+            let warningEl = this.container.querySelector(".canvas_crosshair_" + layer + "_circle_segments_warning");
+            if (crosshair_definition[layer].ciSeg != 1 && crosshair_definition[layer].ciGap == 0) {
+                warningEl.style.display = "block"
+            } else {
+                warningEl.style.display = "none"
+            }
+        } else if (key == "poThi" || key == "poLen") {
+            let warningEl = this.container.querySelector(".canvas_crosshair_" + layer + "_pointer_thickness_warning");
+            if (parseInt(crosshair_definition[layer].poThi) > parseInt(crosshair_definition[layer].poLen)) {
+                warningEl.style.display = "block"
+            } else {
+                warningEl.style.display = "none"
+            }
+        }
+    }
+    scaleCrosshairToRes() {
+        scaleCrosshairDefinition(this.crosshair_definition);
+        this.initialize(this.zoom, this.crosshair_definition, this.engine_variable, "block");
+        updateEngineCrosshairDefinition(this.engine_variable, this.crosshair_definition)
+    }
+    removeCrosshairScaleWarning() {
+        this.crosshair_definition.designVh = window.innerHeight;
+        let scaleWarning = this.container.querySelector(".crosshair_canvas_preview_scale_warning");
+        scaleWarning.style.display = "none"
+    }
+    saveCurrentCrosshair() {
+        if (savedCrosshairStrings.indexOf("{}") != -1) {
+            const free_index = savedCrosshairStrings.indexOf("{}");
+            const engine_variable_saved = "hud_saved_crosshair_definition:" + free_index;
+            let crosshair_string = generateShortCrosshairString(this.crosshair_definition);
+            update_variable("string", engine_variable_saved, crosshair_string, false);
+            console.log("saved to engine_variable: " + engine_variable_saved)
+        } else {
+            console.log("No available save slots")
+        }
+    }
+    deleteSavedCrosshair(index) {
+        savedCrosshairStrings[index] = "{}";
+        console.log("DELETE: saved crosshairs array index " + index + " = " + savedCrosshairStrings[index]);
+        cleanSavedCrosshairArray();
+        console.log("POST CLEAN: saved crosshairs array index " + index + " = " + savedCrosshairStrings[index]);
+        this.initialize_saved_crosshairs()
+    }
+    copyCrosshairDefinition() {
+        let copy_string = generateShortCrosshairString(this.crosshair_definition);
+        engine.call("copy_text", copy_string)
+    }
+    openCrosshairPasteInput() {
+        let inputContainer = this.container.querySelector(".canvas_crosshair_paste_input_container");
+        inputContainer.style.display = "block";
+        let editorContainer = this.container.querySelector(".settings_screen_crosshair_subsection_container");
+        editorContainer.style.display = "none";
+        let input = inputContainer.querySelector(".crosshair_paste_input");
+        input.focus()
+    }
+    closeCrosshairEditorScreen() {
+        let inputContainer = this.container.querySelector(".canvas_crosshair_paste_input_container");
+        let editorContainer = this.container.querySelector(".settings_screen_crosshair_subsection_container");
+        let input = inputContainer.querySelector(".crosshair_paste_input");
+        let inputPasteWarning = inputContainer.querySelector(".crosshair_paste_input_warning");
+        inputContainer.style.display = "none";
+        editorContainer.style.display = "block";
+        input.dataset.valid = "false";
+        input.value = "";
+        inputPasteWarning.style.display = "none";
+        close_modal_screen_by_selector(this.container.id);
+        this.updateCrosshairPreview(this.crosshair_definition)
+    }
+}
+
+function isValidCrosshairDefinition(obj) {
+    for (let layer of crosshairLayers) {
+        if (!obj.hasOwnProperty(layer)) {
+            return false
+        }
+    }
+    if (!obj.hasOwnProperty("designVh")) {
+        obj.designVh == window.innerHeight
+    } else if (isNaN(parseInt(obj.designVh))) {
+        obj.designVh = window.innerHeight
+    } else if (obj.designVh <= 0) {
+        obj.designVh = window.innerHeight
+    }
+    return true
+}
+
+function cleanCrosshairDefinition(obj) {
+    for (let layer of crosshairLayers) {
+        if (!obj.hasOwnProperty(layer)) {
+            if (layer == "layer1") {
+                obj[layer] = {
+                    type: "cross",
+                    crTop: "1",
+                    crRig: "1",
+                    crBot: "1",
+                    crLef: "1",
+                    crHCE: "0",
+                    crCol: "FFFFFF",
+                    crOCo: "000000",
+                    crHCo: "FF0000",
+                    crLen: "8",
+                    crThi: "2",
+                    crGap: "4",
+                    crRot: "0",
+                    crOTh: "1"
+                };
+                const scaleFactor = window.innerHeight / 1080;
+                let scaleableKeys = ["crLen", "crThi", "crGap", "crOTh"];
+                for (let key of scaleableKeys) {
+                    scaleCrosshairValue(obj, layer, key, scaleFactor)
+                }
+            } else {
+                obj[layer] = {
+                    type: "none"
+                }
+            }
+        }
+    }
+    if (!obj.hasOwnProperty("designVh")) {
+        obj.designVh = window.innerHeight
+    } else if (isNaN(parseInt(obj.designVh))) {
+        obj.designVh = window.innerHeight
+    } else if (obj.designVh <= 0) {
+        obj.designVh = window.innerHeight
+    }
+    return obj
+}
+
+function clearCross(ctxCross) {
+    ctxCross.clearRect(-1 * (ctxCross.canvas.width / 2), -1 * (ctxCross.canvas.height / 2), ctxCross.canvas.width, ctxCross.canvas.height);
+    ctxCross.beginPath()
+}
+
+function scaleCrosshairDefinition(crosshair_definition) {
+    if (parseInt(crosshair_definition.designVh) != window.innerHeight) {
+        const scaleFactor = window.innerHeight / parseInt(crosshair_definition.designVh);
+        for (let layer of crosshairLayers) {
+            if (crosshair_definition[layer].type == "cross") {
+                let scaleableKeys = ["crLen", "crThi", "crGap", "crOTh"];
+                for (let key of scaleableKeys) {
+                    scaleCrosshairValue(crosshair_definition, layer, key, scaleFactor)
+                }
+            } else if (crosshair_definition[layer].type == "circle") {
+                let scaleableKeys = ["ciRad", "ciThi", "ciOTh"];
+                for (let key of scaleableKeys) {
+                    scaleCrosshairValue(crosshair_definition, layer, key, scaleFactor)
+                }
+            } else if (crosshair_definition[layer].type == "dot") {
+                let scaleableKeys = ["dThi", "dOTh"];
+                for (let key of scaleableKeys) {
+                    scaleCrosshairValue(crosshair_definition, layer, key, scaleFactor)
+                }
+            } else if (crosshair_definition[layer].type == "pointer") {
+                let scaleableKeys = ["poLen", "poThi", "poGap", "poOth"];
+                for (let key of scaleableKeys) {
+                    scaleCrosshairValue(crosshair_definition, layer, key, scaleFactor)
+                }
+            }
+        }
+        crosshair_definition.designVh = window.innerHeight
+    }
+}
+
+function scaleCrosshairValue(crosshair_definition, layer, key, scaleFactor) {
+    if (crosshair_definition[layer].crThi % 2 == 0 && crosshair_definition[layer].crRot == 0 || crosshair_definition[layer].dThi % 2 == 0 && crosshair_definition[layer].dTyp == "square" && crosshair_definition[layer].dRot == 0) {
+        crosshair_definition[layer][key] = 2 * Math.ceil(parseInt(crosshair_definition[layer][key]) * scaleFactor / 2)
+    } else {
+        crosshair_definition[layer][key] = Math.ceil(parseInt(crosshair_definition[layer][key]) * scaleFactor)
+    }
+}
+
+function generateShortCrosshairString(cross_def) {
+    if (typeof cross_def == "string") {
+        var crosshair_definition = JSON.parse(cross_def)
+    } else {
+        var crosshair_definition = cross_def
+    }
+    let short_definition = {};
+    let layer_name_map = {
+        layer1: "1",
+        layer2: "2",
+        layer3: "3"
+    };
+    let cross_type_index_map = ["type", "crTop", "crRig", "crBot", "crLef", "crHCE", "crCol", "crOCo", "crHCo", "crLen", "crThi", "crGap", "crRot", "crOTh", "crOSt"];
+    let circle_type_index_map = ["type", "ciHCE", "ciCol", "ciOCo", "ciHCo", "ciSeg", "ciRad", "ciThi", "ciGap", "ciRot", "ciOTh", "ciOSt"];
+    let dot_type_index_map = ["type", "dHCE", "dCol", "dOCo", "dHCo", "dThi", "dOTh", "dTyp", "dOSt", "dRot"];
+    let pointer_type_index_map = ["type", "poTL", "poTR", "poBR", "poBL", "poHCE", "poCol", "poOCo", "poHCo", "poLen", "poThi", "poGap", "poRot", "poOTh", "poOSt"];
+    for (let layer of crosshairLayers) {
+        if (crosshair_definition.hasOwnProperty(layer)) {
+            let layerArr = [];
+            let type_index_map = ["type"];
+            if (crosshair_definition[layer].type == "cross") {
+                type_index_map = cross_type_index_map
+            } else if (crosshair_definition[layer].type == "circle") {
+                type_index_map = circle_type_index_map
+            } else if (crosshair_definition[layer].type == "dot") {
+                type_index_map = dot_type_index_map
+            } else if (crosshair_definition[layer].type == "pointer") {
+                type_index_map = pointer_type_index_map
+            }
+            for (let i = 0; i <= type_index_map.length; i++) {
+                if (crosshair_definition[layer].hasOwnProperty(type_index_map[i])) {
+                    layerArr[i] = crosshair_definition[layer][type_index_map[i]]
+                }
+            }
+            short_definition[layer_name_map[layer]] = layerArr
+        }
+        if (crosshair_definition.hasOwnProperty("designVh")) {
+            short_definition["d"] = crosshair_definition.designVh
+        }
+    }
+    let short_string = JSON.stringify(short_definition);
+    return short_string
+}
+
+function generateFullCrosshairDefinition(short_string) {
+    try {
+        var short_definition = JSON.parse(short_string)
+    } catch (e) {
+        var short_definition = {}
+    }
+    let full_definition = {};
+    let layer_name_map = {
+        layer1: "1",
+        layer2: "2",
+        layer3: "3"
+    };
+    let cross_type_index_map = ["type", "crTop", "crRig", "crBot", "crLef", "crHCE", "crCol", "crOCo", "crHCo", "crLen", "crThi", "crGap", "crRot", "crOTh", "crOSt"];
+    let circle_type_index_map = ["type", "ciHCE", "ciCol", "ciOCo", "ciHCo", "ciSeg", "ciRad", "ciThi", "ciGap", "ciRot", "ciOTh", "ciOSt"];
+    let dot_type_index_map = ["type", "dHCE", "dCol", "dOCo", "dHCo", "dThi", "dOTh", "dTyp", "dOSt", "dRot"];
+    let pointer_type_index_map = ["type", "poTL", "poTR", "poBR", "poBL", "poHCE", "poCol", "poOCo", "poHCo", "poLen", "poThi", "poGap", "poRot", "poOTh", "poOSt"];
+    for (let layer of crosshairLayers) {
+        if (short_definition.hasOwnProperty(layer_name_map[layer])) {
+            let layerObj = {};
+            let type_index_map = ["type"];
+            if (short_definition[layer_name_map[layer]][0] == "cross") type_index_map = cross_type_index_map;
+            else if (short_definition[layer_name_map[layer]][0] == "circle") type_index_map = circle_type_index_map;
+            else if (short_definition[layer_name_map[layer]][0] == "dot") type_index_map = dot_type_index_map;
+            else if (short_definition[layer_name_map[layer]][0] == "pointer") type_index_map = pointer_type_index_map;
+            if (!Array.isArray(short_definition[layer_name_map[layer]])) {
+                layerObj = {
+                    type: "none"
+                }
+            } else {
+                for (let i = 0; i <= short_definition[layer_name_map[layer]].length; i++) {
+                    layerObj[type_index_map[i]] = short_definition[layer_name_map[layer]][i]
+                }
+            }
+            full_definition[layer] = layerObj
+        }
+    }
+    if (short_definition.hasOwnProperty("d")) {
+        full_definition["designVh"] = short_definition.d
+    }
+    return full_definition
+}
+
+function updateEngineCrosshairDefinition(engine_variable, crosshair_definition) {
+    var crosshair_string = generateShortCrosshairString(crosshair_definition);
+    if (engine_variable.startsWith("hud_zoom_crosshair_definition")) {
+        let parts = engine_variable.split(":");
+        if (parts.length > 1) {
+            let weapon_id = parseInt(parts[1]);
+            let sniper_zoom_indexes = GAME.get_data("sniper_zoom_indexes");
+            if (sniper_zoom_indexes && sniper_zoom_indexes.includes(weapon_id)) {
+                for (let id of sniper_zoom_indexes) {
+                    if (id === weapon_id) continue;
+                    engine.call("set_string_variable", "hud_zoom_crosshair_definition" + id, crosshair_string)
+                }
+            }
+        }
+    }
+    engine.call("set_string_variable", engine_variable, crosshair_string)
+}
+
+function drawCrosshair(crosshair_definition, target, ctxCross, ctxHitCross) {
+    var drawHitCross = true;
+    if (target instanceof CanvasRenderingContext2D) {
+        var ctxCross = target;
+        drawHitCross = false
+    } else if (target == "logicalDefault" || target == "logicalHit") {
+        var ctxCross = "returnString";
+        var ctxHitCross = "returnString"
+    } else if (ctxCross && ctxHitCross) {} else {
+        console.log("drawCrosshair - undefined behaviour")
+    }
+    if (ctxCross != "returnString") clearCross(ctxCross);
+    if (drawHitCross && ctxHitCross != "returnString") clearCross(ctxHitCross);
+    var crosshairInstructionString = "<svg width='" + canvasCrosshairSize + "px' height='" + canvasCrosshairSize + "px' viewBox='" + canvasCrosshairSize / -2 + " " + canvasCrosshairSize / -2 + " " + canvasCrosshairSize + " " + canvasCrosshairSize + "'>\n";
+    var hitCrosshairInstructionString = "<svg width='" + canvasCrosshairSize + "px' height='" + canvasCrosshairSize + "px' viewBox='" + canvasCrosshairSize / -2 + " " + canvasCrosshairSize / -2 + " " + canvasCrosshairSize + " " + canvasCrosshairSize + "'>\n";
+    var usesHitColor = false;
+    var linesArray = [];
+    var adaptiveOutlinesArray = [];
+    var hitLinesArray = [];
+    var adaptiveHitOutlinesArray = [];
+    for (let layer of crosshairLayers) {
+        if (crosshair_definition[layer].type == "cross") {
+            var gap = validatedParseInt(crosshair_definition[layer].crGap, 4);
+            var length = validatedParseInt(crosshair_definition[layer].crLen, 8);
+            var thickness = validatedParseInt(crosshair_definition[layer].crThi, 2);
+            var color = "#" + crosshair_definition[layer].crCol;
+            var outlineColor = "#" + crosshair_definition[layer].crOCo;
+            var outlineThickness = validatedParseInt(crosshair_definition[layer].crOTh, 1);
+            var rotation = validatedParseInt(crosshair_definition[layer].crRot, 0);
+            var outlineStyle = crosshair_definition[layer].crOSt;
+            var enabledSides = {
+                top: crosshair_definition[layer].crTop,
+                right: crosshair_definition[layer].crRig,
+                bottom: crosshair_definition[layer].crBot,
+                left: crosshair_definition[layer].crLef
+            };
+            var hitColorEnabled = crosshair_definition[layer].crHCE;
+            var hitColor = "#" + (hitColorEnabled == 1 ? crosshair_definition[layer].crHCo : crosshair_definition[layer].crCol);
+            if (hitColorEnabled == 1) {
+                usesHitColor = true
+            }
+            var outlinesArray = outlineStyle == "persistent" ? linesArray : adaptiveOutlinesArray;
+            var hitOutlinesArray = outlineStyle == "persistent" ? hitLinesArray : adaptiveHitOutlinesArray;
+            linesArray.push(drawRectangles.bind(null, ctxCross, enabledSides, gap, length, thickness, color, outlineThickness, rotation, 0));
+            outlinesArray.push(drawRectangles.bind(null, ctxCross, enabledSides, gap, length, thickness, outlineColor, outlineThickness, rotation, 1));
+            if (drawHitCross) {
+                hitLinesArray.push(drawRectangles.bind(null, ctxHitCross, enabledSides, gap, length, thickness, hitColor, outlineThickness, rotation, 0));
+                hitOutlinesArray.push(drawRectangles.bind(null, ctxHitCross, enabledSides, gap, length, thickness, outlineColor, outlineThickness, rotation, 1))
+            }
+        } else if (crosshair_definition[layer].type == "circle") {
+            var circleRadius = validatedParseInt(crosshair_definition[layer].ciRad, 18);
+            var circleThickness = validatedParseInt(crosshair_definition[layer].ciThi, 2);
+            var circleGapAngle = validatedParseInt(crosshair_definition[layer].ciGap, 20);
+            var circleOutlineThickness = validatedParseInt(crosshair_definition[layer].ciOTh, 1);
+            var circleColor = "#" + crosshair_definition[layer].ciCol;
+            var circleOutlineColor = "#" + crosshair_definition[layer].ciOCo;
+            var circleRotation = validatedParseInt(crosshair_definition[layer].ciRot, 0);
+            var outlineStyle = crosshair_definition[layer].ciOSt;
+            var segments = validatedParseInt(crosshair_definition[layer].ciSeg, 4);
+            if (segments > 8) {
+                segments = 8
+            }
+            var hitColorEnabled = crosshair_definition[layer].ciHCE;
+            var hitColor = "#" + (hitColorEnabled == 1 ? crosshair_definition[layer].ciHCo : crosshair_definition[layer].ciCol);
+            if (hitColorEnabled == 1) {
+                usesHitColor = true
+            }
+            var outlinesArray = outlineStyle == "persistent" ? linesArray : adaptiveOutlinesArray;
+            var hitOutlinesArray = outlineStyle == "persistent" ? hitLinesArray : adaptiveHitOutlinesArray;
+            linesArray.push(drawArcs.bind(null, ctxCross, segments, circleRadius, circleThickness, circleOutlineThickness, circleColor, circleGapAngle, circleRotation, 0));
+            outlinesArray.push(drawArcs.bind(null, ctxCross, segments, circleRadius, circleThickness, circleOutlineThickness, circleOutlineColor, circleGapAngle, circleRotation, 1));
+            if (drawHitCross) {
+                hitLinesArray.push(drawArcs.bind(null, ctxHitCross, segments, circleRadius, circleThickness, circleOutlineThickness, hitColor, circleGapAngle, circleRotation, 0));
+                hitOutlinesArray.push(drawArcs.bind(null, ctxHitCross, segments, circleRadius, circleThickness, circleOutlineThickness, circleOutlineColor, circleGapAngle, circleRotation, 1))
+            }
+        } else if (crosshair_definition[layer].type == "dot") {
+            var dotType = crosshair_definition[layer].dTyp;
+            var dotThickness = validatedParseInt(crosshair_definition[layer].dThi, 2);
+            var outlineStyle = crosshair_definition[layer].dOSt;
+            var dotOutlineThickness = validatedParseInt(crosshair_definition[layer].dOTh, 1);
+            var dotRotation = validatedParseInt(crosshair_definition[layer].dRot, 0);
+            var dotColor = "#" + crosshair_definition[layer].dCol;
+            var dotOutlineColor = "#" + crosshair_definition[layer].dOCo;
+            var hitColorEnabled = crosshair_definition[layer].dHCE;
+            var hitColor = "#" + (hitColorEnabled == 1 ? crosshair_definition[layer].dHCo : crosshair_definition[layer].dCol);
+            if (hitColorEnabled == 1) {
+                usesHitColor = true
+            }
+            var outlinesArray = outlineStyle == "persistent" ? linesArray : adaptiveOutlinesArray;
+            var hitOutlinesArray = outlineStyle == "persistent" ? hitLinesArray : adaptiveHitOutlinesArray;
+            linesArray.push(drawDot.bind(null, ctxCross, dotType, dotThickness, dotOutlineThickness, dotRotation, dotColor, 0));
+            outlinesArray.push(drawDot.bind(null, ctxCross, dotType, dotThickness, dotOutlineThickness, dotRotation, dotOutlineColor, 1));
+            if (drawHitCross) {
+                hitLinesArray.push(drawDot.bind(null, ctxHitCross, dotType, dotThickness, dotOutlineThickness, dotRotation, hitColor, 0));
+                hitOutlinesArray.push(drawDot.bind(null, ctxHitCross, dotType, dotThickness, dotOutlineThickness, dotRotation, dotOutlineColor, 1))
+            }
+        } else if (crosshair_definition[layer].type == "pointer") {
+            var gap = validatedParseInt(crosshair_definition[layer].poGap, 0);
+            var length = validatedParseInt(crosshair_definition[layer].poLen, 12);
+            var thickness = validatedParseInt(crosshair_definition[layer].poThi, 2);
+            var color = "#" + crosshair_definition[layer].poCol;
+            var outlineColor = "#" + crosshair_definition[layer].poOCo;
+            var outlineThickness = validatedParseInt(crosshair_definition[layer].poOTh, 1);
+            var rotation = validatedParseInt(crosshair_definition[layer].poRot, 0);
+            var outlineStyle = crosshair_definition[layer].poOSt;
+            var enabledSides = {
+                topleft: crosshair_definition[layer].poTL,
+                topright: crosshair_definition[layer].poTR,
+                bottomright: crosshair_definition[layer].poBR,
+                bottomleft: crosshair_definition[layer].poBL
+            };
+            var hitColorEnabled = crosshair_definition[layer].poHCE;
+            var hitColor = "#" + (hitColorEnabled == 1 ? crosshair_definition[layer].poHCo : crosshair_definition[layer].poCol);
+            if (hitColorEnabled == 1) {
+                usesHitColor = true
+            }
+            var outlinesArray = outlineStyle == "persistent" ? linesArray : adaptiveOutlinesArray;
+            var hitOutlinesArray = outlineStyle == "persistent" ? hitLinesArray : adaptiveHitOutlinesArray;
+            linesArray.push(drawPointers.bind(null, ctxCross, enabledSides, length, thickness, outlineThickness, color, gap, rotation, 0));
+            outlinesArray.push(drawPointers.bind(null, ctxCross, enabledSides, length, thickness, outlineThickness, outlineColor, gap, rotation, 1));
+            if (drawHitCross) {
+                hitLinesArray.push(drawPointers.bind(null, ctxHitCross, enabledSides, length, thickness, outlineThickness, hitColor, gap, rotation, 0));
+                hitOutlinesArray.push(drawPointers.bind(null, ctxHitCross, enabledSides, length, thickness, outlineThickness, outlineColor, gap, rotation, 1))
+            }
+        }
+    }
+    if (adaptiveOutlinesArray.length > 0) {
+        for (let i = adaptiveOutlinesArray.length - 1; i >= 0; i--) {
+            crosshairInstructionString += adaptiveOutlinesArray[i].call();
+            if (drawHitCross) {
+                hitCrosshairInstructionString += adaptiveHitOutlinesArray[i].call()
+            }
+        }
+    }
+    for (let i = linesArray.length - 1; i >= 0; i--) {
+        crosshairInstructionString += linesArray[i].call();
+        if (drawHitCross) {
+            hitCrosshairInstructionString += hitLinesArray[i].call()
+        }
+    }
+
+    function validatedParseInt(input, defVal) {
+        if (isNaN(parseInt(input))) {
+            return defVal
+        } else {
+            return parseInt(input)
+        }
+    }
+    if (target == "logicalDefault") {
+        crosshairInstructionString += "</svg>";
+        return crosshairInstructionString
+    } else if (target == "logicalHit") {
+        hitCrosshairInstructionString += "</svg>";
+        if (!usesHitColor) {
+            hitCrosshairInstructionString = ""
+        }
+        return hitCrosshairInstructionString
+    }
+}
+
+function drawRectangles(ctxCross, enabledSides, gap, length, thickness, color, outlineThickness, rotation, outline) {
+    let instructionString = "";
+    if (ctxCross !== "returnString") {
+        ctxCross.fillStyle = color;
+        ctxCross.save();
+        ctxCross.rotate(Math.PI / 180 * rotation)
+    } else {
+        instructionString += "<g fill='" + color.substring(0, 7);
+        if (color.length > 7) {
+            var opacity = parseInt(color.substring(7, 9), 16) / 255;
+            instructionString += "' fill-opacity='" + opacity
+        }
+        instructionString += "' transform='rotate(" + rotation + ")'>\n"
+    }
+    for (var i = 0; i <= 3; i++) {
+        if (i == 0) {
+            if (enabledSides.left == 0) {
+                continue
+            }
+            var width = length;
+            var height = thickness;
+            var x = -gap - width;
+            var y = -height / 2
+        } else if (i == 1) {
+            if (enabledSides.top == 0) {
+                continue
+            }
+            var width = thickness;
+            var height = length;
+            var x = -width / 2;
+            var y = -gap - height
+        } else if (i == 2) {
+            if (enabledSides.right == 0) {
+                continue
+            }
+            var width = length;
+            var height = thickness;
+            var x = gap;
+            var y = -height / 2
+        } else {
+            if (enabledSides.bottom == 0) {
+                continue
+            }
+            var width = thickness;
+            var height = length;
+            var x = -width / 2;
+            var y = gap
+        }
+        if (outline == 0) {
+            if (ctxCross !== "returnString") {
+                ctxCross.beginPath();
+                ctxCross.fillRect(x, y, width, height)
+            } else {
+                instructionString += "<rect x='" + x + "' y='" + y + "' width='" + width + "' height='" + height + "' />\n"
+            }
+        } else {
+            if (ctxCross !== "returnString") {
+                ctxCross.beginPath();
+                ctxCross.fillRect(x - outlineThickness, y - outlineThickness, width + outlineThickness * 2, outlineThickness);
+                ctxCross.fillRect(x - outlineThickness, y + height, width + outlineThickness * 2, outlineThickness);
+                ctxCross.fillRect(x - outlineThickness, y, outlineThickness, height);
+                ctxCross.fillRect(x + width, y, outlineThickness, height)
+            } else {
+                instructionString += "<rect x='" + (x - outlineThickness) + "' y='" + (y - outlineThickness) + "' width='" + (width + outlineThickness * 2) + "' height='" + outlineThickness + "' />\n";
+                instructionString += "<rect x='" + (x - outlineThickness) + "' y='" + (y + height) + "' width='" + (width + outlineThickness * 2) + "' height='" + outlineThickness + "' />\n";
+                instructionString += "<rect x='" + (x - outlineThickness) + "' y='" + y + "' width='" + outlineThickness + "' height='" + height + "' />\n";
+                instructionString += "<rect x='" + (x + width) + "' y='" + y + "' width='" + outlineThickness + "' height='" + height + "' />\n"
+            }
+        }
+    }
+    if (ctxCross !== "returnString") {
+        ctxCross.restore()
+    } else {
+        instructionString += "</g>\n"
+    }
+    return instructionString
+}
+
+function drawDot(ctxCross, dotType, thickness, outlineThickness, rotation, color, outline) {
+    let instructionString = "";
+    if (thickness == 0) {
+        return
+    }
+    var fillRule = "nonzero";
+    if (ctxCross !== "returnString") {
+        ctxCross.fillStyle = color;
+        ctxCross.save();
+        ctxCross.rotate(Math.PI / 180 * rotation)
+    }
+    if (ctxCross !== "returnString") {
+        ctxCross.beginPath()
+    } else {
+        instructionString += "<g fill='" + color.substring(0, 7);
+        if (color.length > 7) {
+            var opacity = parseInt(color.substring(7, 9), 16) / 255;
+            instructionString += "' fill-opacity='" + opacity
+        }
+        instructionString += "' transform='rotate(" + rotation + ")'>\n"
+    }
+    if (dotType == "round") {
+        var x = 0;
+        var y = 0;
+        if (outline == 0) {
+            if (ctxCross !== "returnString") {
+                ctxCross.arc(x, y, thickness, 0, 2 * Math.PI)
+            } else {
+                instructionString += "<path d='" + "M " + x + " " + y + " m " + -1 * thickness + " 0 a " + thickness + " " + thickness + " 0 1 1 " + thickness * 2;
+                instructionString += " 0 a " + thickness + " " + thickness + " 0 1 1 " + thickness * -2 + " 0' />\n"
+            }
+        } else {
+            fillRule = "evenodd";
+            if (ctxCross !== "returnString") {
+                ctxCross.arc(x, y, thickness, 0, 2 * Math.PI);
+                ctxCross.moveTo(x + thickness + outlineThickness, y);
+                ctxCross.arc(x, y, thickness + outlineThickness, 0, 2 * Math.PI)
+            } else {
+                instructionString += "<path fill-rule='evenodd' d='" + "M " + x + " " + y + " m " + -1 * thickness + " 0 a " + thickness + " " + thickness + " 0 1 1 " + thickness * 2;
+                instructionString += " 0 a " + thickness + " " + thickness + " 0 1 1 " + thickness * -2 + " 0z ";
+                instructionString += "M " + x + " " + y + " m " + -1 * (thickness + outlineThickness) + " 0 a " + (thickness + outlineThickness) + " " + (thickness + outlineThickness) + " 0 1 1 " + (thickness + outlineThickness) * 2;
+                instructionString += " 0 a " + (thickness + outlineThickness) + " " + (thickness + outlineThickness) + " 0 1 1 " + (thickness + outlineThickness) * -2 + " 0z' />\n"
+            }
+        }
+    } else {
+        if (rotation == 0) {
+            var x = 0 - Math.ceil(thickness / 2);
+            var y = 0 - Math.ceil(thickness / 2)
+        } else {
+            var x = -thickness / 2;
+            var y = -thickness / 2
+        }
+        if (outline == 0) {
+            if (ctxCross !== "returnString") {
+                ctxCross.rect(x, y, thickness, thickness)
+            } else {
+                instructionString += "<rect x='" + x + "' y='" + y + "' width='" + thickness + "' height='" + thickness + "' />\n"
+            }
+        } else {
+            if (ctxCross !== "returnString") {
+                ctxCross.rect(x - outlineThickness, y - outlineThickness, thickness + outlineThickness * 2, outlineThickness);
+                ctxCross.rect(x - outlineThickness, y + thickness, thickness + outlineThickness * 2, outlineThickness);
+                ctxCross.rect(x - outlineThickness, y, outlineThickness, thickness);
+                ctxCross.rect(x + thickness, y, outlineThickness, thickness)
+            } else {
+                instructionString += "<rect x='" + (x - outlineThickness) + "' y='" + (y - outlineThickness) + "' width='" + (thickness + outlineThickness * 2) + "' height='" + outlineThickness + "' />\n";
+                instructionString += "<rect x='" + (x - outlineThickness) + "' y='" + (y + thickness) + "' width='" + (thickness + outlineThickness * 2) + "' height='" + outlineThickness + "' />\n";
+                instructionString += "<rect x='" + (x - outlineThickness) + "' y='" + y + "' width='" + outlineThickness + "' height='" + thickness + "' />\n";
+                instructionString += "<rect x='" + (x + thickness) + "' y='" + y + "' width='" + outlineThickness + "' height='" + thickness + "' />\n"
+            }
+        }
+    }
+    if (ctxCross !== "returnString") {
+        ctxCross.fill(fillRule);
+        ctxCross.restore()
+    } else {
+        instructionString += "</g>\n"
+    }
+    return instructionString
+}
+
+function drawArcs(ctxCross, segments, radius, thickness, outlineThickness, color, gapPct, rotation, outline) {
+    let instructionString = "";
+    if (ctxCross !== "returnString") {
+        ctxCross.fillStyle = color;
+        ctxCross.save();
+        ctxCross.rotate(Math.PI / 180 * rotation - Math.PI / 2)
+    } else {
+        instructionString += "<g fill='" + color.substring(0, 7);
+        if (color.length > 7) {
+            var opacity = parseInt(color.substring(7, 9), 16) / 255;
+            instructionString += "' fill-opacity='" + opacity
+        }
+        instructionString += "' transform='rotate(" + (rotation - 90) + ")'>\n"
+    }
+    if (outlineThickness != 0) {
+        outlineThickness += .2
+    }
+    var x = 0;
+    var y = 0;
+    radius = Math.max(radius, 0);
+    var gapRad = 2 * Math.PI / segments * (gapPct / 100);
+    var outlineGapRad = Math.max(gapRad - 2 * outlineThickness / radius, 0);
+    if (segments == 1) {
+        if (outline == 0) {
+            if (ctxCross !== "returnString") {
+                ctxCross.beginPath();
+                ctxCross.arc(x, y, radius, 0 + gapRad / 2, Math.PI, false);
+                ctxCross.arc(x, y, radius + thickness, Math.PI, 0 + gapRad / 2, true);
+                ctxCross.closePath();
+                ctxCross.fill();
+                ctxCross.beginPath();
+                ctxCross.arc(x, y, radius, Math.PI, 0 - gapRad / 2, false);
+                ctxCross.arc(x, y, radius + thickness, 0 - gapRad / 2, Math.PI, true);
+                ctxCross.closePath();
+                ctxCross.fill()
+            } else {
+                let innerP1 = polarToCartesian(x, y, radius, 0 + gapRad / 2);
+                let innerP2 = polarToCartesian(x, y, radius, Math.PI);
+                let innerP3 = polarToCartesian(x, y, radius + thickness, Math.PI);
+                let innerP4 = polarToCartesian(x, y, radius + thickness, 0 + gapRad / 2);
+                var largeArcFlag = Math.PI - (0 + gapRad / 2) <= Math.PI ? "0" : "1";
+                instructionString += "<path d='" + "M " + innerP1.x + " " + innerP1.y;
+                instructionString += " A " + radius + " " + radius + " 0 " + largeArcFlag + " 1 " + innerP2.x + " " + innerP2.y;
+                instructionString += " L " + innerP3.x + " " + innerP3.y;
+                instructionString += " A " + (radius + thickness) + " " + (radius + thickness) + " 0 " + largeArcFlag + " 0 " + innerP4.x + " " + innerP4.y + "z' />\n";
+                let innerP5 = polarToCartesian(x, y, radius, Math.PI);
+                let innerP6 = polarToCartesian(x, y, radius, 2 * Math.PI - gapRad / 2);
+                let innerP7 = polarToCartesian(x, y, radius + thickness, 2 * Math.PI - gapRad / 2);
+                let innerP8 = polarToCartesian(x, y, radius + thickness, Math.PI);
+                largeArcFlag = 2 * Math.PI - gapRad / 2 - Math.PI <= Math.PI ? "0" : "1";
+                instructionString += "<path d='" + "M " + innerP5.x + " " + innerP5.y;
+                instructionString += " A " + radius + " " + radius + " 0 " + largeArcFlag + " 1 " + innerP6.x + " " + innerP6.y;
+                instructionString += " L " + innerP7.x + " " + innerP7.y;
+                instructionString += " A " + (radius + thickness) + " " + (radius + thickness) + " 0 " + largeArcFlag + " 0 " + innerP8.x + " " + innerP8.y + "z' />\n"
+            }
+        } else {
+            if (ctxCross !== "returnString") {
+                ctxCross.beginPath();
+                ctxCross.arc(x, y, radius, 0 + gapRad / 2, Math.PI, false);
+                ctxCross.arc(x, y, radius + thickness, Math.PI, 0 + gapRad / 2, true);
+                ctxCross.closePath();
+                ctxCross.moveTo(radius * Math.cos(0 + outlineGapRad / 2), radius * Math.sin(0 + outlineGapRad / 2));
+                ctxCross.arc(x, y, Math.max(radius - outlineThickness, 0), 0 + outlineGapRad / 2, Math.PI, false);
+                ctxCross.arc(x, y, radius + thickness + outlineThickness, Math.PI, 0 + outlineGapRad / 2, true);
+                ctxCross.closePath();
+                ctxCross.fill("evenodd");
+                ctxCross.beginPath();
+                ctxCross.arc(x, y, radius, Math.PI, 0 - gapRad / 2, false);
+                ctxCross.arc(x, y, radius + thickness, 0 - gapRad / 2, Math.PI, true);
+                ctxCross.closePath();
+                ctxCross.moveTo(radius * Math.cos(Math.PI), radius * Math.sin(Math.PI));
+                ctxCross.arc(x, y, Math.max(radius - outlineThickness, 0), Math.PI, 0 - outlineGapRad / 2, false);
+                ctxCross.arc(x, y, radius + thickness + outlineThickness, 0 - outlineGapRad / 2, Math.PI, true);
+                ctxCross.closePath();
+                ctxCross.fill("evenodd")
+            } else {
+                let smallRadius = Math.max(radius - outlineThickness, 0);
+                let innerP1 = polarToCartesian(x, y, radius, 0 + gapRad / 2);
+                let innerP2 = polarToCartesian(x, y, radius, Math.PI);
+                let innerP3 = polarToCartesian(x, y, radius + thickness, Math.PI);
+                let innerP4 = polarToCartesian(x, y, radius + thickness, 0 + gapRad / 2);
+                let outerP1 = polarToCartesian(x, y, smallRadius, 0 + outlineGapRad / 2);
+                let outerP2 = polarToCartesian(x, y, smallRadius, Math.PI);
+                let outerP3 = polarToCartesian(x, y, radius + thickness + outlineThickness, Math.PI);
+                let outerP4 = polarToCartesian(x, y, radius + thickness + outlineThickness, 0 + outlineGapRad / 2);
+                var largeArcFlag = Math.PI - (0 + gapRad / 2) <= Math.PI ? "0" : "1";
+                instructionString += "<path fill-rule='evenodd' d='" + "M " + innerP1.x + " " + innerP1.y;
+                instructionString += " A " + radius + " " + radius + " 0 " + largeArcFlag + " 1 " + innerP2.x + " " + innerP2.y;
+                instructionString += " L " + innerP3.x + " " + innerP3.y;
+                instructionString += " A " + (radius + thickness) + " " + (radius + thickness) + " 0 " + largeArcFlag + " 0 " + innerP4.x + " " + innerP4.y + "z";
+                instructionString += " M " + outerP1.x + " " + outerP1.y;
+                instructionString += " A " + smallRadius + " " + smallRadius + " 0 " + largeArcFlag + " 1 " + outerP2.x + " " + outerP2.y;
+                instructionString += " L " + outerP3.x + " " + outerP3.y;
+                instructionString += " A " + (radius + thickness + outlineThickness) + " " + (radius + thickness + outlineThickness) + " 0 " + largeArcFlag + " 0 " + outerP4.x + " " + outerP4.y + "z' />\n";
+                let innerP5 = polarToCartesian(x, y, radius, Math.PI);
+                let innerP6 = polarToCartesian(x, y, radius, 2 * Math.PI - gapRad / 2);
+                let innerP7 = polarToCartesian(x, y, radius + thickness, 2 * Math.PI - gapRad / 2);
+                let innerP8 = polarToCartesian(x, y, radius + thickness, Math.PI);
+                let outerP5 = polarToCartesian(x, y, smallRadius, Math.PI);
+                let outerP6 = polarToCartesian(x, y, smallRadius, 2 * Math.PI - outlineGapRad / 2);
+                let outerP7 = polarToCartesian(x, y, radius + thickness + outlineThickness, 2 * Math.PI - outlineGapRad / 2);
+                let outerP8 = polarToCartesian(x, y, radius + thickness + outlineThickness, Math.PI);
+                largeArcFlag = 2 * Math.PI - gapRad / 2 - Math.PI <= Math.PI ? "0" : "1";
+                instructionString += "<path fill-rule='evenodd' d='" + "M " + innerP5.x + " " + innerP5.y;
+                instructionString += " A " + radius + " " + radius + " 0 " + largeArcFlag + " 1 " + innerP6.x + " " + innerP6.y;
+                instructionString += " L " + innerP7.x + " " + innerP7.y;
+                instructionString += " A " + (radius + thickness) + " " + (radius + thickness) + " 0 " + largeArcFlag + " 0 " + innerP8.x + " " + innerP8.y + "z";
+                instructionString += " M " + outerP5.x + " " + outerP5.y;
+                instructionString += " A " + smallRadius + " " + smallRadius + " 0 " + largeArcFlag + " 1 " + outerP6.x + " " + outerP6.y;
+                instructionString += " L " + outerP7.x + " " + outerP7.y;
+                instructionString += " A " + (radius + thickness + outlineThickness) + " " + (radius + thickness + outlineThickness) + " 0 " + largeArcFlag + " 0 " + outerP8.x + " " + outerP8.y + "z' />\n"
+            }
+        }
+    } else {
+        for (var i = 0; i < segments; i++) {
+            if (outline == 0) {
+                if (ctxCross !== "returnString") {
+                    ctxCross.beginPath();
+                    ctxCross.arc(x, y, radius, i / segments * 2 * Math.PI + gapRad / 2, (i + 1) / segments * 2 * Math.PI - gapRad / 2, false);
+                    ctxCross.arc(x, y, radius + thickness, (i + 1) / segments * 2 * Math.PI - gapRad / 2, i / segments * 2 * Math.PI + gapRad / 2, true);
+                    ctxCross.closePath();
+                    ctxCross.fill()
+                } else {
+                    let innerP1 = polarToCartesian(x, y, radius, i / segments * 2 * Math.PI + gapRad / 2);
+                    let innerP2 = polarToCartesian(x, y, radius, (i + 1) / segments * 2 * Math.PI - gapRad / 2);
+                    let innerP3 = polarToCartesian(x, y, radius + thickness, (i + 1) / segments * 2 * Math.PI - gapRad / 2);
+                    let innerP4 = polarToCartesian(x, y, radius + thickness, i / segments * 2 * Math.PI + gapRad / 2);
+                    var largeArcFlag = (i + 1) / segments * 2 * Math.PI - gapRad / 2 - (i / segments * 2 * Math.PI + gapRad / 2) <= Math.PI ? "0" : "1";
+                    instructionString += "<path d='" + "M " + innerP1.x + " " + innerP1.y;
+                    instructionString += " A " + radius + " " + radius + " 0 " + largeArcFlag + " 1 " + innerP2.x + " " + innerP2.y;
+                    instructionString += " L " + innerP3.x + " " + innerP3.y;
+                    instructionString += " A " + (radius + thickness) + " " + (radius + thickness) + " 0 " + largeArcFlag + " 0 " + innerP4.x + " " + innerP4.y + "z' />\n"
+                }
+            } else {
+                if (ctxCross !== "returnString") {
+                    ctxCross.beginPath();
+                    ctxCross.arc(x, y, radius, i / segments * 2 * Math.PI + gapRad / 2, (i + 1) / segments * 2 * Math.PI - gapRad / 2, false);
+                    ctxCross.arc(x, y, radius + thickness, (i + 1) / segments * 2 * Math.PI - gapRad / 2, i / segments * 2 * Math.PI + gapRad / 2, true);
+                    ctxCross.closePath();
+                    ctxCross.moveTo(radius * Math.cos(i / segments * 2 * Math.PI + outlineGapRad / 2), radius * Math.sin(i / segments * 2 * Math.PI + outlineGapRad / 2));
+                    ctxCross.arc(x, y, Math.max(radius - outlineThickness, 0), i / segments * 2 * Math.PI + outlineGapRad / 2, (i + 1) / segments * 2 * Math.PI - outlineGapRad / 2, false);
+                    ctxCross.arc(x, y, radius + thickness + outlineThickness, (i + 1) / segments * 2 * Math.PI - outlineGapRad / 2, i / segments * 2 * Math.PI + outlineGapRad / 2, true);
+                    ctxCross.closePath();
+                    ctxCross.fill("evenodd")
+                } else {
+                    let smallRadius = Math.max(radius - outlineThickness, 0);
+                    let innerP1 = polarToCartesian(x, y, radius, i / segments * 2 * Math.PI + gapRad / 2);
+                    let innerP2 = polarToCartesian(x, y, radius, (i + 1) / segments * 2 * Math.PI - gapRad / 2);
+                    let innerP3 = polarToCartesian(x, y, radius + thickness, (i + 1) / segments * 2 * Math.PI - gapRad / 2);
+                    let innerP4 = polarToCartesian(x, y, radius + thickness, i / segments * 2 * Math.PI + gapRad / 2);
+                    let outerP1 = polarToCartesian(x, y, smallRadius, i / segments * 2 * Math.PI + outlineGapRad / 2);
+                    let outerP2 = polarToCartesian(x, y, smallRadius, (i + 1) / segments * 2 * Math.PI - outlineGapRad / 2);
+                    let outerP3 = polarToCartesian(x, y, radius + thickness + outlineThickness, (i + 1) / segments * 2 * Math.PI - outlineGapRad / 2);
+                    let outerP4 = polarToCartesian(x, y, radius + thickness + outlineThickness, i / segments * 2 * Math.PI + outlineGapRad / 2);
+                    var largeArcFlag = (i + 1) / segments * 2 * Math.PI - gapRad / 2 - (i / segments * 2 * Math.PI + gapRad / 2) <= Math.PI ? "0" : "1";
+                    instructionString += "<path fill-rule='evenodd' d='" + "M " + innerP1.x + " " + innerP1.y;
+                    instructionString += " A " + radius + " " + radius + " 0 " + largeArcFlag + " 1 " + innerP2.x + " " + innerP2.y;
+                    instructionString += " L " + innerP3.x + " " + innerP3.y;
+                    instructionString += " A " + (radius + thickness) + " " + (radius + thickness) + " 0 " + largeArcFlag + " 0 " + innerP4.x + " " + innerP4.y + "z";
+                    instructionString += " M " + outerP1.x + " " + outerP1.y;
+                    instructionString += " A " + smallRadius + " " + smallRadius + " 0 " + largeArcFlag + " 1 " + outerP2.x + " " + outerP2.y;
+                    instructionString += " L " + outerP3.x + " " + outerP3.y;
+                    instructionString += " A " + (radius + thickness + outlineThickness) + " " + (radius + thickness + outlineThickness) + " 0 " + largeArcFlag + " 0 " + outerP4.x + " " + outerP4.y + "z' />\n"
+                }
+            }
+        }
+    }
+    if (ctxCross !== "returnString") {
+        ctxCross.restore()
+    } else {
+        instructionString += "</g>\n"
+    }
+    return instructionString
+}
+
+function drawPointers(ctxCross, enabledSides, length, thickness, outlineThickness, color, gap, rotation, outline) {
+    let instructionString = "";
+    if (ctxCross !== "returnString") {
+        ctxCross.fillStyle = color;
+        ctxCross.save();
+        ctxCross.rotate(Math.PI / 180 * rotation)
+    } else {
+        instructionString += "<g fill='" + color.substring(0, 7);
+        if (color.length > 7) {
+            var opacity = parseInt(color.substring(7, 9), 16) / 255;
+            instructionString += "' fill-opacity='" + opacity
+        }
+        instructionString += "' transform='rotate(" + rotation + ")'>\n"
+    }
+    if (thickness > length) {
+        thickness = length
+    }
+    let x = gap;
+    let y = gap;
+    for (let i = 0; i <= 3; i++) {
+        if (i == 0) {
+            if (enabledSides.bottomright == 0) {
+                continue
+            }
+            if (outline == 0) {
+                if (ctxCross !== "returnString") {
+                    ctxCross.beginPath();
+                    ctxCross.rect(x + outlineThickness, y + outlineThickness, length, thickness);
+                    ctxCross.rect(x + outlineThickness, y + outlineThickness + thickness, thickness, length - thickness)
+                } else {
+                    instructionString += "<rect x='" + (x + outlineThickness) + "' y='" + (y + outlineThickness) + "' width='" + length + "' height='" + thickness + "' />\n";
+                    instructionString += "<rect x='" + (x + outlineThickness) + "' y='" + (y + outlineThickness + thickness) + "' width='" + thickness + "' height='" + (length - thickness) + "' />\n"
+                }
+            } else {
+                if (ctxCross !== "returnString") {
+                    ctxCross.beginPath();
+                    ctxCross.rect(x, y, length + 2 * outlineThickness, outlineThickness);
+                    ctxCross.rect(x, y + outlineThickness, outlineThickness, length + outlineThickness);
+                    ctxCross.rect(x + outlineThickness, y + outlineThickness + length, thickness, outlineThickness);
+                    ctxCross.rect(x + outlineThickness + thickness, y + outlineThickness + thickness, length - thickness, outlineThickness);
+                    ctxCross.rect(x + outlineThickness + thickness, y + 2 * outlineThickness + thickness, outlineThickness, length - thickness);
+                    ctxCross.rect(x + outlineThickness + length, y + outlineThickness, outlineThickness, thickness + outlineThickness)
+                } else {
+                    instructionString += "<rect x='" + x + "' y='" + y + "' width='" + (length + 2 * outlineThickness) + "' height='" + outlineThickness + "' />\n";
+                    instructionString += "<rect x='" + x + "' y='" + (y + outlineThickness) + "' width='" + outlineThickness + "' height='" + (length + outlineThickness) + "' />\n";
+                    instructionString += "<rect x='" + (x + outlineThickness) + "' y='" + (y + outlineThickness + length) + "' width='" + thickness + "' height='" + outlineThickness + "' />\n";
+                    instructionString += "<rect x='" + (x + outlineThickness + thickness) + "' y='" + (y + outlineThickness + thickness) + "' width='" + (length - thickness) + "' height='" + outlineThickness + "' />\n";
+                    instructionString += "<rect x='" + (x + outlineThickness + thickness) + "' y='" + (y + 2 * outlineThickness + thickness) + "' width='" + outlineThickness + "' height='" + (length - thickness) + "' />\n";
+                    instructionString += "<rect x='" + (x + outlineThickness + length) + "' y='" + (y + outlineThickness) + "' width='" + outlineThickness + "' height='" + (thickness + outlineThickness) + "' />\n"
+                }
+            }
+        }
+        if (i == 1) {
+            if (enabledSides.topright == 0) {
+                continue
+            }
+            if (outline == 0) {
+                if (ctxCross !== "returnString") {
+                    ctxCross.beginPath();
+                    ctxCross.rect(x + outlineThickness, -(y + outlineThickness), length, -thickness);
+                    ctxCross.rect(x + outlineThickness, -(y + outlineThickness + thickness), thickness, -(length - thickness))
+                } else {
+                    instructionString += "<rect x='" + (x + outlineThickness) + "' y='" + -(y + outlineThickness + thickness) + "' width='" + length + "' height='" + thickness + "' />\n";
+                    instructionString += "<rect x='" + (x + outlineThickness) + "' y='" + (-(y + outlineThickness + thickness) - (length - thickness)) + "' width='" + thickness + "' height='" + (length - thickness) + "' />\n"
+                }
+            } else {
+                if (ctxCross !== "returnString") {
+                    ctxCross.beginPath();
+                    ctxCross.rect(x, -y, length + 2 * outlineThickness, -outlineThickness);
+                    ctxCross.rect(x, -(y + outlineThickness), outlineThickness, -(length + outlineThickness));
+                    ctxCross.rect(x + outlineThickness, -(y + outlineThickness + length), thickness, -outlineThickness);
+                    ctxCross.rect(x + outlineThickness + thickness, -(y + outlineThickness + thickness), length - thickness, -outlineThickness);
+                    ctxCross.rect(x + outlineThickness + thickness, -(y + 2 * outlineThickness + thickness), outlineThickness, -(length - thickness));
+                    ctxCross.rect(x + outlineThickness + length, -(y + outlineThickness), outlineThickness, -(thickness + outlineThickness))
+                } else {
+                    instructionString += "<rect x='" + x + "' y='" + (-y - outlineThickness) + "' width='" + (length + 2 * outlineThickness) + "' height='" + outlineThickness + "' />\n";
+                    instructionString += "<rect x='" + x + "' y='" + (-y - length - 2 * outlineThickness) + "' width='" + outlineThickness + "' height='" + (length + outlineThickness) + "' />\n";
+                    instructionString += "<rect x='" + (x + outlineThickness) + "' y='" + -(y + 2 * outlineThickness + length) + "' width='" + thickness + "' height='" + outlineThickness + "' />\n";
+                    instructionString += "<rect x='" + (x + outlineThickness + thickness) + "' y='" + -(y + 2 * outlineThickness + thickness) + "' width='" + (length - thickness) + "' height='" + outlineThickness + "' />\n";
+                    instructionString += "<rect x='" + (x + outlineThickness + thickness) + "' y='" + -(y + 2 * outlineThickness + length) + "' width='" + outlineThickness + "' height='" + (length - thickness) + "' />\n";
+                    instructionString += "<rect x='" + (x + outlineThickness + length) + "' y='" + -(y + 2 * outlineThickness + thickness) + "' width='" + outlineThickness + "' height='" + (thickness + outlineThickness) + "' />\n"
+                }
+            }
+        }
+        if (i == 2) {
+            if (enabledSides.bottomleft == 0) {
+                continue
+            }
+            if (outline == 0) {
+                if (ctxCross !== "returnString") {
+                    ctxCross.beginPath();
+                    ctxCross.rect(-(x + outlineThickness), y + outlineThickness, -length, thickness);
+                    ctxCross.rect(-(x + outlineThickness), y + outlineThickness + thickness, -thickness, length - thickness)
+                } else {
+                    instructionString += "<rect x='" + -(x + outlineThickness + length) + "' y='" + (y + outlineThickness) + "' width='" + length + "' height='" + thickness + "' />\n";
+                    instructionString += "<rect x='" + -(x + outlineThickness + thickness) + "' y='" + (y + outlineThickness + thickness) + "' width='" + thickness + "' height='" + (length - thickness) + "' />\n"
+                }
+            } else {
+                if (ctxCross !== "returnString") {
+                    ctxCross.beginPath();
+                    ctxCross.rect(-x, y, -(length + 2 * outlineThickness), outlineThickness);
+                    ctxCross.rect(-x, y + outlineThickness, -outlineThickness, length + outlineThickness);
+                    ctxCross.rect(-(x + outlineThickness), y + outlineThickness + length, -thickness, outlineThickness);
+                    ctxCross.rect(-(x + outlineThickness + thickness), y + outlineThickness + thickness, -(length - thickness), outlineThickness);
+                    ctxCross.rect(-(x + outlineThickness + thickness), y + 2 * outlineThickness + thickness, -outlineThickness, length - thickness);
+                    ctxCross.rect(-(x + outlineThickness + length), y + outlineThickness, -outlineThickness, thickness + outlineThickness)
+                } else {
+                    instructionString += "<rect x='" + -(x + length + 2 * outlineThickness) + "' y='" + y + "' width='" + (length + 2 * outlineThickness) + "' height='" + outlineThickness + "' />\n";
+                    instructionString += "<rect x='" + -(x + outlineThickness) + "' y='" + (y + outlineThickness) + "' width='" + outlineThickness + "' height='" + (length + outlineThickness) + "' />\n";
+                    instructionString += "<rect x='" + -(x + outlineThickness + thickness) + "' y='" + (y + outlineThickness + length) + "' width='" + thickness + "' height='" + outlineThickness + "' />\n";
+                    instructionString += "<rect x='" + -(x + outlineThickness + length) + "' y='" + (y + outlineThickness + thickness) + "' width='" + (length - thickness) + "' height='" + outlineThickness + "' />\n";
+                    instructionString += "<rect x='" + -(x + 2 * outlineThickness + thickness) + "' y='" + (y + 2 * outlineThickness + thickness) + "' width='" + outlineThickness + "' height='" + (length - thickness) + "' />\n";
+                    instructionString += "<rect x='" + -(x + 2 * outlineThickness + length) + "' y='" + (y + outlineThickness) + "' width='" + outlineThickness + "' height='" + (thickness + outlineThickness) + "' />\n"
+                }
+            }
+        }
+        if (i == 3) {
+            if (enabledSides.topleft == 0) {
+                continue
+            }
+            if (outline == 0) {
+                if (ctxCross !== "returnString") {
+                    ctxCross.beginPath();
+                    ctxCross.rect(-(x + outlineThickness), -(y + outlineThickness), -length, -thickness);
+                    ctxCross.rect(-(x + outlineThickness), -(y + outlineThickness + thickness), -thickness, -(length - thickness))
+                } else {
+                    instructionString += "<rect x='" + -(x + outlineThickness + length) + "' y='" + -(y + outlineThickness + thickness) + "' width='" + length + "' height='" + thickness + "' />\n";
+                    instructionString += "<rect x='" + -(x + outlineThickness + thickness) + "' y='" + -(y + outlineThickness + length) + "' width='" + thickness + "' height='" + (length - thickness) + "' />\n"
+                }
+            } else {
+                if (ctxCross !== "returnString") {
+                    ctxCross.beginPath();
+                    ctxCross.rect(-x, -y, -(length + 2 * outlineThickness), -outlineThickness);
+                    ctxCross.rect(-x, -(y + outlineThickness), -outlineThickness, -(length + outlineThickness));
+                    ctxCross.rect(-(x + outlineThickness), -(y + outlineThickness + length), -thickness, -outlineThickness);
+                    ctxCross.rect(-(x + outlineThickness + thickness), -(y + outlineThickness + thickness), -(length - thickness), -outlineThickness);
+                    ctxCross.rect(-(x + outlineThickness + thickness), -(y + 2 * outlineThickness + thickness), -outlineThickness, -(length - thickness));
+                    ctxCross.rect(-(x + outlineThickness + length), -(y + outlineThickness), -outlineThickness, -(thickness + outlineThickness))
+                } else {
+                    instructionString += "<rect x='" + -(x + length + 2 * outlineThickness) + "' y='" + -(y + outlineThickness) + "' width='" + (length + 2 * outlineThickness) + "' height='" + outlineThickness + "' />\n";
+                    instructionString += "<rect x='" + -(x + outlineThickness) + "' y='" + -(y + 2 * outlineThickness + length) + "' width='" + outlineThickness + "' height='" + (length + outlineThickness) + "' />\n";
+                    instructionString += "<rect x='" + -(x + outlineThickness + thickness) + "' y='" + -(y + 2 * outlineThickness + length) + "' width='" + thickness + "' height='" + outlineThickness + "' />\n";
+                    instructionString += "<rect x='" + -(x + outlineThickness + length) + "' y='" + -(y + 2 * outlineThickness + thickness) + "' width='" + (length - thickness) + "' height='" + outlineThickness + "' />\n";
+                    instructionString += "<rect x='" + -(x + 2 * outlineThickness + thickness) + "' y='" + -(y + 2 * outlineThickness + length) + "' width='" + outlineThickness + "' height='" + (length - thickness) + "' />\n";
+                    instructionString += "<rect x='" + -(x + 2 * outlineThickness + length) + "' y='" + -(y + 2 * outlineThickness + thickness) + "' width='" + outlineThickness + "' height='" + (thickness + outlineThickness) + "' />\n"
+                }
+            }
+        }
+        if (ctxCross !== "returnString") {
+            ctxCross.fill()
+        }
+    }
+    if (ctxCross !== "returnString") {
+        ctxCross.restore()
+    } else {
+        instructionString += "</g>\n"
+    }
+    return instructionString
+}

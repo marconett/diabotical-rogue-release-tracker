@@ -1,8 +1,21 @@
+//Skill Slots:
+// 0 = Movement
+// 1 = Ability
+// 2 = Gadget
+
 rogue_chunk
 {
 	view_height 53.0
 	crouch_view_height 35.0
 	model animations/chunkbot/skm_chunkbot
+	scale 1.02
+	speed 300
+	max_hp 90
+	max_armor 80 
+	skill_slot 0 20011   //Leap
+	skill_slot 1 -1		 //Not set, picked up during Wipeout
+	skill_slot 2 20021   //Temporary Shield
+	forced_passive 30005 //Overshield on kill
 }
 
 rogue_eggbot
@@ -10,6 +23,15 @@ rogue_eggbot
 	view_height 42.0
 	crouch_view_height 26.0
 	model animations/eggbot/skm_eggbot
+	scale 1
+	speed 300
+	max_hp 70
+	max_armor 70 
+	skill_slot 0 40001   //Bolt 
+	skill_slot 1 -1		 //Not set, picked up during Wipeout
+	skill_slot 2 20022   //Teleport To Friend
+	forced_passive 30001 //Double Jump
+	forced_passive 30005 //Overshield on kill
 }
 
 rogue_scout 
@@ -17,11 +39,27 @@ rogue_scout
 	view_height 46.0
 	crouch_view_height 28.0
 	model animations/weesuit/skm_weesuit
+	scale 1.15
+	speed 300
+	max_hp 60
+	max_armor 70
+	skill_slot 0 20006   //Hookshot
+	skill_slot 1 -1		 //Not set, picked up during Wipeout
+	skill_slot 2 20001   //Healing Weeble
+	forced_passive 30005 //Overshield on kill
 }
 
 rogue_bigbot
 {
 	view_height 75.0
-	crouch_view_height 58.0
+	crouch_view_height 45.0
 	model animations/bigbot/skm_bigbot
+	scale 1.10
+	speed 300
+	max_hp 150
+	max_armor 100 
+	skill_slot 0 40003   //Transmutation
+	skill_slot 1 -1		 //Not set, picked up during Wipeout
+	skill_slot 2 20030   //Punch
+	forced_passive 30005 //Overshield on kill
 }

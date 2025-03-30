@@ -1,0 +1,8 @@
+asset leaf_scorched
+{
+    type material
+    listed true
+    tags NONE
+    material leaftree_scorched
+	mat_override true
+}

@@ -1,0 +1,86 @@
+asset overgrown_edging_03b
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name prop_vine_leafy_round_1
+        position 11.10718 0 1.15316
+        rotation 0 86.40001 0
+        scale 1.34000 1.34000 1.34000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_round
+        param skip_shadows false
+        param wind_g 0.5
+        param wind_r 0.25
+    }
+    prefab_entity
+    {
+        name prop_bushling
+        position -6.00000 -2.00000 100.80000
+        rotation -3.47977 79.76965 -18.58842
+        scale 0.91000 0.91000 0.91000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model bushling_02
+        param wind_g 0.5
+        param wind_r 0.25
+    }
+    prefab_entity
+    {
+        name prop_small_rock_debris_m_1
+        position 20.39999 -2.20000 105.60000
+        rotation 0 -170.09970 0
+        scale 1.46000 1.46000 1.46000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param color1 1F2931
+        param color2_smallrock_debris_mat_smallrockdebris s_cliff_edge
+        param color3_smallrock_debris_mat_smallrockdebris s_cliff_base
+        param color_smallrock_debris_mat_smallrockdebris s_cliff_bottom
+        param force_shadows true
+        param model small_rock_debris_m
+        param uv_offset_x_smallrock_debris_mat_smallrockdebris 0.00
+        param uv_offset_y_smallrock_debris_mat_smallrockdebris 0.00
+        param uv_rotation_smallrock_debris_mat_smallrockdebris 0.00
+        param uv_scale_x_smallrock_debris_mat_smallrockdebris 1.00
+        param uv_scale_y_smallrock_debris_mat_smallrockdebris 1.00
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_07_2
+        position 92.00000 0 -35.20000
+        rotation 0 161.09950 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 2
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_07
+        param skip_shadows true
+        param wind_g 0.5
+        param wind_r 0.25
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_11_2
+        position -0.79999 0 12.40000
+        rotation 0 -90.89995 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 0
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_11
+        param skip_shadows true
+        param wind_g 0.5
+        param wind_r 0.25
+    }
+}

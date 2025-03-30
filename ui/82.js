@@ -355,28 +355,26 @@ function parse_modes(data) {
             mode["custom_desc"] = localize(custom_mode.desc_i18n)
         }
     }
+    let mode_map = GAME.get_data("game_mode_map");
     for (let m of data.active_queues) {
         if (!global_mode_definitions.hasOwnProperty(m.mode_key)) return;
         let mode = global_mode_definitions[m.mode_key];
-        let vs = getVS(mode.team_count, mode.team_size);
         let i18n = "game_mode_" + mode.mode_name;
-        var modifier = "";
-        let hook = 0;
-        let instagib = 0;
+        let desc_i18n = "game_mode_desc_" + mode.mode_name;
+        if (mode.mode_name in mode_map) {
+            i18n = mode_map[mode.mode_name].i18n;
+            desc_i18n = mode_map[mode.mode_name].desc_i18n
+        }
         global_queues[m.mode_key] = {
             i18n: i18n,
+            desc_i18n: desc_i18n,
             match_type: MATCH_TYPE_QUEUE,
             ranked: mode.ranked,
-            vs: vs,
             team_size: mode.team_size,
             team_count: mode.team_count,
-            mode_name: mode.mode_name,
+            mode_id: mode.mode_name,
             mode_key: m.mode_key,
-            hook: hook,
-            instagib: instagib,
-            locked: mode.enabled ? false : true,
-            leaderboard: mode.leaderboard,
-            physics: mode.physics
+            locked: mode.enabled ? false : true
         };
         const custom_mode = GAME.get_data("CUSTOM_MODE_DEFINITIONS", m.mode_key);
         if (custom_mode) {

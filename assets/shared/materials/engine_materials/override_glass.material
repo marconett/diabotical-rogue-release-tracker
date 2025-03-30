@@ -6,6 +6,8 @@ override_glass
     map materials/matlib/shaders/mat_glass/mat_glass_s.png
     map textures/terrain/concreteslab/concreteslab_s.png
     map !depth
+	map !light_lookup
+	map !light_buffer
 
     vertex_shader water.vs.cso 111 NGT
     vertex_shader_param inverse

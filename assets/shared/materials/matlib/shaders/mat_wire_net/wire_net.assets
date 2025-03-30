@@ -1,0 +1,8 @@
+asset wire_net
+{
+    type material
+    listed true
+    tags NONE
+    material mat_wire_net
+	mat_override true
+}

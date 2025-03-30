@@ -1,0 +1,90 @@
+asset display_stand_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name light_13
+        position 0.33215 36.18954 -17.55154
+        rotation 0 157.50001 0
+        scale 1.00000 1.00000 1.00000
+        param clip false
+        param color s_light_accent
+        param intensity 2
+        param light_bake_only true
+        param position_x 0.332153
+        param position_y 36.189537
+        param position_z -17.551544
+        param radius 128
+        param rotation_x -0.000000
+        param rotation_y 2.748894
+        param rotation_z 0.000000
+        param type diffuse
+    }
+    prefab_entity
+    {
+        name pfx_env_display4
+        position 0.31561 41.15909 -17.26541
+        rotation 46.00003 0.00000 -0.00006
+        scale 0.93000 1.05000 1.00000
+        param color s_emissive_main
+        param delay 0
+        param destroy_on_loop false
+        param max_distance 0
+        param position_x 0.315613
+        param position_y 41.159088
+        param position_z -17.265411
+        param random_delay_max 0
+        param range_multiplier 1
+        param repeat_interval 0
+        param repeat_lifetime 0
+        param rotation_x 0.802852
+        param rotation_y 0.000000
+        param rotation_z -0.000001
+        param system env_display8
+    }
+    prefab_entity
+    {
+        name prop_holo_stand_01_1
+        position 0.29340 -0.52031 -3.49976
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 0
+        param force_shadows true
+        param model holo_stand_02
+        param position_x 0.293396
+        param position_y -0.520310
+        param position_z -3.499756
+        param rotation_x -0.000000
+        param rotation_y -0.000000
+        param rotation_z 0.000000
+    }
+    prefab_entity
+    {
+        name sound_amb_int_electr_1
+        position -0.94122 51.17168 -4.88330
+        rotation 0 157.50001 0
+        scale 1.00000 1.00000 1.00000
+        param capsule_end_position_x -360.000000
+        param capsule_end_position_y 220.000000
+        param capsule_end_position_z 407.144287
+        param cross_fade_max_radius 250
+        param cross_fade_min_radius 150
+        param min_radius 150
+        param position_x -0.941223
+        param position_y 51.171677
+        param position_z -4.883301
+        param radius 400
+        param rotation_x -0.000000
+        param rotation_y 2.748894
+        param rotation_z 0.000000
+        param sound_event amb_int_electronics1
+        param type audio_event_ambient_node
+    }
+}
+
+
+
+
+

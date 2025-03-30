@@ -1,0 +1,204 @@
+asset pallet_crates_tall_01b
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name col_col_box_corner_289
+        position 63.57593 144.39500 -65.26236
+        rotation -90.00000 0 179.99999
+        scale 1.58000 1.63000 1.81000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param position_x 63.575928
+        param position_y 144.395004
+        param position_z -65.262375
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name decal_decal_icons_symbols_g_33
+        position 30.33527 120.13488 67.42448
+        rotation 1.20155 179.09973 -0.00779
+        scale 20.00000 20.00000 21.00000
+        param albedo_map_enable true
+        param color s_decal_neutral
+        param emissive_map_enable false
+        param gloss_map_enable false
+        param material decal_mat_icons_symbols_graphical_icon_002
+        param metal_map_enable false
+        param normal_map_enable false
+        param position_x 30.335266
+        param position_y 120.134880
+        param position_z 67.424484
+        param rotation_x 0.020971
+        param rotation_y 3.125882
+        param rotation_z -0.000136
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_icons_symbols_g_34
+        position 64.29565 62.22520 31.65514
+        rotation 3.00385 -90.00077 -0.01312
+        scale 20.00000 20.00001 21.00001
+        param albedo_map_enable true
+        param color s_decal_neutral
+        param emissive_map_enable false
+        param gloss_map_enable false
+        param material decal_mat_icons_symbols_graphical_icon_002
+        param metal_map_enable false
+        param normal_map_enable false
+        param position_x 64.295654
+        param position_y 62.225201
+        param position_z 31.655136
+        param rotation_x 0.052427
+        param rotation_y -1.570810
+        param rotation_z -0.000229
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name prop_rogue_crate_04_16_4
+        position -33.62628 22.51098 33.93864
+        rotation 0 89.99996 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_rogue_crate_04_16_4
+        param best_lod 0
+        param clip weapon
+        param color_matlib_mat_lib_metal_painted s_bright
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param force_shadows true
+        param model crate_04
+        param override_effect_0 matlib_mat_lib_metal_bright
+        param override_effect_4 matlib_mat_lib_metal_dark
+        param position_x -33.626282
+        param position_y 22.510981
+        param position_z 33.938644
+        param rotation_x -0.000000
+        param rotation_y 1.570796
+        param rotation_z 0.000000
+        param size_w 1
+    }
+    prefab_entity
+    {
+        name prop_rogue_pallet_1
+        position -0.02411 0.05632 -0.06233
+        rotation 0 0 0
+        scale 0.76000 1.50000 0.77000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_rogue_pallet_1
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model pallet
+        param override_effect_0 matlib_mat_lib_metal_bright
+        param position_x -0.024109
+        param position_y 0.056319
+        param position_z -0.062332
+    }
+    prefab_entity
+    {
+        name prop_rogue_var_crate_01_ta_1
+        position 29.41711 84.02813 32.34843
+        rotation 0 89.99998 0
+        scale 1.50000 1.50000 1.50000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_rogue_var_crate_01_ta_1
+        param best_lod 0
+        param clip weapon
+        param color_matlib_mat_lib_metal_painted ffffffff
+        param color_matlib_mat_lib_tarp_fabric s_accent
+        param color_matlib_mat_lib_tarp_fabric_details s_accent
+        param force_shadows true
+        param model var_crate_01_tarp
+        param position_x 29.417114
+        param position_y 84.028130
+        param position_z 32.348434
+        param rotation_x -0.000000
+        param rotation_y 1.570796
+        param rotation_z 0.000000
+    }
+    prefab_entity
+    {
+        name prop_rogue_var_crate_01_ta_2
+        position 30.99207 26.11065 31.62068
+        rotation 0 89.99998 0
+        scale 1.50000 1.50000 1.50000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_rogue_var_crate_01_ta_2
+        param best_lod 0
+        param clip weapon
+        param color_matlib_mat_lib_metal_painted ffffffff
+        param color_matlib_mat_lib_tarp_fabric s_neutral
+        param color_matlib_mat_lib_tarp_fabric_details s_neutral
+        param force_shadows true
+        param model var_crate_01_tarp
+        param position_x 30.992065
+        param position_y 26.110649
+        param position_z 31.620682
+        param rotation_x -0.000000
+        param rotation_y 1.570796
+        param rotation_z -0.000000
+    }
+    prefab_entity
+    {
+        name prop_rogue_var_crate_04_ta_10
+        position 30.00049 24.02819 -35.83113
+        rotation 0 89.99996 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_rogue_var_crate_04_ta_10
+        param best_lod 0
+        param clip weapon
+        param color_matlib_mat_lib_metal_painted_details_floating s_bright
+        param color_matlib_mat_lib_tarp_fabric s_tarp_2
+        param color_matlib_mat_lib_tarp_fabric_details s_tarp_2
+        param force_shadows true
+        param model crate_04
+        param override_effect_3 matlib_mat_lib_metal_dark_details_floating
+        param position_x 30.000488
+        param position_y 24.028189
+        param position_z -35.831131
+        param rotation_x -0.000000
+        param rotation_y 1.570796
+        param rotation_z -0.000000
+        param size_w 1
+    }
+    prefab_entity
+    {
+        name prop_rogue_var_crate_04_ta_9
+        position -34.96606 24.11065 -31.03154
+        rotation 0 89.99996 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_rogue_var_crate_04_ta_9
+        param best_lod 0
+        param clip weapon
+        param color_matlib_mat_lib_metal_painted_details_floating s_neutral
+        param color_matlib_mat_lib_tarp_fabric s_neutral
+        param color_matlib_mat_lib_tarp_fabric_details s_neutral
+        param force_shadows true
+        param model var_crate_04_tarp
+        param override_effect_3 matlib_mat_lib_metal_dark_details_floating
+        param position_x -34.966064
+        param position_y 24.110651
+        param position_z -31.031540
+        param rotation_x -0.000000
+        param rotation_y 1.570796
+        param rotation_z 0.000000
+        param size_w 1
+    }
+}

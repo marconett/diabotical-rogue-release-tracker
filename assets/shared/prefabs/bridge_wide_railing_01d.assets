@@ -1,0 +1,207 @@
+asset bridge_wide_railing_01d
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name decal_decal_environment_san_3
+        position 151.47754 -3.40555 -119.82495
+        rotation 90.00000 0 137.99986
+        scale 265.66995 265.66962 20.00000
+        param albedo_map_enable true
+        param color 2a242219
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_environment_sand_wave_02
+        param metal_map_enable false
+        param normal_map_enable false
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name prop_blockout_plane_3
+        position 199.91553 -2.88469 2.85913
+        rotation 0 89.99999 0
+        scale 4.92000 5.00000 4.90000
+        param __shadow true
+        param best_lod 0
+        param clip weapon
+        param color_matlib_mat_lib_metal_painted ffffffff
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_floor_circles
+        param model blockout_plane
+        param position_x 400.337891
+        param position_y -2.800003
+        param position_z 2.684082
+        param size_x 4.920000
+        param size_y 5.000000
+        param size_z 9.900000
+        param uv_offset_x 0
+        param uv_rotation 0
+        param uv_scale_x 2.1
+        param uv_scale_y 4.1
+    }
+    prefab_entity
+    {
+        name prop_cable_grouped_straigh_3_3
+        position 399.91553 -14.04485 -25.14087
+        rotation 0 179.99996 0
+        scale 1.25000 1.25000 1.25000
+        param __shadow true
+        param best_lod 0
+        param clip weapon
+        param color_matlib_mat_lib_metal_panels_01 5c5454ff
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_panels_01
+        param model cable_grouped_straight_8m_01
+    }
+    prefab_entity
+    {
+        name prop_kitbash_10_3
+        position 200.70410 -0.66932 192.88062
+        rotation 0 -179.99997 0
+        scale 1.10000 1.10000 1.10000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_kitbash_2
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model kb_fences_fence_01_railing_1x1_straight_01
+        param rotation_w 0
+        param size_w 1
+    }
+    prefab_entity
+    {
+        name prop_kitbash_11_3
+        position 84.25342 -0.66932 192.36340
+        rotation 0 -179.99999 0
+        scale 1.00000 1.10000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_kitbash_25
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model kb_fences_fence_01_railing_4x1_straight_01
+        param rotation_w 0
+        param size_w 1
+    }
+    prefab_entity
+    {
+        name prop_kitbash_12_3
+        position 84.25342 -0.66932 -191.63660
+        rotation 0 0.00002 0
+        scale 1.00000 1.10000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_kitbash_25
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model kb_fences_fence_01_railing_4x1_straight_01
+        param rotation_w 0
+        param size_w 1
+    }
+    prefab_entity
+    {
+        name prop_kitbash_14_3
+        position 315.85352 -0.66932 -191.63660
+        rotation 0 0.00002 0
+        scale 1.00000 1.10000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_kitbash_25
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model kb_fences_fence_01_railing_4x1_straight_01
+        param rotation_w 0
+        param size_w 1
+    }
+    prefab_entity
+    {
+        name prop_kitbash_8_3
+        position 315.85352 -0.66932 192.36340
+        rotation 0 -179.99999 0
+        scale 1.00000 1.10000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_kitbash_25
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model kb_fences_fence_01_railing_4x1_straight_01
+        param rotation_w 0
+        param size_w 1
+    }
+    prefab_entity
+    {
+        name prop_kitbash_9_3
+        position 201.45361 -0.66932 -191.23682
+        rotation 0 0.00001 0
+        scale 1.10000 1.10000 1.10000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_kitbash_2
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model kb_fences_fence_01_railing_1x1_straight_01
+        param rotation_w 0
+        param size_w 1
+    }
+    prefab_entity
+    {
+        name prop_lg_3
+        position 199.91553 -42.27510 123.34424
+        rotation 0 -89.99998 179.99999
+        scale 1.00000 1.00000 1.25000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_lg
+        param best_lod 3
+        param clip weapon
+        param color_matlib_mat_lib_metal_painted s_orange
+        param force_shadows true
+        param material_1 matlib_mat_lib_metal_painted
+        param material_3 matlib_mat_lib_metal_bright_details_floating
+        param model lg_8
+        param uv_scale_x_matlib_mat_lib_metal_dark 1
+        param uv_scale_y_matlib_mat_lib_metal_dark 4
+    }
+    prefab_entity
+    {
+        name prop_lg_8_3
+        position 199.91553 -42.27510 51.34424
+        rotation 0 -89.99998 179.99999
+        scale 1.00000 1.00000 1.25000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_lg_8
+        param best_lod 3
+        param clip weapon
+        param color_matlib_mat_lib_metal_painted s_orange
+        param force_shadows true
+        param material_1 matlib_mat_lib_metal_painted
+        param material_3 matlib_mat_lib_metal_bright_details_floating
+        param model lg_8
+        param uv_scale_x_matlib_mat_lib_metal_dark 1
+        param uv_scale_y_matlib_mat_lib_metal_dark 4
+    }
+    prefab_entity
+    {
+        name prop_platform_ctrhough_6_3
+        position 199.77197 0.06000 0.37000
+        rotation 0 0.00001 0
+        scale 2.50000 1.00000 2.50000
+        param __shadow true
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model platform_ctrhough_03
+    }
+}
+
+

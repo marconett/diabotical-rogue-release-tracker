@@ -1,0 +1,76 @@
+asset pallet_crates_sparse_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name prop_pallet
+        position -0.03104 -0.46628 -0.13275
+        rotation 0 180.00000 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_pallet
+        param best_lod 0
+        param color_matlib_mat_lib_metal_painted s_bright
+        param force_shadows true
+        param model pallet
+        param position_x -18.769043
+        param position_y -0.466280
+        param position_z 24.132690
+    }
+    prefab_entity
+    {
+        name prop_var_crate_01_tarp
+        position -51.78271 15.60940 6.26263
+        rotation 0 180.00000 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_var_crate_01_tarp
+        param best_lod 0
+        param color_matlib_mat_lib_tarp_fabric s_neutral
+        param color_matlib_mat_lib_tarp_fabric_details s_neutral
+        param force_shadows true
+        param model var_crate_01_tarp
+        param position_x 32.982666
+        param position_y 15.609400
+        param position_z 17.737305
+    }
+    prefab_entity
+    {
+        name prop_var_crate_03_tarp
+        position -51.57196 15.69265 51.94111
+        rotation 0 180.00000 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_var_crate_03_tarp
+        param best_lod 0
+        param color_matlib_mat_lib_tarp_fabric s_accent
+        param color_matlib_mat_lib_tarp_fabric_details s_accent
+        param force_shadows true
+        param model var_crate_03_tarp
+        param position_x 32.771912
+        param position_y 15.692650
+        param position_z -27.941162
+    }
+    prefab_entity
+    {
+        name prop_var_crate_07_tarp
+        position 28.18561 15.56436 37.92890
+        rotation 0 180.00000 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_var_crate_07_tarp
+        param best_lod 0
+        param color_matlib_mat_lib_tarp_fabric s_neutral
+        param color_matlib_mat_lib_tarp_fabric_details s_neutral
+        param force_shadows true
+        param model var_crate_07_tarp
+        param position_x -46.985657
+        param position_y 15.564360
+        param position_z -13.928955
+    }
+}

@@ -82,6 +82,7 @@ window.addEventListener("load", (function() {
     }));
     document.addEventListener("keydown", (function(e) {
         if (e.which !== 27) return;
+        console.log("on esc press");
         for (let cb of on_press_esc_handlers) {
             if (typeof cb === "function") {
                 let ret = cb();
@@ -177,6 +178,24 @@ window.addEventListener("load", (function() {
     console.log("LOAD013");
     bind_event("set_masterserver_connection_state", set_masterserver_connection_state);
     bind_event("process_masterserver_data", masterserver_message_handler);
+    bind_event("queue_modal", ((modal, data) => {
+        if (modal === "multi_map_selection_engine") {
+            let map_selection = [];
+            if (typeof data === "string" && data.trim().startsWith("[")) {
+                try {
+                    let parsed = JSON.parse(data);
+                    if (Array.isArray(parsed)) map_selection = parsed
+                } catch (e) {
+                    console.log("Unable to parse existing map selection", data)
+                }
+            }
+            map_selection_modal.open("multi_select", "all", map_selection, (map_list => {
+                engine.call("set_map_list", JSON.stringify(map_list))
+            }))
+        } else if (modal === "datacenter") {
+            open_modal_screen("region_select_modal_screen")
+        }
+    }));
     bind_event("queue_menu_screen", (screen => {
         if (global_active_view === "menu") {
             if (screen !== "basic_modal") {
@@ -219,7 +238,7 @@ window.addEventListener("load", (function() {
                     open_screen("main_panel");
                     set_modal_engine_call(true, true)
                 }
-            } else if (GAME.active === GAME.ids.ROGUE) {
+            } else if (GAME.active === GAME.ids.ROGUE || GAME.active === GAME.ids.GEARSTORM) {
                 let params = null;
                 if (queued_menu_screen === "play_rogue" || queued_menu_screen === "play_rogue_list") {
                     if (Lobby.state.id) {
@@ -247,8 +266,13 @@ window.addEventListener("load", (function() {
                         global_history.reset("ingame_panel");
                         open_screen("ingame_panel")
                     } else {
-                        global_history.reset("main_panel_rogue");
-                        open_screen("main_panel_rogue")
+                        if (GAME.active === GAME.ids.GEARSTORM) {
+                            global_history.reset("main_panel_gearstorm");
+                            open_screen("main_panel_gearstorm")
+                        } else {
+                            global_history.reset("main_panel_rogue");
+                            open_screen("main_panel_rogue")
+                        }
                     }
                     set_modal_engine_call(true, true)
                 }
@@ -777,11 +801,12 @@ function getCompSeasonModes(comp_season_id, cb) {
 
 function set_global_map_list_from_api(mode, maps) {
     global_game_mode_map_lists[mode] = [];
+    if (!maps) return;
     for (let map of maps) {
         global_game_mode_map_lists[mode].push({
             name: _format_map_name(map[0], map[1]),
             map: map[0],
-            official: map[2]
+            community_map: Number(map[2])
         })
     }
 }

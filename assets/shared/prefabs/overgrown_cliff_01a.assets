@@ -1,0 +1,948 @@
+asset overgrown_cliff_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name col_col_box_corner_16
+        position -62.82471 446.04791 -137.81448
+        rotation 0.00004 89.99984 -89.99999
+        scale 7.60000 0.40000 2.50000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_45
+        param no_show true
+        param position_x -62.824707
+        param position_y 446.047913
+        param position_z -137.814484
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_17
+        position -62.82471 446.04791 -113.81457
+        rotation -0.00002 0.00002 -89.99999
+        scale 7.60000 0.90000 0.70000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_45
+        param no_show true
+        param position_x -62.824707
+        param position_y 446.047913
+        param position_z -113.814568
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_18
+        position -262.82520 446.04791 -41.81504
+        rotation 0.00001 179.99974 -89.99997
+        scale 7.60000 0.70000 2.30000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_45
+        param no_show true
+        param position_x -262.825195
+        param position_y 446.047913
+        param position_z -41.815041
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_19
+        position -262.82520 446.04791 -41.81504
+        rotation 0.00004 89.99965 -89.99999
+        scale 7.60000 1.20000 0.70000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_45
+        param no_show true
+        param position_x -262.825195
+        param position_y 446.047913
+        param position_z -41.815041
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_20
+        position -150.85449 446.04639 142.18730
+        rotation 0.00004 -90.00004 -89.99999
+        scale 7.60000 0.40000 2.00000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_45
+        param no_show true
+        param position_x -150.854492
+        param position_y 446.046387
+        param position_z 142.187302
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_21
+        position -150.85254 446.04639 142.18916
+        rotation -0.00014 -179.99984 -89.99997
+        scale 7.60000 1.40000 0.40000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_45
+        param no_show true
+        param position_x -150.852539
+        param position_y 446.046387
+        param position_z 142.189163
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_22
+        position 77.14453 318.04794 166.18689
+        rotation 0.00004 -90.00004 -89.99999
+        scale 9.00000 0.40000 2.30000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_45
+        param no_show true
+        param position_x 77.144531
+        param position_y 318.047943
+        param position_z 166.186890
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_23
+        position 77.14648 318.04794 142.18970
+        rotation -0.00014 -179.99984 -89.99997
+        scale 9.00000 0.90000 0.70000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_45
+        param no_show true
+        param position_x 77.146484
+        param position_y 318.047943
+        param position_z 142.189697
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_24
+        position 197.14453 318.04794 -121.81310
+        rotation -0.00003 89.99998 -89.99998
+        scale 9.00000 0.30000 2.50000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_45
+        param no_show true
+        param position_x 197.144531
+        param position_y 318.047943
+        param position_z -121.813103
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_25
+        position 5.14648 446.04651 110.19009
+        rotation -0.00010 -89.99966 -89.99999
+        scale 7.60000 0.40000 1.10000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_45
+        param no_show true
+        param position_x 5.146484
+        param position_y 446.046509
+        param position_z 110.190086
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_26
+        position -262.82471 446.04791 -137.81458
+        rotation -90.00000 0 -90.00001
+        scale 0.30000 2.50000 10.00000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param position_x -262.824707
+        param position_y 446.047913
+        param position_z -137.814575
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_27
+        position 9.17529 446.04791 -65.81457
+        rotation -0.00002 0.00002 -89.99999
+        scale 7.60000 1.10000 0.60000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_45
+        param no_show true
+        param position_x 9.175293
+        param position_y 446.047913
+        param position_z -65.814568
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_28
+        position 9.17529 446.04791 -65.81456
+        rotation -90.00000 0 -90.00001
+        scale 2.20000 1.10000 10.00000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param position_x 9.175293
+        param position_y 446.047913
+        param position_z -65.814560
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_29
+        position 97.17529 446.04791 -33.81457
+        rotation -0.00002 0.00002 -89.99999
+        scale 7.60000 0.40000 0.40000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_45
+        param no_show true
+        param position_x 97.175293
+        param position_y 446.047913
+        param position_z -33.814568
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_30
+        position 97.17529 446.04791 38.18542
+        rotation -0.00001 -89.99999 -90.00000
+        scale 7.60000 0.90000 0.40000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_45
+        param no_show true
+        param position_x 97.175293
+        param position_y 446.047913
+        param position_z 38.185421
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_31
+        position 97.17529 446.04791 -33.81457
+        rotation -90.00000 0 -90.00001
+        scale 0.90000 0.40000 9.00000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param position_x 97.175293
+        param position_y 446.047913
+        param position_z -33.814568
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_32
+        position 261.14453 318.04794 102.18690
+        rotation 0.00004 -90.00004 -89.99999
+        scale 9.00000 0.80000 0.40000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_45
+        param no_show true
+        param position_x 261.144531
+        param position_y 318.047943
+        param position_z 102.186897
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_33
+        position 261.14453 318.04794 102.18690
+        rotation 0.00001 -0.00002 -89.99997
+        scale 9.00000 0.40000 2.60000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_45
+        param no_show true
+        param position_x 261.144531
+        param position_y 318.047943
+        param position_z 102.186897
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_34
+        position 197.14453 318.04794 -105.81310
+        rotation 0.00001 -0.00002 -89.99997
+        scale 9.00000 0.80000 0.50000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_45
+        param no_show true
+        param position_x 197.144531
+        param position_y 318.047943
+        param position_z -105.813103
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_35
+        position -18.82471 318.04794 -105.81458
+        rotation -90.00000 0 -90.00001
+        scale 3.10000 3.50000 9.00000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param position_x -18.824707
+        param position_y 318.047943
+        param position_z -105.814583
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_36
+        position 77.17529 318.04794 142.18536
+        rotation -90.00000 0 -90.00001
+        scale 0.30000 2.30000 9.00000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param position_x 77.175293
+        param position_y 318.047943
+        param position_z 142.185364
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_37
+        position -34.82471 318.04794 -121.81458
+        rotation -90.00000 0 -90.00001
+        scale 0.30000 2.90000 9.00000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param position_x -34.824707
+        param position_y 318.047943
+        param position_z -121.814583
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_414
+        position -262.82471 446.04791 -113.81458
+        rotation -90.00000 0 -90.00001
+        scale 3.20000 3.40000 10.00000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param position_x -262.824707
+        param position_y 446.047913
+        param position_z -113.814583
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_bushling_17
+        position -170.13037 441.18332 33.06206
+        rotation 5.11452 -33.80665 -1.33252
+        scale 1.29000 1.19000 1.29000
+        param best_lod 1
+        param clip noclip
+        param color_bushlings_mat_bushling 45a8afff
+        param force_shadows true
+        param model bushling_03
+        param position_x -170.130371
+        param position_y 441.183319
+        param position_z 33.062061
+        param rotation_w 0
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_bushling_18
+        position 8.64502 420.89661 67.57012
+        rotation 3.18236 33.87014 4.22140
+        scale 1.21000 0.94000 1.21000
+        param best_lod 1
+        param clip noclip
+        param color_bushlings_mat_bushling 45a8afff
+        param force_shadows true
+        param model bushling_03
+        param position_x 8.645020
+        param position_y 420.896606
+        param position_z 67.570122
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_bushling_23
+        position 129.92432 304.35858 -55.27607
+        rotation 14.92569 99.98658 4.63802
+        scale 1.11000 1.11000 1.11000
+        param best_lod 1
+        param clip noclip
+        param color_bushlings_mat_bushling 45a8afff
+        param force_shadows true
+        param model bushling_03
+        param position_x 129.924316
+        param position_y 304.358582
+        param position_z -55.276070
+        param rotation_w 0
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_rogue_jungle_rock_cur_96
+        position -111.87402 -222.55888 6.41679
+        rotation -0.64525 10.34000 -3.45320
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param color s_cliff_bottom
+        param color2 s_cliff_edge
+        param color3 s_cliff_base
+        param detail_texture_normal_fallof 0
+        param detail_texture_normal_scale_x 0
+        param detail_texture_normal_scale_y 0
+        param force_shadows true
+        param model rogue_jungle_rock_massive_03
+        param position_x -111.874023
+        param position_y -222.558884
+        param position_z 6.416790
+        param uv_detail_scale 3
+        param vertex_coloring_function per_pixel_slope
+        param vertex_coloring_param1 0.1
+        param vertex_coloring_param2 0.8
+    }
+    prefab_entity
+    {
+        name prop_rogue_jungle_rock_cur_98
+        position 77.94043 -352.43378 9.50013
+        rotation -2.63237 -173.36454 0.00000
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param color2_atlas_rocks_combined_mat_atlas_atlas_rocks_combined s_cliff_edge
+        param color3_atlas_rocks_combined_mat_atlas_atlas_rocks_combined s_cliff_base
+        param color_atlas_rocks_combined_mat_atlas_atlas_rocks_combined s_cliff_bottom
+        param detail_texture_normal_fallof 0
+        param detail_texture_normal_scale_x 0
+        param detail_texture_normal_scale_y 0
+        param force_shadows true
+        param model rogue_jungle_rock_massive_03
+        param position_x 77.940430
+        param position_y -352.433777
+        param position_z 9.500130
+        param uv_detail_scale 3
+        param vertex_coloring_function per_pixel_slope
+        param vertex_coloring_param1 0.1
+        param vertex_coloring_param2 3
+    }
+    prefab_entity
+    {
+        name prop_sharp_rock_01_14_4
+        position -46.42480 -13.35204 -100.21458
+        rotation -5.67505 -83.85087 -27.01191
+        scale 1.70000 2.73000 1.81333
+        param __shadow true
+        param best_lod 0
+        param clip weapon
+        param color2_atlas_rocks_combined_mat_atlas_atlas_rocks_combined s_cliff_edge
+        param color2_sharp_rocks_mat_rocks a75833ff
+        param color3_atlas_rocks_combined_mat_atlas_atlas_rocks_combined s_cliff_base
+        param color3_sharp_rocks_mat_rocks 7f5642ff
+        param color_atlas_rocks_combined_mat_atlas_atlas_rocks_combined s_cliff_bottom
+        param color_sharp_rocks_mat_rocks 7c5745ff
+        param detail_texture_normal_fallof 0
+        param detail_texture_normal_scale_x 0
+        param detail_texture_normal_scale_y 0
+        param force_shadows true
+        param model sharp_rock_01
+        param position_x -46.424805
+        param position_y -13.352043
+        param position_z -100.214577
+        param uv_detail_scale 3
+        param vertex_coloring_function per_pixel_slope
+        param vertex_coloring_param1 1
+        param vertex_coloring_param2 0.45
+    }
+    prefab_entity
+    {
+        name prop_small_rock_debris_s_4
+        position -305.13232 -3.82775 -38.08715
+        rotation -3.60000 -1.80002 -0.00000
+        scale 2.20000 2.20000 2.41000
+        param best_lod 2
+        param clip noclip
+        param color1 1F2931
+        param color2_smallrock_debris_mat_smallrockdebris s_cliff_edge
+        param color3_smallrock_debris_mat_smallrockdebris s_cliff_base
+        param color_smallrock_debris_mat_smallrockdebris s_cliff_bottom
+        param force_shadows true
+        param model small_rock_debris_s
+        param position_x -305.132324
+        param position_y -3.827751
+        param position_z -38.087151
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_04
+        position -32.02441 262.64795 141.78542
+        rotation 1.91891 -169.70033 12.29786
+        scale 1.03000 1.14236 1.09555
+        param best_lod 1
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_04
+        param position_x -32.024414
+        param position_y 262.647949
+        param position_z 141.785416
+        param skip_shadows true
+        param uv_offset_y_leafyvines_mat_vineleafy 0.00
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_08_2
+        position -129.15869 -1.79888 -141.48825
+        rotation 0 5.40000 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model vine_leafy_08
+        param position_x -129.158691
+        param position_y -1.798882
+        param position_z -141.488251
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_08_3
+        position 13.85693 -1.79888 144.97421
+        rotation 0 169.19980 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model vine_leafy_08
+        param position_x 13.856934
+        param position_y -1.798882
+        param position_z 144.974213
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_08_4
+        position -259.14648 -2.37225 77.56833
+        rotation 0 -33.30001 0
+        scale 1.23000 1.23000 1.23000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model vine_leafy_08
+        param position_x -259.146484
+        param position_y -2.372246
+        param position_z 77.568329
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_09
+        position 194.72363 0.19886 -3.14622
+        rotation 0 -63.00002 0
+        scale 1.00000 0.93000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model vine_leafy_09
+        param position_x 194.723633
+        param position_y 0.198860
+        param position_z -3.146221
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_10_73
+        position 173.12842 316.59009 24.16990
+        rotation 5.26236 1.64046 -3.46859
+        scale 1.33000 0.91275 1.49951
+        param best_lod 1
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_10
+        param position_x 173.128418
+        param position_y 316.590088
+        param position_z 24.169901
+        param rotation_w 0
+        param skip_shadows true
+        param tag ext
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_10_74
+        position -57.08252 445.53772 -33.82291
+        rotation -0.27371 -173.38593 3.41450
+        scale 1.05000 1.56545 1.18382
+        param best_lod 1
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_09
+        param position_x -57.082520
+        param position_y 445.537720
+        param position_z -33.822914
+        param rotation_w 0
+        param skip_shadows true
+        param tag ext
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_126
+        position -247.35498 457.95306 29.17012
+        rotation 2.69360 101.55417 4.13595
+        scale 0.99000 0.99000 0.99000
+        param best_lod 1
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_transition_s
+        param position_x -247.354980
+        param position_y 457.953064
+        param position_z 29.170124
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_127
+        position 98.07129 440.19116 50.71445
+        rotation -3.83390 -119.00716 -1.39335
+        scale 0.99000 0.99000 0.99000
+        param best_lod 1
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_transition_s
+        param position_x 98.071289
+        param position_y 440.191162
+        param position_z 50.714451
+        param skip_shadows true
+        param uv_offset_y_leafyvines_mat_vineleafy 0.00
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_1
+        position 17.84521 331.55307 -105.67443
+        rotation 4.35482 -16.44544 -1.52415
+        scale 1.44000 1.59709 1.53164
+        param best_lod 2
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_02
+        param position_x 20.222168
+        param position_y 324.036957
+        param position_z -105.674431
+        param skip_shadows true
+        param uv_offset_y_leafyvines_mat_vineleafy 0.00
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_2
+        position 111.06836 438.56015 -19.38615
+        rotation -5.89608 -83.52293 -3.76199
+        scale 1.07000 1.07000 1.07000
+        param best_lod 1
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_transition_s
+        param position_x 111.068359
+        param position_y 438.560150
+        param position_z -19.386150
+        param skip_shadows true
+        param uv_offset_y_leafyvines_mat_vineleafy 0.00
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_3
+        position -142.83008 447.60455 -123.52239
+        rotation 8.15893 17.66229 -0.55350
+        scale 0.99000 0.99000 0.99000
+        param best_lod 1
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_transition_s
+        param position_x -142.830078
+        param position_y 447.604553
+        param position_z -123.522392
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy
+        position 271.65479 306.32669 67.78052
+        rotation 0.09910 -84.64477 -1.76418
+        scale 0.99000 0.89000 0.93000
+        param best_lod 1
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_transition_s
+        param position_x 271.654785
+        param position_y 306.326691
+        param position_z 67.780518
+        param skip_shadows true
+        param uv_offset_y_leafyvines_mat_vineleafy 0.00
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_round_19
+        position -79.96484 443.87692 57.45287
+        rotation -2.34008 -105.52584 -4.85709
+        scale 1.73000 1.73000 1.73000
+        param best_lod 1
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_round
+        param position_x -79.964844
+        param position_y 443.876923
+        param position_z 57.452869
+        param rotation_w 0
+        param size_w 1
+        param skip_shadows true
+        param uv_offset_y_leafyvines_mat_vineleafy 0.00
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_round_1
+        position 229.43701 -2.19118 165.54007
+        rotation 6.29922 12.69935 0.90547
+        scale 1.34000 1.34000 1.34000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model vine_leafy_round
+        param position_x 229.437012
+        param position_y -2.191185
+        param position_z 165.540070
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_round
+        position 56.77539 316.89169 92.58542
+        rotation -4.50000 -162.89964 0.00000
+        scale 1.73000 1.50000 1.90000
+        param best_lod 1
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_round
+        param position_x 56.775391
+        param position_y 316.891693
+        param position_z 92.585419
+        param rotation_w 0
+        param size_w 1
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_round_5
+        position -215.60449 453.48434 -39.91436
+        rotation 0.13235 62.79534 -0.00563
+        scale 1.56000 1.56000 1.56000
+        param best_lod 1
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_round
+        param position_x -215.604492
+        param position_y 453.484344
+        param position_z -39.914360
+        param rotation_x -0.025630
+        param rotation_y 1.095818
+        param rotation_z 0.014267
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_round_6
+        position 62.67188 1.83305 -147.65698
+        rotation -4.07096 25.26822 -1.91924
+        scale 1.61000 1.61000 1.61000
+        param best_lod 1
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_round
+        param position_x 62.671875
+        param position_y 1.833046
+        param position_z -147.656982
+        param rotation_w 0
+        param size_w 1
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_transition_12
+        position -185.45264 459.70609 125.98546
+        rotation -0.33030 167.57083 7.73418
+        scale 1.00000 1.00000 1.00000
+        param best_lod 1
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_transition_m
+        param position_x -185.452637
+        param position_y 459.706085
+        param position_z 125.985458
+        param skip_shadows true
+        param uv_offset_y_leafyvines_mat_vineleafy 0.00
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_transition_14
+        position 35.02979 444.80090 -78.16602
+        rotation -0.27183 -24.61847 1.77776
+        scale 1.00000 1.00000 1.00000
+        param best_lod 1
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_transition_m
+        param position_x 35.029785
+        param position_y 444.800903
+        param position_z -78.166023
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_transition_2
+        position -16.95508 438.95306 126.37012
+        rotation 3.70538 -168.80706 6.31623
+        scale 1.01000 1.01000 1.01000
+        param best_lod 1
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_transition_m
+        param position_x -16.955078
+        param position_y 438.953064
+        param position_z 126.370125
+        param rotation_x 0.064671
+        param rotation_y -2.946239
+        param rotation_z 0.110239
+        param skip_shadows true
+        param uv_offset_y_leafyvines_mat_vineleafy 0.00
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_transition_3
+        position 260.30957 316.20172 -3.55276
+        rotation 6.28517 -81.15947 -4.08442
+        scale 0.75000 0.75000 0.83242
+        param best_lod 1
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_transition_m
+        param position_x 260.309570
+        param position_y 316.201721
+        param position_z -3.552761
+        param skip_shadows true
+        param uv_offset_y_leafyvines_mat_vineleafy 0.00
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_transition_4
+        position -77.34619 285.60153 -171.06989
+        rotation 9.17287 -8.47442 1.00316
+        scale 1.01000 1.01000 1.01000
+        param best_lod 2
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_01
+        param position_x -77.346191
+        param position_y 285.601532
+        param position_z -171.069885
+        param skip_shadows true
+        param uv_offset_y_leafyvines_mat_vineleafy 0.00
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_transition_5
+        position 154.24316 331.68076 -93.02705
+        rotation -0.27183 -7.51846 0.87775
+        scale 1.00000 1.00000 1.00000
+        param best_lod 1
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_transition_m
+        param position_x 154.243164
+        param position_y 331.680756
+        param position_z -93.027046
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_transition_6
+        position 227.47705 307.77295 125.48305
+        rotation -0.76664 -143.88509 1.54785
+        scale 0.75000 0.75000 0.83242
+        param best_lod 1
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_transition_m
+        param position_x 227.477051
+        param position_y 307.772949
+        param position_z 125.483047
+        param skip_shadows true
+        param uv_offset_y_leafyvines_mat_vineleafy 0.00
+    }
+}
+

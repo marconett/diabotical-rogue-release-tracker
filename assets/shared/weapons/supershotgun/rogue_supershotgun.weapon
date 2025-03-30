@@ -18,7 +18,7 @@ rogue_supershotgun
 	unlimited_ammo false
 	reload 2000
 	
-	color A35EBA
+	color f7959a
 	icon_path images/weapon_icons/wp_hud_shotgun_02.png
 	icon_path2 images/weapon_icons/wp_card_supershotgun.png
 	weapon_icon_path images/weapon_icons/wp_card_shotgun_nobg.png
@@ -94,13 +94,32 @@ rogue_supershotgun
 	//decal decal 7 3 3.561 false false alpha 7	 
 	//decal decal_glow_red 16 3 3.561 false false alpha 30
 	//decal decal_glow 10 3 3.561 false false alpha 50
-	
-	//old model assets/shared/weapons/supershotgun/supershotgun
-	model assets/shared/models/animations/wp_shotgun/skm_shotgun
 
+	model assets/shared/models/animations/wp_shotgun/skm_shotgun
+	model_scale_third_person 1 1 1 
+	model_position_third_person 0 0 0 
+	model_rotation_third_person 0 0 0 
+	model_position -0.930089 -1.5534 -2.24593
+	model_position_centered -0.742868 -1.406845 -1.68604
+	model_post_rotation -0.0785398 -0.0872665 -0.0174533
+	model_post_rotation_centered -0.0785398 -0.0698132 -0.0174533
+	model_scale 0.05 0.05 0.05 
+	model_scale_centered 0.05 0.05 0.05
+	fov 35
+	fov_centered 50
+	model_camera_scale 5 
+	model_camera_scale_centered 5 
 	muzzle 2.6 -2.7 4.7
 	
 	particles_clipping_plane true
+
+	// weapon_sway
+	smoothing_factor 8
+	vertical_sway 0.8
+	horizontal_sway 0.8
+	tilt_sway 0.1
+	forward_sway 0.5
+	max_vertical_movement_sway 0.02
 	
 	shot_sound w_ss_fire
 	shot_sound2 w_ss_fire_distant

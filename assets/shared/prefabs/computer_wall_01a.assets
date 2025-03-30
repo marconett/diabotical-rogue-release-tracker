@@ -1,0 +1,47 @@
+asset computer_wall_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name prop_computer_modules_pref
+        position 3.93408 -1.03519 -15.27063
+        rotation 0 0 0
+        scale 1.25000 1.25000 1.00000
+        param __shadow true
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model computer_modules_prefab_02
+        param position_x 3.934082
+        param position_y -1.035191
+        param position_z -15.270630
+        param rotation_x -0.000000
+        param rotation_y 0.000000
+        param rotation_z 0.000000
+    }
+    prefab_entity
+    {
+        name sound_amb_glitchy_console_h_3
+        position -3.93408 57.03519 -24.00000
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param capsule_end_position_x 1246.416504
+        param capsule_end_position_y 252.979965
+        param capsule_end_position_z 694.771362
+        param cross_fade_max_radius 40.000000
+        param cross_fade_min_radius 0.000000
+        param min_radius 40.000000
+        param position_x -3.934082
+        param position_y 57.035191
+        param position_z -24.000000
+        param radius 800.000000
+        param rotation_x -0.000000
+        param rotation_y 0.000000
+        param rotation_z 0.000000
+        param sound_event amb_glitchy_console_humming
+        param type audio_event_ambient_node
+        param volume 1.2
+    }
+}
+

@@ -1,0 +1,400 @@
+asset block_4x4_fan_tall_01b
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name col_col_box_corner_7
+        position -91.12090 -2.40000 -91.20000
+        rotation 0 -89.99999 0
+        scale 2.30000 3.03000 2.29000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param position_x -91.120895
+        param position_y -2.399998
+        param position_z -91.199997
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name decal_decal_environment_dir_64_1_1
+        position -81.21935 90.81092 -21.54283
+        rotation 0 89.99999 0
+        scale 149.99998 150.00000 40.00000
+        param albedo_map_enable true
+        param color s_decal_dark
+        param emissive_map_enable false
+        param gloss_map_enable false
+        param material decal_mat_environment_dirt_worked_02
+        param metal_map_enable false
+        param normal_map_enable false
+        param position_x -81.219345
+        param position_y 90.810921
+        param position_z -21.542830
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_environment_san_1_1_1
+        position 6.38063 85.01093 -79.54282
+        rotation 0 0 -89.99997
+        scale 159.99980 159.99980 50.00000
+        param albedo_map_enable true
+        param color s_decal_dark
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_environment_sand_corner_03
+        param metal_map_enable false
+        param normal_map_enable true
+        param order 2
+        param position_x 6.380629
+        param position_y 85.010933
+        param position_z -79.542824
+        param rotation_x -0.000000
+        param rotation_y -0.000000
+        param rotation_z -1.570796
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_generic_cirkel_1_1_1
+        position -93.61937 165.77611 0.45717
+        rotation 0 89.99998 0
+        scale 110.00000 110.00000 75.00000
+        param albedo_map_enable true
+        param color s_decal_dark
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_generic_cirkel
+        param metal_map_enable false
+        param normal_map_enable true
+        param position_x -93.619370
+        param position_y 165.776108
+        param position_z 0.457171
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name light_393_1_1
+        position -101.27599 233.01721 0.26014
+        rotation 74.50612 89.99990 -0.00019
+        scale 1.00000 1.00000 1.00000
+        param angle 90
+        param attenuation_exponent 1.20
+        param color s_light_neutral
+        param falloff 0.2
+        param intensity 4
+        param position_x -101.275986
+        param position_y 233.017212
+        param position_z 0.260141
+        param radius 300
+        param softness .35
+        param type spot
+    }
+    prefab_entity
+    {
+        name pfx_env_smoke_interval_12_1_1
+        position -53.61937 165.01091 0.45717
+        rotation 0.00001 0.00000 89.99999
+        scale 2.00000 2.00000 2.00000
+        param color ffffff7a
+        param delay 2
+        param destroy_on_loop false
+        param max_distance 0
+        param position_x -53.619370
+        param position_y 165.010910
+        param position_z 0.457171
+        param random_delay_max 0
+        param range_multiplier 1
+        param repeat_interval 6
+        param repeat_lifetime 0
+        param system env_smoke_interval
+    }
+    prefab_entity
+    {
+        name prop_blockout_circle_3_1_1
+        position 11.44984 166.62065 -5.54357
+        rotation -90.00000 0 -90.00000
+        scale 1.60000 1.00000 1.60000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model blockout_circle
+        param override_effect_0 matlib_mat_lib_rubber_dark
+        param position_x 11.449840
+        param position_y 166.620651
+        param position_z -5.543569
+    }
+    prefab_entity
+    {
+        name prop_blockout_plane_279_2
+        position -3.21935 113.01093 -77.32097
+        rotation -90.00000 0 0
+        scale 1.50000 0.70000 3.00000
+        param __shadow true
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model blockout_plane
+        param override_effect_0 matlib_mat_lib_metal_shiny
+        param position_x -3.219351
+        param position_y 113.010933
+        param position_z -77.320969
+        param rotation_x -1.570796
+        param rotation_y 0.000000
+        param rotation_z -3.141593
+        param uv_scale_x 1
+        param uv_scale_y 2
+    }
+    prefab_entity
+    {
+        name prop_blockout_plane_279_2_1
+        position -3.21935 113.01093 78.26014
+        rotation -90.00000 0 179.99999
+        scale 1.50000 0.70000 3.00000
+        param __shadow true
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model blockout_plane
+        param override_effect_0 matlib_mat_lib_metal_shiny
+        param position_x -3.219351
+        param position_y 113.010933
+        param position_z 78.260139
+        param rotation_x -1.570796
+        param rotation_y 0.000000
+        param rotation_z -3.141593
+        param uv_scale_x 1
+        param uv_scale_y 2
+    }
+    prefab_entity
+    {
+        name prop_blockout_plane_280_1_1
+        position 72.32399 113.01093 0.26014
+        rotation -90.00000 0 89.99998
+        scale 1.50000 0.70000 3.00000
+        param __shadow true
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model blockout_plane
+        param override_effect_0 matlib_mat_lib_metal_shiny
+        param position_x 72.323990
+        param position_y 113.010933
+        param position_z 0.260141
+        param rotation_x -1.570796
+        param rotation_y 0.000000
+        param rotation_z 1.570796
+        param uv_scale_x 1
+        param uv_scale_y 2
+    }
+    prefab_entity
+    {
+        name prop_blockout_plane_281_1_1
+        position -63.21935 33.01093 0.45717
+        rotation -90.00000 0 89.99999
+        scale 1.50000 0.70000 1.00000
+        param __shadow true
+        param best_lod 0
+        param force_shadows true
+        param model blockout_plane
+        param override_effect_0 matlib_mat_lib_metal_shiny
+        param position_x -63.219349
+        param position_y 33.010929
+        param position_z 0.457171
+        param uv_scale_x 1
+        param uv_scale_y 1
+    }
+    prefab_entity
+    {
+        name prop_building_blocks_var_l_1_1
+        position -25.21935 165.01091 0.26014
+        rotation 0 -179.99999 0
+        scale 0.67000 0.67000 0.67000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_building_blocks_var_l_1_1_1
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model building_blocks_var_lg_4x4_ventilation_fan
+        param position_x -25.219351
+        param position_y 165.010910
+        param position_z 0.260141
+        param rotate_animation 1
+        param rotate_animation_angle 115
+        param rotate_animation_axis_x -1
+        param rotate_animation_axis_y 0
+    }
+    prefab_entity
+    {
+        name prop_kitbash_93_1_1
+        position -24.81938 226.61089 0.26014
+        rotation 0 0 0
+        scale 0.70000 0.68250 0.70000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_kitbash_93_1_1_1
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model building_blocks_var_lg_4x4_ventilation_01
+        param override_effect_6 matlib_mat_lib_details_edge
+        param override_effect_8 matlib_mat_lib_metal_bright
+        param position_x -24.819382
+        param position_y 226.610886
+        param position_z 0.260141
+        param uv_scale_x_matlib_mat_lib_metal_bright 0.7
+    }
+    prefab_entity
+    {
+        name prop_rogue_light_fixture_117_1_1
+        position -86.07506 225.60503 0.26014
+        rotation -90.00000 0 -179.99999
+        scale 0.53000 0.53000 0.26500
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_rogue_light_fixture_37
+        param best_lod 0
+        param clip noclip
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param force_shadows true
+        param model light_fixture_03
+        param position_x -86.075058
+        param position_y 225.605026
+        param position_z 0.260141
+    }
+    prefab_entity
+    {
+        name prop_tech_box_frame_7_1_1
+        position -78.41936 -0.78910 0.26014
+        rotation 0 89.99999 0
+        scale 0.57000 0.57000 0.79000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_tech_box_frame_7
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model tech_box_frame
+        param position_x -78.419357
+        param position_y -0.789101
+        param position_z 0.260141
+    }
+    prefab_entity
+    {
+        name prop_tech_box_tower_leg_21_1_1
+        position 60.72401 -2.98907 -63.73986
+        rotation 0 -0.00007 0
+        scale 0.60000 0.60000 0.60000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_tech_box_tower_leg_21_1_1
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model tech_box_tower_leg
+        param position_x 60.724010
+        param position_y -2.989071
+        param position_z -63.739861
+    }
+    prefab_entity
+    {
+        name prop_tech_box_tower_leg_22_1_1
+        position -65.61937 -1.38908 -62.53984
+        rotation 0 89.99998 0
+        scale 0.60000 0.60000 0.60000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_tech_box_tower_leg_22_1_1
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model tech_box_tower_leg
+        param position_x -65.619370
+        param position_y -1.389080
+        param position_z -62.539841
+    }
+    prefab_entity
+    {
+        name prop_tech_box_tower_leg_23_1_1
+        position -65.21935 -1.38908 63.86012
+        rotation 0 179.99996 0
+        scale 0.60000 0.60000 0.60000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_tech_box_tower_leg_23_1_1
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model tech_box_tower_leg
+        param position_x -65.219345
+        param position_y -1.389080
+        param position_z 63.860119
+    }
+    prefab_entity
+    {
+        name prop_tech_box_tower_leg_24_1_1
+        position 62.38081 -1.38908 63.06013
+        rotation 0 -89.99999 0
+        scale 0.60000 0.60000 0.60000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_tech_box_tower_leg_24_1_1
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model tech_box_tower_leg
+        param position_x 62.380810
+        param position_y -1.389080
+        param position_z 63.060131
+    }
+    prefab_entity
+    {
+        name prop_tech_box_tower_platfo_2_1_1
+        position 0.32399 224.20000 0.26014
+        rotation 0 0 0
+        scale 0.57000 0.39000 0.57000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_tech_box_tower_platfo_2_1_1_1
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model tech_box_tower_platform
+        param position_x 0.323989
+        param position_y 224.199997
+        param position_z 0.260141
+        param size_x 0.570000
+        param size_y 0.390000
+        param size_z 0.570000
+    }
+    prefab_entity
+    {
+        name sound_amb_prop_industrial_fan_2_1_1
+        position -92.81937 167.81090 -2.14318
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param apply_audio_occlusion true
+        param capsule_end_position_x 630.799988
+        param capsule_end_position_y 562.799988
+        param capsule_end_position_z 1477.399658
+        param cross_fade_max_radius 40.000000
+        param cross_fade_min_radius 0.000000
+        param min_radius 40
+        param position_x -92.819374
+        param position_y 167.810898
+        param position_z -2.143179
+        param radius 900
+        param sound_event amb_prop_industrial_fan_small
+        param type audio_event_ambient_node
+        param volume 0.6
+    }
+}

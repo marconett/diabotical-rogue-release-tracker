@@ -6,6 +6,7 @@ rogue_rocketlauncher
 	selectable true
 	rarity legendary
 	required_class rogue_chunk
+	weapon_fire_type primary
 
 	
 	respawn_time 9
@@ -29,13 +30,15 @@ rogue_rocketlauncher
 	ammo_per_reload 1
 	reload 1000
 	
+	//Why gravity 1? Ask Viktor.
+	gravity 0
 	//target_indicator true
 	category 3
 	bind_group 3
 	
 	hit_radius 1 1
     
-	color EBBA45
+	color 8383ff
 	icon_path images/weapon_icons/wp_hud_rocketlauncher_02.png
 	icon_path2 images/weapon_icons/wp_card_rocketlauncher.png
 	weapon_icon_path images/weapon_icons/wp_card_rocketlauncher_nobg.png
@@ -95,18 +98,28 @@ rogue_rocketlauncher
 	//decal decal_glow_explosion 140 2 3.561 false false alpha 25
 	//decal decal_glow 35 3 3.561 false false alpha 20
 
-	//model assets/shared/weapons/rocketlauncher/rocketlauncher //Old model
 	model assets/shared/models/animations/wp_rocket_launcher/skm_rocket_launcher
-	model_scale 0.07
-	model_scale_centered 0.063
-	model_position 2.5 -3 3.28
-	model_position_centered 0 -4.1 5
-	model_camera_scale 0.5
-	muzzle 0 0 0
-	muzzle_offset 0 0 0
-	fov 40
 	model_scale_third_person 1
-	model_position_third_person 0 4.5 4
+	model_position_third_person 0
+	model_rotation_third_person 0
+    model_position -1.395 -1.765 -4.968
+    model_position_centered -1.366 -2.130 -1.432
+    model_post_rotation -0.067 -0.131 -0.105
+    model_post_rotation_centered -0.056 -0.075 -0.113
+	model_scale 0.04757
+	model_scale_centered 0.04757
+    fov 35.66
+    fov_centered 70.00
+	model_camera_scale 2 
+	model_camera_scale_centered 2   
+
+	// weapon_sway
+	smoothing_factor 8.0
+	vertical_sway 0.8
+	horizontal_sway 0.8
+	tilt_sway 0.1
+	forward_sway 0.5
+	max_vertical_movement_sway 0.02
 	
 	shot_sound w_rl_fire
 	shot_sound2 w_rl_fire_distant

@@ -1,0 +1,71 @@
+asset overgrown_edging_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name prop_vine_leafy_11_2
+        position 14.80002 0.80000 -55.20001
+        rotation 0 -93.59967 0
+        scale 0.85000 0.85000 0.85000
+        param best_lod 3
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_11
+        param skip_shadows true
+        param wind_g 0.5
+        param wind_r 0.25
+    }
+    prefab_entity
+    {
+        name prop_generic_fern_flat_02_2
+        position 2.00000 -3.60000 -9.20001
+        rotation 11.62833 -92.56625 1.30171
+        scale 1.00000 0.87000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model generic_fern_flat_02
+        param wind_g 0.5
+        param wind_r 0.25
+    }
+    prefab_entity
+    {
+        name prop_small_rock_debris_s_1
+        position 12.00000 -1.40000 41.59998
+        rotation 0 -18.89998 0
+        scale 1.46000 1.46000 1.46000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param color1 1F2931
+        param color2_smallrock_debris_mat_smallrockdebris s_cliff_edge
+        param color3_smallrock_debris_mat_smallrockdebris s_cliff_base
+        param color_smallrock_debris_mat_smallrockdebris s_cliff_bottom
+        param force_shadows true
+        param model small_rock_debris_s
+        param uv_offset_x_smallrock_debris_mat_smallrockdebris 0.00
+        param uv_offset_y_smallrock_debris_mat_smallrockdebris 0.00
+        param uv_rotation_smallrock_debris_mat_smallrockdebris 0.00
+        param uv_scale_x_smallrock_debris_mat_smallrockdebris 1.00
+        param uv_scale_y_smallrock_debris_mat_smallrockdebris 1.00
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_07_2
+        position 4.80002 2.00000 131.59998
+        rotation -0.92068 -136.79523 0.24418
+        scale 1.00000 1.00000 1.00000
+        param best_lod 3
+        param clip noclip
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_07
+        param size_w 1
+        param skip_shadows true
+        param wind_g 0.5
+        param wind_r 0.25
+    }
+}

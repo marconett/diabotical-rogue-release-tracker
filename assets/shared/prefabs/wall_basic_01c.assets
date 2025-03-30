@@ -1,0 +1,151 @@
+asset wall_basic_01c
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name decal_decal_graphical_graph_1
+        position -157.72583 346.60397 64.17041
+        rotation 0.00003 179.99995 -179.99999
+        scale 284.00000 96.00000 39.00000
+        param albedo_map_enable true
+        param color s_decal_dark
+        param emissive_map_enable false
+        param gloss_map_enable false
+        param material decal_mat_graphical_graphical_large_horizontal_stripe_01
+        param metal_map_enable false
+        param normal_map_enable false
+        param scale 1.0
+        param tag spawn
+        param v3 true
+    }
+    prefab_entity
+    {
+        name pfx_env_cave_smoke_21
+        position -173.32593 31.91075 -6.22119
+        rotation 0 89.99999 0
+        scale 0.50000 0.75000 0.50000
+        param color dca1a1a8
+        param range_multiplier 2
+        param system env_cave_smoke
+        param tag hallway
+    }
+    prefab_entity
+    {
+        name prop_beams_1x6_2
+        position -0.30347 10.89774 48.33032
+        rotation -90.00000 0 89.99999
+        scale 1.10000 1.33000 1.25000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param model beams_1x6
+        param uv_scale_x 1.65
+        param uv_scale_y 1.25
+    }
+    prefab_entity
+    {
+        name prop_cable_wall_straight_12
+        position -156.30347 286.32578 43.44409
+        rotation -0.00016 89.99996 0.00011
+        scale 1.00000 1.00000 0.99700
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param color_matlib_mat_lib_plastic 7b3131ff
+        param force_shadows true
+        param model cable_wall_straight_8m_01
+        param size_w 1
+    }
+    prefab_entity
+    {
+        name prop_computer_module_2
+        position -140.38989 144.24199 6.76709
+        rotation 0 -179.99996 0
+        scale 1.25000 1.25000 1.00000
+        param __shadow true
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model computer_module_01
+        param size_w 1
+    }
+    prefab_entity
+    {
+        name prop_computer_modules_pref_22
+        position -340.30347 60.29033 -0.25122
+        rotation 0 180.00000 89.99999
+        scale 2.25000 2.00000 2.00000
+        param __shadow true
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param material_2 matlib_mat_lib_metal_bright
+        param model computer_modules_prefab_02
+    }
+    prefab_entity
+    {
+        name prop_computer_modules_pref_23
+        position -0.30347 100.29033 -0.25122
+        rotation 0 180.00000 -89.99999
+        scale 2.50000 2.50000 2.50000
+        param __shadow true
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param material_2 matlib_mat_lib_metal_bright
+        param model computer_modules_prefab_02
+    }
+    prefab_entity
+    {
+        name prop_tech_wall_pipe_holder_1
+        position -157.50342 409.10989 -0.50244
+        rotation 44.99999 180.00000 -179.99999
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 3
+        param clip weapon
+        param color_matlib_mat_lib_acrylic s_pipe_colored
+        param color_matlib_mat_lib_plastic s_decal_yellow
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_dark
+        param material_2 matlib_mat_lib_plastic
+        param model tech_wall_pipe_holder_closed_01
+    }
+    prefab_entity
+    {
+        name prop_wall_ext_8x8_10
+        position -160.30347 -239.70967 -60.25122
+        rotation 0 0 0
+        scale 1.00000 1.65000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip weapon
+        param force_shadows true
+        param material_5 matlib_mat_lib_metal_bright
+        param model wall_ext_8x8
+        param seethrough_prop true
+    }
+    prefab_entity
+    {
+        name sound_amb_int_electr_3
+        position -201.53833 138.03880 8.76587
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param capsule_end_position_x -1508.212402
+        param capsule_end_position_y 506.128052
+        param capsule_end_position_z -945.013184
+        param cross_fade_max_radius 1500.000000
+        param cross_fade_min_radius 300.000000
+        param min_radius 300.000000
+        param radius 3000.000000
+        param sound_event amb_int_electronics5
+        param type audio_event_ambient_node
+        param volume 0.2
+    }
+}
+
+
+
+

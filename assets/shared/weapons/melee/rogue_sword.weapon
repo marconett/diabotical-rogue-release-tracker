@@ -1,7 +1,7 @@
 rogue_sword
 {
-	selectable false	
-	show_in_dev_console false
+	selectable true	
+	show_in_dev_console true
     weapon_tag melee
     bind_group 9
 	color 888888
@@ -15,7 +15,7 @@ rogue_sword
 	distance 60
 	hit_radius 50
 
-allow_during_bolt true
+	allow_during_bolt true
 	
 	//hit_radius 100
 	

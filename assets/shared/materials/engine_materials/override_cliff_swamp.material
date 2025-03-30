@@ -1,0 +1,20 @@
+override_cliff_swamp
+{
+  {
+    map models/environment/nature/minerals/mineral_rocks_combined/shaders/mat_atlas_atlas_rocks_combined_d.png
+    map models/environment/nature/minerals/mineral_rocks_combined/shaders/mat_atlas_atlas_rocks_combined_n.png
+    map models/environment/nature/minerals/mineral_rocks_combined/shaders/mat_atlas_atlas_rocks_combined_s.png
+    map models/rogue/environment/overgrown/terrain/pale_green_d.png
+    map models/environment/nature/minerals/mineral_rocks_combined/shaders/moss_n.png
+    map models/environment/nature/minerals/mineral_rocks_combined/shaders/moss_s.png
+    map models/environment/nature/minerals/mineral_rocks_combined/shaders/mat_atlas_atlas_rocks_combined_c.png
+    map swatches/black.png
+    material_id 61
+    vertex_shader tilestaticcolor.vs.cso 111 NGCT
+    vertex_shader_param camera
+    pixel_shader tilecolorblend_mask.ps.cso
+    pixel_shader_param accent1 #948984ff
+    pixel_shader_param accent2 #504166ff
+    pixel_shader_param accent3 #645b57ff
+  }
+}

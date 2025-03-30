@@ -2169,6 +2169,7 @@ overload_orb augment 3
 overload_orb augment 4
 {
 	overwrite gravity 1
+	overwrite gravity_pitch_offset 0
 }
 
 overload_orb augment 5
@@ -2540,6 +2541,51 @@ mini_rocket_homing
 	bounce_friction 1
 }
 
+mini_rocket_homing_v2
+{
+	show_in_dev_console false 
+	
+    weapon_tag mini_rocket_homing_v2
+    sort 100
+	speed 500
+ 	rate 750
+	duration 150000
+	
+  	missile_particles weapon_rocket_projectile
+  	// impact_particles beam_impact_1
+	// impact_particles rocket_impact_diabotical
+	impact_particles weapon_rocket_impact
+	
+	fov 55
+	
+	hit_sound hit_sound_hit1
+	hit_sound_min_pitch 0.75 
+	missile_loop_sound ab_mini_rockets_airbound
+	// single_missile_sound weeble_airbound_short1 weeble_airbound_short2 weeble_airbound_short3 weeble_airbound_short4 weeble_airbound_short5 weeble_airbound_short6 weeble_airbound_short7
+	// missile_loop_sound translocator_projectile_loop
+	// bounce_sound translocator_bounce1 translocator_bounce2 translocator_bounce3 translocator_bounce4
+	// impact_sound rl_impact1 rl_impact2 rl_impact3 rl_impact4
+	impact_sound ab_mini_rockets_impact
+
+	hit_sound fb_enemy_hit
+
+	custom_trajectory true
+	custom_trajectory_type homing_projectile
+
+	// min_splash_damage 5
+    // team_damage 0
+    // splash_team_damage 0
+
+  	damage 25
+	self_damage 40
+  	splash_radius 165
+	splash_damage 25
+	min_splash_damage 1
+
+	bounce 0
+	bounce_friction 1
+}
+
 instigator_missile 
 {
 	show_in_dev_console false 
@@ -2848,6 +2894,8 @@ throwing_shield
 
 	gravity 0
 
+	missile_particles_1p_offset 25 -2.5 0
+	
 	missile_particles skill_shield_throw_projectile
 	impact_particles skill_shield_throw_impact
 	missile_trail_particles weeb_dynamic_trail_green

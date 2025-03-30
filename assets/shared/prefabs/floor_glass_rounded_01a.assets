@@ -1,0 +1,429 @@
+asset floor_glass_rounded_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name billboard_14
+        position 238.00000 -5.07957 -224.80005
+        rotation 90.00000 0 90.00002
+        scale 424.99893 449.99994 5.00000
+        param alpha false
+        param backface true
+        param color 828282ff
+        param position_x 238.000000
+        param position_y -5.079570
+        param position_z -220.000000
+        param rotation_x 1.570796
+        param rotation_y 0.000000
+        param rotation_z -1.570796
+        param texture assets/shared/particles/textures/billybobby_cracks_mask.png.dds
+    }
+    prefab_entity
+    {
+        name billboard_30
+        position -59.98901 -5.07969 -92.10754
+        rotation 90.00000 0 -157.49995
+        scale 139.99998 119.99980 2.00000
+        param alpha false
+        param backface true
+        param color 303030ff
+        param position_x -59.989014
+        param position_y -5.079690
+        param position_z -87.307617
+        param rotation_x 1.570796
+        param rotation_y 0.000000
+        param rotation_z -2.748893
+        param texture assets/shared/particles/textures/floor_cracks.png.dds
+    }
+    prefab_entity
+    {
+        name billboard_32
+        position -123.62842 -4.00474 -99.17883
+        rotation -90.00000 0 -89.99998
+        scale 200.99947 20.00000 1.00000
+        param alpha true
+        param backface true
+        param color s_accent
+        param position_x -123.628418
+        param position_y -4.004740
+        param position_z -94.378906
+        param rotation_x -1.570796
+        param rotation_y 0.000000
+        param rotation_z -1.570796
+        param texture assets/shared/textures/decals/graphical/graphical_triangle_row_01.png.dds
+    }
+    prefab_entity
+    {
+        name billboard_35
+        position -236.76562 -5.07957 211.94824
+        rotation 90.00000 0 -89.99998
+        scale 424.99893 449.99997 5.00000
+        param alpha false
+        param backface true
+        param color 828282ff
+        param position_x -236.765625
+        param position_y -5.079570
+        param position_z 216.748169
+        param rotation_x 1.570796
+        param rotation_y 0.000000
+        param rotation_z -1.570796
+        param texture assets/shared/particles/textures/billybobby_cracks_mask.png.dds
+    }
+    prefab_entity
+    {
+        name prop_building_blocks_windo_231
+        position 164.48291 -20.00474 240.23230
+        rotation -90.00000 0 -89.99998
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_building_blocks_windo_231
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model building_blocks_window_corner_round_1x2
+        param position_x 164.482910
+        param position_y -20.004740
+        param position_z 245.032227
+        param rotation_x -1.570796
+        param rotation_y 0.000000
+        param rotation_z -1.570796
+        param tag reception
+    }
+    prefab_entity
+    {
+        name prop_building_blocks_windo_232
+        position 164.48340 -20.00474 28.34729
+        rotation -90.00000 0 -89.99998
+        scale 1.10000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_building_blocks_windo_232
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model building_blocks_window_1x2
+        param position_x 164.483398
+        param position_y -20.004740
+        param position_z 33.147217
+        param rotation_x -1.570796
+        param rotation_y 0.000000
+        param rotation_z -1.570796
+        param tag reception
+    }
+    prefab_entity
+    {
+        name prop_building_blocks_windo_233
+        position 164.48291 -20.00474 -137.64575
+        rotation -90.00000 0 -89.99998
+        scale 0.85000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_building_blocks_windo_1
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model building_blocks_window_1x2
+        param position_x 164.482910
+        param position_y -20.004740
+        param position_z -132.845825
+        param rotation_x -1.570796
+        param rotation_y 0.000000
+        param rotation_z -1.570796
+        param tag reception
+    }
+    prefab_entity
+    {
+        name prop_building_blocks_windo_234
+        position 44.55811 -20.00474 240.23242
+        rotation -90.00000 0 179.99999
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_building_blocks_windo_1
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model building_blocks_window_1x2
+        param position_x 44.558105
+        param position_y -20.004740
+        param position_z 245.032349
+        param rotation_x -1.570796
+        param rotation_y 0.000000
+        param rotation_z -3.141593
+        param tag reception
+    }
+    prefab_entity
+    {
+        name prop_building_blocks_windo_235
+        position 164.48315 -20.00474 -59.65320
+        rotation -90.00000 0 -89.99998
+        scale 1.10000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_building_blocks_windo_1
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model building_blocks_window_1x2
+        param position_x 164.483154
+        param position_y -20.004740
+        param position_z -54.853271
+        param rotation_x -1.570796
+        param rotation_y 0.000000
+        param rotation_z -1.570796
+        param tag reception
+    }
+    prefab_entity
+    {
+        name prop_building_blocks_windo_236
+        position 164.48315 -20.00474 -251.91431
+        rotation -90.00000 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_building_blocks_windo_236
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model building_blocks_window_corner_round_1x2
+        param position_x 164.483154
+        param position_y -20.004740
+        param position_z -247.114258
+        param rotation_x -1.570796
+        param rotation_y 0.000000
+        param rotation_z -0.000000
+        param tag reception
+    }
+    prefab_entity
+    {
+        name prop_building_blocks_windo_237
+        position -163.61426 -20.00474 240.23230
+        rotation -90.00000 0 179.99990
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_building_blocks_windo_237
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model building_blocks_window_corner_round_1x2
+        param position_x -163.614258
+        param position_y -20.004740
+        param position_z 245.032227
+        param rotation_x -1.570796
+        param rotation_y 0.000000
+        param rotation_z 3.141591
+        param tag reception
+    }
+    prefab_entity
+    {
+        name prop_building_blocks_windo_238
+        position -163.54492 -20.00474 -39.84949
+        rotation -90.00000 0 89.99998
+        scale 1.10000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_building_blocks_windo_1
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model building_blocks_window_1x2
+        param position_x -163.544922
+        param position_y -20.004740
+        param position_z -35.049561
+        param rotation_x -1.570796
+        param rotation_y 0.000000
+        param rotation_z 1.570796
+        param tag reception
+    }
+    prefab_entity
+    {
+        name prop_building_blocks_windo_239
+        position -39.25806 -20.00474 240.32556
+        rotation -90.00000 0 179.99996
+        scale 1.10000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_building_blocks_windo_1
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model building_blocks_window_1x2
+        param position_x -39.258057
+        param position_y -20.004740
+        param position_z 245.125488
+        param rotation_x -1.570796
+        param rotation_y 0.000000
+        param rotation_z 3.141592
+        param tag reception
+    }
+    prefab_entity
+    {
+        name prop_building_blocks_windo_240
+        position 164.48340 -20.00474 116.34741
+        rotation -90.00000 0 -89.99998
+        scale 1.10000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_building_blocks_windo_1
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model building_blocks_window_1x2
+        param position_x 164.483398
+        param position_y -20.004740
+        param position_z 121.147339
+        param rotation_x -1.570796
+        param rotation_y 0.000000
+        param rotation_z -1.570796
+        param tag reception
+    }
+    prefab_entity
+    {
+        name prop_building_blocks_windo_241
+        position -163.54443 -20.00400 126.14417
+        rotation -90.00000 0 89.99998
+        scale 0.85000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_building_blocks_windo_1
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model building_blocks_window_1x2
+        param position_x -163.544434
+        param position_y -20.004000
+        param position_z 130.944092
+        param rotation_x -1.570796
+        param rotation_y 0.000000
+        param rotation_z 1.570796
+        param tag reception
+    }
+    prefab_entity
+    {
+        name prop_building_blocks_windo_242
+        position -163.54443 -20.00400 48.15088
+        rotation -90.00000 0 89.99998
+        scale 1.10000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_building_blocks_windo_1
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model building_blocks_window_1x2
+        param position_x -163.544434
+        param position_y -20.004000
+        param position_z 52.950806
+        param rotation_x -1.570796
+        param rotation_y 0.000000
+        param rotation_z 1.570796
+        param tag reception
+    }
+    prefab_entity
+    {
+        name prop_building_blocks_windo_243
+        position -163.54443 -20.00352 -127.84900
+        rotation -90.00000 0 89.99998
+        scale 1.10000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_building_blocks_windo_1
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model building_blocks_window_1x2
+        param position_x -163.544434
+        param position_y -20.003519
+        param position_z -123.049072
+        param rotation_x -1.570796
+        param rotation_y 0.000000
+        param rotation_z 1.570796
+        param tag reception
+    }
+    prefab_entity
+    {
+        name prop_building_blocks_windo_244
+        position -163.61426 -20.00583 -251.91382
+        rotation -90.00000 0 90.00002
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_building_blocks_windo_244
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model building_blocks_window_corner_round_1x2
+        param position_x -163.614258
+        param position_y -20.005831
+        param position_z -247.113770
+        param rotation_x -1.570796
+        param rotation_y 0.000000
+        param rotation_z 1.570797
+        param tag reception
+    }
+    prefab_entity
+    {
+        name prop_building_blocks_windo_245
+        position -42.84058 -20.00583 -252.19702
+        rotation -90.00000 0 0.00006
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_building_blocks_windo_1
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model building_blocks_window_1x2
+        param position_x -42.840576
+        param position_y -20.005831
+        param position_z -247.396973
+        param rotation_x -1.570796
+        param rotation_y 0.000000
+        param rotation_z 0.000001
+        param tag reception
+    }
+    prefab_entity
+    {
+        name prop_building_blocks_windo_246
+        position 40.59790 -20.00583 -251.91431
+        rotation -90.00000 0 -0.00006
+        scale 1.10000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_building_blocks_windo_1
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model building_blocks_window_1x2
+        param position_x 40.597900
+        param position_y -20.005831
+        param position_z -247.114258
+        param rotation_x -1.570796
+        param rotation_y 0.000000
+        param rotation_z -0.000001
+        param tag reception
+    }
+    prefab_entity
+    {
+        name prop_glass_window_8x8
+        position 8.27783 -3.25143 4.77454
+        rotation 90.00000 0 0
+        scale 2.10000 3.40000 2.10000
+        param best_lod 0
+        param model glass_window_8x8
+        param uv_scale_x_matlib_mat_lib_glass_transparent 1
+        param uv_scale_y_matlib_mat_lib_glass_transparent 2
+    }
+}
+
+
+
+
+
+
+
+
+

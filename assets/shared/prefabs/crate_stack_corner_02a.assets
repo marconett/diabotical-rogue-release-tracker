@@ -1,0 +1,190 @@
+asset crate_stack_corner_02a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name col_col_box_corner_2
+        position 1.39471 0 0.82684
+        rotation 0 0 0
+        scale 1.22000 0.77000 0.85000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param position_x 1.394745
+        param position_y 0.000000
+        param position_z 0.826843
+        param rotation_x -0.000000
+        param rotation_y -0.000000
+        param rotation_z 0.000000
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_3
+        position 1.39471 61.60000 0.82678
+        rotation 0 0 0
+        scale 0.65000 0.47000 0.67000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param position_x 1.394745
+        param position_y 61.599998
+        param position_z 0.826782
+        param rotation_x -0.000000
+        param rotation_y -0.000000
+        param rotation_z 0.000000
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_4
+        position 98.99475 0 0.82681
+        rotation 0 0 0
+        scale 0.56000 0.48000 0.55000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param position_x 98.994720
+        param position_y 0.000000
+        param position_z 0.826813
+        param rotation_x -0.000000
+        param rotation_y -0.000000
+        param rotation_z 0.000000
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name light_57
+        position 79.81329 93.60295 -22.24524
+        rotation 0 112.49980 0
+        scale 1.00000 1.00000 1.00000
+        param color s_light_neutral
+        param falloff 0.33
+        param intensity 1
+        param length 200
+        param light_bake_only true
+        param position_x 79.813324
+        param position_y 93.602951
+        param position_z -22.245239
+        param radius 300
+        param rotation_x -0.000000
+        param rotation_y 1.963492
+        param rotation_z 0.000000
+        param softness 0.1
+        param type diffuse
+    }
+    prefab_entity
+    {
+        name prop_kb_fences_tech_lamp_0
+        position 79.67181 56.57798 -16.72040
+        rotation 0 103.50000 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_kb_fences_tech_lamp_0
+        param best_lod 0
+        param clip fullclip
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param force_shadows true
+        param model kb_fences_tech_lamp_02
+        param position_x 79.671814
+        param position_y 56.577980
+        param position_z -16.720398
+        param rotation_x -0.000000
+        param rotation_y 1.806416
+        param rotation_z 0.000000
+    }
+    prefab_entity
+    {
+        name prop_rogue_crate_06_empty_1
+        position 122.53357 0.02726 -21.17972
+        rotation 0 81.89997 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_rogue_crate_06_empty_1
+        param best_lod 0
+        param clip weapon
+        param color_matlib_mat_lib_metal_painted s_bright
+        param force_shadows true
+        param model crate_06_empty
+        param position_x 122.533539
+        param position_y 0.027260
+        param position_z -21.179718
+        param rotation_x -0.000000
+        param rotation_y 1.429424
+        param rotation_z -0.000000
+    }
+    prefab_entity
+    {
+        name prop_rogue_crate_06_open_1
+        position 30.31006 56.00029 -25.50189
+        rotation 0 -34.19985 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_rogue_crate_06_open_1
+        param best_lod 0
+        param clip weapon
+        param color_matlib_mat_lib_metal_painted s_bright
+        param force_shadows true
+        param model crate_06_open
+        param position_x 30.310089
+        param position_y 56.000290
+        param position_z -25.501892
+        param rotation_x -0.000000
+        param rotation_y -0.596900
+        param rotation_z 0.000000
+    }
+    prefab_entity
+    {
+        name prop_rogue_var_crate_07_ta_1
+        position 54.42084 -0.00566 -35.43872
+        rotation 0 2.70001 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_rogue_var_crate_07_ta_1
+        param best_lod 0
+        param clip weapon
+        param color_matlib_mat_lib_tarp_fabric s_accent
+        param color_matlib_mat_lib_tarp_fabric_details s_accent
+        param force_shadows true
+        param model var_crate_07_tarp
+        param position_x 54.420807
+        param position_y -0.005659
+        param position_z -35.438721
+        param rotation_x -0.000000
+        param rotation_y 0.047124
+        param rotation_z -0.000000
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_pile_sm_0
+        position 25.42151 0.10051 -92.79749
+        rotation 0.90000 87.29998 0.90000
+        scale 1.00000 1.00000 1.00000
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model tech_debris_pile_sm_01
+        param no_collision true
+        param position_x 25.421478
+        param position_y 0.100510
+        param position_z -92.797485
+        param rotation_x 0.015708
+        param rotation_y 1.523672
+        param rotation_z 0.015708
+        param skip_shadows true
+    }
+}
+
+
+

@@ -101,7 +101,7 @@
         "max_ammo": "8",
         "unlimited_ammo": "false",
         "reload": "1400",
-        "color": "A35EBA",
+        "color": "fcb343",
         "icon_path": "images/weapon_icons/wp_hud_revolver_02.png",
         "icon_path2": "images/weapon_icons/wp_card_revolver.png",
         "weapon_icon_path": "images/weapon_icons/wp_card_revolver_nobg.png",
@@ -165,39 +165,46 @@
             "20"
         ],
         "model": "assets/shared/models/animations/wp_revolver/skm_revolver",
+        "model_scale_third_person": "1",
+        "model_position_third_person": "0",
+        "model_rotation_third_person": "0",
         "model_position": [
-            "2",
-            "-1.7",
-            "4.2"
+            "-0.598556",
+            "-0.944655",
+            "-1.84743"
         ],
-        "model_scale": "0.12",
+        "model_position_centered": [
+            "-0.539819",
+            "-0.843027",
+            "-2.13049"
+        ],
         "model_post_rotation": [
-            "-2.5",
-            "1",
-            "0.07"
+            "-0.0610865",
+            "-0.00872665",
+            "-0.0174533"
         ],
-        "model_pivot": [
-            "0",
-            "0",
-            "0"
+        "model_post_rotation_centered": [
+            "-0.0567232",
+            "-0.015708",
+            "-0.0174533"
         ],
-        "fov": "48",
+        "model_scale": "0.04",
+        "model_scale_centered": "0.04",
+        "fov": "55",
+        "fov_centered": "75",
+        "model_camera_scale": "2",
+        "model_camera_scale_centered": "2",
         "muzzle": [
             "2.7",
             "-2.8",
             "14"
         ],
-        "model_position_centered": [
-            "1.37144",
-            "-1.36169",
-            "4.74551"
-        ],
-        "model_scale_centered": "0.1",
-        "model_post_rotation_centered": [
-            "-2.5",
-            "1",
-            "0.07"
-        ],
+        "smoothing_factor": "8.0",
+        "vertical_sway": "0.8",
+        "horizontal_sway": "0.8",
+        "tilt_sway": "0.1",
+        "forward_sway": "0.2",
+        "max_vertical_movement_sway": "0.03",
         "shot_sound": "w_rev_fire",
         "shot_sound2": "w_rev_fire_distant",
         "equip_sound": "w_rev_equip",
@@ -291,11 +298,1050 @@
         "rarity": "legendary"
     },
     {
+        "id": "rogue_doublebarreled_shotgun",
+        "parent_id": "",
+        "weapon_type": "base",
+        "name_translation_key": "weapon_doublebarreled_shotgun",
+        "desc_translation_key": "weapon_doublebarreled_shotgun_desc",
+        "can_drop": "true",
+        "selectable": "false",
+        "show_in_dev_console": "true",
+        "weapon_tag": "dbsho",
+        "color": "9bc44d",
+        "default_ammo": "2",
+        "default_ammo_pickup_ammo": "50",
+        "default_weapon_pickup_ammo": "50",
+        "max_ammo": "40",
+        "unlimited_ammo": "false",
+        "icon_path": "images/weapon_icons/doublebarreled_shotgun.png",
+        "charge_animation": "1",
+        "shots_per_round": "20",
+        "spread": [
+            "5.87",
+            "5.87"
+        ],
+        "spread_radius": "1",
+        "rate": "1000",
+        "damage": [
+            "5",
+            "5"
+        ],
+        "max_damage_distance": "1000",
+        "min_damage_distance": "3000",
+        "min_hits": "2",
+        "bounce": "0",
+        "spread_ring": [
+            "0",
+            "6",
+            "6",
+            "8"
+        ],
+        "spread_ring_angular_offset": [
+            "0",
+            "0",
+            "90",
+            "0"
+        ],
+        "knockback": "6.1",
+        "ground_knockback": "7.1",
+        "parallel_knockback": "true",
+        "impact_particles_distance_delay": "0.12",
+        "independent_upgrade_model": "true",
+        "hit_radius": [
+            "1.7",
+            "3"
+        ],
+        "reload": "2500",
+        "group_damage": "true",
+        "max_damage_reward": "true",
+        "detached_shot_particles": "false",
+        "shot_particles": "empty_system",
+        "shot_particles_attached_3p": "muzzle_db_shotgun",
+        "missile_particles": "bullet_db_shotgun",
+        "missile_particles_1p": "bullet_db_shotgun",
+        "impact_particles": "weapon_shotgun_impact",
+        "player_impact_particles": "impact_player_db_shotgun",
+        "decal": [
+            "decal_glow",
+            "10",
+            "3",
+            "3.561",
+            "false",
+            "false",
+            "alpha",
+            "50"
+        ],
+        "model": "assets/shared/models/animations/wp_doubleshotgun/skm_doubleshotgun",
+        "model_scale_third_person": [
+            "1",
+            "1",
+            "1"
+        ],
+        "model_position_third_person": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_rotation_third_person": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_position": [
+            "-1.030",
+            "-1.467",
+            "-3.644"
+        ],
+        "model_position_centered": [
+            "-0.740",
+            "-1.400",
+            "-1.700"
+        ],
+        "model_post_rotation": [
+            "-0.047",
+            "-0.121",
+            "-0.062"
+        ],
+        "model_post_rotation_centered": [
+            "-0.079",
+            "-0.070",
+            "-0.017"
+        ],
+        "model_scale": [
+            "0.07",
+            "0.07",
+            "0.07"
+        ],
+        "model_scale_centered": [
+            "0.07",
+            "0.07",
+            "0.07"
+        ],
+        "fov": "45.09",
+        "fov_centered": "50.00",
+        "model_camera_scale": "5",
+        "model_camera_scale_centered": "5",
+        "muzzle": [
+            "2.6",
+            "-2.7",
+            "4.7"
+        ],
+        "shot_sound": [
+            "ss_fire1",
+            "ss_fire2",
+            "ss_fire3",
+            "ss_fire4"
+        ],
+        "equip_sound": "weapon_double_shotgun_equip",
+        "out_of_ammo_sound": "ss_ooa",
+        "hit_sound": "fb_enemy_hit",
+        "critical_hit_sound": "fb_enemy_hit_crit",
+        "multi_round_particles": "false",
+        "can_upgrade_tactical_reload": "true"
+    },
+    {
+        "asset_name": "d3d8f1a1-70e1-4d26-8fc8-cc05c7d39c17",
+        "dynamic_rules": [],
+        "selectable": "true",
+        "show_in_dev_console": "true",
+        "weapon_tag": "melee",
+        "bind_group": "9",
+        "color": "888888",
+        "damage": "40",
+        "knockback": "100",
+        "ground_knockback": "100",
+        "rate": "700",
+        "speed": "0",
+        "unlimited_ammo": "true",
+        "distance": "60",
+        "hit_radius": "50",
+        "allow_during_bolt": "true",
+        "icon_path": "images/weapon_icons/wp_hud_hammer_silver.png",
+        "melee_reward": "true",
+        "shot_particles": "empty_system",
+        "shot_particles_attached": "empty_system",
+        "impact_particles": "rail_impact",
+        "melee_animation": "true",
+        "model": "assets/shared/models/animations/wp_hammer/skm_hammer",
+        "model_position": [
+            "6.2",
+            "-7",
+            "8.7"
+        ],
+        "model_scale": [
+            "0.10",
+            "0.10",
+            "0.10"
+        ],
+        "model_camera_scale": "0.3",
+        "model_rotation": [
+            "175",
+            "-4",
+            "0"
+        ],
+        "muzzle": [
+            "4.5",
+            "-6",
+            "20"
+        ],
+        "fov": "59",
+        "shot_sound": [
+            "m_fire1",
+            "m_fire2",
+            "m_fire3",
+            "m_fire4",
+            "m_fire5"
+        ],
+        "impact_sound": [
+            "m_impact1",
+            "m_impact2",
+            "m_impact3",
+            "m_impact4",
+            "m_impact5"
+        ],
+        "hit_sound": "testhit1",
+        "equip_sound": "m_equip",
+        "model_scale_third_person": "0.15",
+        "model_position_third_person": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_rotation_third_person": [
+            "0",
+            "0",
+            "0"
+        ],
+        "weapon_type": "melee"
+    },
+    {
+        "asset_name": "7aeacaa6-67b6-422c-a470-02d290b429af",
+        "dynamic_rules": [],
+        "name_translation_key": "weapon_diabotical_rocketlauncher",
+        "desc_translation_key": "weapon_diabotical_rocketlauncher_desc",
+        "selectable": "true",
+        "rarity": "legendary",
+        "respawn_time": "9",
+        "weapon_tag": "dbtrl",
+        "speed": "1000",
+        "rate": "800",
+        "damage": "100",
+        "min_splash_damage": "5",
+        "splash_damage": "94",
+        "self_damage": "47",
+        "splash_hemisphere_offset": "20",
+        "splash_hemisphere_offset_damage_multiplier": "0.30",
+        "default_ammo": "5",
+        "default_ammo_pickup_ammo": "5",
+        "default_weapon_pickup_ammo": "10",
+        "max_ammo": "25",
+        "gravity": "0",
+        "category": "3",
+        "bind_group": "3",
+        "hit_radius": [
+            "1",
+            "1"
+        ],
+        "color": "EBBA45",
+        "icon_path": "images/weapon_icons/wp_hud_rocketlauncher_02.png",
+        "icon_path2": "images/weapon_icons/wp_card_rocketlauncher.png",
+        "weapon_icon_path": "images/weapon_icons/wp_card_rocketlauncher_nobg.png",
+        "friendly_name": [
+            "Rocket",
+            "Launcher"
+        ],
+        "description": [
+            "A",
+            "rocket",
+            "launcher."
+        ],
+        "charge_animation": "6",
+        "splash_radius": "150",
+        "knockback": "100",
+        "knockback_self": "113",
+        "ground_knockback": "80",
+        "ground_knockback_self": "113",
+        "center_of_mass_offset": "0",
+        "center_of_mass_offset_self": "0",
+        "zoomed_scope": "1",
+        "combo_rate": [
+            "diabotical_void_cannon",
+            "750"
+        ],
+        "shot_particles": "empty_system",
+        "shot_particles_attached": [
+            "weapon_rocket_muzzle_flash",
+            "socket_muzzle",
+            "1"
+        ],
+        "shot_particles_attached_3p": "weapon_rocket_muzzle_3p",
+        "missile_particles": "weapon_rocket_projectile",
+        "impact_particles": "weapon_rocket_impact",
+        "model": "assets/shared/models/animations/wp_rocket_launcher/skm_rocket_launcher",
+        "model_scale_third_person": "1",
+        "model_position_third_person": "0",
+        "model_rotation_third_person": "0",
+        "model_position": [
+            "-1.5281",
+            "-1.98725",
+            "-3.02462"
+        ],
+        "model_position_centered": [
+            "-1.36563",
+            "-2.13",
+            "-1.43242"
+        ],
+        "model_post_rotation": [
+            "-0.0523599",
+            "-0.122173",
+            "-0.10472"
+        ],
+        "model_post_rotation_centered": [
+            "-0.0558505",
+            "-0.0750492",
+            "-0.113446"
+        ],
+        "model_scale": "0.04757",
+        "model_scale_centered": "0.04757",
+        "fov": "45",
+        "fov_centered": "70",
+        "model_camera_scale": "2",
+        "model_camera_scale_centered": "2",
+        "smoothing_factor": "8.0",
+        "vertical_sway": "1.0",
+        "horizontal_sway": "1.0",
+        "tilt_sway": "0.15",
+        "forward_sway": "0.2",
+        "max_vertical_movement_sway": "0.05",
+        "shot_sound": "w_rl_fire",
+        "shot_sound2": "w_rl_fire_distant",
+        "missile_loop_sound": "w_rl_airbound",
+        "impact_sound": "w_rl_impact",
+        "impact_sound2": "w_rl_impact_distant",
+        "equip_sound": "w_rl_equip",
+        "hit_sound": "fb_enemy_hit",
+        "critical_hit_sound": "fb_enemy_hit_crit",
+        "out_of_ammo_sound": "w_rl_ooa",
+        "detached_shot_particles": "false"
+    },
+    {
+        "asset_name": "4341f15e-6658-4a4e-adf4-cf456988d484",
+        "dynamic_rules": [],
+        "name_translation_key": "weapon_pncr",
+        "desc_translation_key": "weapon_pncr_desc",
+        "unlimited_ammo": "true",
+        "selectable": "true",
+        "show_in_dev_console": "true",
+        "respawn_time": "9",
+        "category": "5",
+        "bind_group": "5",
+        "weapon_tag": "dbtpncr",
+        "color": "1fa8b6",
+        "damage": "70",
+        "bonus_consecutive_damage": "5",
+        "max_bonus_consecutive_damage_instances": "6",
+        "knockback": "62.5",
+        "ground_knockback": "75.5",
+        "default_ammo_pickup_ammo": "5",
+        "default_weapon_pickup_ammo": "10",
+        "max_ammo": "25",
+        "penetrating": "true",
+        "icon_path": "images/weapon_icons/wp_hud_pncr.png",
+        "icon_path2": "images/weapon_icons/wp_card_pncr.png",
+        "friendly_name": "PNCR",
+        "description": [
+            "Point",
+            "N",
+            "Click",
+            "Rifle"
+        ],
+        "hit_radius": [
+            "1.5",
+            "1"
+        ],
+        "charge_animation": "6",
+        "charge_animation_bonus": "true",
+        "rate": "1450",
+        "recoil_delay_recovery": "0.1",
+        "recoil_up": "1.5",
+        "recoil_side": "0.2",
+        "recoil_recovery_time": "0.45",
+        "recoil_time": "0.07",
+        "zoomed_recoil_up": "0.75",
+        "zoomed_recoil_side": "0.1",
+        "zoomed_recoil_recovery_time": "0.4",
+        "zoomed_recoil_time": "0.06",
+        "zoomed_walk_speed": "175",
+        "rotate_shot_particles_by_shot_direction": "true",
+        "shot_particles": "weapon_pncr_beam",
+        "shot_particles_3p": "weapon_pncr_beam_3p",
+        "shot_particles_attached": "weapon_pncr_muzzle",
+        "impact_particles": "weapon_pncr_impact",
+        "player_impact_particles": "weapon_pncr_player_impact",
+        "player_impact_particles_player_normal": "false",
+        "model": "assets/shared/models/animations/wp_pncr/skm_pncr",
+        "model_scale_third_person": "0.85",
+        "model_position_third_person": [
+            "-4",
+            "14.5",
+            "12"
+        ],
+        "model_rotation_third_person": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_position": [
+            "-0.863",
+            "-1.194",
+            "-1.100"
+        ],
+        "model_position_centered": [
+            "-0.743",
+            "-1.407",
+            "-1.686"
+        ],
+        "model_post_rotation": [
+            "-0.057",
+            "-0.124",
+            "-0.062"
+        ],
+        "model_post_rotation_centered": [
+            "-0.079",
+            "-0.070",
+            "-0.017"
+        ],
+        "model_scale": [
+            "0.025",
+            "0.025",
+            "0.025"
+        ],
+        "model_scale_centered": [
+            "0.05",
+            "0.05",
+            "0.05"
+        ],
+        "fov": "50.00",
+        "model_camera_scale": "5",
+        "model_camera_scale_centered": "5",
+        "impressive_reward": "true",
+        "parallel_knockback": "true",
+        "particles_clipping_plane": "true",
+        "shot_sound": "w_pncr_fire1_t1",
+        "shot_sound_t2": "w_pncr_fire1_t2",
+        "shot_sound_t3": "w_pncr_fire1_t3",
+        "shot_sound2": "w_pncr_fire_distant",
+        "equip_sound": "w_pncr_equip",
+        "hit_sound": "fb_enemy_hit",
+        "critical_hit_sound": "fb_enemy_hit_crit",
+        "proximity_loop_sound": "w_pncr_idle_loop",
+        "out_of_ammo_sound": "w_pncr_ooa",
+        "impact_sound": "w_pncr_impact"
+    },
+    {
+        "asset_name": "84b4bfe7-beb5-4e10-b840-a3e9785e3314",
+        "dynamic_rules": [],
+        "selectable": "true",
+        "show_in_dev_console": "true",
+        "weapon_tag": "melee",
+        "bind_group": "9",
+        "color": "888888",
+        "damage": "40",
+        "knockback": "100",
+        "ground_knockback": "100",
+        "rate": "700",
+        "speed": "0",
+        "unlimited_ammo": "true",
+        "distance": "60",
+        "hit_radius": "50",
+        "allow_during_bolt": "true",
+        "icon_path": "images/weapon_icons/wp_hud_hammer_silver.png",
+        "loop_animation": "true",
+        "melee_reward": "true",
+        "shot_particles": "empty_system",
+        "shot_particles_attached": "empty_system",
+        "impact_particles": "rail_impact",
+        "melee_animation": "true",
+        "model": "assets/shared/models/animations/wp_chockhammer/skm_chockhammer",
+        "model_scale_third_person": "1",
+        "model_position_third_person": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_rotation_third_person": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_position": [
+            "-0.587",
+            "-1.134",
+            "-2.447"
+        ],
+        "model_position_centered": [
+            "-0.540",
+            "-0.843",
+            "-2.130"
+        ],
+        "model_post_rotation": [
+            "-0.088",
+            "-0.092",
+            "-0.057"
+        ],
+        "model_post_rotation_centered": [
+            "-0.057",
+            "-0.016",
+            "-0.017"
+        ],
+        "model_scale": "0.02",
+        "model_scale_centered": "0.02",
+        "fov": "55.00",
+        "fov_centered": "75.00",
+        "model_camera_scale": "2",
+        "model_camera_scale_centered": "2",
+        "muzzle": [
+            "2.7",
+            "-2.8",
+            "14"
+        ],
+        "smoothing_factor": "8.0",
+        "vertical_sway": "0.8",
+        "horizontal_sway": "0.8",
+        "tilt_sway": "0.1",
+        "forward_sway": "0.2",
+        "max_vertical_movement_sway": "0.03",
+        "shot_sound": [
+            "m_fire1",
+            "m_fire2",
+            "m_fire3",
+            "m_fire4",
+            "m_fire5"
+        ],
+        "impact_sound": [
+            "m_impact1",
+            "m_impact2",
+            "m_impact3",
+            "m_impact4",
+            "m_impact5"
+        ],
+        "hit_sound": "testhit1",
+        "equip_sound": "m_equip",
+        "weapon_type": "melee"
+    },
+    {
+        "asset_name": "e957ccda-a908-4d65-b625-ae9fcf8f3135",
+        "dynamic_rules": [],
+        "name_translation_key": "weapon_machinegun",
+        "desc_translation_key": "weapon_machinegun_desc",
+        "selectable": "true",
+        "rarity": "rare",
+        "respawn_time": "9",
+        "weapon_tag": "dbtmac",
+        "color": "1996D9",
+        "bind_group": "6",
+        "default_ammo": "100",
+        "default_ammo_pickup_ammo": "50",
+        "default_weapon_pickup_ammo": "100",
+        "max_ammo": "200",
+        "rate": "100",
+        "damage": "5",
+        "spread": "0",
+        "knockback": "4",
+        "ground_knockback": "4",
+        "charge_animation": "1",
+        "zoomed_scope": "1",
+        "hit_radius": [
+            "2",
+            "1"
+        ],
+        "icon_path": "images/weapon_icons/wp_hud_machinegun_02.png",
+        "icon_path2": "images/weapon_icons/wp_card_machinegun.png",
+        "weapon_icon_path": "images/weapon_icons/wp_card_machinegun_nobg.png",
+        "combo_rate": [
+            "diabotical_void_cannon",
+            "50"
+        ],
+        "loop_animation": "true",
+        "particles_clipping_plane": "true",
+        "shot_particles": "weapon_machinegun_muzzle_flash",
+        "shot_particles_attached": [
+            "weapon_machinegun_muzzle",
+            "socket_muzzle",
+            "0.15"
+        ],
+        "shot_particles_attached_3p": "weapon_machinegun_muzzle_3p",
+        "impact_particles": "weapon_machinegun_impact",
+        "player_impact_particles": "weapon_machinegun_player_impact",
+        "missile_particles": "weapon_machinegun_projectile",
+        "model": "assets/shared/models/animations/wp_machinegun/skm_machinegun",
+        "model_scale_third_person": [
+            "1",
+            "1",
+            "1"
+        ],
+        "model_position_third_person": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_rotation_third_person": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_position": [
+            "-0.665985",
+            "-0.848739",
+            "-1.09217"
+        ],
+        "model_position_centered": [
+            "-0.65389",
+            "-1.22176",
+            "-1.00434"
+        ],
+        "model_post_rotation": [
+            "-0.10472",
+            "-0.10472",
+            "0"
+        ],
+        "model_post_rotation_centered": [
+            "-0.0698132",
+            "-0.0872665",
+            "-0.0523599"
+        ],
+        "model_scale": [
+            "0.04",
+            "0.04",
+            "0.04"
+        ],
+        "model_scale_centered": [
+            "0.04",
+            "0.04",
+            "0.04"
+        ],
+        "fov": "55",
+        "fov_centered": "82",
+        "model_camera_scale": "8",
+        "model_camera_scale_centered": "3",
+        "model_pivot": [
+            "0",
+            "-0.22",
+            "0"
+        ],
+        "muzzle": [
+            "2.7",
+            "-2.8",
+            "14"
+        ],
+        "smoothing_factor": "10.0",
+        "vertical_sway": "1.0",
+        "horizontal_sway": "1.0",
+        "tilt_sway": "0.15",
+        "forward_sway": "0.2",
+        "max_vertical_movement_sway": "0.15",
+        "shot_sound": "w_hm_fire_burst",
+        "end_sound": "w_hm_fire_burst_tail",
+        "equip_sound": "w_mac_equip",
+        "hit_sound": "fb_enemy_hit",
+        "critical_hit_sound": "fb_enemy_hit_crit",
+        "out_of_ammo_sound": "w_mac_ooa",
+        "impact_sound": "w_mac_impact",
+        "detached_shot_particles": "false",
+        "multi_round_particles": "false"
+    },
+    {
+        "asset_name": "ff3ffbff-fd36-4b76-82fb-b6160e20fcf1",
+        "dynamic_rules": [],
+        "name_translation_key": "weapon_shaft",
+        "desc_translation_key": "weapon_shaft_desc",
+        "selectable": "true",
+        "rarity": "epic",
+        "respawn_time": "9",
+        "weapon_tag": "dbtshaft",
+        "color": "A35EBA",
+        "category": "4",
+        "bind_group": "4",
+        "damage": [
+            "6",
+            "6"
+        ],
+        "rate": "50",
+        "min_damage_distance": "674",
+        "max_damage_distance": "675",
+        "hit_radius": [
+            "2.5",
+            "1.1"
+        ],
+        "knockback": "10.4",
+        "ground_knockback": "13.5",
+        "distance": "768",
+        "speed": "0",
+        "orb": "true",
+        "orb_lag": "0.00",
+        "default_ammo": "50",
+        "default_ammo_pickup_ammo": "50",
+        "default_weapon_pickup_ammo": "100",
+        "max_ammo": "150",
+        "min_ammo_gain": "10",
+        "zoomed_scope": "1",
+        "icon_path": "images/weapon_icons/wp_hud_shaft_02.png",
+        "icon_path2": "images/weapon_icons/wp_card_shaft.png",
+        "weapon_icon_path": "images/weapon_icons/wp_card_shaft_nobg.png",
+        "friendly_name": "Shaft",
+        "description": [
+            "Powerful",
+            "medium-range",
+            "sustained-damage",
+            "weapon."
+        ],
+        "combo_rate": [
+            "diabotical_void_cannon",
+            "100"
+        ],
+        "shot_particles_attached": [
+            "shaft_muzzle_fire_blue",
+            "socket_muzzle"
+        ],
+        "impact_particles": "shaft_beam_impact_blue",
+        "tracking_particles": "shaft_beam_blue",
+        "player_impact_particles": "weapon_shaft_player_impact",
+        "loop_animation": "true",
+        "model": "assets/shared/models/animations/wp_shaft/skm_shaft",
+        "model_scale_third_person": [
+            "1",
+            "1",
+            "1"
+        ],
+        "model_position_third_person": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_rotation_third_person": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_position": [
+            "-1.75626",
+            "-2.41956",
+            "-7.84703"
+        ],
+        "model_position_centered": [
+            "-1.59765",
+            "-2.23461",
+            "-2.85033"
+        ],
+        "model_post_rotation": [
+            "-0.20944",
+            "-0.261799",
+            "-0.0349066"
+        ],
+        "model_post_rotation_centered": [
+            "-0.174533",
+            "-0.20944",
+            "-0.0174533"
+        ],
+        "model_scale": [
+            "0.0714",
+            "0.0714",
+            "0.0714"
+        ],
+        "model_scale_centered": [
+            "0.0714",
+            "0.0714",
+            "0.0714"
+        ],
+        "fov": "30",
+        "fov_centered": "70",
+        "model_camera_scale": "2",
+        "model_camera_scale_centered": "2",
+        "muzzle": [
+            "10.0",
+            "-11",
+            "41.0"
+        ],
+        "parallel_knockback": "true",
+        "particles_clipping_plane": "true",
+        "smoothing_factor": "10.0",
+        "vertical_sway": "1.0",
+        "horizontal_sway": "1.0",
+        "tilt_sway": "0.15",
+        "forward_sway": "0.5",
+        "max_vertical_movement_sway": "0.05",
+        "loop_sound": "w_shaft_loop",
+        "start_sound": "w_shaft_ini",
+        "end_sound": "w_shaft_release",
+        "equip_sound": "w_shaft_equip",
+        "hit_sound": "fb_enemy_hit",
+        "critical_hit_sound": "fb_enemy_hit_crit",
+        "proximity_loop_sound": "w_shaft_idle_loop",
+        "out_of_ammo_sound": "w_shaft_ooa",
+        "impact_sound": "w_shaft_impact",
+        "overheat_sound": "w_shaft_overheat",
+        "detached_shot_particles": "false"
+    },
+    {
+        "asset_name": "46141f6f-5e7f-4ee8-ae74-4c6f33b379f3",
+        "dynamic_rules": [],
+        "name_translation_key": "weapon_supershotgun",
+        "desc_translation_key": "weapon_supershotgun_desc",
+        "selectable": "true",
+        "rarity": "epic",
+        "respawn_time": "9",
+        "weapon_tag": "dbtss",
+        "charge_animation": "1",
+        "default_ammo": "10",
+        "default_ammo_pickup_ammo": "10",
+        "default_weapon_pickup_ammo": "15",
+        "max_ammo": "40",
+        "color": "A35EBA",
+        "icon_path": "images/weapon_icons/wp_hud_shotgun_02.png",
+        "icon_path2": "images/weapon_icons/wp_card_supershotgun.png",
+        "weapon_icon_path": "images/weapon_icons/wp_card_shotgun_nobg.png",
+        "rate": "1000",
+        "damage": [
+            "5",
+            "5"
+        ],
+        "knockback": "6.1",
+        "ground_knockback": "7.1",
+        "parallel_knockback": "true",
+        "max_damage_distance": "200",
+        "min_damage_distance": "800",
+        "shots_per_round": "11",
+        "spread": [
+            "6",
+            "6"
+        ],
+        "zoomed_spread": [
+            "4",
+            "4"
+        ],
+        "spread_radius": "1",
+        "min_hits": "2",
+        "bounce": "0",
+        "spread_ring": [
+            "0",
+            "6",
+            "6",
+            "8"
+        ],
+        "spread_ring_angular_offset": [
+            "0",
+            "0",
+            "90",
+            "0"
+        ],
+        "impact_particles_distance_delay": "0.12",
+        "independent_upgrade_model": "true",
+        "category": "2",
+        "bind_group": "2",
+        "group_damage": "true",
+        "max_damage_reward": "true",
+        "hit_radius": [
+            "1.7",
+            "3"
+        ],
+        "zoomed_scope": "1",
+        "combo_rate": [
+            "diabotical_void_cannon",
+            "850"
+        ],
+        "shot_particles_attached": [
+            "weapon_shotgun_muzzle_flash",
+            "socket_muzzle",
+            "1"
+        ],
+        "shot_particles_attached_3p": "weapon_shotgun_muzzle_3p",
+        "missile_particles": "weapon_shotgun_projectile",
+        "impact_particles": "weapon_shotgun_impact",
+        "model": "assets/shared/models/animations/wp_shotgun/skm_shotgun",
+        "model_scale_third_person": [
+            "1",
+            "1",
+            "1"
+        ],
+        "model_position_third_person": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_rotation_third_person": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_position": [
+            "-0.930089",
+            "-1.5534",
+            "-2.24593"
+        ],
+        "model_position_centered": [
+            "-0.742868",
+            "-1.406845",
+            "-1.68604"
+        ],
+        "model_post_rotation": [
+            "-0.0785398",
+            "-0.0872665",
+            "-0.0174533"
+        ],
+        "model_post_rotation_centered": [
+            "-0.0785398",
+            "-0.0698132",
+            "-0.0174533"
+        ],
+        "model_scale": [
+            "0.05",
+            "0.05",
+            "0.05"
+        ],
+        "model_scale_centered": [
+            "0.05",
+            "0.05",
+            "0.05"
+        ],
+        "fov": "35",
+        "fov_centered": "50",
+        "model_camera_scale": "5",
+        "model_camera_scale_centered": "5",
+        "muzzle": [
+            "2.6",
+            "-2.7",
+            "4.7"
+        ],
+        "particles_clipping_plane": "true",
+        "smoothing_factor": "10.0",
+        "vertical_sway": "1.0",
+        "horizontal_sway": "1.0",
+        "tilt_sway": "0.15",
+        "forward_sway": "0.5",
+        "max_vertical_movement_sway": "0.05",
+        "shot_sound": "w_ss_fire",
+        "shot_sound2": "w_ss_fire_distant",
+        "equip_sound": "w_ss_equip",
+        "out_of_ammo_sound": "w_ss_ooa",
+        "hit_sound": "fb_enemy_hit",
+        "critical_hit_sound": "fb_enemy_hit_crit",
+        "detached_shot_particles": "false",
+        "multi_round_particles": "false"
+    },
+    {
+        "asset_name": "9d50739d-1841-4b8d-bb36-30bf822a8b02",
+        "dynamic_rules": [],
+        "name_translation_key": "weapon_blaster",
+        "desc_translation_key": "weapon_blaster_desc",
+        "selectable": "true",
+        "rarity": "rare",
+        "respawn_time": "9",
+        "weapon_tag": "dbtbl",
+        "speed": "2200",
+        "damage": "20",
+        "self_damage": "8",
+        "category": "1",
+        "bind_group": "1",
+        "rate": "100",
+        "default_ammo": "50",
+        "default_ammo_pickup_ammo": "50",
+        "default_weapon_pickup_ammo": "75",
+        "max_ammo": "150",
+        "splash_radius": "20",
+        "center_of_mass_offset": "0",
+        "center_of_mass_offset_self": "0",
+        "knockback": "17.5",
+        "knockback_self": "20",
+        "ground_knockback": "17.5",
+        "ground_knockback_self": "20",
+        "color": "1996D9",
+        "icon_path": "images/weapon_icons/wp_hud_blaster_02.png",
+        "icon_path2": "images/weapon_icons/wp_card_blaster.png",
+        "weapon_icon_path": "images/weapon_icons/wp_card_blaster_nobg.png",
+        "hit_radius": [
+            "2.2",
+            "1"
+        ],
+        "zoomed_scope": "1",
+        "combo_rate": [
+            "diabotical_void_cannon",
+            "100"
+        ],
+        "loop_animation": "true",
+        "upgrade_animation": "true",
+        "model": "assets/shared/models/animations/wp_blaster/skm_blaster",
+        "model_position": [
+            "-1.04283",
+            "-1.87198",
+            "-1.54811"
+        ],
+        "model_position_centered": [
+            "-0.939035",
+            "-1.76832",
+            "-1.36128"
+        ],
+        "model_post_rotation": [
+            "-0.0802851",
+            "-0.0418879",
+            "-0.0349066"
+        ],
+        "model_post_rotation_centered": [
+            "-0.0733038",
+            "-0.0314159",
+            "-0.0349066"
+        ],
+        "model_scale": [
+            "0.0333",
+            "0.0333",
+            "0.0333"
+        ],
+        "model_scale_centered": [
+            "0.0333",
+            "0.0333",
+            "0.0333"
+        ],
+        "fov": "50",
+        "fov_centered": "80",
+        "model_camera_scale": "2",
+        "model_camera_scale_centered": "2",
+        "model_scale_third_person": "1",
+        "model_position_third_person": "0",
+        "model_rotation_third_person": "0",
+        "detached_shot_particles": "false",
+        "shot_particles": "weapon_blaster_muzzle_flash",
+        "shot_particles_attached": [
+            "weapon_blaster_muzzle_flash",
+            "socket_muzzle",
+            "1"
+        ],
+        "shot_particles_attached_3p": "weapon_blaster_muzzle_3p",
+        "missile_particles": "weapon_blaster_projectile_1p",
+        "impact_particles": "weapon_blaster_impact",
+        "player_impact_particles": "weapon_blaster_player_impact",
+        "smoothing_factor": "10.0",
+        "vertical_sway": "1.0",
+        "horizontal_sway": "1.0",
+        "tilt_sway": "0.15",
+        "forward_sway": "0.5",
+        "max_vertical_movement_sway": "0.05",
+        "shot_sound": "w_bl_fire",
+        "shot_sound2": "w_bl_fire_distant",
+        "end_sound": "w_bl_fire_release",
+        "missile_loop_sound": "w_bl_airbound",
+        "impact_sound": "w_bl_impact",
+        "equip_sound": "w_bl_equip",
+        "overheat_sound": "w_bl_fire_overheat",
+        "hit_sound": "fb_enemy_hit",
+        "critical_hit_sound": "fb_enemy_hit_crit",
+        "out_of_ammo_sound": "w_bl_ooa",
+        "animation_suffix": "_stage2"
+    },
+    {
         "id": "rogue_sword",
         "parent_id": "",
         "weapon_type": "melee",
-        "selectable": "false",
-        "show_in_dev_console": "false",
+        "selectable": "true",
+        "show_in_dev_console": "true",
         "weapon_tag": "melee",
         "bind_group": "9",
         "color": "888888",
@@ -372,11 +1418,12 @@
         "name_translation_key": "weapon_machinegun",
         "desc_translation_key": "weapon_machinegun_desc",
         "required_class": "rogue_scout",
+        "weapon_fire_type": "primary",
         "selectable": "true",
         "rarity": "rare",
         "respawn_time": "9",
         "weapon_tag": "mac",
-        "color": "1996D9",
+        "color": "d876f8",
         "bind_group": "6",
         "default_ammo": "30",
         "default_ammo_pickup_ammo": "30",
@@ -442,6 +1489,7 @@
         "equip_time": "300",
         "base_combo_rate": "200",
         "loop_animation": "true",
+        "particles_clipping_plane": "true",
         "shot_particles": "weapon_machinegun_muzzle_flash",
         "shot_particles_attached": [
             "weapon_machinegun_muzzle",
@@ -453,37 +1501,71 @@
         "player_impact_particles": "weapon_machinegun_player_impact",
         "missile_particles": "weapon_machinegun_projectile",
         "model": "assets/shared/models/animations/wp_machinegun/skm_machinegun",
-        "model_position": [
-            "2.25",
-            "-3",
-            "0.01"
+        "model_scale_third_person": [
+            "1",
+            "1",
+            "1"
         ],
-        "model_scale": "0.11",
-        "model_scale_centered": "0.099",
-        "model_position_centered": [
+        "model_position_third_person": [
             "0",
-            "-2.68",
-            "0.02"
+            "0",
+            "0"
         ],
+        "model_rotation_third_person": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_position": [
+            "-0.811",
+            "-0.849",
+            "-1.670"
+        ],
+        "model_position_centered": [
+            "-0.654",
+            "-1.222",
+            "-1.004"
+        ],
+        "model_post_rotation": [
+            "-0.105",
+            "-0.118",
+            "0.000"
+        ],
+        "model_post_rotation_centered": [
+            "-0.070",
+            "-0.087",
+            "-0.052"
+        ],
+        "model_scale": [
+            "0.04",
+            "0.04",
+            "0.04"
+        ],
+        "model_scale_centered": [
+            "0.04",
+            "0.04",
+            "0.04"
+        ],
+        "fov": "55.00",
+        "fov_centered": "82.00",
+        "model_camera_scale": "8",
+        "model_camera_scale_centered": "3",
         "model_pivot": [
             "0",
             "-0.22",
             "0"
         ],
-        "model_camera_scale": "0.5",
-        "fov": "40",
         "muzzle": [
             "2.7",
             "-2.8",
             "14"
         ],
-        "model_scale_third_person": "1.1",
-        "model_position_third_person": [
-            "6.5",
-            "2",
-            "2"
-        ],
-        "particles_clipping_plane": "true",
+        "smoothing_factor": "8",
+        "vertical_sway": "0.8",
+        "horizontal_sway": "0.8",
+        "tilt_sway": "0.1",
+        "forward_sway": "0.5",
+        "max_vertical_movement_sway": "0.03",
         "shot_sound": "w_mac_fire",
         "shot_sound2": "w_mac_fire_distant",
         "end_sound": "w_mac_fire_release",
@@ -596,8 +1678,8 @@
         "desc_translation_key": "machinegun_last_bullet_poisonous_desc",
         "rarity": "legendary",
         "overwrite": [
-            "impact_effect",
-            "poison"
+            "poison_element",
+            "true"
         ],
         "selectable": "true"
     },
@@ -608,6 +1690,7 @@
         "name_translation_key": "weapon_blaster",
         "desc_translation_key": "weapon_blaster_desc",
         "required_class": "rogue_bigbot",
+        "weapon_fire_type": "primary",
         "selectable": "true",
         "rarity": "rare",
         "respawn_time": "9",
@@ -630,7 +1713,7 @@
         "knockback_self": "5",
         "ground_knockback": "4",
         "ground_knockback_self": "5",
-        "color": "1996D9",
+        "color": "51c5bc",
         "icon_path": "images/weapon_icons/wp_hud_blaster_02.png",
         "icon_path2": "images/weapon_icons/wp_card_blaster.png",
         "weapon_icon_path": "images/weapon_icons/wp_card_blaster_nobg.png",
@@ -657,35 +1740,47 @@
         "loop_animation": "true",
         "upgrade_animation": "true",
         "model": "assets/shared/models/animations/wp_blaster/skm_blaster",
-        "model_scale": "0.06",
-        "model_scale_centered": "0.054",
         "model_position": [
-            "2.5",
-            "-3.35",
-            "3.55"
+            "-1.132",
+            "-1.783",
+            "-2.360"
         ],
         "model_position_centered": [
-            "0",
-            "-3.15",
-            "3.7"
+            "-0.939",
+            "-1.768",
+            "-1.361"
         ],
-        "model_camera_scale": "0.6",
-        "muzzle": [
+        "model_post_rotation": [
+            "-0.083",
+            "-0.111",
+            "-0.072"
+        ],
+        "model_post_rotation_centered": [
+            "-0.073",
+            "-0.031",
+            "-0.035"
+        ],
+        "model_scale": [
+            "0.0333",
+            "0.0333",
+            "0.0333"
+        ],
+        "model_scale_centered": [
+            "0.0333",
+            "0.0333",
+            "0.0333"
+        ],
+        "fov": "43.34",
+        "fov_centered": "80.00",
+        "model_camera_scale": "2",
+        "model_camera_scale_centered": "2",
+        "model_scale_third_person": "1",
+        "model_position_third_person": "0",
+        "model_rotation_third_person": "0",
+        "missile_particles_1p_offset": [
             "0",
-            "0",
+            "2",
             "0"
-        ],
-        "muzzle_offset": [
-            "0",
-            "0",
-            "0"
-        ],
-        "fov": "30",
-        "model_scale_third_person": "1.1",
-        "model_position_third_person": [
-            "5",
-            "-11",
-            "12"
         ],
         "detached_shot_particles": "false",
         "shot_particles": "weapon_blaster_muzzle_flash",
@@ -695,9 +1790,16 @@
             "1"
         ],
         "shot_particles_attached_3p": "weapon_blaster_muzzle_3p",
-        "missile_particles": "weapon_blaster_projectile_1p",
+        "missile_particles": "weapon_blaster_projectile_3p",
+        "missile_particles_1p": "weapon_blaster_projectile_1p",
         "impact_particles": "weapon_blaster_impact",
         "player_impact_particles": "weapon_blaster_player_impact",
+        "smoothing_factor": "8",
+        "vertical_sway": "0.75",
+        "horizontal_sway": "0.75",
+        "tilt_sway": "0.055",
+        "forward_sway": "0.5",
+        "max_vertical_movement_sway": "0.03",
         "shot_sound": "w_bl_fire",
         "shot_sound2": "w_bl_fire_distant",
         "end_sound": "w_bl_fire_release",
@@ -878,36 +1980,71 @@
         "impact_particles": "weapon_submachinegun_impact",
         "player_impact_particles": "weapon_submachinegun_player_impact",
         "model": "assets/shared/models/animations/wp_submachinegun/skm_submachinegun",
-        "model_scale": "0.2",
-        "model_scale_centered": "0.0331852",
-        "model_position": [
-            "1.2",
-            "-3",
-            "2.2"
-        ],
-        "model_position_centered": [
-            "1.33286",
-            "-0.920046",
-            "5.13452"
-        ],
-        "model_scale_third_person": "0.9",
-        "model_pivot": [
-            "0",
-            "0.24",
-            "0"
+        "model_scale_third_person": [
+            "1",
+            "1",
+            "1"
         ],
         "model_position_third_person": [
             "0",
             "0",
             "0"
         ],
+        "model_rotation_third_person": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_position": [
+            "-0.532244",
+            "-1.46033",
+            "-2.13911"
+        ],
+        "model_position_centered": [
+            "-0.519342",
+            "-0.987994",
+            "-2.01873"
+        ],
+        "model_post_rotation": [
+            "-0.0523599",
+            "-0.0523599",
+            "-0.0174533"
+        ],
+        "model_post_rotation_centered": [
+            "-0.0349066",
+            "-0.0523599",
+            "0"
+        ],
+        "model_scale": [
+            "0.04",
+            "0.04",
+            "0.04"
+        ],
+        "model_scale_centered": [
+            "0.04",
+            "0.04",
+            "0.04"
+        ],
+        "fov": "45",
+        "fov_centered": "65",
         "model_camera_scale": "3",
+        "model_camera_scale_centered": "2.5",
+        "model_pivot": [
+            "0",
+            "0.24",
+            "0"
+        ],
         "muzzle": [
             "2.5",
             "-1.5",
             "8"
         ],
-        "fov": "50",
+        "smoothing_factor": "8.0",
+        "vertical_sway": "1.0",
+        "horizontal_sway": "1.0",
+        "tilt_sway": "0.2",
+        "forward_sway": "0.2",
+        "max_vertical_movement_sway": "0.04",
         "shot_sound": "w_smg_fire",
         "end_sound": "w_smg_fire_release",
         "shot_sound2": "w_smg_fire_distant",
@@ -1032,7 +2169,7 @@
         "max_ammo": "30",
         "unlimited_ammo": "false",
         "reload": "2000",
-        "color": "1996D9",
+        "color": "42b2ce",
         "icon_path": "images/weapon_icons/wp_hud_heavymachinegun_02.png",
         "icon_path2": "images/weapon_icons/wp_card_heavymachinegun.png",
         "weapon_icon_path": "images/weapon_icons/wp_card_heavymachinegun_nobg.png",
@@ -1095,6 +2232,7 @@
             "1"
         ],
         "loop_animation": "true",
+        "particles_clipping_plane": "true",
         "detached_shot_particles": "false",
         "shot_particles_attached": [
             "weapon_heavy_machinegun_muzzle_flash",
@@ -1107,35 +2245,46 @@
         "impact_particles": "weapon_heavy_machinegun_impact",
         "player_impact_particles": "weapon_heavy_machinegun_player_impact",
         "model": "assets/shared/models/animations/wp_heavy_machinegun/skm_heavy_machinegun",
+        "model_scale_third_person": "1",
+        "model_position_third_person": "0",
+        "model_rotation_third_person": "0",
         "model_position": [
-            "0.3",
-            "-1",
-            "1.2"
+            "-1.13",
+            "-1.44",
+            "-2.38"
         ],
-        "model_scale": "0.06",
+        "model_position_centered": [
+            "-0.586152",
+            "-1.32326",
+            "-2.0953"
+        ],
         "model_post_rotation": [
-            "-1.8",
-            "1.5",
-            "0.0080"
+            "-0.0349066",
+            "-0.0785398",
+            "-0.0174533"
         ],
-        "fov": "52",
+        "model_post_rotation_centered": [
+            "-0.0349066",
+            "-0.0523599",
+            "-0.0174533"
+        ],
+        "model_scale": "0.04",
+        "model_scale_centered": "0.04",
+        "fov": "35",
+        "fov_centered": "35",
+        "model_camera_scale": "2.4",
+        "model_camera_scale_centered": "2.4",
         "model_pivot": [
             "-0.2",
             "0",
             "0"
         ],
-        "model_position_centered": [
-            "0.4914",
-            "-2.57188",
-            "7.47569"
-        ],
-        "model_scale_centered": "0.0637542",
-        "model_camera_scale": "3.5",
-        "model_post_rotation_centered": [
-            "-2.21",
-            "1.5",
-            "-0.050"
-        ],
+        "smoothing_factor": "8",
+        "vertical_sway": "0.75",
+        "horizontal_sway": "0.75",
+        "tilt_sway": "0.085",
+        "forward_sway": "0.5",
+        "max_vertical_movement_sway": "0.01",
         "burst_sound": "w_hm_fire_burst",
         "burst_sound_tail": "w_hm_fire_burst_tail",
         "burst_distance_sound": "w_hm_fire_burst_distant",
@@ -1254,7 +2403,7 @@
         "penetrating": "false",
         "hide_crosshair": "true",
         "hide_crosshair_zoomed": "true",
-        "color": "EBBA45",
+        "color": "ec86df",
         "icon_path": "images/weapon_icons/wp_hud_heavysniper_02.png",
         "icon_path2": "images/weapon_icons/wp_card_heavysniper.png",
         "weapon_icon_path": "images/weapon_icons/wp_card_heavysniper_nobg.png",
@@ -1296,7 +2445,6 @@
         "recoil_side": "0.5",
         "recoil_recovery_time": "0.6",
         "recoil_time": "0.1",
-        "zoom_speed": "150",
         "zoomed_walk_speed": "175",
         "zoomed_crouch_speed": "150",
         "zoomed_recoil_up": "3",
@@ -1317,6 +2465,7 @@
             "1",
             "1"
         ],
+        "particles_clipping_plane": "true",
         "detached_shot_particles": "false",
         "shot_particles_attached": [
             "weapon_heavysniper_muzzle_flash",
@@ -1339,35 +2488,126 @@
             "20"
         ],
         "model": "assets/shared/models/animations/wp_heavy_sniper/skm_heavy_sniper",
+        "model_scale_third_person": [
+            "1",
+            "1",
+            "1"
+        ],
+        "model_position_third_person": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_rotation_third_person": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_scale_back_left_attachment": [
+            "1",
+            "1",
+            "1"
+        ],
+        "model_position_back_left_attachment": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_rotation_back_left_attachment": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_scale_back_right_attachment": [
+            "1",
+            "1",
+            "1"
+        ],
+        "model_position_back_right_attachment": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_rotation_back_right_attachment": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_scale_hip_left_attachment": [
+            "1",
+            "1",
+            "1"
+        ],
+        "model_position_hip_left_attachment": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_rotation_hip_left_attachment": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_scale_hip_right_attachment": [
+            "1",
+            "1",
+            "1"
+        ],
+        "model_position_hip_right_attachment": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_rotation_hip_right_attachment": [
+            "0",
+            "0",
+            "0"
+        ],
         "model_position": [
-            "0.379076",
-            "-0.208433",
-            "1.48947"
-        ],
-        "model_scale": "0.05",
-        "model_post_rotation": [
-            "-2",
-            "-1.4",
-            "0"
-        ],
-        "fov": "47",
-        "model_pivot": [
-            "0",
-            "0",
-            "0"
+            "-0.738824",
+            "-1.41286",
+            "-1.19236"
         ],
         "model_position_centered": [
-            "0.379076",
-            "-0.208433",
-            "1.48947"
+            "-0.81882",
+            "-1.35924",
+            "-1.34294"
         ],
-        "model_scale_centered": "0.0136441",
-        "model_camera_scale": "2.8",
+        "model_post_rotation": [
+            "-0.0523599",
+            "-0.0174533",
+            "-0.0174533"
+        ],
+        "model_post_rotation_centered": [
+            "-0.261799",
+            "-0.0349066",
+            "0.20944"
+        ],
+        "model_scale": [
+            "0.05",
+            "0.05",
+            "0.05"
+        ],
+        "model_scale_centered": [
+            "0.05",
+            "0.05",
+            "0.05"
+        ],
+        "fov": "65",
+        "fov_centered": "60",
+        "model_camera_scale": "3.5",
+        "model_camera_scale_centered": "8",
         "muzzle": [
             "2.7",
             "-2.8",
             "14"
         ],
+        "smoothing_factor": "9",
+        "vertical_sway": "0.9",
+        "horizontal_sway": "0.9",
+        "tilt_sway": "0.1",
+        "forward_sway": "0.5",
+        "max_vertical_movement_sway": "0.05",
         "shot_sound": "w_hs_unscoped_fire",
         "shot_sound_aim_down": "w_hs_scoped_fire",
         "shot_sound2": "w_hs_fire_distant",
@@ -1504,7 +2744,7 @@
         "max_ammo": "6",
         "unlimited_ammo": "false",
         "reload": "2000",
-        "color": "A35EBA",
+        "color": "f7959a",
         "icon_path": "images/weapon_icons/wp_hud_shotgun_02.png",
         "icon_path2": "images/weapon_icons/wp_card_supershotgun.png",
         "weapon_icon_path": "images/weapon_icons/wp_card_shotgun_nobg.png",
@@ -1578,12 +2818,67 @@
         "missile_particles": "weapon_shotgun_projectile",
         "impact_particles": "weapon_shotgun_impact",
         "model": "assets/shared/models/animations/wp_shotgun/skm_shotgun",
+        "model_scale_third_person": [
+            "1",
+            "1",
+            "1"
+        ],
+        "model_position_third_person": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_rotation_third_person": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_position": [
+            "-0.930089",
+            "-1.5534",
+            "-2.24593"
+        ],
+        "model_position_centered": [
+            "-0.742868",
+            "-1.406845",
+            "-1.68604"
+        ],
+        "model_post_rotation": [
+            "-0.0785398",
+            "-0.0872665",
+            "-0.0174533"
+        ],
+        "model_post_rotation_centered": [
+            "-0.0785398",
+            "-0.0698132",
+            "-0.0174533"
+        ],
+        "model_scale": [
+            "0.05",
+            "0.05",
+            "0.05"
+        ],
+        "model_scale_centered": [
+            "0.05",
+            "0.05",
+            "0.05"
+        ],
+        "fov": "35",
+        "fov_centered": "50",
+        "model_camera_scale": "5",
+        "model_camera_scale_centered": "5",
         "muzzle": [
             "2.6",
             "-2.7",
             "4.7"
         ],
         "particles_clipping_plane": "true",
+        "smoothing_factor": "8",
+        "vertical_sway": "0.8",
+        "horizontal_sway": "0.8",
+        "tilt_sway": "0.1",
+        "forward_sway": "0.5",
+        "max_vertical_movement_sway": "0.02",
         "shot_sound": "w_ss_fire",
         "shot_sound2": "w_ss_fire_distant",
         "equip_sound": "w_ss_equip",
@@ -1700,7 +2995,7 @@
         "energy_recharge_per_sec": "65",
         "delay_energy_regen": "0.1",
         "unlimited_ammo": "true",
-        "color": "A35EBA",
+        "color": "b26eec",
         "mouse_take_over_recoil": "true",
         "recoil_delay_recovery": "0.09",
         "recoil_up": "0.2",
@@ -1736,7 +3031,7 @@
         "equip_time": "300",
         "base_combo_rate": "200",
         "gravity_delay_by_distance": "1000",
-        "gravity": "500",
+        "gravity": "0",
         "hit_radius": [
             "1",
             "1"
@@ -1754,45 +3049,77 @@
         "missile_particles_1p": "weapon_egun_projectile",
         "impact_particles": "weapon_egun_impact",
         "player_impact_particles": "weapon_egun_impact",
+        "pfx": [
+            "weapon_egun_barrel",
+            "socket_muzzle_egun",
+            "1"
+        ],
         "decal": [
             "decal",
             "8"
         ],
         "loop_animation": "true",
         "model": "assets/shared/models/animations/wp_egun/skm_egun",
+        "model_scale_third_person": [
+            "1",
+            "1",
+            "1"
+        ],
+        "model_position_third_person": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_rotation_third_person": [
+            "0",
+            "0",
+            "0"
+        ],
         "model_position": [
-            "0.379076",
-            "-0.4",
-            "0.9"
-        ],
-        "model_scale": "0.02",
-        "model_post_rotation": [
-            "-2",
-            "-1.4",
-            "0"
-        ],
-        "fov": "47",
-        "model_pivot": [
-            "0",
-            "0",
-            "0"
+            "-0.980064",
+            "-1.48387",
+            "-3.49621"
         ],
         "model_position_centered": [
-            "0.379076",
-            "-0.208433",
-            "1.48947"
+            "-0.484449",
+            "-1.22067",
+            "-2.48874"
         ],
-        "model_scale_centered": "0.0136441",
-        "model_camera_scale": [
-            "2.8",
-            "//for",
-            "clipping"
+        "model_post_rotation": [
+            "-0.191986",
+            "-0.122173",
+            "-0.0349066"
         ],
+        "model_post_rotation_centered": [
+            "-0.122173",
+            "-0.0523599",
+            "-0.0349066"
+        ],
+        "model_scale": [
+            "0.04",
+            "0.04",
+            "0.04"
+        ],
+        "model_scale_centered": [
+            "0.04",
+            "0.04",
+            "0.04"
+        ],
+        "fov": "50",
+        "fov_centered": "80",
+        "model_camera_scale": "2",
+        "model_camera_scale_centered": "1",
         "muzzle": [
             "2.7",
             "-2.8",
             "14"
         ],
+        "smoothing_factor": "8",
+        "vertical_sway": "0.9",
+        "horizontal_sway": "0.9",
+        "tilt_sway": "0.1",
+        "forward_sway": "0.5",
+        "max_vertical_movement_sway": "0.03",
         "shot_sound": "w_ep_fire",
         "end_sound": "w_ep_fire_release",
         "shot_sound2": "w_ep_fire_distant",
@@ -1891,6 +3218,7 @@
         "selectable": "true",
         "rarity": "legendary",
         "required_class": "rogue_chunk",
+        "weapon_fire_type": "primary",
         "respawn_time": "9",
         "weapon_tag": "rl",
         "speed": "1100",
@@ -1908,13 +3236,14 @@
         "unlimited_ammo": "false",
         "ammo_per_reload": "1",
         "reload": "1000",
+        "gravity": "0",
         "category": "3",
         "bind_group": "3",
         "hit_radius": [
             "1",
             "1"
         ],
-        "color": "EBBA45",
+        "color": "8383ff",
         "icon_path": "images/weapon_icons/wp_hud_rocketlauncher_02.png",
         "icon_path2": "images/weapon_icons/wp_card_rocketlauncher.png",
         "weapon_icon_path": "images/weapon_icons/wp_card_rocketlauncher_nobg.png",
@@ -1963,36 +3292,41 @@
         "missile_particles": "weapon_rocket_projectile",
         "impact_particles": "weapon_rocket_impact",
         "model": "assets/shared/models/animations/wp_rocket_launcher/skm_rocket_launcher",
-        "model_scale": "0.07",
-        "model_scale_centered": "0.063",
+        "model_scale_third_person": "1",
+        "model_position_third_person": "0",
+        "model_rotation_third_person": "0",
         "model_position": [
-            "2.5",
-            "-3",
-            "3.28"
+            "-1.395",
+            "-1.765",
+            "-4.968"
         ],
         "model_position_centered": [
-            "0",
-            "-4.1",
-            "5"
+            "-1.366",
+            "-2.130",
+            "-1.432"
         ],
-        "model_camera_scale": "0.5",
-        "muzzle": [
-            "0",
-            "0",
-            "0"
+        "model_post_rotation": [
+            "-0.067",
+            "-0.131",
+            "-0.105"
         ],
-        "muzzle_offset": [
-            "0",
-            "0",
-            "0"
+        "model_post_rotation_centered": [
+            "-0.056",
+            "-0.075",
+            "-0.113"
         ],
-        "fov": "40",
-        "model_scale_third_person": "1",
-        "model_position_third_person": [
-            "0",
-            "4.5",
-            "4"
-        ],
+        "model_scale": "0.04757",
+        "model_scale_centered": "0.04757",
+        "fov": "35.66",
+        "fov_centered": "70.00",
+        "model_camera_scale": "2",
+        "model_camera_scale_centered": "2",
+        "smoothing_factor": "8.0",
+        "vertical_sway": "0.8",
+        "horizontal_sway": "0.8",
+        "tilt_sway": "0.1",
+        "forward_sway": "0.5",
+        "max_vertical_movement_sway": "0.02",
         "shot_sound": "w_rl_fire",
         "shot_sound2": "w_rl_fire_distant",
         "missile_loop_sound": "w_rl_airbound",
@@ -2120,7 +3454,7 @@
         "required_class": "rogue_chunk",
         "respawn_time": "9",
         "weapon_tag": "shaft",
-        "color": "A35EBA",
+        "color": "599cf5",
         "category": "4",
         "bind_group": "4",
         "unlimited_ammo": "true",
@@ -2169,35 +3503,71 @@
         ],
         "impact_particles": "shaft_beam_impact_blue",
         "tracking_particles": "shaft_beam_blue",
+        "player_impact_particles": "weapon_shaft_player_impact",
         "loop_animation": "true",
         "model": "assets/shared/models/animations/wp_shaft/skm_shaft",
-        "model_scale": "0.060",
-        "model_scale_centered": "0.054",
-        "model_position_centered": [
+        "model_scale_third_person": [
+            "1",
+            "1",
+            "1"
+        ],
+        "model_position_third_person": [
             "0",
-            "-4",
-            "5"
+            "0",
+            "0"
+        ],
+        "model_rotation_third_person": [
+            "0",
+            "0",
+            "0"
         ],
         "model_position": [
-            "2.5",
-            "-3",
-            "3.6"
+            "-2.379",
+            "-2.354",
+            "-7.302"
         ],
-        "model_camera_scale": "0.7",
-        "model_scale_third_person": "0.9",
-        "model_position_third_person": [
-            "-3.5",
-            "3.5",
-            "6"
+        "model_position_centered": [
+            "-1.598",
+            "-2.235",
+            "-2.850"
         ],
+        "model_post_rotation": [
+            "-0.219",
+            "-0.277",
+            "-0.035"
+        ],
+        "model_post_rotation_centered": [
+            "-0.175",
+            "-0.209",
+            "-0.017"
+        ],
+        "model_scale": [
+            "0.0714",
+            "0.0714",
+            "0.0714"
+        ],
+        "model_scale_centered": [
+            "0.0714",
+            "0.0714",
+            "0.0714"
+        ],
+        "fov": "34.41",
+        "fov_centered": "70.00",
+        "model_camera_scale": "2",
+        "model_camera_scale_centered": "2",
         "muzzle": [
             "10.0",
             "-11",
             "41.0"
         ],
-        "fov": "45",
         "parallel_knockback": "true",
         "particles_clipping_plane": "true",
+        "smoothing_factor": "10.0",
+        "vertical_sway": "0.8",
+        "horizontal_sway": "0.8",
+        "tilt_sway": "0.1",
+        "forward_sway": "0.5",
+        "max_vertical_movement_sway": "0.02",
         "loop_sound": "w_shaft_loop",
         "start_sound": "w_shaft_ini",
         "end_sound": "w_shaft_release",
@@ -2277,19 +3647,6 @@
         "selectable": "true"
     },
     {
-        "id": "6",
-        "parent_id": "rogue_shaft",
-        "weapon_type": "augment",
-        "name": "shaft_siphon_armor",
-        "name_translation_key": "shaft_siphon_armor",
-        "desc_translation_key": "shaft_siphon_armor_desc",
-        "rarity": "legendary",
-        "armor_break_upgrade": "1",
-        "overshield_on_armor_break_amount": "15",
-        "locked_in_battlepass": "true",
-        "selectable": "true"
-    },
-    {
         "id": "rogue_grenadelauncher_secondary",
         "parent_id": "",
         "weapon_type": "base",
@@ -2326,6 +3683,7 @@
         "ground_knockback_self": "113",
         "center_of_mass_offset": "4",
         "center_of_mass_offset_self": "0",
+        "can_detonate_mid_air": "true",
         "manual_detonation": "true",
         "explode_delay_after_last_impact": "4",
         "recoil_delay_recovery": "0.125",
@@ -2338,6 +3696,11 @@
         "zoomed_scope": "1",
         "equip_time": "500",
         "base_combo_rate": "600",
+        "missile_particles_1p_offset": [
+            "-0.5",
+            "1",
+            "0"
+        ],
         "shot_particles": "weapon_grenade_launcher_muzzle_flash",
         "shot_particles_attached": "weapon_grenade_launcher_muzzle",
         "shot_particles_attached_3p": "weapon_grenade_launcher_muzzle_3p",
@@ -2418,6 +3781,20 @@
         "max_stacks": "1"
     },
     {
+        "id": "9",
+        "parent_id": "rogue_grenadelauncher_secondary",
+        "weapon_type": "augment",
+        "name": "grenadelauncher_detonate_stickies_mid_air",
+        "name_translation_key": "grenadelauncher_detonate_stickies_mid_air",
+        "desc_translation_key": "grenadelauncher_detonate_stickies_mid_air_desc",
+        "rarity": "legendary",
+        "overwrite": [
+            "can_detonate_mid_air",
+            "true"
+        ],
+        "selectable": "true"
+    },
+    {
         "id": "rogue_grenadelauncher",
         "parent_id": "",
         "weapon_type": "base",
@@ -2450,7 +3827,7 @@
             "1",
             "1"
         ],
-        "color": "EBBA45",
+        "color": "9f6dff",
         "rarity": "legendary",
         "icon_path": "images/weapon_icons/wp_hud_grenadelauncher_02.png",
         "icon_path2": "images/weapon_icons/wp_card_grenadelauncher.png",
@@ -2475,6 +3852,11 @@
         "zoomed_scope": "1",
         "equip_time": "500",
         "base_combo_rate": "600",
+        "missile_particles_1p_offset": [
+            "-0.5",
+            "1",
+            "0"
+        ],
         "shot_particles": "weapon_grenade_launcher_muzzle_flash",
         "shot_particles_attached": [
             "weapon_grenade_launcher_muzzle_flash",
@@ -2482,41 +3864,71 @@
             "1"
         ],
         "shot_particles_attached_3p": "weapon_grenade_launcher_muzzle_3p",
-        "missile_particles": "weapon_grenade_projectile",
+        "missile_particles": "weapon_grenade_projectile_rouge",
         "impact_particles": "weapon_grenade_impact",
         "missile_trail_particles": "gl_bullet_dynamic_trail",
         "bounce_particles": "weapon_grenade_bounce",
-        "model_camera_scale": "0.6",
+        "model_camera_scale": "2",
         "model": "assets/shared/models/animations/wp_grenade_launcher/skm_grenade_launcher",
-        "model_scale": "0.1",
-        "model_scale_centered": "0.09",
+        "model_scale_third_person": [
+            "0.7",
+            "0.7",
+            "0.7"
+        ],
+        "model_position_third_person": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_rotation_third_person": [
+            "0",
+            "0",
+            "0"
+        ],
         "model_position": [
-            "2.5",
-            "-3.15",
-            "3.15"
+            "-1.455",
+            "-0.976",
+            "-2.341"
         ],
         "model_position_centered": [
-            "0",
-            "-3.1",
-            "3.35"
+            "-1.049",
+            "-1.715",
+            "-1.811"
         ],
+        "model_post_rotation": [
+            "-0.124",
+            "-0.183",
+            "-0.031"
+        ],
+        "model_post_rotation_centered": [
+            "-0.048",
+            "-0.035",
+            "0.052"
+        ],
+        "model_scale": [
+            "0.04",
+            "0.04",
+            "0.04"
+        ],
+        "model_scale_centered": [
+            "0.04",
+            "0.04",
+            "0.04"
+        ],
+        "fov": "50.00",
+        "fov_centered": "70.00",
+        "model_camera_scale_centered": "2",
         "model_pivot": [
             "0",
             "-0.4",
             "0"
         ],
-        "muzzle": [
-            "0",
-            "0",
-            "0"
-        ],
-        "fov": "40",
-        "model_scale_third_person": "1.1",
-        "model_position_third_person": [
-            "7",
-            "-4",
-            "28"
-        ],
+        "smoothing_factor": "10.0",
+        "vertical_sway": "1.0",
+        "horizontal_sway": "1.0",
+        "tilt_sway": "0.15",
+        "forward_sway": "0.5",
+        "max_vertical_movement_sway": "0.05",
         "shot_sound": "w_gl_fire",
         "shot_sound2": "w_gl_fire_distant",
         "impact_sound": "w_gl_impact",
@@ -2575,7 +3987,7 @@
         ]
     },
     {
-        "asset_name": "28a79ba6-d6ce-4448-b7c8-797ff0d08aaf",
+        "asset_name": "5b531d1b-8074-4c49-be84-d9e466c5c44b",
         "dynamic_rules": [],
         "name": "grenadelauncher_increase_reload_ammo",
         "name_translation_key": "grenadelauncher_increase_reload_ammo",
@@ -2628,8 +4040,223 @@
         "name_translation_key": "weapon_fists",
         "desc_translation_key": "weapon_fists_desc",
         "can_drop": "true",
-        "show_in_dev_console": "false",
+        "show_in_dev_console": "true",
         "selectable": "false"
+    },
+    {
+        "id": "rogue_pncr",
+        "parent_id": "",
+        "weapon_type": "base",
+        "name_translation_key": "weapon_pncr",
+        "desc_translation_key": "weapon_pncr_desc",
+        "unlimited_ammo": "true",
+        "selectable": "false",
+        "show_in_dev_console": "true",
+        "respawn_time": "9",
+        "category": "5",
+        "bind_group": "5",
+        "weapon_tag": "pncr",
+        "color": "f2c037",
+        "damage": "70",
+        "bonus_consecutive_damage": "5",
+        "max_bonus_consecutive_damage_instances": "6",
+        "knockback": "62.5",
+        "ground_knockback": "75.5",
+        "default_ammo_pickup_ammo": "5",
+        "default_weapon_pickup_ammo": "10",
+        "max_ammo": "25",
+        "penetrating": "true",
+        "icon_path": "images/weapon_icons/wp_hud_pncr.png",
+        "icon_path2": "images/weapon_icons/wp_card_pncr.png",
+        "friendly_name": "PNCR",
+        "description": [
+            "Point",
+            "N",
+            "Click",
+            "Rifle"
+        ],
+        "hit_radius": [
+            "1.5",
+            "1"
+        ],
+        "charge_animation": "6",
+        "charge_animation_bonus": "true",
+        "rate": "1450",
+        "recoil_delay_recovery": "0.1",
+        "recoil_up": "1.5",
+        "recoil_side": "0.2",
+        "recoil_recovery_time": "0.45",
+        "recoil_time": "0.07",
+        "zoomed_recoil_up": "0.75",
+        "zoomed_recoil_side": "0.1",
+        "zoomed_recoil_recovery_time": "0.4",
+        "zoomed_recoil_time": "0.06",
+        "zoomed_walk_speed": "175",
+        "rotate_shot_particles_by_shot_direction": "true",
+        "shot_particles": "weapon_pncr_beam",
+        "shot_particles_3p": "weapon_pncr_beam_3p",
+        "shot_particles_attached": "weapon_pncr_muzzle",
+        "impact_particles": "weapon_pncr_impact",
+        "player_impact_particles": "weapon_pncr_player_impact",
+        "player_impact_particles_player_normal": "false",
+        "model": "assets/shared/models/animations/wp_pncr/skm_pncr",
+        "model_scale_third_person": "0.85",
+        "model_position_third_person": [
+            "-4",
+            "14.5",
+            "12"
+        ],
+        "model_rotation_third_person": [
+            "0",
+            "0",
+            "0"
+        ],
+        "model_position": [
+            "-0.863",
+            "-1.194",
+            "-1.100"
+        ],
+        "model_position_centered": [
+            "-0.743",
+            "-1.407",
+            "-1.686"
+        ],
+        "model_post_rotation": [
+            "-0.057",
+            "-0.124",
+            "-0.062"
+        ],
+        "model_post_rotation_centered": [
+            "-0.079",
+            "-0.070",
+            "-0.017"
+        ],
+        "model_scale": [
+            "0.025",
+            "0.025",
+            "0.025"
+        ],
+        "model_scale_centered": [
+            "0.05",
+            "0.05",
+            "0.05"
+        ],
+        "fov": "50.00",
+        "model_camera_scale": "5",
+        "model_camera_scale_centered": "5",
+        "impressive_reward": "true",
+        "parallel_knockback": "true",
+        "particles_clipping_plane": "true",
+        "shot_sound": "w_pncr_fire1_t1",
+        "shot_sound_t2": "w_pncr_fire1_t2",
+        "shot_sound_t3": "w_pncr_fire1_t3",
+        "shot_sound2": "w_pncr_fire_distant",
+        "equip_sound": "w_pncr_equip",
+        "hit_sound": "fb_enemy_hit",
+        "critical_hit_sound": "fb_enemy_hit_crit",
+        "proximity_loop_sound": "w_pncr_idle_loop",
+        "out_of_ammo_sound": "w_pncr_ooa",
+        "impact_sound": "w_pncr_impact",
+        "smoothing_factor": "10.0",
+        "vertical_sway": "1.0",
+        "horizontal_sway": "1.0",
+        "tilt_sway": "0.15",
+        "forward_sway": "0.5",
+        "max_vertical_movement_sway": "0.05"
+    },
+    {
+        "asset_name": "27f005f8-9046-4a93-8619-fade6ddd96ff",
+        "dynamic_rules": [],
+        "selectable": "true",
+        "show_in_dev_console": "false",
+        "respawn_time": "9",
+        "category": "5",
+        "bind_group": "5",
+        "weapon_tag": "i_pncr",
+        "color": "1fa8b6",
+        "damage": "70",
+        "bonus_consecutive_damage": "5",
+        "max_bonus_consecutive_damage_instances": "6",
+        "knockback": "62.5",
+        "ground_knockback": "75.5",
+        "default_ammo_pickup_ammo": "5",
+        "default_weapon_pickup_ammo": "10",
+        "max_ammo": "25",
+        "penetrating": "true",
+        "friendly_name": "PNCR",
+        "description": [
+            "Point",
+            "N'Click",
+            "Rifle"
+        ],
+        "icon_path": "images/weapon_icons/wp_hud_pncr.png",
+        "icon_path2": "images/weapon_icons/wp_card_pncr.png",
+        "hit_radius": [
+            "1.5",
+            "1"
+        ],
+        "charge_animation": "6",
+        "charge_animation_bonus": "true",
+        "rate": "1450",
+        "combo_rate": [
+            "void_cannon",
+            "1450"
+        ],
+        "shot_particles": "weapon_pncr_beam",
+        "shot_particles_3p": "weapon_pncr_beam_3p",
+        "shot_particles_attached": "weapon_pncr_muzzle",
+        "impact_particles": "weapon_pncr_impact",
+        "player_impact_particles": "pncr_hit_impact_particles",
+        "pfx": [
+            "pncr_muzzle_filament",
+            "muzzle"
+        ],
+        "model": "assets/shared/weapons/pncr/pncr",
+        "model_scale": "0.055",
+        "model_scale_centered": "0.0495",
+        "model_position": [
+            "2.5",
+            "-3",
+            "2.35"
+        ],
+        "model_position_centered": [
+            "0",
+            "-3.4",
+            "3.1"
+        ],
+        "model_scale_third_person": "0.85",
+        "model_pivot": [
+            "0",
+            "0.24",
+            "0"
+        ],
+        "model_position_third_person": [
+            "-4",
+            "14.5",
+            "12"
+        ],
+        "model_camera_scale": "0.55",
+        "muzzle": [
+            "2.5",
+            "-3.5",
+            "6"
+        ],
+        "fov": "50",
+        "impressive_reward": "true",
+        "parallel_knockback": "true",
+        "shot_sound": "pncr_fire1_default_t1",
+        "shot_sound_t2": "pncr_fire1_default_t2",
+        "shot_sound_t3": "pncr_fire1_default_t3",
+        "equip_sound": "pncr_equip",
+        "hit_sound": "hit_sound_hit1",
+        "proximity_loop_sound": "pncr_idle_loop",
+        "out_of_ammo_sound": "pncr_ooa",
+        "impact_sound": [
+            "pncr_impact_default1",
+            "pncr_impact_default2",
+            "pncr_impact_default3",
+            "pncr_impact_default4"
+        ]
     },
     {
         "id": "rogue_crossbow",
@@ -2640,6 +4267,7 @@
         "selectable": "true",
         "rarity": "legendary",
         "required_class": "rogue_eggbot",
+        "weapon_fire_type": "primary",
         "respawn_time": "9",
         "weapon_tag": "cb",
         "penetrating": "false",
@@ -2671,7 +4299,7 @@
         "ground_knockback": "3.5",
         "category": "5",
         "bind_group": "5",
-        "color": "EBBA45",
+        "color": "ffa55a",
         "icon_path": "images/weapon_icons/wp_hud_crossbow_02.png",
         "icon_path2": "images/weapon_icons/wp_card_crossbow.png",
         "weapon_icon_path": "images/weapon_icons/wp_card_crossbow_nobg.png",
@@ -2700,6 +4328,8 @@
             "0.03"
         ],
         "shot_particles_attached_3p": "weapon_crossbow_muzzle_3p",
+        "missile_particles": "weapon_crossbow_projectile",
+        "missile_particles_1p": "weapon_crossbow_projectile",
         "impact_particles": "weapon_crossbow_impact_v2",
         "pfx": [
             "weapon_cb_display",
@@ -2707,39 +4337,68 @@
             "0.03"
         ],
         "player_impact_particles": "weapon_crossbow_player_impact",
-        "missile_particles": "weapon_crossbow_projectile",
-        "missile_particles_1p": "weapon_crossbow_projectile",
+        "player_impact_particles_player_normal": "false",
+        "smoothing_factor": "8.0",
+        "vertical_sway": "0.75",
+        "horizontal_sway": "0.75",
+        "tilt_sway": "0.075",
+        "forward_sway": "0.3",
+        "max_vertical_movement_sway": "0.03",
         "muzzle_offset": [
             "0",
             "0",
             "0"
         ],
         "model": "assets/shared/models/animations/wp_crossbow/skm_crossbow",
-        "model_scale": "0.0625",
-        "model_scale_centered": "0.05625",
-        "model_position_centered": [
-            "0",
-            "-4",
-            "3"
+        "model_scale_third_person": [
+            "1",
+            "1",
+            "1"
         ],
-        "model_position": [
-            "2.5",
-            "-3.22",
-            "2.5"
-        ],
-        "model_camera_scale": "0.6",
-        "muzzle": [
+        "model_position_third_person": [
             "0",
+            "3",
+            "-5"
+        ],
+        "model_rotation_third_person": [
+            "-0.0349066",
             "0",
             "0"
         ],
-        "fov": "40",
-        "model_scale_third_person": "1",
-        "model_position_third_person": [
-            "3",
-            "2",
-            "12"
+        "model_position": [
+            "-0.674",
+            "-1.625",
+            "-3.155"
         ],
+        "model_position_centered": [
+            "-0.670",
+            "-1.574",
+            "-1.953"
+        ],
+        "model_post_rotation": [
+            "-0.062",
+            "-0.063",
+            "-0.035"
+        ],
+        "model_post_rotation_centered": [
+            "-0.017",
+            "-0.035",
+            "-0.035"
+        ],
+        "model_scale": [
+            "0.06",
+            "0.06",
+            "0.06"
+        ],
+        "model_scale_centered": [
+            "0.06",
+            "0.06",
+            "0.06"
+        ],
+        "fov": "40.00",
+        "fov_centered": "63.00",
+        "model_camera_scale": "1.5",
+        "model_camera_scale_centered": "1.5",
         "shot_sound": "w_cb_fire",
         "shot_sound2": "w_cb_fire_distant",
         "missile_loop_sound": "w_cb_airbound",
@@ -2835,10 +4494,8 @@
         "desc_translation_key": "crossbow_burst_arrows_desc",
         "rarity": "artifact",
         "overwrite": [
-            "shot_particles_attached",
-            "cb_vents_r_artifact",
-            "socket_went_r",
-            "0.03"
+            "burst_distance_sound",
+            "w_cb_fire_distant"
         ],
         "locked_in_battlepass": "true",
         "selectable": "true"

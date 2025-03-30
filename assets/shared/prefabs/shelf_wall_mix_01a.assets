@@ -1,0 +1,284 @@
+asset shelf_wall_mix_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name prop_tech_debris_sm_6
+        position 15.60010 52.80000 -8.80005
+        rotation 0 43.20001 0
+        scale 1.11000 1.11000 1.11000
+        param best_lod 0
+        param force_shadows true
+        param model tech_debris_sm_03
+        param no_collision true
+    }
+    prefab_entity
+    {
+        name prop_battery_charge_statio
+        position -62.80005 78.66836 -8.58838
+        rotation 0 -72.89960 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 2
+        param clip weapon
+        param force_shadows true
+        param model battery_charge_station_battery_01
+        param position_x -19.135742
+        param position_y 67.276863
+        param position_z -8.554199
+        param rotation_x -0.000000
+        param rotation_y -1.492256
+        param rotation_z 0.000000
+        param skip_shadows true
+        param tag shop_c
+    }
+    prefab_entity
+    {
+        name prop_battery_charge_statio_12
+        position 90.00000 47.00000 -8.80005
+        rotation 0 -89.99993 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 3
+        param clip weapon
+        param color_matlib_mat_lib_plastic 565656ff
+        param force_shadows true
+        param model battery_charge_station_battery_01
+        param position_x 27.594727
+        param position_y 37.276981
+        param position_z -9.699707
+        param rotation_x -0.000000
+        param rotation_y -1.570795
+        param rotation_z 0.000000
+        param skip_shadows true
+        param tag shop_c
+    }
+    prefab_entity
+    {
+        name prop_battery_charge_statio_6
+        position 70.00000 47.00000 -9.73340
+        rotation 0 76.50004 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 3
+        param clip weapon
+        param color_matlib_mat_lib_plastic 565656ff
+        param force_shadows true
+        param model battery_charge_station_battery_01
+        param position_x -14.406738
+        param position_y 37.276981
+        param position_z -9.699463
+        param rotation_x -0.000000
+        param rotation_y -1.413716
+        param rotation_z 0.000000
+        param skip_shadows true
+        param tag shop_c
+    }
+    prefab_entity
+    {
+        name prop_battery_charge_statio_7
+        position 44.40015 47.00000 -8.80005
+        rotation 0 -89.99993 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 3
+        param clip weapon
+        param force_shadows true
+        param model battery_charge_station_battery_01
+        param position_x -82.405273
+        param position_y 37.276981
+        param position_z -9.698975
+        param rotation_x -0.000000
+        param rotation_y -1.570795
+        param rotation_z 0.000000
+        param skip_shadows true
+        param tag shop_c
+    }
+    prefab_entity
+    {
+        name prop_lab_equipment_01
+        position 80.00000 77.22485 -9.02686
+        rotation 0 -90.00001 0
+        scale 0.75000 0.75000 0.75000
+        param best_lod 0
+        param force_shadows true
+        param model lab_equipment_01
+    }
+    prefab_entity
+    {
+        name prop_shelf_modular_6
+        position 0.26562 45.46840 -14.25879
+        rotation 0 0.00006 0
+        scale 1.40000 1.40000 1.00000
+        param __shadow true
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model shelf_modular_02
+        param position_x 1.383301
+        param position_y 34.076900
+        param position_z -14.224854
+        param rotation_x -0.000000
+        param rotation_y 0.000001
+        param rotation_z -0.000000
+        param tag shop_c
+    }
+    prefab_entity
+    {
+        name prop_shelf_modular_7
+        position 0.26562 15.46840 -14.25879
+        rotation 0 0.00006 0
+        scale 1.40000 1.40000 1.00000
+        param __shadow true
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model shelf_modular_02
+        param position_x 1.383301
+        param position_y 4.076897
+        param position_z -14.224854
+        param rotation_x -0.000000
+        param rotation_y 0.000001
+        param rotation_z -0.000000
+        param tag shop_c
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_03
+        position -61.82080 47.26312 -11.54858
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 0
+        param force_shadows true
+        param model tech_debris_sm_03
+        param no_collision true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_08
+        position -92.46777 77.21508 -8.49561
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 0
+        param force_shadows true
+        param model tech_debris_sm_08
+        param no_collision true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_11
+        position -72.00000 46.40000 -9.60010
+        rotation 0 72.90001 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 1
+        param force_shadows true
+        param model tech_debris_sm_11
+        param no_collision true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_17
+        position -38.80005 77.60000 -11.19995
+        rotation 5.40000 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param force_shadows true
+        param model tech_debris_sm_17
+        param no_collision true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_19_2
+        position 30.39551 77.22440 -11.05005
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 1
+        param force_shadows true
+        param model tech_debris_sm_19
+        param no_collision true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_19_3
+        position 0.40015 76.40000 -13.19995
+        rotation 0.00000 83.69992 92.69943
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 1
+        param color_matlib_mat_lib_metal_plates 58ab9aff
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_plates
+        param model tech_debris_sm_19
+        param no_collision true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_19_4
+        position -14.42651 76.40000 -12.71729
+        rotation -0.00000 83.69977 92.69941
+        scale 0.78000 1.00000 0.85000
+        param __shadow true
+        param best_lod 1
+        param color_matlib_mat_lib_metal_plates e0c093ff
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_plates
+        param model tech_debris_sm_19
+        param no_collision true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_2
+        position -85.19995 46.40000 -9.60010
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 2
+        param force_shadows true
+        param model tech_debris_sm_11
+        param no_collision true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_23
+        position 21.60010 76.40000 -9.19995
+        rotation 0 0 0
+        scale 0.83000 0.83000 0.83000
+        param best_lod 0
+        param force_shadows true
+        param model tech_debris_sm_23
+        param no_collision true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_3
+        position -48.00000 46.40000 -9.60010
+        rotation 0 72.90001 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 1
+        param force_shadows true
+        param model tech_debris_sm_11
+        param no_collision true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_4
+        position 15.60010 47.26312 -8.80005
+        rotation 0 43.20001 0
+        scale 1.11000 1.11000 1.11000
+        param best_lod 0
+        param force_shadows true
+        param model tech_debris_sm_03
+        param no_collision true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_5
+        position 15.60010 49.20000 -8.80005
+        rotation 0 43.20001 0
+        scale 0.95000 1.69459 0.95000
+        param best_lod 0
+        param color3_matlib_mat_lib_emissive 471d00ff
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_panels_01
+        param model tech_debris_sm_03
+        param no_collision true
+    }
+}

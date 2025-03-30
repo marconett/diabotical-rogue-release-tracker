@@ -26,6 +26,8 @@ matlib_mat_lib_glass_transparent
     map materials/matlib/shaders/mat_glass/mat_glass_s.png
     map materials/matlib/shaders/mat_glass/mat_glass_edge.png
     map !depth
+	map !light_lookup
+	map !light_buffer
 
     vertex_shader water.vs.cso 111 NGT
     vertex_shader_param inverse
@@ -493,8 +495,9 @@ matlib_mat_lib_glass_frosted
     map materials/matlib/shaders/mat_glass/mat_glass_s.png
     map materials/matlib/shaders/mat_glass/mat_glass_edge.png
     map !depth
-    map !skybox
-    map !colormap
+	map !light_lookup
+	map !light_buffer
+	
     vertex_shader water.vs.cso 111 NGT
     vertex_shader_param inverse
     vertex_shader_param camera
@@ -508,7 +511,7 @@ matlib_mat_lib_glass_frosted
     pixel_shader_behaviour receive_light_point
     pixel_shader_behaviour receive_light_spot
     blendfunc blend
-    depth read_only
+    depth transparent
   }
 }
 

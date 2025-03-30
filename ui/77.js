@@ -119,17 +119,29 @@ function updateSettingsExplanation(el, explanation_cont, label_class_override) {
         let scroll_parent = el.closest(".scroll-inner");
         if (scroll_parent) {
             let offset = el.offsetTop - scroll_parent.scrollTop;
-            if (offset > 64 * onevh) offset = 64 * onevh;
-            if (offset < 3.8 * onevh) offset = 3.8 * onevh;
-            explanation_cont.style.top = offset + "px"
+            if (offset > 50 * onevh) {
+                explanation_cont.style.top = "auto";
+                explanation_cont.style.bottom = scroll_parent.offsetHeight - offset - el.offsetHeight + "px";
+                explanation_cont.classList.add("bottom");
+                explanation_cont.classList.remove("top")
+            } else {
+                explanation_cont.style.top = offset + "px";
+                explanation_cont.style.removeProperty("bottom");
+                explanation_cont.classList.remove("bottom");
+                explanation_cont.classList.add("top")
+            }
         } else {
-            element.style.removeProperty("top")
+            explanation_cont.style.removeProperty("top");
+            explanation_cont.style.removeProperty("bottom");
+            explanation_cont.classList.remove("bottom");
+            explanation_cont.classList.remove("top")
         }
     }
     let label_class = "label";
     if (label_class_override) label_class = label_class_override;
     let label = _get_first_with_class_in_parent(el, label_class);
     let select_field = _get_first_with_class_in_parent(el, "select-field");
+    let toggle = _get_first_with_class_in_parent(el, "toggle");
     let show_desc = false;
     if (label && label.hasAttribute("data-i18n-desc") && label.dataset.i18nDesc in global_translations) show_desc = true;
     if (select_field && !select_field.classList.contains("disabled")) show_desc = true;
@@ -166,6 +178,22 @@ function updateSettingsExplanation(el, explanation_cont, label_class_override) {
                 return false
             }
         }
+    } else if (toggle) {
+        let fragment = new DocumentFragment;
+        let options_header = _createElement("div", "options_header", localize("options"));
+        fragment.appendChild(options_header);
+        let options_container = _createElement("div", "option_name_cont");
+        fragment.appendChild(options_container);
+        let option_disabled = _createElement("div", "option_name", localize("disabled"));
+        let option_enabled = _createElement("div", "option_name", localize("enabled"));
+        options_container.appendChild(option_disabled);
+        options_container.appendChild(option_enabled);
+        if (toggle.dataset.value && toggle.dataset.value === "1") {
+            option_enabled.classList.add("selected")
+        } else {
+            option_disabled.classList.add("selected")
+        }
+        explanation_cont.appendChild(fragment)
     }
     return true
 }

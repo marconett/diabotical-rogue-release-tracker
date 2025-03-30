@@ -1,0 +1,206 @@
+asset block_4x8_ventilation_pipe_grated_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name light_108
+        position -1.70385 136.83719 -161.05389
+        rotation 65.00000 179.99999 0.00000
+        scale 1.00000 1.00000 0.98000
+        param angle 120
+        param attenuation_exponent 2.2
+        param color 95e6e6ff
+        param falloff 0.911337
+        param gobo_texture gd_gobo_grates01.png
+        param intensity 25
+        param max_opacity 1
+        param position_x -1.703848
+        param position_y 136.837189
+        param position_z -161.053894
+        param radius 500
+        param rotation_x 1.134464
+        param rotation_y -3.141593
+        param rotation_z 0.000000
+        param softness .5
+        param type diffuse_spot
+    }
+    prefab_entity
+    {
+        name light_9
+        position -1.07202 111.23718 -66.65401
+        rotation 0 0 0
+        scale 1.00000 1.00000 0.98000
+        param angle 180
+        param attenuation_exponent 2.2
+        param color 84f8f8ff
+        param falloff .5
+        param gobo_texture -1
+        param intensity 20
+        param max_opacity 1
+        param position_x -1.072020
+        param position_y 111.237183
+        param position_z -66.654007
+        param radius 150
+        param rotation_x -0.000000
+        param rotation_y -0.000000
+        param rotation_z 0.000000
+        param softness .5
+        param type diffuse_spot
+    }
+    prefab_entity
+    {
+        name prop_kitbash_71
+        position 0 240.00000 0
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_kitbash_71
+        param best_lod 2
+        param clip noclip
+        param color3_matlib_mat_lib_emissive s_emissive_bright
+        param force_shadows true
+        param model building_blocks_var_lg_4x8_ventilation_pipes_01
+        param position_x 0.000000
+        param position_y 240.000000
+        param position_z 0.000000
+        param rotation_x -0.000000
+        param rotation_y -0.000000
+        param rotation_z 0.000000
+        param size_x 1.000000
+    }
+    prefab_entity
+    {
+        name prop_rogue_vine_transition_118
+        position 58.52807 73.43718 -25.05391
+        rotation 0 22.50000 0
+        scale 1.25000 1.25000 1.25000
+        param best_lod 1
+        param clip noclip
+        param color2_leafyvines_mat_vineleafy s_foliage_neutral
+        param color3_leafyvines_mat_vineleafy s_foliage_neutral
+        param color_leafyvines_mat_vineleafy s_foliage_neutral
+        param force_shadows true
+        param model vine_leafy_transition_m
+        param position_x 58.528069
+        param position_y 73.437180
+        param position_z -25.053907
+        param rotation_x -0.000000
+        param rotation_y 0.392699
+        param rotation_z -0.000000
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_scaffolding_support
+        position -67.36522 -2.21473 -72.22041
+        rotation 0 -89.99998 0
+        scale 1.00000 1.09000 1.04000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param color_matlib_mat_lib_acrylic 7f7f7fff
+        param force_shadows true
+        param model scaffolding_support_01
+        param override_effect_0 matlib_mat_lib_acrylic
+        param position_x -67.365219
+        param position_y -2.214733
+        param position_z -72.220413
+        param rotation_x -0.000000
+        param rotation_y -1.570796
+        param rotation_z 0.000000
+        param size_x 1.000000
+        param size_y 1.090000
+        param size_z 1.040000
+    }
+    prefab_entity
+    {
+        name prop_scaffolding_support_0
+        position 65.50000 -2.21473 -72.22040
+        rotation 0 89.99993 0
+        scale 1.00000 1.09000 1.04000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param color_matlib_mat_lib_acrylic 7f7f7fff
+        param force_shadows true
+        param model scaffolding_support_01
+        param override_effect_0 matlib_mat_lib_acrylic
+        param position_x 65.500000
+        param position_y -2.214733
+        param position_z -72.220398
+        param rotation_x -0.000000
+        param rotation_y 1.570795
+        param rotation_z -0.000000
+        param size_x 1.000000
+        param size_y 1.090000
+        param size_z 1.040000
+    }
+    prefab_entity
+    {
+        name prop_shutter_mesh_10
+        position 127.26732 15.73419 -53.24360
+        rotation 0 179.99996 0
+        scale 2.65000 4.56000 1.00000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param model shutter_mesh
+        param position_x 127.267319
+        param position_y 15.734192
+        param position_z -53.243599
+        param rotation_x 0.000000
+        param rotation_y 3.141592
+        param rotation_z 0.000000
+        param size_x 2.650000
+        param size_y 4.560000
+        param size_z 1.000000
+    }
+    prefab_entity
+    {
+        name prop_shutter_mesh_7
+        position -7.34253 9.33681 -53.24361
+        rotation 0 179.99996 0
+        scale 2.64000 3.88000 1.00000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param model shutter_mesh
+        param position_x -7.342528
+        param position_y 9.336815
+        param position_z -53.243614
+        param rotation_x -0.000000
+        param rotation_y 3.141592
+        param rotation_z 0.000000
+        param size_x 2.640000
+        param size_y 3.880000
+        param size_z 1.000000
+    }
+    prefab_entity
+    {
+        name sound_amb_prop_pipe_rushing_2
+        position -1.47192 96.43718 -45.05391
+        rotation 0 -89.99998 0
+        scale 1.00000 1.00000 1.00000
+        param capsule_end_position_x 800.000000
+        param capsule_end_position_y -260.000000
+        param capsule_end_position_z -1180.000000
+        param cross_fade_max_radius 40.000000
+        param cross_fade_min_radius 0.000000
+        param min_radius 40.000000
+        param position_x -1.471922
+        param position_y 96.437180
+        param position_z -45.053913
+        param radius 800.000000
+        param rotation_x -0.000000
+        param rotation_y -1.570796
+        param rotation_z 0.000000
+        param sound_event amb_prop_pipe_rushing_water
+        param type audio_event_ambient_node
+        param volume 0.5
+    }
+}
+
+
+

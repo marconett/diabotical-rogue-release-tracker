@@ -9,8 +9,6 @@ var global_party = {
     modes: [],
     roles: {},
     "role-reqs": {},
-    "valid-modes": [],
-    pickup_ids: [],
     fill: false,
     ready: {}
 };
@@ -33,7 +31,6 @@ function handle_party_event(data) {
         global_party.leader_id = data.data["leader-id"];
         global_party.privacy = data["privacy"];
         global_party.size = Object.keys(data.data.members).length;
-        global_party["valid-modes"] = data["valid-modes"];
         global_party["members"] = {};
         global_party["member_ids"] = [];
         if ("fill" in data.data) global_party.fill = data.data.fill;

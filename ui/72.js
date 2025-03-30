@@ -110,6 +110,7 @@ function add_user_customizations(customizations) {
         };
         global_customization_data.push(customization);
         global_customization_data_map[customization.customization_id] = customization;
+        engine.call("add_owned_customization", JSON.stringify(customization));
         if (!(customization.customization_type in type_options)) type_options[customization.customization_type] = {};
         type_options[customization.customization_type][customization.customization_sub_type] = true;
         const sub_types = GAME.get_data("customization_sub_types");
@@ -411,7 +412,8 @@ function load_user_customizations(cb) {
             if (typeof cb === "function") cb(type_options)
         }
         if (typeof cb === "function") cb();
-        trigger_customization_seen_handlers()
+        trigger_customization_seen_handlers();
+        engine.call("set_owned_customizations", JSON.stringify(global_customization_data))
     }))
 }
 

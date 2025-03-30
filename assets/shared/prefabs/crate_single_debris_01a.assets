@@ -1,0 +1,155 @@
+asset crate_single_debris_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name col_col_box_corner_14
+        position -47.10361 -0.65436 22.95117
+        rotation 0 0 0
+        scale 1.01000 1.00000 1.01000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name decal_decal_graphical_graph
+        position -6.84488 38.26001 19.90787
+        rotation 0 -179.99999 0
+        scale 35.00000 35.00000 15.00000
+        param albedo_map_enable true
+        param color s_decal_bright
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_graphical_graphical_shape_05
+        param metal_map_enable false
+        param normal_map_enable false
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_graphical_graph_87
+        position -6.84488 38.26001 -55.29214
+        rotation 0 0 0
+        scale 35.00000 35.00000 15.00000
+        param albedo_map_enable true
+        param color s_decal_bright
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_graphical_graphical_shape_05
+        param metal_map_enable false
+        param normal_map_enable false
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name prefab_temp_crate
+        position -6.73254 -0.07456 -16.76434
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+    }
+    prefab_entity
+    {
+        name prop_rogue_tarp_160x160
+        position -22.81570 -0.54227 78.20021
+        rotation 0 -13.50000 0
+        scale 1.00000 1.00000 1.00000
+        param _kitbash_connector -1
+        param _kitbash_parent prop_rogue_tarp_160x160
+        param best_lod 0
+        param clip noclip
+        param color_matlib_mat_lib_tarp_fabric s_accent
+        param color_matlib_mat_lib_tarp_fabric_details s_accent
+        param force_shadows true
+        param model rogue_tarp_160x160
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_rogue_var_crate_05_ta
+        position -6.84488 -0.53998 -17.29211
+        rotation 0 -90.00003 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_rogue_var_crate_05_ta
+        param best_lod 0
+        param clip weapon
+        param color_matlib_mat_lib_metal_painted s_bright
+        param force_shadows true
+        param model crate_05_large
+        param size_w 1
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_14_2
+        position -29.53580 0.99448 35.78503
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model tech_debris_sm_14
+        param no_collision true
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_15_3
+        position -46.84485 0.98712 42.70789
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model tech_debris_sm_15
+        param no_collision true
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_16_8
+        position 54.07657 -0.53325 -26.03107
+        rotation 0 -36.90003 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model tech_debris_sm_16
+        param no_collision true
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_24_3
+        position 53.16983 -0.61724 3.56519
+        rotation 0 -36.90003 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model tech_debris_sm_24
+        param no_collision true
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_26_5
+        position 66.32077 -0.73999 -87.73755
+        rotation 0 -104.39977 0
+        scale 1.00000 1.00000 1.00000
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model tech_debris_sm_26
+        param no_collision true
+        param skip_shadows true
+    }
+}
+

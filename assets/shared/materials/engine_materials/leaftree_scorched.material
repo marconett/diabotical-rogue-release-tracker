@@ -1,0 +1,22 @@
+leaftree_scorched
+{
+  {
+    map models/environment/nature/trees/leaf_trees/trees/shaders/canopy_hsl_512_d.png
+    map models/environment/nature/trees/leaf_trees/trees/shaders/canopy_hsl_512_n.png
+    map models/environment/nature/trees/leaf_trees/trees/shaders/canopy_scorched_hsl_512_s.png
+    map swatches/black.png
+    map models/environment/nature/trees/leaf_trees/trees/shaders/canopy_scorched_hsl_512_c.png
+    material_id 62
+    vertex_shader tilestatic_veg.vs.cso 111 NGCT
+    vertex_shader_param inverse
+    vertex_shader_param camera
+    vertex_shader_param look_and_time
+    shadow_vertex_shader shadow_at_tilestatic.vs.cso
+    shadow_pixel_shader shadow_tile.ps.cso
+    pixel_shader mask_hsl_shift.ps.cso
+    pixel_shader_param accent1 #3fbfbfff
+    pixel_shader_param accent2 #3fbfbfff
+    pixel_shader_param accent3 #3fbfbfff
+    culling off
+  }
+}

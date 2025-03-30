@@ -32,7 +32,7 @@
 	weapon william_is_a_dummy
     weapon rogue_rocketlauncher_secondary
 	weapon rogue_voidcannon_secondary
-	weapon dummy
+	weapon rogue_testmode5_banana
 	weapon hammer_time
 	//25
 	weapon translocator
@@ -55,17 +55,17 @@
 	//40
 	weapon leap_slam
 	weapon machinegun2
-	weapon dummy
-	weapon dummy
+	weapon rogue_testmode5_raisin
+	weapon rogue_testmode5_blueberry
     weapon projected_shield
 	//45
     weapon big_rocket
-	weapon dummy
-	weapon dummy
-	weapon dummy
+	weapon rogue_testmode5_lemon
+	weapon rogue_testmode5_greentea
+	weapon rogue_testmode5_mint
 	weapon doublebarreled_shotgun
 	//50
-	weapon dummy
+	weapon rogue_testmode5_lavender
 	weapon charges_rocket
 	weapon anvil_impact_weapon
 	weapon delayed_bomb
@@ -77,10 +77,10 @@
 	weapon deployable_cover_projectile
 	weapon throwing_knife
 	//60
-	weapon dummy
+	weapon rogue_testmode5_rose
 	weapon rogue_tommygun
 	weapon rogue_heavysniper
-	weapon dummy
+	weapon SPECIAL_WEAPON_ENVIROMENT
 	weapon spawn_ramp_grenade
 	//65
 	weapon spawn_cover_grenade
@@ -98,11 +98,11 @@
 	weapon hookshot
 	weapon orbiting_saw
 	weapon weapon_enemy_energy_01
-	weapon dummy
-	weapon dummy
+	weapon SPECIAL_WEAPON_SWAPPER
+	weapon SPECIAL_WEAPON_DASH
 	//80	
-	weapon dummy
-	weapon dummy
+	weapon SPECIAL_WEAPON_SPLASH
+	weapon SPECIAL_WEAPON_SPLASH_HIT 
 	weapon fists
 	weapon ground_slam
 	weapon dash_explosion
@@ -122,7 +122,7 @@
 	weapon airstrike_napalm
 	weapon jetpack_explosion
 	weapon airstrike_shockwave
-	weapon dummy
+	weapon SPECIAL_WEAPON_FREEZE_BLOW
 	weapon enemy_bomb
 	//100
 	weapon rogue_submachinegun
@@ -172,7 +172,42 @@
 	weapon brute_pummel
 	weapon uppercut_punch
 	weapon ground_slam
-
+	//140
+	weapon pinata_radiance
+	weapon grenadier_smoke
+	weapon piranha_basic_swing
+	weapon shafter_shaft
+	weapon bullet_hellman_bullet
+	//145
+	weapon rocketman_rocket
+	weapon diabotical_machinegun
+	weapon diabotical_blaster
+	weapon diabotical_supershotgun
+	weapon diabotical_rocketlauncher
+	//150
+	weapon diabotical_shaft
+	weapon diabotical_pncr
+	weapon _mod_melee
+	weapon _mod_machinegun
+	weapon _mod_supershotgun
+	//155
+	weapon _mod_shaft
+	weapon _mod_rocketlauncher
+	weapon _mod_pncr
+	weapon _mod_blaster
+	weapon _mod_grenadelauncher
+	//160
+	weapon _mod_voidcannon
+	weapon _mod_
+	weapon _mod_
+	weapon _mod_
+	weapon _mod_
+	//165
+	weapon _mod_
+	weapon _mod_
+	weapon _mod_
+	weapon diabotical_chockhammer
+	
 //// PITFALL: When adding new weapons WEAPON_COUNT may need to be incremented
 
 ////    DO NOT CHANGE ANYTHING IN THE EGGBOT CLASS     ////

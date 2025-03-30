@@ -1,0 +1,928 @@
+asset overgrown_cliff_opening_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name prop_vine_liana_ground_s_0_1
+        position -317.09473 503.93915 -0.43823
+        rotation -0.58003 117.94426 -3.19163
+        scale 1.90000 1.90000 1.90000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model vine_liana_ground_s_02
+        param seethrough_direction 9
+        param seethrough_prop false
+    }
+    prefab_entity
+    {
+        name prop_ferntransition_sparse_1
+        position -477.85156 509.02734 150.00000
+        rotation 1.82155 152.90812 -1.68561
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model ferntransition_dense
+        param seethrough_direction 9
+        param seethrough_prop false
+    }
+    prefab_entity
+    {
+        name prop_generic_fern_2_1
+        position -632.00000 377.47253 -200.00000
+        rotation -0.48470 49.44536 2.06615
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param force_shadows true
+        param model generic_fern_02
+        param seethrough_direction 9
+        param seethrough_prop false
+    }
+    prefab_entity
+    {
+        name prop_generic_fern_cluster_1_1
+        position -380.00000 502.09595 40.00000
+        rotation 1.10098 35.94961 -3.58342
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 3
+        param clip noclip
+        param force_shadows true
+        param model generic_fern_cluster_02
+        param seethrough_direction 9
+        param seethrough_prop false
+    }
+    prefab_entity
+    {
+        name prop_generic_fern_cluster_1_2
+        position 416.80029 447.19998 -61.19995
+        rotation -0.48454 35.96137 -1.39788
+        scale 1.00000 1.22523 1.00000
+        param __shadow true
+        param best_lod 3
+        param clip noclip
+        param force_shadows true
+        param model generic_fern_cluster_02
+        param seethrough_direction 9
+        param seethrough_prop false
+    }
+    prefab_entity
+    {
+        name prop_generic_fern_flat_01
+        position 207.60010 416.00000 -28.80005
+        rotation -18.54518 91.08234 4.07016
+        scale 0.90000 0.90000 0.90000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model generic_fern_flat_01
+        param seethrough_direction 9
+        param seethrough_prop false
+    }
+    prefab_entity
+    {
+        name prop_generic_fern_flat_01_4
+        position 333.32617 401.22659 118.19727
+        rotation 2.01926 -173.73952 5.04286
+        scale 0.90000 0.90000 0.90000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model generic_fern_flat_01
+        param seethrough_direction 9
+        param seethrough_prop false
+    }
+    prefab_entity
+    {
+        name prop_liana_curved_leaves_s_6
+        position 268.00342 423.56415 128.12354
+        rotation 0.79256 160.19226 -3.77592
+        scale 1.45000 1.11538 1.11538
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model liana_curved_leaves_s
+    }
+    prefab_entity
+    {
+        name prop_liana_curved_s
+        position -180.88525 481.16290 33.95288
+        rotation -1.71317 17.06193 -0.89566
+        scale 1.59000 1.75000 1.75000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model liana_curved_s
+    }
+    prefab_entity
+    {
+        name prop_liana_straight_leaves_1
+        position -510.00000 500.00000 55.73022
+        rotation 2.32839 103.45244 0.85873
+        scale 1.76000 1.76000 1.76000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param force_shadows true
+        param model liana_straight_leaves_s
+    }
+    prefab_entity
+    {
+        name prop_rogue_jungle_cliff_ar_4
+        position 348.02441 171.45099 -57.82617
+        rotation 2.06358 -175.54009 4.07871
+        scale 0.91000 0.91000 0.91000
+        param __shadow true
+        param best_lod 0
+        param clip fullclip
+        param color s_cliff_bottom
+        param color2 s_cliff_edge
+        param color3 s_cliff_base
+        param force_shadows true
+        param model rogue_jungle_cliff_arch_02
+        param seethrough_direction 9
+        param seethrough_prop false
+        param uv_detail_scale 3
+        param vertex_coloring_function per_pixel_slope
+        param vertex_coloring_param1 0.1
+        param vertex_coloring_param2 0.8
+    }
+    prefab_entity
+    {
+        name prop_rogue_jungle_cliff_ar_5_1
+        position -331.84863 219.66656 33.60449
+        rotation -2.06358 4.45991 -1.37871
+        scale 0.81900 0.91000 0.91000
+        param __shadow true
+        param best_lod 0
+        param clip fullclip
+        param color s_cliff_bottom
+        param color2 s_cliff_edge
+        param color3 s_cliff_base
+        param force_shadows true
+        param model rogue_jungle_cliff_arch_02
+        param seethrough_direction 9
+        param seethrough_prop false
+        param uv_detail_scale 3
+        param vertex_coloring_function per_pixel_slope
+        param vertex_coloring_param1 0.1
+        param vertex_coloring_param2 0.8
+    }
+    prefab_entity
+    {
+        name prop_rogue_jungle_cliff_ar_7
+        position 412.46973 87.94353 9.42529
+        rotation 4.85025 -15.89798 -5.70484
+        scale 0.71000 0.84000 0.80000
+        param __shadow true
+        param best_lod 0
+        param clip fullclip
+        param color s_cliff_bottom
+        param color2 s_cliff_edge
+        param color3 s_cliff_base
+        param force_shadows true
+        param model rogue_jungle_cliff_arch_04
+        param seethrough_direction 9
+        param seethrough_prop false
+        param uv_detail_scale 3
+        param vertex_coloring_function per_pixel_slope
+        param vertex_coloring_param1 0.1
+        param vertex_coloring_param2 0.8
+    }
+    prefab_entity
+    {
+        name prop_rogue_jungle_cliff_ar_8_1
+        position -440.99609 69.75439 -135.47241
+        rotation 5.87964 -175.95978 -5.96158
+        scale 0.78000 0.87000 0.80840
+        param __shadow true
+        param best_lod 0
+        param clip fullclip
+        param color s_cliff_bottom
+        param color2 s_cliff_edge
+        param color3 s_cliff_base
+        param force_shadows true
+        param model rogue_jungle_cliff_arch_04
+        param seethrough_direction 9
+        param seethrough_prop false
+        param uv_detail_scale 3
+        param vertex_coloring_function per_pixel_slope
+        param vertex_coloring_param1 0.1
+        param vertex_coloring_param2 0.8
+    }
+    prefab_entity
+    {
+        name prop_sharp_rock_01_3
+        position 449.42871 76.25458 60.47485
+        rotation 0.36650 58.35267 -18.50741
+        scale 1.00000 1.51000 1.00000
+        param __shadow true
+        param best_lod 0
+        param clip fullclip
+        param color s_cliff_bottom
+        param color2 s_cliff_edge
+        param color3 s_cliff_base
+        param model sharp_rock_01
+        param uv_detail_scale 3
+        param vertex_coloring_function per_pixel_slope
+        param vertex_coloring_param1 0.1
+        param vertex_coloring_param2 0.8
+    }
+    prefab_entity
+    {
+        name prop_sharp_rock_01_4
+        position 428.55273 -3.75381 -118.96338
+        rotation -8.16317 -43.35735 -16.40367
+        scale 1.56000 2.35560 1.56000
+        param __shadow true
+        param best_lod 0
+        param clip fullclip
+        param color s_cliff_bottom
+        param color2 s_cliff_edge
+        param color3 s_cliff_base
+        param model sharp_rock_01
+        param uv_detail_scale 3
+        param vertex_coloring_function per_pixel_slope
+        param vertex_coloring_param1 0.1
+        param vertex_coloring_param2 0.8
+    }
+    prefab_entity
+    {
+        name prop_sharp_rock_01_5_1
+        position -545.16064 92.37036 -227.53003
+        rotation 6.14955 -123.03829 -3.65557
+        scale 1.56000 2.35560 1.56000
+        param __shadow true
+        param best_lod 0
+        param clip fullclip
+        param color s_cliff_bottom
+        param color2 s_cliff_edge
+        param color3 s_cliff_base
+        param model sharp_rock_01
+        param uv_detail_scale 3
+        param vertex_coloring_function per_pixel_slope
+        param vertex_coloring_param1 0.1
+        param vertex_coloring_param2 0.8
+    }
+    prefab_entity
+    {
+        name prop_sharp_rock_01_6_1
+        position -589.07080 141.83824 -242.07495
+        rotation 4.33708 9.18620 168.04531
+        scale 1.42000 2.14420 1.42000
+        param __shadow true
+        param best_lod 0
+        param clip fullclip
+        param color s_cliff_bottom
+        param color2 s_cliff_edge
+        param color3 s_cliff_base
+        param model sharp_rock_01
+        param uv_detail_scale 3
+        param vertex_coloring_function per_pixel_slope
+        param vertex_coloring_param1 0.1
+        param vertex_coloring_param2 0.8
+    }
+    prefab_entity
+    {
+        name prop_sharp_rock_01_7_1
+        position -487.62109 14.14874 -200.23486
+        rotation -12.35514 -129.10236 -6.04473
+        scale 1.33000 2.00830 1.33000
+        param __shadow true
+        param best_lod 0
+        param color s_cliff_bottom
+        param color2 s_cliff_edge
+        param color3 s_cliff_base
+        param model sharp_rock_01
+        param uv_detail_scale 3
+        param vertex_coloring_function per_pixel_slope
+        param vertex_coloring_param1 0.1
+        param vertex_coloring_param2 0.8
+    }
+    prefab_entity
+    {
+        name prop_sharp_rock_chunk_larg_1
+        position 433.80420 -7.50504 12.34863
+        rotation 0.67273 76.42109 -2.38874
+        scale 0.80000 0.80000 0.80000
+        param __shadow true
+        param best_lod 0
+        param clip fullclip
+        param color s_cliff_bottom
+        param color2 s_cliff_edge
+        param color3 s_cliff_base
+        param model sharp_rock_chunk_large_03
+        param uv_detail_scale 3
+        param vertex_coloring_function per_pixel_slope
+        param vertex_coloring_param1 0.1
+        param vertex_coloring_param2 0.8
+    }
+    prefab_entity
+    {
+        name prop_sharp_rock_chunk_larg_2_1
+        position -454.34814 -50.64661 63.80957
+        rotation 2.42583 138.52386 -20.32333
+        scale 0.70000 0.70000 0.70000
+        param __shadow true
+        param best_lod 0
+        param clip fullclip
+        param color s_cliff_bottom
+        param color2 s_cliff_edge
+        param color3 s_cliff_base
+        param model sharp_rock_chunk_large_01
+        param uv_detail_scale 3
+        param vertex_coloring_function per_pixel_slope
+        param vertex_coloring_param1 0.1
+        param vertex_coloring_param2 0.8
+    }
+    prefab_entity
+    {
+        name prop_sharp_rock_chunk_larg_3
+        position 503.64990 -49.23691 22.74023
+        rotation 5.14816 -111.50823 1.64201
+        scale 0.70000 0.70000 0.70000
+        param __shadow true
+        param best_lod 0
+        param clip fullclip
+        param color s_cliff_bottom
+        param color2 s_cliff_edge
+        param color3 s_cliff_base
+        param model sharp_rock_chunk_large_01
+        param uv_detail_scale 3
+        param vertex_coloring_function per_pixel_slope
+        param vertex_coloring_param1 0.1
+        param vertex_coloring_param2 0.8
+    }
+    prefab_entity
+    {
+        name prop_sharp_rock_chunk_larg_4_1
+        position -512.54199 -29.67343 -155.45557
+        rotation 7.77748 128.45379 -1.77161
+        scale 0.70000 0.90000 0.70000
+        param __shadow true
+        param best_lod 0
+        param clip fullclip
+        param color s_cliff_bottom
+        param color2 s_cliff_edge
+        param color3 s_cliff_base
+        param model sharp_rock_chunk_large_01
+        param uv_detail_scale 3
+        param vertex_coloring_function per_pixel_slope
+        param vertex_coloring_param1 0.1
+        param vertex_coloring_param2 0.8
+    }
+    prefab_entity
+    {
+        name prop_sharp_rock_chunk_larg_5_1
+        position -594.21436 -27.64905 -275.91846
+        rotation -13.39630 -83.83226 -4.89444
+        scale 0.90000 0.95000 0.80000
+        param __shadow true
+        param best_lod 1
+        param clip fullclip
+        param color s_cliff_bottom
+        param color2 s_cliff_edge
+        param color3 s_cliff_base
+        param model sharp_rock_chunk_large_01
+        param uv_detail_scale 3
+        param vertex_coloring_function per_pixel_slope
+        param vertex_coloring_param1 0.1
+        param vertex_coloring_param2 0.8
+    }
+    prefab_entity
+    {
+        name prop_sharp_rock_chunk_larg_6_1
+        position -456.78320 -11.43069 8.92749
+        rotation -21.09845 -109.98646 -12.18559
+        scale 0.58000 0.70000 0.65000
+        param __shadow true
+        param best_lod 1
+        param clip fullclip
+        param color s_cliff_bottom
+        param color2 s_cliff_edge
+        param color3 s_cliff_base
+        param model sharp_rock_chunk_large_01
+        param uv_detail_scale 3
+        param vertex_coloring_function per_pixel_slope
+        param vertex_coloring_param1 0.1
+        param vertex_coloring_param2 4
+    }
+    prefab_entity
+    {
+        name prop_small_rock_debris_s_6
+        position 342.01514 -2.34024 97.99658
+        rotation -2.25383 -4.54451 -1.03884
+        scale 2.90000 2.90000 2.90000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param color s_cliff_bottom
+        param color1 1F2931
+        param color2 s_cliff_edge
+        param color3 s_cliff_base
+        param force_shadows true
+        param model small_rock_debris_s
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_07_15
+        position 297.21973 467.46619 -158.03516
+        rotation 5.86874 126.75166 3.49090
+        scale 1.25000 1.25000 1.25000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param color s_foliage_muted
+        param force_shadows true
+        param model vine_leafy_07
+        param seethrough_direction 9
+        param seethrough_prop false
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_10_6_1
+        position -300.20312 511.41876 74.76318
+        rotation -0.48470 49.44535 -2.43384
+        scale 1.26000 1.26000 1.26000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param color s_foliage_muted
+        param force_shadows true
+        param model vine_leafy_10
+        param seethrough_direction 9
+        param seethrough_prop false
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_10_7
+        position 418.18701 464.52255 -43.49194
+        rotation 3.12147 35.75693 -4.18323
+        scale 1.60000 1.15000 1.60000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param color s_foliage_muted
+        param force_shadows true
+        param model vine_leafy_10
+        param seethrough_direction 9
+        param seethrough_prop false
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_10_9
+        position 510.22998 406.93085 129.87695
+        rotation 4.67205 11.22593 -0.66915
+        scale 1.16000 1.16000 1.16000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param color s_foliage_muted
+        param force_shadows true
+        param model vine_leafy_10
+        param seethrough_direction 9
+        param seethrough_prop false
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_7_1
+        position -427.92285 414.36722 -164.86426
+        rotation -7.59859 35.22370 1.28569
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param color s_foliage_muted
+        param force_shadows true
+        param model vine_leafy_09
+        param seethrough_direction 9
+        param seethrough_prop false
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_round_28_1
+        position -506.84863 58.06563 82.58228
+        rotation -0.03446 -35.07505 29.59109
+        scale 1.33000 1.05000 1.33000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param color s_foliage_muted
+        param force_shadows true
+        param model vine_leafy_round
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_round_28_2
+        position -571.60010 150.80000 -396.39990
+        rotation -12.53956 86.91674 14.56674
+        scale 1.25000 0.98684 1.25000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param color s_foliage_muted
+        param force_shadows true
+        param model vine_leafy_round
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_round_29_1
+        position -522.89746 125.73435 -334.43604
+        rotation 21.63912 31.57835 -0.36804
+        scale 1.20000 1.20000 1.20000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param color s_foliage_muted
+        param force_shadows true
+        param model vine_leafy_07
+        param size_w 1
+        param wind_r 0.5
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_round_29_2
+        position -303.19971 507.39999 -75.19995
+        rotation -1.68257 -29.00025 0.36160
+        scale 1.31000 1.31000 1.31000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param color s_foliage_muted
+        param force_shadows true
+        param model vine_leafy_07
+        param rotation_w 0
+        param size_w 1
+        param wind_r 0.5
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_round_32
+        position 581.84424 415.15466 1.15674
+        rotation -2.83308 -116.28471 2.48094
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param color s_foliage_muted
+        param force_shadows true
+        param model vine_leafy_round
+        param seethrough_direction 9
+        param seethrough_prop false
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_round_4_4
+        position -470.00000 522.14935 90.00000
+        rotation -5.93739 108.51369 7.14316
+        scale 1.75000 1.75000 1.75000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param color s_foliage_muted
+        param force_shadows true
+        param model vine_leafy_round
+        param seethrough_direction 9
+        param seethrough_prop false
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_round_4_5
+        position -596.00000 418.00000 -84.00000
+        rotation -5.93739 81.51369 7.14316
+        scale 1.60000 1.60000 1.60000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param color s_foliage_muted
+        param force_shadows true
+        param model vine_leafy_round
+        param seethrough_direction 9
+        param seethrough_prop false
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_round_7_3
+        position -445.70361 136.98143 -102.05127
+        rotation 12.26313 86.61761 -24.71184
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 3
+        param clip noclip
+        param color s_foliage_muted
+        param force_shadows true
+        param model vine_leafy_round
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_transition_10_3
+        position -588.00000 419.78589 -20.00000
+        rotation 2.23724 158.35592 1.07412
+        scale 0.90000 0.90000 0.90000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model vine_leafy_transition_m
+        param seethrough_direction 9
+        param seethrough_prop false
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_transition_11_3
+        position -273.17627 427.46408 -172.71582
+        rotation -1.76772 -73.89179 1.74199
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param color s_foliage_muted
+        param force_shadows true
+        param model vine_leafy_transition_s
+        param seethrough_direction 9
+        param seethrough_prop false
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_transition_13_2
+        position -162.52002 440.49704 43.52905
+        rotation 4.95058 -86.25969 2.09279
+        scale 0.88000 0.88000 0.88000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param color s_foliage_muted
+        param force_shadows true
+        param model vine_leafy_transition_s
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_transition_15
+        position 205.74121 425.69379 79.66968
+        rotation 3.83248 143.63409 -5.15696
+        scale 0.88000 0.88000 0.88000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param color s_foliage_muted
+        param force_shadows true
+        param model vine_leafy_transition_s
+        param seethrough_direction 9
+        param seethrough_prop false
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_transition_16_1
+        position -448.48389 93.59964 -227.23901
+        rotation 4.00714 -75.74863 4.53581
+        scale 0.81000 0.89000 0.98000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param color s_foliage_muted
+        param force_shadows true
+        param model vine_leafy_transition_m
+        param wind_r 0.5
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_transition_16_2
+        position -617.30029 145.54298 -390.05786
+        rotation 4.44219 71.25428 16.64990
+        scale 0.81000 0.89000 0.98000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param color s_foliage_muted
+        param force_shadows true
+        param model vine_leafy_transition_m
+        param wind_r 0.5
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_transition_16_3
+        position -347.60010 504.39999 -133.19995
+        rotation 2.34964 10.48316 3.30974
+        scale 0.81000 0.89000 0.98000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param color s_foliage_muted
+        param force_shadows true
+        param model vine_leafy_transition_m
+        param wind_r 0.5
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_transition_17_1
+        position -355.42725 55.17557 77.95190
+        rotation 1.70350 -93.78472 -6.32410
+        scale 0.66000 0.66000 0.66000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param color s_foliage_muted
+        param force_shadows true
+        param model vine_leafy_transition_s
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_transition_18_1
+        position -643.85596 84.24819 -196.93921
+        rotation 9.34966 98.94282 9.48379
+        scale 0.81000 0.89000 0.89000
+        param __shadow true
+        param best_lod 3
+        param clip noclip
+        param color s_foliage_muted
+        param force_shadows true
+        param model vine_leafy_transition_s
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_transition_19_1
+        position -614.97168 166.69550 -239.81641
+        rotation -10.24915 72.36893 4.38502
+        scale 0.81000 0.89000 0.89000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param color s_foliage_muted
+        param force_shadows true
+        param model vine_leafy_transition_s
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_transition_19_2
+        position -581.06445 170.47003 -449.39893
+        rotation 2.46171 21.30312 10.77065
+        scale 0.81000 0.89000 0.89000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param color s_foliage_muted
+        param force_shadows true
+        param model vine_leafy_transition_s
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_transition_20_1
+        position -354.97559 118.72826 -23.92554
+        rotation 2.94064 -67.74440 -29.78517
+        scale 0.64000 0.70321 0.70321
+        param __shadow true
+        param best_lod 3
+        param clip noclip
+        param color s_foliage_muted
+        param force_shadows true
+        param model vine_leafy_transition_m
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_transition_24_1
+        position -370.74609 83.68869 43.28271
+        rotation 24.77215 -157.08615 -6.90032
+        scale 0.66000 0.76000 0.66000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param color s_foliage_muted
+        param force_shadows true
+        param model vine_leafy_transition_s
+        param wind_r 0.2
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_transition_28
+        position 364.39990 50.80000 8.00000
+        rotation 5.00700 100.71241 -13.19545
+        scale 0.88000 0.88000 0.88000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param color s_foliage_muted
+        param force_shadows true
+        param model vine_leafy_transition_s
+        param seethrough_direction 9
+        param seethrough_prop false
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_transition_31
+        position 586.39990 74.00000 -5.19995
+        rotation -2.01161 -88.11112 -8.48047
+        scale 1.25000 1.13000 1.14000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param color s_foliage_muted
+        param force_shadows true
+        param model vine_leafy_transition_m
+        param seethrough_direction 9
+        param seethrough_prop false
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_transition_40
+        position 382.96387 458.73370 -219.18188
+        rotation -2.12623 1.75884 -4.87995
+        scale 1.25000 1.13000 1.14000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param color s_foliage_muted
+        param force_shadows true
+        param model vine_leafy_transition_m
+        param seethrough_direction 9
+        param seethrough_prop false
+    }
+    prefab_entity
+    {
+        name prop_vine_leafy_transition_41
+        position 370.72852 469.59253 88.84106
+        rotation 0.84770 -163.89302 5.25425
+        scale 1.25000 1.13000 1.14000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param color s_foliage_muted
+        param force_shadows true
+        param model vine_leafy_transition_m
+        param seethrough_direction 9
+        param seethrough_prop false
+    }
+    prefab_entity
+    {
+        name prop_vine_liana_angled_l_0_1
+        position -165.88330 531.73767 36.72852
+        rotation -72.38317 -82.45033 161.43439
+        scale 0.67000 0.67000 0.56000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model vine_liana_angled_l_01
+    }
+    prefab_entity
+    {
+        name prop_vine_liana_angled_lea_4
+        position -504.00000 416.09689 -80.00000
+        rotation -3.96601 75.20040 7.70805
+        scale 0.90000 0.90000 0.90000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model vine_liana_angled_leaves_s_01
+    }
+    prefab_entity
+    {
+        name prop_vine_liana_ground_lea_2
+        position -438.78125 417.06781 -116.12305
+        rotation 2.38983 -71.07445 4.35578
+        scale 1.17000 1.17000 1.17000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model vine_liana_ground_leaves_m_02
+    }
+    prefab_entity
+    {
+        name prop_vine_liana_ground_m_0
+        position 352.81836 409.33716 107.70020
+        rotation -0.27815 -90.95287 2.18419
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip noclip
+        param force_shadows true
+        param model vine_liana_ground_m_02
+        param seethrough_direction 9
+        param seethrough_prop false
+    }
+    prefab_entity
+    {
+        name prop_vine_liana_ground_s
+        position 339.37354 461.16559 -122.92505
+        rotation 6.71882 120.07110 -1.77373
+        scale 1.90000 1.90000 1.90000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model vine_liana_ground_leaves_s_01
+        param seethrough_direction 9
+        param seethrough_prop false
+    }
+}

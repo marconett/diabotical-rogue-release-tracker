@@ -1,0 +1,32 @@
+asset lamp_stand_sm_01a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name light_3
+        position 0 38.80000 0
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param clip false
+        param clip_min_y -0.589843
+        param color s_light_neutral
+        param intensity 2
+        param radius 256
+        param type point
+    }
+    prefab_entity
+    {
+        name prop_kb_fences_tech_lamp_0_1
+        position 0 -0.40000 0
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_kb_fences_tech_lamp_0_1
+        param best_lod 0
+        param color3_matlib_mat_lib_emissive s_emissive_neutral
+        param force_shadows true
+        param model kb_fences_tech_lamp_02
+    }
+}

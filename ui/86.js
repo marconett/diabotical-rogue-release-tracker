@@ -628,7 +628,7 @@ function select_change_value(el, action) {
     }
 }
 
-function create_game_mode_select(parent_node, change_cb, on_init) {
+function create_game_mode_select(parent_node, change_cb, on_init, include_all_mode) {
     let modes = [];
     const game_mode_map = GAME.get_data("game_mode_map");
     if (game_mode_map) {
@@ -647,6 +647,12 @@ function create_game_mode_select(parent_node, change_cb, on_init) {
         opt.dataset.i18n = mode.i18n;
         opt.dataset.value = mode.mode;
         opt.textContent = localize(mode.i18n);
+        parent_node.appendChild(opt)
+    }
+    if (include_all_mode) {
+        let opt = _createElement("div", "i18n", localize("all_modes"));
+        opt.dataset.value = "all";
+        opt.dataset.i18n = "all_modes";
         parent_node.appendChild(opt)
     }
     ui_setup_select(parent_node, change_cb)
