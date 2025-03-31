@@ -440,7 +440,7 @@
         "can_upgrade_tactical_reload": "true"
     },
     {
-        "asset_name": "cb28568e-d4be-4dd5-858e-6ef0d8c7f7f6",
+        "asset_name": "15e7ace4-2a59-43d8-ae48-fb91128bfcd9",
         "dynamic_rules": [],
         "selectable": "true",
         "show_in_dev_console": "true",
@@ -515,7 +515,7 @@
         "weapon_type": "melee"
     },
     {
-        "asset_name": "53eb5e2f-e77a-426e-8989-711451256b59",
+        "asset_name": "3d65cd43-2dc9-4a16-b577-ec9cb0cd1ff8",
         "dynamic_rules": [],
         "name_translation_key": "weapon_diabotical_rocketlauncher",
         "desc_translation_key": "weapon_diabotical_rocketlauncher_desc",
@@ -625,7 +625,7 @@
         "detached_shot_particles": "false"
     },
     {
-        "asset_name": "28f0c604-848f-4111-90da-1d074f5cf918",
+        "asset_name": "b353361d-3313-4454-a216-4a7716bce640",
         "dynamic_rules": [],
         "name_translation_key": "weapon_pncr",
         "desc_translation_key": "weapon_pncr_desc",
@@ -740,7 +740,7 @@
         "impact_sound": "w_pncr_impact"
     },
     {
-        "asset_name": "f8591078-daaa-499b-9b5c-13b5b657bfb6",
+        "asset_name": "19d1008c-18bc-4912-8015-cb918db3320b",
         "dynamic_rules": [],
         "selectable": "true",
         "show_in_dev_console": "true",
@@ -832,7 +832,7 @@
         "weapon_type": "melee"
     },
     {
-        "asset_name": "c70ceb59-ac13-4683-b76a-36d156c8dfcb",
+        "asset_name": "5cc566ce-cadf-4fc3-a842-7a6d70a97b46",
         "dynamic_rules": [],
         "name_translation_key": "weapon_machinegun",
         "desc_translation_key": "weapon_machinegun_desc",
@@ -953,7 +953,7 @@
         "multi_round_particles": "false"
     },
     {
-        "asset_name": "41bf7eef-9a0e-499e-ad9d-21bec1bfc629",
+        "asset_name": "a86300b2-d861-4e14-af92-77b37c232bd8",
         "dynamic_rules": [],
         "name_translation_key": "weapon_shaft",
         "desc_translation_key": "weapon_shaft_desc",
@@ -1085,7 +1085,7 @@
         "detached_shot_particles": "false"
     },
     {
-        "asset_name": "da166f86-291c-4c1d-9534-b7e635dfdc8a",
+        "asset_name": "8964ce44-6706-4006-bf94-3791072d78c7",
         "dynamic_rules": [],
         "name_translation_key": "weapon_supershotgun",
         "desc_translation_key": "weapon_supershotgun_desc",
@@ -1231,7 +1231,7 @@
         "multi_round_particles": "false"
     },
     {
-        "asset_name": "a09e2d67-e374-4f60-a26b-914337ed39a4",
+        "asset_name": "75fa80c2-b3d3-46cc-9db6-8776f30c11a6",
         "dynamic_rules": [],
         "name_translation_key": "weapon_blaster",
         "desc_translation_key": "weapon_blaster_desc",
@@ -3989,7 +3989,7 @@
         ]
     },
     {
-        "asset_name": "97708bf8-c791-48c4-bdc7-cee14a4a24a5",
+        "asset_name": "f8334cd7-3b12-46a4-a8c9-78344a2d355a",
         "dynamic_rules": [],
         "name": "grenadelauncher_increase_reload_ammo",
         "name_translation_key": "grenadelauncher_increase_reload_ammo",
@@ -4168,7 +4168,7 @@
         "max_vertical_movement_sway": "0.05"
     },
     {
-        "asset_name": "668b1807-bd68-4657-ae2b-1bc63515fbc3",
+        "asset_name": "7fb7b3fa-c2f1-4522-b75a-f1970aa1c09c",
         "dynamic_rules": [],
         "selectable": "true",
         "show_in_dev_console": "false",
