@@ -374,7 +374,8 @@ function parse_modes(data) {
             team_count: mode.team_count,
             mode_id: mode.mode_name,
             mode_key: m.mode_key,
-            locked: mode.enabled ? false : true
+            locked: mode.enabled ? false : true,
+            official: true
         };
         const custom_mode = GAME.get_data("CUSTOM_MODE_DEFINITIONS", m.mode_key);
         if (custom_mode) {

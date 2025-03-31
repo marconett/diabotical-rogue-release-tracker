@@ -9,7 +9,7 @@ diabotical_shaft
 	
 	respawn_time 9
 	weapon_tag dbtshaft
-	color A35EBA
+	color ec85b4
 	category 4
 	bind_group 4
 	

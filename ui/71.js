@@ -2,7 +2,7 @@ var global_mm_time = 0;
 var global_mm_searching = false;
 var global_mm_start_ts = null;
 var queue_stats_ts = 0;
-var queue_stats = null;
+var queue_stats = {};
 const QUEUE_STATS_TIMEOUT_MS = 30 * 1e3;
 
 function init_matchmaking() {

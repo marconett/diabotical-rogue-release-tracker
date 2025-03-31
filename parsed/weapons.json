@@ -72,8 +72,8 @@
             "-2.8",
             "14"
         ],
-        "shot_sound": "w_rev_fire",
-        "shot_sound2": "w_rev_fire_distant",
+        "burst_sound": "w_rev_fire",
+        "burst_distance_sound": "w_rev_fire_distant",
         "equip_sound": "w_rev_equip",
         "hit_sound": "fb_enemy_hit",
         "critical_hit_sound": "fb_enemy_hit_crit",
@@ -169,30 +169,30 @@
         "model_position_third_person": "0",
         "model_rotation_third_person": "0",
         "model_position": [
-            "-0.598556",
-            "-0.944655",
-            "-1.84743"
+            "-0.766",
+            "-1.034",
+            "-1.514"
         ],
         "model_position_centered": [
-            "-0.539819",
-            "-0.843027",
-            "-2.13049"
+            "-0.540",
+            "-0.843",
+            "-2.130"
         ],
         "model_post_rotation": [
-            "-0.0610865",
-            "-0.00872665",
-            "-0.0174533"
+            "-0.071",
+            "-0.042",
+            "-0.017"
         ],
         "model_post_rotation_centered": [
-            "-0.0567232",
-            "-0.015708",
-            "-0.0174533"
+            "-0.057",
+            "-0.016",
+            "-0.017"
         ],
         "model_scale": "0.04",
         "model_scale_centered": "0.04",
-        "fov": "55",
-        "fov_centered": "75",
-        "model_camera_scale": "2",
+        "fov": "55.00",
+        "fov_centered": "75.00",
+        "model_camera_scale": "3",
         "model_camera_scale_centered": "2",
         "muzzle": [
             "2.7",
@@ -440,13 +440,13 @@
         "can_upgrade_tactical_reload": "true"
     },
     {
-        "asset_name": "c38b629c-48e4-4916-8a8a-6b8b0282ea6c",
+        "asset_name": "cb28568e-d4be-4dd5-858e-6ef0d8c7f7f6",
         "dynamic_rules": [],
         "selectable": "true",
         "show_in_dev_console": "true",
         "weapon_tag": "melee",
         "bind_group": "9",
-        "color": "888888",
+        "color": "45c188",
         "damage": "40",
         "knockback": "100",
         "ground_knockback": "100",
@@ -515,7 +515,7 @@
         "weapon_type": "melee"
     },
     {
-        "asset_name": "c72d7e2f-f458-4cd9-8cda-e66cdcba0a1e",
+        "asset_name": "53eb5e2f-e77a-426e-8989-711451256b59",
         "dynamic_rules": [],
         "name_translation_key": "weapon_diabotical_rocketlauncher",
         "desc_translation_key": "weapon_diabotical_rocketlauncher_desc",
@@ -542,7 +542,7 @@
             "1",
             "1"
         ],
-        "color": "EBBA45",
+        "color": "8383ff",
         "icon_path": "images/weapon_icons/wp_hud_rocketlauncher_02.png",
         "icon_path2": "images/weapon_icons/wp_card_rocketlauncher.png",
         "weapon_icon_path": "images/weapon_icons/wp_card_rocketlauncher_nobg.png",
@@ -625,7 +625,7 @@
         "detached_shot_particles": "false"
     },
     {
-        "asset_name": "e862bf60-b848-43cb-84e4-c7aef17d8f1d",
+        "asset_name": "28f0c604-848f-4111-90da-1d074f5cf918",
         "dynamic_rules": [],
         "name_translation_key": "weapon_pncr",
         "desc_translation_key": "weapon_pncr_desc",
@@ -636,7 +636,7 @@
         "category": "5",
         "bind_group": "5",
         "weapon_tag": "dbtpncr",
-        "color": "1fa8b6",
+        "color": "f2c037",
         "damage": "70",
         "bonus_consecutive_damage": "5",
         "max_bonus_consecutive_damage_instances": "6",
@@ -672,6 +672,7 @@
         "zoomed_recoil_recovery_time": "0.4",
         "zoomed_recoil_time": "0.06",
         "zoomed_walk_speed": "175",
+        "zoomed_scope": "1",
         "rotate_shot_particles_by_shot_direction": "true",
         "shot_particles": "weapon_pncr_beam",
         "shot_particles_3p": "weapon_pncr_beam_3p",
@@ -692,24 +693,24 @@
             "0"
         ],
         "model_position": [
-            "-0.863",
+            "-0.785",
             "-1.194",
-            "-1.100"
+            "-1.167"
         ],
         "model_position_centered": [
-            "-0.743",
-            "-1.407",
-            "-1.686"
+            "-1.021",
+            "-2.119",
+            "-2.975"
         ],
         "model_post_rotation": [
-            "-0.057",
-            "-0.124",
-            "-0.062"
+            "-0.062",
+            "-0.136",
+            "-0.095"
         ],
         "model_post_rotation_centered": [
-            "-0.079",
-            "-0.070",
-            "-0.017"
+            "-0.049",
+            "-0.100",
+            "-0.065"
         ],
         "model_scale": [
             "0.025",
@@ -739,13 +740,13 @@
         "impact_sound": "w_pncr_impact"
     },
     {
-        "asset_name": "8646b012-788b-4458-bf72-6d5f8a9f1256",
+        "asset_name": "f8591078-daaa-499b-9b5c-13b5b657bfb6",
         "dynamic_rules": [],
         "selectable": "true",
         "show_in_dev_console": "true",
         "weapon_tag": "melee",
         "bind_group": "9",
-        "color": "888888",
+        "color": "45c188",
         "damage": "40",
         "knockback": "100",
         "ground_knockback": "100",
@@ -805,6 +806,7 @@
             "-2.8",
             "14"
         ],
+        "zoomed_scope": "1",
         "smoothing_factor": "8.0",
         "vertical_sway": "0.8",
         "horizontal_sway": "0.8",
@@ -830,7 +832,7 @@
         "weapon_type": "melee"
     },
     {
-        "asset_name": "35949f2e-23ee-4f5f-83da-8a7c6793dae0",
+        "asset_name": "c70ceb59-ac13-4683-b76a-36d156c8dfcb",
         "dynamic_rules": [],
         "name_translation_key": "weapon_machinegun",
         "desc_translation_key": "weapon_machinegun_desc",
@@ -838,7 +840,7 @@
         "rarity": "rare",
         "respawn_time": "9",
         "weapon_tag": "dbtmac",
-        "color": "1996D9",
+        "color": "d876f8",
         "bind_group": "6",
         "default_ammo": "100",
         "default_ammo_pickup_ammo": "50",
@@ -951,7 +953,7 @@
         "multi_round_particles": "false"
     },
     {
-        "asset_name": "33b15a17-5f47-4cb1-aa52-353c1e4c1194",
+        "asset_name": "41bf7eef-9a0e-499e-ad9d-21bec1bfc629",
         "dynamic_rules": [],
         "name_translation_key": "weapon_shaft",
         "desc_translation_key": "weapon_shaft_desc",
@@ -959,7 +961,7 @@
         "rarity": "epic",
         "respawn_time": "9",
         "weapon_tag": "dbtshaft",
-        "color": "A35EBA",
+        "color": "ec85b4",
         "category": "4",
         "bind_group": "4",
         "damage": [
@@ -1083,7 +1085,7 @@
         "detached_shot_particles": "false"
     },
     {
-        "asset_name": "7b708f2b-2531-432e-bb16-13a726298f24",
+        "asset_name": "da166f86-291c-4c1d-9534-b7e635dfdc8a",
         "dynamic_rules": [],
         "name_translation_key": "weapon_supershotgun",
         "desc_translation_key": "weapon_supershotgun_desc",
@@ -1096,7 +1098,7 @@
         "default_ammo_pickup_ammo": "10",
         "default_weapon_pickup_ammo": "15",
         "max_ammo": "40",
-        "color": "A35EBA",
+        "color": "f7959a",
         "icon_path": "images/weapon_icons/wp_hud_shotgun_02.png",
         "icon_path2": "images/weapon_icons/wp_card_supershotgun.png",
         "weapon_icon_path": "images/weapon_icons/wp_card_shotgun_nobg.png",
@@ -1229,7 +1231,7 @@
         "multi_round_particles": "false"
     },
     {
-        "asset_name": "1480d994-799f-4b48-a963-5bf2d2f0896a",
+        "asset_name": "a09e2d67-e374-4f60-a26b-914337ed39a4",
         "dynamic_rules": [],
         "name_translation_key": "weapon_blaster",
         "desc_translation_key": "weapon_blaster_desc",
@@ -1254,7 +1256,7 @@
         "knockback_self": "20",
         "ground_knockback": "17.5",
         "ground_knockback_self": "20",
-        "color": "1996D9",
+        "color": "51c5bc",
         "icon_path": "images/weapon_icons/wp_hud_blaster_02.png",
         "icon_path2": "images/weapon_icons/wp_card_blaster.png",
         "weapon_icon_path": "images/weapon_icons/wp_card_blaster_nobg.png",
@@ -1344,7 +1346,7 @@
         "show_in_dev_console": "true",
         "weapon_tag": "melee",
         "bind_group": "9",
-        "color": "888888",
+        "color": "45c188",
         "damage": "40",
         "knockback": "100",
         "ground_knockback": "100",
@@ -3454,7 +3456,7 @@
         "required_class": "rogue_chunk",
         "respawn_time": "9",
         "weapon_tag": "shaft",
-        "color": "599cf5",
+        "color": "ec85b4",
         "category": "4",
         "bind_group": "4",
         "unlimited_ammo": "true",
@@ -3987,7 +3989,7 @@
         ]
     },
     {
-        "asset_name": "d7dfdec5-7c9a-4490-b446-d22ed4b67948",
+        "asset_name": "97708bf8-c791-48c4-bdc7-cee14a4a24a5",
         "dynamic_rules": [],
         "name": "grenadelauncher_increase_reload_ammo",
         "name_translation_key": "grenadelauncher_increase_reload_ammo",
@@ -4092,6 +4094,7 @@
         "zoomed_recoil_recovery_time": "0.4",
         "zoomed_recoil_time": "0.06",
         "zoomed_walk_speed": "175",
+        "zoomed_scope": "1",
         "rotate_shot_particles_by_shot_direction": "true",
         "shot_particles": "weapon_pncr_beam",
         "shot_particles_3p": "weapon_pncr_beam_3p",
@@ -4112,24 +4115,24 @@
             "0"
         ],
         "model_position": [
-            "-0.863",
+            "-0.785",
             "-1.194",
-            "-1.100"
+            "-1.167"
         ],
         "model_position_centered": [
-            "-0.743",
-            "-1.407",
-            "-1.686"
+            "-1.021",
+            "-2.119",
+            "-2.975"
         ],
         "model_post_rotation": [
-            "-0.057",
-            "-0.124",
-            "-0.062"
+            "-0.062",
+            "-0.136",
+            "-0.095"
         ],
         "model_post_rotation_centered": [
-            "-0.079",
-            "-0.070",
-            "-0.017"
+            "-0.049",
+            "-0.100",
+            "-0.065"
         ],
         "model_scale": [
             "0.025",
@@ -4165,7 +4168,7 @@
         "max_vertical_movement_sway": "0.05"
     },
     {
-        "asset_name": "b4f994a1-7383-4194-afc1-2383d11b1020",
+        "asset_name": "668b1807-bd68-4657-ae2b-1bc63515fbc3",
         "dynamic_rules": [],
         "selectable": "true",
         "show_in_dev_console": "false",
@@ -4173,7 +4176,7 @@
         "category": "5",
         "bind_group": "5",
         "weapon_tag": "i_pncr",
-        "color": "1fa8b6",
+        "color": "f2c037",
         "damage": "70",
         "bonus_consecutive_damage": "5",
         "max_bonus_consecutive_damage_instances": "6",

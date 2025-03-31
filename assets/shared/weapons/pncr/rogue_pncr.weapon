@@ -51,6 +51,8 @@ rogue_pncr
 	zoomed_recoil_time 0.06
 	
 	zoomed_walk_speed 175
+	
+	zoomed_scope 1
 
 	rotate_shot_particles_by_shot_direction true
 	shot_particles weapon_pncr_beam
@@ -64,10 +66,10 @@ rogue_pncr
 	model_scale_third_person 1 1 1 
 	model_position_third_person 0 0 0 
 	model_rotation_third_person 0 0 0 
-    model_position -0.863 -1.194 -1.100
-    model_position_centered -0.743 -1.407 -1.686
-    model_post_rotation -0.057 -0.124 -0.062
-    model_post_rotation_centered -0.079 -0.070 -0.017
+    model_position -0.785 -1.194 -1.167
+    model_position_centered -1.021 -2.119 -2.975
+    model_post_rotation -0.062 -0.136 -0.095
+    model_post_rotation_centered -0.049 -0.100 -0.065
 	model_scale 0.025 0.025 0.025 
 	model_scale_centered 0.05 0.05 0.05
     fov 50.00

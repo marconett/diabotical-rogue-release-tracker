@@ -231,9 +231,6 @@ const map_selection_modal = {
         if (this.state.type === "single_select" && typeof this.state.confirm_cb === "function" && this.state.selected !== null) {
             this.state.confirm_cb(this.state.selected)
         }
-        if (this.state.type === "vote" && typeof this.state.confirm_cb === "function") {
-            this.state.confirm_cb(this.state.selected)
-        }
         this.close_modal()
     },
     close_modal: function() {
@@ -246,6 +243,9 @@ const map_selection_modal = {
     },
     confirm_selection: function() {
         if (this.state.type === "vote" && (this.state.selected === null || this.el.create_vote_button.classList.contains("disabled"))) return;
+        if (this.state.type === "vote" && typeof this.state.confirm_cb === "function") {
+            this.state.confirm_cb(this.state.selected)
+        }
         this.close();
         _play_click1()
     },

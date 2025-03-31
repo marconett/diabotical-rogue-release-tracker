@@ -32,7 +32,7 @@ diabotical_rocketlauncher
 	
 	hit_radius 1 1
     
-	color EBBA45
+	color 8383ff
 	icon_path images/weapon_icons/wp_hud_rocketlauncher_02.png
 	icon_path2 images/weapon_icons/wp_card_rocketlauncher.png
 	weapon_icon_path images/weapon_icons/wp_card_rocketlauncher_nobg.png

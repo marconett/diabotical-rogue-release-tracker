@@ -114,7 +114,7 @@ assets\shared\models\animations\bigbot\1p\shotgun\shotgun_skm_shotgun_bigbot_1p.
 assets\shared\models\animations\bigbot\1p\shotgun\shotgun_skm_shotgun_bigbot_1p.fbx	1009276
 assets\shared\models\animations\bigbot\1p\shotgun\shotgun_slide_bigbot.dbm	146823
 assets\shared\models\animations\bigbot\1p\shotgun\shotgun_slide_bigbot.fbx	762652
-assets\shared\models\animations\bigbot\1p\skm_bigbot_1p.ani	5396
+assets\shared\models\animations\bigbot\1p\skm_bigbot_1p.ani	5439
 assets\shared\models\animations\bigbot\1p\skm_bigbot_1p.dbm	631339
 assets\shared\models\animations\bigbot\1p\skm_bigbot_1p.fbx	1153292
 assets\shared\models\animations\bigbot\ability_groundslam.dbm	96389
@@ -637,7 +637,7 @@ assets\shared\models\animations\chunkbot\1p\shotgun\shotgun_run_chunkbot.dbm	145
 assets\shared\models\animations\chunkbot\1p\shotgun\shotgun_run_chunkbot.fbx	755004
 assets\shared\models\animations\chunkbot\1p\shotgun\shotgun_slide_chunkbot.dbm	145219
 assets\shared\models\animations\chunkbot\1p\shotgun\shotgun_slide_chunkbot.fbx	755004
-assets\shared\models\animations\chunkbot\1p\skm_chunkbot_1p.ani	17792
+assets\shared\models\animations\chunkbot\1p\skm_chunkbot_1p.ani	17835
 assets\shared\models\animations\chunkbot\1p\skm_chunkbot_1p.dbm	791273
 assets\shared\models\animations\chunkbot\1p\skm_chunkbot_1p.fbx	1153324
 assets\shared\models\animations\chunkbot\1p\submachinegun\submachinegun_crouch_idle_chunkbot.dbm	398659
@@ -2074,7 +2074,7 @@ assets\shared\models\animations\weesuit\1p\skills\hookshot_pose_weesuit.dbm	2616
 assets\shared\models\animations\weesuit\1p\skills\hookshot_pose_weesuit.fbx	610124
 assets\shared\models\animations\weesuit\1p\skills\hookshot_transition_weesuit.dbm	46137
 assets\shared\models\animations\weesuit\1p\skills\hookshot_transition_weesuit.fbx	643820
-assets\shared\models\animations\weesuit\1p\skm_weesuit_1p.ani	6371
+assets\shared\models\animations\weesuit\1p\skm_weesuit_1p.ani	6414
 assets\shared\models\animations\weesuit\1p\skm_weesuit_1p.dbm	1467603
 assets\shared\models\animations\weesuit\1p\skm_weesuit_1p.fbx	1434252
 assets\shared\models\animations\weesuit\blaster_idle.dbm	26169
@@ -3182,7 +3182,7 @@ assets\shared\models\animations\wp_shotgun\shotgun_materials\shotgun_vintage\skm
 assets\shared\models\animations\wp_shotgun\shotgun_materials\shotgun_vintage\skm_shotgun_preview_rog_we_ss_vintage.material	608
 assets\shared\models\animations\wp_shotgun\shotgun_reload.dbm	8235
 assets\shared\models\animations\wp_shotgun\shotgun_reload.fbx	62204
-assets\shared\models\animations\wp_shotgun\skm_shotgun.ani	771
+assets\shared\models\animations\wp_shotgun\skm_shotgun.ani	831
 assets\shared\models\animations\wp_shotgun\skm_shotgun.dbm	316828
 assets\shared\models\animations\wp_shotgun\skm_shotgun.fbx	275724
 assets\shared\models\animations\wp_shotgun\slide.dbm	16271

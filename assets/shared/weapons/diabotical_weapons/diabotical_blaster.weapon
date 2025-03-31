@@ -33,7 +33,7 @@ diabotical_blaster
   	ground_knockback 17.5
 	ground_knockback_self 20
 	
-	color 1996D9
+	color 51c5bc
 	icon_path images/weapon_icons/wp_hud_blaster_02.png
 	icon_path2 images/weapon_icons/wp_card_blaster.png
 	weapon_icon_path images/weapon_icons/wp_card_blaster_nobg.png

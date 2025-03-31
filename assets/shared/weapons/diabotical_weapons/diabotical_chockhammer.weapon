@@ -4,7 +4,7 @@ diabotical_chockhammer
 	show_in_dev_console true
     weapon_tag melee
     bind_group 9
-	color 888888
+	color 45c188
 	//group 5
 	damage 40
 	knockback 100
@@ -16,7 +16,7 @@ diabotical_chockhammer
 	hit_radius 50
 
 	allow_during_bolt true
-	
+
 	//hit_radius 100
 	
 	icon_path images/weapon_icons/wp_hud_hammer_silver.png
@@ -46,6 +46,8 @@ diabotical_chockhammer
 	model_camera_scale_centered 2 			
 	muzzle 2.7 -2.8 14
 
+	zoomed_scope 1
+	
 	// weapon_sway
 	smoothing_factor 8.0
 	vertical_sway 0.8

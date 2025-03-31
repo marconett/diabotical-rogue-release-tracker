@@ -10,7 +10,7 @@ rogue_shaft
 	
 	respawn_time 9
 	weapon_tag shaft
-	color 599cf5
+	color ec85b4
 	category 4
 	bind_group 4
 	

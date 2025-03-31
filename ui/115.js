@@ -34,6 +34,7 @@ const page_crosshair = new function() {
             content: "crosshair_screen_normal",
             scroll: "settings_screen_crosshair_scroll",
             cb: () => {
+                current_id = 0;
                 this.select_weapon(current_id, false)
             }
         },
@@ -41,6 +42,7 @@ const page_crosshair = new function() {
             content: "crosshair_screen_zoom",
             scroll: "settings_screen_crosshair_scroll_zoom",
             cb: () => {
+                current_id = 0;
                 this.select_weapon(current_id, true)
             }
         },
@@ -48,7 +50,7 @@ const page_crosshair = new function() {
             content: "crosshair_screen_zoom",
             scroll: "settings_screen_crosshair_scroll_zoom",
             cb: () => {
-                this.select_weapon(SNIPER_ZOOM_INDEX[0])
+                this.select_weapon(SNIPER_ZOOM_INDEX[0], true)
             }
         }
     };

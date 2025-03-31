@@ -4,7 +4,7 @@ rogue_sword
 	show_in_dev_console true
     weapon_tag melee
     bind_group 9
-	color 888888
+	color 45c188
 	//group 5
 	damage 40
 	knockback 100

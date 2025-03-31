@@ -15,7 +15,7 @@ diabotical_supershotgun
 	default_weapon_pickup_ammo 15
 	max_ammo 40
 	
-	color A35EBA
+	color f7959a
 	icon_path images/weapon_icons/wp_hud_shotgun_02.png
 	icon_path2 images/weapon_icons/wp_card_supershotgun.png
 	weapon_icon_path images/weapon_icons/wp_card_shotgun_nobg.png

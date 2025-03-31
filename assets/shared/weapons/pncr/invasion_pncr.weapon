@@ -6,7 +6,7 @@ invasion_pncr
 	category 5
 	bind_group 5
 	weapon_tag i_pncr
-	color 1fa8b6
+	color f2c037
 	//group 4
 	damage 70
 	bonus_consecutive_damage 5

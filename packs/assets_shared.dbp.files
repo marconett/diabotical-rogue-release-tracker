@@ -429,10 +429,10 @@ assets\shared\scripts\weapons\skills.weapons	63696
 assets\shared\weapons\blaster\rogue_blaster.weapon	4624
 assets\shared\weapons\crossbow\rogue_crossbow.weapon	6873
 assets\shared\weapons\diabotical_weapons\diabotical_blaster.weapon	3083
-assets\shared\weapons\diabotical_weapons\diabotical_chockhammer.weapon	1877
+assets\shared\weapons\diabotical_weapons\diabotical_chockhammer.weapon	1896
 assets\shared\weapons\diabotical_weapons\diabotical_hammer.weapon	1410
 assets\shared\weapons\diabotical_weapons\diabotical_machinegun.weapon	2841
-assets\shared\weapons\diabotical_weapons\diabotical_pncr.weapon	2355
+assets\shared\weapons\diabotical_weapons\diabotical_pncr.weapon	2375
 assets\shared\weapons\diabotical_weapons\diabotical_rocketlauncher.weapon	3226
 assets\shared\weapons\diabotical_weapons\diabotical_shaft.weapon	3508
 assets\shared\weapons\diabotical_weapons\diabotical_supershotgun.weapon	2963
@@ -453,11 +453,10 @@ assets\shared\weapons\heavysniper\scope_heavny_sniper_rifle_01.png.dds	1882548
 assets\shared\weapons\machinegun\rogue_machinegun.weapon	6807
 assets\shared\weapons\melee\rogue_sword.weapon	1387
 assets\shared\weapons\pncr\invasion_pncr.weapon	3204
-assets\shared\weapons\pncr\rogue_pncr.weapon	2503
-assets\shared\weapons\revolver\rogue_revolver.weapon	5664
-assets\shared\weapons\revolver\rogue_revolver_secondary.weapon	1994
+assets\shared\weapons\pncr\rogue_pncr.weapon	2523
+assets\shared\weapons\revolver\rogue_revolver.weapon	5642
+assets\shared\weapons\revolver\rogue_revolver_secondary.weapon	2004
 assets\shared\weapons\rocketlauncher\rogue_rocketlauncher.weapon	6336
 assets\shared\weapons\shaft\rogue_shaft.weapon	4695
-assets\shared\weapons\shared.lnk	1245
 assets\shared\weapons\submachinegun\rogue_submachinegun.weapon	5921
 assets\shared\weapons\supershotgun\rogue_supershotgun.weapon	5538

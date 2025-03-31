@@ -63,9 +63,9 @@ rogue_revolver_secondary
 	
 	
 	//close
-	shot_sound w_rev_fire
+	burst_sound w_rev_fire
 	//distant
-	shot_sound2 w_rev_fire_distant
+	burst_distance_sound w_rev_fire_distant
 	// shot_sound_low_ammo2 weapon_pistol_fire_distant1 weapon_pistol_fire_distant2 weapon_pistol_fire_distant3 weapon_pistol_fire_distant4 weapon_pistol_fire_distant5
 	equip_sound w_rev_equip
 	hit_sound fb_enemy_hit

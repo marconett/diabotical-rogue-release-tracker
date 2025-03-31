@@ -25,7 +25,7 @@ shaders\card_selection.ps.cso	4676
 shaders\card_selection.vs.cso	1656
 shaders\character_cloak.ps.cso	5260
 shaders\character_dissolve.ps.cso	8148
-shaders\character_extra.ps.cso	1300
+shaders\character_extra.ps.cso	1304
 shaders\character_hexagon.ps.cso	8488
 shaders\clustered.cs.cso	6976
 shaders\collision.ps.cso	8264

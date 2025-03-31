@@ -216,8 +216,9 @@ const page_play_rogue = new function() {
                 team_size: 6,
                 team_count: 2,
                 mode_id: "warmup",
-                mode_key: "",
-                locked: false
+                mode_key: "warmup",
+                locked: false,
+                official: true
             });
             matchmaking.official_modes_recieved = true;
             mm_check_missing_modes();
@@ -687,50 +688,25 @@ const page_play_rogue = new function() {
         }))
     }
     this.mm_refresh = () => {
+        request_queue_stats();
+        update_queue_stats();
         this.refresh_user_modes()
     };
 
     function update_queue_stats() {
-        return;
-        let counts = html.cards.querySelectorAll(".card .count .value");
-        for (let c of counts) {
-            let total_playing = 0;
-            if (queue_stats) {
-                let key = null;
-                if (c.dataset.mode_key && c.dataset.mode_key in queue_stats) {
-                    key = c.dataset.mode_key
-                } else if (c.dataset.type === "warmup") {
-                    key = "warmup"
+        let mode_row = html.mm_list.querySelectorAll(".list_item");
+        for (let mr of mode_row) {
+            let count_el = _get_first_with_class_in_parent(mr, "count");
+            let mode_id = mr.dataset.id;
+            if (queue_stats && mode_id in queue_stats) {
+                let count = 0;
+                if ("total" in queue_stats[mode_id]) {
+                    if ("s" in queue_stats[mode_id].total) count += queue_stats[mode_id].total.s;
+                    if ("p" in queue_stats[mode_id].total) count += queue_stats[mode_id].total.p
                 }
-                if (key) {
-                    for (let region in queue_stats[key]) {
-                        if (region === "total") {
-                            total_playing = 0;
-                            if ("s" in queue_stats[key]["total"]) total_playing += queue_stats[key]["total"].s;
-                            if ("p" in queue_stats[key]["total"]) total_playing += queue_stats[key]["total"].p;
-                            break
-                        }
-                        if (key === "warmup") {
-                            if (Servers.selected_regions.has(region)) {
-                                if ("p" in queue_stats[key][region]) total_playing += queue_stats[key][region].p
-                            }
-                        } else {
-                            if (Servers.selected_regions.has(region)) {
-                                let region_total = 0;
-                                if ("s" in queue_stats[key][region]) region_total += queue_stats[key][region].s;
-                                if ("p" in queue_stats[key][region]) region_total += queue_stats[key][region].p;
-                                if (region_total > total_playing) total_playing = region_total
-                            }
-                        }
-                    }
-                }
-            }
-            console.log("update_queue_stats", c.dataset.type, c.dataset.mode_key, total_playing);
-            c.textContent = total_playing;
-            if (total_playing) {
-                c.parentElement.classList.add("visible")
+                count_el.textContent = count
             } else {
-                c.parentElement.classList.remove("visible")
+                count_el.textContent = ""
             }
         }
     }
@@ -765,9 +741,17 @@ const page_play_rogue = new function() {
                     continue
                 }
             }
+            let count = 0;
+            if (queue_stats && m.mode_key in queue_stats) {
+                if ("total" in queue_stats[m.mode_key]) {
+                    if ("s" in queue_stats[m.mode_key].total) count += queue_stats[m.mode_key].total.s;
+                    if ("p" in queue_stats[m.mode_key].total) count += queue_stats[m.mode_key].total.p
+                }
+            }
             list_item.appendChild(_createElement("div", "name", name));
             list_item.appendChild(_createElement("div", "mode", "The GD Studio"));
             list_item.appendChild(_createElement("div", "players", getVS(m.team_count, m.team_size)));
+            list_item.appendChild(_createElement("div", "count", count ? count : ""));
             let button_cont = _createElement("div", "ping");
             list_item.appendChild(button_cont);
             if (m.match_type === MATCH_TYPE_WARMUP) {
@@ -826,9 +810,19 @@ const page_play_rogue = new function() {
             if (matchmaking.selected_mode && matchmaking.selected_mode === m.mode_id) {
                 selected_found = list_item
             }
+            let lookup_id = m.mode_id;
+            if (m.official) lookup_id = m.mode_key;
+            let count = 0;
+            if (queue_stats && lookup_id in queue_stats) {
+                if ("total" in queue_stats[lookup_id]) {
+                    if ("s" in queue_stats[lookup_id].total) count += queue_stats[lookup_id].total.s;
+                    if ("p" in queue_stats[lookup_id].total) count += queue_stats[lookup_id].total.p
+                }
+            }
             list_item.appendChild(_createElement("div", "name", m.random_name ? m.random_name : m.name));
             list_item.appendChild(_createElement("div", "mode", m.user_name));
             list_item.appendChild(_createElement("div", "players", getVS(m.team_count, m.team_size)));
+            list_item.appendChild(_createElement("div", "count", count ? count : ""));
             let button_cont = _createElement("div", "ping");
             list_item.appendChild(button_cont);
             if (bool_am_i_leader) {
@@ -859,9 +853,17 @@ const page_play_rogue = new function() {
             if (matchmaking.selected_mode && matchmaking.selected_mode === m.mode_id) {
                 selected_found = list_item
             }
+            let count = 0;
+            if (queue_stats && m.mode_id in queue_stats) {
+                if ("total" in queue_stats[m.mode_id]) {
+                    if ("s" in queue_stats[m.mode_id].total) count += queue_stats[m.mode_id].total.s;
+                    if ("p" in queue_stats[m.mode_id].total) count += queue_stats[m.mode_id].total.p
+                }
+            }
             list_item.appendChild(_createElement("div", "name", m.random_name ? m.random_name : m.name));
             list_item.appendChild(_createElement("div", "mode", m.user_name));
             list_item.appendChild(_createElement("div", "players", getVS(m.team_count, m.team_size)));
+            list_item.appendChild(_createElement("div", "count", count ? count : ""));
             let button_cont = _createElement("div", "ping");
             list_item.appendChild(button_cont);
             if (bool_am_i_leader) {
@@ -912,9 +914,17 @@ const page_play_rogue = new function() {
             let list_item = _createElement("div", "list_item");
             list_item.dataset.id = m.mode_id;
             list_item.dataset.team_size = m.team_size;
+            let count = 0;
+            if (queue_stats && m.mode_id in queue_stats) {
+                if ("total" in queue_stats[m.mode_id]) {
+                    if ("s" in queue_stats[m.mode_id].total) count += queue_stats[m.mode_id].total.s;
+                    if ("p" in queue_stats[m.mode_id].total) count += queue_stats[m.mode_id].total.p
+                }
+            }
             list_item.appendChild(_createElement("div", "name", m.random_name ? m.random_name : m.name));
             list_item.appendChild(_createElement("div", "mode", m.user_name));
             list_item.appendChild(_createElement("div", "players", getVS(m.team_count, m.team_size)));
+            list_item.appendChild(_createElement("div", "count", count ? count : ""));
             let button_cont = _createElement("div", "ping");
             list_item.appendChild(button_cont);
             if (bool_am_i_leader) {

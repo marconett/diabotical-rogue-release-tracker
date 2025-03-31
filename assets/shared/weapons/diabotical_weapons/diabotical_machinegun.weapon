@@ -8,7 +8,7 @@ diabotical_machinegun
 	respawn_time 9
     //unique true
 	weapon_tag dbtmac
-	color 1996D9
+	color d876f8
     bind_group 6
 	
 	default_ammo 100
