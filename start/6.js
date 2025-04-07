@@ -3479,7 +3479,7 @@ const TRANSLATION_en_source = {
         engine: true
     },
     game_mode_wipeout: {
-        text: "Wipeout",
+        text: "Rogue Wipeout",
         engine: true
     },
     game_mode_2_desc_wipeout: {
@@ -7378,7 +7378,7 @@ const TRANSLATION_en_source = {
         engine: true
     },
     loading_screen_tip_2: {
-        text: "If you prefer to play tanky, choose Chunk. He can take the most damage.",
+        text: "If you prefer to play tanky, choose Tiny. He can take the most damage.",
         engine: true
     },
     loading_screen_tip_3: {

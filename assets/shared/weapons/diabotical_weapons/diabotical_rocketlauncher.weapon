@@ -23,6 +23,9 @@ diabotical_rocketlauncher
 	default_ammo_pickup_ammo 5
 	default_weapon_pickup_ammo 10
 	max_ammo 25
+	ammo_per_reload 1
+	reload 1000
+	reload_enabled false
 	
 	//Why gravity 1? Ask Viktor.
 	gravity 0

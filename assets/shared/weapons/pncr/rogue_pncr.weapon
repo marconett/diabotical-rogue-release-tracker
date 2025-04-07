@@ -24,6 +24,8 @@ rogue_pncr
 	default_ammo_pickup_ammo 5
 	default_weapon_pickup_ammo 10
 	max_ammo 25
+	reload 1000
+	reload_enabled false
 	penetrating true
 	
 	icon_path images/weapon_icons/wp_hud_pncr.png
@@ -51,6 +53,7 @@ rogue_pncr
 	zoomed_recoil_time 0.06
 	
 	zoomed_walk_speed 175
+	zoomed_crouch_speed 150
 	
 	zoomed_scope 1
 

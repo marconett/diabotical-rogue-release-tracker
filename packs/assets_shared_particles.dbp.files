@@ -1,6 +1,6 @@
 assets\shared\particles\effects.atlas	12410
 assets\shared\particles\effects.atlas.old	8033
-assets\shared\particles\effects_dave.atlas	35600
+assets\shared\particles\effects_dave.atlas	35988
 assets\shared\particles\effects_extra.atlas	50595
 assets\shared\particles\effects_scott.atlas	5899
 assets\shared\particles\effects_sean.atlas	18005
@@ -2455,11 +2455,11 @@ assets\shared\particles\system_definitions\weapon_rocket_impact_artifact_v5.part
 assets\shared\particles\system_definitions\weapon_rocket_impact_artifact_v6.particles	63503
 assets\shared\particles\system_definitions\weapon_rocket_impact_artifact_v7.particles	58713
 assets\shared\particles\system_definitions\weapon_rocket_impact_gold.particles	17104
-assets\shared\particles\system_definitions\weapon_rocket_muzzle_1p.particles	18314
-assets\shared\particles\system_definitions\weapon_rocket_muzzle_1p_artifact.particles	18438
-assets\shared\particles\system_definitions\weapon_rocket_muzzle_2p.particles	7968
-assets\shared\particles\system_definitions\weapon_rocket_muzzle_3p.particles	35145
-assets\shared\particles\system_definitions\weapon_rocket_muzzle_3p_artifact.particles	16677
+assets\shared\particles\system_definitions\weapon_rocket_muzzle_1p.particles	18288
+assets\shared\particles\system_definitions\weapon_rocket_muzzle_1p_artifact.particles	18412
+assets\shared\particles\system_definitions\weapon_rocket_muzzle_2p.particles	7942
+assets\shared\particles\system_definitions\weapon_rocket_muzzle_3p.particles	35093
+assets\shared\particles\system_definitions\weapon_rocket_muzzle_3p_artifact.particles	16651
 assets\shared\particles\system_definitions\weapon_rocket_muzzle_flash.particles	1682
 assets\shared\particles\system_definitions\weapon_rocket_muzzle_flash_artifact.particles	1335
 assets\shared\particles\system_definitions\weapon_rocket_muzzle_gold.particles	5565
@@ -4726,6 +4726,11 @@ assets\shared\particles\textures\fb_muzzle_lightning.png.dds	3145924
 assets\shared\particles\textures\fb_muzzle_lightning_v4.png	254462
 assets\shared\particles\textures\fb_neon_shapes.png.dds	349700
 assets\shared\particles\textures\fb_pop_smoke2.png.dds	1398276
+assets\shared\particles\textures\fb_portal_tile.png	300343
+assets\shared\particles\textures\fb_portal_tile_v2.png.dds	5592580
+assets\shared\particles\textures\fb_portal_tile_v3.png.dds	5592580
+assets\shared\particles\textures\fb_portal_tile_v4.png.dds	89478660
+assets\shared\particles\textures\fb_portal_tile_v5.png.dds	89478660
 assets\shared\particles\textures\fb_quick_bolt_lightning_v1.png.dds	2796388
 assets\shared\particles\textures\fb_round_portal.png.dds	5592580
 assets\shared\particles\textures\fb_simple_burst_v1.png.dds	1398276

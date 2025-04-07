@@ -440,7 +440,7 @@
         "can_upgrade_tactical_reload": "true"
     },
     {
-        "asset_name": "15e7ace4-2a59-43d8-ae48-fb91128bfcd9",
+        "asset_name": "b4639023-a07c-4cea-9f8f-13950382d778",
         "dynamic_rules": [],
         "selectable": "true",
         "show_in_dev_console": "true",
@@ -515,7 +515,7 @@
         "weapon_type": "melee"
     },
     {
-        "asset_name": "3d65cd43-2dc9-4a16-b577-ec9cb0cd1ff8",
+        "asset_name": "37616fd6-481b-4d85-a329-a95f996063ea",
         "dynamic_rules": [],
         "name_translation_key": "weapon_diabotical_rocketlauncher",
         "desc_translation_key": "weapon_diabotical_rocketlauncher_desc",
@@ -535,6 +535,9 @@
         "default_ammo_pickup_ammo": "5",
         "default_weapon_pickup_ammo": "10",
         "max_ammo": "25",
+        "ammo_per_reload": "1",
+        "reload": "1000",
+        "reload_enabled": "false",
         "gravity": "0",
         "category": "3",
         "bind_group": "3",
@@ -625,11 +628,11 @@
         "detached_shot_particles": "false"
     },
     {
-        "asset_name": "b353361d-3313-4454-a216-4a7716bce640",
+        "asset_name": "99174bce-1a55-48e4-9942-3131ebd76f79",
         "dynamic_rules": [],
         "name_translation_key": "weapon_pncr",
         "desc_translation_key": "weapon_pncr_desc",
-        "unlimited_ammo": "true",
+        "unlimited_ammo": "false",
         "selectable": "true",
         "show_in_dev_console": "true",
         "respawn_time": "9",
@@ -645,6 +648,8 @@
         "default_ammo_pickup_ammo": "5",
         "default_weapon_pickup_ammo": "10",
         "max_ammo": "25",
+        "reload": "1000",
+        "reload_enabled": "false",
         "penetrating": "true",
         "icon_path": "images/weapon_icons/wp_hud_pncr.png",
         "icon_path2": "images/weapon_icons/wp_card_pncr.png",
@@ -662,16 +667,6 @@
         "charge_animation": "6",
         "charge_animation_bonus": "true",
         "rate": "1450",
-        "recoil_delay_recovery": "0.1",
-        "recoil_up": "1.5",
-        "recoil_side": "0.2",
-        "recoil_recovery_time": "0.45",
-        "recoil_time": "0.07",
-        "zoomed_recoil_up": "0.75",
-        "zoomed_recoil_side": "0.1",
-        "zoomed_recoil_recovery_time": "0.4",
-        "zoomed_recoil_time": "0.06",
-        "zoomed_walk_speed": "175",
         "zoomed_scope": "1",
         "rotate_shot_particles_by_shot_direction": "true",
         "shot_particles": "weapon_pncr_beam",
@@ -740,7 +735,7 @@
         "impact_sound": "w_pncr_impact"
     },
     {
-        "asset_name": "19d1008c-18bc-4912-8015-cb918db3320b",
+        "asset_name": "816908d3-bad6-4c54-91c4-229e06f896a7",
         "dynamic_rules": [],
         "selectable": "true",
         "show_in_dev_console": "true",
@@ -753,6 +748,8 @@
         "rate": "700",
         "speed": "0",
         "unlimited_ammo": "true",
+        "reload": "1000",
+        "reload_enabled": "false",
         "distance": "60",
         "hit_radius": "50",
         "allow_during_bolt": "true",
@@ -832,7 +829,7 @@
         "weapon_type": "melee"
     },
     {
-        "asset_name": "5cc566ce-cadf-4fc3-a842-7a6d70a97b46",
+        "asset_name": "f3b36f2c-dafa-4a1e-84c0-f3c4e6c84062",
         "dynamic_rules": [],
         "name_translation_key": "weapon_machinegun",
         "desc_translation_key": "weapon_machinegun_desc",
@@ -846,6 +843,8 @@
         "default_ammo_pickup_ammo": "50",
         "default_weapon_pickup_ammo": "100",
         "max_ammo": "200",
+        "reload": "1000",
+        "reload_enabled": "false",
         "rate": "100",
         "damage": "5",
         "spread": "0",
@@ -953,7 +952,7 @@
         "multi_round_particles": "false"
     },
     {
-        "asset_name": "a86300b2-d861-4e14-af92-77b37c232bd8",
+        "asset_name": "53d581f6-bd16-4e1c-a517-1133852b3681",
         "dynamic_rules": [],
         "name_translation_key": "weapon_shaft",
         "desc_translation_key": "weapon_shaft_desc",
@@ -986,6 +985,8 @@
         "default_weapon_pickup_ammo": "100",
         "max_ammo": "150",
         "min_ammo_gain": "10",
+        "reload": "1000",
+        "reload_enabled": "false",
         "zoomed_scope": "1",
         "icon_path": "images/weapon_icons/wp_hud_shaft_02.png",
         "icon_path2": "images/weapon_icons/wp_card_shaft.png",
@@ -1085,7 +1086,7 @@
         "detached_shot_particles": "false"
     },
     {
-        "asset_name": "8964ce44-6706-4006-bf94-3791072d78c7",
+        "asset_name": "fcb0976e-ba2c-4356-846b-fb12c1e1053b",
         "dynamic_rules": [],
         "name_translation_key": "weapon_supershotgun",
         "desc_translation_key": "weapon_supershotgun_desc",
@@ -1098,6 +1099,8 @@
         "default_ammo_pickup_ammo": "10",
         "default_weapon_pickup_ammo": "15",
         "max_ammo": "40",
+        "reload": "1000",
+        "reload_enabled": "false",
         "color": "f7959a",
         "icon_path": "images/weapon_icons/wp_hud_shotgun_02.png",
         "icon_path2": "images/weapon_icons/wp_card_supershotgun.png",
@@ -1231,7 +1234,7 @@
         "multi_round_particles": "false"
     },
     {
-        "asset_name": "75fa80c2-b3d3-46cc-9db6-8776f30c11a6",
+        "asset_name": "ff71e116-e154-488e-ab70-06e932d90de1",
         "dynamic_rules": [],
         "name_translation_key": "weapon_blaster",
         "desc_translation_key": "weapon_blaster_desc",
@@ -1249,6 +1252,8 @@
         "default_ammo_pickup_ammo": "50",
         "default_weapon_pickup_ammo": "75",
         "max_ammo": "150",
+        "reload": "1000",
+        "reload_enabled": "false",
         "splash_radius": "20",
         "center_of_mass_offset": "0",
         "center_of_mass_offset_self": "0",
@@ -3989,7 +3994,7 @@
         ]
     },
     {
-        "asset_name": "f8334cd7-3b12-46a4-a8c9-78344a2d355a",
+        "asset_name": "03b75cf2-6278-4b68-81ec-82c6e2b70e45",
         "dynamic_rules": [],
         "name": "grenadelauncher_increase_reload_ammo",
         "name_translation_key": "grenadelauncher_increase_reload_ammo",
@@ -4067,6 +4072,8 @@
         "default_ammo_pickup_ammo": "5",
         "default_weapon_pickup_ammo": "10",
         "max_ammo": "25",
+        "reload": "1000",
+        "reload_enabled": "false",
         "penetrating": "true",
         "icon_path": "images/weapon_icons/wp_hud_pncr.png",
         "icon_path2": "images/weapon_icons/wp_card_pncr.png",
@@ -4094,6 +4101,7 @@
         "zoomed_recoil_recovery_time": "0.4",
         "zoomed_recoil_time": "0.06",
         "zoomed_walk_speed": "175",
+        "zoomed_crouch_speed": "150",
         "zoomed_scope": "1",
         "rotate_shot_particles_by_shot_direction": "true",
         "shot_particles": "weapon_pncr_beam",
@@ -4168,7 +4176,7 @@
         "max_vertical_movement_sway": "0.05"
     },
     {
-        "asset_name": "7fb7b3fa-c2f1-4522-b75a-f1970aa1c09c",
+        "asset_name": "58f15cb6-ce51-4bbf-b90a-10066e502603",
         "dynamic_rules": [],
         "selectable": "true",
         "show_in_dev_console": "false",

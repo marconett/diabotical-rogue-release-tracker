@@ -32,6 +32,8 @@ diabotical_shaft
 	default_weapon_pickup_ammo 100
 	max_ammo 150
 	min_ammo_gain 10
+	reload 1000
+	reload_enabled false
 	
 	//switch_recoil_shake true
 	//recoil_shake_recovery_time 0.0275

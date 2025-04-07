@@ -1,0 +1,201 @@
+asset crate_stack_simple_05a
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name col_col_box_corner_18_1_10_1
+        position 0 -4.40000 0
+        rotation 0 -89.99998 0
+        scale 1.50000 0.60000 1.10000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param rotation_w 0
+        param size_w 1
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_18_1_11_1
+        position -15.59998 -4.40000 22.79993
+        rotation 0 -44.99999 0
+        scale 0.26000 0.60000 0.32000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param rotation_w 0
+        param size_w 1
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name col_col_box_corner_18_1_12_1
+        position 67.66028 -4.40000 30.00000
+        rotation 0 -45.00000 0
+        scale 0.43000 0.60000 0.32000
+        param best_lod 0
+        param clip player
+        param force_shadows false
+        param model col_box_corner
+        param no_show true
+        param rotation_w 0
+        param size_w 1
+        param skip_shadows true
+    }
+    prefab_entity
+    {
+        name light_14_1
+        position 44.39990 35.02468 34.01257
+        rotation 28.79897 -179.99999 -89.99999
+        scale 1.00000 1.00000 1.00000
+        param angle 80
+        param attenuation_exponent 1.4
+        param clip false
+        param clip_min_y -0.589843
+        param color s_light_neutral
+        param falloff 0.5
+        param gobo_texture gd_gobo_rectangle_lamp01.png
+        param intensity 4
+        param radius 152
+        param softness 0.00
+        param specular_scale 0.2
+        param type spot
+    }
+    prefab_entity
+    {
+        name light_16_1
+        position 44.40002 35.02468 20.00000
+        rotation 28.79897 0.00000 -89.99998
+        scale 1.00000 1.00000 1.00000
+        param angle 80
+        param attenuation_exponent 1.4
+        param clip false
+        param clip_min_y -0.589843
+        param color s_light_neutral
+        param falloff 0.5
+        param gobo_texture gd_gobo_rectangle_lamp01.png
+        param intensity 2
+        param radius 92
+        param softness 0.00
+        param specular_scale 0.2
+        param type spot
+    }
+    prefab_entity
+    {
+        name prop_explosive_barrel_clos_1
+        position 98.00000 0.06142 36.40002
+        rotation 0 70.20002 0
+        scale 1.10000 1.10000 1.10000
+        param __shadow true
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model explosive_barrel_closed_02
+    }
+    prefab_entity
+    {
+        name prop_cable_plug_01_1_1
+        position 46.00000 0.01613 112.00000
+        rotation -0.00000 -0.00000 89.99999
+        scale 1.08000 1.08000 1.08000
+        param __shadow true
+        param best_lod 0
+        param clip noclip
+        param force_shadows true
+        param model cable_plug_01
+    }
+    prefab_entity
+    {
+        name prop_canister_02_1_1
+        position 9.19995 0.05930 62.05945
+        rotation 14.65318 21.84128 -32.25779
+        scale 1.00000 1.04000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_canister_02_1
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model canister_02
+    }
+    prefab_entity
+    {
+        name prop_canister_02_3_1
+        position -6.79993 0.05250 21.59998
+        rotation 0 40.50000 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_canister_02_3
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model canister_02
+    }
+    prefab_entity
+    {
+        name prop_connector_04_1
+        position 64.00000 8.60000 78.40002
+        rotation 0 89.99998 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_connector_04
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model connector_04
+    }
+    prefab_entity
+    {
+        name prop_crate_06_1
+        position 17.58118 -0.00000 94.80591
+        rotation 0 -172.79998 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_crate_06
+        param best_lod 0
+        param clip weapon
+        param force_shadows true
+        param model crate_06_open
+    }
+    prefab_entity
+    {
+        name prop_crate_06_lid_1_1
+        position 17.21887 34.00000 93.59399
+        rotation -2.63643 -74.89846 8.60827
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_crate_06_lid_1
+        param best_lod 0
+        param clip weapon
+        param color_matlib_mat_lib_metal_painted s_bright
+        param force_shadows true
+        param model crate_06_lid
+    }
+    prefab_entity
+    {
+        name prop_crate_07_1
+        position 44.00000 -0.00000 26.39996
+        rotation 0.90000 0.00001 0.00000
+        scale 0.94000 0.79000 0.94000
+        param __shadow true
+        param _kitbash_connector -1
+        param _kitbash_parent prop_crate_07
+        param best_lod 0
+        param clip weapon
+        param color3_matlib_mat_lib_emissive 757575ff
+        param force_shadows true
+        param material_2 matlib_mat_lib_emissive
+        param model crate_07
+        param size_w 1
+    }
+}
+

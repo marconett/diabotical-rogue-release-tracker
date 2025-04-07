@@ -1,0 +1,323 @@
+asset tech_repair_table_01b
+{
+    type prefab
+    listed true
+    prefab_entity
+    {
+        name decal_decal_environment_dir_4
+        position 2.39990 1.30618 4.39990
+        rotation 90.00000 0 -17.79968
+        scale 150.00000 149.99997 20.00000
+        param albedo_map_enable true
+        param color 37212f70
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_environment_dirt_splat_03
+        param metal_map_enable false
+        param normal_map_enable false
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_graphical_graph_15
+        position -1.60010 35.20000 0.40015
+        rotation 90.00000 0 -180.00000
+        scale 27.15000 23.61843 20.00000
+        param albedo_map_enable true
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_graphical_graphical_corner_frame_02
+        param metal_map_enable false
+        param normal_map_enable true
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_graphical_graph_17
+        position 33.60010 35.04874 11.60010
+        rotation 90.00000 0 -89.99999
+        scale 19.37000 19.37000 35.00000
+        param albedo_map_enable true
+        param color s_decal
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_graphical_graphical_framed_square_01
+        param metal_map_enable false
+        param normal_map_enable true
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_graphical_graph_18
+        position 34.00000 35.04874 11.60010
+        rotation 90.00000 0 -89.99999
+        scale 11.62000 11.62000 46.26848
+        param albedo_map_enable true
+        param color s_decal
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_icons_symbols_graphical_icon_23
+        param metal_map_enable false
+        param normal_map_enable true
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_graphical_trian_3
+        position -1.19995 30.01296 11.23120
+        rotation 90.00000 0 178.49999
+        scale 90.72000 100.39999 11.33333
+        param albedo_map_enable true
+        param color 32697f56
+        param emissive_map_enable false
+        param gloss_map_enable true
+        param material decal_mat_graphical_trihexagon_pattern_01
+        param metal_map_enable false
+        param normal_map_enable false
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name decal_decal_paint_pre_paint_11
+        position -4.05640 -2.19557 5.31494
+        rotation 90.00000 0 -76.29967
+        scale 135.79999 135.80000 20.00000
+        param albedo_map_enable true
+        param color daa6903d
+        param emissive_map_enable false
+        param gloss_map_enable false
+        param material decal_mat_environment_dirt_natural_02
+        param metal_map_enable false
+        param normal_map_enable false
+        param scale 1.0
+        param v3 true
+    }
+    prefab_entity
+    {
+        name light_17
+        position 33.21313 42.10632 -13.80835
+        rotation 90.00000 0 -90.00001
+        scale 1.00000 1.00000 1.00000
+        param angle 110
+        param attenuation_exponent 2
+        param color 0c95c7ff
+        param color3 4f99ffff
+        param falloff 0.33
+        param hide_gi false
+        param intensity 3
+        param light_bake_only false
+        param radius 58.577
+        param rotation_w 0
+        param softness .4
+        param specular_scale 0.1
+        param type point
+    }
+    prefab_entity
+    {
+        name pfx_env_light_fogbeam3
+        position 33.16138 27.90619 -10.10376
+        rotation -1.37687 157.53952 176.67297
+        scale 1.00000 1.00000 1.00000
+        param color 2dc0feff
+        param delay 0
+        param destroy_on_loop false
+        param max_distance 0
+        param random_delay_max 0
+        param range_multiplier 1
+        param repeat_interval 0
+        param repeat_lifetime 0
+        param system env_light_fogbeam3
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_24_1
+        position -24.43848 48.30618 0.29614
+        rotation 1.80000 -90.00001 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 1
+        param clip no_clip
+        param force_shadows true
+        param model tech_debris_sm_24
+        param no_collision true
+    }
+    prefab_entity
+    {
+        name prop_computer_rack
+        position -0.39990 -1.20000 1.60010
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 0
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_dark
+        param model computer_rack_02
+        param no_show false
+    }
+    prefab_entity
+    {
+        name prop_ladder_attachment_01
+        position 0.55713 35.30434 12.08789
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip noclip
+        param force_shadows true
+        param model ladder_attachment_01
+        param no_show false
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_07
+        position 15.60010 35.05516 16.80005
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 0
+        param clip no_clip
+        param force_shadows true
+        param model tech_debris_sm_07
+        param no_collision true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_10_3
+        position 9.42334 10.95557 11.80713
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip no_clip
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_plates
+        param model tech_debris_sm_10
+        param no_collision true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_12
+        position 15.16187 13.30617 1.45459
+        rotation -2.97321 7.53794 -68.59590
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 3
+        param clip no_clip
+        param force_shadows true
+        param model tech_debris_sm_12
+        param no_collision true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_13_3
+        position -26.82471 10.94828 13.49609
+        rotation 0 0 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip no_clip
+        param force_shadows true
+        param model tech_debris_sm_13
+        param no_collision true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_13_4
+        position -26.82471 10.94827 -6.90381
+        rotation 0.00000 66.60000 -0.00000
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 3
+        param clip no_clip
+        param force_shadows true
+        param model tech_debris_sm_13
+        param no_collision true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_13_5
+        position -12.42017 10.94828 5.54810
+        rotation 0.00000 -36.00002 -0.00000
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 3
+        param clip no_clip
+        param force_shadows true
+        param model tech_debris_sm_13
+        param no_collision true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_13_6
+        position -0.42920 10.94827 -9.30396
+        rotation 0.00000 30.59997 0.00000
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 3
+        param clip no_clip
+        param force_shadows true
+        param model tech_debris_sm_13
+        param no_collision true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_14
+        position -17.19995 37.00000 14.80005
+        rotation 63.67479 -17.63626 -0.59857
+        scale 1.64000 1.64000 1.64000
+        param __shadow true
+        param best_lod 0
+        param clip no_clip
+        param force_shadows true
+        param model tech_debris_sm_14
+        param no_collision true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_15_2
+        position 26.93506 1.34453 14.00830
+        rotation 0 130.49998 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 2
+        param clip no_clip
+        param color_matlib_mat_lib_plastic d87f21ff
+        param force_shadows true
+        param model tech_debris_sm_15
+        param no_collision true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_17_2
+        position 35.96191 35.08673 -10.10400
+        rotation 0.00000 -157.50022 -0.00000
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 0
+        param clip no_clip
+        param color3_matlib_mat_lib_emissive 002542ff
+        param force_shadows true
+        param material_1 matlib_mat_lib_emissive
+        param model tech_debris_sm_17
+        param no_collision true
+    }
+    prefab_entity
+    {
+        name prop_tech_debris_sm_19_6
+        position -24.39990 35.05294 9.60010
+        rotation 0 -153.89985 0
+        scale 1.00000 1.00000 1.00000
+        param __shadow true
+        param best_lod 0
+        param clip no_clip
+        param force_shadows true
+        param material_0 matlib_mat_lib_metal_plates
+        param model tech_debris_sm_19
+        param no_collision true
+    }
+}

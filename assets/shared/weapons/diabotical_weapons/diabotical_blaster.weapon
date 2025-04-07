@@ -22,6 +22,8 @@ diabotical_blaster
 	default_ammo_pickup_ammo 50
 	default_weapon_pickup_ammo 75
 	max_ammo 150
+	reload 1000
+	reload_enabled false
 	
 	splash_radius 20
 	//center_of_mass_offset 20

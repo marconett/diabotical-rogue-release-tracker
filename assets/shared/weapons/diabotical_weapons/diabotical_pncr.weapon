@@ -3,7 +3,7 @@ diabotical_pncr
 	name_translation_key weapon_pncr
 	desc_translation_key weapon_pncr_desc
 	
-	unlimited_ammo true
+	unlimited_ammo false
 	selectable true
 	show_in_dev_console true
 
@@ -24,6 +24,8 @@ diabotical_pncr
 	default_ammo_pickup_ammo 5
 	default_weapon_pickup_ammo 10
 	max_ammo 25
+	reload 1000
+	reload_enabled false
 	penetrating true
 	
 	icon_path images/weapon_icons/wp_hud_pncr.png
@@ -38,19 +40,6 @@ diabotical_pncr
 	charge_animation_bonus true
 	
 	rate 1450
-	
-	recoil_delay_recovery 0.1
-	recoil_up 1.5
-	recoil_side 0.2
-	recoil_recovery_time 0.45
-	recoil_time 0.07
-	
-	zoomed_recoil_up 0.75
-	zoomed_recoil_side 0.1
-	zoomed_recoil_recovery_time 0.4
-	zoomed_recoil_time 0.06
-	
-	zoomed_walk_speed 175
 	
 	zoomed_scope 1
 

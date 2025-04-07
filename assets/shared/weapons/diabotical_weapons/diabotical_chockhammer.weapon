@@ -12,6 +12,8 @@ diabotical_chockhammer
 	rate 700
 	speed 0
 	unlimited_ammo true
+	reload 1000
+	reload_enabled false
 	distance 60
 	hit_radius 50
 

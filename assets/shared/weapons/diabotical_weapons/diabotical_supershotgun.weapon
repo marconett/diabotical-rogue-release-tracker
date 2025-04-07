@@ -14,6 +14,8 @@ diabotical_supershotgun
 	default_ammo_pickup_ammo 10
 	default_weapon_pickup_ammo 15
 	max_ammo 40
+	reload 1000
+	reload_enabled false
 	
 	color f7959a
 	icon_path images/weapon_icons/wp_hud_shotgun_02.png

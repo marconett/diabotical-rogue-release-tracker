@@ -1,1 +1,0 @@
-console.log("PERF #0 head begin", performance.now());
